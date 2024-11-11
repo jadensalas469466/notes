@@ -32,7 +32,7 @@ root@debian:~# apt install -y git
 
 配置默认 OpenSSL 库
 
-![配置默认 OpenSSL 库](./../../../../images/Git/配置默认 OpenSSL 库.png)
+![配置默认 OpenSSL 库](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%20OpenSSL%20%E5%BA%93.png)
 
 配置默认行尾符号转换
 
