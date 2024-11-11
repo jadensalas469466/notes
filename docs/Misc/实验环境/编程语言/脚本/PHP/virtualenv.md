@@ -1,0 +1,62 @@
+## 部署
+
+kali 中安装
+
+```shell
+┌──(root㉿kali)-[~]
+└─# apt install -y virtualenv
+```
+
+Windows 中安装
+
+```powershell
+PS C:\Users\sec> pip install virtualenv
+```
+
+## 使用
+
+创建虚拟环境
+
+```shell
+┌──(root㉿kali)-[~]
+└─# virtualenv venv
+```
+
+启用虚拟环境
+
+```shell
+┌──(root㉿kali)-[~]
+└─# source venv/bin/activate
+```
+
+Powershell 需要允许脚本执行
+
+```powershell
+PS C:\Users\sec> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
+
+再启用虚拟环境
+
+```powershell
+PS C:\Users\sec> .\venv\Scripts\Activate
+```
+
+在虚拟环境中安装依赖
+
+```shell
+┌──(venv)─(root㉿kali)-[~]
+└─# pip3 install -r requirements.txt
+```
+
+退出虚拟环境
+
+```shell
+┌──(venv)─(root㉿kali)-[~]
+└─# deactivate
+```
+
+---
+
+参考链接
+
+- [virtualenv](https://github.com/pypa/virtualenv/)
