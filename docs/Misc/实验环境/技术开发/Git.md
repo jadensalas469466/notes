@@ -28,7 +28,7 @@ root@debian:~# apt install -y git
 
 配置默认 OpenSSL
 
-![配置默认 OpenSSL](./Git/配置默认 OpenSSL.png)
+![配置默认 OpenSSL](./Git/配置默认OpenSSL.png)
 
 配置默认 OpenSSL 库
 
