@@ -1,18 +1,6 @@
----
-layout:        post
-title:        "搭建 DNS  服务器"
-header-style:  text
-catalog:       true
-tags:
-    - Misc
-    - 实验环境
-    - DNS 服务器
- 
----
-
 在 Debian 系统 202.38.95.17 中搭建私人 DNS 服务器，避免国际 DNS 服务器被 GFW 污染
 
-## 部署
+# 部署
 
 使用 UFW 开放 DNS 端口 53
 
