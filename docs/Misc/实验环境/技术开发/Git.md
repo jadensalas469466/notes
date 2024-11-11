@@ -12,23 +12,23 @@ root@debian:~# apt install -y git
 
 配置默认组件
 
-![配置默认组件](./../../../../images/Git/配置默认组件.png)
+![配置默认组件](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%BB%84%E4%BB%B6.png)
 
 配置默认编辑器
 
-![配置默认编辑器](./../../../../images/Git/配置默认编辑器.png)
+![配置默认编辑器](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%BC%96%E8%BE%91%E5%99%A8.png)
 
 配置默认分支
 
-![配置默认分支](./../../../../images/Git/配置默认分支.png)
+![配置默认分支](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF.png)
 
 配置默认环境变量
 
-![配置默认环境变量](./../../../../images/Git/配置默认环境变量.png)
+![配置默认环境变量](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 配置默认 OpenSSL
 
-![配置默认 OpenSSL](./../../../../images/Git/配置默认OpenSSL.png)
+![配置默认 OpenSSL](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%20OpenSSL.png)
 
 配置默认 OpenSSL 库
 
@@ -36,27 +36,27 @@ root@debian:~# apt install -y git
 
 配置默认行尾符号转换
 
-![配置默认行尾符号转换](./../../../../images/Git/配置默认行尾符号转换.png)
+![配置默认行尾符号转换](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%A1%8C%E5%B0%BE%E7%AC%A6%E5%8F%B7%E8%BD%AC%E6%8D%A2.png)
 
 配置默认终端
 
-![配置默认终端](./../../../../images/Git/配置默认终端.png)
+![配置默认终端](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF.png)
 
 配置 git pull 默认行为
 
-![配置 git pull 默认行为](./../../../../images/Git/配置 git pull 默认行为.png)
+![配置 git pull 默认行为](./../../../../images/Git/%E9%85%8D%E7%BD%AE%20git%20pull%20%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA.png)
 
 配置默认凭证管理器
 
-![配置默认凭证管理器](./../../../../images/Git/配置默认凭证管理器.png)
+![配置默认凭证管理器](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8.png)
 
 配置默认文件系统缓存
 
-![配置默认文件系统缓存](./../../../../images/Git/配置默认文件系统缓存.png)
+![配置默认文件系统缓存](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98.png)
 
 配置默认实验选项
 
-![配置默认实验选项](./../../../../images/Git/配置默认实验选项.png)
+![配置默认实验选项](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%AE%9E%E9%AA%8C%E9%80%89%E9%A1%B9.png)
 
 ## 初始化
 
@@ -100,7 +100,7 @@ PS C:\Users\sec> git config --global --list
 
 使用 OpenSSH 部署公钥到 Git 服务器
 
-![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/Git/使用 openssh 部署公钥到 git 服务器.png)
+![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/Git/%E4%BD%BF%E7%94%A8%20OpenSSH%20%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
 
 # 使用
 
@@ -159,7 +159,7 @@ PS C:\Users\sec> git config --global --list
 
 在 Github 开启私人电子邮件
 
-![在 Github 开启私人电子邮件](./../../../../images/Git/在 Github 开启私人电子邮件.png)
+![在 Github 开启私人电子邮件](./../../../../images/Git/%E5%9C%A8%20Github%20%E5%BC%80%E5%90%AF%E7%A7%81%E4%BA%BA%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6.png)
 
 创建项目目录
 
@@ -169,19 +169,19 @@ C:\Users\sec\share\github\tool
 
 在 Visual Studio Code 中打开项目文件夹
 
-![在 Visual Studio Code 中打开项目文件夹](./../../../../images/Git/在 Visual Studio Code 中打开项目文件夹.png)
+![在 Visual Studio Code 中打开项目文件夹](./../../../../images/Git/%E5%9C%A8%20Visual%20Studio%20Code%20%E4%B8%AD%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
 信任此作者
 
-![信任此作者](./../../../../images/Git/信任此作者.png)
+![信任此作者](./../../../../images/Git/%E4%BF%A1%E4%BB%BB%E6%AD%A4%E4%BD%9C%E8%80%85.png)
 
 授权
 
-![授权](./../../../../images/Git/授权.png)
+![授权](./../../../../images/Git/%E6%8E%88%E6%9D%83.png)
 
 初始化仓库
 
-![初始化仓库](./../../../../images/Git/初始化仓库.png)
+![初始化仓库](./../../../../images/Git/%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%93%E5%BA%93.png)
 
 在项目中创建 README.md
 
@@ -189,23 +189,23 @@ C:\Users\sec\share\github\tool
 # "the quieter you become, the more you are able to hear"
 ```
 
-![在项目中创建 README.md](./../../../../images/Git/在项目中创建 README.md.png)
+![在项目中创建 README.md](./../../../../images/Git/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%88%9B%E5%BB%BA%20README.md.png)
 
 暂存更改
 
-![暂存更改](./../../../../images/Git/暂存更改.png)
+![暂存更改](./../../../../images/Git/%E6%9A%82%E5%AD%98%E6%9B%B4%E6%94%B9.png)
 
 添加备注，提交到本地仓库
 
-![添加备注，提交到本地仓库](./../../../../images/Git/添加备注，提交到本地仓库.png)
+![添加备注，提交到本地仓库](./../../../../images/Git/%E6%B7%BB%E5%8A%A0%E5%A4%87%E6%B3%A8%EF%BC%8C%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93.png)
 
 发布到远程仓库
 
-![发布到远程仓库](./../../../../images/Git/发布到远程仓库.png)
+![发布到远程仓库](./../../../../images/Git/%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.png)
 
 选择仓库
 
-![选择仓库](./../../../../images/Git/选择仓库.png)
+![选择仓库](./../../../../images/Git/%E9%80%89%E6%8B%A9%E4%BB%93%E5%BA%93.png)
 
 > 之后，在 tool 项目中的任何改动都可以同步到 Github 中
 >
