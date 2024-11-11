@@ -2,6 +2,10 @@
 
 ## 初始化
 
+开启自动转义功能
+
+![开启自动转义功能](./../../../../../../../images/Typora/%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E8%BD%AC%E4%B9%89%E5%8A%9F%E8%83%BD.png)
+
 下载 Dracula 主题
 
 > https://draculatheme.com/typora
