@@ -164,7 +164,7 @@ PS C:\Users\sec> git config --global --list
 创建项目目录
 
 ```
-C:\Users\sec\share\github\tool
+C:\Users\sec\share\github\tools
 ```
 
 在 Visual Studio Code 中打开项目文件夹
@@ -207,7 +207,7 @@ C:\Users\sec\share\github\tool
 
 ![选择仓库](./../../../../images/Git/%E9%80%89%E6%8B%A9%E4%BB%93%E5%BA%93.png)
 
-> 之后，在 tool 项目中的任何改动都可以同步到 Github 中
+> 之后，在 tools 项目中的任何改动都可以同步到 Github 中
 >
 > 已创建的仓库可通过拉取到本地同步
 
