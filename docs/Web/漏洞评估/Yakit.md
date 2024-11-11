@@ -1,18 +1,14 @@
-## 初始化
-
-进入默认项目
+# 进入默认项目
 
 ![进入默认项目](./../../../images/Yakit/%E8%BF%9B%E5%85%A5%E9%BB%98%E8%AE%A4%E9%A1%B9%E7%9B%AE.png)
 
-# test
-
-添加排除项
+## 添加排除项
 
 ```
 C:\Users\sec\AppData\Local\Programs\Yakit
 ```
 
-导入线上 Nuclei
+### 导入线上 Nuclei
 
 ![导入线上 Nuclei](./../../../images/Yakit/%E5%AF%BC%E5%85%A5%E7%BA%BF%E4%B8%8A%20Nuclei.png)
 
