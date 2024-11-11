@@ -12,7 +12,7 @@ C:\Users\sec\AppData\Local\Programs\Yakit
 
 ![导入线上 Nuclei](./../../../images/Yakit/%E5%AF%BC%E5%85%A5%E7%BA%BF%E4%B8%8A%20Nuclei.png)
 
-启动劫持
+# 启动劫持
 
 ![启动劫持](./../../../images/Yakit/%E5%90%AF%E5%8A%A8%E5%8A%AB%E6%8C%81.png)
 
