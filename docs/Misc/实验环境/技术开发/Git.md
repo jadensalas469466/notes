@@ -12,51 +12,51 @@ root@debian:~# apt install -y git
 
 配置默认组件
 
-![配置默认组件](./images/配置默认组件.png)
+![配置默认组件](./../../../../images/Git/配置默认组件.png)
 
 配置默认编辑器
 
-![配置默认编辑器](./images/配置默认编辑器.png)
+![配置默认编辑器](./../../../../images/Git/配置默认编辑器.png)
 
 配置默认分支
 
-![配置默认分支](./images/配置默认分支.png)
+![配置默认分支](./../../../../images/Git/配置默认分支.png)
 
 配置默认环境变量
 
-![配置默认环境变量](./images/配置默认环境变量.png)
+![配置默认环境变量](./../../../../images/Git/配置默认环境变量.png)
 
 配置默认 OpenSSL
 
-![配置默认 OpenSSL](./images/配置默认 OpenSSL.png)
+![配置默认 OpenSSL](./../../../../images/Git/配置默认 OpenSSL.png)
 
 配置默认 OpenSSL 库
 
-![配置默认 OpenSSL 库](./images/配置默认 OpenSSL 库.png)
+![配置默认 OpenSSL 库](./../../../../images/Git/配置默认 OpenSSL 库.png)
 
 配置默认行尾符号转换
 
-![配置默认行尾符号转换](./images/配置默认行尾符号转换.png)
+![配置默认行尾符号转换](./../../../../images/Git/配置默认行尾符号转换.png)
 
 配置默认终端
 
-![配置默认终端](./images/配置默认终端.png)
+![配置默认终端](./../../../../images/Git/配置默认终端.png)
 
 配置 git pull 默认行为
 
-![配置 git pull 默认行为](./images/配置 git pull 默认行为.png)
+![配置 git pull 默认行为](./../../../../images/Git/配置 git pull 默认行为.png)
 
 配置默认凭证管理器
 
-![配置默认凭证管理器](./images/配置默认凭证管理器.png)
+![配置默认凭证管理器](./../../../../images/Git/配置默认凭证管理器.png)
 
 配置默认文件系统缓存
 
-![配置默认文件系统缓存](./images/配置默认文件系统缓存.png)
+![配置默认文件系统缓存](./../../../../images/Git/配置默认文件系统缓存.png)
 
 配置默认实验选项
 
-![配置默认实验选项](./images/配置默认实验选项.png)
+![配置默认实验选项](./../../../../images/Git/配置默认实验选项.png)
 
 ## 初始化
 
@@ -100,7 +100,7 @@ PS C:\Users\sec> git config --global --list
 
 使用 OpenSSH 部署公钥到 Git 服务器
 
-![使用 OpenSSH 部署公钥到 Git 服务器](./images/使用 openssh 部署公钥到 git 服务器.png)
+![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/Git/使用 openssh 部署公钥到 git 服务器.png)
 
 # 使用
 
@@ -159,7 +159,7 @@ PS C:\Users\sec> git config --global --list
 
 在 Github 开启私人电子邮件
 
-![在 Github 开启私人电子邮件](./images/在 Github 开启私人电子邮件.png)
+![在 Github 开启私人电子邮件](./../../../../images/Git/在 Github 开启私人电子邮件.png)
 
 创建项目目录
 
@@ -169,19 +169,19 @@ C:\Users\sec\share\github\tool
 
 在 Visual Studio Code 中打开项目文件夹
 
-![在 Visual Studio Code 中打开项目文件夹](./images/在 Visual Studio Code 中打开项目文件夹.png)
+![在 Visual Studio Code 中打开项目文件夹](./../../../../images/Git/在 Visual Studio Code 中打开项目文件夹.png)
 
 信任此作者
 
-![信任此作者](./images/信任此作者.png)
+![信任此作者](./../../../../images/Git/信任此作者.png)
 
 授权
 
-![授权](./images/授权.png)
+![授权](./../../../../images/Git/授权.png)
 
 初始化仓库
 
-![初始化仓库](./images/初始化仓库.png)
+![初始化仓库](./../../../../images/Git/初始化仓库.png)
 
 在项目中创建 README.md
 
@@ -189,23 +189,23 @@ C:\Users\sec\share\github\tool
 # "the quieter you become, the more you are able to hear"
 ```
 
-![在项目中创建 README.md](./images/在项目中创建 README.md.png)
+![在项目中创建 README.md](./../../../../images/Git/在项目中创建 README.md.png)
 
 暂存更改
 
-![暂存更改](./images/暂存更改.png)
+![暂存更改](./../../../../images/Git/暂存更改.png)
 
 添加备注，提交到本地仓库
 
-![添加备注，提交到本地仓库](./images/添加备注，提交到本地仓库.png)
+![添加备注，提交到本地仓库](./../../../../images/Git/添加备注，提交到本地仓库.png)
 
 发布到远程仓库
 
-![发布到远程仓库](./images/发布到远程仓库.png)
+![发布到远程仓库](./../../../../images/Git/发布到远程仓库.png)
 
 选择仓库
 
-![选择仓库](./images/选择仓库.png)
+![选择仓库](./../../../../images/Git/选择仓库.png)
 
 > 之后，在 tool 项目中的任何改动都可以同步到 Github 中
 >
