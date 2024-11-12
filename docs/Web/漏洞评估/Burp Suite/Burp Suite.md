@@ -1,19 +1,19 @@
 一款用于 Web 应用漏洞测试的工具
 
-# 准备
+# 1 准备
 
 需要 JRE 8 环境
 
 - [JRE 8](https://www.java.com/en/download/manual.jsp)
 - [Burp Suite Professional](https://portswigger.net/burp/releases#professional)
 
-# 配置
+# 2 配置
 
 将注册机复制到安装目录
 
 ![将注册机复制到安装目录](./../../../../images/Burp%20Suite/%E5%B0%86%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%A4%8D%E5%88%B6%E5%88%B0%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png)
 
-# 安装
+# 3 安装
 
 运行注册机启动 Burp Suite
 
@@ -78,7 +78,7 @@ WshShell.Run command, 0
 
 ![选择存储到受信任的根证书颁发机构](./../../../../images/Burp%20Suite/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
 
-# 初始化
+# 4 初始化
 
 选择临时项目
 
@@ -124,7 +124,7 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 
 > 所有的扩展都要下载到这个目录中
 
-# 部署
+# 5 部署
 
 |                             插件                             |
 | :----------------------------------------------------------: |
@@ -148,9 +148,9 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 | [AutoRepeater](https://github.com/portswigger/auto-repeater) |
 |        [Authz](https://github.com/PortSwigger/authz)         |
 
-# 使用
+# 6 使用
 
-## 添加扩展
+## 6.1 添加扩展
 
 添加BApp商店扩展
 
@@ -160,7 +160,7 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 
 ![配置 Jython Standalone 环境](./../../../../images/Burp%20Suite/%E9%85%8D%E7%BD%AE%20Jython%20Standalone%20%E7%8E%AF%E5%A2%83.png)
 
-### 添加第三方扩展
+### 6.1.1 添加第三方扩展
 
 将下载好的扩展包放在 D:\software\BurpSuitePro\Extender\ 目录中
 
@@ -176,13 +176,13 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 
 ![点击关闭](./../../../../images/Burp%20Suite/%E7%82%B9%E5%87%BB%E5%85%B3%E9%97%AD.png)
 
-## 加载扩展
+## 6.2 加载扩展
 
 勾选扩展以加载
 
 ![勾选扩展以加载](./../../../../images/Burp%20Suite/%E5%8B%BE%E9%80%89%E6%89%A9%E5%B1%95%E4%BB%A5%E5%8A%A0%E8%BD%BD.png)
 
-## Turbo Intruder
+## 6.3 Turbo Intruder
 
 选择 `examples/race-multi-endpoint.py`  然后在 `host` 下添加 `x-req:%s` 
 
@@ -194,17 +194,17 @@ Turbo Intruder 攻击示例
 
 ![其中 GET 和 POST 请求默认各 5 次，可在这里修改](./../../../../images/Burp Suite/其中 GET 和 POST 请求默认各 5 次，可在这里修改.png)
 
-## 拦截请求
+## 6.4 拦截请求
 
 ![拦截请求](./../../../../images/Burp%20Suite/%E6%8B%A6%E6%88%AA%E8%AF%B7%E6%B1%82.png)
 
-## 爆破时处理 payload
+## 6.5 爆破时处理 payload
 
 ![爆破时处理 payload](./../../../../images/Burp%20Suite/%E7%88%86%E7%A0%B4%E6%97%B6%E5%A4%84%E7%90%86%20Payload.png)
 
-## comparer 对比
+## 6.6 comparer 对比
 
-## 在本地侦听其它计算机
+## 6.7在本地侦听其它计算机
 
 将代理指定为本机 IP
 
@@ -218,7 +218,7 @@ Turbo Intruder 攻击示例
 
 访问 http://burpsuite/ ,安装证书后，可通过 BurpSuite 代理正常访问
 
-## 捕获蚁剑连接木马的数据包
+## 6.8 捕获蚁剑连接木马的数据包
 
 使用 BurpSuite 对蚁剑连接一句话木马抓包，分析虚拟终端原理
 
@@ -250,7 +250,7 @@ Turbo Intruder 攻击示例
 
 ![选中可查看捕获的数据包](./../../../../images/Burp%20Suite/%E9%80%89%E4%B8%AD%E5%8F%AF%E6%9F%A5%E7%9C%8B%E6%8D%95%E8%8E%B7%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
-### 修改请求数据包
+### 6.8.1 修改请求数据包
 
 打开拦截
 
@@ -279,7 +279,7 @@ Turbo Intruder 攻击示例
 
 > 可以在原有代码的基础上加入木马，做免杀。
 
-## 自动化测试 XSS 漏洞
+## 6.9 自动化测试 XSS 漏洞
 
 burp 开启拦截，提交任意参数，发送请求数据包到 intruder 中
 
@@ -325,7 +325,7 @@ payload 类型选择为指定文件
 
 > 在 P grep 一栏中，参数为 1 的，说明成功执行
 
-## 漏洞扫描
+## 6.10 漏洞扫描
 
 关闭拦截
 
