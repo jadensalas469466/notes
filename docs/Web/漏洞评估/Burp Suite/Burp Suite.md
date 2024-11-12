@@ -192,7 +192,7 @@ Turbo Intruder 攻击示例
 
 其中 GET 和 POST 请求默认各 5 次，可在这里修改
 
-![其中 GET 和 POST 请求默认各 5 次，可在这里修改](./../../../../images/Burp Suite/其中 GET 和 POST 请求默认各 5 次，可在这里修改.png)
+![其中 GET 和 POST 请求默认各 5 次，可在这里修改](./../../../../images/Burp%20Suite/%E5%85%B6%E4%B8%AD%20GET%20%E5%92%8C%20POST%20%E8%AF%B7%E6%B1%82%E9%BB%98%E8%AE%A4%E5%90%84%205%20%E6%AC%A1%EF%BC%8C%E5%8F%AF%E5%9C%A8%E8%BF%99%E9%87%8C%E4%BF%AE%E6%94%B9.png)
 
 ## 6.4 拦截请求
 
