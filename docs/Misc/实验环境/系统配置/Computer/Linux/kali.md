@@ -428,7 +428,7 @@ Pin-Priority: 900
 12  # iface eth0 inet dhcp
 13  auto eth0
 14  iface eth0 inet static
-15          address 192.168.1.204
+15          address「os_IP」
 16          netmask 255.255.255.0
 17          broadcast 192.168.1.255
 18          gateway 192.168.1.1
@@ -453,12 +453,6 @@ nameserver 1.1.1.1
 ```shell
 ┌──(root㉿kali)-[~]
 └─# vim /etc/hosts
-```
-
-```
-192.168.1.203	windows.local
-192.168.1.204	kali.local
-192.168.1.205	debian.local
 ```
 
 重启
@@ -499,6 +493,123 @@ PS C:\Users\sec> ssh root@kali.local
 ```shell
 ┌──(root㉿kali)-[~]
 └─# init 0
+```
+
+## 部署
+
+|                       实验环境                        |
+| :---------------------------------------------------: |
+|           [v2fly](https://github.com/v2fly)           |
+|     [redsocks](https://github.com/darkk/redsocks)     |
+|                 [go](https://go.dev/)                 |
+|           [docker](https://www.docker.com/)           |
+|           [python](https://www.python.org/)           |
+|         [composer](https://getcomposer.org/)          |
+| [java](https://github.com/adoptium/temurin8-binaries) |
+|      [gdebi](https://github.com/linuxmint/gdebi)      |
+
+|                           渗透测试                           |
+| :----------------------------------------------------------: |
+|   [antsword](https://github.com/AntSwordProject/antSword)    |
+|     [arl](https://github.com/TophantTechnology/ARL-doc)      |
+|         [bbscan](https://github.com/lijiejie/BBScan)         |
+|       [behinder](https://github.com/rebeyond/Behinder)       |
+|        [burpsuite](https://portswigger.net/burp/pro)         |
+|       [cscan-go](https://github.com/ifacker/cscan-go)        |
+|          [dalfox](https://github.com/hahwul/dalfox)          |
+|        [dddd](https://github.com/SleepingBag945/dddd)        |
+|        [dirmap](https://github.com/H4ckForJob/dirmap)        |
+|   [ds_store_exp](https://github.com/lijiejie/ds_store_exp)   |
+|      [ehole](https://github.com/EdgeSecurityTeam/EHole)      |
+|           [exploitdb](https://www.exploit-db.com/)           |
+|        [fping](https://salsa.debian.org/debian/fping)        |
+|        [githack](https://github.com/lijiejie/GitHack)        |
+|      [gopherus](https://github.com/tarunkant/Gopherus)       |
+| [httpx-toolkit](https://gitlab.com/kalilinux/packages/httpx-toolkit) |
+|     [hydra](https://github.com/vanhauser-thc/thc-hydra)      |
+|   [masscan](https://github.com/robertdavidgraham/masscan)    |
+|        [medusa](https://github.com/jmk-foofus/medusa)        |
+|          [metasploit](https://www.metasploit.com/)           |
+|            [nc](https://netcat.sourceforge.net/)             |
+| [nessus](https://www.tenable.com/downloads/nessus?loginAttempted=true) |
+|     [nikto](https://gitlab.com/kalilinux/packages/nikto)     |
+|                  [nmap](https://nmap.org/)                   |
+|       [nslookup](https://github.com/alsotang/nslookup)       |
+|     [nuclei](https://github.com/projectdiscovery/nuclei)     |
+|     [oneforall](https://github.com/shmilylty/OneForAll)      |
+|            [rad](https://github.com/chaitin/rad)             |
+|        [redsocks](https://github.com/darkk/redsocks)         |
+|      [svnhack](https://github.com/callmefeifei/svnHack)      |
+|          [searpy](https://github.com/j3ers3/Searpy)          |
+|      [searchsploit](https://www.exploit-db.com/search)       |
+|      [sqlmap](https://github.com/sqlmapproject/sqlmap)       |
+|            [vscan](https://github.com/veo/vscan)             |
+|    [whatweb](https://github.com/urbanadventurer/WhatWeb)     |
+|          [whois](https://github.com/rfc1036/whois)           |
+|        [waf-scan](https://github.com/jammny/waf-scan)        |
+|     [wafw00f](https://github.com/EnableSecurity/wafw00f)     |
+|    [wpscan](https://gitlab.com/kalilinux/packages/wpscan)    |
+|           [xpoc](https://github.com/chaitin/xpoc)            |
+|           [xray](https://github.com/chaitin/xray)            |
+|                       gopher_encode.py                       |
+|                     linebreak_conver.py                      |
+
+## 使用
+
+**卧底模式**
+
+```shell
+┌──(root㉿kali)-[~]
+└─# kali-undercover
+```
+
+> 鼠标和触摸板
+>
+> Windows 10
+>
+> 大小：46
+
+**历史命令**
+
+查看历史命令
+
+```shell
+┌──(root㉿kali)-[~]
+└─# history
+```
+
+**payload**
+
+windows
+
+```shell
+┌──(root㉿kali)-[~]
+└─# ls /usr/share/windows-resources/binaries/
+```
+
+**工具脚本**
+
+```shell
+┌──(root㉿kali)-[~]
+└─# ls /usr/share/metasploit-framework/data/
+```
+
+挂载共享文件到 `/mnt/`
+
+```
+vmhgfs-fuse .host:/ /mnt
+```
+
+**su**
+
+切换为 `root` 用户
+
+```shell
+┌──(sec㉿kali)-[~]
+└─$ su - root
+Password: 123456
+┌──(root㉿kali)-[~]
+└─#
 ```
 
 ---

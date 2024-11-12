@@ -394,7 +394,7 @@ network:
         ens33:
             dhcp4: no
             addresses:
-                - 192.168.1.206/24
+                -「os_IP」/24
             routes:
                 - to: default
                   via: 192.168.1.1
@@ -408,13 +408,6 @@ network:
 
 ```shell
 root@ubuntu:~# vim /etc/hosts
-```
-
-```
-192.168.1.203	windows.local
-192.168.1.204	kali.local
-192.168.1.205	debian.local
-192.168.1.206	ubuntu.local
 ```
 
 重启

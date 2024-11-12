@@ -1,5 +1,3 @@
-# Windows
-
 ## 准备
 
 Win10_22H2_Chinese_Simplified_x64v1.iso
@@ -415,8 +413,6 @@ sec
 
 定义电源按钮
 
----
-
 以管理员权限使用 powershell 运行以下命令禁用快速启动和休眠功能
 
 ```powershell
@@ -458,26 +454,15 @@ Windows Registry Editor Version 5.00
 分配静态 IP 和 DNS
 
 ```
-IPv4：开
-IP 地址：192.168.1.201 (台式机)
-IP 地址：192.168.1.202 (笔记本)
-IP 地址：192.168.1.203 (虚拟机)
-子网前缀长度：24
-网关：192.168.1.1
-首选 DNS：8.8.8.8
-备用 DNS：1.1.1.1
+IP 地址 :「IP」
+首选 DNS :「server_IP」
+备用 DNS : 8.8.8.8
 ```
 
 修改 hosts 文件
 
 ```shell
 C:\Windows\System32\drivers\etc\hosts
-```
-
-```
-192.168.1.203	windows.local
-192.168.1.204	kali.local
-192.168.1.205	debian.local
 ```
 
 在安全中心添加排除项
@@ -540,4 +525,88 @@ C:\Users\sec
 > 截图快捷方式路径：
 > C:\Users\sec\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip
 > ```
+
+## 部署
+
+|                            虚拟机                            |
+| :----------------------------------------------------------: |
+|               [7-Zip](https://www.7-zip.org/)                |
+|             [Geek](https://geekuninstaller.com/)             |
+| [OpenSSH](https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell) |
+|           [phpStudy](https://www.xp.cn/php-study)            |
+|          [phpStudyPro](https://www.xp.cn/php-study)          |
+
+关机，快照命名为 `部署` 
+
+|                            笔记本                            |
+| :----------------------------------------------------------: |
+| [Lenovo System Update](https://www.lenovo.com/us/en/software/lenovo-system-update) |
+
+|                            台式机                            |
+| :----------------------------------------------------------: |
+| [AMD Software꞉ Adrenalin Edition](https://www.amd.com/zh-cn/support/download/drivers.html) |
+| [Twinkle Tray](https://github.com/xanderfrangos/twinkle-tray) |
+
+|                            物理机                            |
+| :----------------------------------------------------------: |
+|               [7-Zip](https://www.7-zip.org/)                |
+|            [AnyTXT Searcher](https://anytxt.net/)            |
+| [Burp Suite Professional](https://portswigger.net/burp/pro)  |
+| [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
+| [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
+|              [Eraser](https://eraser.heidi.ie/)              |
+|        [Everything](https://www.voidtools.com/zh-cn/)        |
+|    [Firefox](https://www.mozilla.org/en-US/firefox/new/)     |
+|          [FreeFileSync](https://freefilesync.org/)           |
+|             [Geek](https://geekuninstaller.com/)             |
+|                 [Git](https://git-scm.com/)                  |
+|                 [Goby](https://gobysec.net/)                 |
+|       [Google Chrome](https://www.google.com/chrome/)        |
+|  [HashCalculator](https://github.com/hrpzcf/HashCalculator)  |
+|                  [He3](https://he3.app/zh/)                  |
+|      [ImageGlass](https://github.com/d2phap/ImageGlass)      |
+| [Internet Download Manager](https://www.internetdownloadmanager.com/) |
+|     [Java](https://www.java.com/en/download/manual.jsp)      |
+|   [KeePassXC](https://github.com/keepassxreboot/keepassxc)   |
+| [Koodo Reader](https://github.com/koodo-reader/koodo-reader) |
+| [科来网络分析系统 技术交流版](https://www.colasoft.com.cn/products/capsa.php) |
+|     [LocalSend](https://github.com/localsend/localsend)      |
+|            [LockHunter](https://lockhunter.com/)             |
+| [mitan](https://github.com/kkbo8005/mitan?tab=readme-ov-file) |
+|             [MuMu模拟器](https://mumu.163.com/)              |
+|                  [Nmap](https://nmap.org/)                   |
+| [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus) |
+|            [OBS Studio](https://obsproject.com/)             |
+|        [Pinta](https://github.com/PintaProject/Pinta)        |
+|               [PixPin](https://pixpinapp.com/)               |
+|             [Postman](https://www.postman.com/)              |
+|              [Potplayer](https://potplayer.tv/)              |
+|           [Proxifier](https://www.proxifier.com/)            |
+|              [Python](https://www.python.org/)               |
+| [qBittorrent-Enhanced-Edition](https://github.com/c0re100/qBittorrent-Enhanced-Edition) |
+|            [RaiDrive](https://www.raidrive.com/)             |
+|          [RealTimeSync](https://freefilesync.org/)           |
+| [script](https://github.com/jadensalas469466/tool/tree/main/script) |
+|      [Stretchly](https://github.com/hovancik/stretchly)      |
+|  [Subtitle Mask](https://github.com/chocovon/subtitle-mask)  |
+|             [Syncthing](https://syncthing.net/)              |
+|              [Telegram](https://telegram.org/)               |
+|       [TTime](https://github.com/InkTimeRecord/TTime)        |
+|     [TurboTop](https://www.savardsoftware.com/turbotop/)     |
+|                 [Typora](https://typora.io/)                 |
+|          [v2rayN](https://github.com/2dust/v2rayN)           |
+|      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
+|                 [Vim](https://www.vim.org/)                  |
+|     [Visual Studio Code](https://code.visualstudio.com/)     |
+| [VMware](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) |
+| [Windows Terminal](https://github.com/microsoft/terminal?tab=readme-ov-file) |
+|                [微信](https://weixin.qq.com/)                |
+|                 [Xmind](https://xmind.app/)                  |
+|          [Yakit](https://github.com/yaklang/yakit)           |
+
+---
+
+参考链接
+
+- 
 
