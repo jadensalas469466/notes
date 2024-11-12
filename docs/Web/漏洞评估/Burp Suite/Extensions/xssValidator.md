@@ -1,6 +1,6 @@
-# [xssValidator](https://github.com/portswigger/xss-validator)
+一款用于自动化验证 XSS 漏洞的 Burp Suite 工具
 
-## 部署
+# 部署
 
 安装 [phantomjs](https://phantomjs.org/) 用于接收攻击反馈
 
@@ -240,7 +240,7 @@ var service = server.listen(host + ":" + port, function(request, response) {
 
 ![选择 xssValidator 插件进行安装](./../../../../../images/xssValidator/%E9%80%89%E6%8B%A9%20xssValidator%20%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85.png)
 
-## 使用
+# 使用
 
 在已安装中加载 XSS Validator 插件
 
@@ -325,3 +325,9 @@ payload 类型选择 Extension-generated
 ![在 P grep 排序，选中成功的内容，右击可以查看成功的数量](./../../../../../images/xssValidator/%E5%9C%A8%20P%20grep%20%E6%8E%92%E5%BA%8F%EF%BC%8C%E9%80%89%E4%B8%AD%E6%88%90%E5%8A%9F%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%8C%E5%8F%B3%E5%87%BB%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E6%88%90%E5%8A%9F%E7%9A%84%E6%95%B0%E9%87%8F.png)
 
 > 使用完记得关闭插件
+
+---
+
+参考链接
+
+- [xssValidator](https://github.com/portswigger/xss-validator)

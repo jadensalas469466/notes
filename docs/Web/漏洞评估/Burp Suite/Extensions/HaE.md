@@ -1,12 +1,12 @@
-# [HaE](https://github.com/gh0stkey/HaE)
+一款用于信息标记的 Burp Suite 插件
 
-## 使用
+# 使用
 
-获取官方规则库（记得配置代理）
+获取官方规则库
 
 > https://raw.githubusercontent.com/gh0stkey/HaE/gh-pages/Rules.yml
 
-![获取官方规则库（记得配置代理）](./../../../../../images/HaE/%E8%8E%B7%E5%8F%96%E5%AE%98%E6%96%B9%E8%A7%84%E5%88%99%E5%BA%93%EF%BC%88%E8%AE%B0%E5%BE%97%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%EF%BC%89.png)
+![获取官方规则库](./../../../../../images/HaE/%E8%8E%B7%E5%8F%96%E5%AE%98%E6%96%B9%E8%A7%84%E5%88%99%E5%BA%93.png)
 
 添加规则
 
@@ -28,4 +28,5 @@
 
 参考链接
 
+- [HaE](https://github.com/gh0stkey/HaE)
 - https://blog.zgsec.cn/archives/481.html
