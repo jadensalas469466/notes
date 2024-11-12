@@ -454,8 +454,8 @@ Windows Registry Editor Version 5.00
 分配静态 IP 和 DNS
 
 ```
-IP 地址 :「IP」
-首选 DNS :「server_IP」
+IP 地址 : 「IP」
+首选 DNS : 「server_IP」
 备用 DNS : 8.8.8.8
 ```
 

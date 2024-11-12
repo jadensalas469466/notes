@@ -394,7 +394,7 @@ network:
         ens33:
             dhcp4: no
             addresses:
-                -「os_IP」/24
+                - 「os_IP」/24
             routes:
                 - to: default
                   via: 192.168.1.1

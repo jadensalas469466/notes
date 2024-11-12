@@ -437,7 +437,7 @@ root@debian:~# vim /etc/network/interfaces
 12  # iface ens33 inet dhcp
 13  auto ens33
 14  iface ens33 inet static
-15          address「os_IP」
+15          address 「os_IP」
 16          netmask 255.255.255.0
 17          broadcast 192.168.1.255
 18          gateway 192.168.1.1
