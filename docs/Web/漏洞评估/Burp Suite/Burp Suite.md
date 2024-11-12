@@ -242,7 +242,7 @@ Turbo Intruder 攻击示例
 
 在 HTTP 历史记录中查看，用蚁剑连接目标后刷新
 
-![在 HTTP 历史记录中查看，用蚁剑连接目标后刷新](./../../../../images/Burp Suite/在 HTTP 历史记录中查看，用蚁剑连接目标后刷新.png)
+![在 HTTP 历史记录中查看，用蚁剑连接目标后刷新](./../../../../images/Burp%20Suite/%E5%9C%A8%20HTTP%20%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E6%9F%A5%E7%9C%8B%EF%BC%8C%E7%94%A8%E8%9A%81%E5%89%91%E8%BF%9E%E6%8E%A5%E7%9B%AE%E6%A0%87%E5%90%8E%E5%88%B7%E6%96%B0.png)
 
 > 捕获到了数据包
 
