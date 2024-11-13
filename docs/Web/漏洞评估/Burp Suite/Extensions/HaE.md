@@ -1,6 +1,6 @@
 一款用于信息标记的 Burp Suite 插件
 
-# 使用
+# 1 使用
 
 获取官方规则库
 
@@ -10,7 +10,7 @@
 
 添加规则
 
-> https://github.com/jadensalas469466/tools/tree/main/Burp%20Suite/Extensions/HaE
+> https://github.com/jadensalas469466/tools/raw/refs/heads/main/app/other/Burp%20Suite/Extensions/HaE/HaE.zip
 
 配置文件 Config.yml 和规则文件 Rules.yml 会放在固定目录下：
 
@@ -29,4 +29,4 @@
 参考链接
 
 - [HaE](https://github.com/gh0stkey/HaE)
-- https://blog.zgsec.cn/archives/481.html
+- [HaE入门到精通：三条影响你一生的HaE规则](https://blog.zgsec.cn/archives/481.html)
