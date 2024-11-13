@@ -17,7 +17,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 目录
 
 ```
-C:\Users\sec\Documents\virtual machines\debian
+C:\Users\sec\Documents\Virtual Machines\debian
 ```
 
 # 2 配置
@@ -25,7 +25,7 @@ C:\Users\sec\Documents\virtual machines\debian
 移动镜像文件到 `iso` 文件夹
 
 ```
-C:\Users\sec\Documents\virtual machines\iso
+C:\Users\sec\Documents\Virtual Machines\iso
 ```
 
 VMware Workstation Pro
@@ -73,7 +73,7 @@ debian
 位置
 
 ```
-C:\Users\sec\Documents\virtual machines\debian
+C:\Users\sec\Documents\Virtual Machines\debian
 ```
 
 处理器数量
@@ -131,7 +131,7 @@ SCSI
 磁盘文件
 
 ```
-C:\Users\sec\Documents\virtual machines\debian\debian.vmdk
+C:\Users\sec\Documents\Virtual Machines\debian\debian.vmdk
 ```
 
 自定义硬件
@@ -147,7 +147,7 @@ CD/DVD
 
 ```
 使用 ISO 映像文件
-C:\Users\sec\Documents\virtual machines\iso\debian-amd64-DVD-1.iso
+C:\Users\sec\Documents\Virtual Machines\iso\debian-amd64-DVD-1.iso
 ```
 
 显示

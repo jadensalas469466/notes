@@ -17,7 +17,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 目录
 
 ```
-C:\Users\sec\Documents\virtual machines\kali
+C:\Users\sec\Documents\Virtual Machines\kali
 ```
 
 # 2 配置
@@ -25,7 +25,7 @@ C:\Users\sec\Documents\virtual machines\kali
 移动镜像文件到 `iso` 文件夹
 
 ```
-C:\Users\sec\Documents\virtual machines\iso
+C:\Users\sec\Documents\Virtual Machines\iso
 ```
 
 VMware Workstation Pro
@@ -73,7 +73,7 @@ kali
 位置
 
 ```
-C:\Users\sec\Documents\virtual machines\kali
+C:\Users\sec\Documents\Virtual Machines\kali
 ```
 
 处理器数量
@@ -131,7 +131,7 @@ SCSI
 磁盘文件
 
 ```
-C:\Users\sec\Documents\virtual machines\kali\kali.vmdk
+C:\Users\sec\Documents\Virtual Machines\kali\kali.vmdk
 ```
 
 自定义硬件
@@ -147,7 +147,7 @@ CD/DVD
 
 ```
 使用 ISO 映像文件
-C:\Users\sec\Documents\virtual machines\iso\kali-linux-installer-amd64.iso
+C:\Users\sec\Documents\Virtual Machines\iso\kali-linux-installer-amd64.iso
 ```
 
 显示

@@ -27,7 +27,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 目录
 
 ```
-C:\Users\sec\Documents\virtual machines\windows
+C:\Users\sec\Documents\Virtual Machines\windows
 ```
 
 # 2 配置
@@ -51,7 +51,7 @@ TinkPad 是在启动引导界面按 F12
 移动镜像文件到 `iso` 文件夹
 
 ```
-C:\Users\sec\Documents\virtual machines\iso
+C:\Users\sec\Documents\Virtual Machines\iso
 ```
 
 VMware Workstation Pro
@@ -99,7 +99,7 @@ windows
 位置
 
 ```
-C:\Users\sec\Documents\virtual machines\windows
+C:\Users\sec\Documents\Virtual Machines\windows
 ```
 
 固件类型
@@ -163,7 +163,7 @@ NVMe
 磁盘文件
 
 ```
-C:\Users\sec\Documents\virtual machines\windows\windows.vmdk
+C:\Users\sec\Documents\Virtual Machines\windows\windows.vmdk
 ```
 
 编辑虚拟机设置
@@ -177,7 +177,7 @@ C:\Users\sec\Documents\virtual machines\windows\windows.vmdk
 使用 ISO 映像文件
 
 ```
-C:\Users\sec\Documents\virtual machines\iso\Win10_22H2_Chinese_Simplified_x64v1.iso
+C:\Users\sec\Documents\Virtual Machines\iso\Win10_22H2_Chinese_Simplified_x64v1.iso
 ```
 
 3D 图形
@@ -201,13 +201,13 @@ C:\Users\sec\Documents\virtual machines\iso\Win10_22H2_Chinese_Simplified_x64v1.
 主机路径
 
 ```
-C:\Users\sec\share\vmware
+C:\Users\sec\share\VMware
 ```
 
 名称
 
 ```
-vmware
+VMware
 ```
 
 其他属性
@@ -511,15 +511,12 @@ PS C:\Users\sec> irm https://get.activated.win | iex
 C:\Users\sec
 ├─Documents
 │	├─KeePass
-│	├─VeraCrypt
-│	└─Virtual Machines
-│		└─ISO
+│	└─VeraCrypt
+│		└─iso
 ├─Pictures
 |	└─截图
-└─Share
-	├─Code
-	├─Github
-	├─MuMu共享文件夹
+└─share
+	├─github
 	└─VMware
 ```
 
