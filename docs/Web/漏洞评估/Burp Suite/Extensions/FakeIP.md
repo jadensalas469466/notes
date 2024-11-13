@@ -1,4 +1,4 @@
-一款用于伪造 IP 地址的 Burp Suite 插件
+一款用于伪造 IP 地址的 Burp Suite 插件。
 
 # 1 使用
 

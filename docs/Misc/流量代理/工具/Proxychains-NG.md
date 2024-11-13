@@ -1,6 +1,6 @@
-一个开源的命令行工具，用于将网络流量通过代理服务器转发。它可以让用户在终端中使用任何应用程序通过代理服务器连接到互联网，从而实现匿名浏览和访问受限制的网站。
+一个开源的命令行工具，用于将网络流量通过代理服务器转发。
 
-## 部署
+# 1 部署
 
 安装
 
@@ -9,7 +9,7 @@
 └─# apt install -y proxychains4
 ```
 
-## 初始化
+# 2 初始化
 
 修改配置文件
 
@@ -33,7 +33,7 @@
 root@debian:~# systemctl restart networking && systemctl restart networking && proxychains4 curl ip.sb
 ```
 
-## 使用
+# 3 使用
 
 通过代理执行程序
 

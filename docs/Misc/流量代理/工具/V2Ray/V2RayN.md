@@ -1,4 +1,6 @@
-## 部署
+一个 Windows 平台上的 V2Ray 客户端。
+
+# 1 部署
 
 添加 VMess 服务器
 
@@ -20,7 +22,7 @@
 
 ![主题跟随系统](./../../../../../images/V2RayN/%E4%B8%BB%E9%A2%98%E8%B7%9F%E9%9A%8F%E7%B3%BB%E7%BB%9F.png)
 
-## 使用
+# 2 使用
 
 全选后测试延迟
 
@@ -38,4 +40,4 @@
 
 参考链接
 
-- [V2RayNN](https://github.com/2dust/V2RayNN)
+- [V2RayN](https://github.com/2dust/v2rayN)

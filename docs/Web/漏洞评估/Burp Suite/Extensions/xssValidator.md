@@ -1,4 +1,4 @@
-一款用于自动化验证 XSS 漏洞的 Burp Suite 工具
+一款用于自动化验证 XSS 漏洞的 Burp Suite 工具。
 
 # 1 部署
 

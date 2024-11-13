@@ -1,4 +1,4 @@
-一款用于分块传输绕过 WAF 的 Burp Suite 插件
+一款用于分块传输绕过 WAF 的 Burp Suite 插件。
 
 # 1 使用
 
