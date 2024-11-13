@@ -1,4 +1,6 @@
-## Git 部署 SSH 公钥后无法使用 SSH 操作
+使用 Git 时出现的一些错误及其解决方法
+
+# 1 Git 部署 SSH 公钥后无法使用 SSH 操作
 
 在网络环境不佳时，我们往往会配置 SSH 用于连接 Git 服务器
 
@@ -16,7 +18,7 @@ PS C:\Users\sec> git config --global core.sshCommand "C:/Windows/System32/OpenSS
 
 ![使用以下命令将 Git 的 SSH 服务修改为 Powershell 的 SSH 服务即可](./../../../images/Git%20%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E5%B0%86%20Git%20%E7%9A%84%20SSH%20%E6%9C%8D%E5%8A%A1%E4%BF%AE%E6%94%B9%E4%B8%BA%20Powershell%20%E7%9A%84%20SSH%20%E6%9C%8D%E5%8A%A1%E5%8D%B3%E5%8F%AF.png)
 
-## Git 操作时显示主机密钥验证失败
+# 2 Git 操作时显示主机密钥验证失败
 
 ```
 > git pull --tags origin master
@@ -44,3 +46,9 @@ This key is not known by any other names.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 ```
 
+---
+
+参考链接
+
+- [Git](https://git-scm.com/)
+- [Git Documentation](https://git-scm.com/doc)

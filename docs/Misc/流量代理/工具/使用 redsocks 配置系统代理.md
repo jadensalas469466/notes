@@ -1,4 +1,6 @@
-# 初始化
+通过 redsocks 将本机的 TCP 流量转发到 v2Ray。
+
+# 1 初始化
 
 修改配置文件
 
@@ -28,7 +30,7 @@
 iptables -t nat -F
 
 # 服务端地址
-iptables -t nat -A OUTPUT -d xxx.xxx.xxx.xxx -j RETURN
+iptables -t nat -A OUTPUT -d [server_ip] -j RETURN
 
 # 过滤 ip
 iptables -t nat -A OUTPUT -d 0.0.0.0/8 -j RETURN
@@ -106,7 +108,7 @@ exit 0
 └─# chmod +x /root/tool/proxy/proxy.sh && ln -s /root/tool/proxy/proxy.sh /usr/local/bin/proxy
 ```
 
-# 帮助
+# 2 帮助
 
 ```
 ┌──(root㉿kali)-[~]
@@ -119,3 +121,11 @@ Usage: /usr/local/bin/proxy {-h|start|stop}
     start: 启动 redsocks 服务并执行规则脚本
      stop: 停止 redsocks 服务
 ```
+
+---
+
+参考链接
+
+- [redsocks](https://github.com/darkk/redsocks)
+- [redsocks Homepage](https://darkk.net.ru/redsocks/)
+

@@ -1,6 +1,6 @@
-将 GitBook 关联到 GitHub，自动同步 GitHub 中的文档
+将 GitBook 关联到 GitHub，自动同步 GitHub 中的文档。
 
-# 初始化
+# 1 初始化
 
 选择 GitHub Sync 插件
 
@@ -56,4 +56,12 @@
 
 此时 GitHub 仓库中 `test` 目录下的所有文档将被同步到 GitBook 的 `Space` 中
 
-若唯一的一级标题在首行，GitBook 不会将文件名显示为主标题
+> 若唯一的一级标题在首行，GitBook 不会将文件名显示为主标题
+
+---
+
+参考链接
+
+- [GitBook](https://www.gitbook.com/)
+- [GitBook Documentation](https://docs.gitbook.com/)
+
