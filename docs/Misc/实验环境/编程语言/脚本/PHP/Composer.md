@@ -1,4 +1,6 @@
-## 部署
+一个PHP的依赖管理工具。
+
+# 1 部署
 
 安装
 
@@ -7,7 +9,7 @@
 └─# apt install -y composer
 ```
 
-## 初始化
+# 2 初始化
 
 配置源
 
@@ -16,7 +18,7 @@
 └─# composer config -g repo.packagist composer https://packagist.phpcomposer.com
 ```
 
-## 使用
+# 3 使用
 
 配置源
 

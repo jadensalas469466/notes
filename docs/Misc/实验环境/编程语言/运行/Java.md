@@ -1,4 +1,6 @@
-## 部署
+一种面向跨平台的编程语言。
+
+# 1 部署
 
 安装 jdk8
 
@@ -14,7 +16,7 @@
 └─# update-alternatives --install /usr/bin/java java /usr/local/jdk8u412-b08/bin/java 0804
 ```
 
-## 使用
+# 2 使用
 
 修改 jdk
 
@@ -65,5 +67,5 @@ OpenJDK 64-Bit Server VM (Temurin)(build 25.412-b08, mixed mode)
 
 参考链接
 
-- [Oracle JDK](https://www.java.com/en/download/manual.jsp)
 - [Open JDK](https://adoptium.net/zh-CN/)
+- [Oracle JDK](https://www.java.com/en/download/manual.jsp)

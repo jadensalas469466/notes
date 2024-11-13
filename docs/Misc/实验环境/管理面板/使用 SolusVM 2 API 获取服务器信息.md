@@ -1,6 +1,6 @@
-SolusVM 2 是一款服务器管理面板
+SolusVM 2 是一款服务器管理面板。
 
-## 部署
+# 1 部署
 
 安装依赖
 
@@ -14,7 +14,7 @@ root@server:~# apt install -y caddy php8.2-fpm php8.2-curl
 root@server:~# systemctl enable --now caddy.service && systemctl enable --now php8.2-fpm.service
 ```
 
-## 初始化
+# 2 初始化
 
 获取 API 和 URL
 
@@ -60,5 +60,5 @@ root@server:~# wget https://github.com/jadensalas469466/tools/raw/main/SolusVM%2
 
 参考链接
 
-- https://docs.solusvm.com/
-- https://caddyserver.com/docs/
+- [SolusVM 2 Documentation](https://docs.solusvm.com/)
+- [Caddy Documentation](https://caddyserver.com/docs/)

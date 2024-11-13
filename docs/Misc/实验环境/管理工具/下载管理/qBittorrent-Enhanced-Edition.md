@@ -1,4 +1,6 @@
-[qBittorrent-Enhanced-Edition](https://github.com/c0re100/qBittorrent-Enhanced-Edition) forked from [qbittorrent/qBittorrent](https://github.com/qbittorrent/qBittorrent)
+BitTorrent 客户端 forked from [qbittorrent/qBittorrent。](https://github.com/qbittorrent/qBittorrent)
+
+# 1 初始化
 
 添加 [`Tracker`](https://github.com/XIU2/TrackersListCollection/blob/master/README-ZH.md) 列表
 

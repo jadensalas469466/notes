@@ -1,4 +1,6 @@
-## 部署
+一个用于创建独立 Python 虚拟环境的工具。
+
+# 1 部署
 
 kali 中安装
 
@@ -13,7 +15,7 @@ Windows 中安装
 PS C:\Users\sec> pip install virtualenv
 ```
 
-## 使用
+# 2 使用
 
 创建虚拟环境
 
@@ -60,3 +62,4 @@ PS C:\Users\sec> .\venv\Scripts\Activate
 参考链接
 
 - [virtualenv](https://github.com/pypa/virtualenv/)
+- [virtualenv Documentation](https://virtualenv.pypa.io/en/latest/)

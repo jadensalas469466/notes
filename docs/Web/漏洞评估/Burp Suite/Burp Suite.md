@@ -124,9 +124,9 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 
 > 所有的扩展都要下载到这个目录中
 
-# 5 部署
+# 5 Extensions
 
-|                             插件                             |
+|                          Extensions                          |
 | :----------------------------------------------------------: |
 |            [HaE](https://github.com/gh0stkey/HaE)            |
 | [BurpFingerPrint](https://github.com/shuanx/BurpFingerPrint) |

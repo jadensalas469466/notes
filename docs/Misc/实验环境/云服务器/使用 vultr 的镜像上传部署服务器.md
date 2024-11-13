@@ -1,3 +1,5 @@
+Vultr 是一个云服务器商，支持直接上传镜像部署服务器
+
 点击 `Add ISO` 
 
 ![点击 `Add ISO`](./../../../../images/%E4%BD%BF%E7%94%A8%20vultr%20%E7%9A%84%E9%95%9C%E5%83%8F%E4%B8%8A%E4%BC%A0%E9%83%A8%E7%BD%B2%E6%9C%8D%E5%8A%A1%E5%99%A8/%E7%82%B9%E5%87%BB%20%60Add%20ISO%60.png)
@@ -80,6 +82,6 @@ Price: $24/month $0.036/hour
 
 参考链接
 
-- [vultr](https://www.vultr.com/)
+- [Vultr](https://www.vultr.com/)
 - [Upload Custom ISO](https://www.vultr.com/features/upload-iso/)
 

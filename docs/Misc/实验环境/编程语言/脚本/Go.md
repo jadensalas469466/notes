@@ -1,4 +1,6 @@
-## 部署
+一种高效的编程语言。
+
+# 1 部署
 
 安装
 
@@ -7,7 +9,7 @@
 └─# apt install -y golang-go
 ```
 
-## 初始化
+# 2 初始化
 
 配置源
 
@@ -23,7 +25,7 @@
 └─# echo 'export PATH=$PATH:/root/go/bin' >> ~/.zshrc && source ~/.zshrc
 ```
 
-## 使用
+# 3 使用
 
 创建项目 `D:\share\code\go\main.go` 
 
@@ -84,4 +86,5 @@ func main() {
 参考链接
 
 - [Go](https://go.dev/)
+- [Go Documentation](https://go.dev/doc/)
 

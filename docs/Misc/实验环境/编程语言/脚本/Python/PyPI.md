@@ -1,4 +1,6 @@
-## 初始化
+Python 的包管理工具。
+
+# 1 初始化
 
 配置源
 
@@ -7,7 +9,7 @@
 └─# pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 ```
 
-## 使用
+# 2 使用
 
 安装软件
 

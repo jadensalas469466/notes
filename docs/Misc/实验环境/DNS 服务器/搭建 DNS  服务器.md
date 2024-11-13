@@ -1,6 +1,6 @@
-在 Debian 系统 202.38.95.17 中搭建私人 DNS 服务器，避免国际 DNS 服务器被 GFW 污染
+搭建私人 DNS 服务器，避免国际 DNS 服务器被 [GFW](https://zh.wikipedia.org/zh-hans/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E) 污染。
 
-# 部署
+# 1 部署
 
 使用 UFW 开放 DNS 端口 53
 
@@ -53,11 +53,11 @@ root@server:~# systemctl enable --now named.service
 在本地计算机中验证 DNS 服务器是否可用
 
 ```shell
-root@server:~# dig @202.38.95.17 x.com
+root@server:~# dig @[server_ip] x.com
 ```
 
 ```
-; <<>> DiG 9.18.28-1~deb12u2-Debian <<>> @202.38.95.17 x.com
+; <<>> DiG 9.18.28-1~deb12u2-Debian <<>> @[server_ip] x.com
 ; (1 server found)
 ;; global options: +cmd
 ;; Got answer:
@@ -77,7 +77,7 @@ x.com.                  1800    IN      A       104.244.42.193
 x.com.                  1800    IN      A       104.244.42.129
 
 ;; Query time: 251 msec
-;; SERVER: 202.38.95.17#53(202.38.95.17) (UDP)
+;; SERVER: [server_ip]#53([server_ip]) (UDP)
 ;; WHEN: Fri Nov 01 19:05:01 CST 2024
 ;; MSG SIZE  rcvd: 126
 
@@ -92,5 +92,6 @@ PING x.com (104.244.42.129) 56(84) bytes of data.
 
 参考链接
 
+- [BIND 9](https://gitlab.isc.org/isc-projects/bind9)
 - [debian配置BIND DNS服务器](https://blog.csdn.net/qq_51470638/article/details/138235472)
 

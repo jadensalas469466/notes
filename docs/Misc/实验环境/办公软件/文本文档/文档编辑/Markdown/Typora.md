@@ -1,6 +1,6 @@
-一款 Markdown 编辑器
+一款 Markdown 编辑器。
 
-## 初始化
+# 1 初始化
 
 开启自动转义功能
 
@@ -23,3 +23,5 @@
 参考链接
 
 - [Typora](https://typora.io/)
+- [Typora Support](https://support.typora.io/)
+

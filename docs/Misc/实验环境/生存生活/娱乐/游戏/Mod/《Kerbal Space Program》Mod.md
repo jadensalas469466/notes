@@ -1,6 +1,6 @@
 手动安装将 MOD 放入 `Kerbal Space Program\GameData` 即可
 
-## [CKAN](https://github.com/KSP-CKAN/CKAN)
+下载 MOD 加载器 [CKAN](https://github.com/KSP-CKAN/CKAN)
 
 将下载后的 ckan.exe 放在游戏根目录（需要在代理环境中运行）
 

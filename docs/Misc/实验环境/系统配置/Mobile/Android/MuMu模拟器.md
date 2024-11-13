@@ -1,4 +1,6 @@
-## 初始化
+一款 Windows 平台的安卓模拟器
+
+# 1 初始化
 
 配置设置中心
 
@@ -14,7 +16,7 @@ C:/Users/sec/share/mumuplayer
 
 > 安装 酷安
 
-### 配置 ADB 调试
+## 1.1 配置 ADB 调试
 
 将 ADB 加入环境变量
 
@@ -94,7 +96,7 @@ root
 com.tx.zqzs.yofun.mumu
 ```
 
-### 安装 burp 证书
+## 1.2 安装 burp 证书
 
 安装 Amaze
 
@@ -168,7 +170,7 @@ kali 下载 cacert.der
 
 ![添加 burp 代理](./../../../../../../images/MuMu%E6%A8%A1%E6%8B%9F%E5%99%A8/%E6%B7%BB%E5%8A%A0%20burp%20%E4%BB%A3%E7%90%86.png)
 
-### 安装 fiddler 证书
+## 1.3 安装 fiddler 证书
 
 导出证书
 
@@ -226,7 +228,7 @@ kali 下载 cacert.der
 
 ![添加 fiddler 代理](./../../../../../../images/MuMu%E6%A8%A1%E6%8B%9F%E5%99%A8/%E6%B7%BB%E5%8A%A0%20fiddler%20%E4%BB%A3%E7%90%86.png)
 
-## 使用
+# 2 使用
 
 在 mumuplayer 中运行任意联网程序，使用 CSNAS 找到运行环境路径
 

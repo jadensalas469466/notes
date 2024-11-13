@@ -1,6 +1,6 @@
-Docker 是一个用于创建和管理容器的工具
+一个用于创建和管理容器的工具。
 
-## 部署
+# 1 部署
 
 安装
 
@@ -8,7 +8,7 @@ Docker 是一个用于创建和管理容器的工具
 root@server:~# apt install -y docker.io docker-compose
 ```
 
-## 初始化
+# 2 初始化
 
 配置开机自启
 
@@ -16,7 +16,7 @@ root@server:~# apt install -y docker.io docker-compose
 root@server:~# systemctl enable --now docker.service
 ```
 
-## 使用
+# 3 使用
 
 通过 docker proxy 拉取镜像
 
@@ -53,3 +53,4 @@ root@server:~# systemctl daemon-reload && systemctl restart docker.service
 
 - [docker](https://www.docker.com/)
 - [docker proxy](https://dockerproxy.net/)
+- [docker Documentation](https://docs.docker.com/)

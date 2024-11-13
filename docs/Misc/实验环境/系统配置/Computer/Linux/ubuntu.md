@@ -1,3 +1,5 @@
+基于 Debian 的激进的服务器操作系统。
+
 ## 准备
 
 ubuntu-live-server-amd64.iso
@@ -450,5 +452,6 @@ root@ubuntu:~# init 0
 
 参考链接
 
-- [ubuntu](https://cn.ubuntu.com/)
+- [Ubuntu](https://cn.ubuntu.com/)
+- [Official Ubuntu Documentation](https://help.ubuntu.com/)
 

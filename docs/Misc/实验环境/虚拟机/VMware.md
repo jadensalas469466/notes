@@ -1,10 +1,12 @@
-## 下载
+用于创建和管理虚拟机的软件。
+
+# 1 下载
 
 最新的 VMware 下载需要登录，可直接从 VMware 的 CDS 服务器下载
 
 > https://softwareupdate.vmware.com/cds/vmw-desktop/ws/
 
-## 部署
+# 2 部署
 
 安装后选择用于个人用途即可使用
 
@@ -52,7 +54,7 @@ NAT 模式
 
 ![NAT 模式](./../../../../images/VMware/NAT%20%E6%A8%A1%E5%BC%8F.png)
 
-## 使用
+# 3 使用
 
 风险文件夹
 
@@ -97,3 +99,4 @@ C:\Users\sec\Share\VMware
 参考链接
 
 - [VMware](https://www.vmware.com/)
+- [VMware Documentation](https://docs.vmware.com/cn/)

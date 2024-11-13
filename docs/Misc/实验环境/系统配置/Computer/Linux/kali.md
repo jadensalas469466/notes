@@ -1,4 +1,6 @@
-## 准备
+基于 Debian 的信息安全平台。
+
+# 1 准备
 
 kali-linux-installer-amd64.iso
 
@@ -18,7 +20,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 C:\Users\sec\Documents\virtual machines\kali
 ```
 
-## 配置
+# 2 配置
 
 移动镜像文件到 `iso` 文件夹
 
@@ -157,7 +159,7 @@ C:\Users\sec\Documents\virtual machines\iso\kali-linux-installer-amd64.iso
 
 拍摄快照并命名为 `配置` 
 
-## 安装
+# 3 安装
 
 开启此虚拟机进行安装
 
@@ -312,7 +314,7 @@ passwd: password updated successfully
 root@kali:~# init 0
 ```
 
-## 初始化
+# 4 初始化
 
 启动虚拟机，使用 `root` 用户登录
 
@@ -495,7 +497,7 @@ PS C:\Users\sec> ssh root@kali.local
 └─# init 0
 ```
 
-## 部署
+# 5 部署
 
 |                       实验环境                        |
 | :---------------------------------------------------: |
@@ -554,7 +556,7 @@ PS C:\Users\sec> ssh root@kali.local
 |                       gopher_encode.py                       |
 |                     linebreak_conver.py                      |
 
-## 使用
+# 6 使用
 
 **卧底模式**
 
@@ -616,4 +618,5 @@ Password: 123456
 
 参考链接
 
-- [kali](https://www.kali.org/)
+- [Kali](https://www.kali.org/)
+- [Kali Docs](https://www.kali.org/docs/)

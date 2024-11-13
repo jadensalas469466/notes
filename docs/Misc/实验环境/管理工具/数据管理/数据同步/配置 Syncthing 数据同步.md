@@ -1,8 +1,8 @@
-Syncthing 是一款开源的数据同步工具
+一款开源的数据同步工具。
 
-## 安装
+# 1 安装
 
-### Windows
+## 1.1 Windows
 
 使用默认配置
 
@@ -24,7 +24,7 @@ PS C:\Users\sec> regsvr32 jscript.dll
 
 > 注册成功后将 Syncthing 卸载，重新安装即可
 
-### debian
+## 1.2 debian
 
 安装 Syncthing
 
@@ -93,7 +93,7 @@ root@server:~# systemctl daemon-reload
 root@server:~# systemctl enable --now syncthing@root.service
 ```
 
-## 初始化
+# 2 初始化
 
 使用浏览器访问 Syncthing 控制台
 
@@ -125,7 +125,7 @@ https://127.0.0.1:8384/
 
 ![移除这个文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E7%A7%BB%E9%99%A4%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
-### 添加远程设备
+## 2.1 添加远程设备
 
 在 debian 控制台选择显示 ID
 
@@ -147,15 +147,15 @@ https://127.0.0.1:8384/
 
 ![在 debian 控制台接受请求](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E5%9C%A8%20debian%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%8E%A5%E5%8F%97%E8%AF%B7%E6%B1%82.png)
 
-### 设置文件同步
+## 2.2 设置文件同步
 
 在控制台添加文件夹
 
 ![在控制台添加文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/debian/%E5%9C%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
-#### 单向同步
+### 2.2.1 单向同步
 
-##### Windows
+#### 2.2.1.1 Windows
 
 常规设置
 
@@ -173,7 +173,7 @@ https://127.0.0.1:8384/
 
 ![高级设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/Windows/%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE.png)
 
-##### debian
+#### 2.2.1.2 debian
 
 接受请求添加新文件
 
@@ -195,9 +195,9 @@ https://127.0.0.1:8384/
 
 ![高级设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/debian/%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE.png)
 
-#### 双向同步
+### 2.2.2 双向同步
 
-##### Windows
+#### 2.2.2.1 Windows
 
 常规设置
 
@@ -215,7 +215,7 @@ https://127.0.0.1:8384/
 
 ![高级设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE.png)
 
-##### debain
+#### 2.2.2.2 debain
 
 常规设置
 

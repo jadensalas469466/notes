@@ -1,11 +1,13 @@
-## 部署
+一种服务器端脚本语言。
+
+# 1 部署
 
 ```shell
 ┌──(root㉿kali)-[~]
 └─# apt install -y php php-gd php-mysql libapache2-mod-php
 ```
 
-## 初始化
+# 2 初始化
 
 编辑配置文件
 
@@ -33,7 +35,7 @@
 └─# systemctl restart apache2
 ```
 
-### 禁用敏感函数
+## 2.1 禁用敏感函数
 
 > 禁用的敏感函数会出现在 phpinfo 的 `disable_functions` 中
 > 
@@ -50,15 +52,15 @@
 
 > 发现 `phpinfo` 中显示 `exec`  和 `system` 已经被禁用
 
-## 使用
+# 3 使用
 
-### PHP 读写Cookie
+## 3.1 PHP 读写Cookie
 
 > JSP ASP ASPX PYTHON GO 也可以
 > 
 > 实验前要先禁止浏览器自动删除 Cookie
 
-#### 创建 Cookie
+### 3.1.1 创建 Cookie
 
 在 PHP 中通过 setcookie()函数创建 Cookie
 
@@ -114,7 +116,7 @@ echo date('Y-m-d H:i:s');
 
 > 从图中可以看到 domain 没有设置默认为 当前站点域名，path 默认为 / ，也就是这个 Cookie 在整个站点内是有效的，第一个 cookie 没有设置过期时间 expire，默认为 Session ，说明当浏览器关掉后，会失效。第二个 cookie 过期时间为访问页面时开始 1 个小时候失效。
 
-#### 读取 Cookie
+### 3.1.2 读取 Cookie
 
 **读取名称为 name 的 cookie 的值**
 
@@ -154,9 +156,9 @@ echo $_COOKIE['hello'];
 > 
 > 原因是在 cookie1.php 中没有设置过期时间，关闭浏览器后会失效。而 cookie2.php 设置的过期时间为 1 个小时。
 
-#### 删除 Cookie
+### 3.1.3 删除 Cookie
 
-#### setcookie()函数删除
+### 3.1.4 setcookie()函数删除
 
 编辑文件 delcookie.php
 
@@ -194,7 +196,7 @@ setcookie('hello',null,time()-1);
 
 > 发现 `666` 已被删除
 
-#### 浏览器手动删除
+### 3.1.5 浏览器手动删除
 
 浏览器先后访问两个文件
 
@@ -212,7 +214,7 @@ setcookie('hello',null,time()-1);
 
 > 发现已经删除。
 
-### PHP 调用并执行 Linux 命令
+## 3.2 PHP 调用并执行 Linux 命令
 
 | PHP 敏感函数 |
 |:--------:|
@@ -228,7 +230,7 @@ setcookie('hello',null,time()-1);
 
 > 这些函数对于 linux 服务器是及其不安全，如果被执行时一件很危险的事情。所以一般服务器都会禁用这些函数。
 
-#### exec()
+### 3.2.1 exec()
 
 新建文件 exec.php
 
@@ -260,7 +262,7 @@ print_r($array);
 Array ( [0] => uid=48(apache) gid=48(apache) groups=48(apache) ) 
 ```
 
-##### 扩展
+#### 3.2.1.1 扩展
 
 编辑文件 exec.php
 
@@ -290,7 +292,7 @@ print_r($array);
 uid=48(apache) gid=48(apache) groups=48(apache) 
 ```
 
-#### system()
+### 3.1.6 system()
 
 新建文件 system.php
 
@@ -315,7 +317,7 @@ $last = system($test);
 uid=48(apache) gid=48(apache) groups=48(apache) 
 ```
 
-#### passthru()
+### 3.1.7 passthru()
 
 新建文件 passthru.php
 
@@ -340,7 +342,7 @@ passthru($test);
 uid=48(apache) gid=48(apache) groups=48(apache)
 ```
 
-#### popen()
+### 3.1.8 popen()
 
 新建文件 popen.php
 
@@ -376,7 +378,7 @@ pclose($fp);
 uid=48(apache) gid=48(apache) groups=48(apache)
 ```
 
-#### proc_open()
+### 3.1.9 proc_open()
 
 新建文件 proc_open.php
 
@@ -416,7 +418,7 @@ proc_close($fp);
 uid=48(apache) gid=48(apache) groups=48(apache) 
 ```
 
-#### shell_exec()
+### 3.1.10 shell_exec()
 
 新建文件 shell_exec.php
 
@@ -447,3 +449,4 @@ root:x:0:0:root:/root:/bin/bash bin:x:1:1:bin:/bin:/sbin/nologin daemon:x:2:2:da
 参考链接
 
 - [PHP](https://www.php.net/downloads.php)
+- [PHP Documentation](https://www.php.net/docs.php)
