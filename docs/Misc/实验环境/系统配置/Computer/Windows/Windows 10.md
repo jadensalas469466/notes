@@ -756,7 +756,7 @@ The command completed successfully.
 
 ## 6.7 文件权限
 
-![文件权限](./../../../../../../images/Windows 10/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
+![文件权限](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
 
 ## 6.8 查看进程
 
