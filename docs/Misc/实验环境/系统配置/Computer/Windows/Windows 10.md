@@ -536,7 +536,6 @@ C:\Users\sec
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
 |            [AnyTXT Searcher](https://anytxt.net/)            |
-| [Avast Free Antivirus](https://www.avast.com/zh-cn/installation-files#pc) |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
 | [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
@@ -546,6 +545,7 @@ C:\Users\sec
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
 |                 [Git](https://git-scm.com/)                  |
+|           [GlassWire](https://www.glasswire.com/)            |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |  [HashCalculator](https://github.com/hrpzcf/HashCalculator)  |
 |                  [He3](https://he3.app/zh/)                  |
@@ -571,7 +571,6 @@ C:\Users\sec
 | [qBittorrent-Enhanced-Edition](https://github.com/c0re100/qBittorrent-Enhanced-Edition) |
 |            [RaiDrive](https://www.raidrive.com/)             |
 |          [RealTimeSync](https://freefilesync.org/)           |
-| [script](https://github.com/jadensalas469466/tool/tree/main/script) |
 |      [Stretchly](https://github.com/hovancik/stretchly)      |
 |  [Subtitle Mask](https://github.com/chocovon/subtitle-mask)  |
 |             [Syncthing](https://syncthing.net/)              |
