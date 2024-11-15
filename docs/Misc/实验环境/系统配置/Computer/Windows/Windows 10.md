@@ -536,6 +536,7 @@ C:\Users\sec
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
 |            [AnyTXT Searcher](https://anytxt.net/)            |
+| [Avast Free Antivirus](https://www.avast.com/zh-cn/installation-files#pc) |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
 | [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
@@ -545,7 +546,6 @@ C:\Users\sec
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
 |                 [Git](https://git-scm.com/)                  |
-|                 [Goby](https://gobysec.net/)                 |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |  [HashCalculator](https://github.com/hrpzcf/HashCalculator)  |
 |                  [He3](https://he3.app/zh/)                  |
