@@ -1,17 +1,12 @@
-监听端口
+Get Shell 后
 
-```shell
-┌──(root㉿kali)-[~]
-└─# nc -nvlp [port]
-```
-
-先半交互 Shell
+先升级为半交互 Shell
 
 ```shell
 root@debian:~# python -c 'import pty;pty.spawn("/bin/bash")'
 ```
 
-再全交互 Shell
+再升级为全交互 Shell
 
 ```shell
 root@debian:~# stty raw -echo;fg;reset

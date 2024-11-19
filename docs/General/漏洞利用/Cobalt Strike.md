@@ -1,0 +1,71 @@
+一个漏洞利用平台。
+
+# 1 部署
+
+复制
+
+```shell
+┌──(root㉿kali-23)-[~]
+└─# share && cp /mnt/share/cs.zip /root
+```
+
+解压
+
+```shell
+┌──(root㉿kali-23)-[~]
+└─# unzip cs.zip -d /root/tools && rm -rf /root/cs.zip
+```
+
+将服务端复制到 web 目录
+
+```shell
+┌──(root㉿kali-23)-[~]
+└─# cp /root/tools/cs/server.zip /var/www/html/upload
+```
+
+创建链接
+
+```shell
+┌──(root㉿kali-23)-[~]
+└─# chmod +x /root/tools/cs/client/cs.sh && ln -s /root/tools/cs/client/cs.sh /usr/local/bin/cs
+```
+
+# 2 使用
+
+开启 web 服务
+
+```shell
+┌──(root㉿kali-23)-[~]
+└─# sudo systemctl start apache2.service && sudo systemctl status apache2.service
+```
+
+在目标下载服务端并解压
+
+```shell
+[root@centos7-6 ~]# wget 'http://kali-23.local/upload/server.zip' -O /root/server.zip && unzip server.zip
+```
+
+运行服务端
+
+```shell
+[root@centos7-6 ~]# chmod +x -R /root/server && cd /root/server && ./teamserver 192.168.1.14 123456
+```
+
+> 指定远程服务器 ip 和 密码
+
+运行客户端
+
+```shell
+┌──(root㉿kali-23)-[~]
+└─# cs
+```
+
+连接服务端
+
+![连接服务端](./../../../images/Cobalt%20Strike/%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF.png)
+
+---
+
+参考链接
+
+- [Cobalt Strike](https://www.cobaltstrike.com/)
