@@ -228,7 +228,7 @@ xuegod=phpinfo();
 
 将 Cookie 写入蚁剑请求信息即可
 
-![将 Cookie 写入蚁剑请求信息](./../../../../images/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/%E5%B0%86%20Cookie%20%E5%86%99%E5%85%A5%E8%9A%81%E5%89%91%E8%AF%B7%E6%B1%82%E4%BF%A1%E6%81%AF.png)
+![将 Cookie 写入蚁剑请求信息](./../../../../../images/Unrestricted%20File%20Upload/%E5%B0%86%20Cookie%20%E5%86%99%E5%85%A5%E8%9A%81%E5%89%91%E8%AF%B7%E6%B1%82%E4%BF%A1%E6%81%AF.png)
 
 >要去掉单引号
 

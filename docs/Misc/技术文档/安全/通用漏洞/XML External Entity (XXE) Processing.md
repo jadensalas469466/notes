@@ -208,31 +208,31 @@ http://127.0.0.1:§80§
 
 `payload` 类型选择 `数值` 
 
-![payload 类型选择 数值](./../../../../images/XML%20External%20Entity%20(XXE)%20Processing/payload%20%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%20%E6%95%B0%E5%80%BC.png)
+![payload 类型选择 数值](./../../../../../images/XML%20External%20Entity%20(XXE)%20Processing/payload%20%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%20%E6%95%B0%E5%80%BC.png)
 
 选择端口扫描范围
 
-![选择端口扫描范围](./../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E9%80%89%E6%8B%A9%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E8%8C%83%E5%9B%B4.png)
+![选择端口扫描范围](./../../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E9%80%89%E6%8B%A9%E7%AB%AF%E5%8F%A3%E6%89%AB%E6%8F%8F%E8%8C%83%E5%9B%B4.png)
 
 取消编码
 
-![取消编码](./../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E5%8F%96%E6%B6%88%E7%BC%96%E7%A0%81.png)
+![取消编码](./../../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E5%8F%96%E6%B6%88%E7%BC%96%E7%A0%81.png)
 
 检索含有 `Connection refused` 的响应包
 
 > 若有 `Connection refused` ，则端口未开放
 
-![检索含有 Connection refused 的响应包](./../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E6%A3%80%E7%B4%A2%E5%90%AB%E6%9C%89%20Connection%20refused%20%E7%9A%84%E5%93%8D%E5%BA%94%E5%8C%85.png)
+![检索含有 Connection refused 的响应包](./../../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E6%A3%80%E7%B4%A2%E5%90%AB%E6%9C%89%20Connection%20refused%20%E7%9A%84%E5%93%8D%E5%BA%94%E5%8C%85.png)
 
 开始攻击后，未检测出 `Connection refused` 的端口就是开放的端口
 
-![开始攻击后，未检测出 Connection refused 的端口就是开放的端口](./../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E5%BC%80%E5%A7%8B%E6%94%BB%E5%87%BB%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%A3%80%E6%B5%8B%E5%87%BA%20Connection%20refused%20%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%B0%B1%E6%98%AF%E5%BC%80%E6%94%BE%E7%9A%84%E7%AB%AF%E5%8F%A3.png)
+![开始攻击后，未检测出 Connection refused 的端口就是开放的端口](./../../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E5%BC%80%E5%A7%8B%E6%94%BB%E5%87%BB%E5%90%8E%EF%BC%8C%E6%9C%AA%E6%A3%80%E6%B5%8B%E5%87%BA%20Connection%20refused%20%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%B0%B1%E6%98%AF%E5%BC%80%E6%94%BE%E7%9A%84%E7%AB%AF%E5%8F%A3.png)
 
 >`Connection refused` 栏有数值，证明端口关闭
 
 ## 6 无回显的情况下实现数据外带
 
-![无回显的情况下实现数据外带](./../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E6%97%A0%E5%9B%9E%E6%98%BE%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%A4%96%E5%B8%A6.png)
+![无回显的情况下实现数据外带](./../../../../../images/XML%20External%20Entity%20(XXE)%20Processing/%E6%97%A0%E5%9B%9E%E6%98%BE%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%AE%9E%E7%8E%B0%E6%95%B0%E6%8D%AE%E5%A4%96%E5%B8%A6.png)
 
 **过程**
 
