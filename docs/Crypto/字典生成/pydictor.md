@@ -1,6 +1,6 @@
 字典生成。
 
-# 1 部署
+## 1 部署
 
 克隆
 
@@ -36,7 +36,7 @@ python3 pydictor.py "$@"
 └─# chmod +x /root/tools/pydictor/pydictor.sh && ln -s /root/tools/pydictor/pydictor.sh /usr/local/bin/pydictor
 ```
 
-# 2 使用
+## 2 使用
 
 生成全部由数字组成且长度为 4 到 6 位的字典 
 
@@ -92,7 +92,7 @@ world
 
 > echo 使两个文件内容之间生成分隔符，便于区分
 
-# 3 帮助
+## 3 帮助
 
 查看帮助
 

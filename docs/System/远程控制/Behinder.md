@@ -1,6 +1,6 @@
 加密网站管理客户端。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -46,7 +46,7 @@ nohup sudo java -jar Behinder.jar "$@" >/dev/null 2>&1 &
 └─# chmod +x /root/tools/behinder/behinder.sh && ln -s /root/tools/behinder/behinder.sh /usr/local/bin/behinder
 ```
 
-# 2 使用
+## 2 使用
 
 运行
 

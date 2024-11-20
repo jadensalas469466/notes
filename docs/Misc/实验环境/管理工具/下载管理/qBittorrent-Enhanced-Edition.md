@@ -1,6 +1,6 @@
 BitTorrent 客户端 forked from [qbittorrent/qBittorrent。](https://github.com/qbittorrent/qBittorrent)
 
-# 1 初始化
+## 1 初始化
 
 添加 [`Tracker`](https://github.com/XIU2/TrackersListCollection/blob/master/README-ZH.md) 列表
 

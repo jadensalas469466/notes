@@ -1,6 +1,6 @@
 移动端的 Kali 系统
 
-# 1 准备
+## 1 准备
 
  Google USB 驱动 
 
@@ -52,7 +52,7 @@ nethunter
 >
 >  nethunter-generic-arm64-kalifs-full.zip 
 
-# 2 解锁
+## 2 解锁
 
 在 `关于手机` 中点击多次 `版本号` ，启动 `开发者选项`
 
@@ -109,7 +109,7 @@ Finished. Total time: 0.122s
 
 > 手机确认 `Unlock the bootloader` 即可解锁
 
-# 3 刷机
+## 3 刷机
 
 解锁后，连接电脑进入 `fastboot` 
 
@@ -179,7 +179,7 @@ Total xfer: 1.00x
 
 勾选 `与操作系统一起更新 Lineage 恢复` ，进入 `LineageOS`
 
-# 4 root
+## 4 root
 
 **线刷**
 
@@ -253,7 +253,7 @@ Finished. Total time: 0.004s
 
 滑动滑块，等待刷入 `Magisk.zip` 后选择 `Reboot System` 即可成功 `root` 
 
-# 5 Kali NetHunter
+## 5 Kali NetHunter
 
 获取 `root` 权限后，将 `nethunter-generic-arm64-kalifs-full.zip` 上传到手机的 `download` 目录中
 

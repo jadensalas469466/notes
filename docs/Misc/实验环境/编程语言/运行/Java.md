@@ -1,6 +1,6 @@
 一种面向跨平台的编程语言。
 
-# 1 部署
+## 1 部署
 
 安装 jdk8
 
@@ -16,7 +16,7 @@
 └─# update-alternatives --install /usr/bin/java java /usr/local/jdk8u412-b08/bin/java 0804
 ```
 
-# 2 使用
+## 2 使用
 
 修改 jdk
 

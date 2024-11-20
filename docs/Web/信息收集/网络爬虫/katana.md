@@ -1,6 +1,6 @@
 网络爬虫。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -9,7 +9,7 @@
 └─# go install github.com/projectdiscovery/katana/cmd/katana@latest
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 

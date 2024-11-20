@@ -1,6 +1,6 @@
 一个综合 Web 靶场。
 
-# 1 部署
+## 1 部署
 
 安装依赖
 
@@ -38,13 +38,13 @@
 
 > http://debain.local/pikachu/install.php
 
-# 2 使用
+## 2 使用
 
 访问
 
 > http://debain.local/pikachu/index.php
 
-## 2.1 暴力破解
+### 2.1 暴力破解
 
 ### 2.1.1 基于表单的暴力破解
 
@@ -421,7 +421,7 @@ username or password is not exists
 
 当使用 token 时可以使用 burp 或者 selenium 爆破，burp 仅支持在用户名或者密码已知的情况下使用
 
-#### 2.1.4.1 burp
+### 2.1.4.1 burp
 
 假设用户名已知，提交用户名和任意密码，返回 `username or password is not exists～` 
 
@@ -498,7 +498,7 @@ username or password is not exists
 
 ![若没有检测到反馈特征的则爆破成功](./../../../../images/Pikachu/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/token%20%E9%98%B2%E7%88%86%E7%A0%B4/%E8%8B%A5%E6%B2%A1%E6%9C%89%E6%A3%80%E6%B5%8B%E5%88%B0%E5%8F%8D%E9%A6%88%E7%89%B9%E5%BE%81%E7%9A%84%E5%88%99%E7%88%86%E7%A0%B4%E6%88%90%E5%8A%9F.png)
 
-#### 2.1.4.2 selenium
+### 2.1.4.2 selenium
 
 下载 geckodriver
 
@@ -646,7 +646,7 @@ browser.quit()
 
 > 爆破成功的用户名和密码会存储在 /root/result.txt
 
-## 2.2 Cross-Site Scripting
+### 2.2 Cross-Site Scripting
 
 ### 2.2.1 反射型xss(get)
 
@@ -1227,7 +1227,7 @@ javascript:alert(1);
 >
 > 使用 `;` 结束 `$ms='#'` 后才能执行 `alert(1)` 
 
-## 2.3 RCE
+### 2.3 RCE
 
 ### 2.3.1 exec "ping"
 
@@ -1278,7 +1278,7 @@ xdeg7e5md5hw37w3sdscllarkiq9ez2o.oastify.com
 
 > http://centos7-6.local/pikachu/vul/rce/rce_eval.php
 
-## 2.4 File Inclusion
+### 2.4 File Inclusion
 
 ### 2.4.1 File Inclusion(local)
 
@@ -1348,7 +1348,7 @@ http://cent7-6.local/pikachu/vul/fileinclude/fi_remote.php?filename=../../../../
 
 > 成功得到密码文件
 
-## 2.5 Unsafe Filedownload
+### 2.5 Unsafe Filedownload
 
 尝试下载任意一个文件，并获取其 url
 
@@ -1376,7 +1376,7 @@ http://cent7-6.local/pikachu/vul/unsafedownload/execdownload.php?filename=../../
 
 > 成功得到密码文件
 
-## 2.6 unsafe upfileupload
+### 2.6 unsafe upfileupload
 
 ### 2.6.1 client check
 
@@ -1461,7 +1461,7 @@ hacker
 
 > 成功
 
-## 2.7 SSRF
+### 2.7 SSRF
 
 ### 2.7.1 SSRF(curl)
 

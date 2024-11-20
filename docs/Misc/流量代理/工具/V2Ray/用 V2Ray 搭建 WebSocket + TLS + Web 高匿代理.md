@@ -6,9 +6,9 @@
 4. Web 服务器解密 TLS，将解密后的 Websocket 流量转发给代理服务。
 5. 代理服务访问真正的目标网站。
 
-# 1 部署
+## 1 部署
 
-## 1.1 服务端
+### 1.1 服务端
 
 使用 UFW 开放网站端口 3628
 
@@ -64,7 +64,7 @@ root@server:~# openssl req -new -x509 -key /etc/ssl/caddy/ssl-test.pem -out /etc
 root@server:~# chmod 644 /etc/ssl/caddy/ssl-test.crt
 ```
 
-## 1.2 客户端
+### 1.2 客户端
 
 **linux**
 
@@ -86,9 +86,9 @@ root@server:~# chmod 644 /etc/ssl/caddy/ssl-test.crt
 
 安装 [v2rayN](https://github.com/2dust/v2rayN)
 
-# 2 初始化
+## 2 初始化
 
-## 2.1 服务端
+### 2.1 服务端
 
 为 caddy 添加网站根目录访问权限
 
@@ -215,7 +215,7 @@ root@linux:~# cp /etc/ssl/caddy/ssl-test.crt /var/www/html/upload/
 
 删除网站上传目录的证书
 
-## 2.2 客户端
+### 2.2 客户端
 
 **linux**
 
@@ -264,7 +264,7 @@ Alpn：h2
 
 > 注意添加防火墙规则
 
-# 帮助
+## 帮助
 
 ```shell
 root@server:~# v2ray -h

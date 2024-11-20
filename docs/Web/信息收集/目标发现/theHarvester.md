@@ -1,6 +1,6 @@
 综合信息收集工具。
 
-# 1 部署
+## 1 部署
 
 配置 `api` 
 
@@ -14,7 +14,7 @@
 55 key:YQchKbHxjEgzXUqoR1qbtxec79P23owU
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 
@@ -23,7 +23,7 @@
 └─# theHarvester -h
 ```
 
-# 3 实战
+## 3 实战
 
 调用 `duckduckgo` 对目标进行信息搜集
 

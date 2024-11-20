@@ -1,6 +1,6 @@
 Web 漏洞扫描工具。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -111,7 +111,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 > 删除 `*.edu.cn` ， `*chaitin*` 
 
-# 2 使用
+## 2 使用
 
 查看帮助
 
@@ -120,7 +120,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# xray -h
 ```
 
-## 2.1 主动扫描
+### 2.1 主动扫描
 
 访问靶场
 
@@ -143,7 +143,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 /root/tools/xray/dvwa.html
 ```
 
-## 2.2 被动扫描
+### 2.2 被动扫描
 
 在 xray 配置被动扫描
 
@@ -167,7 +167,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ![此时浏览网页，xray 会在后台自动扫描](./../../../../images/xray/%E6%AD%A4%E6%97%B6%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5%EF%BC%8Cxray%20%E4%BC%9A%E5%9C%A8%E5%90%8E%E5%8F%B0%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F.png)
 
-## 2.3 多重代理
+### 2.3 多重代理
 
 **burp+xray**
 

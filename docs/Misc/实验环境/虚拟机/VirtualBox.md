@@ -1,6 +1,6 @@
 
 
-# 1 初始化
+## 1 初始化
 
 修改默认虚拟机位置
 
@@ -10,21 +10,21 @@ C:\Users\sec\Documents\Virtual Machines
 
 ![修改默认虚拟机位置](./../../../../images/VirtualBox/%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%BD%8D%E7%BD%AE.png)
 
-# 2 使用
+## 2 使用
 
-## 2.1 拍摄快照
+### 2.1 拍摄快照
 
 拍摄系统快照
 
 ![拍摄系统快照](./../../../../images/VirtualBox/%E6%8B%8D%E6%91%84%E7%B3%BB%E7%BB%9F%E5%BF%AB%E7%85%A7.png)
 
-## 2.2 配置代理
+### 2.2 配置代理
 
 配置代理
 
 ![配置代理](./../../../../images/VirtualBox/%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86.png)
 
-## 2.3 创建 VHD 镜像
+### 2.3 创建 VHD 镜像
 
 根据服务器配置创建虚拟机
 
@@ -50,7 +50,7 @@ C:\Users\sec\Documents\Virtual Machines
 
 > 安装后在 root 配置 ssh 并根据云服务器的需求配置
 
-## 2.4 转换镜像格式
+### 2.4 转换镜像格式
 
 将 `kali-23.qcow` 复制到 VirtualBox 安装目录
 

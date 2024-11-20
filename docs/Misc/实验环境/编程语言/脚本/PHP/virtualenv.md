@@ -1,6 +1,6 @@
 一个用于创建独立 Python 虚拟环境的工具。
 
-# 1 部署
+## 1 部署
 
 kali 中安装
 
@@ -15,7 +15,7 @@ Windows 中安装
 PS C:\Users\sec> pip install virtualenv
 ```
 
-# 2 使用
+## 2 使用
 
 创建虚拟环境
 

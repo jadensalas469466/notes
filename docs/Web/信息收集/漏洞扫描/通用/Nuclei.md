@@ -1,6 +1,6 @@
 Web 漏洞 POC 扫描工具。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -9,7 +9,7 @@ Web 漏洞 POC 扫描工具。
 └─# sudo apt install -y nuclei
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 
@@ -25,7 +25,7 @@ Web 漏洞 POC 扫描工具。
 └─# nuclei -u [url]
 ```
 
-# 3 帮助
+## 3 帮助
 
 ```shell
 ┌──(root㉿kali-23)-[~]

@@ -1,6 +1,6 @@
 一个 Office 部署工具
 
-# 1 部署
+## 1 部署
 
 配置部署
 
@@ -33,7 +33,7 @@ Visio LTSC 专业版 2024 -批量许可证
 
 ![开始部署](./../../../../../../../images/Office%20Tool%20Plus/%E5%BC%80%E5%A7%8B%E9%83%A8%E7%BD%B2.png)
 
-# 2 激活
+## 2 激活
 
 > 这里推荐在部署完成后使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) 激活
 

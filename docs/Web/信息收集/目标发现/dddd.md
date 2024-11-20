@@ -1,6 +1,6 @@
 批量信息收集,供应链漏洞探测工具。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -37,7 +37,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# chmod +x /root/tools/dddd/dddd.sh && ln -s /root/tools/dddd/dddd.sh /usr/local/bin/dddd
 ```
 
-# 2 初始化
+## 2 初始化
 
 配置 API
 
@@ -46,7 +46,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# dddd -t 127.0.0.1 -sd && vim /root/tools/dddd/config/api-config.yaml
 ```
 
-# 3 使用
+## 3 使用
 
 经典扫描
 
@@ -55,7 +55,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# dddd -t [host] -sd -ho result.html
 ```
 
-# 4 帮助
+## 4 帮助
 
 ```shell
 ┌──(root㉿kali-23)-[~]

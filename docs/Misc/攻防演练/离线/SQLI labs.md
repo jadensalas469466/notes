@@ -1,6 +1,6 @@
 SQL 注入靶场。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -37,7 +37,7 @@ SQL 注入靶场。
 
 ![完成后点击浏览器返回按钮](./../../../../images/SQLI%20labs/%E9%83%A8%E7%BD%B2/%E5%AE%8C%E6%88%90%E5%90%8E%E7%82%B9%E5%87%BB%E6%B5%8F%E8%A7%88%E5%99%A8%E8%BF%94%E5%9B%9E%E6%8C%89%E9%92%AE.png)
 
-# 2 使用
+## 2 使用
 
 访问
 
@@ -47,7 +47,7 @@ SQL 注入靶场。
 
 > SQLi-LABS Page-1(Basic Challenges)
 
-## 2.1 Less-1
+### 2.1 Less-1
 
 > http://centos7-6.local//sqli-labs/Less-1/
 
@@ -257,7 +257,7 @@ http://centos7-6.local/sqli-labs/Less-1/?id=1' and (select count(*) from informa
 
 
 
-## 2.2 Less-2
+### 2.2 Less-2
 
 ---
 

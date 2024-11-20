@@ -1,6 +1,6 @@
 一款网站管理工具。
 
-# 1 部署
+## 1 部署
 
 下载加载器
 
@@ -49,7 +49,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# chmod +x antsword.sh && ln -s /root/tools/AntSword-Loader-v4.0.3-linux-x64/antsword.sh /usr/local/bin/antsword
 ```
 
-# 2 使用
+## 2 使用
 
 右键选择添加数据
 
@@ -67,7 +67,7 @@ http://192.168.6.76/upload/webshell.php
 
 ![](./../../../images/AntSword/%E5%A1%AB%E5%86%99%E8%AF%B7%E6%B1%82%E4%BF%A1%E6%81%AF%EF%BC%8C%E9%98%B2%E6%AD%A2%E8%A2%AB%E5%85%A5%E4%BE%B5.png)
 
-## 2.1 操作
+### 2.1 操作
 
 双击进入目标 Web 目录
 

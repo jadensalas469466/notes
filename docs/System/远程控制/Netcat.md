@@ -1,6 +1,6 @@
 远程控制工具。
 
-# 1 正向连接
+## 1 正向连接
 
 侦听端口，并在连接后开启终端
 
@@ -40,7 +40,7 @@ PS C:\Users\Administrator> C:\path\nc.exe -nv [ip] [port]
 PS C:\Users\Administrator> C:\path\nc.exe [host] [port]
 ```
 
-# 2 反向链接
+## 2 反向链接
 
 侦听端口
 

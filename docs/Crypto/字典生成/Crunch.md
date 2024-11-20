@@ -1,6 +1,6 @@
 字典生成。
 
-# 1 使用
+## 1 使用
 
 生成 1-8 位密码字典，字符集合为小写字母，从 a 开始到 zzzzzzzz 结束
 
@@ -73,7 +73,7 @@ numeric-space                 = [0123456789 ]
 └─# crunch 5 5 -f /usr/share/crunch/charset.lst test -t @.com
 ```
 
-# 2 帮助
+## 2 帮助
 
 查看帮助
 

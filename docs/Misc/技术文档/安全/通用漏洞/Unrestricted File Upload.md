@@ -50,7 +50,7 @@ webshell文件
 >
 > 使用蚁剑等 webshell 工具注意要用最新版，避免被反制
 
-# 1 基于 DVWA 的 low 级别演示文件上传漏洞
+## 1 基于 DVWA 的 low 级别演示文件上传漏洞
 
 进入 File Upload，直接上传任意文件 `webshell.php` 
 
@@ -97,7 +97,7 @@ URL地址：http://192.168.1.76/DVWA/vulnerabilities/upload/../../hackable/uploa
 
 > 注意要用最新版，避免被反制
 
-# 2 基于 DVWA 的 Medium 级别演示文件上传漏洞
+## 2 基于 DVWA 的 Medium 级别演示文件上传漏洞
 
 进入 File Upload
 
@@ -121,7 +121,7 @@ xuegod.jpg: image/jpeg
 
 > php 5.2 可利用 00 截断（hello00.jpg）
 
-# 3 基于 DVWA 的 High 级别演示文件上传漏洞
+## 3 基于 DVWA 的 High 级别演示文件上传漏洞
 
 **限制文件后缀名为 jpeg 或 png，并且是有效图片（可以查看）**
 

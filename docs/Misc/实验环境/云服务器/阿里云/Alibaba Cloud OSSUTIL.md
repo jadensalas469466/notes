@@ -1,6 +1,6 @@
 阿里云对象存储 OSS 的命令行工具。
 
-# 1 初始化
+## 1 初始化
 
 创建配置文件
 
@@ -24,7 +24,7 @@ PS D:\downloads\ossutil-v1.7.18-windows-amd64> .\ossutil config
 >
 >  `stsToken` 留空即可
 
-# 2 使用
+## 2 使用
 
 上传文件 `kali-23.vhd` 至目标存储空间 `oss://bucket-beijing-kali/` 
 
@@ -32,7 +32,7 @@ PS D:\downloads\ossutil-v1.7.18-windows-amd64> .\ossutil config
 PS D:\downloads\ossutil-v1.7.18-windows-amd64> .\ossutil cp kali-23.vhd oss://bucket-beijing-kali/ --endpoint oss-cn-beijing.aliyuncs.com
 ```
 
-# 3 帮助
+## 3 帮助
 
 ```powershell
 PS D:\downloads\ossutil-v1.7.18-windows-amd64> .\ossutil help

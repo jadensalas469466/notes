@@ -1,6 +1,6 @@
 通过访问目标的 `389` 端口（`LDAP` 服务）获取域信息。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -36,7 +36,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# chmod +x /root/tools/adinfo/adinfo.sh && ln -s /root/tools/adinfo/adinfo.sh /usr/local/bin/adinfo
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 

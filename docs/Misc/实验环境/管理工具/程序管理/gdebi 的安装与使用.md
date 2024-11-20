@@ -1,6 +1,6 @@
 gdebi 是一款 Debian 的软件管理工具。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -9,7 +9,7 @@ gdebi 是一款 Debian 的软件管理工具。
 └─# apt install -y gdebi
 ```
 
-# 2 使用
+## 2 使用
 
 使用 gdebi 安装 deb 安装包
 

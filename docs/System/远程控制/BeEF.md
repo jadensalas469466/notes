@@ -2,7 +2,7 @@
 
 ![过程](./../../../images/BeEF/%E8%BF%87%E7%A8%8B.png)
 
-# 1 安装
+## 1 安装
 
 安装 Beef-XSS
 
@@ -69,7 +69,7 @@ passwd: beef-xss
 > 
 > 查看模板
 
-# 2 劫持用户浏览器
+## 2 劫持用户浏览器
 
 利用提供的 hook.js 构造 payload 构造在目标 URL 中
 
@@ -87,7 +87,7 @@ passwd: beef-xss
 > 
 > 劫持浏览器
 
-# 3 beef 模块的使用
+## 3 beef 模块的使用
 
 查看模块
 
@@ -104,7 +104,7 @@ passwd: beef-xss
 | 橙色模块 | 模块可用，但结果对用户可见(CAM弹窗申请权限等) |
 | 灰色模块 | 模块未在目标浏览器上测试过             |
 
-## 3.1 获取 Cookie
+### 3.1 获取 Cookie
 
 执行 Get Cookie 模块
 
@@ -114,7 +114,7 @@ passwd: beef-xss
 
 ![查看获取到的 Cookie](./../../../images/BeEF/%E6%9F%A5%E7%9C%8B%E8%8E%B7%E5%8F%96%E5%88%B0%E7%9A%84%20Cookie.png)
 
-## 3.2 弹窗
+### 3.2 弹窗
 
 执行 Create Pop Under 模块
 

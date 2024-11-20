@@ -1,6 +1,6 @@
 一个稳定的服务器操作系统。
 
-# 1 准备
+## 1 准备
 
 debian-amd64-DVD-1.iso
 
@@ -20,7 +20,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 C:\Users\sec\Documents\Virtual Machines\debian
 ```
 
-# 2 配置
+## 2 配置
 
 移动镜像文件到 `iso` 文件夹
 
@@ -159,7 +159,7 @@ C:\Users\sec\Documents\Virtual Machines\iso\debian-amd64-DVD-1.iso
 
 拍摄快照并命名为 `配置` 
 
-# 3 安装
+## 3 安装
 
 开启此虚拟机进行安装
 
@@ -331,7 +331,7 @@ Password: 123456
 root@debian:~# init 0
 ```
 
-# 4 初始化
+## 4 初始化
 
 启动虚拟机，使用 `root` 用户登录
 
@@ -500,7 +500,7 @@ root@debian:~# mkdir -p /root/tool/script /root/tool/driver /var/www/html/upload
 root@debian:~# init 0
 ```
 
-# 5 部署
+## 5 部署
 
 |                      服务器                      |
 | :----------------------------------------------: |
@@ -529,9 +529,9 @@ root@debian:~# init 0
 | [pikachu](https://github.com/zhuifengshaonianhanlu/pikachu) |
 |          [dvwa](https://github.com/digininja/DVWA)          |
 
-# 6 使用
+## 6 使用
 
-## 6.1 网络配置
+### 6.1 网络配置
 
 禁用 `NetworkManager` 
 
@@ -588,7 +588,7 @@ root@debian:~# vim /etc/hosts
 192.168.1.15	purple.local
 ```
 
-## 6.2 配置无线网卡驱动
+### 6.2 配置无线网卡驱动
 
 查看内核版本
 
@@ -635,7 +635,7 @@ root@debian:~# vim /etc/hosts
 > └─# cd /root/tools/drivers/rtl8812au && make dkms_remove && cd
 > ```
 
-## 6.3 更新
+### 6.3 更新
 
 获取更新
 
@@ -660,7 +660,7 @@ root@debian:~# vim /etc/hosts
 └─# apt clean
 ```
 
-## 6.4 配置 rdp 远程桌面
+### 6.4 配置 rdp 远程桌面
 
 > 仅服务器
 
@@ -680,7 +680,7 @@ root@debian:~# vim /etc/hosts
 
 > 每个账户只允许有一处登录
 
-## 6.5 配置密钥连接 ssh
+### 6.5 配置密钥连接 ssh
 
 > 仅服务器
 
@@ -710,7 +710,7 @@ root@debian:~# vim /etc/hosts
 └─# systemctl restart ssh
 ```
 
-## 6.6 系统信息
+### 6.6 系统信息
 
 查看 CPU 使用情况
 
@@ -748,7 +748,7 @@ lsblk
 dpkg -l | grep ssh
 ```
 
-## 6.7 挂载共享文件
+### 6.7 挂载共享文件
 
 打开配置文件配置别名
 

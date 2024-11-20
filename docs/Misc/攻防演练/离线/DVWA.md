@@ -1,6 +1,6 @@
 一个综合 Web 靶场。
 
-# 1 部署
+## 1 部署
 
 安装依赖
 
@@ -82,7 +82,7 @@
 
 ![等待完成](./../../../../images/DVWA/%E9%83%A8%E7%BD%B2/%E7%AD%89%E5%BE%85%E5%AE%8C%E6%88%90.png)
 
-# 2 使用
+## 2 使用
 
 无痕模式访问
 
@@ -102,7 +102,7 @@ smithy:password
 
 ![修改安全级别](./../../../../images/DVWA/%E4%BD%BF%E7%94%A8/%E4%BF%AE%E6%94%B9%E5%AE%89%E5%85%A8%E7%BA%A7%E5%88%AB.png)
 
-## 2.1 csrf
+### 2.1 csrf
 
 > http://purple.local/dvwa/vulnerabilities/csrf/
 

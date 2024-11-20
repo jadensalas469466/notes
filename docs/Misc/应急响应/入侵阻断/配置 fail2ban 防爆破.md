@@ -1,6 +1,6 @@
 可以防止攻击者在短时间内对目标端口进行暴力破解。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -8,7 +8,7 @@
 root@server:~# apt install -y fail2ban
 ```
 
-# 2 初始化
+## 2 初始化
 
 修改配置文件
 
@@ -35,7 +35,7 @@ root@server:~# cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local && vim /etc/f
 root@server:~# systemctl enable --now fail2ban.service
 ```
 
-# 3 使用
+## 3 使用
 
 查看封禁的 IP
 

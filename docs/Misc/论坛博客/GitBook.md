@@ -1,6 +1,6 @@
 将 GitBook 关联到 GitHub，自动同步 GitHub 中的文档。
 
-# 1 初始化
+## 1 初始化
 
 选择 GitHub Sync 插件
 

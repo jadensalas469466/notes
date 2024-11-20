@@ -1,6 +1,6 @@
 XSS Fuzz。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -48,7 +48,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# chmod +x /root/go/bin/dalfox.sh && ln -s /root/go/bin/dalfox.sh /usr/local/bin/dalfox
 ```
 
-# 2 使用
+## 2 使用
 
 扫描 GET 传参 XSS
 
@@ -71,7 +71,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# dalfox url '[url]' -d 'payload=1'
 ```
 
-# 3 帮助
+## 3 帮助
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -171,7 +171,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 有关命令的更多信息，请使用 "dalfox [command] --help"。
 ```
 
-## 3.1 completion
+### 3.1 completion
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -270,7 +270,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 有关命令的更多信息，请使用 "dalfox completion [command] --help"。
 ```
 
-## 3.2 file
+### 3.2 file
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -367,7 +367,7 @@ cd "$(dirname "$(readlink -f "$0")")"
   -w, --worker int                  工作者数量（默认为 100）
 ```
 
-## 3.3 payload
+### 3.3 payload
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -469,7 +469,7 @@ cd "$(dirname "$(readlink -f "$0")")"
   -w, --worker int                  工作者数量（默认为 100）
 ```
 
-## 3.4 pipe
+### 3.4 pipe
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -563,7 +563,7 @@ cd "$(dirname "$(readlink -f "$0")")"
   -w, --worker int                  工作者数量（默认为 100）
 ```
 
-## 3.5 server
+### 3.5 server
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -655,7 +655,7 @@ cd "$(dirname "$(readlink -f "$0")")"
   -w, --worker int                  工作者数量（默认为 100）
 ```
 
-## 3.6 sxss
+### 3.6 sxss
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -750,7 +750,7 @@ cd "$(dirname "$(readlink -f "$0")")"
   -w, --worker int                  工作者数量（默认为 100）
 ```
 
-## 3.7 url
+### 3.7 url
 
 ```shell
 ┌──(root㉿kali)-[~]

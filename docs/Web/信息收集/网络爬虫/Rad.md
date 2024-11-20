@@ -1,6 +1,6 @@
 一款专为安全扫描而生的浏览器爬虫。
 
-# 1 部署
+## 1 部署
 
 > 需要基于 chromium 的浏览器
 
@@ -51,7 +51,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 > D:\software\rad
 > ```
 
-# 2 初始化
+## 2 初始化
 
 首次运行后修改配置文件
 
@@ -64,7 +64,7 @@ C:\Users\sec\rad_config.yml
 6	enable_image: true               # 启用图片显示
 ```
 
-# 3 使用
+## 3 使用
 
 查看帮助
 

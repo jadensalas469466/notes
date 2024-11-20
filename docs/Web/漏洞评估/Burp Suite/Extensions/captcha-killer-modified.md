@@ -1,6 +1,6 @@
 一款用于验证码爆破的 Burp Suite 插件。
 
-# 1 部署
+## 1 部署
 
 安装依赖
 
@@ -19,7 +19,7 @@ PS D:\share> pip install argparse ddddocr
 (Press CTRL+C to quit)
 ```
 
-# 2 使用
+## 2 使用
 
 点击刷新验证码，将请求数据包发送到 captcha-killer-modified
 

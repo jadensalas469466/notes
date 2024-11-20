@@ -1,6 +1,6 @@
 分布式版本控制系统。
 
-# 1 部署
+## 1 部署
 
 **Linux**
 
@@ -60,9 +60,9 @@ root@debian:~# apt install -y git
 
 ![配置默认实验选项](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%AE%9E%E9%AA%8C%E9%80%89%E9%A1%B9.png)
 
-# 2 初始化
+## 2 初始化
 
-## 2.1 Linux
+### 2.1 Linux
 
 配置代理
 
@@ -70,7 +70,7 @@ root@debian:~# apt install -y git
 root@debian:~# git config --global http.proxy "socks://192.168.1.201:10808"
 ```
 
-## 2.2 Windows
+### 2.2 Windows
 
 配置代理
 
@@ -104,9 +104,9 @@ PS C:\Users\sec> git config --global --list
 
 ![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/Git/%E4%BD%BF%E7%94%A8%20OpenSSH%20%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
 
-# 3 使用
+## 3 使用
 
-## 3.1 配置
+### 3.1 配置
 
 查看全部配置
 
@@ -157,7 +157,7 @@ PS C:\Users\sec> git config --global --list
 └─# git config --global --unset http.proxy
 ```
 
-## 3.2 发布
+### 3.2 发布
 
 在 Github 开启私人电子邮件
 
@@ -213,7 +213,7 @@ C:\Users\sec\share\github\tools
 >
 > 已创建的仓库可通过拉取到本地同步
 
-# 4 帮助
+## 4 帮助
 
 ```shell
 sec@a MINGW64 ~

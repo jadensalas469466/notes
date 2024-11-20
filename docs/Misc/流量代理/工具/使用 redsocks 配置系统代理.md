@@ -1,6 +1,6 @@
 通过 redsocks 将本机的 TCP 流量转发到 v2Ray。
 
-# 1 初始化
+## 1 初始化
 
 修改配置文件
 
@@ -108,7 +108,7 @@ exit 0
 └─# chmod +x /root/tool/proxy/proxy.sh && ln -s /root/tool/proxy/proxy.sh /usr/local/bin/proxy
 ```
 
-# 2 帮助
+## 2 帮助
 
 ```
 ┌──(root㉿kali)-[~]

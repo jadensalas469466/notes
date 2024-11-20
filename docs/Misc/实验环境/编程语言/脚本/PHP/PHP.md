@@ -1,13 +1,13 @@
 一种服务器端脚本语言。
 
-# 1 部署
+## 1 部署
 
 ```shell
 ┌──(root㉿kali)-[~]
 └─# apt install -y php php-gd php-mysql libapache2-mod-php
 ```
 
-# 2 初始化
+## 2 初始化
 
 编辑配置文件
 
@@ -35,7 +35,7 @@
 └─# systemctl restart apache2
 ```
 
-## 2.1 禁用敏感函数
+### 2.1 禁用敏感函数
 
 > 禁用的敏感函数会出现在 phpinfo 的 `disable_functions` 中
 > 
@@ -52,9 +52,9 @@
 
 > 发现 `phpinfo` 中显示 `exec`  和 `system` 已经被禁用
 
-# 3 使用
+## 3 使用
 
-## 3.1 PHP 读写Cookie
+### 3.1 PHP 读写Cookie
 
 > JSP ASP ASPX PYTHON GO 也可以
 > 
@@ -214,7 +214,7 @@ setcookie('hello',null,time()-1);
 
 > 发现已经删除。
 
-## 3.2 PHP 调用并执行 Linux 命令
+### 3.2 PHP 调用并执行 Linux 命令
 
 | PHP 敏感函数 |
 |:--------:|
@@ -262,7 +262,7 @@ print_r($array);
 Array ( [0] => uid=48(apache) gid=48(apache) groups=48(apache) ) 
 ```
 
-#### 3.2.1.1 扩展
+### 3.2.1.1 扩展
 
 编辑文件 exec.php
 

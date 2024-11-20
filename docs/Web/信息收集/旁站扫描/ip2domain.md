@@ -1,6 +1,6 @@
 批量查询 IP 对应域名、备案信息、百度权重。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -70,7 +70,7 @@ deactivate
 └─# chmod +x /root/tools/ip2domain/ip2domain.sh && ln -s /root/tools/ip2domain/ip2domain.sh /usr/local/bin/ip2domain
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 

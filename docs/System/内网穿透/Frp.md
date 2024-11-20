@@ -1,4 +1,4 @@
-# 1 服务端
+## 1 服务端
 
 在服务端开放入站端口 7000 和 6000
 
@@ -50,7 +50,7 @@ C:\Users\windows\Desktop\frp_0.49.0_windows_amd64>frps.exe -c ./frps.ini
 
 > 提示 `frps started successfully` 则服务启动成功
 
-# 2 客户端
+## 2 客户端
 
 在客户端解压
 
@@ -76,7 +76,7 @@ C:\Users\windows\Desktop\frp_0.49.0_windows_amd64>frps.exe -c ./frps.ini
 [root@CentOS-76 frp_0.49.0_linux_amd64]# ./frpc -c frpc.ini
 ```
 
-# 3 连接
+## 3 连接
 
 SSH 连接
 
@@ -98,7 +98,7 @@ SSH 连接
 [root@CentOS-76 ~]# w
 ```
 
-# 4 配置 Frp 仪表盘和认证
+## 4 配置 Frp 仪表盘和认证
 
 打开 frps.ini
 
@@ -143,7 +143,7 @@ SSH 连接
 
 访问仪表盘：`http://192.168.6.112:7500`
 
-# 5 配置 Frp 接收 shell
+5 配置 Frp 接收 shell
 
 修改客户端配置文件
 
@@ -218,7 +218,7 @@ msf6 exploit(multi/handler) > set LPORT 4444
 
 > 执行后客户端成功拿到目标 shell
 
-# 6 通过 Frp 实现跨网段获取内网 shell
+## 6 通过 Frp 实现跨网段获取内网 shell
 
 实验环境
 
@@ -237,7 +237,7 @@ msf6 exploit(multi/handler) > set LPORT 4444
 
 > Centos 映射 socks5 代理到 VPS：9999 端口使 Kali（攻击者）可访问内网 4 网段
 
-## 6.1 入侵 DMZ
+### 6.1 入侵 DMZ
 
 配置 frp 服务端
 
@@ -343,7 +343,7 @@ meterpreter > route
 
 > 发现有两个网段
 
-## 6.2 在 DMZ 配置 Frp
+### 6.2 在 DMZ 配置 Frp
 
 开启 Web 服务
 
@@ -498,7 +498,7 @@ systemctl status hello.service
 systemctl enable hello.service
 ```
 
-## 6.3 配置代理入侵内网
+### 6.3 配置代理入侵内网
 
 打开配置文件
 
@@ -561,7 +561,7 @@ msf6 exploit(windows/smb/cve_2020_0796_smbghost) > run
 
 > 得到 shell
 
-## 6.4 二级代理
+### 6.4 二级代理
 
 实验环境
 

@@ -1,6 +1,6 @@
 暴力破解。
 
-# 1 使用
+## 1 使用
 
 爆破 ftp
 
@@ -9,7 +9,7 @@
 └─# hydra [ip] ftp -l [usernamedict] -P [passworddict] -e ns -vV
 ```
 
-# 2 帮助
+## 2 帮助
 
 ```shell
 ┌──(root㉿kali-23)-[~]

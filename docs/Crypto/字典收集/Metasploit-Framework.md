@@ -1,6 +1,6 @@
 Metasploit-Framework 自带字典。
 
-# 1 帮助
+## 1 帮助
 
 查看 Metasploit-Framework 自带字典
 

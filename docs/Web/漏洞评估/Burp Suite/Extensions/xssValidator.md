@@ -1,6 +1,6 @@
 一款用于自动化验证 XSS 漏洞的 Burp Suite 工具。
 
-# 1 部署
+## 1 部署
 
 安装 [phantomjs](https://phantomjs.org/) 用于接收攻击反馈
 
@@ -240,7 +240,7 @@ var service = server.listen(host + ":" + port, function(request, response) {
 
 ![选择 xssValidator 插件进行安装](./../../../../../images/xssValidator/%E9%80%89%E6%8B%A9%20xssValidator%20%E6%8F%92%E4%BB%B6%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85.png)
 
-# 2 使用
+## 2 使用
 
 在已安装中加载 XSS Validator 插件
 

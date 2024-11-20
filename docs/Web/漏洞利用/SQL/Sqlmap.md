@@ -1,6 +1,6 @@
 SQL 注入 Fuzz。
 
-# 1 部署
+## 1 部署
 
 ```powershell
 PS D:\software> git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git
@@ -29,9 +29,9 @@ python sqlmap.py %*
 D:\software\sqlmap
 ```
 
-# 2 使用
+## 2 使用
 
-## 2.1 常用参数
+### 2.1 常用参数
 
 `--beep` 出现问题提醒或在发现 SQL 注入时发出提示
 
@@ -65,7 +65,7 @@ D:\software\sqlmap
 | -v 5 | 增加输出 HTTP 响应头。                       |
 | -v 6 | 增加输出 HTTP 响应内容。                     |
 
-## 2.2 高级参数
+### 2.2 高级参数
 
 `--cookie ""` 调用 cookie
 
@@ -77,7 +77,7 @@ D:\software\sqlmap
 
 `--tamper=xxx.py` 调用脚本
 
-## 2.3 指定目标
+### 2.3 指定目标
 
 `-d ""` 直连数据库
 
@@ -127,7 +127,7 @@ sqlmap -g "inurl:\".php?id=1\""
 sqlmap -c "sqlmap.conf"
 ```
 
-## 2.4 获取内容
+### 2.4 获取内容
 
 `-a` 获取所有数据
 
@@ -137,7 +137,7 @@ sqlmap -c "sqlmap.conf"
 
 `-C ","` 获取字段
 
-## 2.5 枚举
+### 2.5 枚举
 
 `--dbs` 列出所有数据库
 
@@ -149,7 +149,7 @@ sqlmap -c "sqlmap.conf"
 
 `--dump` 导出数据
 
-## 2.6 常规注入
+### 2.6 常规注入
 
 判断是否存在 `sql` 注入
 
@@ -246,7 +246,7 @@ Table: users
 +----------+------------+
 ```
 
-## 2.7 进阶注入
+### 2.7 进阶注入
 
 **DVWA**
 
@@ -342,7 +342,7 @@ lmpossible
 >
 > 另外，在 `Microsoft Access` 中无法获取数据库，要从数据表开始
 
-## 2.8 Google dork
+### 2.8 Google dork
 
 启动 `Clash for Windows` ，开启 `Allow LAN` 
 
@@ -363,7 +363,7 @@ lmpossible
 
 > 由于 `ssl` 证书的问题，`sqlmap` 对 `https` 的网站进行扫描时需要通过 `burpsuite` 中转
 
-# 3 帮助
+## 3 帮助
 
 ---
 

@@ -1,6 +1,6 @@
 图形化用户界面操作系统。
 
-# 1 准备
+## 1 准备
 
 Win11_23H2_Chinese_Simplified_x64v2.iso
 
@@ -30,7 +30,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 C:\Users\sec\Documents\virtual machines\windows
 ```
 
-# 2 配置
+## 2 配置
 
 **物理机**
 
@@ -233,7 +233,7 @@ share
 
 开启此虚拟机进行安装
 
-# 3 安装
+## 3 安装
 
 输入语言和其他首选项
 
@@ -368,7 +368,7 @@ C:\Windows\System32>oobe\bypassnro
 
 关机，拍摄快照并命名为 `安装` 
 
-# 4 初始化
+## 4 初始化
 
 **虚拟机**
 
@@ -457,7 +457,7 @@ C:\Users\sec
 
 关机，快照命名为 `初始化` 
 
-# 5 部署
+## 5 部署
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |

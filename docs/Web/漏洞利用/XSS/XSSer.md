@@ -1,6 +1,6 @@
 XSS Fuzz。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -9,7 +9,7 @@ XSS Fuzz。
 └─# sudo apt install -y python3-selenium && sudo apt install -y xsser
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 

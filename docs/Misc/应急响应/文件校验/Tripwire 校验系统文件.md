@@ -2,7 +2,7 @@
 
 用于对系统文件进行校验。
 
-# 1 安装
+## 1 安装
 
 安装 Tripwire
 
@@ -10,7 +10,7 @@
 [root@CentOS-76 ~]# yum install -y tripwire
 ```
 
-# 2 配置
+## 2 配置
 
 创建六个密码
 
@@ -34,7 +34,7 @@ CentOS-76-local.key  site.key  tw.cfg  twcfg.txt  tw.pol  twpol.txt
 | tw.pol    | 策略文件      |
 | twpol.txt | 策略文件的易读格式 |
 
-# 3 初始化
+## 3 初始化
 
 生成系统校验数据并写入数据库
 
@@ -115,7 +115,7 @@ done
 
 > 此次生成的校验数据没有报错
 
-# 4 使用 tripwire 校验系统文件
+## 4 使用 tripwire 校验系统文件
 
 更改系统文件
 
@@ -129,7 +129,7 @@ done
 [root@CentOS-76 ~]# useradd abc
 ```
 
-## 4.1 对系统进行完整检查
+### 4.1 对系统进行完整检查
 
 ```
 [root@CentOS-76 ~]# tripwire --check
@@ -166,7 +166,7 @@ No Errors
 
 可以看到这些位置发生了改动
 
-## 4.2 指定文件或目录进行校验
+### 4.2 指定文件或目录进行校验
 
 ```
 [root@CentOS-76 ~]# tripwire --check /etc/passwd 
@@ -182,7 +182,7 @@ No Errors
 [root@CentOS-76 ~]# tripwire --init
 ```
 
-## 4.3 添加自定义规则
+### 4.3 添加自定义规则
 
 在配置文件后追加规则用于校验 sqli-labs  的完整性
 

@@ -1,6 +1,6 @@
 网络爬虫。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -36,7 +36,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 └─# chmod +x /root/tools/crawlergo/crawlergo.sh && ln -s /root/tools/crawlergo/crawlergo.sh /usr/local/bin/crawlergo
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 

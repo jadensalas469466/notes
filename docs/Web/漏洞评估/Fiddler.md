@@ -1,6 +1,6 @@
 一款用于 Web 应用漏洞测试的工具。
 
-# 1 初始化
+## 1 初始化
 
 复制 [Fiddler 汉化](https://github.com/jadensalas469466/tools/raw/refs/heads/main/app/other/Fiddler%20%E6%B1%89%E5%8C%96.zip) 中的插件到安装目录
 
@@ -70,7 +70,7 @@ Trust Root Certificate	信任根证书
 
 > 重启后生效
 
-# 2 使用
+## 2 使用
 
 配置代理
 

@@ -1,6 +1,6 @@
 综合信息收集工具。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -36,7 +36,7 @@ python3 hackertarget.py "$@"
 └─# chmod +x /root/tools/hackertarget/hackertarget.sh && ln -s /root/tools/hackertarget/hackertarget.sh /usr/local/bin/hackertarget
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 

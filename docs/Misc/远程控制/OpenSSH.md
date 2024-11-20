@@ -1,8 +1,8 @@
 远程连接工具。
 
-# 1 部署
+## 1 部署
 
-## 1.1 Windows
+### 1.1 Windows
 
 运行 Powershell，检查是否安装 OpenSSH
 
@@ -42,9 +42,9 @@ PS C:\Windows\system32> Remove-WindowsCapability -Online -Name OpenSSH.Client~~~
 PS C:\Windows\system32> Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
-# 2 初始化
+## 2 初始化
 
-## 2.1 Windows
+### 2.1 Windows
 
 运行 Powershell，运行 SSH 服务
 
@@ -75,9 +75,9 @@ PS C:\Windows\system32> if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" 
 }
 ```
 
-# 3 使用
+## 3 使用
 
-## 3.1 连接
+### 3.1 连接
 
 连接指定用户
 
@@ -97,7 +97,7 @@ PS C:\Windows\system32> ssh-keygen -R windows.local
 PS C:\Windows\system32> Remove-Item C:\Users\sec\.ssh\known_hosts
 ```
 
-## 3.2 配置密钥
+### 3.2 配置密钥
 
 生成私钥
 
@@ -140,7 +140,7 @@ Mode                LastWriteTime         Length Name
 -a----        2024/10/24     17:17             94 test.pub
 ```
 
-## 3.3 保存私钥
+### 3.3 保存私钥
 
 运行 ssh-agent 服务
 
@@ -197,7 +197,7 @@ PS C:\Windows\system32> ssh-add -d $env:USERPROFILE\.ssh\test
 PS C:\Windows\system32> ssh-add -D
 ```
 
-## 3.4 部署公钥
+### 3.4 部署公钥
 
 复制公钥内容到剪切板
 
@@ -239,7 +239,7 @@ d-----          2024/6/7     22:00                .ssh
 
 > 客户端公钥 `C:\Users\sec\.ssh\test.pub` 的内容需放置在服务器上的 `~/.ssh/authorized_keys` 文件中
 
-## 3.5 启用密钥登录
+### 3.5 启用密钥登录
 
 服务端启用密钥登录并禁止密码登录
 

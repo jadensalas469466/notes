@@ -1,6 +1,6 @@
 XSS Fuzz。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -43,7 +43,7 @@ python3 xsstrike.py "$@"
 └─# chmod +x /root/tools/xsstrike/xsstrike.sh && ln -s /root/tools/xsstrike/xsstrike.sh /usr/local/bin/xsstrike
 ```
 
-# 2 使用
+## 2 使用
 
 测试 get 传参的网页
 
@@ -59,7 +59,7 @@ python3 xsstrike.py "$@"
 └─# xsstrike -u '[url]' --data 'payload=1' -d 1
 ```
 
-# 3 帮助
+## 3 帮助
 
 ```shell
 ┌──(root㉿kali-23)-[~]

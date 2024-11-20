@@ -1,6 +1,6 @@
 一款开源浏览器。
 
-# 1 Github 访问限制
+## 1 Github 访问限制
 
 Firefox Browser 访问 Github，提示：
 

@@ -1,6 +1,6 @@
 exploitdb 的查询工具。
 
-# 1 使用
+## 1 使用
 
 更新漏洞库
 
@@ -51,7 +51,7 @@ exploitdb 的查询工具。
 └─# searchsploit [name] -w
 ```
 
-# 2 帮助
+## 2 帮助
 
 ```shell
 ┌──(root㉿kali)-[~]

@@ -1,6 +1,6 @@
 一个漏洞利用平台。
 
-# 1 部署
+## 1 部署
 
 复制
 
@@ -30,7 +30,7 @@
 └─# chmod +x /root/tools/cs/client/cs.sh && ln -s /root/tools/cs/client/cs.sh /usr/local/bin/cs
 ```
 
-# 2 使用
+## 2 使用
 
 开启 web 服务
 

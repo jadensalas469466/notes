@@ -1,6 +1,6 @@
 目录扫描。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -36,7 +36,7 @@ python3 dirmap.py "$@"
 └─# chmod +x /root/tools/dirmap/dirmap.sh && ln -s /root/tools/dirmap/dirmap.sh /usr/local/bin/dirmap
 ```
 
-# 2 使用
+## 2 使用
 
 查看帮助
 

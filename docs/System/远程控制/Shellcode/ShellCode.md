@@ -1,6 +1,6 @@
 ShellCode 是指一段小型的机器代码，通常用于在计算机系统中执行特定的恶意操作。
 
-# 1 监听端口
+## 1 监听端口
 
 Netcat 侦听端口用于接收反弹 `shell`
 
@@ -9,7 +9,7 @@ Netcat 侦听端口用于接收反弹 `shell`
 └─# nc -lnvp [port]
 ```
 
-# 2 反弹 Shell
+## 2 反弹 Shell
 
 **Bash**
 

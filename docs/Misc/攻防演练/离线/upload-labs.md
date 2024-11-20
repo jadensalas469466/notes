@@ -1,6 +1,6 @@
 文件上传靶场。
 
-# 1 部署
+## 1 部署
 
 下载
 
@@ -41,13 +41,13 @@ fclose($myfile);
 
 > 将用 base64 编码的一句话木马解码并写入到生成的 shell.php 文件
 
-# 2 使用
+## 2 使用
 
 访问
 
 > http://centos7-6.local/upload-labs/
 
-## 2.1 Pass-01
+### 2.1 Pass-01
 
 **修改后缀名绕过**
 
@@ -61,7 +61,7 @@ fclose($myfile);
 
  在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
-## 2.2 Pass-02
+### 2.2 Pass-02
 
 ### 2.2.1 方法一 修改后缀名绕过
 
@@ -91,11 +91,11 @@ fclose($myfile);
 
  在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
-## 2.3 Pass-03 .htaccess 配置访问绕过
+### 2.3 Pass-03 .htaccess 配置访问绕过
 
 上传 `.htaccess` ，修改 `webshell.php` 后缀名为 `webshell.jpg` ,再上传 `webshell.jpg`，（此时访问 `webshell.jpg` 会以 php 文件的方式访问） 在访问 `webshell.jpg` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
-## 2.4 Pass-04
+### 2.4 Pass-04
 
 ### 2.4.1 方法一 .htaccess 配置访问绕过
 
@@ -110,19 +110,19 @@ fclose($myfile);
 > 大于符号> = 问号?
 > 小于符号< = 星号*
 
-#### 2.4.2.1 (1) :.jpg 绕过
+### 2.4.2.1 (1) :.jpg 绕过
 
 打开拦截，将 `filename="webshell.php"` 修改为 `filename="webshell.php:.jpg"` ，关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
 > 当向 Windows 上传一个名为 `webshell.php:.jpg` 的文件时,由于 Windows 系统的限制,它会自动去掉文件名中的 `:` 字符,因此上传后的文件名会变成 `webshell.php.jpg`
 
-#### 2.4.2.2 (2) :.jpg + 追加绕过
+### 2.4.2.2 (2) :.jpg + 追加绕过
 
 创建一个空文件 `hello.php` ，打开拦截，修改文件名为 `filename="hello.php:.jpg"`，关闭拦截，即可将 `hello.php` ，上传至目标服务器，再开启拦截，上传 `webshell.php` ，修改文件名为 `filename="hello.<"` ，即可将 `webshell,php` 的内容追加到 `hello.php` ，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
 > 此外追加符号可以使用：`<` 或 `<<<` 或 `>>>` 或 `>><`
 
-## 2.5 Pass-05
+### 2.5 Pass-05
 
 打开拦截，将 `filename="webshell.php"` 修改为 `filename="webshell.php:.jpg"` ，关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` ，将 `webshell.php` 上传至目标服务器发现  `webshell.php` 的内容为空
 
@@ -138,7 +138,7 @@ fclose($myfile);
 
 > 利用了 Windows 的忽略大小写绕过，若是 Linux 则无法用此方法绕过
 
-## 2.6 Pass-06
+### 2.6 Pass-06
 
 打开拦截，将 `filename="webshell.php"` 修改为 `filename="webshell.php:.jpg"` ，关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` ，将 `webshell.php` 上传至目标服务器发现  `webshell.php` 的内容为空
 
@@ -154,31 +154,31 @@ fclose($myfile);
 
 > 利用空格，删除了一个过滤函数，trim()函数，移除字符串两侧多余的空白 字符或其他预定义字符。
 
-## 2.7 Pass-07 点绕过
+### 2.7 Pass-07 点绕过
 
 打开拦截，将 `filename="webshell.php"` 修改为 `filename="webshell.php."` （在后面加一个点），关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
 >Windows 会自动去掉后缀名后面的 `.`
 
-## 2.8 Pass-08 Windows 数据流绕过
+### 2.8 Pass-08 Windows 数据流绕过
 
 打开拦截，将 `filename="webshell.php"` 修改为 `filename="webshell.php::$DATA"` （在后面加一个::$DATA），关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
 >Windows 会自动去掉后缀名后面的 `::$DATA`
 
-## 2.9 Pass-09 嵌套绕过
+### 2.9 Pass-09 嵌套绕过
 
 打开拦截，将 `filename="webshell.php"` 修改为 `filename="webshell.php. ."` （在后面加点空格点即可），关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
 >Windows 会自动去掉后缀名后面的 `. .`
 
-## 2.10 Pass-10 双写绕过
+### 2.10 Pass-10 双写绕过
 
 打开拦截，将 `filename="webshell.php"` 修改为 `filename="webshell.pphphp"` （在后面加点空格点即可），关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
 >目标服务器会自动过滤 `php`
 
-## 2.11 Pass-11 00 截断绕过
+### 2.11 Pass-11 00 截断绕过
 
 00 截断必须要求：
 
@@ -196,13 +196,13 @@ fclose($myfile);
 >6.  所以NULL字节截断了.jpg,使得保存的文件为webshell.php。
 >7.  由于该文件包含PHP代码,上传后成为一个后门文件。
 
-## 2.12 Pass-12 十六进制 00 截断绕过
+### 2.12 Pass-12 十六进制 00 截断绕过
 
 打开拦截，在 `Content-Disposition: form-data; name="save_path"` 下放修改 `../upload/` 为 `../upload/webshell.php .jpg` ，切换到 16 进制格式（Hex），将 `../upload/webshell.php .jpg` 中的空格的 Hex 修改为 `00`
 
 （切记修改完要回车）关闭拦截，即可将 `webshell.php` 上传至目标服务器，在访问 `webshell.php` 时打开 `HackBar` ,提交 Use POST method 为  `xuegod=phpinfo();` 即可
 
-## 2.13 Pass-13
+### 2.13 Pass-13
 
 此关无法利用，仅绕过
 
@@ -231,7 +231,7 @@ GIF89a
 
 > GIF89a 表示此文件为 GIF 文件，上传即可
 
-## 2.14 Pass-14
+### 2.14 Pass-14
 
 此关无法利用，仅绕过
 
@@ -262,11 +262,11 @@ GIF89a
 >
 > 仅可上传 GIF
 
-## 2.16 Pass-16 二次渲染绕过
+### 2.16 Pass-16 二次渲染绕过
 
 准备一张 GIF 图片上传至目标服务器，再将服务器保存的图片下载到本地，用 Hex Editor 对比两个文件，将代码插入到没有变化的位置，重命名后上传即可
 
-## 2.17 Pass-17 条件竞争
+### 2.17 Pass-17 条件竞争
 
 开启拦截，上传 `for shell.php`，在拦截到的请求数据包中右键发送到 `Intruder` 
 
@@ -292,11 +292,11 @@ GIF89a
 
 点击开始攻击，成功后会将 `shell.php` 文件写入到目标服务器。在访问 `shell.php` 时打开 `HackBar` ,提交 Use POST method 为 `xuegod=phpinfo();` 即可
 
-## 2.18 Pass-18 图片马绕过
+### 2.18 Pass-18 图片马绕过
 
 同 Pass-14 方法一
 
-## 2.19 Pass-19 图片马绕过
+### 2.19 Pass-19 图片马绕过
 
 同 Pass-14 方法一
 

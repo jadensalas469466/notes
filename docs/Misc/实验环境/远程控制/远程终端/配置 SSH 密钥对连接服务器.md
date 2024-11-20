@@ -2,7 +2,7 @@
 2. 将公钥复制到服务器的 `~/.ssh/authorized_keys` 文件中
 3. 当客户端尝试连接服务器时，服务器使用公钥验证客户端私钥的签名，确保只有持有正确私钥的用户可以访问
 
-# 1 生成密钥对
+## 1 生成密钥对
 
 生成一对 步骤H 密钥
 
@@ -45,7 +45,7 @@ Mode                LastWriteTime         Length Name
 -a----        2024/10/24     21:44             94 ssh-test.pub
 ```
 
-# 2 保存私钥到 ssh-agent
+## 2 保存私钥到 ssh-agent
 
 运行 ssh-agent 服务
 
@@ -100,7 +100,7 @@ PS C:\Users\sec> ssh-add -l
 > PS C:\Users\sec> ssh-add -D
 > ```
 
-# 3 部署公钥到服务器
+## 3 部署公钥到服务器
 
 复制公钥内容到剪切板
 
@@ -134,7 +134,7 @@ root@server:~# vim ~/.ssh/authorized_keys
 >    PS C:\Users\sec> ssh sec@windows.local $remotePowershell
 >    ```
 
-# 4 配置使用密钥对登录
+## 4 配置使用密钥对登录
 
 启用密钥对登录并禁止密码登录
 

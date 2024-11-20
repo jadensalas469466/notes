@@ -1,6 +1,6 @@
 一个用于创建和管理容器的工具。
 
-# 1 部署
+## 1 部署
 
 安装
 
@@ -8,7 +8,7 @@
 root@server:~# apt install -y docker.io docker-compose
 ```
 
-# 2 初始化
+## 2 初始化
 
 配置开机自启
 
@@ -16,7 +16,7 @@ root@server:~# apt install -y docker.io docker-compose
 root@server:~# systemctl enable --now docker.service
 ```
 
-# 3 使用
+## 3 使用
 
 通过 docker proxy 拉取镜像
 
