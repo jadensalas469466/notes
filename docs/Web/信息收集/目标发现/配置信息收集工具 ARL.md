@@ -2,13 +2,9 @@
 
 ## 1 部署
 
-配置 [Docker](https://jadensalas469466.github.io/2024/11/05/%E9%85%8D%E7%BD%AE-Docker-%E5%AE%B9%E5%99%A8%E5%BC%95%E6%93%8E/)
+[配置 Docker 容器引擎](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/rong-qi/yin-qing/pei-zhi-docker-rong-qi-yin-qing)
 
-使用 UFW 开放 DNS 端口 5003
-
-```shell
-root@server:~# ufw allow 53
-```
+配置安全组开放 5003 端口
 
 下载安装脚本
 
