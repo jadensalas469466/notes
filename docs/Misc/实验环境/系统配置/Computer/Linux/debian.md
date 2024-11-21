@@ -502,7 +502,7 @@ root@debian:~# init 0
 
 ## 5 部署
 
-|                      服务器                      |
+|                  debian.server                   |
 | :----------------------------------------------: |
 |        [UFW](https://github.com/jbq/ufw)         |
 |        [Caddy](https://caddyserver.com/)         |
@@ -513,7 +513,14 @@ root@debian:~# init 0
 |       [Syncthing](https://syncthing.net/)        |
 |  [bind9](https://github.com/isc-projects/bind9)  |
 
-|                           虚拟机                            |
+|                  debian.attack                  |
+| :---------------------------------------------: |
+|        [Docker](https://www.docker.com/)        |
+|    [ARL](https://github.com/Aabyss-Team/ARL)    |
+| [ShuiZe](https://github.com/0x727/ShuiZe_0x727) |
+| [dddd](https://github.com/SleepingBag945/dddd)  |
+
+|                        debian.local                         |
 | :---------------------------------------------------------: |
 |                 [git](https://git-scm.com/)                 |
 |              [v2fly](https://github.com/v2fly)              |
@@ -525,7 +532,7 @@ root@debian:~# init 0
 |                 [php](https://www.php.net/)                 |
 |            [composer](https://getcomposer.org/)             |
 |           [mysql](https://www.mongodb.com/zh-cn)            |
-|              [docker](https://www.docker.com/)              |
+|              [Docker](https://www.docker.com/)              |
 | [pikachu](https://github.com/zhuifengshaonianhanlu/pikachu) |
 |          [dvwa](https://github.com/digininja/DVWA)          |
 
