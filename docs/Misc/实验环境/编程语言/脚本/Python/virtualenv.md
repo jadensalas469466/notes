@@ -1,14 +1,46 @@
 一个用于创建独立 Python 虚拟环境的工具。
 
+## Debian
+
 ## 1 部署
 
-debian 中安装
+安装
 
 ```shell
 root@debian:~# apt install -y virtualenv
 ```
 
-Windows 中安装
+## 2 使用
+
+创建虚拟环境
+
+```shell
+root@debian:~# virtualenv /path/venv
+```
+
+启用虚拟环境
+
+```shell
+root@debian:~# source /path/venv/bin/activate
+```
+
+在虚拟环境中安装依赖
+
+```shell
+(venv) root@debian:~# pip3 install -r /path/requirements.txt
+```
+
+退出虚拟环境
+
+```shell
+(venv) root@debian:~# deactivate
+```
+
+## Windows
+
+## 1 部署
+
+安装
 
 ```powershell
 PS C:\Users\sec> pip install virtualenv
@@ -18,38 +50,32 @@ PS C:\Users\sec> pip install virtualenv
 
 创建虚拟环境
 
-```shell
-root@debian:~# virtualenv venv
+```powershell
+PS C:\Users\sec> virtualenv \path\venv
 ```
 
-启用虚拟环境
-
-```shell
-root@debian:~# source venv/bin/activate
-```
-
-Powershell 需要允许脚本执行
+Powershell 允许脚本执行
 
 ```powershell
 PS C:\Users\sec> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 ```
 
-再启用虚拟环境
+启用虚拟环境
 
 ```powershell
-PS C:\Users\sec> .\venv\Scripts\Activate
+PS C:\Users\sec> \path\venv\Scripts\Activate.ps1
 ```
 
 在虚拟环境中安装依赖
 
-```shell
-(venv) root@debian:~# pip3 install -r requirements.txt
+```powershell
+(venv) PS C:\Users\sec> pip3 install -r \path\requirements.txt
 ```
 
 退出虚拟环境
 
-```shell
-(venv) root@debian:~# deactivate
+```powershell
+(venv) PS C:\Users\sec> deactivate
 ```
 
 ---
