@@ -2,11 +2,10 @@
 
 ## 1 部署
 
-kali 中安装
+debian 中安装
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# apt install -y virtualenv
+root@debian:~# apt install -y virtualenv
 ```
 
 Windows 中安装
@@ -20,15 +19,13 @@ PS C:\Users\sec> pip install virtualenv
 创建虚拟环境
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# virtualenv venv
+root@debian:~# virtualenv venv
 ```
 
 启用虚拟环境
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# source venv/bin/activate
+root@debian:~# source venv/bin/activate
 ```
 
 Powershell 需要允许脚本执行
@@ -46,15 +43,13 @@ PS C:\Users\sec> .\venv\Scripts\Activate
 在虚拟环境中安装依赖
 
 ```shell
-┌──(venv)─(root㉿kali)-[~]
-└─# pip3 install -r requirements.txt
+(venv) root@debian:~# pip3 install -r requirements.txt
 ```
 
 退出虚拟环境
 
 ```shell
-┌──(venv)─(root㉿kali)-[~]
-└─# deactivate
+(venv) root@debian:~# deactivate
 ```
 
 ---
