@@ -513,19 +513,17 @@ root@debian:~# init 0
 |       [Syncthing](https://syncthing.net/)        |
 |  [bind9](https://github.com/isc-projects/bind9)  |
 
-|                  debian.attack                  |
-| :---------------------------------------------: |
-|        [Docker](https://www.docker.com/)        |
-|    [ARL](https://github.com/Aabyss-Team/ARL)    |
-| [ShuiZe](https://github.com/0x727/ShuiZe_0x727) |
-| [dddd](https://github.com/SleepingBag945/dddd)  |
+|               debian.attack               |
+| :---------------------------------------: |
+|     [Docker](https://www.docker.com/)     |
+| [ARL](https://github.com/Aabyss-Team/ARL) |
 
 |                        debian.local                         |
 | :---------------------------------------------------------: |
 |                 [git](https://git-scm.com/)                 |
 |              [v2fly](https://github.com/v2fly)              |
 |  [proxychains4](https://github.com/rofl0r/proxychains-ng)   |
-|             [python3](https://www.python.org/)              |
+|             [Python3](https://www.python.org/)              |
 |                    [go](https://go.dev/)                    |
 |                [java](https://adoptium.net/)                |
 |           [apache2](https://www.apache.org/free/)           |
