@@ -364,13 +364,16 @@ PS C:\Users\sec> ssh root@[ip]
 
 ```
 deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
-deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
+# deb-src https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
+
+deb https://mirrors.ustc.edu.cn/kali kali-last-snapshot main non-free non-free-firmware contrib
+# deb-src https://mirrors.ustc.edu.cn/kali kali-last-snapshot main non-free non-free-firmware contrib
 
 deb http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
-deb-src http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
+# deb-src http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
 
 deb http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free non-free-firmware
-deb-src http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free non-free-firmware
+# deb-src http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free non-free-firmware
 ```
 
 配置优先级
@@ -382,16 +385,20 @@ deb-src http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free non-fre
 
 ```
 Package: *
-Pin: release o=Debian,n=bookworm
-Pin-Priority: 700
+Pin: release o=Kali,a=kali-rolling
+Pin-Priority: 900
 
 Package: *
-Pin: release o=Debian,n=bookworm-updates
+Pin: release o=Kali,a=kali-last-snapshot
 Pin-Priority: 800
 
 Package: *
-Pin: release o=Kali,a=kali-rolling
-Pin-Priority: 900
+Pin: release o=Debian,n=bookworm-updates
+Pin-Priority: 700
+
+Package: *
+Pin: release o=Debian,n=bookworm
+Pin-Priority: 600
 ```
 
 获取更新
