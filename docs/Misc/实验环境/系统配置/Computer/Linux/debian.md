@@ -367,16 +367,28 @@ root@debian:~# ip addr
 PS C:\Users\sec> ssh root@[ip]
 ```
 
+安装基础工具
+
+```shell
+root@debian:~# apt install -y curl vim net-tools build-essential dkms linux-headers-$(uname -r)
+```
+
 **修改软件源**
+
+将 Kali 的 GPG 密钥导入到 `/etc/apt/trusted.gpg.d/` 目录下
+
+```shell
+root@debian:~# curl -fsSL https://archive.kali.org/archive-key.asc | tee /etc/apt/trusted.gpg.d/kali.asc
+```
 
 配置 `apt` 源
 
 ```shell
-root@debian:~# nano /etc/apt/sources.list
+root@debian:~# vim /etc/apt/sources.list
 ```
 
 ```
-deb http://mirrors.ustc.edu.cn/debian bookworm main contrib non-free non-free-firmware
+deb https://mirrors.ustc.edu.cn/debian bookworm main contrib non-free non-free-firmware
 
 deb https://mirrors.ustc.edu.cn/kali kali-last-snapshot main non-free non-free-firmware contrib
 ```
@@ -384,7 +396,7 @@ deb https://mirrors.ustc.edu.cn/kali kali-last-snapshot main non-free non-free-f
 配置优先级
 
 ```shell
-root@debian:~# nano /etc/apt/preferences
+root@debian:~# vim /etc/apt/preferences
 ```
 
 ```
@@ -401,12 +413,6 @@ Pin-Priority: 800
 
 ```shell
 root@debian:~# apt update
-```
-
-安装基础工具
-
-```shell
-root@debian:~# apt install -y curl vim net-tools build-essential dkms linux-headers-$(uname -r)
 ```
 
 **配置网络**

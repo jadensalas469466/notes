@@ -365,7 +365,7 @@ PS C:\Users\sec> ssh root@[ip]
 ```
 deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
 
-deb http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
+deb https://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
 ```
 
 配置优先级
