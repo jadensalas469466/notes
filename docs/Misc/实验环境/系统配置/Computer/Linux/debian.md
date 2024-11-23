@@ -335,12 +335,18 @@ root@debian:~# init 0
 
 启动虚拟机，使用 `root` 用户登录
 
+安装基础工具
+
+```shell
+root@debian:~# apt install -y vim curl
+```
+
 **开启 SSH 服务**
 
 允许远程登录 `root` 并配置稳定连接
 
 ```shell
-root@debian:~# nano /etc/ssh/sshd_config
+root@debian:~# vim /etc/ssh/sshd_config
 ```
 
 ```
@@ -358,19 +364,13 @@ root@debian:~# systemctl enable --now ssh.service && systemctl restart ssh.servi
 查看 IP
 
 ```shell
-root@debian:~# ip addr
+root@debian:~# ip a
 ```
 
 在 Powershell 远程登录 `root` 
 
 ```powershell
 PS C:\Users\sec> ssh root@[ip]
-```
-
-安装基础工具
-
-```shell
-root@debian:~# apt install -y curl vim net-tools build-essential dkms linux-headers-$(uname -r)
 ```
 
 **修改软件源**

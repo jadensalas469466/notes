@@ -344,7 +344,7 @@ root@kali:~# init 0
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# ifconfig
+└─# ip a
 ```
 
 在 Powershell 远程登录 `root` 
