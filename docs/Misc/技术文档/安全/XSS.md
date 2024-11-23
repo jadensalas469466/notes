@@ -14,6 +14,7 @@
 
 参考链接
 
+- [xss](https://github.com/jadensalas469466/tools/tree/main/attack/payload/xss)
 - [pdfsvgxsspayload](https://github.com/ynsmroztas/pdfsvgxsspayload)
 
 ## ==未归纳==
