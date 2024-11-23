@@ -231,9 +231,3 @@ xuegod=phpinfo();
 ![将 Cookie 写入蚁剑请求信息](./../../../../../images/Unrestricted%20File%20Upload/%E5%B0%86%20Cookie%20%E5%86%99%E5%85%A5%E8%9A%81%E5%89%91%E8%AF%B7%E6%B1%82%E4%BF%A1%E6%81%AF.png)
 
 >要去掉单引号
-
----
-
-参考链接
-
-- [Unrestricted File Upload](https://owasp.org/www-community/vulnerabilities/Unrestricted_File_Upload)

@@ -418,9 +418,3 @@ xmlData = etree.parse(xmlSource,etree.XMLParser(resolve_entities=False))
 
 >过滤用户提交的 XML 数据
 >关键词：<!DOCTYPE 和<!ENTITY，或者，SYSTEM 和 PUBLIC。
-
----
-
-参考链接
-
-- [XML External Entity (XXE) Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_(XXE)_Processing)

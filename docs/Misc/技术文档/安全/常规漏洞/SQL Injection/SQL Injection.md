@@ -557,9 +557,3 @@ http://192.168.1.76/sqli-labs/Less-8/?id=1' and if(ascii(substr(database(),1,1))
 ### 10.4 爆字段
 
 ### 10.5 拖库
-
----
-
-参考链接
-
-- [SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)

@@ -1,3 +1,17 @@
+## 1 无危害的 XSS
+
+### 1.1 PDF-XSS
+
+只在 Chromium 系浏览器中触发
+
+访问 PDF-XSS 链接时的请求参数不能随意删除，否则无法触发
+
+### 1.2 SVG-XSS
+
+### 1.3 HTML-XSS
+
+## ==未归纳==
+
 XSS（跨站脚本漏洞）是一种通过注入恶意脚本（通常是 JavaScript）到可信网站或应用程序中，诱使其他用户在其浏览器中执行，从而窃取数据、劫持会话或执行恶意操作的安全漏洞。
 
 在 JS 标签中只允许执行英文小写
@@ -222,10 +236,4 @@ alert(1)
 ```
 console.log(1)
 ```
-
----
-
-参考链接
-
-- [Cross Site Scripting (XSS)](https://owasp.org/www-community/attacks/xss/)
 

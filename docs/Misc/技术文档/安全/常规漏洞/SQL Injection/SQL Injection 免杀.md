@@ -623,9 +623,3 @@ uname=1&passwd=2&submit=Submit
 ![在 sqlmap 指定请求文件和代理爆破](./../../../../../../images/SQL%20Injection%20%E5%85%8D%E6%9D%80/%E5%9C%A8%20sqlmap%20%E6%8C%87%E5%AE%9A%E8%AF%B7%E6%B1%82%E6%96%87%E4%BB%B6%E5%92%8C%E4%BB%A3%E7%90%86%E7%88%86%E7%A0%B4.png)
 
 > 可以看到经过扩展的请求体自动进行了分块处理
-
----
-
-参考链接
-
-- [SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)

@@ -640,9 +640,3 @@ key=TzoyNzoidGhpbmtccHJvY2Vzc1xwaXBlc1xXaW5kb3dzIjoxOntzOjM0OiIAdGhpbmtccHJvY2Vz
 > 2. 参数被传递到方法中被执行，并且方法中使用了危险函数（常规思路）
 > 3. 魔术方法中没有敏感操作，通过属性调用了其它函数，恰巧在其它类中有同名的函数（pop 链）
 
----
-
-参考链接
-
-- [Deserialization of untrusted data](https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data)
-
