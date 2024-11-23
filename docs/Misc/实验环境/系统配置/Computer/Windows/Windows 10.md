@@ -535,6 +535,7 @@ C:\Users\sec
 |                            物理机                            |
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
+|   [Adobe Acrobat Reader](https://get.adobe.com/cn/reader/)   |
 |            [AnyTXT Searcher](https://anytxt.net/)            |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
