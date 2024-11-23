@@ -1,4 +1,4 @@
-## 1 无危害的 XSS
+## 1 嵌入式 XSS
 
 ### 1.1 PDF-XSS
 
@@ -9,6 +9,12 @@
 ### 1.2 SVG-XSS
 
 ### 1.3 HTML-XSS
+
+---
+
+参考链接
+
+- [pdfsvgxsspayload](https://github.com/ynsmroztas/pdfsvgxsspayload)
 
 ## ==未归纳==
 
@@ -31,8 +37,6 @@ Host: hb.wanguoschool.com
 ```html
 <script>console.log(1)</script>
 ```
-
-
 
 在 JS 标签中只允许执行英文小写
 
