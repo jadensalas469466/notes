@@ -1,4 +1,4 @@
-一个用于创建独立 Python 虚拟环境的工具。
+一个用于创建独立 Python 虚拟环境的工具，推荐在复杂的开发环境下使用。
 
 ## Debian
 
@@ -82,5 +82,4 @@ PS C:\Users\sec> \path\venv\Scripts\Activate.ps1
 
 参考链接
 
-- [virtualenv](https://github.com/pypa/virtualenv/)
-- [virtualenv Documentation](https://virtualenv.pypa.io/en/latest/)
+- [virtualenv](https://virtualenv.pypa.io/en/latest/)

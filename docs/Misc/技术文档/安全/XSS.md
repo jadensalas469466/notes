@@ -1,14 +1,12 @@
 ## 1 嵌入式 XSS
 
-### 1.1 PDF-XSS
+在文件中嵌入恶意脚本后上传，当目标加载文件时会触发 XSS 攻击。
 
-只在 Chromium 系浏览器中触发
+常见的嵌入式 XSS 有 PDF-XSS、SVG-XSS、HTML-XSS
 
-访问 PDF-XSS 链接时的请求参数不能随意删除，否则无法触发
-
-### 1.2 SVG-XSS
-
-### 1.3 HTML-XSS
+> 触发 PDF-XSS 需要 PDF 查看器中可执行嵌入的 JavaScript，如 Chromium、Adobe Acrobat
+>
+> 访问 PDF-XSS 链接时的请求参数不能随意删除，否则无法触发
 
 ---
 

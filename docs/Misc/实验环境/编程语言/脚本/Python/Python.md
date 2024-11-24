@@ -1,23 +1,18 @@
-一种易学的编程语言。
+一种学习曲线平滑的编程语言。
+
+当在 Windows 中单独安装 Python 3 使用 `python` 作为命令即可。
+
+而在 Linux 中单独安装 Python 3 要严格使用 `python3` 作为命令。
 
 ## 1 部署
 
-**kali**
+### 1.1 Debian
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# apt install -y python3-venv
+root@linux:~# apt install -y python3 python3-pip python3-venv pipx virtualenv
 ```
 
-**debian**
-
-```shell
-root@linux:~# apt install -y python3 python3-pip python3-dev python3-venv
-```
-
-> 若 `python3-venv` 存在冲突，可改为 `virtualenv` 
-
-**Windows**
+### 1.2 Windows
 
 使用管理员权限安装，添加到环境变量
 
@@ -37,31 +32,10 @@ print("hello,world")
 
 ## 2 初始化
 
-**配置 `pip` 代理** 
-
-更新 `pip`
+配置 `pip` 源
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple pip -U
-```
-
-更换源
-
-```shell
-┌──(root㉿kali)-[~]
-└─# pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
-```
-
-查看 `pip` 源
-
-```shell
-┌──(root㉿kali)-[~]
-└─# pip3 config list
-```
-
-```
-global.index-url='https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple'
+root@debian:~# python -m pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 ```
 
 ## 3 使用
@@ -81,27 +55,7 @@ if __name__ == "__main__":
 
 > 使用 vscode 打开后安装相关插件 Python
 
-### 3.1 venv
-
-创建虚拟环境
-
-```shell
-root@server:~# python3 -m venv /path/venv
-```
-
-激活虚拟环境
-
-```shell
-root@server:~# source /path/venv/bin/activate
-```
-
-退出虚拟环境
-
-```shell
-(venv) root@server:~# deactivate
-```
-
-### 3.2 print()
+### 3.1 print()
 
 打印字符串
 
@@ -174,7 +128,7 @@ hello
 world
 ```
 
-### 3.3 变量
+### 3.2 变量
 
 在 Python 中，变量名的取名规则如下：
 
@@ -225,7 +179,7 @@ hello,world
 > 
 > 打印 hi 变量
 
-### 3.4 数学运算
+### 3.3 数学运算
 
 > 在 python 中像是 `6`  这类不被引号包裹的整数可用于运算，而 `"6"` 则是字符串，不可用于运算
 >
@@ -315,7 +269,7 @@ print((-b - delta)/2*a)
 -5.0
 ```
 
-### 3.5 注释
+### 3.4 注释
 
 > 用于解释代码，或者跳过执行
 
@@ -336,7 +290,7 @@ print("5")
 3
 ```
 
-### 3.6 数据类型
+### 3.5 数据类型
 
 使用 type 判断变量值的数据库类型
 
@@ -435,7 +389,7 @@ print(string[12])
 d
 ```
 
-### 3.7 交互模式
+### 3.6 交互模式
 
 > 将命令保存到文件中执行叫做命令行模式，在 pycharm 控制台或 python 终端执行叫做交互模式
 >
@@ -459,7 +413,7 @@ PS C:\Users\sec> python
 
 > 在终端进入的交互模式可执行 `quit()` ，或者 `exit()` 函数退出
 
-### 3.8 len()
+### 3.7 len()
 
  `len()` 是 Python 中的一个内置函数，用于返回一个序列对象（如字符串、列表、元组、集合等）的长度或者元素个数。具体来说， `len()` 函数返回序列中包含的项的数量。
 
@@ -486,7 +440,7 @@ print(len(my_tuple))  # 输出: 3
 
 > 在这些示例中，`len()` 函数分别返回了字符串、列表和元组中的元素数量。
 
-### 3.9 int()
+### 3.8 int()
 
 在 Python 中，`int()` 函数用于将指定的值转换为整数类型。它可以接受不同类型的参数，并尝试将其转换为整数。以下是 `int()` 函数的常见用法：
 
@@ -538,7 +492,7 @@ print(int(CustomClass()))
 
 > 如果 `int()` 函数的参数为空，则会返回 `0`。另外，如果传入的参数无法被转换为整数，则会反馈相应的异常。
 
-### 3.10 float()
+### 3.9 float()
 
 在 Python 中， `float()` 函数用于将指定的值转换为浮点数类型。它可以接受不同类型的参数，并尝试将其转换为浮点数。以下是 `float()` 函数的常见用法：
 
@@ -590,7 +544,7 @@ print(float(CustomClass()))
 
 > 如果`float()`函数的参数为空，则会返回`0.0`。另外，如果传入的参数无法被转换为浮点数，则会抛出相应的异常。
 
-### 3.11 str()
+### 3.10 str()
 
 在 Python 中，`str()` 函数用于将指定的值转换为字符串类型。它可以接受不同类型的参数，并尝试将其转换为字符串。以下是 `str()` 函数的常见用法：
 
@@ -632,7 +586,7 @@ CustomClass object
 
 如果 `str()` 函数的参数为空，则会返回空字符串 `''`。另外，如果传入的参数无法被转换为字符串，则会抛出相应的异常。
 
-### 3.12 input()
+### 3.11 input()
 
 > input 一律返回字符串，即使使用数字也会当作字符串，因此直接使用 input 的值所在的变量运算
 
@@ -703,7 +657,7 @@ print("你的 bmi 值是" + str(user_bmi))
 >
 > 使用 str() 将变量 user_bmi 需要转换为字符串参与拼接
 
-### 3.13 条件语句
+### 3.12 条件语句
 
 在 Python 中，`else` 是与 `if` 语句配合使用的一个关键字，用于在条件表达式为假时执行一组语句。`else` 语句块通常紧跟在 `if` 语句块之后，表示在 `if` 条件不满足时要执行的代码。
 
@@ -807,7 +761,7 @@ print("")
 print("...等等！你并没有对象。 ,,ԾㅂԾ,,")
 ```
 
-### 3.14 嵌套
+### 3.13 嵌套
 
 当条件为 True 时执行下一个条件语句的嵌套语句
 
@@ -860,7 +814,7 @@ else:
         print("(p≧w≦q)")
 ```
 
-### 3.15 多条件判断
+### 3.14 多条件判断
 
 `elif` 是 Python 中的一个关键字，是 `else if` 的缩写，用于在多个条件之间进行选择。`elif` 语句用于在前一个条件为假时，检查另一个条件是否为真，并在条件为真时执行相应的代码块。
 
@@ -943,7 +897,7 @@ else:
 注意保持 (￣▽￣)
 ```
 
-### 3.16 逻辑运算
+### 3.15 逻辑运算
 
 在 Python 中，`and`、`or` 和 `not` 是用于逻辑运算的关键字。
 
@@ -987,7 +941,7 @@ else:
     print("Switch 随风散去...")
 ```
 
-### 3.17 list = []
+### 3.16 list = []
 
 在 Python 中，`list` 是一种数据类型，用于存储多个元素的有序集合。方括号 `[ ]` 用来表示列表，列表中的元素可以是任意数据类型，包括整数、浮点数、字符串、甚至其他列表等。
 
@@ -1075,7 +1029,7 @@ print(sorted(my_list))	# 打印排序好的列表
 [-7, 1, 2, 13, 96]
 ```
 
-### 3.18 tuple = ()
+### 3.17 tuple = ()
 
 在 Python 中，元组（Tuple）是一种有序的、不可变的数据类型。它是由一系列元素组成，每个元素可以是任意数据类型，并且元素之间用逗号 `,` 分隔，通常用小括号 `()` 表示。
 
@@ -1112,7 +1066,7 @@ print(my_tuple[0])  # 输出: 1
 
 > 元组适合用于存储不可变的数据集合，例如一些常量、配置参数等。虽然元组的不可变性意味着无法直接修改其内容，但可以通过创建新的元组来实现对元组的更新和修改。
 
-### 3.19 dict = {}
+### 3.18 dict = {}
 
 在 Python 中，字典是一种可变的、无序的、键-值对（key-value pair）的集合。每个键对应一个值，键必须是唯一的，但值可以重复。字典通常用大括号 `{}` 来表示，每个键值对之间用逗号 `,` 分隔。
 
@@ -1226,7 +1180,7 @@ else:
     print('当前的字典收录的流行语的条数为：' + str(len(my_dict)) + ' 条。')
 ```
 
-### 3.20 for 循环
+### 3.19 for 循环
 
 在 Python 中，`for ` 循环是一种用于迭代 (iterate) 序列 (sequence) 或其他可迭代对象 (iterable) 的控制结构。通过 `for` 循环，你可以按顺序访问序列中的每个元素，并对其执行特定的操作。
 
@@ -1298,7 +1252,7 @@ for user_num in my_dict.items():
         print("完犊子了！")
 ```
 
-### 3.21 range
+### 3.20 range
 
 在 Python 中，`range()` 是一个用于生成整数序列的内置函数。它可以接受一个、两个或三个参数，返回一个表示特定范围的整数序列的可迭代对象。
 
