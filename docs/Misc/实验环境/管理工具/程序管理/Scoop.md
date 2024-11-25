@@ -28,10 +28,10 @@ PS C:\Users\sec> scoop config proxy 127.0.0.1:10809
 PS C:\Users\sec> scoop bucket add spc https://github.com/lzwme/scoop-proxy-cn
 ```
 
-安装 `sudo` 和 `scoop-search` 
+安装依赖
 
 ```powershell
-PS C:\Users\sec> scoop install sudo scoop-search
+PS C:\Users\sec> scoop install 7zip git scoop-search aria2 sudo
 ```
 
 ## 3 使用
@@ -61,6 +61,7 @@ PS C:\Users\sec> scoop-search SomeSoftware # 使用第三方快速搜索
 
 ```powershell
 PS C:\Users\sec> scoop install SomeSoftware                  # 普通安装
+PS C:\Users\sec> sudo scoop install SomeSoftware             # 管理员权限安装
 PS C:\Users\sec> scoop install SomeSoftware@[version-number] # 指定版本安装
 PS C:\Users\sec> sudo scoop install SomeSoftware --global    # 全局安装
 PS C:\Users\sec> scoop install bucket/SomeSoftware           # 从指定 Bucket 安装
@@ -78,7 +79,7 @@ PS C:\Users\sec> scoop update SomeSoftware # 更新指定软件
 
 ```powershell
 PS C:\Users\sec> scoop uninstall SomeSoftware  # 卸载软件
-PS C:\Users\sec> scoop uninstall scoop         # 卸载 Scoop 及其安装的程序
+PS C:\Users\sec> scoop uninstall scoop         # 卸载 Scoop 及其安装的程序 (需要管理员权限)
 ```
 
 清理缓存
