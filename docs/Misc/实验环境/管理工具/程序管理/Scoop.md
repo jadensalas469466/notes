@@ -22,6 +22,12 @@ PS C:\Users\sec> irm get.scoop.sh -Proxy 'http://127.0.0.1:10809' | iex
 PS C:\Users\sec> scoop config proxy 127.0.0.1:10809
 ```
 
+添加 SPC Bucket
+
+```powershell
+PS C:\Users\sec> scoop bucket add spc https://github.com/lzwme/scoop-proxy-cn
+```
+
 安装 `sudo` 和 `scoop-search` 
 
 ```powershell
