@@ -2,8 +2,6 @@
 
 ## 1 使用
 
-### 1.1 Debian
-
 创建虚拟环境
 
 ```shell
@@ -26,5 +24,5 @@ root@server:~# source /path/venv/bin/activate
 
 参考链接
 
-- [Pipenv](https://pipenv.pypa.io/en/latest/)
+- [venv](https://docs.python.org/zh-cn/3.13/library/venv.html)
 

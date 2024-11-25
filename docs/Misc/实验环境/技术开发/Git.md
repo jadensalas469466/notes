@@ -78,10 +78,16 @@ root@debian:~# git config --global http.proxy "socks://192.168.1.201:10808"
 PS C:\Users\sec> git config --global http.proxy "socks://127.0.0.1:10808"
 ```
 
-配置 SSH 客户端
+配置使用 Windows SSH 客户端
 
 ```powershell
 PS C:\Users\sec> git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+```
+
+配置使用 Windows 证书校验
+
+```powershell
+PS C:\Users\sec> git config --global http.sslBackend schannel
 ```
 
 配置用户名和邮箱

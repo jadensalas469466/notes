@@ -64,6 +64,12 @@ root@server:~# openssl req -new -x509 -key /etc/ssl/caddy/ssl-test.pem -out /etc
 root@server:~# chmod 644 /etc/ssl/caddy/ssl-test.crt
 ```
 
+将 TLS 证书复制到本地安装
+
+```shell
+root@local:~# scp root@server:/etc/ssl/caddy/ssl-test.crt /root/
+```
+
 ### 1.2 客户端
 
 **linux**
