@@ -40,7 +40,7 @@ PS C:\Users\sec> scoop install sudo scoop-search
 
 ```powershell
 PS C:\Users\sec> scoop help           # 可用命令
-PS C:\Users\sec> scoop help <command> # 获取特定命令的更多帮助
+PS C:\Users\sec> scoop help [list-command] # 获取特定命令的更多帮助
 ```
 
 软件状态
@@ -60,10 +60,10 @@ PS C:\Users\sec> scoop-search SomeSoftware # 使用第三方快速搜索
 软件安装
 
 ```powershell
-PS C:\Users\sec> scoop install SomeSoftware               # 普通安装
-PS C:\Users\sec> scoop install SomeSoftware@[Version]     # 指定版本安装
-PS C:\Users\sec> sudo scoop install SomeSoftware --global # 全局安装
-PS C:\Users\sec> scoop install bucket/SomeSoftware        # 从指定 Bucket 安装
+PS C:\Users\sec> scoop install SomeSoftware                  # 普通安装
+PS C:\Users\sec> scoop install SomeSoftware@[version-number] # 指定版本安装
+PS C:\Users\sec> sudo scoop install SomeSoftware --global    # 全局安装
+PS C:\Users\sec> scoop install bucket/SomeSoftware           # 从指定 Bucket 安装
 ```
 
 软件更新
