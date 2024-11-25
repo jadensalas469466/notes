@@ -11,27 +11,21 @@ PS C:\Users\sec> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Curren
 下载并执行 Scoop 安装脚本
 
 ```powershell
-PS C:\Users\sec> irm https://ghp.ci/raw.githubusercontent.com/lzwme/scoop-proxy-cn/master/install.ps1 | iex
+PS C:\Users\sec> irm get.scoop.sh -Proxy 'http://127.0.0.1:10809' | iex
 ```
 
 ## 2 初始化
 
-配置镜像 `scoop repo` 加速
+添加代理
 
 ```powershell
-PS C:\Users\sec> scoop config scoop_repo https://ghp.ci/github.com/ScoopInstaller/Scoop
-```
-
-添加 `spc bucket` 源
-
-```powershell
-PS C:\Users\sec> scoop bucket add spc https://ghp.ci/github.com/lzwme/scoop-proxy-cn
+PS C:\Users\sec> scoop config proxy 127.0.0.1:10809
 ```
 
 安装 `sudo` 和 `scoop-search` 
 
 ```powershell
-PS C:\Users\sec> scoop install spc/sudo spc/scoop-search
+PS C:\Users\sec> scoop install sudo scoop-search
 ```
 
 ## 3 使用
@@ -60,10 +54,10 @@ PS C:\Users\sec> scoop-search SomeSoftware # 使用第三方快速搜索
 软件安装
 
 ```powershell
-PS C:\Users\sec> scoop install spc/SomeSoftware           # 从指定源 spc bucket 安装
 PS C:\Users\sec> scoop install SomeSoftware               # 普通安装
 PS C:\Users\sec> scoop install SomeSoftware@[Version]     # 指定版本安装
 PS C:\Users\sec> sudo scoop install SomeSoftware --global # 全局安装
+PS C:\Users\sec> scoop install bucket/SomeSoftware        # 从指定 Bucket 安装
 ```
 
 软件更新
@@ -101,8 +95,22 @@ PS C:\Users\sec> scoop cleanup SomeSoftware -k # 删除过期软件的下载缓�
 代理配置
 
 ```powershell
-PS C:\Users\sec> scoop config proxy 127.0.0.1:10808 # 添加代理
+PS C:\Users\sec> scoop config proxy 127.0.0.1:10809 # 添加代理
 PS C:\Users\sec> scoop config rm proxy              # 删除代理
+```
+
+配置 Bucket
+
+```powershell
+PS C:\Users\sec> scoop bucket rm main                                            # 删除 Bucket
+PS C:\Users\sec> scoop bucket add main https://github.com/ScoopInstaller/Main  # 添加 Bucket
+```
+
+镜像加速
+
+```powershell
+PS C:\Users\sec> scoop config scoop_repo https://ghp.ci/github.com/ScoopInstaller/Scoop  # 配置 ScoopRepo 镜像加速
+PS C:\Users\sec> scoop bucket add main https://ghp.ci/github.com/ScoopInstaller/Main    # 配置 Bucket 镜像加速
 ```
 
 ---
@@ -110,4 +118,3 @@ PS C:\Users\sec> scoop config rm proxy              # 删除代理
 参考链接
 
 - [Scoop](https://scoop.sh/)
-- [scoop-proxy-cn](https://github.com/lzwme/scoop-proxy-cn)
