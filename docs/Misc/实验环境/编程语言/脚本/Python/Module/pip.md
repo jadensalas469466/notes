@@ -1,6 +1,6 @@
 Python 的包管理工具。
 
-在安装了多个版本 Python 的复杂环境下要指定 Python 版本使用，如:  `python3.7 -m pip` 。
+在安装了多个版本 Python 的复杂环境下要指定 Python 解析器使用，如:  `python3.7 -m pip` 。
 
 ## 1 部署
 
