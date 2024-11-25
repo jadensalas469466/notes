@@ -30,13 +30,13 @@ PS C:\Users\sec> scoop install SomeSoftware -s
 
 之前的镜像站 `ghproxy.com` 失效，无法继续下载
 
-配置新的镜像 `scoop repo` 加速
+配置新的 ScoopRepo 镜像加速
 
 ```powershell
 PS C:\Users\sec> scoop config scoop_repo https://ghp.ci/github.com/ScoopInstaller/Scoop
 ```
 
-移除并重新添加 `spc bucket` 源
+移除并重新添加 Bucket
 
 ```powershell
 PS C:\Users\sec> scoop bucket rm spc && scoop bucket add spc https://ghp.ci/github.com/lzwme/scoop-proxy-cn
