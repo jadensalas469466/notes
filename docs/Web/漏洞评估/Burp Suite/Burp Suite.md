@@ -124,7 +124,7 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 
 > 所有的扩展都要下载到这个目录中
 
-## 5 Extensions
+## 5 部署
 
 |                          Extensions                          |
 | :----------------------------------------------------------: |
@@ -150,61 +150,42 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 
 ## 6 使用
 
-### 6.1 添加扩展
+### 6.1 Proxy
 
-添加BApp商店扩展
+Burp Suite 的抓包代理仅支持 HTTP 协议
 
-![添加BApp商店扩展](./../../../../images/Burp%20Suite/%E6%B7%BB%E5%8A%A0BApp%E5%95%86%E5%BA%97%E6%89%A9%E5%B1%95.png)
+### 6.2 拦截请求
 
-配置 [Jython Standalone](https://github.com/jython/jython) 环境
+![拦截请求](./../../../../images/Burp%20Suite/%E6%8B%A6%E6%88%AA%E8%AF%B7%E6%B1%82.png)
 
-![配置 Jython Standalone 环境](./../../../../images/Burp%20Suite/%E9%85%8D%E7%BD%AE%20Jython%20Standalone%20%E7%8E%AF%E5%A2%83.png)
+### 6.3 Extensions
 
-### 6.1.1 添加第三方扩展
+将下载好的扩展包解压到 `.\BurpSuitePro\Extensions\` 目录中
 
-将下载好的扩展包放在 D:\software\BurpSuitePro\Extender\ 目录中
+添加 Extensions
 
-在扩展中添加
-
-![在扩展中添加](./../../../../images/Burp%20Suite/%E5%9C%A8%E6%89%A9%E5%B1%95%E4%B8%AD%E6%B7%BB%E5%8A%A0.png)
-
-点击下一个
-
-![点击下一个](./../../../../images/Burp%20Suite/%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E4%B8%AA.png)
-
-点击关闭
-
-![点击关闭](./../../../../images/Burp%20Suite/%E7%82%B9%E5%87%BB%E5%85%B3%E9%97%AD.png)
-
-### 6.2 加载扩展
+![添加 Extensions](./../../../../images/Burp%20Suite/%E6%B7%BB%E5%8A%A0%20Extensions.png)
 
 勾选扩展以加载
 
 ![勾选扩展以加载](./../../../../images/Burp%20Suite/%E5%8B%BE%E9%80%89%E6%89%A9%E5%B1%95%E4%BB%A5%E5%8A%A0%E8%BD%BD.png)
 
-### 6.3 Turbo Intruder
+### 6.4 Intruder
 
-选择 `examples/race-multi-endpoint.py`  然后在 `host` 下添加 `x-req:%s` 
+Burp Suite Intruder 中有四种 Attack type
 
-Turbo Intruder 攻击示例
-
-![Turbo Intruder 攻击示例](./../../../../images/Burp%20Suite/Turbo%20Intruder%20%E6%94%BB%E5%87%BB%E7%A4%BA%E4%BE%8B.png)
-
-其中 GET 和 POST 请求默认各 5 次，可在这里修改
-
-![其中 GET 和 POST 请求默认各 5 次，可在这里修改](./../../../../images/Burp%20Suite/%E5%85%B6%E4%B8%AD%20GET%20%E5%92%8C%20POST%20%E8%AF%B7%E6%B1%82%E9%BB%98%E8%AE%A4%E5%90%84%205%20%E6%AC%A1%EF%BC%8C%E5%8F%AF%E5%9C%A8%E8%BF%99%E9%87%8C%E4%BF%AE%E6%94%B9.png)
-
-### 6.4 拦截请求
-
-![拦截请求](./../../../../images/Burp%20Suite/%E6%8B%A6%E6%88%AA%E8%AF%B7%E6%B1%82.png)
+```
+Sniper        # 一个字典，逐个测试
+Battering ram # 一个字典，同步测试
+Pitchfork     # 多个字典, 并行测试
+Cluster bomb  # 多个字典, 穷举测试
+```
 
 ### 6.5 爆破时处理 payload
 
 ![爆破时处理 payload](./../../../../images/Burp%20Suite/%E7%88%86%E7%A0%B4%E6%97%B6%E5%A4%84%E7%90%86%20Payload.png)
 
-### 6.6 comparer 对比
-
-### 6.7在本地侦听其它计算机
+### 6.6 在本地侦听其它计算机
 
 将代理指定为本机 IP
 
@@ -218,7 +199,7 @@ Turbo Intruder 攻击示例
 
 访问 http://burpsuite/ ,安装证书后，可通过 BurpSuite 代理正常访问
 
-### 6.8 捕获蚁剑连接木马的数据包
+### 6.7 捕获蚁剑连接木马的数据包
 
 使用 BurpSuite 对蚁剑连接一句话木马抓包，分析虚拟终端原理
 

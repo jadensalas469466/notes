@@ -70,7 +70,7 @@
 └─# systemctl restart apache2
 ```
 
-无痕模式访问
+Firefox 访问
 
 > http://debian.local/dvwa/setup.php
 
@@ -84,7 +84,7 @@
 
 ## 2 使用
 
-无痕模式访问
+Firefox 访问
 
 > http://debian.local/dvwa/
 
