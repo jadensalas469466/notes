@@ -483,11 +483,15 @@ PS C:\Users\sec> irm https://get.activated.win | iex
 | KMS38      | Windows 10-11-Server | 到 2038 年               |
 | Online KMS | Windows / Office     | 180 天。终身，有续费任务 |
 
-更新驱动、系统、Edge 和应用
+更新驱动、系统、Edge
 
-设置 Windows、Edge、Office、Visio 和 Microsoft Store
+设置 Windows、Edge、Office、Visio
 
 使用 Dism++ 修改系统设置
+
+设置背景色为: `#282A36` 
+
+设置主题色为: `#44475A` 
 
 关机，快照命名为 `初始化` 
 
@@ -536,7 +540,6 @@ C:\Users\sec
 |                            物理机                            |
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
-|   [Adobe Acrobat Reader](https://get.adobe.com/cn/reader/)   |
 |            [AnyTXT Searcher](https://anytxt.net/)            |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
@@ -564,7 +567,7 @@ C:\Users\sec
 |                  [Nmap](https://nmap.org/)                   |
 | [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus) |
 |            [OBS Studio](https://obsproject.com/)             |
-|        [Pinta](https://github.com/PintaProject/Pinta)        |
+|           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |             [Postman](https://www.postman.com/)              |
 |              [Potplayer](https://potplayer.tv/)              |
