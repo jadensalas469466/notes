@@ -2,10 +2,10 @@
 
 ## 1 准备
 
-Win10_22H2_Chinese_Simplified_x64v1.iso
+Win10_21H2_TLSC_Chinese_Simplified_x64.iso
 
 ```
-https://www.microsoft.com/zh-cn/software-download/windows10ISO
+https://www.microsoft.com/zh-cn/evalcenter/download-windows-10-enterprise
 ```
 
 **物理机**
@@ -502,8 +502,9 @@ C:\Users\sec
 ├─Pictures
 |	└─截图
 └─share
-	├─github
-	└─VMware
+|	├─github
+|	└─VMware
+└─tools
 ```
 
 > ```

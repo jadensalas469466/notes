@@ -478,7 +478,7 @@ PS C:\Users\sec> ssh root@kali.local
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# mkdir -p /root/tool/script /root/tool/driver /var/www/html/upload
+└─# mkdir -p /root/tools/driver /root/share/github /var/www/html/upload
 ```
 
 关机，拍摄快照并命名为 `初始化` 

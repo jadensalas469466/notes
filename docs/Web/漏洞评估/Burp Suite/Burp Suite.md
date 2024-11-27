@@ -150,13 +150,21 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
 
 ## 6 使用
 
+推荐使用 Firefox 转发数据包到 Burp Suite, 避免 Chrome 中过多的 Extensions 对 Burp Suite 造成干扰
+
 ### 6.1 Proxy
 
 Burp Suite 的抓包代理仅支持 HTTP 协议
 
-### 6.2 拦截请求
+### 6.1.1 拦截请求
 
 ![拦截请求](./../../../../images/Burp%20Suite/%E6%8B%A6%E6%88%AA%E8%AF%B7%E6%B1%82.png)
+
+### 6.2 Scope
+
+在 Target 中设置 Scope, 仅捕获 `example.com` 及其子域名的数据包
+
+![在 Target 中设置 Scope, 仅捕获 `example.com` 及其子域名的数据包](./../../../../images/Burp%20Suite/%E5%9C%A8%20Target%20%E4%B8%AD%E8%AE%BE%E7%BD%AE%20Scope,%20%E4%BB%85%E6%8D%95%E8%8E%B7%20%60example.com%60%20%E5%8F%8A%E5%85%B6%E5%AD%90%E5%9F%9F%E5%90%8D%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
 ### 6.3 Extensions
 

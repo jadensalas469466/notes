@@ -2,11 +2,13 @@ Web 漏洞扫描工具。
 
 ## 1 部署
 
+### 1.1 Kali
+
 下载
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# proxychains4 wget https://github.com/chaitin/xray/releases/download/1.9.11/xray_linux_amd64.zip
+└─# wget https://github.com/chaitin/xray/releases/download/1.9.11/xray_linux_amd64.zip
 ```
 
 解压
@@ -36,15 +38,6 @@ cd "$(dirname "$(readlink -f "$0")")"
 ./xray_linux_amd64 "$@"
 ```
 
-> windows 中使用 start.bat 脚本
->
-> ```bat
-> @echo off
-> set "XRAY_DIR=%~dp0"
-> set "PATH=%XRAY_DIR%;%PATH%"
-> start powershell -NoExit -Command "& { xray }"
-> ```
-
 创建链接
 
 ```shell
@@ -58,6 +51,25 @@ cd "$(dirname "$(readlink -f "$0")")"
 ┌──(root㉿kali)-[~]
 └─# xray
 ```
+
+### 1.2  Windows
+
+下载
+
+```powershell
+PS C:\Users\sec> Invoke-WebRequest -Uri "https://github.com/chaitin/xray/releases/download/1.9.11/xray_windows_amd64.exe.zip" -Proxy "http://127.0.0.1:10809" -OutFile "xray_linux_amd64.zip"
+```
+
+windows 中使用 start.bat 脚本
+
+```powershell
+@echo off
+set "XRAY_DIR=%~dp0"
+set "PATH=%XRAY_DIR%;%PATH%"
+start powershell -NoExit -Command "& { xray }"
+```
+
+## 2 初始化
 
 生成证书
 
@@ -111,7 +123,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 > 删除 `*.edu.cn` ， `*chaitin*` 
 
-## 2 使用
+## 3 使用
 
 查看帮助
 
@@ -148,7 +160,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 在 xray 配置被动扫描
 
 ```shell
-┌──(root㉿a-kali-23)-[~]
+┌──(root㉿kali)-[~]
 └─# xray webscan --listen 192.168.1.14:7777 --html-output scan.html
 ```
 

@@ -16,7 +16,7 @@ PS C:\Users\sec> irm get.scoop.sh -Proxy 'http://127.0.0.1:10809' | iex
 
 ## 2 初始化
 
-添加代理
+配置代理
 
 ```powershell
 PS C:\Users\sec> scoop config proxy 127.0.0.1:10809

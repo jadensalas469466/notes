@@ -37,9 +37,9 @@ D:\software\sqlmap
 
 `--batch` 以默认参数运行
 
-`-f` 进行广泛的 DBMS 指纹识别
+`-f` 快速测试
 
-`-b` 得到更加精准的指纹识别结果
+`-b` 获得详细的数据仓库版本
 
 `--level 5` 更详细地对更大范围 payloads 和 boundaries（作为 SQL payload 的前缀和后缀）进行检测
 

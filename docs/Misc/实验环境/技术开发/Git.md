@@ -100,6 +100,12 @@ PS C:\Users\sec> git config --global user.name "sec"
 PS C:\Users\sec> git config --global user.email "xxxxxxxx@users.noreply.github.com"
 ```
 
+配置对文件名大小写敏感
+
+```powershell
+PS C:\Users\sec> git config --global --get core.ignorecase
+```
+
 查看所有配置
 
 ```powershell

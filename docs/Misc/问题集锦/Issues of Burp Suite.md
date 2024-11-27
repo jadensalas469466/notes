@@ -10,3 +10,8 @@ Burp Suite 中一些问题的解决方式.
 
 ![在 `View` 中点击 `Restore default tap layout` 即可恢复默认布局](./../../../images/%E5%9C%A8%20Burp%20Suite%20%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/%E5%9C%A8%20%60View%60%20%E4%B8%AD%E7%82%B9%E5%87%BB%20%60Restore%20default%20tap%20layout%60%20%E5%8D%B3%E5%8F%AF%E6%81%A2%E5%A4%8D%E9%BB%98%E8%AE%A4%E5%B8%83%E5%B1%80.png)
 
+## 2 无法使用 Firefox 转发数据包到 Burp Suite
+
+Burp Suite 仅支持使用 HTTP 协议转发, 在 Firefox 中设置为 HTTP 代理即可
+
+![Burp Suite 仅支持使用 HTTP 协议转发, 在 Firefox 中设置为 HTTP 代理即可](./../../../images/%E5%9C%A8%20Burp%20Suite%20%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/Burp%20Suite%20%E4%BB%85%E6%94%AF%E6%8C%81%E4%BD%BF%E7%94%A8%20HTTP%20%E5%8D%8F%E8%AE%AE%E8%BD%AC%E5%8F%91,%20%E5%9C%A8%20Firefox%20%E4%B8%AD%E8%AE%BE%E7%BD%AE%E4%B8%BA%20HTTP%20%E4%BB%A3%E7%90%86%E5%8D%B3%E5%8F%AF.png)
