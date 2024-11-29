@@ -2,11 +2,11 @@
 
 ## 1 嵌入式 XSS
 
-在文件中嵌入恶意脚本后上传，当目标加载文件时会触发 XSS 攻击。
+在文件中嵌入恶意脚本后上传, 当目标加载文件时会触发 XSS 攻击.
 
-常见的嵌入式 XSS 有 PDF-XSS、SVG-XSS、HTML-XSS
+常见的嵌入式 XSS 有 PDF-XSS, SVG-XSS, HTML-XSS
 
-> 触发 PDF-XSS 需要 PDF 查看器中可执行嵌入的 JavaScript，如 Chromium、Adobe Acrobat
+> 触发 PDF-XSS 需要 PDF 查看器中可执行嵌入的 JavaScript; 如 Chromium, Adobe Acrobat
 >
 > 访问 PDF-XSS 链接时的请求参数不能随意删除，否则无法触发
 
@@ -33,6 +33,16 @@ Content-Disposition: form-data; name="uploaded"; filename="XSS.html"
 
 ```
 http://debian.local/dvwa/hackable/uploads/XSS.html
+```
+
+某些情况下文件上传处是通过编码上传的, 可以通过修改文件类型及文件编码嵌入 XSS
+
+```
+data:image/png;base64,VGhpcyBpcyBhIHRlc3QgZmllbGQ=
+```
+
+```
+data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 ```
 
 ---
