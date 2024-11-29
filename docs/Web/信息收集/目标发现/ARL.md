@@ -9,13 +9,15 @@
 下载安装脚本
 
 ```shell
-root@server:~# wget https://raw.githubusercontent.com/Aabyss-Team/ARL/master/misc/setup-arl.sh
+┌──(root㉿kali)-[~]
+└─# wget https://raw.githubusercontent.com/Aabyss-Team/ARL/master/misc/setup-arl.sh
 ```
 
 为安装脚本添加执行权限并运行
 
 ```shell
-root@server:~# chmod +x setup-arl.sh && ./setup-arl.sh
+┌──(root㉿kali)-[~]
+└─# chmod +x ./setup-arl.sh && ./setup-arl.sh && rm -rf ./setup-arl.sh
 ```
 
 ```
@@ -62,7 +64,7 @@ Docker安装
 登录
 
 ```
-https://[IP]:5003
+https://example.com:5003
 ```
 
 ```
@@ -74,28 +76,50 @@ https://[IP]:5003
 
 ## 3 使用
 
+经典操作
+
+![经典操作](./../../../../images/ARL/%E7%BB%8F%E5%85%B8%E6%93%8D%E4%BD%9C.png)
+
+扫描大型网站时, `端口扫描类型` 建议修改为: `TOP100` 
+
+ `站点截图` 容易出现卡顿
+
+使用高并发扫描功能必须在海外云服务器厂商部署
+
+```
+站点爬虫
+文件泄露
+nuclei 调用
+```
+
+## 4 配置
+
 将配置文件复制到本地
 
 ```shell
-root@server:~# docker cp arl_web:/code/app/config.yaml /root/config.yaml
+┌──(root㉿kali)-[~]
+└─# docker cp arl_web:/code/app/config.yaml /root/config.yaml
 ```
 
 修改配置文件
 
 ```shell
-root@server:~# vim /root/config.yaml
+┌──(root㉿kali)-[~]
+└─# vim /root/config.yaml
 ```
 
 将配置文件复制到容器
 
 ```shell
-root@server:~# docker cp /root/config.yaml arl_web:/code/app/config.yaml
+┌──(root㉿kali)-[~]
+└─# docker cp /root/config.yaml arl_web:/code/app/config.yaml
 ```
 
 保存退出后打开启动程序所在路径，启动项目中的所有服务后立即重启这些服务
 
 ```shell
-root@server:~# cd /opt/ARL-docker/ && docker-compose up -d && docker-compose restart
+┌──(root㉿kali)-[~]
+└─# cd /opt/ARL-docker/ && docker-compose up -d && docker-compose restart
 ```
 
 > 配置好之后记得在 ARL 中刷新界面
