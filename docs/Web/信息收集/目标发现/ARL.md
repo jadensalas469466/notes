@@ -2,7 +2,7 @@
 
 ## 1 部署
 
-[配置 Docker 容器引擎](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/rong-qi/yin-qing/pei-zhi-docker-rong-qi-yin-qing)
+[配置 Docker 容器引擎](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/rong-qi/yin-qing/docker)
 
 配置安全组开放 5003 端口
 
