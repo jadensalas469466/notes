@@ -5,7 +5,8 @@
 安装
 
 ```shell
-root@server:~# apt install -y docker.io docker-compose
+┌──(root㉿kali)-[~]
+└─# apt install -y docker.io docker-compose
 ```
 
 ## 2 初始化
@@ -13,7 +14,8 @@ root@server:~# apt install -y docker.io docker-compose
 配置开机自启
 
 ```shell
-root@server:~# systemctl enable --now docker.service
+┌──(root㉿kali)-[~]
+└─# systemctl enable --now docker.service
 ```
 
 ## 3 使用
@@ -21,17 +23,20 @@ root@server:~# systemctl enable --now docker.service
 通过 docker proxy 拉取镜像
 
 ```shell
-root@server:~# docker pull dockerproxy.net/stilleshan/frpc:latest
+┌──(root㉿kali)-[~]
+└─# docker pull dockerproxy.net/stilleshan/frpc:latest
 ```
 
 配置代理
 
 ```shell
-root@server:~# mkdir -p /etc/systemd/system/docker.service.d
+┌──(root㉿kali)-[~]
+└─# mkdir -p /etc/systemd/system/docker.service.d
 ```
 
 ```shell
-root@server:~# vim /etc/systemd/system/docker.service.d/http-proxy.conf
+┌──(root㉿kali)-[~]
+└─# vim /etc/systemd/system/docker.service.d/http-proxy.conf
 ```
 
 ```
@@ -44,7 +49,8 @@ Environment="NO_PROXY=localhost,127.0.0.1"
 重启 docker 加载配置
 
 ```shell
-root@server:~# systemctl daemon-reload && systemctl restart docker.service
+┌──(root㉿kali)-[~]
+└─# systemctl daemon-reload && systemctl restart docker.service
 ```
 
 ---
