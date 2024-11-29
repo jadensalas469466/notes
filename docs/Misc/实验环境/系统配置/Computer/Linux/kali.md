@@ -337,7 +337,7 @@ root@kali:~# init 0
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# systemctl enable --now ssh.servic && systemctl restart ssh.servic
+└─# systemctl enable --now ssh.service && systemctl restart ssh.service
 ```
 
 查看 IP
