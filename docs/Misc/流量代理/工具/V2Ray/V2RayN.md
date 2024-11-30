@@ -2,6 +2,10 @@
 
 ## 1 部署
 
+主题跟随系统
+
+![主题跟随系统](./../../../../../images/V2RayN/%E4%B8%BB%E9%A2%98%E8%B7%9F%E9%9A%8F%E7%B3%BB%E7%BB%9F.png)
+
 添加 VMess 服务器
 
 ![添加 VMess 服务器](./../../../../../images/V2RayN/%E6%B7%BB%E5%8A%A0%20VMess%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
@@ -18,9 +22,9 @@
 
 ![路由设置为全局](./../../../../../images/V2RayN/%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE%E4%B8%BA%E5%85%A8%E5%B1%80.png)
 
-主题跟随系统
+关闭阻断广告
 
-![主题跟随系统](./../../../../../images/V2RayN/%E4%B8%BB%E9%A2%98%E8%B7%9F%E9%9A%8F%E7%B3%BB%E7%BB%9F.png)
+![关闭阻断广告](./../../../../../images/V2RayN/%E5%85%B3%E9%97%AD%E9%98%BB%E6%96%AD%E5%B9%BF%E5%91%8A.png)
 
 ## 2 使用
 
