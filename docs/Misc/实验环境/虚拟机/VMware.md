@@ -74,6 +74,10 @@ C:\Users\sec\AppData\Local\Temp\vmware-sec\VMwareDnD
 
 ![清理磁盘](./../../../../images/VMware/%E6%B8%85%E7%90%86%E7%A3%81%E7%9B%98.png)
 
+安装 VMware Tools
+
+![安装 VMware Tools](./../../../../images/VMware/%E5%AE%89%E8%A3%85%20VMware%20Tools.png)
+
 **共享文件**
 
 创建共享文件夹

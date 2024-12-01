@@ -17,7 +17,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 目录
 
 ```
-C:\Users\sec\Documents\Virtual Machines\debian
+C:\Users\sec\Documents\Virtual Machines\HostName
 ```
 
 ## 2 配置
@@ -73,7 +73,7 @@ Debian 12.x 64 位
 位置
 
 ```
-C:\Users\sec\Documents\Virtual Machines\debian
+C:\Users\sec\Documents\Virtual Machines\HostName
 ```
 
 处理器数量
@@ -345,8 +345,6 @@ sec@debian:~$ su - root
 root@debian:~# apt install -y vim curl
 ```
 
-**开启 SSH 服务**
-
 允许远程登录 `root` 并配置稳定连接
 
 ```shell
@@ -364,8 +362,6 @@ root@debian:~# vim /etc/ssh/sshd_config
 ```shell
 root@debian:~# systemctl restart ssh.service
 ```
-
-**修改软件源**
 
 将 Kali 的 GPG 密钥导入到 `/etc/apt/trusted.gpg.d/` 目录下
 
@@ -406,8 +402,6 @@ Pin-Priority: 800
 ```shell
 root@debian:~# apt update
 ```
-
-**配置网络**
 
 配置网络接口参数
 
@@ -459,7 +453,7 @@ PS C:\Users\sec> ssh root@example
 root@debian:~# ping g.cn -c 3
 ```
 
-**创建目录**
+创建目录
 
 ```shell
 root@debian:~# mkdir -p /root/tools/scripts /root/tools/drivers /var/www/html/upload
@@ -553,8 +547,6 @@ root@debian:~# init 0
 > ┌──(root㉿kali)-[~]
 > └─# cd /root/tools/drivers/rtl8812au && make dkms_remove && cd
 > ```
-
-> 
 
 ### 6.2 系统信息
 

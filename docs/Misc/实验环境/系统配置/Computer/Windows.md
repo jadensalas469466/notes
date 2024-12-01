@@ -2,21 +2,11 @@
 
 ## 1 准备
 
-Win10_21H2_TLSC_Chinese_Simplified_x64.iso
+Windows_10_21H2_Enterprise_TLSC_Chinese_Simplified_x64.iso
 
 ```
 https://www.microsoft.com/zh-cn/evalcenter/download-windows-10-enterprise
 ```
-
-**物理机**
-
-WePE
-
-```
-https://www.wepe.com.cn
-```
-
-**虚拟机**
 
 VMware
 
@@ -27,26 +17,10 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 目录
 
 ```
-C:\Users\sec\Documents\Virtual Machines\windows
+C:\Users\sec\Documents\Virtual Machines\HostName
 ```
 
 ## 2 配置
-
-**物理机**
-
-重启系统进入 Boot 菜单
-
-```
-需要关闭 Bitlocker
-ASUS 是在启动引导界面按 Del 
-TinkPad 是在启动引导界面按 F12 
-```
-
-选择 U 盘启动进入 WePE
-
-进入 `Win10_22H2_Chinese_Simplified_x64v1.iso` ，运行 `setup.exe` ，进行安装
-
-**虚拟机**
 
 移动镜像文件到 `iso` 文件夹
 
@@ -93,13 +67,13 @@ Windows 10 x64
 虚拟机名称
 
 ```
-windows
+<host-name>
 ```
 
 位置
 
 ```
-C:\Users\sec\Documents\Virtual Machines\windows
+C:\Users\sec\Documents\Virtual Machines\HostName
 ```
 
 固件类型
@@ -153,7 +127,7 @@ NVMe
 最大磁盘大小
 
 ```
-128.0 GB
+64.0 GB
 ```
 
 ```
@@ -163,26 +137,29 @@ NVMe
 磁盘文件
 
 ```
-C:\Users\sec\Documents\Virtual Machines\windows\windows.vmdk
+C:\Users\sec\Documents\Virtual Machines\HostName\HostName.vmdk
 ```
 
 编辑虚拟机设置
 
-虚拟化引擎
+处理器
 
 ```
+虚拟化引擎
 虚拟化 Intel VT-x/EPT 或 AMD-V/RVI
 ```
 
+CD/DVD
+
+```
 使用 ISO 映像文件
-
-```
-C:\Users\sec\Documents\Virtual Machines\iso\Win10_22H2_Chinese_Simplified_x64v1.iso
+C:\Users\sec\Documents\Virtual Machines\iso\Windows_10_21H2_Enterprise_TLSC_Chinese_Simplified_x64.iso
 ```
 
+显示
+
+```
 3D 图形
-
-```
 关闭加速 3D 图形
 ```
 
@@ -193,20 +170,15 @@ C:\Users\sec\Documents\Virtual Machines\iso\Win10_22H2_Chinese_Simplified_x64v1.
 ```
 
 ```
-在 Windows 客户机中 映射为网络驱动器
+在 Windows 客户机中映射为网络驱动器
 ```
 
 添加共享文件夹
 
+```
 主机路径
-
-```
 C:\Users\sec\share\VMware
-```
-
 名称
-
-```
 VMware
 ```
 
@@ -219,31 +191,17 @@ VMware
 
 拍摄快照并命名为 `配置` 
 
-开启此虚拟机进行安装
-
 ## 3 安装
 
 输入语言和其他首选项
 
 ```
-要安装的语言：中文（简体，中国）
-时间和货币格式：中文（简体，中国）
-键盘和输入方法：微软拼音
+要安装的语言: 中文(简体, 中国)
+时间和货币格式: 中文(简体, 中国)
+键盘和输入方法: 微软拼音
 ```
 
 现在安装
-
-激活 Windows
-
-```
-我没有产品密钥 
-```
-
-选择要安装的操作系统
-
-```
-Windows 10 专业版
-```
 
 适用的声明和许可条款
 
@@ -254,64 +212,52 @@ Windows 10 专业版
 你想执行哪种类型的安装
 
 ```
-自定义：仅安装 Windows
+自定义: 仅安装 Windows
 ```
 
-您想将 Windows 安装在哪里
+您想将 Windows 安装在哪里?
 
 ```
 驱动器 0 未分配的空间
 ```
 
-让我们先从区域设置开始。这样对吧？
+让我们先从区域设置开始。这样对吧?
 
 ```
 中国
 ```
 
-这种键盘布局是否合适？
+这种键盘布局是否合适?
 
 ```
 微软拼音
 ```
 
-是否要添加第二种键盘布局？
+是否要添加第二种键盘布局?
 
 ```
 添加布局
 ```
 
-你的第二个键盘布局想使用哪种语言？
+你的第二个键盘布局想使用哪种语言?
 
 ```
 英语(美国)
 ```
 
-你要使用哪个键盘布局？
+你要使用哪个键盘布局?
 
 ```
 美式键盘
 ```
 
-希望以何种方式进行设置？
+通过 Microsoft 登录
 
 ```
-针对个人使用进行设置
+改为域加入
 ```
 
-让我们添加你的账户
-
-```
-脱机账户
-```
-
-登录以尽情体验所有 Microsoft 应用和服务
-
-```
-有限的体验
-```
-
-谁将会使用这台电脑？
+谁将会使用这台电脑?
 
 ```
 sec
@@ -332,148 +278,80 @@ sec
 为此帐户创建安全问题
 
 ```
-你第一个宠物的名字是什么？
+你第一个宠物的名字是什么?
 123456
-你出生城市的名称是什么？
+你出生城市的名称是什么?
 123456
-你的母校名称是什么？
+你的母校名称是什么?
 123456
-```
-
-始终有权访问你最近的浏览数据
-
-```
-以后再说
 ```
 
 为你的设备选择隐私设置
 
 ```
-位置：否
-诊断数据：否
-量身定制的体验：否
-查找我的设备：否
-墨迹书写和键入：否
-广告 ID：否
-```
-
-让我们自定义你的体验
-
-```
-跳过
-```
-
-让 Cortana 帮助你完成操作
-
-```
-以后再说
+位置: 否
+诊断数据: 否
+量身定制的体验: 否
+查找我的设备: 否
+墨迹书写和键入: 否
+广告 ID: 否
 ```
 
 关机，快照命名为 `安装` 
 
 ## 4 初始化
 
-**虚拟机**
+配置推荐电源设置
 
-安装 VMware Tools
-
-![安装 VMware Tools](./../../../../../images/Windows/%E5%AE%89%E8%A3%85%20VMware%20Tools.png)
-
-**台式机**
-
-进入控制面板修改电源选项
-
-![进入控制面板修改电源选项](./../../../../../images/Windows/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%BF%AE%E6%94%B9%E7%94%B5%E6%BA%90%E9%80%89%E9%A1%B9.png)
-
-选择高性能模式
-
-![选择高性能模式](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E9%80%89%E6%8B%A9%E9%AB%98%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F.png)
-
-更改高性能模式计划设置
-
-![更改高性能模式计划设置](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E6%9B%B4%E6%94%B9%E9%AB%98%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F%E8%AE%A1%E5%88%92%E8%AE%BE%E7%BD%AE.png)
-
-选择电源按钮的功能
-
-![选择电源按钮的功能](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E9%80%89%E6%8B%A9%E7%94%B5%E6%BA%90%E6%8C%89%E9%92%AE%E7%9A%84%E5%8A%9F%E8%83%BD.png)
-
-定义电源按钮
-
-![定义电源按钮](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E5%AE%9A%E4%B9%89%E7%94%B5%E6%BA%90%E6%8C%89%E9%92%AE.png)
-
-**笔记本**
-
-进入控制面板修改电源选项
-
-![进入控制面板修改电源选项](./../../../../../images/Windows/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%BF%AE%E6%94%B9%E7%94%B5%E6%BA%90%E9%80%89%E9%A1%B9.png)
-
-进入控制面板选择平衡模式
-
-更改平衡模式计划设置
-
-选择电源按钮的功能
-
-定义电源按钮
-
-以管理员权限使用 powershell 运行以下命令禁用快速启动和休眠功能
-
-```powershell
-PS C:\Windows\system32> powercfg -h off
-```
-
-运行注册表，[关闭搜索框推荐](https://github.com/jadensalas469466/tools/blob/main/script/%E5%85%B3%E9%97%AD%E6%90%9C%E7%B4%A2%E6%A1%86%E6%8E%A8%E8%8D%90.reg)
-
-运行 msconfig ，在系统配置中关闭 GUI 引导
-
-![运行 msconfig ，在系统配置中关闭 GUI 引导](./../../../../../images/Windows/%E8%BF%90%E8%A1%8C%20msconfig%20%EF%BC%8C%E5%9C%A8%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%85%B3%E9%97%AD%20GUI%20%E5%BC%95%E5%AF%BC.png)
-
-运行 gpedit.msc，在本地组策略编辑器启用不显示锁屏
-
-![运行 gpedit.msc，在本地组策略编辑器启用不显示锁屏](./../../../../../images/Windows/%E8%BF%90%E8%A1%8C%20gpedit.msc%EF%BC%8C%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BB%84%E7%AD%96%E7%95%A5%E7%BC%96%E8%BE%91%E5%99%A8%E5%90%AF%E7%94%A8%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%81%E5%B1%8F.png)
-
-修改设备名称
-
-![修改设备名称](./../../../../../images/Windows/%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D%E7%A7%B0.png)
-
-设置为专用网络
-
-![设置为专用网络](./../../../../../images/Windows/%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%93%E7%94%A8%E7%BD%91%E7%BB%9C.png)
-
-分配静态 IP 和 DNS
+网络配置文件
 
 ```
-IP 地址 : [IP]
-首选 DNS : [server_IP]
-备用 DNS : 8.8.8.8
+专用
 ```
 
-修改 hosts 文件
+IP 设置
+
+```
+编辑 IP 设置: 手动
+IPv4: 开
+IP 地址: <host-ip>
+子网前缀长度: 24
+网关: 192.168.1.1
+首选 DNS: 8.8.8.8
+备用 DNS: 8.8.4.4
+IPv6: 关
+```
+
+在 `hosts` 文件添加域名映射
 
 ```shell
 C:\Windows\System32\drivers\etc\hosts
 ```
 
-在安全中心添加排除项
+替换 [`skus`](https://github.com/jadensalas469466/tools/blob/main/config/Windows_10_21H2_Enterprise_TLSC/skus.zip)
 
 ```
-C:\Users\sec\AppData\Local\Programs\Typora\winmm.dll
-C:\Users\sec\AppData\Local\Programs\Goby
-C:\Users\sec\AppData\Local\Programs\Yakit
-C:\Users\sec\AppData\Roaming\Typora\backups
-C:\Users\sec\AppData\Roaming\Typora\draftsRecover
-C:\Users\sec\Downloads
-C:\Users\sec\share
-D:\
+C:\Windows\System32\spp\tokens\skus
 ```
 
-使用 Geek 卸载不需要的应用
+以管理员权限运行 PowerShell
 
-使用 Office Tool Plus 安装 Office 和 Visio
-
-使用 MAS 激活 Windows、Office 和 Visio
+禁用快速启动和休眠功能
 
 ```powershell
-PS C:\Users\sec> irm https://get.activated.win | iex
+PS C:\Windows\system32> powercfg -h off
+```
+
+ 重新加载许可证缓存
+
+```powershell
+PS C:\Windows\system32> slmgr.vbs /rilc
+```
+
+使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) 激活
+
+```powershell
+PS C:\Windows\system32> irm https://get.activated.win | iex
 ```
 
 | 激活类型   | 支持的产品           | 激活期限                 |
@@ -483,9 +361,15 @@ PS C:\Users\sec> irm https://get.activated.win | iex
 | KMS38      | Windows 10-11-Server | 到 2038 年               |
 | Online KMS | Windows / Office     | 180 天。终身，有续费任务 |
 
-更新驱动、系统、Edge
+运行 `gpedit.msc` , 启用不显示锁屏
 
-设置 Windows、Edge、Office、Visio
+```
+计算机配置 > 管理模板 > 控制面板 > 个性化 > 不显示锁屏 > 已启用
+```
+
+更新驱动, 系统, Edge
+
+设置 Windows, Edge
 
 使用 Dism++ 修改系统设置
 
@@ -495,28 +379,14 @@ PS C:\Users\sec> irm https://get.activated.win | iex
 
 关机，快照命名为 `初始化` 
 
-物理机创建文件，配置 SMB 文件共享
-
-```
-C:\Users\sec
-├─Documents
-│	├─KeePass
-│	└─VeraCrypt
-│		└─iso
-├─Pictures
-|	└─截图
-└─share
-|	├─github
-|	└─VMware
-└─tools
-```
-
-> ```
-> 截图快捷方式路径：
-> C:\Users\sec\AppData\Local\Packages\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TempState\ScreenClip
-> ```
-
 ## 5 部署
+
+| [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/) |
+| :----------------------------------------------------------: |
+|  [Word](https://www.microsoft.com/en-us/microsoft-365/word)  |
+| [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) |
+| [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/PowerPoint) |
+| [Visio](https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software) |
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |
