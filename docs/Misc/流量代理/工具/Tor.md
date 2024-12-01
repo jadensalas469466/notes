@@ -20,6 +20,20 @@
 
 > 默认端口 127.0.0.1:9050
 
+## 3 配置
+
+修改为每分钟切换一次代理链
+
+```shell
+┌──(root㉿kali)-[~]
+└─# vim /etc/tor/torrc
+```
+
+```
+MaxCircuitDirtiness 60
+NewCircuitPeriod 60
+```
+
 ---
 
 参考链接
