@@ -377,35 +377,35 @@ sec
 
 安装 VMware Tools
 
-![安装 VMware Tools](./../../../../../../images/Windows%2010/%E5%AE%89%E8%A3%85%20VMware%20Tools.png)
+![安装 VMware Tools](./../../../../../images/Windows/%E5%AE%89%E8%A3%85%20VMware%20Tools.png)
 
 **台式机**
 
 进入控制面板修改电源选项
 
-![进入控制面板修改电源选项](./../../../../../../images/Windows%2010/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%BF%AE%E6%94%B9%E7%94%B5%E6%BA%90%E9%80%89%E9%A1%B9.png)
+![进入控制面板修改电源选项](./../../../../../images/Windows/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%BF%AE%E6%94%B9%E7%94%B5%E6%BA%90%E9%80%89%E9%A1%B9.png)
 
 选择高性能模式
 
-![选择高性能模式](./../../../../../../images/Windows%2010/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E9%80%89%E6%8B%A9%E9%AB%98%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F.png)
+![选择高性能模式](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E9%80%89%E6%8B%A9%E9%AB%98%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F.png)
 
 更改高性能模式计划设置
 
-![更改高性能模式计划设置](./../../../../../../images/Windows%2010/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E6%9B%B4%E6%94%B9%E9%AB%98%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F%E8%AE%A1%E5%88%92%E8%AE%BE%E7%BD%AE.png)
+![更改高性能模式计划设置](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E6%9B%B4%E6%94%B9%E9%AB%98%E6%80%A7%E8%83%BD%E6%A8%A1%E5%BC%8F%E8%AE%A1%E5%88%92%E8%AE%BE%E7%BD%AE.png)
 
 选择电源按钮的功能
 
-![选择电源按钮的功能](./../../../../../../images/Windows%2010/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E9%80%89%E6%8B%A9%E7%94%B5%E6%BA%90%E6%8C%89%E9%92%AE%E7%9A%84%E5%8A%9F%E8%83%BD.png)
+![选择电源按钮的功能](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E9%80%89%E6%8B%A9%E7%94%B5%E6%BA%90%E6%8C%89%E9%92%AE%E7%9A%84%E5%8A%9F%E8%83%BD.png)
 
 定义电源按钮
 
-![定义电源按钮](./../../../../../../images/Windows%2010/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E5%AE%9A%E4%B9%89%E7%94%B5%E6%BA%90%E6%8C%89%E9%92%AE.png)
+![定义电源按钮](./../../../../../images/Windows/%E5%88%9D%E5%A7%8B%E5%8C%96/%E5%8F%B0%E5%BC%8F%E6%9C%BA/%E5%AE%9A%E4%B9%89%E7%94%B5%E6%BA%90%E6%8C%89%E9%92%AE.png)
 
 **笔记本**
 
 进入控制面板修改电源选项
 
-![进入控制面板修改电源选项](./../../../../../../images/Windows%2010/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%BF%AE%E6%94%B9%E7%94%B5%E6%BA%90%E9%80%89%E9%A1%B9.png)
+![进入控制面板修改电源选项](./../../../../../images/Windows/%E8%BF%9B%E5%85%A5%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%BF%AE%E6%94%B9%E7%94%B5%E6%BA%90%E9%80%89%E9%A1%B9.png)
 
 进入控制面板选择平衡模式
 
@@ -425,19 +425,19 @@ PS C:\Windows\system32> powercfg -h off
 
 运行 msconfig ，在系统配置中关闭 GUI 引导
 
-![运行 msconfig ，在系统配置中关闭 GUI 引导](./../../../../../../images/Windows%2010/%E8%BF%90%E8%A1%8C%20msconfig%20%EF%BC%8C%E5%9C%A8%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%85%B3%E9%97%AD%20GUI%20%E5%BC%95%E5%AF%BC.png)
+![运行 msconfig ，在系统配置中关闭 GUI 引导](./../../../../../images/Windows/%E8%BF%90%E8%A1%8C%20msconfig%20%EF%BC%8C%E5%9C%A8%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%85%B3%E9%97%AD%20GUI%20%E5%BC%95%E5%AF%BC.png)
 
 运行 gpedit.msc，在本地组策略编辑器启用不显示锁屏
 
-![运行 gpedit.msc，在本地组策略编辑器启用不显示锁屏](./../../../../../../images/Windows%2010/%E8%BF%90%E8%A1%8C%20gpedit.msc%EF%BC%8C%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BB%84%E7%AD%96%E7%95%A5%E7%BC%96%E8%BE%91%E5%99%A8%E5%90%AF%E7%94%A8%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%81%E5%B1%8F.png)
+![运行 gpedit.msc，在本地组策略编辑器启用不显示锁屏](./../../../../../images/Windows/%E8%BF%90%E8%A1%8C%20gpedit.msc%EF%BC%8C%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%BB%84%E7%AD%96%E7%95%A5%E7%BC%96%E8%BE%91%E5%99%A8%E5%90%AF%E7%94%A8%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%81%E5%B1%8F.png)
 
 修改设备名称
 
-![修改设备名称](./../../../../../../images/Windows%2010/%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D%E7%A7%B0.png)
+![修改设备名称](./../../../../../images/Windows/%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D%E7%A7%B0.png)
 
 设置为专用网络
 
-![设置为专用网络](./../../../../../../images/Windows%2010/%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%93%E7%94%A8%E7%BD%91%E7%BB%9C.png)
+![设置为专用网络](./../../../../../images/Windows/%E8%AE%BE%E7%BD%AE%E4%B8%BA%E4%B8%93%E7%94%A8%E7%BD%91%E7%BB%9C.png)
 
 分配静态 IP 和 DNS
 
@@ -760,7 +760,7 @@ The command completed successfully.
 
 ### 6.7 文件权限
 
-![文件权限](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
+![文件权限](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
 
 ### 6.8 查看进程
 
@@ -778,7 +778,7 @@ C:\Users\Administrator> wmic os get osarchitecture
 
 添加环境变量
 
-![添加环境变量](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
+![添加环境变量](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 > 添加多个变量时使用 `;` 间隔
 >
@@ -795,7 +795,7 @@ PS C:\Users\sec> dir C:\Windows\Temp
 
 ### 6.12 添加快捷访问
 
-![添加快捷访问](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
+![添加快捷访问](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
 
 ### 6.13 查看网络
 
@@ -849,7 +849,7 @@ PS C:\Users\sec> wslconfig /l
 
 关闭虚拟机平台
 
-![关闭虚拟机平台](./../../../../../../images/Windows%2010/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
+![关闭虚拟机平台](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
 
 ### 6.17 删除
 
