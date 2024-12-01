@@ -67,7 +67,7 @@ Debian 12.x 64 位
 虚拟机名称
 
 ```
-debian
+<host-name>
 ```
 
 位置
@@ -121,7 +121,7 @@ SCSI
 最大磁盘大小
 
 ```
-128.0 GB
+64.0 GB
 ```
 
 ```
@@ -131,7 +131,7 @@ SCSI
 磁盘文件
 
 ```
-C:\Users\sec\Documents\Virtual Machines\debian\debian.vmdk
+C:\Users\sec\Documents\Virtual Machines\HostName\HostName.vmdk
 ```
 
 自定义硬件
@@ -173,7 +173,7 @@ Select your location
 
 ```
 Country, territory or area:
-New Zealand
+United States
 ```
 
 Configure the keyboard
@@ -187,7 +187,7 @@ Configure the network
 
 ```
 Hostname:
-debian
+<host-name>
 ```
 
 ```
@@ -230,14 +230,14 @@ Configure the clock
 
 ```
 Select a location in your time zone:
-Auckland
+Eastern
 ```
 
 Partition disks
 
 ```
 Partitioning method:
-Guided - use entire disk and set up LVM
+Guided - use entire disk
 ```
 
 ```
@@ -251,13 +251,8 @@ All files in one partition
 ```
 
 ```
-Write the changes to disks and configure LVM?
-<Yes>
-```
-
-```
-Amount of volume group to use for guided partitioning:
-Default
+Select a partitions to modify its settings
+Finish partitioning and write changes to disk
 ```
 
 ```
@@ -318,6 +313,12 @@ debian login: root
 Password: 123456
 ```
 
+查看 IP
+
+```shell
+root@debian:~# ip a
+```
+
 关机，拍摄快照并命名为 `安装` 
 
 ```shell
@@ -326,7 +327,17 @@ root@debian:~# init 0
 
 ## 4 初始化
 
-启动虚拟机，使用 `root` 用户登录
+启动虚拟机，使用 SSH 登录 `sec` 用户
+
+```powershell
+PS C:\Users\sec> ssh sec@<os-ip>
+```
+
+切换到 `root` 用户
+
+```shell
+sec@debian:~$ su - root
+```
 
 安装基础工具
 
@@ -351,19 +362,7 @@ root@debian:~# vim /etc/ssh/sshd_config
 重启 SSH
 
 ```shell
-root@debian:~# systemctl enable --now ssh.service && systemctl restart ssh.service
-```
-
-查看 IP
-
-```shell
-root@debian:~# ip a
-```
-
-在 Powershell 远程登录 `root` 
-
-```powershell
-PS C:\Users\sec> ssh root@[ip]
+root@debian:~# systemctl restart ssh.service
 ```
 
 **修改软件源**
@@ -410,20 +409,6 @@ root@debian:~# apt update
 
 **配置网络**
 
-查看网络接口
-
-```shell
-root@debian:~# ip link
-```
-
-```
-1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP mode DEFAULT group default qlen 1000
-    link/ether 00:0c:29:3e:6a:ac brd ff:ff:ff:ff:ff:ff
-    altname enp2s1
-```
-
 配置网络接口参数
 
 ```shell
@@ -434,25 +419,14 @@ root@debian:~# vim /etc/network/interfaces
 10  # The primary network interface
 11  allow-hotplug ens33
 12  # iface ens33 inet dhcp
-13  auto ens33
-14  iface ens33 inet static
-15          address <os-ip>
-16          netmask 255.255.255.0
-17          broadcast 192.168.1.255
-18          gateway 192.168.1.1
+auto ens33
+iface ens33 inet static
+    address <os-ip>
+    netmask 255.255.255.0
+    gateway 192.168.1.1
+    dns-nameservers 8.8.8.8 8.8.4.4
 19  # This is an autoconfigured IPv6 interface
 20  # iface ens33 inet6 auto
-```
-
-修改 DNS 服务器
-
-```shell
-root@debian:~# vim /etc/resolv.conf
-```
-
-```
-nameserver 8.8.8.8
-nameserver 1.1.1.1
 ```
 
 在 `hosts` 文件添加域名映射
@@ -470,19 +444,19 @@ root@debian:~# reboot
 在 Powershell 中删除 SSH 连接缓存
 
 ```powershell
-PS C:\Users\sec> ssh-keygen -R [ip]
+PS C:\Users\sec> ssh-keygen -R <os-ip>
 ```
 
-远程重新登录 `root` 
+启动虚拟机，使用 SSH 登录 `root` 用户
 
 ```powershell
-PS C:\Users\sec> ssh root@debian.local
+PS C:\Users\sec> ssh root@example
 ```
 
-更新缓存并测试网络
+测试网络
 
 ```shell
-root@debian:~# service networking restart && ping g.cn -c 3
+root@debian:~# ping g.cn -c 3
 ```
 
 **创建目录**
@@ -642,6 +616,17 @@ dpkg -l | grep ssh
 ```shell
 ┌──(root㉿purple)-[~]
 └─# source ~/.zshrc
+```
+
+### 6.4 全局修改 DNS 服务器
+
+```shell
+root@debian:~# vim /etc/resolv.conf
+```
+
+```
+nameserver 8.8.8.8
+nameserver 8.8.4.4
 ```
 
 ---
