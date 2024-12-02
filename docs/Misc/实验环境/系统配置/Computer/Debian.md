@@ -2,7 +2,7 @@
 
 ## 1 准备
 
-debian-amd64-DVD-1.iso
+debian-12.8.0-amd64-DVD-1.iso
 
 ```
 https://www.debian.org/distrib/
@@ -147,7 +147,7 @@ CD/DVD
 
 ```
 使用 ISO 映像文件
-C:\Users\sec\Documents\Virtual Machines\iso\debian-amd64-DVD-1.iso
+C:\Users\sec\Documents\Virtual Machines\iso\debian-12.8.0-amd64-DVD-1.iso
 ```
 
 拍摄快照并命名为 `配置` 

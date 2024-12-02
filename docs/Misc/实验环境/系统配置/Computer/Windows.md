@@ -2,7 +2,7 @@
 
 ## 1 准备
 
-Windows_10_21H2_Enterprise_TLSC_Chinese_Simplified_x64.iso
+zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
 
 ```
 https://www.microsoft.com/zh-cn/evalcenter/download-windows-10-enterprise
@@ -153,7 +153,7 @@ CD/DVD
 
 ```
 使用 ISO 映像文件
-C:\Users\sec\Documents\Virtual Machines\iso\Windows_10_21H2_Enterprise_TLSC_Chinese_Simplified_x64.iso
+C:\Users\sec\Documents\Virtual Machines\iso\zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
 ```
 
 显示
@@ -301,7 +301,21 @@ sec
 
 ## 4 初始化
 
-配置推荐电源设置
+[配置电源选项](https://keithpeck177271.gitbook.io/notes/misc/wen-ti-ji-jin/issues-of-windows#id-2-tui-jian-dian-yuan-she-zhi)
+
+以管理员权限运行 PowerShell
+
+使用 [Microsoft Activation Scripts (MAS)](https://massgrave.dev/) 激活
+
+```powershell
+PS C:\Windows\system32> irm https://get.activated.win | iex
+```
+
+以管理员权限运行 PowerShell, 禁用快速启动和休眠功能
+
+```powershell
+PS C:\Windows\system32> powercfg -h off
+```
 
 网络配置文件
 
@@ -328,48 +342,13 @@ IPv6: 关
 C:\Windows\System32\drivers\etc\hosts
 ```
 
-替换 [`skus`](https://github.com/jadensalas469466/tools/blob/main/config/Windows_10_21H2_Enterprise_TLSC/skus.zip)
-
-```
-C:\Windows\System32\spp\tokens\skus
-```
-
-以管理员权限运行 PowerShell
-
-禁用快速启动和休眠功能
-
-```powershell
-PS C:\Windows\system32> powercfg -h off
-```
-
- 重新加载许可证缓存
-
-```powershell
-PS C:\Windows\system32> slmgr.vbs /rilc
-```
-
-使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) 激活
-
-```powershell
-PS C:\Windows\system32> irm https://get.activated.win | iex
-```
-
-| 激活类型   | 支持的产品           | 激活期限                 |
-| :--------- | :------------------- | :----------------------- |
-| HWID       | Windows 10-11        | 永久                     |
-| Ohook      | Office               | 永久                     |
-| KMS38      | Windows 10-11-Server | 到 2038 年               |
-| Online KMS | Windows / Office     | 180 天。终身，有续费任务 |
-
 运行 `gpedit.msc` , 启用不显示锁屏
 
 ```
 计算机配置 > 管理模板 > 控制面板 > 个性化 > 不显示锁屏 > 已启用
 ```
 
-更新驱动, 系统, Edge
-
-设置 Windows, Edge
+更新并设置 Windows, Edge
 
 使用 Dism++ 修改系统设置
 
@@ -377,16 +356,11 @@ PS C:\Windows\system32> irm https://get.activated.win | iex
 
 设置主题色为: `#44475A` 
 
+使用 [Office Tool Plus](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/ban-gong-ruan-jian/wen-ben-wen-dang/wen-dang-bian-ji/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio.
+
 关机，快照命名为 `初始化` 
 
 ## 5 部署
-
-| [Microsoft 365](https://www.microsoft.com/en-us/microsoft-365/) |
-| :----------------------------------------------------------: |
-|  [Word](https://www.microsoft.com/en-us/microsoft-365/word)  |
-| [Excel](https://www.microsoft.com/en-us/microsoft-365/excel) |
-| [PowerPoint](https://www.microsoft.com/en-us/microsoft-365/PowerPoint) |
-| [Visio](https://www.microsoft.com/en-us/microsoft-365/visio/flowchart-software) |
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |
@@ -395,8 +369,6 @@ PS C:\Windows\system32> irm https://get.activated.win | iex
 | [OpenSSH](https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell) |
 |           [phpStudy](https://www.xp.cn/php-study)            |
 |          [phpStudyPro](https://www.xp.cn/php-study)          |
-
-关机，快照命名为 `部署` 
 
 |                            笔记本                            |
 | :----------------------------------------------------------: |

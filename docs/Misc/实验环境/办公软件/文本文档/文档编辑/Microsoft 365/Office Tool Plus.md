@@ -35,18 +35,11 @@ Visio LTSC 专业版 2024 -批量许可证
 
 ## 2 激活
 
-### 2.1 使用 [Microsoft-Activation-Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts) 激活
+### 2.1 使用 [Microsoft Activation Scripts (MAS)](https://massgrave.dev/) 激活
 
 ```powershell
 PS C:\Windows\system32> irm https://get.activated.win | iex
 ```
-
-| 激活类型   | 支持的产品           | 激活期限                 |
-| :--------- | :------------------- | :----------------------- |
-| HWID       | Windows 10-11        | 永久                     |
-| Ohook      | Office               | 永久                     |
-| KMS38      | Windows 10-11-Server | 到 2038 年               |
-| Online KMS | Windows / Office     | 180 天。终身，有续费任务 |
 
 ### 2.2 使用 Office Tool Plus 激活
 
