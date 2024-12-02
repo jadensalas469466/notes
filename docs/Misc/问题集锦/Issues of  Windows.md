@@ -4,15 +4,15 @@
 
 打开一个程序会显示乱码
 
-![打开一个程序会显示乱码](./../../../images/Windows%20%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%89%93%E5%BC%80%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E4%BC%9A%E6%98%BE%E7%A4%BA%E4%B9%B1%E7%A0%81.png)
+![打开一个程序会显示乱码](./../../../images/Issues%20of%20%20Windows/%E6%89%93%E5%BC%80%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E4%BC%9A%E6%98%BE%E7%A4%BA%E4%B9%B1%E7%A0%81.png)
 
 在控制面板中将 `系统区域` 设置为 `中文(简体, 中国)` 即可
 
-![在控制面板中将 `系统区域` 设置为 `中文(简体, 中国)` 即可](./../../../images/Windows%20%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%9C%A8%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%B8%AD%E5%B0%86%20%60%E7%B3%BB%E7%BB%9F%E5%8C%BA%E5%9F%9F%60%20%E8%AE%BE%E7%BD%AE%E4%B8%BA%20%60%E4%B8%AD%E6%96%87(%E7%AE%80%E4%BD%93,%20%E4%B8%AD%E5%9B%BD)%60%20%E5%8D%B3%E5%8F%AF.png)
+![在控制面板中将 `系统区域` 设置为 `中文(简体, 中国)` 即可](./../../../images/Issues%20of%20%20Windows/%E5%9C%A8%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF%E4%B8%AD%E5%B0%86%20%60%E7%B3%BB%E7%BB%9F%E5%8C%BA%E5%9F%9F%60%20%E8%AE%BE%E7%BD%AE%E4%B8%BA%20%60%E4%B8%AD%E6%96%87(%E7%AE%80%E4%BD%93,%20%E4%B8%AD%E5%9B%BD)%60%20%E5%8D%B3%E5%8F%AF.png)
 
 再次打开程序显示正常
 
-![再次打开程序显示正常](./../../../images/Windows%20%E7%9A%84%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%86%8D%E6%AC%A1%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F%E6%98%BE%E7%A4%BA%E6%AD%A3%E5%B8%B8.png)
+![再次打开程序显示正常](./../../../images/Issues%20of%20%20Windows/%E5%86%8D%E6%AC%A1%E6%89%93%E5%BC%80%E7%A8%8B%E5%BA%8F%E6%98%BE%E7%A4%BA%E6%AD%A3%E5%B8%B8.png)
 
 ## 2 推荐电源设置
 

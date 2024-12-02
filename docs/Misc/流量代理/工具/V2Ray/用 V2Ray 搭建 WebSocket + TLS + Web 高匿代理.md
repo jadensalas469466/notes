@@ -1,4 +1,4 @@
-![搭建高匿代理](./../../../../../images/%E6%90%AD%E5%BB%BA%20WebSocket%20+%20TLS%20+%20Web%20%E9%AB%98%E5%8C%BF%E4%BB%A3%E7%90%86/%E6%90%AD%E5%BB%BA%E9%AB%98%E5%8C%BF%E4%BB%A3%E7%90%86.svg)
+![搭建高匿代理](./../../../../../images/%E7%94%A8%20V2Ray%20%E6%90%AD%E5%BB%BA%20WebSocket%20+%20TLS%20+%20Web%20%E9%AB%98%E5%8C%BF%E4%BB%A3%E7%90%86/%E6%90%AD%E5%BB%BA%E9%AB%98%E5%8C%BF%E4%BB%A3%E7%90%86.svg)
 
 1. 使用 TLS 加密 Websocket 流量，使其看起来像是普通的 HTTPS 流量。
 2. 将 Web 服务器伪装为电脑请求的目标网站。

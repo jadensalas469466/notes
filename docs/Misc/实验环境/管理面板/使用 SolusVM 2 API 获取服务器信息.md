@@ -18,7 +18,7 @@ root@server:~# systemctl enable --now caddy.service && systemctl enable --now ph
 
 获取 API 和 URL
 
-![获取 API 和 URL](./../../../../images/%E4%BD%BF%E7%94%A8%20SolusVM%202%20API%20%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81/%E8%8E%B7%E5%8F%96%20API%20%E5%92%8C%20URL.png)
+![获取 API 和 URL](./../../../../images/%E4%BD%BF%E7%94%A8%20SolusVM%202%20API%20%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF/%E8%8E%B7%E5%8F%96%20API%20%E5%92%8C%20URL.png)
 
 配置 API
 
@@ -54,7 +54,7 @@ root@server:~# wget https://raw.githubusercontent.com/jadensalas469466/tools/ref
 
 访问主页即可查看服务器状态
 
-![访问主页即可查看服务器状态](./../../../../images/%E4%BD%BF%E7%94%A8%20SolusVM%202%20API%20%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81/%E8%AE%BF%E9%97%AE%E4%B8%BB%E9%A1%B5%E5%8D%B3%E5%8F%AF%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81.png)
+![访问主页即可查看服务器状态](./../../../../images/%E4%BD%BF%E7%94%A8%20SolusVM%202%20API%20%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF/%E8%AE%BF%E9%97%AE%E4%B8%BB%E9%A1%B5%E5%8D%B3%E5%8F%AF%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%8A%B6%E6%80%81.png)
 
 ---
 

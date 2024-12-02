@@ -112,7 +112,7 @@ echo date('Y-m-d H:i:s');
 
 按 F12 查看 Cookie 信息
 
-![](/img/PHP/按 F12 查看 Cookie 信息.png)
+![按 F12 查看 Cookie 信息](./../../../../../../images/PHP/%E6%8C%89%20F12%20%E6%9F%A5%E7%9C%8B%20Cookie%20%E4%BF%A1%E6%81%AF.png)
 
 > 从图中可以看到 domain 没有设置默认为 当前站点域名，path 默认为 / ，也就是这个 Cookie 在整个站点内是有效的，第一个 cookie 没有设置过期时间 expire，默认为 Session ，说明当浏览器关掉后，会失效。第二个 cookie 过期时间为访问页面时开始 1 个小时候失效。
 
@@ -146,11 +146,11 @@ echo $_COOKIE['hello'];
 
 可看到有两个值
 
-![](/img/PHP/可看到有两个值.png)
+![可看到有两个值](./../../../../../../images/PHP/%E5%8F%AF%E7%9C%8B%E5%88%B0%E6%9C%89%E4%B8%A4%E4%B8%AA%E5%80%BC.png)
 
 关闭浏览器，重新访问
 
-![](/img/PHP/关闭浏览器，重新访问.png)
+![关闭浏览器，重新访问](./../../../../../../images/PHP/%E5%85%B3%E9%97%AD%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%8C%E9%87%8D%E6%96%B0%E8%AE%BF%E9%97%AE.png)
 
 > 可以看到只有一个值
 > 
@@ -182,7 +182,7 @@ setcookie('hello',null,time()-1);
 > 
 > http://192.168.6.76/cookie2.php
 
-![](/img/PHP/浏览器先后访问两个文件.png)
+![浏览器先后访问两个文件](./../../../../../../images/PHP/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%88%E5%90%8E%E8%AE%BF%E9%97%AE%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6.png)
 
 > 可以看到两个值都在
 
@@ -192,7 +192,7 @@ setcookie('hello',null,time()-1);
 
 刷新 `cookie2.php`
 
-![](/img/PHP/刷新 cookie2.php.png)
+![刷新 cookie2.php](./../../../../../../images/PHP/%E5%88%B7%E6%96%B0%20cookie2.php.png)
 
 > 发现 `666` 已被删除
 
@@ -206,11 +206,11 @@ setcookie('hello',null,time()-1);
 
 按 F12 选择删除即可
 
-![](/img/PHP/按 F12 选择删除即可.png)
+![按 F12 选择删除即可](./../../../../../../images/PHP/%E6%8C%89%20F12%20%E9%80%89%E6%8B%A9%E5%88%A0%E9%99%A4%E5%8D%B3%E5%8F%AF.png)
 
 再次刷新 `cookie2.php`
 
-![](/img/PHP/再次刷新 cookie2.php.png)
+![再次刷新 cookie2.php](./../../../../../../images/PHP/%E5%86%8D%E6%AC%A1%E5%88%B7%E6%96%B0%20cookie2.php.png)
 
 > 发现已经删除。
 
