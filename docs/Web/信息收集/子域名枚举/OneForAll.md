@@ -2,8 +2,6 @@ OneForAll是一款功能强大的子域收集工具。
 
 ## 1 部署
 
-配置 Python 虚拟环境 [virtualenv](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/bian-cheng-yu-yan/jiao-ben/python/virtualenv)
-
 克隆项目
 
 ```shell
@@ -13,31 +11,25 @@ root@debian:~# git clone https://github.com/shmilylty/OneForAll.git /root/tools/
 创建虚拟环境
 
 ```shell
-root@debian:~# virtualenv /root/tools/oneforall/venv
-```
-
-激活虚拟环境
-
-```shell
-root@debian:~# source /root/tools/oneforall/venv/bin/activate
-```
-
-升级 Python 工具包
-
-```shell
-(venv) root@debian:~# python3 -m pip install -U pip setuptools wheel
+root@debian:~# cd /root/tools/oneforall && python3 -m venv ./venv && source ./venv/bin/activate
 ```
 
 安装依赖
 
 ```shell
-(venv) root@debian:~# pip3 install -r /root/tools/oneforall/requirements.txt
+(venv) root@debian:~# python3 -m pip install -r ./requirements.txt
 ```
 
 查看帮助
 
 ```shell
-(venv) root@debian:~# python3 /root/tools/oneforall/oneforall.py --help
+(venv) root@debian:~# python3 ./oneforall.py --help
+```
+
+退出虚拟环境
+
+```shell
+(venv) root@debian:~# deactivate && cd
 ```
 
 ## 2 初始化
@@ -81,13 +73,13 @@ root@debian:~# oneforall --help
 枚举单个目标的子域名
 
 ```shell
-root@debian:~# oneforall --target [host] run
+root@debian:~# oneforall --target example.com run
 ```
 
 枚举文件中所有目标的子域名
 
 ```shell
-root@debian:~# oneforall --target [file].txt run
+root@debian:~# oneforall --target FileName.txt run
 ```
 
 查看结果
@@ -99,6 +91,6 @@ root@debian:~# ls /root/tools/oneforall/results/
 下载结果到本地查看
 
 ```powershell
-PS C:\Users\sec> scp -r root@debian.attack:/root/tools/oneforall/results/ C:\Users\sec\Downloads\
+PS C:\Users\sec> scp -r root@debian:/root/tools/oneforall/results/ C:\Users\sec\Downloads\
 ```
 

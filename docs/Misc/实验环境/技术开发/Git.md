@@ -67,7 +67,7 @@ root@debian:~# apt install -y git
 配置代理
 
 ```shell
-root@debian:~# git config --global http.proxy "socks://192.168.1.201:10808"
+root@debian:~# git config --global http.proxy "http://192.168.1.201:10809"
 ```
 
 ### 2.2 Windows
@@ -75,7 +75,7 @@ root@debian:~# git config --global http.proxy "socks://192.168.1.201:10808"
 配置代理
 
 ```powershell
-PS C:\Users\sec> git config --global http.proxy "socks://127.0.0.1:10808"
+PS C:\Users\sec> git config --global http.proxy "http://127.0.0.1:10809"
 ```
 
 配置使用 Windows SSH 客户端
@@ -159,7 +159,7 @@ PS C:\Users\sec> git config --global --list
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# git config --global http.proxy socks5://127.0.0.1:10808
+└─# git config --global http.proxy "http://127.0.0.1:10809"
 ```
 
 移除代理

@@ -1,28 +1,20 @@
-Python 的包管理工具。
-
-在安装了多个版本 Python 的复杂环境下要指定 Python 解析器使用，如:  `python3.7 -m pip` 。
+Python 的包管理工具.
 
 ## 1 部署
 
 安装
 
 ```shell
-root@debian:~# apt install -y pip
+root@debian:~# apt install -y python3-pip
 ```
 
 ## 2 初始化
 
-更新
-
-```shell
-root@debian:~# python -m pip install -i https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple pip -U
-```
-
-配置源
+配置代理
 
 
 ```shell
-root@debian:~# python -m pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10809"
 ```
 
 ## 3 使用
@@ -30,7 +22,7 @@ root@debian:~# python -m pip config set global.index-url https://mirrors.tuna.ts
 运行 `pip` 命令
 
 ```shell
-root@debian:~# python -m pip <pip-arguments>
+root@debian:~# python3 -m pip <pip-arguments>
 ```
 
 ### 3.1 Packages
@@ -38,21 +30,21 @@ root@debian:~# python -m pip <pip-arguments>
 列出所有 Packages
 
 ```shell
-root@debian:~# python -m pipx list
+root@debian:~# python3 -m pipx list
 ```
 
 安装 Packages
 
 ```shell
-root@debian:~# python -m pip install SomePackage          # 最新版本
-root@debian:~# python -m pip install SomePackage==1.0.4   # 指定版本
-root@debian:~# python -m pip install 'SomePackage>=1.0.4' # 最低版本
+root@debian:~# python3 -m pip install SomePackage          # 最新版本
+root@debian:~# python3 -m pip install SomePackage==1.0.4   # 指定版本
+root@debian:~# python3 -m pip install 'SomePackage>=1.0.4' # 最低版本
 ```
 
 卸载 Packages
 
 ```shell
-root@debian:~# python -m pip uninstall SomePackage
+root@debian:~# python3 -m pip uninstall SomePackage
 ```
 
 ### 3.2 Requirements Files
@@ -60,19 +52,19 @@ root@debian:~# python -m pip uninstall SomePackage
 将所有 Packages 导出到 Requirements Files
 
 ```shell
-root@debian:~# python -m pip freeze > requirements.txt
+root@debian:~# python3 -m pip freeze > requirements.txt
 ```
 
 从 Requirements Files 中安装
 
 ```shell
-root@debian:~# python -m pip install -r requirements.txt
+root@debian:~# python3 -m pip install -r requirements.txt
 ```
 
 从 Requirements Files 中卸载
 
 ```shell
-root@debian:~# python -m pip uninstall -r requirements.txt --yes
+root@debian:~# python3 -m pip uninstall -r requirements.txt --yes
 ```
 
 ### 3.3 Config
@@ -80,31 +72,31 @@ root@debian:~# python -m pip uninstall -r requirements.txt --yes
 列出所有配置
 
 ```shell
-root@debian:~# python -m pip config list
+root@debian:~# python3 -m pip config list
 ```
 
 配置源
 
 ```shell
-root@debian:~# python -m pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+root@debian:~# python3 -m pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
 ```
 
 删除源
 
 ```shell
-root@debian:~# python -m pip config unset global.index-url
+root@debian:~# python3 -m pip config unset global.index-url
 ```
 
 配置代理
 
 ```shell
-root@debian:~# python -m pip config set global.proxy "socks5://127.0.0.1:10808"
+root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10809"
 ```
 
 删除代理
 
 ```shell
-root@debian:~# python -m pip config unset global.proxy "socks5://127.0.0.1:10808"
+root@debian:~# python3 -m pip config unset global.proxy
 ```
 
 ---

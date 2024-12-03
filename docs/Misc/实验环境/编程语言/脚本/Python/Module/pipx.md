@@ -1,8 +1,4 @@
-依赖于 python-pip 和 python-venv ，在安装 Packages 时将自动创建 Python 虚拟环境，推荐在简单的运行环境下使用。
-
-用于安装单独的 Packages ，无法像 python-pip 一样直接从 Requirements Files 中批量安装。
-
-在安装了多个版本 Python 的复杂环境下要指定 Python 解析器使用:  `python3.7 -m pipx` 。
+依赖于 python-pip 和 python-venv, 在独立安装时将自动为每个 Packages 创建单独的虚拟环境.
 
 ## 1 部署
 

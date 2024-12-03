@@ -453,6 +453,26 @@ PS C:\Users\sec> ssh root@example
 root@debian:~# ping g.cn -c 3
 ```
 
+为 `ls` 配置着色
+
+```shell
+root@debian:~# vim ~/.bashrc
+```
+
+```
+ 9   export LS_OPTIONS='--color=auto'
+10   eval "$(dircolors)"
+11   alias ls='ls $LS_OPTIONS'
+12   alias ll='ls $LS_OPTIONS -l'
+13   alias l='ls $LS_OPTIONS -lA'
+```
+
+重新加载配置文件
+
+```shell
+root@debian:~# source ~/.bashrc
+```
+
 创建目录
 
 ```shell
@@ -467,10 +487,14 @@ root@debian:~# init 0
 
 ## 5 部署
 
-|                  attack                   |
-| :---------------------------------------: |
-|     [Docker](https://www.docker.com/)     |
-| [ARL](https://github.com/Aabyss-Team/ARL) |
+|                           attack                           |
+| :--------------------------------------------------------: |
+| [Proxychains-NG](https://github.com/rofl0r/proxychains-ng) |
+|             [Git](https://github.com/git/git)              |
+|             [Docker](https://www.docker.com/)              |
+|             [Python](https://www.python.org/)              |
+|         [ARL](https://github.com/Aabyss-Team/ARL)          |
+|      [ShuiZe](https://github.com/0x727/ShuiZe_0x727)       |
 
 |                           defend                            |
 | :---------------------------------------------------------: |

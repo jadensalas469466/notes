@@ -1,15 +1,22 @@
-一种学习曲线平滑的编程语言。
+一种学习曲线平滑的编程语言.
 
-当在 Windows 中单独安装 Python 3 使用 `python` 作为命令即可。
+当在 Windows 中单独安装 Python 3 使用 `python` 作为命令即可.
 
-而在 Linux 中单独安装 Python 3 要严格使用 `python3` 作为命令。
+而在 Linux 中单独安装 Python 3 要严格使用 `python3` 作为命令.
+
+当安装有多个版本的 Python 时, python3-pip 和 python3-venv 建议用 `python3 -m` 指定 Python 解释器.
+
+```
+python3 -m pip
+python3 -m venv
+```
 
 ## 1 部署
 
 ### 1.1 Debian
 
 ```shell
-root@linux:~# apt install -y python3 python3-pip python3-venv pipx virtualenv
+root@linux:~# apt install -y python3 python3-pip python3-venv
 ```
 
 ### 1.2 Windows
@@ -32,28 +39,15 @@ print("hello,world")
 
 ## 2 初始化
 
-配置 `pip` 源
+配置代理
 
 ```shell
-root@debian:~# python -m pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10809"
 ```
 
 ## 3 使用
 
 > 一般情况下， Python 读一行执行一行
-
-创建项目 `D:\share\code\python\main.py` 
-
-```python
-def main():
-    print("Hello, World!")
-
-if __name__ == "__main__":
-    main()
-
-```
-
-> 使用 vscode 打开后安装相关插件 Python
 
 ### 3.1 print()
 

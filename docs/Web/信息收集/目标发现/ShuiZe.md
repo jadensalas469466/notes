@@ -1,28 +1,93 @@
-信息收集自动化工具。
+信息收集自动化工具.
 
 ## 1 部署
 
-[配置 Docker 容器引擎](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/rong-qi/yin-qing/pei-zhi-docker-rong-qi-yin-qing)
-
-添加别名
+克隆项目
 
 ```shell
-root@debian.attack:~# vim ~/.bshrc
+root@debian:~# git clone https://github.com/0x727/ShuiZe_0x727.git /root/tools/shuize
 ```
 
-```
-15 alias shuize='docker run --rm -it -v $(pwd)/iniFile:/ShuiZe_0x727/iniFile -v $(pwd)/result:/ShuiZe_0x727/result --name shuize 1itt1eb0y/shuize:latest'
-```
-
-重新加载 `~/.bashrc` 文件，使配置生效
+修改安装脚本的权限
 
 ```shell
-root@debian.attack:~# source ~/.bashrc
+root@debian:~# cd /root/tools/shuize && chmod 777 ./build.sh
 ```
 
-查看使用帮助
+创建虚拟环境
 
 ```shell
-root@debian.attack:~# shuize -h
+root@attack:~/tools/shuize# python3 -m venv ./venv && source ./venv/bin/activate
 ```
 
+执行安装脚本
+
+```shell
+(venv) root@attack:~/tools/shuize# ./build.sh
+```
+
+查看帮助
+
+```shell
+(venv) root@attack:~/tools/shuize# python3 ./ShuiZe.py -h
+```
+
+退出虚拟环境
+
+```shell
+(venv) root@attack:~/tools/shuize# deactivate && cd
+```
+
+## 2 初始化
+
+```shell
+root@debian:~# vim /root/tools/shuize/shuize.sh
+```
+
+```sh
+#!/bin/bash
+
+# 错误检测
+set -e
+
+# 激活虚拟环境
+source /root/tools/shuize/venv/bin/activate
+
+# 获取链接的实际路径并切换到该目录
+cd "$(dirname "$(readlink -f "$0")")"
+
+# 运行 shuize
+python3 ./ShuiZe.py "$@"
+```
+
+创建链接
+
+```shell
+root@debian:~# chmod +x /root/tools/shuize/shuize.sh && ln -s /root/tools/shuize/shuize.sh /usr/local/bin/shuize
+```
+
+查看帮助
+
+```shell
+root@debian:~# shuize -h
+```
+
+## 3 使用
+
+单独收集根域名资产
+
+```shell
+root@debian:~# shuize -d example.com
+```
+
+批量收集根域名资产
+
+```shell
+root@debian:~# shuize --domainFile FileName.txt
+```
+
+---
+
+参考链接
+
+- [ShuiZe](https://github.com/0x727/ShuiZe_0x727)
