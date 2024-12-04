@@ -1,23 +1,35 @@
-批量信息收集,供应链漏洞探测工具。
+批量信息收集, 供应链漏洞探测工具.
 
 ## 1 部署
 
-下载
+克隆项目
 
 ```shell
-┌──(root㉿kali-23)-[~]
-└─# mkdir /root/tools/dddd && proxychains4 curl -L 'https://github.com/SleepingBag945/dddd/releases/download/v2.0/dddd_linux64' -o /root/tools/dddd/dddd_linux64
+root@debian:~# mkdir -p /root/tools/dddd/ && cd /root/tools/dddd/ && wget -O https://github.com/SleepingBag945/dddd/releases/download/v2.0.1/dddd_linux64
 ```
 
-编写脚本
+释放配置文件
 
 ```shell
-┌──(root㉿kali-23)-[~]
-└─# chmod +x /root/tools/dddd/dddd_linux64 && vim /root/tools/dddd/dddd.sh
+root@debian:~/tools/dddd# chmod +x ./dddd_linux64 && ./dddd_linux64 -t 127.0.0.1
+```
+
+## 2 初始化
+
+配置 API
+
+```shell
+root@debian:~/tools/dddd# vim ./config/api-config.yaml
+```
+
+编写运行脚本
+
+```shell
+root@debian:~/tools/dddd# vim ./dddd.sh
 ```
 
 ```sh
-#!/usr/bin/zsh
+#!/bin/bash
 
 # 错误检测
 set -e
@@ -33,17 +45,13 @@ cd "$(dirname "$(readlink -f "$0")")"
 创建链接
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# chmod +x /root/tools/dddd/dddd.sh && ln -s /root/tools/dddd/dddd.sh /usr/local/bin/dddd
+root@debian:~/tools/dddd# chmod +x ./dddd.sh && ln -s /root/tools/dddd/dddd.sh /usr/local/bin/dddd && cd
 ```
 
-## 2 初始化
-
-配置 API
+查看帮助
 
 ```shell
-┌──(root㉿kali-23)-[~]
-└─# dddd -t 127.0.0.1 -sd && vim /root/tools/dddd/config/api-config.yaml
+root@debian:~# dddd -h
 ```
 
 ## 3 使用
@@ -51,15 +59,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 经典扫描
 
 ```shell
-┌──(root㉿kali-23)-[~]
-└─# dddd -t [host] -sd -ho result.html
-```
-
-## 4 帮助
-
-```shell
-┌──(root㉿kali-23)-[~]
-└─# dddd -h
+root@debian:~# dddd -t example.com
 ```
 
 ---

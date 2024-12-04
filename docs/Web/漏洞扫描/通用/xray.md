@@ -26,7 +26,7 @@ Web 漏洞扫描工具。
 ```
 
 ```sh
-#!/usr/bin/zsh
+#!/bin/bash
 
 # 错误检测
 set -e

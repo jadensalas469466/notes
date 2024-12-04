@@ -25,7 +25,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 cd $(pwd)
 
 # 开启虚拟环境
-source /root/tools/ip2domain/env/bin/activat
+source /path/venv/bin/activat
 
 # 退出虚拟环境
 deactivate

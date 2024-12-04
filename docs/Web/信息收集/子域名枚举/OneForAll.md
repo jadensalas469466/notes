@@ -5,31 +5,31 @@ OneForAll是一款功能强大的子域收集工具。
 克隆项目
 
 ```shell
-root@debian:~# git clone https://github.com/shmilylty/OneForAll.git /root/tools/oneforall
+root@debian:~# git clone https://github.com/shmilylty/OneForAll.git /root/tools/oneforall && cd /root/tools/oneforall
 ```
 
-创建虚拟环境
+激活虚拟环境
 
 ```shell
-root@debian:~# cd /root/tools/oneforall && python3 -m venv ./venv && source ./venv/bin/activate
+root@debian:~/tools/oneforall# python3 -m venv ./venv && source ./venv/bin/activate
 ```
 
 安装依赖
 
 ```shell
-(venv) root@debian:~# python3 -m pip install -r ./requirements.txt
+(venv) root@debian:~/tools/oneforall# python3 -m pip install -r ./requirements.txt
 ```
 
 查看帮助
 
 ```shell
-(venv) root@debian:~# python3 ./oneforall.py --help
+(venv) root@debian:~/tools/oneforall# python3 ./oneforall.py --help
 ```
 
 退出虚拟环境
 
 ```shell
-(venv) root@debian:~# deactivate && cd
+(venv) root@debian:~/tools/oneforall# deactivate
 ```
 
 ## 2 初始化
@@ -37,7 +37,7 @@ root@debian:~# cd /root/tools/oneforall && python3 -m venv ./venv && source ./ve
 编写运行脚本
 
 ```shell
-root@debian:~# vim /root/tools/oneforall/oneforall.sh
+root@debian:~/tools/oneforall# vim ./oneforall.sh
 ```
 
 ```sh
@@ -59,7 +59,7 @@ python3 oneforall.py "$@"
 创建链接
 
 ```shell
-root@debian:~# chmod +x /root/tools/oneforall/oneforall.sh && ln -s /root/tools/oneforall/oneforall.sh /usr/local/bin/oneforall
+root@debian:~/tools/oneforall# chmod +x ./oneforall.sh && ln -s /root/tools/oneforall/oneforall.sh /usr/local/bin/oneforall && cd
 ```
 
 查看帮助
