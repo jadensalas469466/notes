@@ -453,24 +453,41 @@ PS C:\Users\sec> ssh root@example
 root@debian:~# ping g.cn -c 3
 ```
 
-为 `ls` 配置着色
+配置 `ls` 和 `less` 着色
 
 ```shell
 root@debian:~# vim ~/.bashrc
 ```
 
 ```
- 9   export LS_OPTIONS='--color=auto'
-10   eval "$(dircolors)"
-11   alias ls='ls $LS_OPTIONS'
-12   alias ll='ls $LS_OPTIONS -l'
-13   alias l='ls $LS_OPTIONS -lA'
+8 # You may uncomment the following lines if you want `ls' to be colorized:
+ export LS_OPTIONS='--color=auto'
+ eval "$(dircolors)"
+ alias ls='ls $LS_OPTIONS'
+ alias ll='ls $LS_OPTIONS -l'
+ alias l='ls $LS_OPTIONS -lA'
+ # colourful man page
+ export MANPAGER='less -s -M +Gg'
+ export GROFF_NO_SGR=1
+ export LESS_TERMCAP_mb=$'\e[1;31m'
+ export LESS_TERMCAP_md=$'\e[1;34m'
+ export LESS_TERMCAP_so=$'\e[01;44;37m'
+ export LESS_TERMCAP_us=$'\e[38;2;0;255;0m'
+ export LESS_TERMCAP_me=$'\e[0m'
+ export LESS_TERMCAP_se=$'\e[0m'
+ export LESS_TERMCAP_ue=$'\e[0m'
 ```
 
 重新加载配置文件
 
 ```shell
 root@debian:~# source ~/.bashrc
+```
+
+安装 tldr
+
+```shell
+root@debian:~# mkdir -p /root/.local/share/tldr && apt install -y tldr && tldr -u
 ```
 
 创建目录
