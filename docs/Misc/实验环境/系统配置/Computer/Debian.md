@@ -423,6 +423,17 @@ iface ens33 inet static
 20  # iface ens33 inet6 auto
 ```
 
+配置 DNS 服务器
+
+```shell
+root@debian:~# vim /etc/resolv.conf
+```
+
+```
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+```
+
 在 `hosts` 文件添加域名映射
 
 ```shell
