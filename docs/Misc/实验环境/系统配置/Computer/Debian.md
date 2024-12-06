@@ -464,7 +464,7 @@ PS C:\Users\sec> ssh root@example
 root@debian:~# ping g.cn -c 3
 ```
 
-配置 `ls` 和 `less` 着色
+配置 Bash
 
 ```shell
 root@debian:~# vim ~/.bashrc
@@ -477,7 +477,7 @@ root@debian:~# vim ~/.bashrc
  alias ls='ls $LS_OPTIONS'
  alias ll='ls $LS_OPTIONS -l'
  alias l='ls $LS_OPTIONS -lA'
-# colourful man page
+# Colourful Manual Page
  export MANPAGER='less -s -M +Gg'
  export GROFF_NO_SGR=1
  export LESS_TERMCAP_mb=$'\e[1;31m'
@@ -487,6 +487,8 @@ root@debian:~# vim ~/.bashrc
  export LESS_TERMCAP_me=$'\e[0m'
  export LESS_TERMCAP_se=$'\e[0m'
  export LESS_TERMCAP_ue=$'\e[0m'
+ # Custom Aliases
+ alias python='python3'
 ```
 
 重新加载配置文件
@@ -559,8 +561,7 @@ root@debian:~# init 0
 查看内核版本
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# uname -r
+root@debian:~# uname -r
 6.5.0-kali3-amd64
 ```
 
@@ -569,36 +570,31 @@ root@debian:~# init 0
 > http://http.kali.org/kali/pool/main/l/linux/
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# wget http://http.kali.org/kali/pool/main/l/linux/linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb && dpkg -i linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb && rm -rf linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb
+root@debian:~# wget http://http.kali.org/kali/pool/main/l/linux/linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb && dpkg -i linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb && rm -rf linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb
 ```
 
 安装依赖
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# apt install -y build-essential dkms
+root@debian:~# apt install -y build-essential dkms
 ```
 
 下载驱动
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# git clone https://github.com/aircrack-ng/rtl8812au.git /root/tools/drivers/rtl8812au
+root@debian:~# git clone https://github.com/aircrack-ng/rtl8812au.git /root/tools/drivers/rtl8812au
 ```
 
 安装驱动
 
 ```shell
-┌──(root㉿kali)-[~]
-└─# cd /root/tools/drivers/rtl8812au && make dkms_install && cd
+root@debian:~# cd /root/tools/drivers/rtl8812au && make dkms_install && cd
 ```
 
 > 卸载
 >
 > ```shell
-> ┌──(root㉿kali)-[~]
-> └─# cd /root/tools/drivers/rtl8812au && make dkms_remove && cd
+> root@debian:~# cd /root/tools/drivers/rtl8812au && make dkms_remove && cd
 > ```
 
 ### 6.2 系统信息
@@ -644,34 +640,27 @@ dpkg -l | grep ssh
 打开配置文件配置别名
 
 ```shell
-┌──(root㉿purple)-[~]
-└─# vim ~/.zshrc
+root@debian:~# vim ~/.bashrc
 ```
 
 ```
-   243  # some more ls aliases
-   244  alias ll='ls -l'
-   245  alias la='ls -A'
-   246  alias l='ls -CF'
-   247  alias share='vmhgfs-fuse .host:/ /mnt'
+alias share='vmhgfs-fuse .host:/ /mnt'
 ```
 
 使配置生效
 
 ```shell
-┌──(root㉿purple)-[~]
-└─# source ~/.zshrc
+root@debian:~# source ~/.zshrc
 ```
 
-### 6.4 全局修改 DNS 服务器
+### 6.4 历史命令
+
+> 存储历史命令的文件: `~/.bashrc_history` 
+
+覆盖历史命令
 
 ```shell
-root@debian:~# vim /etc/resolv.conf
-```
-
-```
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+root@debian:~# shred -z ~/.bash_history
 ```
 
 ---

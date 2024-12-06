@@ -11,7 +11,7 @@ root@debian:~# git clone https://github.com/0x727/ShuiZe_0x727.git /root/tools/s
 激活虚拟环境
 
 ```shell
-root@debian:~/tools/shuize# python3 -m venv ./venv && source ./venv/bin/activate
+root@debian:~/tools/shuize# python -m venv ./venv && source ./venv/bin/activate
 ```
 
 执行安装脚本
@@ -23,7 +23,7 @@ root@debian:~/tools/shuize# python3 -m venv ./venv && source ./venv/bin/activate
 查看帮助
 
 ```shell
-(venv) root@debian:~/tools/shuize# python3 ./ShuiZe.py -h
+(venv) root@debian:~/tools/shuize# python ./ShuiZe.py -h
 ```
 
 退出虚拟环境
@@ -53,7 +53,7 @@ source /root/tools/shuize/venv/bin/activate
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 shuize
-python3 ./ShuiZe.py "$@"
+python ./ShuiZe.py "$@"
 ```
 
 创建链接
