@@ -16,6 +16,10 @@ root@debian:~# apt install -y docker.io docker-compose
 root@debian:~# systemctl enable --now docker.service
 ```
 
+## 3 使用
+
+### 3.1 配置
+
 配置代理
 
 ```shell
@@ -35,9 +39,7 @@ Environment="NO_PROXY=localhost,127.0.0.1,192.168.1.0/24"
 root@debian:~# systemctl daemon-reload && systemctl restart docker.service
 ```
 
----
-
-## 3 使用
+### 3.2 拉取
 
 通过 docker proxy 拉取镜像
 

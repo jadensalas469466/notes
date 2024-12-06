@@ -477,7 +477,7 @@ root@debian:~# vim ~/.bashrc
  alias ls='ls $LS_OPTIONS'
  alias ll='ls $LS_OPTIONS -l'
  alias l='ls $LS_OPTIONS -lA'
- # colourful man page
+# colourful man page
  export MANPAGER='less -s -M +Gg'
  export GROFF_NO_SGR=1
  export LESS_TERMCAP_mb=$'\e[1;31m'
@@ -513,10 +513,11 @@ root@debian:~# mkdir -p /root/tools/scripts /root/tools/drivers /var/www/html/up
 root@debian:~# init 0
 ```
 
-## 5 部署
+## 5 Deploy
 
 |                           attack                           |
 | :--------------------------------------------------------: |
+|     [Tor](https://gitlab.torproject.org/tpo/core/tor)      |
 | [Proxychains-NG](https://github.com/rofl0r/proxychains-ng) |
 |             [Git](https://github.com/git/git)              |
 |             [Docker](https://www.docker.com/)              |

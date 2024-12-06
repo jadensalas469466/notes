@@ -62,15 +62,7 @@ root@debian:~# apt install -y git
 
 ## 2 初始化
 
-### 2.1 Linux
-
-配置代理
-
-```shell
-root@debian:~# git config --global http.proxy "http://192.168.1.201:10809"
-```
-
-### 2.2 Windows
+### 2.1 Windows
 
 配置代理
 

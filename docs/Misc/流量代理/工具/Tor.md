@@ -9,20 +9,9 @@
 └─# apt install -y tor
 ```
 
-## 2 使用
+## 2 初始化
 
-启动
-
-```shell
-┌──(root㉿kali)-[~]
-└─# systemctl enable --now tor.service
-```
-
-> 默认端口 127.0.0.1:9050
-
-## 3 配置
-
-修改为每分钟切换一次代理链
+配置为每分钟切换一次代理链
 
 ```shell
 ┌──(root㉿kali)-[~]
@@ -33,6 +22,15 @@
 MaxCircuitDirtiness 60
 NewCircuitPeriod 60
 ```
+
+配置开机自启
+
+```shell
+┌──(root㉿kali)-[~]
+└─# systemctl enable --now tor.service
+```
+
+> 默认端口 127.0.0.1:9050
 
 ---
 
