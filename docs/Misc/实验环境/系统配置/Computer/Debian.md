@@ -526,6 +526,7 @@ root@debian:~# init 0
 |             [Python](https://www.python.org/)              |
 |         [ARL](https://github.com/Aabyss-Team/ARL)          |
 |      [ShuiZe](https://github.com/0x727/ShuiZe_0x727)       |
+|          [Ffuf](https://www.kali.org/tools/ffuf/)          |
 
 |                           defend                            |
 | :---------------------------------------------------------: |
@@ -661,6 +662,44 @@ root@debian:~# source ~/.zshrc
 
 ```shell
 root@debian:~# shred -z ~/.bash_history
+```
+
+### 6.5 后台运行
+
+将命令行程序放在后台运行, 即使 SSH 断开连接也不会终止运行
+
+```shell
+root@debian:~# nohup <Command> > /root/log.txt 2>&1 &
+```
+
+```
+PID
+```
+
+查看后台程序
+
+```shell
+root@debian:~# jobs
+```
+
+> 在当前终端关闭后将失效
+
+实时查看日志
+
+```shell
+root@debian:~# tail -f /root/log.txt
+```
+
+终止进程
+
+```shell
+root@debian:~# kill <PID>
+```
+
+强制终止进程
+
+```shell
+root@debian:~# kill -9 <PID>
 ```
 
 ---
