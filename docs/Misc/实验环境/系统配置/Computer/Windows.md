@@ -305,16 +305,16 @@ sec
 
 以管理员权限运行 PowerShell
 
+禁用快速启动和休眠功能
+
+```powershell
+PS C:\Windows\system32> powercfg -h off
+```
+
 使用 [Microsoft Activation Scripts (MAS)](https://massgrave.dev/) 激活
 
 ```powershell
 PS C:\Windows\system32> irm https://get.activated.win | iex
-```
-
-以管理员权限运行 PowerShell, 禁用快速启动和休眠功能
-
-```powershell
-PS C:\Windows\system32> powercfg -h off
 ```
 
 网络配置文件
@@ -348,7 +348,7 @@ C:\Windows\System32\drivers\etc\hosts
 计算机配置 > 管理模板 > 控制面板 > 个性化 > 不显示锁屏 > 已启用
 ```
 
-更新并设置 Windows, Edge
+更新并设置 驱动, Windows, Edge
 
 使用 Dism++ 修改系统设置
 
