@@ -79,3 +79,38 @@
 √ 锁定
 ```
 
+## 3 静态 IP
+
+有时在 Windows 设置中配置静态 IP 无法同步到控制面板, 建议在控制面板校准一次
+
+## 4 自动唤醒
+
+计算机进入睡眠状态后有时会被自动唤醒, 可通过以下命令查看唤醒历史记录
+
+```powershell
+PS C:\Users\sec> powercfg -lastwake
+```
+
+```
+唤醒历史记录计数 - 1
+唤醒历史记录 [0]
+  唤醒源计数 - 1
+  唤醒源 [0]
+    类型: 设备
+    实例路径: PCI\VEN_8086&DEV_1A1D&SUBSYS_86721043&REV_11\3&11583659&0&FE
+    友好名称: Intel(R) Ethernet Connection (17) I219-V
+    描述: Intel(R) Ethernet Connection (17) I219-V
+    制造商: Intel
+```
+
+禁用指定设备的唤醒功能
+
+```powershell
+PS C:\Users\sec> powercfg -devicedisablewake "Intel(R) Ethernet Connection (17) I219-V"
+```
+
+查看当前允许唤醒的设备
+
+```powershell
+PS C:\Users\sec> powercfg -devicequery wake_armed
+```
