@@ -506,7 +506,7 @@ root@debian:~# mkdir -p /root/.local/share/tldr && apt install -y tldr && tldr -
 创建目录
 
 ```shell
-root@debian:~# mkdir -p /root/tools/scripts /root/tools/drivers /var/www/html/upload
+root@debian:~# mkdir -p /root/tools/apps /root/tools/scripts /root/tools/drivers /var/www/html/upload
 ```
 
 关机，拍摄快照并命名为 `初始化` 

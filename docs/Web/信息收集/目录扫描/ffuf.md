@@ -3,8 +3,8 @@
 GET 扫描
 
 ```shell
-root@debian:~# ffuf -r \
--w /path/dict.txt:FUZZ \
+root@debian:~# ffuf \
+-w /Path/Dict.txt:FUZZ \
 -H "X-Originating-Ip: 127.0.0.1" \
 -H "X-Remote-Ip: 127.0.0.1" \
 -H "X-Forwarded-For: 127.0.0.1" \
