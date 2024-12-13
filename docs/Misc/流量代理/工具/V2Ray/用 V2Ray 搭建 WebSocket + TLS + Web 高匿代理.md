@@ -31,7 +31,7 @@ root@server:~# systemctl enable --now v2ray.service caddy.service
 下载配置生成脚本
 
 ```shell
-root@server:~# wget https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/script/config_generator.py
+root@server:~# wget https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/v2rayConfig.py
 ```
 
 创建目录用于存储 TLS 密钥和证书

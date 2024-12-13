@@ -49,7 +49,7 @@ root@server:~# systemctl restart caddy
 获取 PHP 脚本
 
 ```
-root@server:~# wget https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/script/SolusVM%202/index.php -O /var/www/html/index.php 
+root@server:~# wget https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/SolusVM%202/index.php -O /var/www/html/index.php 
 ```
 
 访问主页即可查看服务器状态

@@ -1,6 +1,12 @@
-分布式版本控制系统。
+分布式版本控制系统.
 
-## 1 部署
+```
+工作区 add-> 暂存区 commit-> 本地仓库 <-pull||push-> 远程仓库
+```
+
+> HEAD 指的是最新一次的提交
+
+## 1. 部署
 
 **Linux**
 
@@ -60,20 +66,18 @@ root@debian:~# apt install -y git
 
 ![配置默认实验选项](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%AE%9E%E9%AA%8C%E9%80%89%E9%A1%B9.png)
 
-## 2 初始化
+## 2. 初始化
 
-### 2.1 Windows
+在 Github 开启私人电子邮箱
+
+![在 Github 开启私人电子邮箱](./../../../../images/Git/%E5%9C%A8%20Github%20%E5%BC%80%E5%90%AF%E7%A7%81%E4%BA%BA%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1.png)
+
+### 2.1. Windows
 
 配置代理
 
 ```powershell
 PS C:\Users\sec> git config --global http.proxy "http://127.0.0.1:10809"
-```
-
-配置使用 Windows SSH 客户端
-
-```powershell
-PS C:\Users\sec> git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 ```
 
 配置使用 Windows 证书校验
@@ -82,14 +86,16 @@ PS C:\Users\sec> git config --global core.sshCommand "C:/Windows/System32/OpenSS
 PS C:\Users\sec> git config --global http.sslBackend schannel
 ```
 
-配置用户名和邮箱
+配置用户名
 
 ```powershell
 PS C:\Users\sec> git config --global user.name "sec"
 ```
 
+配置邮箱
+
 ```powershell
-PS C:\Users\sec> git config --global user.email "xxxxxxxx@users.noreply.github.com"
+PS C:\Users\sec> git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
 配置对文件名大小写敏感
@@ -98,21 +104,164 @@ PS C:\Users\sec> git config --global user.email "xxxxxxxx@users.noreply.github.c
 PS C:\Users\sec> git config --global --get core.ignorecase
 ```
 
-查看所有配置
+### 2.2. Linux
 
-```powershell
-PS C:\Users\sec> git config --global --list
+配置代理
+
+```shell
+root@debian:~# git config --global http.proxy "http://192.168.1.201:10809"
 ```
 
-使用 OpenSSH 部署公钥到 Git 服务器
+## 3. 使用
 
-![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/Git/%E4%BD%BF%E7%94%A8%20OpenSSH%20%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
+### 3.1. 基础
 
-## 3 使用
+克隆仓库
 
-### 3.1 配置
+```shell
+root@debian:~# git clone <repository-url>
+```
 
-查看全部配置
+添加到暂存区
+
+```shell
+root@debian:~# git add .      # 全部文件
+root@debian:~# git add <file> # 指定文件
+```
+
+提交到本地仓库
+
+```shell
+root@debian:~# git commit -m "comment"
+```
+
+与远程仓库同步
+
+```shell
+root@debian:~# git push # 从本地推送到远程
+root@debian:~# git pull # 从远程拉取到本地
+```
+
+### 3.2. 进阶
+
+查看提交日志
+
+```shell
+root@debian:~# git log           # Commit ID + Author + Date + Comment
+root@debian:~# git log --stat    # Commit ID + Author + Date + Comment + Changes
+root@debian:~# git log --oneline # Commit ID + Comment
+```
+
+查看提交信息
+
+```shell
+root@debian:~# git show HEAD        # 查看最新提交的信息
+root@debian:~# git show <commit-id> # 查看指定提交的信息
+root@debian:~# git show <branch>    # 查看指定分支最新提交的信息
+```
+
+查看更改或比较
+
+```shell
+root@debian:~# git diff          # 查看工作区已更改但未添加到暂存区的文件
+root@debian:~# git diff HEAD     # 查看工作区已更改但未提交到本地仓库的文件
+root@debian:~# git diff --staged # 查看已添加到暂存区但未提交到本地仓库的文件
+root@debian:~# git diff <commit-id-1> <commit-id-2> # 比较两个提交之间的差异
+root@debian:~# git diff <branch-1> <branch-2>       # 比较两个分支之间的差异
+```
+
+撤回
+
+```shell
+root@debian:~# git revert <commit-id>      # 撤回某次提交并提交最新状态到本地仓库
+root@debian:~# git revert -m 1 <commit-id> # 撤回指定分支的某次提交并提交最新状态到本地仓库
+```
+
+回退
+
+```shell
+root@debian:~# git reset HEAD^       # 回退到最新提交前的第一个版本
+root@debian:~# git reset HEAD~1      # 回退到最新提交前的第一个版本
+root@debian:~# git reset HEAD~3      # 回退到最新提交前的第三个版本
+root@debian:~# git reset HEAD~1 File # 指定文件回退到最新提交前的第一个版本
+root@debian:~# git reset --soft <commit-id>  # 回退到已添加到暂存区但未提交到本地仓库时
+root@debian:~# git reset --mixed <commit-id> # 回退到工作区已改动但未添加到暂存区时 (默认)
+root@debian:~# git reset --hard <commit-id>  # 回退到工作区未改动时
+```
+
+切换提交节点但不重置
+
+```shell
+root@debian:~# git checkout <commit-id>
+```
+
+### 3.3. 发布
+
+### 3.3.1. 快速发布
+
+在 GitHub 创建一个仓库, 克隆仓库到本地即可
+
+```shell
+root@debian:~# git clone <repository-url>
+```
+
+### 3.3.2. 标准发布
+
+在 GitHub 创建一个空仓库
+
+进入本地项目目录
+
+```shell
+root@debian:~# cd ./test
+```
+
+初始化仓库
+
+```shell
+root@debian:~# git init
+```
+
+命名默认分支为 `main` 
+
+```shell
+root@debian:~# git branch -M main
+```
+
+配置远程仓库
+
+```shell
+root@debian:~# git remote add origin https://github.com/<user-name>/test.git
+```
+
+创建 `README.md` 文件
+
+```shell
+root@debian:~# echo "test" > README.md
+```
+
+暂存指定文件的更改
+
+```shell
+root@debian:~# git add README.md
+```
+
+提交
+
+```shell
+root@debian:~# git commit -m "first commit"
+```
+
+推送到远程仓库的指定分支 `main` 
+
+```shell
+root@debian:~# git push -u origin main
+```
+
+### 3.4. 配置
+
+### 3.4.1. 全局配置
+
+列出全局配置
 
 ```shell
 ┌──(root㉿kali-23)-[~]
@@ -161,63 +310,19 @@ PS C:\Users\sec> git config --global --list
 └─# git config --global --unset http.proxy
 ```
 
-### 3.2 发布
+### 3.4.1. 部署 SSH 到 GitHub
 
-在 Github 开启私人电子邮件
+使用 OpenSSH 部署公钥到 Git 服务器
 
-![在 Github 开启私人电子邮件](./../../../../images/Git/%E5%9C%A8%20Github%20%E5%BC%80%E5%90%AF%E7%A7%81%E4%BA%BA%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6.png)
+![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/Git/%E4%BD%BF%E7%94%A8%20OpenSSH%20%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
 
-创建项目目录
+配置 Git 使用 Windows SSH 客户端
 
-```
-C:\Users\sec\share\github\tools
-```
-
-在 Visual Studio Code 中打开项目文件夹
-
-![在 Visual Studio Code 中打开项目文件夹](./../../../../images/Git/%E5%9C%A8%20Visual%20Studio%20Code%20%E4%B8%AD%E6%89%93%E5%BC%80%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%A4%B9.png)
-
-信任此作者
-
-![信任此作者](./../../../../images/Git/%E4%BF%A1%E4%BB%BB%E6%AD%A4%E4%BD%9C%E8%80%85.png)
-
-授权
-
-![授权](./../../../../images/Git/%E6%8E%88%E6%9D%83.png)
-
-初始化仓库
-
-![初始化仓库](./../../../../images/Git/%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%93%E5%BA%93.png)
-
-在项目中创建 README.md
-
-```markdown
-# "the quieter you become, the more you are able to hear"
+```powershell
+PS C:\Users\sec> git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 ```
 
-![在项目中创建 README.md](./../../../../images/Git/%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%88%9B%E5%BB%BA%20README.md.png)
-
-暂存更改
-
-![暂存更改](./../../../../images/Git/%E6%9A%82%E5%AD%98%E6%9B%B4%E6%94%B9.png)
-
-添加备注，提交到本地仓库
-
-![添加备注，提交到本地仓库](./../../../../images/Git/%E6%B7%BB%E5%8A%A0%E5%A4%87%E6%B3%A8%EF%BC%8C%E6%8F%90%E4%BA%A4%E5%88%B0%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93.png)
-
-发布到远程仓库
-
-![发布到远程仓库](./../../../../images/Git/%E5%8F%91%E5%B8%83%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93.png)
-
-选择仓库
-
-![选择仓库](./../../../../images/Git/%E9%80%89%E6%8B%A9%E4%BB%93%E5%BA%93.png)
-
-> 之后，在 tools 项目中的任何改动都可以同步到 Github 中
->
-> 已创建的仓库可通过拉取到本地同步
-
-## 4 帮助
+## 4. 帮助
 
 ```shell
 sec@a MINGW64 ~
