@@ -152,12 +152,12 @@ root@debian:~# git log --stat    # Commit ID + Author + Date + Comment + Changes
 root@debian:~# git log --oneline # Commit ID + Comment
 ```
 
-查看提交信息
+查看提交内容
 
 ```shell
-root@debian:~# git show HEAD        # 查看最新提交的信息
-root@debian:~# git show <commit-id> # 查看指定提交的信息
-root@debian:~# git show <branch>    # 查看指定分支最新提交的信息
+root@debian:~# git show HEAD        # 查看最新提交的内容
+root@debian:~# git show <commit-id> # 查看指定提交的内容
+root@debian:~# git show <branch>    # 查看指定分支最新提交的内容
 ```
 
 查看更改或比较
