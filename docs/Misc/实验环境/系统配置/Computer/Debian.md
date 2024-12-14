@@ -376,9 +376,9 @@ root@debian:~# vim /etc/apt/sources.list
 ```
 
 ```
-deb https://mirrors.ustc.edu.cn/debian bookworm main contrib non-free non-free-firmware
+deb http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
 
-deb https://mirrors.ustc.edu.cn/kali kali-last-snapshot main non-free non-free-firmware contrib
+deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
 ```
 
 配置优先级
@@ -389,18 +389,18 @@ root@debian:~# vim /etc/apt/preferences
 
 ```
 Package: *
-Pin: release o=Debian,n=bookworm
+Pin: release o=Debian,n=bookworm-updates
 Pin-Priority: 900
 
 Package: *
-Pin: release o=Kali,a=kali-last-snapshot
+Pin: release o=Kali,a=kali-rolling
 Pin-Priority: 800
 ```
 
-获取更新
+获取更新并更新系统
 
 ```shell
-root@debian:~# apt update
+root@debian:~# apt update && apt full-upgrade
 ```
 
 配置网络接口参数
