@@ -342,7 +342,7 @@ sec@debian:~$ su - root
 安装基础工具
 
 ```shell
-root@debian:~# apt install -y vim curl
+root@debian:~# apt install -y sudo vim curl tree
 ```
 
 允许远程登录 `root` 并配置稳定连接
@@ -376,9 +376,9 @@ root@debian:~# vim /etc/apt/sources.list
 ```
 
 ```
-deb http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
-
 deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
+
+deb http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
 ```
 
 配置优先级
@@ -389,18 +389,18 @@ root@debian:~# vim /etc/apt/preferences
 
 ```
 Package: *
-Pin: release o=Debian,n=bookworm-updates
+Pin: release o=Kali,a=kali-rolling
 Pin-Priority: 900
 
 Package: *
-Pin: release o=Kali,a=kali-rolling
+Pin: release o=Debian,n=bookworm-updates
 Pin-Priority: 800
 ```
 
 获取更新并更新系统
 
 ```shell
-root@debian:~# apt update && apt full-upgrade
+root@debian:~# apt update && apt upgrade && apt dist-upgrade && apt autoremove --purge
 ```
 
 配置网络接口参数
@@ -471,24 +471,31 @@ root@debian:~# vim ~/.bashrc
 ```
 
 ```
-8 # You may uncomment the following lines if you want `ls' to be colorized:
+# You may uncomment the following lines if you want `ls' to be colorized:
  export LS_OPTIONS='--color=auto'
  eval "$(dircolors)"
  alias ls='ls $LS_OPTIONS'
  alias ll='ls $LS_OPTIONS -l'
  alias l='ls $LS_OPTIONS -lA'
+#
+# Some more alias to avoid making mistakes:
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
+#
 # Colourful Manual Page
  export MANPAGER='less -s -M +Gg'
- export GROFF_NO_SGR=1
- export LESS_TERMCAP_mb=$'\e[1;31m'
- export LESS_TERMCAP_md=$'\e[1;34m'
- export LESS_TERMCAP_so=$'\e[01;44;37m'
- export LESS_TERMCAP_us=$'\e[38;2;0;255;0m'
  export LESS_TERMCAP_me=$'\e[0m'
  export LESS_TERMCAP_se=$'\e[0m'
  export LESS_TERMCAP_ue=$'\e[0m'
- # Custom Aliases
+ export LESS_TERMCAP_mb=$'\e[1;31m'
+ export LESS_TERMCAP_md=$'\e[1;32m'
+ export LESS_TERMCAP_us=$'\e[1;34m'
+ export LESS_TERMCAP_so=$'\e[1;44;37m'
+# Custom Aliases
  alias python='python3'
+# Colourful Bash
+ export PS1="\[\e[1;31m\]\u@\h:\[\e[1;34m\]\w\[\e[1;31m\]# \[\e[0m\]"
 ```
 
 重新加载配置文件
@@ -506,7 +513,7 @@ root@debian:~# mkdir -p /root/.local/share/tldr && apt install -y tldr && tldr -
 创建目录
 
 ```shell
-root@debian:~# mkdir -p /root/tools/apps /root/tools/scripts /root/tools/drivers /var/www/html/upload
+root@debian:~# mkdir -p /root/tools/apps /root/tools/drivers /root/tools/scripts /var/www/html/upload
 ```
 
 关机，拍摄快照并命名为 `初始化` 
