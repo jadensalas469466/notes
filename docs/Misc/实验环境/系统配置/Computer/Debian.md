@@ -467,7 +467,7 @@ root@debian:~# ping g.cn -c 3
 安装 Zsh 并配置为默认 Shell
 
 ```shell
-root@debian:~# apt install -y zsh zsh-syntax-highlighting && chsh -s $(which zsh)
+root@debian:~# apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions && chsh -s $(which zsh)
 ```
 
 配置 Zsh
