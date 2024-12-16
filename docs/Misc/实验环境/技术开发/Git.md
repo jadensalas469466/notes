@@ -98,6 +98,12 @@ PS C:\Users\sec> git config --global user.name "sec"
 PS C:\Users\sec> git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
+禁止自动转换换行符
+
+```powershell
+PS C:\Users\sec> git config --global core.autocrlf false
+```
+
 配置对文件名大小写敏感
 
 ```powershell

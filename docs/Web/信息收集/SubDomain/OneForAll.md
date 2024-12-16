@@ -85,12 +85,6 @@ root@debian:~# oneforall --target FileName.txt run
 查看结果
 
 ```shell
-root@debian:~# ls /root/tools/oneforall/results/
-```
-
-下载结果到本地查看
-
-```powershell
-PS C:\Users\sec> scp -r root@debian:/root/tools/oneforall/results/ C:\Users\sec\Downloads\
+root@debian:~# ls /root/tools/oneforall/results
 ```
 

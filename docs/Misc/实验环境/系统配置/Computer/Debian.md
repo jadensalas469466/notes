@@ -363,7 +363,7 @@ root@debian:~# vim /etc/ssh/sshd_config
 root@debian:~# systemctl restart ssh.service
 ```
 
-将 Kali 的 GPG 密钥导入到 `/etc/apt/trusted.gpg.d/` 目录下
+导入 Kali 的 GPG 密钥
 
 ```shell
 root@debian:~# curl -fsSL https://archive.kali.org/archive-key.asc | tee /etc/apt/trusted.gpg.d/kali.asc
@@ -464,44 +464,16 @@ PS C:\Users\sec> ssh root@example
 root@debian:~# ping g.cn -c 3
 ```
 
-配置 Bash
+安装 Zsh 并配置为默认 Shell
 
 ```shell
-root@debian:~# vim ~/.bashrc
+root@debian:~# apt install -y zsh zsh-syntax-highlighting && chsh -s $(which zsh)
 ```
 
-```
-# You may uncomment the following lines if you want `ls' to be colorized:
- export LS_OPTIONS='--color=auto'
- eval "$(dircolors)"
- alias ls='ls $LS_OPTIONS'
- alias ll='ls $LS_OPTIONS -l'
- alias l='ls $LS_OPTIONS -lA'
-#
-# Some more alias to avoid making mistakes:
-# alias rm='rm -i'
-# alias cp='cp -i'
-# alias mv='mv -i'
-#
-# Colourful Manual Page
- export MANPAGER='less -s -M +Gg'
- export LESS_TERMCAP_me=$'\e[0m'
- export LESS_TERMCAP_se=$'\e[0m'
- export LESS_TERMCAP_ue=$'\e[0m'
- export LESS_TERMCAP_mb=$'\e[1;31m'
- export LESS_TERMCAP_md=$'\e[1;32m'
- export LESS_TERMCAP_us=$'\e[1;34m'
- export LESS_TERMCAP_so=$'\e[1;44;37m'
-# Custom Aliases
- alias python='python3'
-# Colourful Bash
- export PS1="\[\e[1;31m\]\u@\h:\[\e[1;34m\]\w\[\e[1;31m\]# \[\e[0m\]"
-```
-
-重新加载配置文件
+配置 Zsh
 
 ```shell
-root@debian:~# source ~/.bashrc
+root@debian:~# curl https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc -o ~/.zshrc && source ~/.zshrc
 ```
 
 安装 tldr

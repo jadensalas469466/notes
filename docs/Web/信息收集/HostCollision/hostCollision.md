@@ -5,18 +5,24 @@
 克隆仓库
 
 ```shell
-root@debian:~# git clone https://github.com/alwaystest18/hostCollision.git /root/tools/hostCollision
+root@debian:~# git clone https://github.com/alwaystest18/hostCollision.git /root/tools/hostCollision && cd /root/tools/hostCollision
 ```
 
-安装
-
 ```shell
-root@debian:~# cd /root/tools/hostCollision/ && go install && go build hostCollision.go
+root@debian:~/tools/hostCollision# go install && go build hostCollision.go
 ```
 
 ## 2. 使用
 
+测试 Host 碰撞
+
+```shell
+root@debian:~# hostCollision -df fileName.txt -uf fileName.txt -o fileName.txt
 ```
 
-```
+---
+
+参考链接
+
+- [hostCollision](https://github.com/alwaystest18/hostCollision)
 
