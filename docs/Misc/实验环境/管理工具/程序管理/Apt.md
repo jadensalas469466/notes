@@ -11,7 +11,7 @@ apt search <some-app> # 搜索软件
 apt show <some-app>   # 显示软件信息
 ```
 
-软件管理
+软件安装
 
 ```
 apt install <some-app>                # 安装软件
