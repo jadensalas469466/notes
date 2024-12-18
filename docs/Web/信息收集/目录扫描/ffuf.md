@@ -2,9 +2,10 @@
 
 GET 扫描
 
-```shell
-root@debian:~# ffuf \
--w /Path/Dict.txt:FUZZ \
+```
+┌──(root@debian)-[~]
+└─# ffuf -recursion-depth 3 \
+-w /path/dict.txt:FUZZ \
 -H "X-Originating-Ip: 127.0.0.1" \
 -H "X-Remote-Ip: 127.0.0.1" \
 -H "X-Forwarded-For: 127.0.0.1" \
@@ -18,4 +19,4 @@ root@debian:~# ffuf \
 
 参考链接
 
-- [Ffuf](https://www.kali.org/tools/ffuf/)
+- [ffuf](https://www.kali.org/tools/ffuf/)
