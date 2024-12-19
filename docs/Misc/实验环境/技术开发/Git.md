@@ -124,81 +124,82 @@ root@debian:~# git config --global http.proxy "http://192.168.1.201:10809"
 
 克隆仓库
 
-```shell
-root@debian:~# git clone <repository-url>
+```
+git clone <repository-url>           # 完整克隆
+git clone --depth 1 <repository-url> # 只克隆最新的一次提交
 ```
 
 添加到暂存区
 
-```shell
-root@debian:~# git add .      # 全部文件
-root@debian:~# git add <file> # 指定文件
+```
+git add .      # 全部文件
+git add <file> # 指定文件
 ```
 
 提交到本地仓库
 
-```shell
-root@debian:~# git commit -m "comment"
+```
+git commit -m "comment"
 ```
 
 与远程仓库同步
 
-```shell
-root@debian:~# git push # 从本地推送到远程
-root@debian:~# git pull # 从远程拉取到本地
+```
+git push # 从本地推送到远程
+git pull # 从远程拉取到本地
 ```
 
 ### 3.2. 进阶
 
 查看提交日志
 
-```shell
-root@debian:~# git log           # Commit ID + Author + Date + Comment
-root@debian:~# git log --stat    # Commit ID + Author + Date + Comment + Changes
-root@debian:~# git log --oneline # Commit ID + Comment
+```
+git log           # Commit ID + Author + Date + Comment
+git log --stat    # Commit ID + Author + Date + Comment + Changes
+git log --oneline # Commit ID + Comment
 ```
 
 查看提交内容
 
-```shell
-root@debian:~# git show HEAD        # 查看最新提交的内容
-root@debian:~# git show <commit-id> # 查看指定提交的内容
-root@debian:~# git show <branch>    # 查看指定分支最新提交的内容
+```
+git show HEAD        # 查看最新提交的内容
+git show <commit-id> # 查看指定提交的内容
+git show <branch>    # 查看指定分支最新提交的内容
 ```
 
 查看更改或比较
 
-```shell
-root@debian:~# git diff          # 查看工作区已更改但未添加到暂存区的文件
-root@debian:~# git diff HEAD     # 查看工作区已更改但未提交到本地仓库的文件
-root@debian:~# git diff --staged # 查看已添加到暂存区但未提交到本地仓库的文件
-root@debian:~# git diff <commit-id-1> <commit-id-2> # 比较两个提交之间的差异
-root@debian:~# git diff <branch-1> <branch-2>       # 比较两个分支之间的差异
+```
+git diff          # 查看工作区已更改但未添加到暂存区的文件
+git diff HEAD     # 查看工作区已更改但未提交到本地仓库的文件
+git diff --staged # 查看已添加到暂存区但未提交到本地仓库的文件
+git diff <commit-id-1> <commit-id-2> # 比较两个提交之间的差异
+git diff <branch-1> <branch-2>       # 比较两个分支之间的差异
 ```
 
 撤回
 
-```shell
-root@debian:~# git revert <commit-id>      # 撤回某次提交并提交最新状态到本地仓库
-root@debian:~# git revert -m 1 <commit-id> # 撤回指定分支的某次提交并提交最新状态到本地仓库
+```
+git revert <commit-id>      # 撤回某次提交并提交最新状态到本地仓库
+git revert -m 1 <commit-id> # 撤回指定分支的某次提交并提交最新状态到本地仓库
 ```
 
 回退
 
-```shell
-root@debian:~# git reset HEAD^       # 回退到最新提交前的第一个版本
-root@debian:~# git reset HEAD~1      # 回退到最新提交前的第一个版本
-root@debian:~# git reset HEAD~3      # 回退到最新提交前的第三个版本
-root@debian:~# git reset HEAD~1 File # 指定文件回退到最新提交前的第一个版本
-root@debian:~# git reset --soft <commit-id>  # 回退到已添加到暂存区但未提交到本地仓库时
-root@debian:~# git reset --mixed <commit-id> # 回退到工作区已改动但未添加到暂存区时 (默认)
-root@debian:~# git reset --hard <commit-id>  # 回退到工作区未改动时
+```
+git reset HEAD^       # 回退到最新提交前的第一个版本
+git reset HEAD~1      # 回退到最新提交前的第一个版本
+git reset HEAD~3      # 回退到最新提交前的第三个版本
+git reset HEAD~1 File # 指定文件回退到最新提交前的第一个版本
+git reset --soft <commit-id>  # 回退到已添加到暂存区但未提交到本地仓库时
+git reset --mixed <commit-id> # 回退到工作区已改动但未添加到暂存区时 (默认)
+git reset --hard <commit-id>  # 回退到工作区未改动时
 ```
 
 切换提交节点但不重置
 
-```shell
-root@debian:~# git checkout <commit-id>
+```
+git checkout <commit-id>
 ```
 
 ### 3.3. 发布
@@ -207,8 +208,8 @@ root@debian:~# git checkout <commit-id>
 
 在 GitHub 创建一个仓库, 克隆仓库到本地即可
 
-```shell
-root@debian:~# git clone <repository-url>
+```
+git clone <repository-url>
 ```
 
 ### 3.3.2. 标准发布

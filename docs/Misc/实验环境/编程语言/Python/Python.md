@@ -15,19 +15,20 @@ python3 -m venv
 
 ### 1.1 Debian
 
-```shell
-root@linux:~# apt install -y python3 python3-pip python3-venv
+```
+┌──(root@debian)-[~]
+└─# apt install -y python3 python3-pip python3-venv python3-dev 
 ```
 
 ### 1.2 Windows
 
 使用管理员权限安装，添加到环境变量
 
-![使用管理员权限安装，添加到环境变量](./../../../../../../images/Python/%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E5%AE%89%E8%A3%85%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
+![使用管理员权限安装，添加到环境变量](./../../../../../images/Python/%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E5%AE%89%E8%A3%85%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 打开 Python 解释器
 
-![打开 Python 解释器](./../../../../../../images/Python/%E6%89%93%E5%BC%80%20Python%20%E8%A7%A3%E9%87%8A%E5%99%A8.png)
+![打开 Python 解释器](./../../../../../images/Python/%E6%89%93%E5%BC%80%20Python%20%E8%A7%A3%E9%87%8A%E5%99%A8.png)
 
 执行 Python 代码，测试环境
 
@@ -35,7 +36,7 @@ root@linux:~# apt install -y python3 python3-pip python3-venv
 print("hello,world")
 ```
 
-![执行 Python 代码，测试环境](./../../../../../../images/Python/%E6%89%A7%E8%A1%8C%20Python%20%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83.png)
+![执行 Python 代码，测试环境](./../../../../../images/Python/%E6%89%A7%E8%A1%8C%20Python%20%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83.png)
 
 ## 2 初始化
 
@@ -391,11 +392,11 @@ d
 
 打开 Pycharm 控制台进入交互模式
 
-![打开 Pycharm 控制台进入交互模式](./../../../../../../images/Python/%E6%89%93%E5%BC%80%20Pycharm%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png)
+![打开 Pycharm 控制台进入交互模式](./../../../../../images/Python/%E6%89%93%E5%BC%80%20Pycharm%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png)
 
 打开 python 终端，进入交互模式
 
-![打开 Python 终端，进入交互模式](./../../../../../../images/Python/%E6%89%93%E5%BC%80%20Python%20%E7%BB%88%E7%AB%AF%EF%BC%8C%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png)
+![打开 Python 终端，进入交互模式](./../../../../../images/Python/%E6%89%93%E5%BC%80%20Python%20%E7%BB%88%E7%AB%AF%EF%BC%8C%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png)
 
 终端执行命令，进入交互模式
 
@@ -403,7 +404,7 @@ d
 PS C:\Users\sec> python
 ```
 
-![终端执行命令，进入交互模式](./../../../../../../images/Python/%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%8C%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png)
+![终端执行命令，进入交互模式](./../../../../../images/Python/%E7%BB%88%E7%AB%AF%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%EF%BC%8C%E8%BF%9B%E5%85%A5%E4%BA%A4%E4%BA%92%E6%A8%A1%E5%BC%8F.png)
 
 > 在终端进入的交互模式可执行 `quit()` ，或者 `exit()` 函数退出
 

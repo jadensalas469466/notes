@@ -60,4 +60,3 @@ root@debian:~# ehole -h
 ```shell
 root@debian:~# ehole finger -u <target-url> -o /path/fileName.json
 ```
-

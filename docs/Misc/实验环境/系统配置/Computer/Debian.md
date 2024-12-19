@@ -315,14 +315,16 @@ Password: 123456
 
 查看 IP
 
-```shell
-root@debian:~# ip a
+```
+┌──(root@debian)-[~]
+└─# ip a
 ```
 
 关机，拍摄快照并命名为 `安装` 
 
-```shell
-root@debian:~# init 0
+```
+┌──(root@debian)-[~]
+└─# init 0
 ```
 
 ## 4 初始化
@@ -335,20 +337,23 @@ PS C:\Users\sec> ssh sec@<os-ip>
 
 切换到 `root` 用户
 
-```shell
-sec@debian:~$ su - root
+```
+┌──(sec@debian)-[~]
+└─$ su - root
 ```
 
 安装基础工具
 
-```shell
-root@debian:~# apt install -y sudo vim curl tree
+```
+┌──(root@debian)-[~]
+└─# apt install -y vim curl
 ```
 
 允许远程登录 `root` 并配置稳定连接
 
-```shell
-root@debian:~# vim /etc/ssh/sshd_config
+```
+┌──(root@debian)-[~]
+└─# vim /etc/ssh/sshd_config
 ```
 
 ```
@@ -359,20 +364,24 @@ root@debian:~# vim /etc/ssh/sshd_config
 
 重启 SSH
 
-```shell
-root@debian:~# systemctl restart ssh.service
+```
+┌──(root@debian)-[~]
+└─# systemctl restart ssh.service
 ```
 
 导入 Kali 的 GPG 密钥
 
-```shell
-root@debian:~# curl -fsSL https://archive.kali.org/archive-key.asc | tee /etc/apt/trusted.gpg.d/kali.asc
+```
+┌──(root@debian)-[~]
+└─# curl -fsSL https://archive.kali.org/archive-key.asc \
+| tee /etc/apt/trusted.gpg.d/kali.asc
 ```
 
 配置 `apt` 源
 
-```shell
-root@debian:~# vim /etc/apt/sources.list
+```
+┌──(root@debian)-[~]
+└─# vim /etc/apt/sources.list
 ```
 
 ```
@@ -383,8 +392,9 @@ deb http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non
 
 配置优先级
 
-```shell
-root@debian:~# vim /etc/apt/preferences
+```
+┌──(root@debian)-[~]
+└─# vim /etc/apt/preferences
 ```
 
 ```
@@ -399,14 +409,26 @@ Pin-Priority: 800
 
 获取更新并更新系统
 
-```shell
-root@debian:~# apt update && apt upgrade && apt dist-upgrade && apt autoremove --purge
+```
+┌──(root@debian)-[~]
+└─# apt update \
+&& apt upgrade \
+&& apt dist-upgrade \
+&& apt autoremove --purge
+```
+
+安装常用工具
+
+```
+┌──(root@debian)-[~]
+└─# apt install -y sudo tree build-essential
 ```
 
 配置网络接口参数
 
-```shell
-root@debian:~# vim /etc/network/interfaces
+```
+┌──(root@debian)-[~]
+└─# vim /etc/network/interfaces
 ```
 
 ```
@@ -425,8 +447,9 @@ iface ens33 inet static
 
 配置 DNS 服务器
 
-```shell
-root@debian:~# vim /etc/resolv.conf
+```
+┌──(root@debian)-[~]
+└─# vim /etc/resolv.conf
 ```
 
 ```
@@ -436,14 +459,16 @@ nameserver 8.8.4.4
 
 在 `hosts` 文件添加域名映射
 
-```shell
-root@debian:~# vim /etc/hosts
+```
+┌──(root@debian)-[~]
+└─# vim /etc/hosts
 ```
 
 重启
 
-```shell
-root@debian:~# reboot
+```
+┌──(root@debian)-[~]
+└─# reboot
 ```
 
 在 Powershell 中删除 SSH 连接缓存
@@ -460,38 +485,53 @@ PS C:\Users\sec> ssh root@example
 
 测试网络
 
-```shell
-root@debian:~# ping g.cn -c 3
+```
+┌──(root@debian)-[~]
+└─# ping g.cn -c 3
 ```
 
 安装 Zsh 并配置为默认 Shell
 
-```shell
-root@debian:~# apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions && chsh -s $(which zsh)
+```
+┌──(root@debian)-[~]
+└─# apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions \
+&& chsh -s $(which zsh)
 ```
 
 配置 Zsh
 
-```shell
-root@debian:~# curl https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc -o ~/.zshrc && source ~/.zshrc
+```
+┌──(root@debian)-[~]
+└─# curl https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc \
+-o ~/.zshrc \
+&& source ~/.zshrc
 ```
 
 安装 tldr
 
-```shell
-root@debian:~# mkdir -p /root/.local/share/tldr && apt install -y tldr && tldr -u
+```
+┌──(root@debian)-[~]
+└─# mkdir -p /root/.local/share/tldr \
+&& apt install -y tldr \
+&& tldr -u
 ```
 
 创建目录
 
-```shell
-root@debian:~# mkdir -p /root/tools/apps /root/tools/drivers /root/tools/scripts /var/www/html/upload
+```
+┌──(root@debian)-[~]
+└─# mkdir -p \
+/root/tools/apps \
+/root/tools/drivers \
+/root/tools/scripts \
+/var/www/html/upload
 ```
 
 关机，拍摄快照并命名为 `初始化` 
 
-```shell
-root@debian:~# init 0
+```
+┌──(root@debian)-[~]
+└─# init 0
 ```
 
 ## 5 Deploy
@@ -540,8 +580,9 @@ root@debian:~# init 0
 
 查看内核版本
 
-```shell
-root@debian:~# uname -r
+```
+┌──(root@debian)-[~]
+└─# uname -r
 6.5.0-kali3-amd64
 ```
 
@@ -549,32 +590,42 @@ root@debian:~# uname -r
 
 > http://http.kali.org/kali/pool/main/l/linux/
 
-```shell
-root@debian:~# wget http://http.kali.org/kali/pool/main/l/linux/linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb && dpkg -i linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb && rm -rf linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb
+```
+┌──(root@debian)-[~]
+└─# wget http://http.kali.org/kali/pool/main/l/linux/linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
+&& dpkg -i linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
+&& rm -rf linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb
 ```
 
 安装依赖
 
-```shell
-root@debian:~# apt install -y build-essential dkms
+```
+┌──(root@debian)-[~]
+└─# apt install -y build-essential dkms
 ```
 
 下载驱动
 
-```shell
-root@debian:~# git clone https://github.com/aircrack-ng/rtl8812au.git /root/tools/drivers/rtl8812au
+```
+┌──(root@debian)-[~]
+└─# git clone https://github.com/aircrack-ng/rtl8812au.git /root/tools/drivers/rtl8812au
 ```
 
 安装驱动
 
-```shell
-root@debian:~# cd /root/tools/drivers/rtl8812au && make dkms_install && cd
+```
+┌──(root@debian)-[~]
+└─# cd /root/tools/drivers/rtl8812au \
+&& make dkms_install \
+&& cd
 ```
 
 > 卸载
 >
-> ```shell
-> root@debian:~# cd /root/tools/drivers/rtl8812au && make dkms_remove && cd
+> ```
+> root@debian:~# cd /root/tools/drivers/rtl8812au \
+> && make dkms_remove \
+> && cd
 > ```
 
 ### 6.2 系统信息
@@ -619,8 +670,9 @@ dpkg -l | grep ssh
 
 打开配置文件配置别名
 
-```shell
-root@debian:~# vim ~/.bashrc
+```
+┌──(root@debian)-[~]
+└─# vim ~/.bashrc
 ```
 
 ```
@@ -629,26 +681,30 @@ alias share='vmhgfs-fuse .host:/ /mnt'
 
 使配置生效
 
-```shell
-root@debian:~# source ~/.zshrc
+```
+┌──(root@debian)-[~]
+└─# source ~/.zshrc
 ```
 
 ### 6.4 历史命令
 
-> 存储历史命令的文件: `~/.bashrc_history` 
+> 存储历史命令的文件: `~/.bash_history` 
 
 覆盖历史命令
 
-```shell
-root@debian:~# shred -z ~/.bash_history
+```
+┌──(root@debian)-[~]
+└─# shred -z ~/.bash_history \
+&& shred -z ~/.zsh_history
 ```
 
 ### 6.5 后台运行
 
 将命令行程序放在后台运行, 即使 SSH 断开连接也不会终止运行
 
-```shell
-root@debian:~# nohup <Command> > /root/log.txt 2>&1 &
+```
+┌──(root@debian)-[~]
+└─# nohup <command> > /root/log.txt 2>&1 &
 ```
 
 ```
@@ -657,28 +713,32 @@ PID
 
 查看后台程序
 
-```shell
-root@debian:~# jobs
+```
+┌──(root@debian)-[~]
+└─# jobs
 ```
 
 > 在当前终端关闭后将失效
 
 实时查看日志
 
-```shell
-root@debian:~# tail -f /root/log.txt
+```
+┌──(root@debian)-[~]
+└─# tail -f /root/log.txt
 ```
 
 终止进程
 
-```shell
-root@debian:~# kill <PID>
+```
+┌──(root@debian)-[~]
+└─# kill <PID>
 ```
 
 强制终止进程
 
-```shell
-root@debian:~# kill -9 <PID>
+```
+┌──(root@debian)-[~]
+└─# kill -9 <PID>
 ```
 
 ---
