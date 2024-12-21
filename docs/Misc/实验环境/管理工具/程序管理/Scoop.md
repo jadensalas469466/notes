@@ -2,10 +2,10 @@
 
 ## 1. 安装
 
-更改执行策略，临时允许所有脚本运行
+更改执行策略, 允许所有脚本运行
 
 ```
-PS C:\Users\sec> Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process
+PS C:\Users\sec> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 下载并执行 Scoop 安装脚本
