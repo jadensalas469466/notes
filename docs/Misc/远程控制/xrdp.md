@@ -1,13 +1,15 @@
 开源的 RDP 软件.
 
-## 1 部署
+## 1. 安装
 
 安装 xrdp
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# apt install -y xrdp
 ```
+
+## 2. 初始化
 
 配置开机自启
 

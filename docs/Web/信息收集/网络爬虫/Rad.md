@@ -1,27 +1,26 @@
-一款专为安全扫描而生的浏览器爬虫。
+用于 Chromium 的人机模拟爬虫.
 
-## 1 部署
-
-> 需要基于 chromium 的浏览器
+## 1 安装
 
 下载
 
-```shell
-┌──(root㉿kali)-[~]
-└─# proxychains4 wget https://github.com/chaitin/rad/releases/download/1.0/rad_linux_amd64.zip
+```
+┌──(root@debian)-[~]
+└─# curl -L https://github.com/chaitin/rad/releases/download/1.0/rad_windows_amd64.zip
 ```
 
 解压
 
-```shell
-┌──(root㉿kali)-[~]
-└─# mkdir /root/tools/rad && unzip rad_linux_amd64.zip -d /root/tools/rad && rm -rf rad_linux_amd64.zip
+```
+┌──(root@debian)-[~]
+└─# unzip ./rad_linux_amd64.zip -d /root/tools/rad \
+&& rm -rf ./rad_linux_amd64.zip
 ```
 
 编写脚本
 
 ```shell
-┌──(root㉿kali)-[~]
+┌──(root@debian)-[~]
 └─# chmod +x /root/tools/rad/rad_linux_amd64 && vim /root/tools/rad/rad.sh
 ```
 
@@ -41,7 +40,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 创建链接
 
 ```shell
-┌──(root㉿kali)-[~]
+┌──(root@debian)-[~]
 └─# chmod +x /root/tools/rad/rad.sh && ln -s /root/tools/rad/rad.sh /usr/local/bin/rad
 ```
 
@@ -60,8 +59,8 @@ C:\Users\sec\rad_config.yml
 ```
 
 ```
-6	enable_image: false               # 启用图片显示
-6	enable_image: true               # 启用图片显示
+6	enable_image: false # 启用图片显示
+6	enable_image: true  # 启用图片显示
 ```
 
 ## 3 使用
@@ -69,7 +68,7 @@ C:\Users\sec\rad_config.yml
 查看帮助
 
 ```shell
-┌──(root㉿kali)-[~]
+┌──(root@debian)-[~]
 └─# rad -h
 ```
 
@@ -102,14 +101,14 @@ target can not be empty. 请输入需要爬取的目标
 基本使用
 
 ```shell
-┌──(root㉿kali)-[~]
+┌──(root@debian)-[~]
 └─# rad -t [url]
 ```
 
 手动登录
 
 ```shell
-┌──(root㉿kali)-[~]
+┌──(root@debian)-[~]
 └─# rad -t [url] -wait-login
 ```
 

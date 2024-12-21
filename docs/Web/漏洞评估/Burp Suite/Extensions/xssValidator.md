@@ -1,6 +1,6 @@
 一款用于自动化验证 XSS 漏洞的 Burp Suite 工具。
 
-## 1 部署
+## 1 安装
 
 安装 [phantomjs](https://phantomjs.org/) 用于接收攻击反馈
 

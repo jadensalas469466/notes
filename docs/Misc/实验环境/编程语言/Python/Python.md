@@ -11,7 +11,7 @@ python3 -m pip
 python3 -m venv
 ```
 
-## 1 部署
+## 1 安装
 
 ### 1.1 Debian
 

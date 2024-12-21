@@ -6,65 +6,20 @@
 
 > HEAD 指的是最新一次的提交
 
-## 1. 部署
+## 1. 安装
 
-**Linux**
+Windows 安装
 
-安装
-
-```shell
-root@debian:~# apt install -y git
+```
+PS C:\Users\sec> scoop install git
 ```
 
-**Windows**
+Linux 安装
 
-配置默认组件
-
-![配置默认组件](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%BB%84%E4%BB%B6.png)
-
-配置默认编辑器
-
-![配置默认编辑器](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%BC%96%E8%BE%91%E5%99%A8.png)
-
-配置默认分支
-
-![配置默认分支](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF.png)
-
-配置默认环境变量
-
-![配置默认环境变量](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
-
-配置默认 OpenSSL
-
-![配置默认 OpenSSL](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%20OpenSSL.png)
-
-配置默认 OpenSSL 库
-
-![配置默认 OpenSSL 库](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%20OpenSSL%20%E5%BA%93.png)
-
-配置默认行尾符号转换
-
-![配置默认行尾符号转换](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E8%A1%8C%E5%B0%BE%E7%AC%A6%E5%8F%B7%E8%BD%AC%E6%8D%A2.png)
-
-配置默认终端
-
-![配置默认终端](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF.png)
-
-配置 git pull 默认行为
-
-![配置 git pull 默认行为](./../../../../images/Git/%E9%85%8D%E7%BD%AE%20git%20pull%20%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA.png)
-
-配置默认凭证管理器
-
-![配置默认凭证管理器](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8.png)
-
-配置默认文件系统缓存
-
-![配置默认文件系统缓存](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98.png)
-
-配置默认实验选项
-
-![配置默认实验选项](./../../../../images/Git/%E9%85%8D%E7%BD%AE%E9%BB%98%E8%AE%A4%E5%AE%9E%E9%AA%8C%E9%80%89%E9%A1%B9.png)
+```
+┌──(root@debian)-[~]
+└─# apt install -y git
+```
 
 ## 2. 初始化
 
@@ -76,37 +31,37 @@ root@debian:~# apt install -y git
 
 配置代理
 
-```powershell
+```
 PS C:\Users\sec> git config --global http.proxy "http://127.0.0.1:10809"
 ```
 
 配置使用 Windows 证书校验
 
-```powershell
+```
 PS C:\Users\sec> git config --global http.sslBackend schannel
 ```
 
 配置用户名
 
-```powershell
+```
 PS C:\Users\sec> git config --global user.name "sec"
 ```
 
 配置邮箱
 
-```powershell
+```
 PS C:\Users\sec> git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
 禁止自动转换换行符
 
-```powershell
+```
 PS C:\Users\sec> git config --global core.autocrlf false
 ```
 
 配置对文件名大小写敏感
 
-```powershell
+```
 PS C:\Users\sec> git config --global --get core.ignorecase
 ```
 
@@ -114,8 +69,9 @@ PS C:\Users\sec> git config --global --get core.ignorecase
 
 配置代理
 
-```shell
-root@debian:~# git config --global http.proxy "http://192.168.1.201:10809"
+```
+┌──(root@debian)-[~]
+└─# git config --global http.proxy "http://192.168.1.201:10809"
 ```
 
 ## 3. 使用

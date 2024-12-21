@@ -2,7 +2,7 @@
 
 ## Debian
 
-## 1 部署
+## 1 安装
 
 安装
 
@@ -38,7 +38,7 @@ root@debian:~# source /path/venv/bin/activate
 
 ## Windows
 
-## 1 部署
+## 1 安装
 
 安装
 

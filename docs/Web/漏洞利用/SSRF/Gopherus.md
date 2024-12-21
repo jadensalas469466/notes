@@ -1,6 +1,6 @@
 在 SSRF 漏洞用于生成 Gopher Payload 的工具。
 
-## 1 部署
+## 1 安装
 
 下载
 

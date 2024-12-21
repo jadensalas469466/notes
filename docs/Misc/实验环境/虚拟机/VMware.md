@@ -6,7 +6,7 @@
 
 > https://softwareupdate.vmware.com/cds/vmw-desktop/ws/
 
-## 2 部署
+## 2 安装
 
 安装后选择用于个人用途即可使用
 

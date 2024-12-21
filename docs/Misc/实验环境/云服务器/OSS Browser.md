@@ -1,6 +1,6 @@
 通过 AccessKey 登录 OSS Browser 上传文件到对象存储 OSS
 
-## 1 部署
+## 1 安装
 
 安装 OSS Browser
 

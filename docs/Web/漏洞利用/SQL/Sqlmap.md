@@ -1,6 +1,6 @@
 SQL 注入 Fuzz。
 
-## 1 部署
+## 1 安装
 
 ```powershell
 PS D:\software> git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git

@@ -1,4 +1,4 @@
-搭建私人 DNS 服务器，避免国际 DNS 服务器被 [GFW](https://zh.wikipedia.org/zh-hans/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E) 污染。
+搭建私人 DNS 服务器，避免国际 DNS 服务器被 [GFW](https://zh.wikipedia.org/zh-hans/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E) 污染.
 
 ## 1 部署
 

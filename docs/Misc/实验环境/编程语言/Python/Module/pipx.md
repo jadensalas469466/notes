@@ -1,6 +1,6 @@
 依赖于 python-pip 和 python-venv, 在独立安装时将自动为每个 Packages 创建单独的虚拟环境.
 
-## 1 部署
+## 1 安装
 
 安装
 
