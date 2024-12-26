@@ -1,34 +1,31 @@
-非关系型数据库管理系统。
+非关系型数据库管理系统.
 
 ## 1 安装
 
 安装 `mariadb` 
 
-```shell
-root@debian:~# apt install -y mariadb-server mariadb-client
+```
+┌──(root@debian)-[~]
+└─# apt install -y mariadb-server mariadb-client
 ```
 
 ## 2 初始化
 
 设置 `mysql` 服务端开机自启
 
-```shell
-root@debian:~# systemctl enable --now mysql
+```
+┌──(root@debian)-[~]
+└─# systemctl enable --now mysql.service
 ```
 
 修改密码
 
-```shell
-root@debian:~# mysql -u root -p
+```
+┌──(root@debian)-[~]
+└─# mysql -u root -p
 Enter password:
 MariaDB [(none)]> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 MariaDB [(none)]> exit;
-```
-
-登录
-
-```shell
-root@debian:~# mysql -u root -p
 ```
 
 ## 3 使用

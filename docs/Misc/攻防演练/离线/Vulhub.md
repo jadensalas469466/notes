@@ -1,70 +1,44 @@
-综合靶场。
+综合靶场.
 
-## 1 安装
+## 1. 安装
 
 下载
 
-```shell
-┌──(root㉿purple)-[~]
-└─# git clone https://github.com/vulhub/vulhub.git /root/tools/vulhub
+```
+┌──(root@debian)-[~]
+└─# git clone https://github.com/vulhub/vulhub.git /root/tools/apps/vulhub
 ```
 
-## 2 使用
+## 2. 使用
 
 查看漏洞环境
 
-```shell
-[root@centos ~]# ls /root/tools/vulhub
+```
+┌──(root@debian)-[~]
+└─# ls /root/tools/apps/vulhub
 ```
 
 启动漏洞环境
 
-```shell
-[root@centos ~]# cd /root/tools/vulhub/[name] && docker-compose build && docker-compose up -d
+```
+┌──(root@debian)-[~]
+└─# cd /root/tools/apps/vulhub/path \
+&& docker image build -t cont . || true \
+&& docker compose up -d
 ```
 
-查看靶场的访问地址
+查看文档
 
-```shell
-[root@centos ~]# vim /root/tools/vulhub/[name]/docker-compose.yml
+```
+┌──(root@debian)-[~/…/apps/vulhub/path]
+└─# less README.zh-cn.md
 ```
 
-```yml
-version: '2'
-services:
- mysql:
-   image: vulhub/[name]:xxxx
-   ports:
-    - "[port]:[port]"
+删除环境
+
 ```
-
-查看复现文档
-
-```shell
-[root@centos ~]# vim README.zh-cn.md
-```
-
-```markdown
-[漏洞]
-[描述]
-受影响版本：[xxxx]
-参考链接：[url]
-[环境搭建]
-[漏洞验证]
-更多测试和利用方法，见参考链接。
-```
-
-若报错
-
-```shell
-ERROR: client version 1.22 is too old. Minimum supported API version is 1.24, please upgrade your client to a newer version
-```
-
-修改 docker-compose.yml 的版本即可
-
-```yml
-1 version: '2'
-1 version: '3'
+┌──(root@debian)-[~/…/apps/vulhub/path]
+└─# docker compose down -v
 ```
 
 ### 2.1 activemq
@@ -81,7 +55,7 @@ ERROR: client version 1.22 is too old. Minimum supported API version is 1.24, pl
 
 访问
 
-> http://centos7-6.local:8161/
+> http://debian:8161/
 
 ![访问](./../../../../images/Vulhub/activemq/ActiveMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2015-5254%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
 

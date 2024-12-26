@@ -1,40 +1,42 @@
-一个综合 Web 靶场。
+一个综合 Web 靶场.
 
-## 1 安装
+## 1. 安装
 
 安装依赖
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
 ```
 
 下载
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# git clone https://github.com/digininja/DVWA.git /var/www/html/dvwa
 ```
 
 修改运行权限
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# chown -R www-data:www-data /var/www/html/
 ```
 
 修改配置文件
 
-```shell
-┌──(root㉿purple)-[~]
-└─# cp /var/www/html/dvwa/config/config.inc.php.dist /var/www/html/dvwa/config/config.inc.php && vim /var/www/html/dvwa/config/config.inc.php
+```
+┌──(root@debian)-[~]
+└─# cp /var/www/html/dvwa/config/config.inc.php.dist \
+/var/www/html/dvwa/config/config.inc.php \
+&& vim /var/www/html/dvwa/config/config.inc.php
 ```
 
 配置数据库管理系统用户名和密码
 
 ```php
-20	$_DVWA[ 'db_user' ]     = 'root';
-21	$_DVWA[ 'db_password' ] = '123456';
+20	$_DVWA[ 'db_user' ]     = getenv('DB_USER') ?: 'root';
+21	$_DVWA[ 'db_password' ] = getenv('DB_PASSWORD') ?: '123456';
 ```
 
 添加谷歌验证码 reCAPTCHA 
@@ -52,8 +54,8 @@
 
 修改 php 配置文件
 
-```shell
-┌──(root㉿purple)-[~]
+```
+┌──(root@debian)-[~]
 └─# vim /etc/php/8.2/apache2/php.ini
 ```
 
@@ -65,28 +67,22 @@
 
 重启 web 服务
 
-```shell
-┌──(root㉿purple)-[~]
-└─# systemctl restart apache2
+```
+┌──(root@debian)-[~]
+└─# systemctl restart apache2.service
 ```
 
-Firefox 访问
+## 2. 初始化
 
-> http://debian.local/dvwa/setup.php
+访问链接初始化
 
-初始化
+> http://debian/dvwa/setup.php
 
-![初始化](./../../../../images/DVWA/%E9%83%A8%E7%BD%B2/%E5%88%9D%E5%A7%8B%E5%8C%96.png)
+## 3. 使用
 
-等待完成
+访问
 
-![等待完成](./../../../../images/DVWA/%E9%83%A8%E7%BD%B2/%E7%AD%89%E5%BE%85%E5%AE%8C%E6%88%90.png)
-
-## 2 使用
-
-Firefox 访问
-
-> http://debian.local/dvwa/
+> http://debian/dvwa/login.php
 
 账户
 
@@ -102,7 +98,7 @@ smithy:password
 
 ![修改安全级别](./../../../../images/DVWA/%E4%BD%BF%E7%94%A8/%E4%BF%AE%E6%94%B9%E5%AE%89%E5%85%A8%E7%BA%A7%E5%88%AB.png)
 
-### 2.1 csrf
+### 3.1 csrf
 
 > http://purple.local/dvwa/vulnerabilities/csrf/
 
@@ -110,7 +106,7 @@ smithy:password
 > 2. 之后会利用这些请求包构造一个网页形式的 poc，将这个 poc 发送到公网
 > 3. 最后诱使目标账号在登录状态下点击 poc 链接，即可伪造用户请求进行敏感操作
 
-### 2.1.1 low
+### 3.1.1 low
 
 ```
 目标账户：admin:password
@@ -119,7 +115,7 @@ smithy:password
 
 登录个人账户拦截请求包，并提交修改密码请求
 
-![登录个人账户拦截请求包，并提交修改密码请求](./../../../../images/DVWA/%E4%BD%BF%E7%94%A8/csrf/low/%E7%99%BB%E5%BD%95%E4%B8%AA%E4%BA%BA%E8%B4%A6%E6%88%B7%E6%8B%A6%E6%88%AA%E8%AF%B7%E6%B1%82%E5%8C%85%EF%BC%8C%E5%B9%B6%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81%E8%AF%B7%E6%B1%82.png)
+![登录个人账户拦截请求包，并提交修改密码请求](./../../../../images/DVWA/%E4%BD%BF%E7%94%A8/csrf/low/%E7%99%BB%E5%BD%95%E4%B8%AA%E4%BA%BA%E8%B4%A6%E6%88%B7%E6%8B%A6%E6%88%AA%E8%AF%B7%E6%B1%82%E5%8C%85%EF%BC%8C%E5%B9%B6%E6%8F%90%E4%BA%A4%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81%E8%AF%B7%E6%B1%83.png)
 
 构造 poc
 
@@ -138,7 +134,7 @@ smithy:password
 
 > 布置在公网上时可以购买短链接或相似域名伪造官网
 
-### 2.1.2 medium
+### 3.1.2 medium
 
 > 1. 这里使用了 Referer 校验用户请求是否来自官网。
 > 2. 假设官网为 `purple.local` ，当用户在这个网站进行操作时校验了服务端当前所在网站为官网，因此是正常请求，不会拦截。
@@ -183,7 +179,7 @@ smithy:password
 </html>
 ```
 
-### 2.1.3 high
+### 3.1.3 high
 
 需要利用 xss(dom) 漏洞获取 token 
 

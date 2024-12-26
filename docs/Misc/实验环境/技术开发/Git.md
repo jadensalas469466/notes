@@ -75,7 +75,14 @@ PS C:\Users\sec> git config --global --get core.ignorecase
 
 ```
 ┌──(root@debian)-[~]
-└─# git config --global http.proxy "http://192.168.1.201:10809"
+└─# git config --global http.proxy 'http://192.168.1.201:10809'
+```
+
+限制 HTTP 协议版本
+
+```
+┌──(root@debian)-[~]
+└─# git config --global http.version HTTP/1.1
 ```
 
 ## 3. 使用

@@ -4,8 +4,8 @@
 
 安装
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# apt install -y tor
 ```
 
@@ -13,20 +13,16 @@
 
 配置为每分钟切换一次代理链
 
-```shell
-┌──(root㉿kali)-[~]
-└─# vim /etc/tor/torrc
 ```
-
-```
-MaxCircuitDirtiness 60
-NewCircuitPeriod 60
+┌──(root@debian)-[~]
+└─# echo 'MaxCircuitDirtiness 60' >> /etc/tor/torrc \
+&& echo 'NewCircuitPeriod 60' >> /etc/tor/torrc
 ```
 
 配置开机自启
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# systemctl enable --now tor.service
 ```
 

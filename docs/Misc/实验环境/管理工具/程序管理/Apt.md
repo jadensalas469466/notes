@@ -1,4 +1,4 @@
-Debian 的程序管理工具。
+Debian 的程序管理工具.
 
 ## 1 帮助
 
@@ -14,7 +14,8 @@ apt show <some-app>   # 显示软件信息
 软件安装
 
 ```
-apt install <some-app>                # 安装软件
+apt install <some-app>                       # 安装软件
+apt install <some-app> -t bookworm-backports # 指定软件源安装
 apt reinstall <some-app>              # 重装软件
 apt install --only-upgrade <some-app> # 升级软件
 ```
@@ -32,8 +33,15 @@ apt full-upgrade # 完整更新 (完全更新整个系统，忽略兼容性，�
 ```
 apt remove <some-app>  # 卸载软件 (保留配置文件)
 apt purge <some-app>   # 卸载软件 (不保留配置文件)
-apt autoremove         # 自动删除未使用的安装包 (保留配置文件)
-apt autoremove --purge # 自动删除未使用的安装包 (不保留配置文件)
+```
+
+安装包清理
+
+```
+apt clean              # 删除已下载的安装包
+autoclean              # 删除旧的已下载安装包
+apt autoremove         # 自动删除未使用的依赖 (保留配置文件)
+apt autoremove --purge # 自动删除未使用的依赖 (不保留配置文件)
 ```
 
 ---

@@ -76,14 +76,14 @@ root@local:~# scp root@server:/etc/ssl/caddy/ssl-test.crt /root/
 
 安装服务
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# apt install -y v2ray
 ```
 
 运行服务并设置开机自启
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# systemctl enable --now v2ray.service
 ```

@@ -17,7 +17,7 @@ python3 -m venv
 
 ```
 ┌──(root@debian)-[~]
-└─# apt install -y python3 python3-pip python3-venv python3-dev 
+└─# apt install -y python3 python3-pip python3-venv python3-dev
 ```
 
 ### 1.2 Windows
@@ -40,10 +40,10 @@ print("hello,world")
 
 ## 2 初始化
 
-配置代理
+配置镜像加速
 
-```shell
-root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10809"
+```
+root@debian:~# python3 -m pip config set global.index-url 'https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple'
 ```
 
 ## 3 使用

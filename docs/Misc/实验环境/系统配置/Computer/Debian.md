@@ -1,6 +1,6 @@
-一个稳定的服务器操作系统。
+一个稳定的服务器操作系统.
 
-## 1 准备
+## 1. 准备
 
 debian-12.8.0-amd64-DVD-1.iso
 
@@ -17,10 +17,10 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 目录
 
 ```
-C:\Users\sec\Documents\Virtual Machines\HostName
+C:\Users\sec\Documents\Virtual Machines\debian
 ```
 
-## 2 配置
+## 2. 配置
 
 移动镜像文件到 `iso` 文件夹
 
@@ -67,13 +67,13 @@ Debian 12.x 64 位
 虚拟机名称
 
 ```
-<host-name>
+debian
 ```
 
 位置
 
 ```
-C:\Users\sec\Documents\Virtual Machines\HostName
+C:\Users\sec\Documents\Virtual Machines\debian
 ```
 
 处理器数量
@@ -131,7 +131,7 @@ SCSI
 磁盘文件
 
 ```
-C:\Users\sec\Documents\Virtual Machines\HostName\HostName.vmdk
+C:\Users\sec\Documents\Virtual Machines\debian\debian.vmdk
 ```
 
 自定义硬件
@@ -152,7 +152,7 @@ C:\Users\sec\Documents\Virtual Machines\iso\debian-12.8.0-amd64-DVD-1.iso
 
 拍摄快照并命名为 `配置` 
 
-## 3 安装
+## 3. Install
 
 开启此虚拟机进行安装
 
@@ -187,7 +187,7 @@ Configure the network
 
 ```
 Hostname:
-<host-name>
+debian
 ```
 
 ```
@@ -327,11 +327,11 @@ Password: 123456
 └─# init 0
 ```
 
-## 4 初始化
+## 4. 初始化
 
 启动虚拟机，使用 SSH 登录 `sec` 用户
 
-```powershell
+```
 PS C:\Users\sec> ssh sec@<os-ip>
 ```
 
@@ -342,18 +342,11 @@ PS C:\Users\sec> ssh sec@<os-ip>
 └─$ su - root
 ```
 
-安装基础工具
-
-```
-┌──(root@debian)-[~]
-└─# apt install -y vim curl
-```
-
 允许远程登录 `root` 并配置稳定连接
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/ssh/sshd_config
+└─# nano /etc/ssh/sshd_config
 ```
 
 ```
@@ -369,6 +362,13 @@ PS C:\Users\sec> ssh sec@<os-ip>
 └─# systemctl restart ssh.service
 ```
 
+安装 curl
+
+```
+┌──(root@debian)-[~]
+└─# apt install -y curl
+```
+
 导入 Kali 的 GPG 密钥
 
 ```
@@ -381,20 +381,19 @@ PS C:\Users\sec> ssh sec@<os-ip>
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/apt/sources.list
+└─# nano /etc/apt/sources.list
 ```
 
 ```
-deb https://mirrors.ustc.edu.cn/kali kali-rolling main non-free non-free-firmware contrib
-
-deb http://mirrors.ustc.edu.cn/debian bookworm-updates main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non-free contrib non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
 ```
 
 配置优先级
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/apt/preferences
+└─# nano /etc/apt/preferences
 ```
 
 ```
@@ -403,7 +402,7 @@ Pin: release o=Kali,a=kali-rolling
 Pin-Priority: 900
 
 Package: *
-Pin: release o=Debian,n=bookworm-updates
+Pin: release o=Debian,a=testing
 Pin-Priority: 800
 ```
 
@@ -414,6 +413,7 @@ Pin-Priority: 800
 └─# apt update \
 && apt upgrade \
 && apt dist-upgrade \
+&& apt clean \
 && apt autoremove --purge
 ```
 
@@ -421,7 +421,10 @@ Pin-Priority: 800
 
 ```
 ┌──(root@debian)-[~]
-└─# apt install -y sudo tree build-essential
+└─# apt install -y vim sudo tree unzip apache2 build-essential \
+zsh zsh-syntax-highlighting zsh-autosuggestions \
+&& systemctl enable --now apache2.service \
+&& chsh -s $(which zsh)
 ```
 
 配置网络接口参数
@@ -437,7 +440,7 @@ Pin-Priority: 800
 12  # iface ens33 inet dhcp
 auto ens33
 iface ens33 inet static
-    address <os-ip>
+    address 192.168.1.203
     netmask 255.255.255.0
     gateway 192.168.1.1
     dns-nameservers 8.8.8.8 8.8.4.4
@@ -473,14 +476,14 @@ nameserver 8.8.4.4
 
 在 Powershell 中删除 SSH 连接缓存
 
-```powershell
+```
 PS C:\Users\sec> ssh-keygen -R <os-ip>
 ```
 
-启动虚拟机，使用 SSH 登录 `root` 用户
+等待虚拟机启动, 使用 SSH 登录 `root` 用户
 
-```powershell
-PS C:\Users\sec> ssh root@example
+```
+PS C:\Users\sec> ssh root@debian
 ```
 
 测试网络
@@ -488,14 +491,6 @@ PS C:\Users\sec> ssh root@example
 ```
 ┌──(root@debian)-[~]
 └─# ping g.cn -c 3
-```
-
-安装 Zsh 并配置为默认 Shell
-
-```
-┌──(root@debian)-[~]
-└─# apt install -y zsh zsh-syntax-highlighting zsh-autosuggestions \
-&& chsh -s $(which zsh)
 ```
 
 配置 Zsh
@@ -507,7 +502,7 @@ PS C:\Users\sec> ssh root@example
 && source ~/.zshrc
 ```
 
-安装 tldr
+配置 tldr
 
 ```
 ┌──(root@debian)-[~]
@@ -534,36 +529,48 @@ PS C:\Users\sec> ssh root@example
 └─# init 0
 ```
 
-## 5 Deploy
+## 5. Deploy
 
-|                           attack                           |
+### 5.1. debian
+
+|                            环境                            |
 | :--------------------------------------------------------: |
-|     [Tor](https://gitlab.torproject.org/tpo/core/tor)      |
-| [Proxychains-NG](https://github.com/rofl0r/proxychains-ng) |
 |             [Git](https://github.com/git/git)              |
-|             [Docker](https://www.docker.com/)              |
 |             [Python](https://www.python.org/)              |
-|         [ARL](https://github.com/Aabyss-Team/ARL)          |
-|      [ShuiZe](https://github.com/0x727/ShuiZe_0x727)       |
-|          [Ffuf](https://www.kali.org/tools/ffuf/)          |
+|                   [Go](https://go.dev/)                    |
+|             [Docker](https://www.docker.com/)              |
+| [Proxychains-NG](https://github.com/rofl0r/proxychains-ng) |
+|     [Tor](https://gitlab.torproject.org/tpo/core/tor)      |
+|          [MongoDB](https://www.mongodb.com/zh-cn)          |
 
-|                           defend                            |
+|                            靶场                             |
 | :---------------------------------------------------------: |
-|                 [git](https://git-scm.com/)                 |
-|              [v2fly](https://github.com/v2fly)              |
-|  [proxychains4](https://github.com/rofl0r/proxychains-ng)   |
-|             [Python3](https://www.python.org/)              |
-|                    [go](https://go.dev/)                    |
-|                [java](https://adoptium.net/)                |
-|           [apache2](https://www.apache.org/free/)           |
-|                 [php](https://www.php.net/)                 |
-|            [composer](https://getcomposer.org/)             |
-|           [mysql](https://www.mongodb.com/zh-cn)            |
-|              [Docker](https://www.docker.com/)              |
-| [pikachu](https://github.com/zhuifengshaonianhanlu/pikachu) |
-|          [dvwa](https://github.com/digininja/DVWA)          |
+| [Pikachu](https://github.com/zhuifengshaonianhanlu/pikachu) |
+|          [DVWA](https://github.com/digininja/DVWA)          |
+|         [Vulhub](https://github.com/vulhub/vulhub)          |
 
-|                      server                      |
+|                        工具                        |
+| :------------------------------------------------: |
+|     [ARL](https://github.com/Aabyss-Team/ARL)      |
+|  [ShuiZe](https://github.com/0x727/ShuiZe_0x727)   |
+| [Subfinder](https://www.kali.org/tools/subfinder/) |
+|     [naabu](https://www.kali.org/tools/naabu/)     |
+|                   httpx-toolkit                    |
+|                      cdnNone                       |
+|                       ipGet                        |
+|                       naabu                        |
+|                   hostCollision                    |
+|                      whatweb                       |
+|                   observer_ward                    |
+|                       EHole                        |
+|                       Finger                       |
+|                       nikto                        |
+|                       nuclei                       |
+|      [ffuf](https://www.kali.org/tools/ffuf/)      |
+
+### 5.2. server
+
+|                                                  |
 | :----------------------------------------------: |
 |        [UFW](https://github.com/jbq/ufw)         |
 |        [Caddy](https://caddyserver.com/)         |
@@ -741,12 +748,60 @@ PID
 └─# kill -9 <PID>
 ```
 
+### 6.7. 添加多个源
+
+导入 Kali 的 GPG 密钥
+
+```
+┌──(root@debian)-[~]
+└─# curl -fsSL https://archive.kali.org/archive-key.asc \
+| tee /etc/apt/trusted.gpg.d/kali.asc
+```
+
+配置 `apt` 源
+
+```
+┌──(root@debian)-[~]
+└─# nano /etc/apt/sources.list
+```
+
+```
+deb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non-free contrib non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
+```
+
+配置优先级
+
+```
+┌──(root@debian)-[~]
+└─# nano /etc/apt/preferences
+```
+
+```
+Package: *
+Pin: release o=Kali,a=kali-rolling
+Pin-Priority: 900
+
+Package: *
+Pin: release o=Debian,a=testing
+Pin-Priority: 800
+```
+
+获取更新并更新系统
+
+```
+┌──(root@debian)-[~]
+└─# apt update \
+&& apt upgrade \
+&& apt dist-upgrade \
+&& apt clean \
+&& apt autoremove --purge
+```
+
 ---
 
 参考链接
 
 - [Debian](https://www.debian.org/)
 - [Debian Docs](https://www.debian.org/doc/)
-- [Kali](https://www.kali.org/)
-- [Kali Docs](https://www.kali.org/docs/)
 

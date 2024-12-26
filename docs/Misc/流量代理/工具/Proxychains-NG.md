@@ -4,8 +4,8 @@
 
 安装
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# apt install -y proxychains4
 ```
 
@@ -13,22 +13,21 @@
 
 修改配置文件
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# vim /etc/proxychains4.conf
 ```
 
 ```
- 10  dynamic_chain
- 18  # strict_chain
 161  # socks4        127.0.0.1 9050
-162  socks5          127.0.0.1 9050
+162  socks5          192.168.1.201 10808
 ```
 
 重启网络服务并测试代理
 
-```shell
-root@debian:~# systemctl restart networking && systemctl restart networking && proxychains4 curl ip.sb
+```
+┌──(root@debian)-[~]
+└─# systemctl restart networking && proxychains4 curl ip.sb
 ```
 
 ## 3 使用

@@ -1,31 +1,34 @@
-一种高效的编程语言。
+一种高效的编程语言.
 
-## 1 安装
+## 1. 安装
 
 安装
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# apt install -y golang-go
 ```
 
-## 2 初始化
+## 2. 初始化
 
 配置源
 
-```shell
+```
 ┌──(root㉿kali)-[~]
-└─# go env -w GO111MODULE=on && go env -w GOPROXY=https://goproxy.cn,direct
+└─# go env -w GOPROXY='https://goproxy.cn,direct'
 ```
 
-添加至环境变量
+修改 Go 的安装目录并添加环境变量
 
-```shell
+```
 ┌──(root㉿a-kali-23)-[~]
-└─# echo 'export PATH=$PATH:/root/go/bin' >> ~/.zshrc && source ~/.zshrc
+└─# echo 'export GOPATH=/root/tools/apps/go' >> ~/.zshrc && \
+echo 'export GOBIN=$GOPATH/bin' >> ~/.zshrc && \
+echo 'export PATH=$PATH:$GOBIN' >> ~/.zshrc && \
+source ~/.zshrc
 ```
 
-## 3 使用
+## 3. 使用
 
 创建项目 `D:\share\code\go\main.go` 
 
