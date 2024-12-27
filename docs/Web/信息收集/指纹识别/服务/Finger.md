@@ -2,12 +2,11 @@ Web 服务指纹识别工具.
 
 ## 1. 安装
 
-克隆最新一次提交
+克隆仓库
 
 ```
 ┌──(root@debian)-[~]
-└─# git clone --depth 1 \
-https://github.com/EASY233/Finger.git /root/tools/apps/finger \
+└─# git clone https://github.com/EASY233/Finger.git /root/tools/apps/finger \
 && cd /root/tools/apps/finger
 ```
 
@@ -46,7 +45,7 @@ https://github.com/EASY233/Finger.git /root/tools/apps/finger \
 
 ```
 ┌──(root@debian)-[~/tools/apps/finger]
-└─# vim ./finger.sh
+└─# nano ./finger.sh
 ```
 
 ```sh
@@ -81,19 +80,22 @@ python3 Finger.py "$@"
 └─# finger -h
 ```
 
-## 3 使用
+## 3. 使用
 
 识别目标使用的 Web 服务
 
 ```
-┌──(root@debian)-[~]
-└─# finger -u <target-url> -o fileName.json
+finger -u <target-url> -o fileName.json
 ```
 
 查看结果
 
 ```
-┌──(root@debian)-[~]
-└─# ls /root/tools/apps/finger/output/
+ls /root/tools/apps/finger/output/
 ```
 
+---
+
+参考链接
+
+- [Finger](https://github.com/EASY233/Finger)

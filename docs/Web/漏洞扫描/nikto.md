@@ -14,7 +14,11 @@ Web 漏洞扫描工具.
 经典扫描
 
 ```
-┌──(root@debian)-[~]
-└─# nikto -h <target-url> -o fileName.txt
+nikto -h <target-url> -o fileName.txt
 ```
 
+---
+
+参考链接
+
+- [nikto](https://www.kali.org/tools/nikto/)

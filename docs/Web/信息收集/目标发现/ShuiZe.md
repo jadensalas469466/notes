@@ -4,40 +4,46 @@
 
 克隆项目
 
-```shell
-root@debian:~# git clone https://github.com/0x727/ShuiZe_0x727.git /root/tools/shuize && cd /root/tools/shuize
+```
+┌──(root@debian)-[~]
+└─# git clone https://github.com/0x727/ShuiZe_0x727.git /root/tools/apps/shuize && cd /root/tools/apps/shuize
 ```
 
 激活虚拟环境
 
-```shell
-root@debian:~/tools/shuize# python -m venv ./venv && source ./venv/bin/activate
+```
+┌──(root@debian)-[~/tools/apps/shuize]
+└─# python3 -m venv ./venv && source ./venv/bin/activate
 ```
 
 执行安装脚本
 
-```shell
-(venv) root@debian:~/tools/shuize# chmod 777 ./build.sh && ./build.sh
+```
+┌──(venv)─(root@debian)-[~/tools/apps/shuize]
+└─# chmod 777 ./build.sh && ./build.sh
 ```
 
 查看帮助
 
-```shell
-(venv) root@debian:~/tools/shuize# python ./ShuiZe.py -h
+```
+┌──(venv)─(root@debian)-[~/tools/apps/shuize]
+└─# python3 ./ShuiZe.py -h
 ```
 
 退出虚拟环境
 
-```shell
-(venv) root@debian:~/tools/shuize# deactivate
+```
+┌──(venv)─(root@debian)-[~/tools/apps/shuize]
+└─# deactivate
 ```
 
 ## 2 初始化
 
 编写运行脚本
 
-```shell
-root@debian:~/tools/shuize# vim ./shuize.sh
+```
+┌──(root@debian)-[~/tools/apps/shuize]
+└─# nano ./shuize.sh
 ```
 
 ```sh
@@ -47,25 +53,27 @@ root@debian:~/tools/shuize# vim ./shuize.sh
 set -e
 
 # 激活虚拟环境
-source /root/tools/shuize/venv/bin/activate
+source /root/tools/apps/shuize/venv/bin/activate
 
 # 获取链接的实际路径并切换到该目录
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 shuize
-python ./ShuiZe.py "$@"
+python3 ./ShuiZe.py "$@"
 ```
 
 创建链接
 
-```shell
-root@debian:~/tools/shuize# chmod +x ./shuize.sh && ln -s /root/tools/shuize/shuize.sh /usr/local/bin/shuize && cd
+```
+┌──(root@debian)-[~/tools/apps/shuize]
+└─# chmod +x ./shuize.sh && ln -s /root/tools/apps/shuize/shuize.sh /usr/local/bin/shuize && cd
 ```
 
 查看帮助
 
-```shell
-root@debian:~# shuize -h
+```
+┌──(root@debian)-[~]
+└─# shuize -h
 ```
 
 ## 3 使用

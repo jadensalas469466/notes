@@ -4,15 +4,15 @@
 
 下载安装脚本
 
-```shell
-┌──(root㉿kali)-[~]
-└─# wget https://raw.githubusercontent.com/Aabyss-Team/ARL/master/misc/setup-arl.sh
+```
+┌──(root@debian)-[~]
+└─# curl -L https://raw.githubusercontent.com/Aabyss-Team/ARL/master/misc/setup-arl.sh -o setup-arl.sh
 ```
 
 为安装脚本添加执行权限并运行
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# chmod +x ./setup-arl.sh && ./setup-arl.sh && rm -rf ./setup-arl.sh
 ```
 

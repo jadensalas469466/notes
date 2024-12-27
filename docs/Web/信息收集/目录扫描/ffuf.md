@@ -1,5 +1,16 @@
 一款 Fuzzing 工具.
 
+## 1. 安装
+
+安装
+
+```
+┌──(root@debian)-[~]
+└─# apt install -y ffuf
+```
+
+## 2. 使用
+
 GET 扫描
 
 ```

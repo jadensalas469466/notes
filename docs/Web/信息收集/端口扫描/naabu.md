@@ -4,15 +4,16 @@
 
 安装
 
-```shell
-root@debian:~# apt install -y naabu
+```
+┌──(root@debian)-[~]
+└─# go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 ```
 
 ## 2. 使用
 
 扫描 Top 1000 端口并跳过 CND
 
-```shell
+```
 root@debian:~# naabu -l fileName.txt -tp 1000 -ec -o fileName.txt
 ```
 

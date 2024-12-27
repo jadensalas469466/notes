@@ -4,16 +4,18 @@ Web 服务指纹识别工具.
 
 安装
 
-```shell
-root@debian:~# apt install -y whatweb
+```
+┌──(root@debian)-[~]
+└─# apt install -y whatweb
 ```
 
 ## 2. 使用
 
 识别目标使用的 Web 服务
 
-```shell
-root@debian:~# whatweb <target-url> | tee fileName.txt
+```
+┌──(root@debian)-[~]
+└─# whatweb <target-url> | tee fileName.txt
 ```
 
 ---

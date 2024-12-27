@@ -1,4 +1,4 @@
-Web 漏洞 POC 扫描工具。
+Web 漏洞 POC 扫描工具.
 
 ## 1. 安装
 
@@ -6,7 +6,7 @@ Web 漏洞 POC 扫描工具。
 
 ```
 ┌──(root@debian)-[~]
-└─# sudo apt install -y nuclei
+└─# apt install -y nuclei
 ```
 
 ## 2. 使用
@@ -14,22 +14,19 @@ Web 漏洞 POC 扫描工具。
 指定 PoC 验证目标漏洞
 
 ```
-┌──(root@debian)-[~]
-└─# nuclei -u https://example.com -t fileName.yaml -o fileName.txt
+nuclei -u https://example.com -t fileName.yaml -o fileName.txt
 ```
 
 更新模板
 
 ```
-┌──(root@debian)-[~]
-└─# nuclei -update-templates
+nuclei -update-templates
 ```
 
 查看模板
 
 ```
-┌──(root@debian)-[~]
-└─#ls /root/.local/nuclei-templates
+ls /root/.local/nuclei-templates
 ```
 
 ---

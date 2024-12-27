@@ -4,16 +4,18 @@
 
 安装
 
-```shell
-root@debian:~# apt install -y httpx-toolkit
+```
+┌──(root@debian)-[~]
+└─# apt install -y httpx-toolkit
 ```
 
 ## 2. 使用
 
 检测存活的站点
 
-```shell
-root@debian:~# httpx-toolkit -l fileName.txt -o fileName.txt
+```
+┌──(root@debian)-[~]
+└─# httpx-toolkit -l fileName.txt -o fileName.txt
 ```
 
 ---

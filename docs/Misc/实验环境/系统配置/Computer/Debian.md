@@ -421,7 +421,7 @@ Pin-Priority: 800
 
 ```
 ┌──(root@debian)-[~]
-└─# apt install -y vim sudo tree unzip apache2 build-essential \
+└─# apt install -y vim sudo tree unzip apache2 build-essential libpcap-dev \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
 && systemctl enable --now apache2.service \
 && chsh -s $(which zsh)
@@ -549,24 +549,23 @@ PS C:\Users\sec> ssh root@debian
 |          [DVWA](https://github.com/digininja/DVWA)          |
 |         [Vulhub](https://github.com/vulhub/vulhub)          |
 
-|                        工具                        |
-| :------------------------------------------------: |
-|     [ARL](https://github.com/Aabyss-Team/ARL)      |
-|  [ShuiZe](https://github.com/0x727/ShuiZe_0x727)   |
-| [Subfinder](https://www.kali.org/tools/subfinder/) |
-|     [naabu](https://www.kali.org/tools/naabu/)     |
-|                   httpx-toolkit                    |
-|                      cdnNone                       |
-|                       ipGet                        |
-|                       naabu                        |
-|                   hostCollision                    |
-|                      whatweb                       |
-|                   observer_ward                    |
-|                       EHole                        |
-|                       Finger                       |
-|                       nikto                        |
-|                       nuclei                       |
-|      [ffuf](https://www.kali.org/tools/ffuf/)      |
+|                             工具                             |
+| :----------------------------------------------------------: |
+|          [ARL](https://github.com/Aabyss-Team/ARL)           |
+|       [ShuiZe](https://github.com/0x727/ShuiZe_0x727)        |
+|      [subfinder](https://www.kali.org/tools/subfinder/)      |
+|          [naabu](https://www.kali.org/tools/naabu/)          |
+|  [httpx-toolkit](https://www.kali.org/tools/httpx-toolkit/)  |
+|    [cdnNone](https://github.com/jadensalas469466/cdnNone)    |
+|      [ipGet](https://github.com/jadensalas469466/ipGet)      |
+| [hostCollision](https://github.com/alwaystest18/hostCollision) |
+|        [whatweb](https://www.kali.org/tools/whatweb/)        |
+|  [observer_ward](https://github.com/emo-crab/observer_ward)  |
+|      [EHole](https://github.com/EdgeSecurityTeam/EHole)      |
+|         [Finger](https://github.com/EASY233/Finger)          |
+|          [nikto](https://www.kali.org/tools/nikto/)          |
+|         [nuclei](https://www.kali.org/tools/nuclei/)         |
+|           [ffuf](https://www.kali.org/tools/ffuf/)           |
 
 ### 5.2. server
 

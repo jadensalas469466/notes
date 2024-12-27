@@ -4,16 +4,18 @@
 
 克隆仓库
 
-```shell
-root@debian:~# git clone https://github.com/jadensalas469466/ipGet.git /root/tools/ipGet && cd /root/tools/ipGet
+```
+┌──(root@debian)-[~]
+└─# git clone https://github.com/jadensalas469466/ipGet.git /root/tools/apps/ipGet && cd /root/tools/apps/ipGet
 ```
 
 ## 2. 初始化
 
 编写运行脚本
 
-```shell
-root@debian:~/tools/ipGet# vim ./ipGet.sh
+```
+┌──(root@debian)-[~/tools/apps/ipGet]
+└─# nano ./ipGet.sh
 ```
 
 ```sh
@@ -31,20 +33,23 @@ python3 ipGet.py "$@"
 
 创建链接
 
-```shell
-root@debian:~/tools/ipGet# chmod +x ./ipGet.sh && ln -s /root/tools/ipGet/ipGet.sh /usr/local/bin/ipGet && cd
+```
+┌──(root@debian)-[~/tools/apps/ipGet]
+└─# chmod +x ./ipGet.sh && ln -s /root/tools/apps/ipGet/ipGet.sh /usr/local/bin/ipGet && cd
 ```
 
 查看帮助
 
-```shell
-root@debian:~# ipGet
+```
+┌──(root@debian)-[~]
+└─# ipGet
 ```
 
 ## 3. 使用
 
-```shell
-root@debian:~# ipGet -d fileName.txt -o fileName.txt
+```
+┌──(root@debian)-[~]
+└─# ipGet -d fileName.txt -o fileName.txt
 ```
 
 ---
