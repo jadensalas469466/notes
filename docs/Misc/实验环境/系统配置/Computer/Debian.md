@@ -582,7 +582,7 @@ PS C:\Users\sec> ssh root@debian
 
 ## 6 使用
 
-### 6.1 配置无线网卡驱动
+### 6.1. 配置无线网卡驱动
 
 查看内核版本
 
@@ -634,7 +634,7 @@ PS C:\Users\sec> ssh root@debian
 > && cd
 > ```
 
-### 6.2 系统信息
+### 6.2. 系统信息
 
 查看 CPU 使用情况
 
@@ -672,7 +672,7 @@ lsblk
 dpkg -l | grep ssh
 ```
 
-### 6.3 挂载共享文件
+### 6.3. 挂载共享文件
 
 打开配置文件配置别名
 
@@ -692,7 +692,7 @@ alias share='vmhgfs-fuse .host:/ /mnt'
 └─# source ~/.zshrc
 ```
 
-### 6.4 历史命令
+### 6.4. 历史命令
 
 > 存储历史命令的文件: `~/.bash_history` 
 
@@ -704,7 +704,7 @@ alias share='vmhgfs-fuse .host:/ /mnt'
 && shred -z ~/.zsh_history
 ```
 
-### 6.5 后台运行
+### 6.5. 后台运行
 
 将命令行程序放在后台运行, 即使 SSH 断开连接也不会终止运行
 
@@ -747,7 +747,7 @@ PID
 └─# kill -9 <PID>
 ```
 
-### 6.7. 添加多个源
+### 6.6. 添加多个源
 
 导入 Kali 的 GPG 密钥
 
@@ -795,6 +795,13 @@ Pin-Priority: 800
 && apt dist-upgrade \
 && apt clean \
 && apt autoremove --purge
+```
+
+6.7. 配置全局代理
+
+```
+export http_proxy=socks5://192.168.1.201:10808
+export https_proxy=$http_prox
 ```
 
 ---
