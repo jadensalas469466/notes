@@ -1,5 +1,3 @@
-US Anime:
-
 ```
 "Hilda"
 "The Owl House"

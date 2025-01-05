@@ -1,6 +1,6 @@
 图形化用户界面操作系统。
 
-## 1 准备
+## 1. 准备
 
 zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
 
@@ -17,10 +17,10 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 目录
 
 ```
-C:\Users\sec\Documents\Virtual Machines\HostName
+C:\Users\sec\Documents\Virtual Machines\windows
 ```
 
-## 2 配置
+## 2. 配置
 
 移动镜像文件到 `iso` 文件夹
 
@@ -67,13 +67,13 @@ Windows 10 x64
 虚拟机名称
 
 ```
-<host-name>
+windows
 ```
 
 位置
 
 ```
-C:\Users\sec\Documents\Virtual Machines\HostName
+C:\Users\sec\Documents\Virtual Machines\windows
 ```
 
 固件类型
@@ -137,7 +137,7 @@ NVMe
 磁盘文件
 
 ```
-C:\Users\sec\Documents\Virtual Machines\HostName\HostName.vmdk
+C:\Users\sec\Documents\Virtual Machines\windows\windows.vmdk
 ```
 
 编辑虚拟机设置
@@ -191,7 +191,7 @@ VMware
 
 拍摄快照并命名为 `配置` 
 
-## 3 安装
+## 3. 安装
 
 输入语言和其他首选项
 
@@ -299,7 +299,7 @@ sec
 
 关机，快照命名为 `安装` 
 
-## 4 初始化
+## 4. 初始化
 
 [配置电源选项](https://keithpeck177271.gitbook.io/notes/misc/wen-ti-ji-jin/issues-of-windows#id-2-tui-jian-dian-yuan-she-zhi)
 
@@ -358,7 +358,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 关机，快照命名为 `初始化` 
 
-## 5 部署
+## 5. 部署
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |
@@ -379,23 +379,19 @@ C:\Windows\System32\drivers\etc\hosts
 
 |                            物理机                            |
 | :----------------------------------------------------------: |
-|               [7-Zip](https://www.7-zip.org/)                |
-|            [AnyTXT Searcher](https://anytxt.net/)            |
+|                [AnyTXT](https://anytxt.net/)                 |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
 | [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
-|              [Eraser](https://eraser.heidi.ie/)              |
 |        [Everything](https://www.voidtools.com/zh-cn/)        |
 |    [Firefox](https://www.mozilla.org/en-US/firefox/new/)     |
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
-|                 [Git](https://git-scm.com/)                  |
 |           [GlassWire](https://www.glasswire.com/)            |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |  [HashCalculator](https://github.com/hrpzcf/HashCalculator)  |
 |                  [He3](https://he3.app/zh/)                  |
 |      [ImageGlass](https://github.com/d2phap/ImageGlass)      |
-| [Internet Download Manager](https://www.internetdownloadmanager.com/) |
 |     [Java](https://www.java.com/en/download/manual.jsp)      |
 |   [KeePassXC](https://github.com/keepassxreboot/keepassxc)   |
 | [Koodo Reader](https://github.com/koodo-reader/koodo-reader) |
@@ -404,7 +400,6 @@ C:\Windows\System32\drivers\etc\hosts
 |            [LockHunter](https://lockhunter.com/)             |
 | [mitan](https://github.com/kkbo8005/mitan?tab=readme-ov-file) |
 |             [MuMu模拟器](https://mumu.163.com/)              |
-|                  [Nmap](https://nmap.org/)                   |
 | [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus) |
 |            [OBS Studio](https://obsproject.com/)             |
 |           [Pinta](https://www.pinta-project.com/)            |
@@ -412,12 +407,10 @@ C:\Windows\System32\drivers\etc\hosts
 |             [Postman](https://www.postman.com/)              |
 |              [Potplayer](https://potplayer.tv/)              |
 |           [Proxifier](https://www.proxifier.com/)            |
-|              [Python](https://www.python.org/)               |
-| [qBittorrent-Enhanced-Edition](https://github.com/c0re100/qBittorrent-Enhanced-Edition) |
 |            [RaiDrive](https://www.raidrive.com/)             |
 |          [RealTimeSync](https://freefilesync.org/)           |
+|                  [Scoop](https://scoop.sh/)                  |
 |      [Stretchly](https://github.com/hovancik/stretchly)      |
-|  [Subtitle Mask](https://github.com/chocovon/subtitle-mask)  |
 |             [Syncthing](https://syncthing.net/)              |
 |              [Telegram](https://telegram.org/)               |
 |       [TTime](https://github.com/InkTimeRecord/TTime)        |
@@ -425,7 +418,6 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |
 |      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
-|                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) |
 | [Windows Terminal](https://github.com/microsoft/terminal?tab=readme-ov-file) |
@@ -433,7 +425,7 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Xmind](https://xmind.app/)                  |
 |          [Yakit](https://github.com/yaklang/yakit)           |
 
-## 6 使用
+## 6. 使用
 
 ### 6.1 查看帮助
 

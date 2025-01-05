@@ -22,21 +22,9 @@ python3 -m venv
 
 ### 1.2 Windows
 
-使用管理员权限安装，添加到环境变量
-
-![使用管理员权限安装，添加到环境变量](./../../../../../images/Python/%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E5%AE%89%E8%A3%85%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
-
-打开 Python 解释器
-
-![打开 Python 解释器](./../../../../../images/Python/%E6%89%93%E5%BC%80%20Python%20%E8%A7%A3%E9%87%8A%E5%99%A8.png)
-
-执行 Python 代码，测试环境
-
-```python
-print("hello,world")
+```powershell
+PS C:\Users\sec> scoop install python
 ```
-
-![执行 Python 代码，测试环境](./../../../../../images/Python/%E6%89%A7%E8%A1%8C%20Python%20%E4%BB%A3%E7%A0%81%EF%BC%8C%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83.png)
 
 ## 2 初始化
 

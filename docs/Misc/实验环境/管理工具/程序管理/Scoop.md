@@ -25,7 +25,7 @@ PS C:\Users\sec> scoop config proxy 127.0.0.1:10809
 安装基础工具
 
 ```
-PS C:\Users\sec> scoop install aria2 7zip git sudo scoop-search
+PS C:\Users\sec> scoop install aria2 7zip git sudo scoop-search sdelete vim python
 ```
 
 添加 SPC Bucket
@@ -34,7 +34,20 @@ PS C:\Users\sec> scoop install aria2 7zip git sudo scoop-search
 PS C:\Users\sec> scoop bucket add spc https://github.com/lzwme/scoop-proxy-cn
 ```
 
-## 3. 使用
+## 3. 部署
+
+|                            scoop                             |
+| :----------------------------------------------------------: |
+|              [aria2](https://aria2.github.io/)               |
+|                [7zip](https://www.7-zip.org/)                |
+|                 [git](https://git-scm.com/)                  |
+|          [gsudo](https://github.com/gerardog/gsudo)          |
+|  [scoop-search](https://github.com/tokiedokie/scoop-search)  |
+| [sdelete](https://learn.microsoft.com/zh-cn/sysinternals/downloads/sdelete) |
+|                 [vim](https://www.vim.org/)                  |
+|              [python](https://www.python.org/)               |
+
+## 4. 使用
 
 查看帮助
 
