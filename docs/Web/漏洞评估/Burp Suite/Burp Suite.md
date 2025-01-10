@@ -60,23 +60,11 @@ WshShell.Run command, 0
 
 将 Burp Suite Professional 快捷方式的目标修改为启动脚本
 
-浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` 
+浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` 并安装
 
 > http://burpsuite/
 
 ![浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` ](./../../../../images/Burp%20Suite/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE%20Burp%20Suite%20%E4%BB%A3%E7%90%86%E6%89%93%E5%BC%80%E4%BB%A5%E4%B8%8B%E9%93%BE%E6%8E%A5%EF%BC%8C%E4%B8%8B%E8%BD%BD%20%60cacert.der%60%20.png)
-
-双击 `cacert.der` ，安装证书
-
-![双击 `cacert.der` ，安装证书](./../../../../images/Burp%20Suite/%E5%8F%8C%E5%87%BB%20%60cacert.der%60%20%EF%BC%8C%E5%AE%89%E8%A3%85%E8%AF%81%E4%B9%A6.png)
-
-选择安装到当前用户
-
-![选择安装到当前用户](./../../../../images/Burp%20Suite/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%88%B0%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7.png)
-
-选择存储到受信任的根证书颁发机构
-
-![选择存储到受信任的根证书颁发机构](./../../../../images/Burp%20Suite/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
 
 ## 4 初始化
 
@@ -92,10 +80,6 @@ WshShell.Run command, 0
 
 ![更改外观字体大小和主题](./../../../../images/Burp%20Suite/%E6%9B%B4%E6%94%B9%E5%A4%96%E8%A7%82%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%92%8C%E4%B8%BB%E9%A2%98.png)
 
-设置永久折叠侧板
-
-![设置永久折叠侧板](./../../../../images/Burp%20Suite/%E8%AE%BE%E7%BD%AE%E6%B0%B8%E4%B9%85%E6%8A%98%E5%8F%A0%E4%BE%A7%E6%9D%BF.png)
-
 修改 HTTP 消息显示字体
 
 ![修改 HTTP 消息显示字体](./../../../../images/Burp%20Suite/%E4%BF%AE%E6%94%B9%20HTTP%20%E6%B6%88%E6%81%AF%E6%98%BE%E7%A4%BA%E5%AD%97%E4%BD%93.png)
@@ -103,10 +87,6 @@ WshShell.Run command, 0
 指定 UTF-8 字符集
 
 ![指定 UTF-8 字符集](./../../../../images/Burp%20Suite/%E6%8C%87%E5%AE%9A%20UTF-8%20%E5%AD%97%E7%AC%A6%E9%9B%86.png)
-
-配置 [Jython Standalone](https://www.jython.org/) 环境
-
-![配置 Jython Standalone 环境](./../../../../images/Burp%20Suite/%E9%85%8D%E7%BD%AE%20Jython%20Standalone%20%E7%8E%AF%E5%A2%83.png)
 
 保存用户设置到安装目录
 
@@ -116,15 +96,21 @@ WshShell.Run command, 0
 
 ![启动时从文件读取设置](./../../../../images/Burp%20Suite/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%8E%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E8%AE%BE%E7%BD%AE.png)
 
-在安装目录创建文件夹 `Extension` 
+## 5.1 部署
+
+在安装目录创建文件夹 `Extensions` 
 
 ```
-C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extension
+C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 ```
 
 > 所有的扩展都要下载到这个目录中
 
-## 5 部署
+下载 [jython-standalone.jar](https://central.sonatype.com/artifact/org.python/jython-standalone/versions) , 到 `Extensions` 文件夹
+
+启动 Burp Suite , 配置 JAR 环境
+
+![启动 Burp Suite , 配置 JAR 环境](./../../../../images/Burp%20Suite/%E5%90%AF%E5%8A%A8%20Burp%20Suite%20,%20%E9%85%8D%E7%BD%AE%20JAR%20%E7%8E%AF%E5%A2%83.png)
 
 |                          Extensions                          |
 | :----------------------------------------------------------: |

@@ -1,10 +1,9 @@
 ```
 "Hilda"
-"The Owl House"
+"Gravity Falls"
 "The Dragon Prince"
 "Amphibia"
 "The Ghost and Molly McGee"
-"Gravity Falls"
 "CliffSide"
 "Adventure Time"
 "Steven Universe Future"

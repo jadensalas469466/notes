@@ -36,31 +36,31 @@ Linux 安装
 配置代理
 
 ```
-PS C:\Users\sec> git config --global http.proxy "http://127.0.0.1:10809"
+git config --global http.proxy 'http://127.0.0.1:10808'
 ```
 
 配置使用 Windows 证书校验
 
 ```
-PS C:\Users\sec> git config --global http.sslBackend schannel
+git config --global http.sslBackend schannel
 ```
 
 配置用户名
 
 ```
-PS C:\Users\sec> git config --global user.name "sec"
+git config --global user.name "sec"
 ```
 
 配置邮箱
 
 ```
-PS C:\Users\sec> git config --global user.email "<private-name>@users.noreply.github.com"
+git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
 禁止自动转换换行符
 
 ```
-PS C:\Users\sec> git config --global core.autocrlf false
+git config --global core.autocrlf false
 ```
 
 配置对文件名大小写敏感
@@ -74,15 +74,13 @@ PS C:\Users\sec> git config --global --get core.ignorecase
 配置代理
 
 ```
-┌──(root@debian)-[~]
-└─# git config --global http.proxy 'http://192.168.1.201:10809'
+git config --global http.proxy 'http://192.168.1.201:10808'
 ```
 
 限制 HTTP 协议版本
 
 ```
-┌──(root@debian)-[~]
-└─# git config --global http.version HTTP/1.1
+git config --global http.version HTTP/1.1
 ```
 
 ## 3. 使用
@@ -185,49 +183,49 @@ git clone <repository-url>
 
 进入本地项目目录
 
-```shell
+```
 root@debian:~# cd ./test
 ```
 
 初始化仓库
 
-```shell
+```
 root@debian:~# git init
 ```
 
 命名默认分支为 `main` 
 
-```shell
+```
 root@debian:~# git branch -M main
 ```
 
 配置远程仓库
 
-```shell
+```
 root@debian:~# git remote add origin https://github.com/<user-name>/test.git
 ```
 
 创建 `README.md` 文件
 
-```shell
+```
 root@debian:~# echo "test" > README.md
 ```
 
 暂存指定文件的更改
 
-```shell
+```
 root@debian:~# git add README.md
 ```
 
 提交
 
-```shell
+```
 root@debian:~# git commit -m "first commit"
 ```
 
 推送到远程仓库的指定分支 `main` 
 
-```shell
+```
 root@debian:~# git push -u origin main
 ```
 
@@ -237,51 +235,24 @@ root@debian:~# git push -u origin main
 
 列出全局配置
 
-```shell
-┌──(root㉿kali-23)-[~]
-└─# git config --global --list
+```
+git config --global --list
 ```
 
-查看源
+镜像加速
 
-```shell
-┌──(root㉿kali)-[~]
-└─# git config --global --get-regexp "url\..*\.insteadOf"
+```
+git config --global --get-regexp "url\..*\.insteadOf" # 查看镜像加速
+git config --global url."https://ghp.ci/https://github.com/".insteadOf https://github.com/                                   # 配置镜像加速
+git config --global --unset url."https://ghp.ci/https://github.com/.insteadOf" # 移除镜像加速
 ```
 
-配置源
+代理
 
-```shell
-┌──(root㉿kali)-[~]
-└─# git config --global url."https://ghp.ci/https://github.com/".insteadOf https://github.com/
 ```
-
-移除源
-
-```shell
-┌──(root㉿kali)-[~]
-└─# git config --global --unset url."https://ghp.ci/https://github.com/.insteadOf"
-```
-
-查看代理
-
-```shell
-┌──(root㉿kali)-[~]
-└─# git config --global http.proxy
-```
-
-配置代理
-
-```shell
-┌──(root㉿kali)-[~]
-└─# git config --global http.proxy "http://127.0.0.1:10809"
-```
-
-移除代理
-
-```shell
-┌──(root㉿kali)-[~]
-└─# git config --global --unset http.proxy
+git config --global http.proxy                          # 查看代理
+git config --global http.proxy "http://127.0.0.1:10808" # 配置代理
+git config --global --unset http.proxy                  # 移除代理
 ```
 
 ### 3.4.1. 部署 SSH 到 GitHub
@@ -292,61 +263,8 @@ root@debian:~# git push -u origin main
 
 配置 Git 使用 Windows SSH 客户端
 
-```powershell
-PS C:\Users\sec> git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 ```
-
-## 4. 帮助
-
-```shell
-sec@a MINGW64 ~
-$ git -h
-```
-
-```
-用法：git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--config-env=<name>=<envvar>] <command> [<args>]
-
-这些是在各种情况下使用的常见 Git 命令：
-
-开始一个工作区（也可参阅：git 帮助 教程）
-   clone     将存储库克隆到新目录中
-   init      创建一个空的 Git 存储库或重新初始化现有存储库
-
-处理当前更改（也可参阅：git 帮助 日常）
-   add       将文件内容添加到索引中
-   mv        移动或重命名文件、目录或符号链接
-   restore   恢复工作树文件
-   rm        从工作树和索引中删除文件
-
-检查历史记录和状态（也可参阅：git 帮助 修订）
-   bisect    使用二分搜索找到引入错误的提交
-   diff      显示提交之间的更改，提交和工作树之间的更改等
-   grep      打印匹配模式的行
-   log       显示提交日志
-   show      显示各种类型的对象
-   status    显示工作树状态
-
-增长、标记和调整您的常见历史记录
-   branch    列出、创建或删除分支
-   commit    记录对存储库的更改
-   merge     将两个或多个开发历史记录合并在一起
-   rebase    在另一个基本尖端之上重新应用提交
-   reset     将当前 HEAD 重置为指定状态
-   switch    切换分支
-   tag       创建、列出、删除或验证用 GPG 签名的标签对象
-
-合作（也可参阅：git 帮助 工作流程）
-   fetch     从另一个存储库下载对象和引用
-   pull      从另一个存储库或本地分支获取并集成
-   push      更新远程引用以及关联的对象
-
-'git help -a' 和 'git help -g' 列出可用的子命令和一些概念指南。
-请参阅 'git help <command>' 或 'git help <concept>' 了解特定子命令或概念。
-请参阅 'git help git' 以获取系统概述。
+git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 ```
 
 ---

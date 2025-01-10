@@ -22,51 +22,35 @@
 
 > C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods
 
-> 通用 Mod 配置菜单：https://www.nexusmods.com/stardewvalley/mods/5098
+> 通用 Mod 配置菜单: https://www.nexusmods.com/stardewvalley/mods/5098
 >
-> 核心模组：https://www.nexusmods.com/stardewvalley/mods/3213
+> 核心模组: https://www.nexusmods.com/stardewvalley/mods/3213
 >
-> 内容补丁：https://www.nexusmods.com/stardewvalley/mods/1915
+> UI 信息: https://www.nexusmods.com/stardewvalley/mods/7098
 >
-> 核心补丁：https://www.nexusmods.com/stardewvalley/mods/20618
+> F1 查看详细信息: https://www.nexusmods.com/stardewvalley/mods/541
 >
-> 更好的工艺：https://www.nexusmods.com/stardewvalley/mods/11115
+> 缩放视野: https://www.nexusmods.com/stardewvalley/mods/7363
 >
-> UI 信息套件：https://github.com/Annosz/UIInfoSuite2
+> 跳过钓鱼游戏: https://www.nexusmods.com/stardewvalley/mods/2697
 >
-> 解读一切：https://www.nexusmods.com/stardewvalley/mods/541
+> 快速动画: https://www.nexusmods.com/stardewvalley/mods/1089
 >
-> > ```
-> > 按 F1 即可查看有关光标下所有内容的实时信息。
-> > ```
+> 自动门: https://www.nexusmods.com/stardewvalley/mods/3109
 >
-> NPC 位置：https://www.nexusmods.com/stardewvalley/mods/239
+> 镰刀收割: https://www.nexusmods.com/stardewvalley/mods/2731
 >
-> 整理箱子：https://www.nexusmods.com/stardewvalley/mods/518
+> 可通行的农作物: https://www.nexusmods.com/stardewvalley/mods/15223
 >
-> 跳过钓鱼游戏：https://www.nexusmods.com/stardewvalley/mods/2697
+> 随处打开箱子: https://www.nexusmods.com/stardewvalley/mods/518
 >
-> 自动门：https://www.nexusmods.com/stardewvalley/mods/3109
+> 梯子定位: https://www.nexusmods.com/stardewvalley/mods/3094
 >
-> 更大的背包：https://www.nexusmods.com/stardewvalley/mods/1845 
+> 拖拉机: https://www.nexusmods.com/stardewvalley/mods/1401 
 >
-> 更多的戒指：https://www.nexusmods.com/stardewvalley/mods/3214
+> 自动生产: https://www.nexusmods.com/stardewvalley/mods/1063
 >
-> 可通行的农作物：https://www.nexusmods.com/stardewvalley/mods/15223
+> 沙漠矿洞电梯: https://www.nexusmods.com/stardewvalley/mods/963
 >
-> 拖拉机：https://www.nexusmods.com/stardewvalley/mods/1401 
->
-> 电话呼叫木匠：https://www.nexusmods.com/stardewvalley/mods/26122
->
-> 增加木匠售品：https://www.nexusmods.com/stardewvalley/mods/26961
->
-> 自动浇水施肥：https://www.nexusmods.com/stardewvalley/mods/21036
->
-> 自动生产：https://www.nexusmods.com/stardewvalley/mods/1063
->
-> 自由恋爱：https://www.nexusmods.com/stardewvalley/mods/10021
->
-> 沙漠矿洞电梯：https://www.nexusmods.com/stardewvalley/mods/963
->
-> 更好的箱子：https://www.nexusmods.com/stardewvalley/mods/9791
+> 增加木匠售品: https://www.nexusmods.com/stardewvalley/mods/26961
 

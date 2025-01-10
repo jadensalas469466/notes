@@ -11,7 +11,7 @@ PS C:\Users\sec> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Curren
 下载并执行 Scoop 安装脚本
 
 ```
-PS C:\Users\sec> irm get.scoop.sh -Proxy 'http://127.0.0.1:10809' | iex
+PS C:\Users\sec> irm get.scoop.sh -Proxy 'http://127.0.0.1:10808' | iex
 ```
 
 ## 2. 初始化
@@ -19,19 +19,25 @@ PS C:\Users\sec> irm get.scoop.sh -Proxy 'http://127.0.0.1:10809' | iex
 配置代理
 
 ```
-PS C:\Users\sec> scoop config proxy 127.0.0.1:10809
+scoop config proxy 127.0.0.1:10808
 ```
 
 安装基础工具
 
 ```
-PS C:\Users\sec> scoop install aria2 7zip git sudo scoop-search sdelete vim python
+scoop install aria2 7zip git
 ```
 
 添加 SPC Bucket
 
 ```
-PS C:\Users\sec> scoop bucket add spc https://github.com/lzwme/scoop-proxy-cn
+scoop bucket add spc https://github.com/lzwme/scoop-proxy-cn
+```
+
+安装常用工具
+
+```
+scoop install sudo scoop-search vim sdelete python
 ```
 
 ## 3. 部署
@@ -115,7 +121,7 @@ scoop cleanup SomeSoftware -k # 删除过期软件的下载缓存
 代理配置
 
 ```
-scoop config proxy 127.0.0.1:10809 # 添加代理
+scoop config proxy 127.0.0.1:10808 # 添加代理
 scoop config rm proxy              # 删除代理
 ```
 

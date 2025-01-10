@@ -12,13 +12,13 @@
 
 > https://github.com/jadensalas469466/tools/raw/refs/heads/main/app/other/Burp%20Suite/Extensions/HaE/HaE.zip
 
-配置文件 Config.yml 和规则文件 Rules.yml 会放在固定目录下：
+配置文件 Config.yml 和规则文件 Rules.yml 放在固定目录下：
 
 > Linux/Mac用户的配置文件目录：~/.config/HaE/
 >
 > Windows用户的配置文件目录：%USERPROFILE%/.config/HaE/
 >
-> 可以选择将配置文件存放在 HaE Jar包的同级目录下的 /.config/HaE/ 中
+> 可以选择将配置文件存放在 HaE Jar 包的同级目录下的 /.config/HaE/ 中
 
 在 MarkInfo 中查看敏感信息
 
