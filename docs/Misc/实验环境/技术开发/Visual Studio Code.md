@@ -34,19 +34,6 @@ socks5://127.0.0.1:10808
 
 ![工作区信任](./../../../../images/Visual%20Studio%20Code/%E5%B7%A5%E4%BD%9C%E5%8C%BA%E4%BF%A1%E4%BB%BB.png)
 
-## 2 Extensions
-
-|                          Extensions                          |
-| :----------------------------------------------------------: |
-| [Extensions for Visual Studio Code](https://marketplace.visualstudio.com/) |
-| [Bracket Pair Color DLW](https://marketplace.visualstudio.com/items?itemName=BracketPairColorDLW.bracket-pair-color-dlw) |
-| [Chinese (Simplified) (简体中文) Language Pack for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MS-CEINTL.vscode-language-pack-zh-hans) |
-| [Code Translate](https://marketplace.visualstudio.com/items?itemName=w88975.code-translate) |
-| [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go) |
-| [Hex Editor](https://marketplace.visualstudio.com/items?itemName=ms-vscode.hexeditor) |
-| [indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) |
-| [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) |
-
 ---
 
 参考链接

@@ -25,7 +25,7 @@ MC60H-DWHD5-H80U9-6V85M-8280D
 创建文件夹用于存储镜像
 
 ```
-C:\Users\sec\Documents\Virtual Machines\ISO
+C:\Users\sec\Documents\Virtual Machines\iso
 ```
 
 取消自适应窗口
