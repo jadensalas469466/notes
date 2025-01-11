@@ -411,7 +411,7 @@ C:\Windows\System32\drivers\etc\hosts
 |          [v2rayN](https://github.com/2dust/v2rayN)           |
 |      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
-| [VMware](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) |
+| [VMware](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 | [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US) |
 |                [微信](https://weixin.qq.com/)                |
 |                 [Xmind](https://xmind.app/)                  |
