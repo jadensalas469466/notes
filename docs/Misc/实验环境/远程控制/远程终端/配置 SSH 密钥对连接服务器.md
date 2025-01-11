@@ -14,22 +14,6 @@ PS C:\Users\sec> ssh-keygen -t ed25519 -f C:\Users\sec\.ssh\ssh-test
 Generating public/private ed25519 key pair.
 Enter passphrase (empty for no passphrase):123456
 Enter same passphrase again:123456
-Your identification has been saved in C:\Users\sec\.ssh\ssh-test
-Your public key has been saved in C:\Users\sec\.ssh\ssh-test.pub
-The key fingerprint is:
-SHA256:cr8ZyfprzEIKUvvBLrxmDObdwDbglIJiTlw/b2TvbPc sec@desktop
-The key's randomart image is:
-+--[ED25519 256]--+
-|                 |
-|   .             |
-|o ...            |
-|+++ .o o         |
-|=+ + o* S        |
-| .= B o=.+ .     |
-| o B B.+oo=      |
-|  . B = .=+=     |
-|   o.o  o+*..E   |
-+----[SHA256]-----+
 ```
 
 查看 SSH 密钥对

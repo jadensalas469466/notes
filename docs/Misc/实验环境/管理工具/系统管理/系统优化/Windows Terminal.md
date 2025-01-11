@@ -18,13 +18,9 @@ Windows 上的命令行工具。
 
 ![修改主题](./../../../../../../images/Windows%20Terminal/%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98.png)
 
-始终在通知区域中显示图标
-
-![始终在通知区域中显示图标](./../../../../../../images/Windows%20Terminal/%E5%A7%8B%E7%BB%88%E5%9C%A8%E9%80%9A%E7%9F%A5%E5%8C%BA%E5%9F%9F%E4%B8%AD%E6%98%BE%E7%A4%BA%E5%9B%BE%E6%A0%87.png)
-
 下载 Dracula
 
-> https://github.com/dracula/windows-terminal/
+> https://draculatheme.com/windows-terminal
 
 打开 `json` 设置文件
 
@@ -75,9 +71,9 @@ Windows 上的命令行工具。
 
 ![修改配色方案并修改字体大小为 18](./../../../../../../images/Windows%20Terminal/%E4%BF%AE%E6%94%B9%E9%85%8D%E8%89%B2%E6%96%B9%E6%A1%88%E5%B9%B6%E4%BF%AE%E6%94%B9%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E4%B8%BA%2018.png)
 
-修改启动目录(改为家目录)
+修改启动目录为家目录
 
-![修改启动目录](./../../../../../../images/Windows%20Terminal/%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E7%9B%AE%E5%BD%95.png)
+![修改启动目录为家目录](./../../../../../../images/Windows%20Terminal/%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E7%9B%AE%E5%BD%95%E4%B8%BA%E5%AE%B6%E7%9B%AE%E5%BD%95.png)
 
 ## 2 使用
 
