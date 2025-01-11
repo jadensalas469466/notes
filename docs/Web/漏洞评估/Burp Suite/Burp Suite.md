@@ -106,7 +106,7 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 
 > 所有的扩展都要下载到这个目录中
 
-下载 [jython-standalone.jar](https://central.sonatype.com/artifact/org.python/jython-standalone/versions) , 到 `Extensions` 文件夹
+下载 [jython-standalone.jar](https://central.sonatype.com/artifact/org.python/jython-standalone/versions) 到 `Extensions` 文件夹
 
 启动 Burp Suite , 配置 JAR 环境
 

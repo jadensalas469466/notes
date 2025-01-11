@@ -14,20 +14,18 @@
 
 **安装 Dracula 主题**
 
-下载 `Dracula.xml` 
+下载到 Notepad++ 根目录中
 
 > https://draculatheme.com/notepad-plus-plus
 
-将 Dracula 复制到 Notepad++ 根目录中
-
 ```
-C:\Program Files\Notepad++\Dracula
+C:\Program Files\Notepad++\notepad-plus-plus
 ```
 
 以管理员身份运行 Notepad++，导入 `Dracula.xml`
 
 ```
-C:\Program Files\Notepad++\Dracula\Dracula.xml
+C:\Program Files\Notepad++\notepad-plus-plus\Dracula.xml
 ```
 
 ![以管理员身份运行 Notepad++，导入 `Dracula.xml`](./../../../../../../images/Notepad++/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%20Notepad++%EF%BC%8C%E5%AF%BC%E5%85%A5%20%60Dracula.xml%60.png)

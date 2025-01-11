@@ -57,7 +57,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 下载
 
 ```powershell
-PS C:\Users\sec> Invoke-WebRequest -Uri "https://github.com/chaitin/xray/releases/download/1.9.11/xray_windows_amd64.exe.zip" -Proxy "http://127.0.0.1:10809" -OutFile "xray_linux_amd64.zip"
+PS C:\Users\sec> Invoke-WebRequest -Uri "https://github.com/chaitin/xray/releases/download/1.9.11/xray_windows_amd64.exe.zip" -Proxy "http://127.0.0.1:10808" -OutFile "xray_linux_amd64.zip"
 ```
 
 windows 中使用 start.bat 脚本

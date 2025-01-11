@@ -9,7 +9,7 @@
 修改共享文件夹
 
 ```
-C:/Users/sec/share/mumuplayer
+C:/Users/sec/share/MuMu共享文件夹
 ```
 
 ![修改共享文件夹](./../../../../../../images/MuMu%E6%A8%A1%E6%8B%9F%E5%99%A8/%E4%BF%AE%E6%94%B9%E5%85%B1%E4%BA%AB%E6%96%87%E4%BB%B6%E5%A4%B9.png)

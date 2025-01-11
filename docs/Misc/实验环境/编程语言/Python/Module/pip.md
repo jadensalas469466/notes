@@ -14,7 +14,7 @@ root@debian:~# apt install -y python3-pip
 
 
 ```shell
-root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10809"
+root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10808"
 ```
 
 ## 3 使用
@@ -90,7 +90,7 @@ root@debian:~# python3 -m pip config unset global.index-url
 配置代理
 
 ```shell
-root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10809"
+root@debian:~# python3 -m pip config set global.proxy "http://192.168.1.201:10808"
 ```
 
 删除代理

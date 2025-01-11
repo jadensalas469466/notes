@@ -32,8 +32,8 @@
 
 ```
 [Service]
-Environment="HTTP_PROXY=http://192.168.1.201:10809"
-Environment="HTTPS_PROXY=http://192.168.1.201:10809"
+Environment="HTTP_PROXY=http://192.168.1.201:10808"
+Environment="HTTPS_PROXY=http://192.168.1.201:10808"
 Environment="NO_PROXY=localhost,127.0.0.1,192.168.1.0/24"
 ```
 

@@ -391,41 +391,31 @@ C:\Windows\System32\drivers\etc\hosts
 |             [Geek](https://geekuninstaller.com/)             |
 |           [GlassWire](https://www.glasswire.com/)            |
 |       [Google Chrome](https://www.google.com/chrome/)        |
-|  [HashCalculator](https://github.com/hrpzcf/HashCalculator)  |
-|                  [He3](https://he3.app/zh/)                  |
-|      [ImageGlass](https://github.com/d2phap/ImageGlass)      |
+|            [ImageGlass](https://imageglass.org/)             |
 |     [Java](https://www.java.com/en/download/manual.jsp)      |
 |             [KeePassXC](https://keepassxc.org/)              |
-| [Koodo Reader](https://github.com/koodo-reader/koodo-reader) |
-| [科来网络分析系统 技术交流版](https://www.colasoft.com.cn/products/capsa.php) |
-|     [LocalSend](https://github.com/localsend/localsend)      |
+|        [Koodo Reader](https://www.koodoreader.com/en)        |
+|             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
-| [mitan](https://github.com/kkbo8005/mitan?tab=readme-ov-file) |
-|             [MuMu模拟器](https://mumu.163.com/)              |
-| [Notepad++](https://github.com/notepad-plus-plus/notepad-plus-plus) |
-|            [OBS Studio](https://obsproject.com/)             |
+|         [Notepad++](https://notepad-plus-plus.org/)          |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
-|             [Postman](https://www.postman.com/)              |
 |              [Potplayer](https://potplayer.tv/)              |
-|           [Proxifier](https://www.proxifier.com/)            |
-|            [RaiDrive](https://www.raidrive.com/)             |
-|          [RealTimeSync](https://freefilesync.org/)           |
 |                  [Scoop](https://scoop.sh/)                  |
-|      [Stretchly](https://github.com/hovancik/stretchly)      |
+|         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
 |              [Telegram](https://telegram.org/)               |
-|       [TTime](https://github.com/InkTimeRecord/TTime)        |
+|            [TTime](https://ttime.timerecord.cn/)             |
 |     [TurboTop](https://www.savardsoftware.com/turbotop/)     |
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |
 |      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) |
-| [Windows Terminal](https://github.com/microsoft/terminal?tab=readme-ov-file) |
+| [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US) |
 |                [微信](https://weixin.qq.com/)                |
 |                 [Xmind](https://xmind.app/)                  |
-|          [Yakit](https://github.com/yaklang/yakit)           |
+|                [Yakit](https://yaklang.com/)                 |
 
 ## 6. 使用
 
