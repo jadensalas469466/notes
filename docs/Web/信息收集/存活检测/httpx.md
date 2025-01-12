@@ -6,7 +6,7 @@
 
 ```
 ┌──(root@debian)-[~]
-└─# apt install -y httpx-toolkit
+└─# go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 ```
 
 ## 2. 使用
@@ -15,11 +15,12 @@
 
 ```
 ┌──(root@debian)-[~]
-└─# httpx-toolkit -l fileName.txt -o fileName.txt
+└─# httpx -l fileName.txt -o fileName.txt
 ```
 
 ---
 
 参考链接
 
-- [httpx-toolkit](https://www.kali.org/tools/httpx-toolkit/)
+- [httpx](https://www.kali.org/tools/httpx-toolkit/)
+

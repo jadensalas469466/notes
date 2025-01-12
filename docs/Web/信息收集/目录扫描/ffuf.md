@@ -6,7 +6,7 @@
 
 ```
 ┌──(root@debian)-[~]
-└─# apt install -y ffuf
+└─# go install github.com/ffuf/ffuf/v2@latest
 ```
 
 ## 2. 使用

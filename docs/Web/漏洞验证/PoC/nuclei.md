@@ -6,7 +6,7 @@ Web 漏洞 POC 扫描工具.
 
 ```
 ┌──(root@debian)-[~]
-└─# apt install -y nuclei
+└─# go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
 ## 2. 使用

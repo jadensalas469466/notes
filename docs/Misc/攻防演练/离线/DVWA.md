@@ -56,13 +56,13 @@
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/php/8.2/apache2/php.ini
+└─# vim /etc/php/8.4/apache2/php.ini
 ```
 
 ```ini
-508	display_errors = On
-517	display_startup_errors = On
-870	allow_url_include = On
+504	display_errors = On
+513	display_startup_errors = On
+866	allow_url_include = On
 ```
 
 重启 web 服务

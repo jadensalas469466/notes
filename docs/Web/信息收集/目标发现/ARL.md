@@ -6,14 +6,14 @@
 
 ```
 ┌──(root@debian)-[~]
-└─# curl -L https://raw.githubusercontent.com/Aabyss-Team/ARL/master/misc/setup-arl.sh -o setup-arl.sh
+└─# curl -LO https://raw.githubusercontent.com/Aabyss-Team/ARL/master/misc/setup-arl.sh
 ```
 
 为安装脚本添加执行权限并运行
 
 ```
 ┌──(root@debian)-[~]
-└─# chmod +x ./setup-arl.sh && ./setup-arl.sh && rm -rf ./setup-arl.sh
+└─# bash setup-arl.sh && rm -rf ./setup-arl.sh
 ```
 
 ```

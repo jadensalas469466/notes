@@ -275,7 +275,7 @@ Use a network mirror?
 Configuring popularity- contest
 
 ```
-Participate in the package usage survey
+Participate in the package usage survey?
 <No>
 ```
 
@@ -342,11 +342,42 @@ PS C:\Users\sec> ssh sec@<os-ip>
 └─$ su - root
 ```
 
+配置 `apt` 源
+
+```
+┌──(root@debian)-[~]
+└─# nano /etc/apt/sources.list
+```
+
+```
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free non-free-firmware
+deb https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware
+```
+
+更新系统
+
+```
+┌──(root@debian)-[~]
+└─# apt update && apt full-upgrade \
+&& apt clean && apt autoremove --purge
+```
+
+安装常用工具
+
+```
+┌──(root@debian)-[~]
+└─# apt install -y vim curl sudo tree unzip apache2 build-essential libpcap-dev \
+zsh zsh-syntax-highlighting zsh-autosuggestions \
+&& systemctl enable --now apache2.service \
+&& chsh -s $(which zsh)
+```
+
 允许远程登录 `root` 并配置稳定连接
 
 ```
 ┌──(root@debian)-[~]
-└─# nano /etc/ssh/sshd_config
+└─# vim /etc/ssh/sshd_config
 ```
 
 ```
@@ -360,71 +391,6 @@ PS C:\Users\sec> ssh sec@<os-ip>
 ```
 ┌──(root@debian)-[~]
 └─# systemctl restart ssh.service
-```
-
-安装 curl
-
-```
-┌──(root@debian)-[~]
-└─# apt install -y curl
-```
-
-导入 Kali 的 GPG 密钥
-
-```
-┌──(root@debian)-[~]
-└─# curl -fsSL https://archive.kali.org/archive-key.asc \
-| tee /etc/apt/trusted.gpg.d/kali.asc
-```
-
-配置 `apt` 源
-
-```
-┌──(root@debian)-[~]
-└─# nano /etc/apt/sources.list
-```
-
-```
-deb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non-free contrib non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
-```
-
-配置优先级
-
-```
-┌──(root@debian)-[~]
-└─# nano /etc/apt/preferences
-```
-
-```
-Package: *
-Pin: release o=Kali,a=kali-rolling
-Pin-Priority: 900
-
-Package: *
-Pin: release o=Debian,a=testing
-Pin-Priority: 800
-```
-
-获取更新并更新系统
-
-```
-┌──(root@debian)-[~]
-└─# apt update \
-&& apt upgrade \
-&& apt dist-upgrade \
-&& apt clean \
-&& apt autoremove --purge
-```
-
-安装常用工具
-
-```
-┌──(root@debian)-[~]
-└─# apt install -y vim sudo tree unzip apache2 build-essential libpcap-dev \
-zsh zsh-syntax-highlighting zsh-autosuggestions \
-&& systemctl enable --now apache2.service \
-&& chsh -s $(which zsh)
 ```
 
 配置网络接口参数
@@ -497,8 +463,7 @@ PS C:\Users\sec> ssh root@debian
 
 ```
 ┌──(root@debian)-[~]
-└─# curl https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc \
--o ~/.zshrc \
+└─# curl -L https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc -o ~/.zshrc \
 && source ~/.zshrc
 ```
 
@@ -542,6 +507,7 @@ PS C:\Users\sec> ssh root@debian
 | [Proxychains-NG](https://github.com/rofl0r/proxychains-ng) |
 |     [Tor](https://gitlab.torproject.org/tpo/core/tor)      |
 |          [MongoDB](https://www.mongodb.com/zh-cn)          |
+|       [glow](https://github.com/charmbracelet/glow)        |
 
 |                            靶场                             |
 | :---------------------------------------------------------: |
@@ -551,11 +517,9 @@ PS C:\Users\sec> ssh root@debian
 
 |                             工具                             |
 | :----------------------------------------------------------: |
-|          [ARL](https://github.com/Aabyss-Team/ARL)           |
-|       [ShuiZe](https://github.com/0x727/ShuiZe_0x727)        |
 |      [subfinder](https://www.kali.org/tools/subfinder/)      |
 |          [naabu](https://www.kali.org/tools/naabu/)          |
-|  [httpx-toolkit](https://www.kali.org/tools/httpx-toolkit/)  |
+|      [httpx](https://www.kali.org/tools/httpx-toolkit/)      |
 |    [cdnNone](https://github.com/jadensalas469466/cdnNone)    |
 |      [ipGet](https://github.com/jadensalas469466/ipGet)      |
 | [hostCollision](https://github.com/alwaystest18/hostCollision) |
@@ -747,7 +711,7 @@ PID
 └─# kill -9 <PID>
 ```
 
-### 6.6. 添加多个源
+### 6.6. 添加多个源并更新为 Kali
 
 导入 Kali 的 GPG 密钥
 
@@ -797,7 +761,7 @@ Pin-Priority: 800
 && apt autoremove --purge
 ```
 
-6.7. 配置全局代理
+### 6.7. 配置全局代理
 
 ```
 export http_proxy=socks5://192.168.1.201:10808

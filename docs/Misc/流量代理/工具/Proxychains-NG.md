@@ -23,11 +23,11 @@
 162  socks5          192.168.1.201 10808
 ```
 
-重启网络服务并测试代理
+测试代理
 
 ```
 ┌──(root@debian)-[~]
-└─# systemctl restart networking && proxychains4 curl ip.sb
+└─# proxychains4 curl ip.sb
 ```
 
 ## 3 使用

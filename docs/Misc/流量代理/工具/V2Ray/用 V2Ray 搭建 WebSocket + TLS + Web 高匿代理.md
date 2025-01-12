@@ -12,67 +12,44 @@
 
 使用 UFW 开放网站端口 3628
 
-```shell
+```
 root@server:~# ufw allow 3628
 ```
 
 安装服务
 
-```shell
+```
 root@server:~# apt install -y v2ray caddy
 ```
 
 运行服务并设置开机自启
 
-```shell
+```
 root@server:~# systemctl enable --now v2ray.service caddy.service
-```
-
-下载配置生成脚本
-
-```shell
-root@server:~# wget https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/v2rayConfig.py
-```
-
-创建目录用于存储 TLS 密钥和证书
-
-```shell
-root@server:~# mkdir /etc/ssl/caddy
 ```
 
 生成 TLS 密钥
 
-```shell
-root@server:~# openssl ecparam -genkey -name secp384r1 -out /etc/ssl/caddy/ssl-test.pem
 ```
-
-修改密钥的权限
-
-```shell
-root@server:~# chmod 600 /etc/ssl/caddy/ssl-test.pem
+root@server:~# mkdir /etc/ssl/caddy \
+&& openssl ecparam -genkey -name secp384r1 -out /etc/ssl/caddy/ssl-test.pem \
+&& chmod 600 /etc/ssl/caddy/ssl-test.pem
 ```
 
 生成 TLS 证书
 
-```shell
+```
 root@server:~# openssl req -new -x509 -key /etc/ssl/caddy/ssl-test.pem -out /etc/ssl/caddy/ssl-test.crt -days 365000 -subj "/CN=202.38.95.17" -addext "subjectAltName = IP:202.38.95.17"
 ```
 
-修改证书的权限
+复制证书到 Web
 
-```shell
-root@server:~# chmod 644 /etc/ssl/caddy/ssl-test.crt
 ```
-
-将 TLS 证书复制到本地安装
-
-```shell
-root@local:~# scp root@server:/etc/ssl/caddy/ssl-test.crt /root/
+root@server:~# chmod 644 /etc/ssl/caddy/ssl-test.crt \
+&& cp /etc/ssl/caddy/ssl-test.crt /var/www/html/upload/
 ```
 
 ### 1.2 客户端
-
-**linux**
 
 安装服务
 
@@ -88,30 +65,15 @@ root@local:~# scp root@server:/etc/ssl/caddy/ssl-test.crt /root/
 └─# systemctl enable --now v2ray.service
 ```
 
-**windows**
-
-安装 [v2rayN](https://github.com/2dust/v2rayN)
-
 ## 2 初始化
 
 ### 2.1 服务端
 
-为 caddy 添加网站根目录访问权限
-
-```shell
-root@server:~# chown -R caddy:caddy /var/www/html
-```
-
-为 caddy 添加密钥和证书访问权限
-
-```shell
-root@server:~# chown caddy:caddy /etc/ssl/caddy/ssl-test.pem /etc/ssl/caddy/ssl-test.crt
-```
-
 使用脚本生成随机配置
 
-```shell
-root@server:~# python config_generator.py
+```
+root@server:~# curl -LO https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/v2rayConfig.py \
+&& python3 v2rayConfig.py && rm -rf v2rayConfig.py
 ```
 
 ```
@@ -123,7 +85,7 @@ root@server:~# python config_generator.py
 
 修改服务端 v2ray 配置文件
 
-```shell
+```
 root@server:~# vim /etc/v2ray/config.json
 ```
 
@@ -162,13 +124,20 @@ root@server:~# vim /etc/v2ray/config.json
 
 重启 v2ray 服务
 
-```shell
+```
 root@server:~# systemctl restart v2ray.service
+```
+
+为 caddy 添加访问权限
+
+```
+root@server:~# chown -R caddy:caddy /var/www/html \
+&& chown caddy:caddy /etc/ssl/caddy/ssl-test.pem /etc/ssl/caddy/ssl-test.crt
 ```
 
 修改 caddy 配置文件
 
-```shell
+```
 root@server:~# vim /etc/caddy/Caddyfile
 ```
 
@@ -205,45 +174,119 @@ root@server:~# vim /etc/caddy/Caddyfile
 
 重启 caddy 服务
 
-```shell
+```
 root@server:~# systemctl restart caddy.service
 ```
 
-将证书复制到网站上传目录
-
-```shell
-root@linux:~# cp /etc/ssl/caddy/ssl-test.crt /var/www/html/upload/
-```
-
-下载证书并安装到本地
-
-> https://example.com:3628/upload/ssl-test.crt
-
-删除网站上传目录的证书
-
 ### 2.2 客户端
 
-**linux**
+安装 TLS 证书到本地
+
+```
+┌──(root@debian)-[~]
+└─# curl -L https://server:3628/upload/ssl-caddy.crt \
+-o /usr/local/share/ca-certificates/ssl-caddy.crt \
+&& update-ca-certificates
+```
 
 修改客户端配置文件
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# vim /etc/v2ray/config.json
 ```
 
-```
+```json
+{
+    "inbounds": [
+        {
+            "tag": "socks",
+            "port": 10808,
+            "listen": "0.0.0.0",
+            "protocol": "socks",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "routeOnly": false
+            },
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "allowTransparent": false
+            }
+        },
+        {
+            "tag": "http",
+            "port": 10809,
+            "listen": "0.0.0.0",
+            "protocol": "http",
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls"
+                ],
+                "routeOnly": false
+            },
+            "settings": {
+                "auth": "noauth",
+                "udp": true,
+                "allowTransparent": false
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "vmess",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "202.38.95.17",
+                        "port": 3628,
+                        "users": [
+                            {
+                                "id": "7e880348-4558-442b-817b-f49008836ea7",
+                                "alterId": 64,
+                                "security": "chacha20-poly1305"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "serverName": "202.38.95.17",
+                    "alpn": [
+                        "http/1.1"
+                    ],
+                    "fingerprint": "chrome"
+                },
+                "wsSettings": {
+                    "path": "/KxNZK72q",
+                    "host": "202.38.95.17",
+                    "headers": {
+                        "Host": "202.38.95.17"
+                    }
+                }
+            }
+        }
+    ]
+}
 
 ```
 
 修改后重启服务
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# systemctl restart v2ray.service
 ```
-
-**windows**
 
 ```
 VMess服务器
@@ -265,14 +308,14 @@ VMess服务器
 SNI：202.38.95.17
 Fingerprint：chrome
 Alpn：h2
-跳过证书验证：true
+跳过证书验证：false
 ```
 
 > 注意添加防火墙规则
 
 ## 帮助
 
-```shell
+```
 root@server:~# v2ray -h
 ```
 

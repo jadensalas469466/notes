@@ -24,21 +24,21 @@
 ┌──(root@debian)-[~]
 └─# cd /root/tools/apps/vulhub/path \
 && docker image build -t cont . || true \
-&& docker compose up -d
+&& docker-compose up -d
 ```
 
 查看文档
 
 ```
 ┌──(root@debian)-[~/…/apps/vulhub/path]
-└─# less README.zh-cn.md
+└─# glow README.zh-cn.md
 ```
 
 删除环境
 
 ```
 ┌──(root@debian)-[~/…/apps/vulhub/path]
-└─# docker compose down -v
+└─# docker-compose down -v
 ```
 
 ### 2.1 activemq
