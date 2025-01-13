@@ -4,14 +4,14 @@ SolusVM 2 是一款服务器管理面板.
 
 安装依赖
 
-```shell
-root@server:~# apt install -y caddy php8.2-fpm php8.2-curl
+```
+root@server:~# apt install -y caddy php-fpm php-curl
 ```
 
 运行中间件
 
-```shell
-root@server:~# systemctl enable --now caddy.service && systemctl enable --now php8.2-fpm.service
+```
+root@server:~# systemctl enable --now caddy.service && systemctl enable --now php-fpm.service
 ```
 
 ## 2 初始化
@@ -33,7 +33,7 @@ root@server:~# vim /etc/caddy/Caddyfile
      9		root * /var/www/html
     10		try_files {path} /index.php
     11
-    12		php_fastcgi unix//run/php/php8.2-fpm.sock {
+    12		php_fastcgi unix//run/php/php-fpm.sock {
     13		env API_KEY 2TJOT-QYX6H-CALAW
     14		env API_HASH 9b86a596179be8e10a4a6684781ab14528c186a0
     15		env API_URL https://instancecontrol.com/
@@ -49,7 +49,7 @@ root@server:~# systemctl restart caddy
 获取 PHP 脚本
 
 ```
-root@server:~# wget https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/SolusVM%202/index.php -O /var/www/html/index.php 
+root@server:~# curl -L https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/SolusVM%202/index.php -o /var/www/html/index.php
 ```
 
 访问主页即可查看服务器状态

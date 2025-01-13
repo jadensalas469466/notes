@@ -463,7 +463,7 @@ PS C:\Users\sec> ssh root@debian
 
 ```
 ┌──(root@debian)-[~]
-└─# curl -L https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc -o ~/.zshrc \
+└─# curl -LO https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc \
 && source ~/.zshrc
 ```
 

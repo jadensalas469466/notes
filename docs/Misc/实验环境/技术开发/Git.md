@@ -39,12 +39,6 @@ Linux 安装
 git config --global http.proxy 'http://127.0.0.1:10808'
 ```
 
-配置使用 Windows 证书校验
-
-```
-git config --global http.sslBackend schannel
-```
-
 配置用户名
 
 ```
@@ -63,24 +57,12 @@ git config --global user.email "<private-name>@users.noreply.github.com"
 git config --global core.autocrlf false
 ```
 
-配置对文件名大小写敏感
-
-```
-PS C:\Users\sec> git config --global --get core.ignorecase
-```
-
 ### 2.2. Linux
 
 配置代理
 
 ```
-git config --global http.proxy 'http://192.168.1.201:10808'
-```
-
-限制 HTTP 协议版本
-
-```
-git config --global http.version HTTP/1.1
+git config --global http.proxy 'http://127.0.0.1:10809'
 ```
 
 ## 3. 使用

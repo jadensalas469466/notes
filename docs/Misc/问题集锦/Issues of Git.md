@@ -57,7 +57,13 @@ fatal: fetch-pack: invalid index-pack output
 
 原因是代理服务器配置了自签名证书, 导致无法通过 Git 的验证;
 
-将证书加入本地, 或者强制 Git 使用 HTTP/1.1 协议即可.
+将证书加入本地, 配置使用 Windows 证书校验
+
+```
+git config --global http.sslBackend schannel
+```
+
+或者强制 Git 使用 HTTP/1.1 协议即可.
 
 ---
 
