@@ -2,11 +2,11 @@
 
 ## 1. 安装
 
-克隆仓库
+将脚本下载到本地
 
 ```
-┌──(root@debian)-[~]
-└─# git clone https://github.com/jadensalas469466/cdnNone.git /root/tools/apps/cdnNone && cd /root/tools/apps/cdnNone
+mkdir /root/tools/apps/cdnNone \
+&& curl -L https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/hack/cdnNone.py -o /root/tools/apps/cdnNone/cdnNone.py
 ```
 
 ## 2. 初始化
@@ -14,8 +14,7 @@
 编写运行脚本
 
 ```
-┌──(root@debian)-[~/tools/apps/cdnNone]
-└─# nano ./cdnNone.sh
+nano /root/tools/apps/cdnNone/cdnNone.sh
 ```
 
 ```sh
@@ -34,26 +33,24 @@ python3 cdnNone.py "$@"
 创建链接
 
 ```
-┌──(root@debian)-[~/tools/apps/cdnNone]
-└─# chmod +x ./cdnNone.sh && ln -s /root/tools/apps/cdnNone/cdnNone.sh /usr/local/bin/cdnNone && cd
+chmod +x /root/tools/apps/cdnNone/cdnNone.sh \
+&& ln -s /root/tools/apps/cdnNone/cdnNone.sh /usr/local/bin/cdnNone
 ```
 
 查看帮助
 
 ```
-┌──(root@debian)-[~]
-└─# cdnNone
+cdnNone
 ```
 
 ## 3. 使用
 
 ```
-┌──(root@debian)-[~]
-└─# cdnNone -d fileName.txt -o fileName.txt
+cdnNone -d fileName.txt -o fileName.txt
 ```
 
 ---
 
 参考链接
 
-- [cdnNone](https://github.com/jadensalas469466/cdnNone)
+- [cdnNone](https://github.com/jadensalas469466/tools/blob/main/hack/cdnNone.py)
