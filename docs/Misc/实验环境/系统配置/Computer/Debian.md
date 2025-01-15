@@ -350,9 +350,10 @@ PS C:\Users\sec> ssh sec@<os-ip>
 ```
 
 ```
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing-updates main contrib non-free non-free-firmware
-deb https://security.debian.org/debian-security testing-security main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
+deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
 ```
 
 更新系统
@@ -418,7 +419,7 @@ iface ens33 inet static
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/resolv.conf
+└─# nano /etc/resolv.conf
 ```
 
 ```
@@ -496,18 +497,18 @@ PS C:\Users\sec> ssh root@debian
 
 ## 5. Deploy
 
-### 5.1. debian
-
-|                            环境                            |
-| :--------------------------------------------------------: |
-|             [Git](https://github.com/git/git)              |
-|             [Python](https://www.python.org/)              |
-|                   [Go](https://go.dev/)                    |
-|             [Docker](https://www.docker.com/)              |
-| [Proxychains-NG](https://github.com/rofl0r/proxychains-ng) |
-|     [Tor](https://gitlab.torproject.org/tpo/core/tor)      |
-|          [MongoDB](https://www.mongodb.com/zh-cn)          |
-|       [glow](https://github.com/charmbracelet/glow)        |
+|                             环境                             |
+| :----------------------------------------------------------: |
+| [proxy](https://github.com/jadensalas469466/tools/blob/main/other/proxy.sh) |
+|               [Xray](https://xtls.github.io/)                |
+|  [Proxychains-NG](https://github.com/rofl0r/proxychains-ng)  |
+|      [Tor](https://gitlab.torproject.org/tpo/core/tor)       |
+|              [Git](https://github.com/git/git)               |
+|              [Python](https://www.python.org/)               |
+|                    [Go](https://go.dev/)                     |
+|              [Docker](https://www.docker.com/)               |
+|           [MongoDB](https://www.mongodb.com/zh-cn)           |
+|        [glow](https://github.com/charmbracelet/glow)         |
 
 |                            靶场                             |
 | :---------------------------------------------------------: |
@@ -531,16 +532,12 @@ PS C:\Users\sec> ssh root@debian
 |         [nuclei](https://www.kali.org/tools/nuclei/)         |
 |           [ffuf](https://www.kali.org/tools/ffuf/)           |
 
-### 5.2. server
-
-|                                                  |
+|                      server                      |
 | :----------------------------------------------: |
+|       [Project X](https://xtls.github.io/)       |
 |        [UFW](https://github.com/jbq/ufw)         |
-|        [Caddy](https://caddyserver.com/)         |
-|         [V2Ray](https://www.v2fly.org/)          |
 | [fail2ban](https://github.com/fail2ban/fail2ban) |
 |        [Tor](https://www.torproject.org/)        |
-|         [SolusVM](https://solusvm.com/)          |
 |       [Syncthing](https://syncthing.net/)        |
 |  [bind9](https://github.com/isc-projects/bind9)  |
 

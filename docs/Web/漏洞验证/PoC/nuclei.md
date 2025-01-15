@@ -5,8 +5,7 @@ Web 漏洞 POC 扫描工具.
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
 ## 2. 使用

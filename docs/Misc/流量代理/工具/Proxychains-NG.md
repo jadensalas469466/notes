@@ -1,12 +1,11 @@
-一个开源的命令行工具，用于将网络流量通过代理服务器转发。
+一个开源的命令行工具, 用于将网络流量通过代理服务器转发.
 
 ## 1 安装
 
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y proxychains4
+apt install -y proxychains4
 ```
 
 ## 2 初始化
@@ -14,8 +13,7 @@
 修改配置文件
 
 ```
-┌──(root@debian)-[~]
-└─# vim /etc/proxychains4.conf
+vim /etc/proxychains4.conf
 ```
 
 ```
@@ -26,17 +24,15 @@
 测试代理
 
 ```
-┌──(root@debian)-[~]
-└─# proxychains4 curl ip.sb
+proxychains4 curl ip.sb
 ```
 
 ## 3 使用
 
 通过代理执行程序
 
-```shell
-┌──(root㉿kali)-[~]
-└─# proxychains4 sqlmap -g "inurl:\".php?id=1\""
+```
+proxychains4 appRun
 ```
 
 ---

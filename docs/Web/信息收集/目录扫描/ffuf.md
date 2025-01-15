@@ -5,8 +5,7 @@
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# go install github.com/ffuf/ffuf/v2@latest
+go install github.com/ffuf/ffuf/v2@latest
 ```
 
 ## 2. 使用

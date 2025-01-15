@@ -17,8 +17,7 @@ PS C:\Users\sec> scoop install git
 Linux 安装
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y git
+apt install -y git
 ```
 
 ## 2. 初始化
@@ -62,7 +61,7 @@ git config --global core.autocrlf false
 配置代理
 
 ```
-git config --global http.proxy 'http://127.0.0.1:10809'
+git config --global http.proxy 'http://127.0.0.1:10808'
 ```
 
 ## 3. 使用

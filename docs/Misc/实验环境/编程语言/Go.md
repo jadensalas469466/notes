@@ -2,11 +2,15 @@
 
 ## 1. 安装
 
-安装
-
 ```
-┌──(root㉿kali)-[~]
-└─# apt install -y golang-go
+curl -LO https://go.dev/dl/go1.23.4.linux-amd64.tar.gz \
+&& tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz \
+&& rm -rf go1.23.4.linux-amd64.tar.gz \
+&& echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc \
+&& echo 'export GOPATH=/root/tools/apps/go' >> ~/.zshrc \
+&& echo 'export GOBIN=$GOPATH/bin' >> ~/.zshrc \
+&& echo 'export PATH=$PATH:$GOBIN' >> ~/.zshrc \
+&& source ~/.zshrc
 ```
 
 ## 2. 初始化
@@ -14,18 +18,7 @@
 配置源
 
 ```
-┌──(root㉿kali)-[~]
-└─# go env -w GOPROXY='https://goproxy.cn,direct'
-```
-
-修改 Go 的安装目录并添加环境变量
-
-```
-┌──(root㉿a-kali-23)-[~]
-└─# echo 'export GOPATH=/root/tools/apps/go' >> ~/.zshrc && \
-echo 'export GOBIN=$GOPATH/bin' >> ~/.zshrc && \
-echo 'export PATH=$PATH:$GOBIN' >> ~/.zshrc && \
-source ~/.zshrc
+go env -w GOPROXY='https://goproxy.cn,direct'
 ```
 
 ## 3. 使用

@@ -5,8 +5,7 @@ Web 服务指纹识别工具.
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y whatweb
+apt install -y whatweb
 ```
 
 ## 2. 使用

@@ -5,8 +5,7 @@
 安装 `mariadb` 
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y mariadb-server mariadb-client
+apt install -y mariadb-server mariadb-client
 ```
 
 ## 2 初始化
@@ -14,16 +13,17 @@
 设置 `mysql` 服务端开机自启
 
 ```
-┌──(root@debian)-[~]
-└─# systemctl enable --now mysql.service
+systemctl enable --now mysql.service
 ```
 
 修改密码
 
 ```
-┌──(root@debian)-[~]
-└─# mysql -u root -p
+mysql -u root -p
 Enter password:
+```
+
+```
 MariaDB [(none)]> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 MariaDB [(none)]> exit;
 ```
@@ -32,15 +32,14 @@ MariaDB [(none)]> exit;
 
 运行服务
 
-```shell
-root@debian:~# sudo systemctl start mysql.service
+```
+sudo systemctl start mysql.service
 ```
 
 修改密码
 
-```shell
-┌──(root㉿kali)-[~]
-└─# mysql -u root -p
+```
+mysql -u root -p
 Enter password:
 MariaDB [(none)]> ALTER USER "root"@"localhost" IDENTIFIED BY "123456";
 MariaDB [(none)]> exit;
@@ -48,14 +47,14 @@ MariaDB [(none)]> exit;
 
 登录
 
-```shell
-root@debian:~# mysql -u root -p
+```
+mysql -u root -p
 ```
 
 退出
 
 ```mysql
-MariaDB [(none)]> exit
+MariaDB [(none)]> exit;
 ```
 
 列出数据库

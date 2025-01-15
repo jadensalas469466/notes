@@ -5,29 +5,25 @@
 安装依赖
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
+apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php
 ```
 
 下载
 
 ```
-┌──(root@debian)-[~]
-└─# git clone https://github.com/zhuifengshaonianhanlu/pikachu.git /var/www/html/pikachu
+git clone https://github.com/zhuifengshaonianhanlu/pikachu.git /var/www/html/pikachu
 ```
 
 修改运行权限
 
 ```
-┌──(root@debian)-[~]
-└─# chown -R www-data:www-data /var/www/html/
+chown -R www-data:www-data /var/www/html/
 ```
 
 配置数据库密码
 
 ```
-┌──(root@debian)-[~]
-└─# vim /var/www/html/pikachu/inc/config.inc.php
+vim /var/www/html/pikachu/inc/config.inc.php
 ```
 
 ```php

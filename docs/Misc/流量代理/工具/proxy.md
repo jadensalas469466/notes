@@ -16,6 +16,20 @@ chmod +x /root/tools/apps/proxy/proxy.sh \
 && ln -s /root/tools/apps/proxy/proxy.sh /usr/local/bin/proxy
 ```
 
+## 2. 使用
+
+配置代理
+
+```
+proxy <ip:port>
+```
+
+取消代理
+
+```
+proxy
+```
+
 ---
 
 参考链接

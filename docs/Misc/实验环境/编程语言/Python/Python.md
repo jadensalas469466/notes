@@ -16,8 +16,7 @@ python3 -m venv
 ### 1.1 Debian
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y python3 python3-pip python3-venv python3-dev
+apt install -y python3 python3-pip python3-venv python3-dev
 ```
 
 ### 1.2 Windows
@@ -31,7 +30,7 @@ PS C:\Users\sec> scoop install python
 配置镜像加速
 
 ```
-root@debian:~# python3 -m pip config set global.index-url 'https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple'
+python3 -m pip config set global.index-url 'https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple'
 ```
 
 ## 3 使用

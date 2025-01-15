@@ -5,15 +5,13 @@ Web 服务指纹识别工具.
 下载
 
 ```
-┌──(root@debian)-[~]
-└─# curl -LO https://github.com/emo-crab/observer_ward/releases/download/v2024.11.5/observer-ward_v2024.11.5_x86_64-unknown-linux-musl.deb
+curl -LO https://github.com/emo-crab/observer_ward/releases/download/v2024.11.5/observer-ward_v2024.11.5_x86_64-unknown-linux-musl.deb
 ```
 
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# apt install ./observer-ward_v2024.11.5_x86_64-unknown-linux-musl.deb && rm -rf ./observer-ward_v2024.11.5_x86_64-unknown-linux-musl.deb
+apt install ./observer-ward_v2024.11.5_x86_64-unknown-linux-musl.deb && rm -rf ./observer-ward_v2024.11.5_x86_64-unknown-linux-musl.deb
 ```
 
 ## 2. 初始化
@@ -21,8 +19,7 @@ Web 服务指纹识别工具.
 更新指纹
 
 ```
-┌──(root@debian)-[~]
-└─# observer_ward -u
+observer_ward -u
 ```
 
 ## 3. 使用

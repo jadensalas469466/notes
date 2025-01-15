@@ -5,8 +5,7 @@ Web 漏洞扫描工具.
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y nikto
+apt install -y nikto
 ```
 
 ## 2. 使用
