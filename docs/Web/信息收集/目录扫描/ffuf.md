@@ -13,8 +13,7 @@ go install github.com/ffuf/ffuf/v2@latest
 GET 扫描
 
 ```
-┌──(root@debian)-[~]
-└─# ffuf -recursion-depth 3 \
+ffuf -recursion-depth 3 \
 -w /path/dict.txt:FUZZ \
 -H "X-Originating-Ip: 127.0.0.1" \
 -H "X-Remote-Ip: 127.0.0.1" \

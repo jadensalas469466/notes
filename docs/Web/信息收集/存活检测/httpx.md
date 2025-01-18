@@ -5,8 +5,7 @@
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 ```
 
 ## 2. 使用
@@ -14,8 +13,7 @@
 检测存活的站点
 
 ```
-┌──(root@debian)-[~]
-└─# httpx -l fileName.txt -o fileName.txt
+httpx -l fileName.txt -o fileName.txt
 ```
 
 ---

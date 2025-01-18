@@ -55,7 +55,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 查看帮助
 
 ```
-┌──(root@debian)-[~/tools/apps/ehole/EHole_linux_amd64]
+┌──(root@debian)-[~]
 └─# ehole -h
 ```
 

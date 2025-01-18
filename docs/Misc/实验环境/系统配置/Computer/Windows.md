@@ -191,7 +191,7 @@ VMware
 
 拍摄快照并命名为 `配置` 
 
-## 3. 安装
+## 3. Install
 
 输入语言和其他首选项
 
@@ -360,7 +360,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 配置 SMB 文件共享
 
-## 5. 部署
+## 5. Deploy
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |
@@ -394,7 +394,6 @@ C:\Windows\System32\drivers\etc\hosts
 |            [ImageGlass](https://imageglass.org/)             |
 |     [Java](https://www.java.com/en/download/manual.jsp)      |
 |             [KeePassXC](https://keepassxc.org/)              |
-|        [Koodo Reader](https://www.koodoreader.com/en)        |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
 |         [Notepad++](https://notepad-plus-plus.org/)          |

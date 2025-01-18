@@ -3,8 +3,7 @@
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
 ## 2 初始化
@@ -12,15 +11,13 @@
 初始化运行
 
 ```
-┌──(root@debian)-[~]
-└─# subfinder -ls
+subfinder -ls
 ```
 
 配置 API
 
 ```
-┌──(root@debian)-[~]
-└─# vim /root/.config/subfinder/provider-config.yaml
+vim /root/.config/subfinder/provider-config.yaml
 ```
 
 ## 3 使用

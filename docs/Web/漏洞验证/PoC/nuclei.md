@@ -8,7 +8,15 @@ Web 漏洞 POC 扫描工具.
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
-## 2. 使用
+## 2. 初始化
+
+更新模板
+
+```
+nuclei -update-templates
+```
+
+## 3. 使用
 
 指定 PoC 验证目标漏洞
 

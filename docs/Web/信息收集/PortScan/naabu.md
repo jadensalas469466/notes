@@ -5,8 +5,7 @@
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
+go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 ```
 
 ## 2. 使用
