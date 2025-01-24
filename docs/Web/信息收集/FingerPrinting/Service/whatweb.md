@@ -13,8 +13,7 @@ apt install -y whatweb
 识别目标使用的 Web 服务
 
 ```
-┌──(root@debian)-[~]
-└─# whatweb <target-url> | tee fileName.txt
+whatweb -v -a 3 --log-json=fileName.json https://example.com
 ```
 
 ---

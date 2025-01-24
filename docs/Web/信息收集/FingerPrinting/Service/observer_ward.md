@@ -27,7 +27,7 @@ observer_ward -u
 识别目标使用的 Web 服务
 
 ```
-observer_ward -t <target-url> -o fileName.txt
+observer_ward -t https://example.com -o /root/fileName.json
 ```
 
 更新

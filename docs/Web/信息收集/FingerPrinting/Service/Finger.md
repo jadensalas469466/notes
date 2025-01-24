@@ -85,7 +85,7 @@ python3 Finger.py "$@"
 识别目标使用的 Web 服务
 
 ```
-finger -u <target-url> -o fileName.json
+finger -u https://example.com -o json
 ```
 
 查看结果

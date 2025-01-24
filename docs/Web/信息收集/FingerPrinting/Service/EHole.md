@@ -65,7 +65,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ```
 ┌──(root@debian)-[~]
-└─# ehole finger -u <target-url> -o /path/fileName.json
+└─# ehole finger -u https://example.com -o /root/fileName.json
 ```
 
 ---

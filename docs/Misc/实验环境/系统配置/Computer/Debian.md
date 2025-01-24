@@ -525,11 +525,9 @@ PS C:\Users\sec> ssh root@debian
 |      [ipGet](https://github.com/jadensalas469466/ipGet)      |
 | [hostCollision](https://github.com/alwaystest18/hostCollision) |
 |        [whatweb](https://www.kali.org/tools/whatweb/)        |
-|  [observer_ward](https://github.com/emo-crab/observer_ward)  |
-|      [EHole](https://github.com/EdgeSecurityTeam/EHole)      |
-|         [Finger](https://github.com/EASY233/Finger)          |
-|          [nikto](https://www.kali.org/tools/nikto/)          |
+|        [wafw00f](https://www.kali.org/tools/wafw00f/)        |
 |         [nuclei](https://www.kali.org/tools/nuclei/)         |
+|          [nikto](https://www.kali.org/tools/nikto/)          |
 |           [ffuf](https://www.kali.org/tools/ffuf/)           |
 
 |                      server                      |
@@ -670,8 +668,7 @@ alias share='vmhgfs-fuse .host:/ /mnt'
 将命令行程序放在后台运行, 即使 SSH 断开连接也不会终止运行
 
 ```
-┌──(root@debian)-[~]
-└─# nohup <command> > /root/log.txt 2>&1 &
+nohup <command> > /root/log.txt 2>&1 &
 ```
 
 ```
@@ -681,8 +678,7 @@ PID
 查看后台程序
 
 ```
-┌──(root@debian)-[~]
-└─# jobs
+jobs
 ```
 
 > 在当前终端关闭后将失效
@@ -690,22 +686,13 @@ PID
 实时查看日志
 
 ```
-┌──(root@debian)-[~]
-└─# tail -f /root/log.txt
+tail -f /root/log.txt
 ```
 
 终止进程
 
 ```
-┌──(root@debian)-[~]
-└─# kill <PID>
-```
-
-强制终止进程
-
-```
-┌──(root@debian)-[~]
-└─# kill -9 <PID>
+kill -9 <PID>
 ```
 
 ### 6.6. 添加多个源并更新为 Kali

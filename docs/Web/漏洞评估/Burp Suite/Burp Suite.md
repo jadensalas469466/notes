@@ -348,6 +348,24 @@ payload 类型选择为指定文件
 
 > 以上页面是谷歌验证码
 
+### 6.9. 保存项目
+
+新建一个项目并打开
+
+![新建一个项目并打开](./../../../../images/Burp%20Suite/%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%B9%B6%E6%89%93%E5%BC%80.png)
+
+在这个项目中运行过的任务会自动保存, 重新运行时加载这个项目文件即可恢复.
+
+![在这个项目中运行过的任务会自动保存, 重新运行时加载这个项目文件即可恢复.](./../../../../images/Burp%20Suite/%E5%9C%A8%E8%BF%99%E4%B8%AA%E9%A1%B9%E7%9B%AE%E4%B8%AD%E8%BF%90%E8%A1%8C%E8%BF%87%E7%9A%84%E4%BB%BB%E5%8A%A1%E4%BC%9A%E8%87%AA%E5%8A%A8%E4%BF%9D%E5%AD%98,%20%E9%87%8D%E6%96%B0%E8%BF%90%E8%A1%8C%E6%97%B6%E5%8A%A0%E8%BD%BD%E8%BF%99%E4%B8%AA%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%8D%B3%E5%8F%AF%E6%81%A2%E5%A4%8D..png)
+
+Intruder 的运行结果可以选择保存到项目文件
+
+![Intruder 的运行结果可以选择保存到项目文件](./../../../../images/Burp%20Suite/Intruder%20%E7%9A%84%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C%E5%8F%AF%E4%BB%A5%E9%80%89%E6%8B%A9%E4%BF%9D%E5%AD%98%E5%88%B0%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6.png)
+
+重新加载项目文件后可在 Dashboard 中恢复
+
+![重新加载项目文件后可在 Dashboard 中恢复](./../../../../images/Burp%20Suite/%E9%87%8D%E6%96%B0%E5%8A%A0%E8%BD%BD%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%90%8E%E5%8F%AF%E5%9C%A8%20Dashboard%20%E4%B8%AD%E6%81%A2%E5%A4%8D.png)
+
 ---
 
 参考链接

@@ -21,7 +21,7 @@ nuclei -update-templates
 指定 PoC 验证目标漏洞
 
 ```
-nuclei -u https://example.com -t fileName.yaml -o fileName.txt
+nuclei -u https://example.com -t fileName.yaml -je fileName.json
 ```
 
 更新模板
