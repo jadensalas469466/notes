@@ -401,6 +401,7 @@ C:\Windows\System32\drivers\etc\hosts
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |              [Potplayer](https://potplayer.tv/)              |
+|         [qBittorrent](https://www.qbittorrent.org/)          |
 |                  [Scoop](https://scoop.sh/)                  |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
