@@ -1,19 +1,19 @@
 一款用于 Web 应用漏洞测试的工具。
 
-## 1 准备
+## 1. 准备
 
 需要 JRE 8 环境
 
 - [JRE 8](https://www.java.com/en/download/manual.jsp)
 - [Burp Suite Professional](https://portswigger.net/burp/releases#professional)
 
-## 2 配置
+## 2. 配置
 
 将注册机复制到安装目录
 
 ![将注册机复制到安装目录](./../../../../images/Burp%20Suite/%E5%B0%86%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%A4%8D%E5%88%B6%E5%88%B0%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png)
 
-## 3 安装
+## 3. 安装
 
 运行注册机启动 Burp Suite
 
@@ -66,7 +66,7 @@ WshShell.Run command, 0
 
 ![浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` ](./../../../../images/Burp%20Suite/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE%20Burp%20Suite%20%E4%BB%A3%E7%90%86%E6%89%93%E5%BC%80%E4%BB%A5%E4%B8%8B%E9%93%BE%E6%8E%A5%EF%BC%8C%E4%B8%8B%E8%BD%BD%20%60cacert.der%60%20.png)
 
-## 4 初始化
+## 4. 初始化
 
 选择临时项目
 
@@ -87,14 +87,6 @@ WshShell.Run command, 0
 指定 UTF-8 字符集
 
 ![指定 UTF-8 字符集](./../../../../images/Burp%20Suite/%E6%8C%87%E5%AE%9A%20UTF-8%20%E5%AD%97%E7%AC%A6%E9%9B%86.png)
-
-保存用户设置到安装目录
-
-![保存用户设置到安装目录](./../../../../images/Burp%20Suite/%E4%BF%9D%E5%AD%98%E7%94%A8%E6%88%B7%E8%AE%BE%E7%BD%AE%E5%88%B0%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png)
-
-启动时从文件读取设置
-
-![启动时从文件读取设置](./../../../../images/Burp%20Suite/%E5%90%AF%E5%8A%A8%E6%97%B6%E4%BB%8E%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96%E8%AE%BE%E7%BD%AE.png)
 
 ## 5.1 部署
 
@@ -134,15 +126,15 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 | [AutoRepeater](https://github.com/portswigger/auto-repeater) |
 |        [Authz](https://github.com/PortSwigger/authz)         |
 
-## 6 使用
+## 6. 使用
 
 推荐使用 Firefox 转发数据包到 Burp Suite, 避免 Chrome 中过多的 Extensions 对 Burp Suite 造成干扰
 
-### 6.1 Proxy
+### 6.1. Proxy
 
 Burp Suite 的抓包代理仅支持 HTTP 协议
 
-### 6.1.1 Intruder
+### 6.1.1. Intruder
 
 Burp Suite Intruder 中有四种 Attack type
 
@@ -153,45 +145,45 @@ Pitchfork     # 多个字典, 并行测试
 Cluster bomb  # 多个字典, 穷举测试
 ```
 
-### 6.1.2 Intercept response
+### 6.1.2. Intercept response
 
 在 Burp Suite 的 Intercepr 中拦截返回包
 
 ![在 Burp Suite 的 Intercepr 中拦截返回包](./../../../../images/Burp%20Suite/%E5%9C%A8%20Burp%20Suite%20%E7%9A%84%20Intercepr%20%E4%B8%AD%E6%8B%A6%E6%88%AA%E8%BF%94%E5%9B%9E%E5%8C%85.png)
 
-### 6.1.3 Payloads
+### 6.1.3. Payloads
 
-### 6.1.3.1 Payload settings [Numbers]
+### 6.1.3.1. Payload settings [Numbers]
 
 设置数字位数范围
 
 ![设置数字位数范围](./../../../../images/Burp%20Suite/%E8%AE%BE%E7%BD%AE%E6%95%B0%E5%AD%97%E4%BD%8D%E6%95%B0%E8%8C%83%E5%9B%B4.png)
 
-### 6.1.4 Payload processing
+### 6.1.4. Payload processing
 
 使用 Payload processing 对 Payload 进行各种自动化处理
 
 ![使用 Payload processing 对 Payload 进行各种自动化处理](./../../../../images/Burp%20Suite/%E4%BD%BF%E7%94%A8%20Payload%20processing%20%E5%AF%B9%20Payload%20%E8%BF%9B%E8%A1%8C%E5%90%84%E7%A7%8D%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A4%84%E7%90%86.png)
 
-### 6.1.5 爆破时处理 payload
+### 6.1.5. 爆破时处理 payload
 
 ![爆破时处理 payload](./../../../../images/Burp%20Suite/%E7%88%86%E7%A0%B4%E6%97%B6%E5%A4%84%E7%90%86%20Payload.png)
 
-### 6.2 Comparer
+### 6.2. Comparer
 
 将多个数据包发送到 Comparer 进行比对
 
 ![将多个数据包发送到 Comparer 进行比对](./../../../../images/Burp%20Suite/%E5%B0%86%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%8C%85%E5%8F%91%E9%80%81%E5%88%B0%20Comparer%20%E8%BF%9B%E8%A1%8C%E6%AF%94%E5%AF%B9.png)
 
-### 6.3 Target
+### 6.3. Target
 
-### 6.3.1 Scope
+### 6.3.1. Scope
 
 在 Target 中设置 Scope, 仅捕获 `example.com` 及其子域名的数据包
 
 ![在 Target 中设置 Scope, 仅捕获 `example.com` 及其子域名的数据包](./../../../../images/Burp%20Suite/%E5%9C%A8%20Target%20%E4%B8%AD%E8%AE%BE%E7%BD%AE%20Scope,%20%E4%BB%85%E6%8D%95%E8%8E%B7%20%60example.com%60%20%E5%8F%8A%E5%85%B6%E5%AD%90%E5%9F%9F%E5%90%8D%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
-### 6.4 Extensions
+### 6.4. Extensions
 
 将下载好的扩展包解压到 `.\BurpSuitePro\Extensions\` 目录中
 
@@ -203,7 +195,7 @@ Cluster bomb  # 多个字典, 穷举测试
 
 ![勾选扩展以加载](./../../../../images/Burp%20Suite/%E5%8B%BE%E9%80%89%E6%89%A9%E5%B1%95%E4%BB%A5%E5%8A%A0%E8%BD%BD.png)
 
-### 6.5 在本地侦听其它计算机
+### 6.5. 在本地侦听其它计算机
 
 将代理指定为本机 IP
 
@@ -217,7 +209,7 @@ Cluster bomb  # 多个字典, 穷举测试
 
 访问 http://burpsuite/ ,安装证书后，可通过 BurpSuite 代理正常访问
 
-### 6.6 捕获蚁剑连接木马的数据包
+### 6.6. 捕获蚁剑连接木马的数据包
 
 使用 BurpSuite 对蚁剑连接一句话木马抓包，分析虚拟终端原理
 
@@ -249,7 +241,7 @@ Cluster bomb  # 多个字典, 穷举测试
 
 ![选中可查看捕获的数据包](./../../../../images/Burp%20Suite/%E9%80%89%E4%B8%AD%E5%8F%AF%E6%9F%A5%E7%9C%8B%E6%8D%95%E8%8E%B7%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
-### 6.6.1 修改请求数据包
+### 6.6.1. 修改请求数据包
 
 打开拦截
 
@@ -278,7 +270,7 @@ Cluster bomb  # 多个字典, 穷举测试
 
 > 可以在原有代码的基础上加入木马，做免杀。
 
-### 6.7 自动化测试 XSS 漏洞
+### 6.7. 自动化测试 XSS 漏洞
 
 burp 开启拦截，提交任意参数，发送请求数据包到 intruder 中
 
@@ -324,7 +316,7 @@ payload 类型选择为指定文件
 
 > 在 P grep 一栏中，参数为 1 的，说明成功执行
 
-### 6.8 漏洞扫描
+### 6.8. 漏洞扫描
 
 关闭拦截
 
