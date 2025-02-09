@@ -518,6 +518,7 @@ PS C:\Users\sec> ssh root@debian
 
 |                             工具                             |
 | :----------------------------------------------------------: |
+|           [nmap](https://www.kali.org/tools/nmap/)           |
 |      [subfinder](https://www.kali.org/tools/subfinder/)      |
 |          [naabu](https://www.kali.org/tools/naabu/)          |
 |      [httpx](https://www.kali.org/tools/httpx-toolkit/)      |

