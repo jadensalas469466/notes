@@ -1,27 +1,20 @@
-目录扫描。
+目录扫描.
 
 ## 1 安装
 
 安装
 
-```shell
-┌──(root㉿kali)-[~]
-└─# sudo apt install -y dirsearch
+```
+┌──(root@debian)-[~]
+└─# apt install -y dirsearch
 ```
 
 ## 2 使用
 
-查看帮助
-
-```shell
-┌──(root㉿kali)-[~]
-└─# man dirsearch
-```
-
 对目标进行目录扫描
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# dirsearch -u [url]
 ```
 

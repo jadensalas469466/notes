@@ -1,4 +1,4 @@
-XSS Fuzz。
+XSS Fuzz
 
 ## 1 安装
 

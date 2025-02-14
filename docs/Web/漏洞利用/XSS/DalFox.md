@@ -4,76 +4,37 @@ XSS Fuzz。
 
 安装
 
-```shell
-┌──(root㉿kali)-[~]
+```
+┌──(root@debian)-[~]
 └─# go install github.com/hahwul/dalfox/v2@latest
-```
-
-编写执行脚本
-
-```shell
-┌──(root㉿kali)-[~]
-└─# vim /root/go/bin/dalfox.sh
-```
-
-```sh
-#!/bin/bash
-
-# 错误检测
-set -e
-
-# 获取链接的实际路径并切换到该目录
-cd "$(dirname "$(readlink -f "$0")")"
-
-# 运行 dalfox
-./dalfox "$@"
-```
-
-> windows
->
-> ```bat
-> @echo off
-> 
-> rem 切换到脚本所在的目录
-> cd /d %~dp0
-> 
-> rem 运行 dalfox
-> ./dalfox.exe %*
-> ```
-
-创建链接
-
-```shell
-┌──(root㉿kali)-[~]
-└─# chmod +x /root/go/bin/dalfox.sh && ln -s /root/go/bin/dalfox.sh /usr/local/bin/dalfox
 ```
 
 ## 2 使用
 
 扫描 GET 传参 XSS
 
-```shell
+```
 ┌──(root㉿kali)-[~]
-└─# dalfox url '[url?payload=1]'
+└─# dalfox url '<URL>'
 ```
 
 扫描存储在文件中的 GET 传参 XSS
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# dalfox file '/root/urls.txt'
 ```
 
 扫描 POST 传参 XSS
 
-```shell
+```
 ┌──(root㉿kali)-[~]
-└─# dalfox url '[url]' -d 'payload=1'
+└─# dalfox url '<URL>' -d 'payload=1'
 ```
 
 ## 3 帮助
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# dalfox -h
 ```
@@ -844,4 +805,4 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 参考链接
 
-- [DalFox](https://github.com/hahwul/dalfox)
+- [DalFox](https://dalfox.hahwul.com/)

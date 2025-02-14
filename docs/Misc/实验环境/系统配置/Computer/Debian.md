@@ -530,6 +530,7 @@ PS C:\Users\sec> ssh root@debian
 |         [nuclei](https://www.kali.org/tools/nuclei/)         |
 |          [nikto](https://www.kali.org/tools/nikto/)          |
 |           [ffuf](https://www.kali.org/tools/ffuf/)           |
+|      [dirsearch](https://www.kali.org/tools/dirsearch/)      |
 
 |                      server                      |
 | :----------------------------------------------: |
