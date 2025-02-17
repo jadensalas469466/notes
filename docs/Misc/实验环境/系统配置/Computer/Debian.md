@@ -371,7 +371,8 @@ deb https://security.debian.org/debian-security bookworm-security main contrib n
 └─# apt install -y vim curl sudo tree unzip apache2 build-essential libpcap-dev \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
 && systemctl enable --now apache2.service \
-&& chsh -s $(which zsh)
+&& chsh -s $(which zsh) \
+&& nodejs npm
 ```
 
 允许远程登录 `root` 并配置稳定连接

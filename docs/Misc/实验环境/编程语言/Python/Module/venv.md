@@ -4,20 +4,23 @@
 
 创建虚拟环境
 
-```shell
-root@server:~# python -m venv /path/venv
+```
+┌──(root@debian)-[~/path]
+└─# python -m venv ./venv
 ```
 
 激活虚拟环境
 
-```shell
-root@server:~# source /path/venv/bin/activate
+```
+┌──(root@debian)-[~/path]
+└─# source ./venv/bin/activate
 ```
 
 退出虚拟环境
 
-```shell
-(venv) root@server:~# deactivate
+```
+┌──(root@debian)-[~/path]
+└─# deactivate
 ```
 
 ---

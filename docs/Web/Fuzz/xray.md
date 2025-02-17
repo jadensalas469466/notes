@@ -84,19 +84,19 @@ start powershell -NoExit -Command "& { xray }"
 
 打开安全设置
 
-![打开安全设置](./../../../../images/xray/%E6%89%93%E5%BC%80%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png)
+![打开安全设置](./../../../images/xray/%E6%89%93%E5%BC%80%E5%AE%89%E5%85%A8%E8%AE%BE%E7%BD%AE.png)
 
 管理证书
 
-![管理证书](./../../../../images/xray/%E7%AE%A1%E7%90%86%E8%AF%81%E4%B9%A6.png)
+![管理证书](./../../../images/xray/%E7%AE%A1%E7%90%86%E8%AF%81%E4%B9%A6.png)
 
 导入证书
 
-![导入证书](./../../../../images/xray/%E5%AF%BC%E5%85%A5%E8%AF%81%E4%B9%A6.png)
+![导入证书](./../../../images/xray/%E5%AF%BC%E5%85%A5%E8%AF%81%E4%B9%A6.png)
 
 信任该证书
 
-![信任该证书](./../../../../images/xray/%E4%BF%A1%E4%BB%BB%E8%AF%A5%E8%AF%81%E4%B9%A6.png)
+![信任该证书](./../../../images/xray/%E4%BF%A1%E4%BB%BB%E8%AF%A5%E8%AF%81%E4%B9%A6.png)
 
 重新加载
 
@@ -177,7 +177,7 @@ start powershell -NoExit -Command "& { xray }"
 
 此时浏览网页，xray 会在后台自动扫描
 
-![此时浏览网页，xray 会在后台自动扫描](./../../../../images/xray/%E6%AD%A4%E6%97%B6%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5%EF%BC%8Cxray%20%E4%BC%9A%E5%9C%A8%E5%90%8E%E5%8F%B0%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F.png)
+![此时浏览网页，xray 会在后台自动扫描](./../../../images/xray/%E6%AD%A4%E6%97%B6%E6%B5%8F%E8%A7%88%E7%BD%91%E9%A1%B5%EF%BC%8Cxray%20%E4%BC%9A%E5%9C%A8%E5%90%8E%E5%8F%B0%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F.png)
 
 ### 2.3 多重代理
 
@@ -203,7 +203,7 @@ start powershell -NoExit -Command "& { xray }"
 http://192.168.1.14:7777
 ```
 
-![在 burp 配置 xray 代理](./../../../../images/xray/%E5%9C%A8%20burp%20%E9%85%8D%E7%BD%AE%20xray%20%E4%BB%A3%E7%90%86.png)
+![在 burp 配置 xray 代理](./../../../images/xray/%E5%9C%A8%20burp%20%E9%85%8D%E7%BD%AE%20xray%20%E4%BB%A3%E7%90%86.png)
 
 配置 burp 代理启动 chrome
 
@@ -214,7 +214,7 @@ http://192.168.1.14:7777
 
 此时会在 burp 和 xray 同时捕获到数据包
 
-![此时会在 burp 和 xray 同时捕获到数据包](./../../../../images/xray/%E6%AD%A4%E6%97%B6%E4%BC%9A%E5%9C%A8%20burp%20%E5%92%8C%20xray%20%E5%90%8C%E6%97%B6%E6%8D%95%E8%8E%B7%E5%88%B0%E6%95%B0%E6%8D%AE%E5%8C%85.png)
+![此时会在 burp 和 xray 同时捕获到数据包](./../../../images/xray/%E6%AD%A4%E6%97%B6%E4%BC%9A%E5%9C%A8%20burp%20%E5%92%8C%20xray%20%E5%90%8C%E6%97%B6%E6%8D%95%E8%8E%B7%E5%88%B0%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
 **rad+xray**
 
@@ -254,7 +254,7 @@ http://192.168.1.14:7777
 http://127.0.0.1:7777
 ```
 
-![在 burp 配置 xray 代理](./../../../../images/xray/%E5%9C%A8%20burp%20%E9%85%8D%E7%BD%AE%20xray%20%E4%BB%A3%E7%90%86.png)
+![在 burp 配置 xray 代理](./../../../images/xray/%E5%9C%A8%20burp%20%E9%85%8D%E7%BD%AE%20xray%20%E4%BB%A3%E7%90%86.png)
 
 配置 burp 代理启动 rad
 

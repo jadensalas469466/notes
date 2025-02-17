@@ -40,7 +40,7 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 
 ```
 ┌──(root@debian)-[~]
-└─# pyenv install <version>
+└─# pyenv install <version> # For example: pyenv install 3.6
 ```
 
 刷新 shim

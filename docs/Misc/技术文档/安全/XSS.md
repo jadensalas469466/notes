@@ -23,10 +23,12 @@ Host: web-security-academy.net
 
 ### 1.1 常用执行函数
 
-```
-alert(1)       # 弹窗验证
-console.log(1) # 控制台验证
-```
+| 弹窗验证                  | 控制台验证                      |
+| ------------------------- | ------------------------------- |
+| alert(document.cookie);   | console.log(document.cookie);   |
+| confirm(document.cookie); | console.info(document.cookie);  |
+| prompt(document.cookie);  | console.error(document.cookie); |
+|                           | console.warn(document.cookie);  |
 
 ### 1.2 常用触发事件
 
