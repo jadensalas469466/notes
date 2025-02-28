@@ -8,13 +8,21 @@
 
 ## 1. 安装
 
-Windows 安装
+**Windows 安装**
 
-```
-PS C:\Users\sec> scoop install git
-```
+添加到环境变量
 
-Linux 安装
+![添加到环境变量](./../../../../images/Git/%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
+
+使用系统 OpenSSH
+
+![使用系统 OpenSSH](./../../../../images/Git/%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%20OpenSSH.png)
+
+默认使用命令行启动
+
+![默认使用命令行启动](./../../../../images/Git/%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8.png)
+
+**Linux 安装**
 
 ```
 apt install -y git
@@ -48,12 +56,6 @@ git config --global user.name "sec"
 
 ```
 git config --global user.email "<private-name>@users.noreply.github.com"
-```
-
-禁止自动转换换行符
-
-```
-git config --global core.autocrlf false
 ```
 
 ### 2.2. Linux
@@ -248,8 +250,14 @@ git config --global --unset http.proxy                  # 移除代理
 git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 ```
 
+禁止自动转换换行符
+
+```
+git config --global core.autocrlf false
+```
+
 ---
 
 参考链接
 
-- [Git](https://github.com/git/git)
+- [Git](https://git-scm.com/)

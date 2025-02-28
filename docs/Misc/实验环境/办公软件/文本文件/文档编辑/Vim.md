@@ -2,9 +2,9 @@
 
 ## 1. 安装
 
-```powershell
-PS C:\Users\sec> scoop install vim
-```
+勾选 `Create .bat files` 后执行默认安装
+
+![勾选 Create .bat files 后执行默认安装](./../../../../../../images/Vim/%E5%8B%BE%E9%80%89%20Create%20.bat%20files%20%E5%90%8E%E6%89%A7%E8%A1%8C%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85.png)
 
 ## 2. 使用
 

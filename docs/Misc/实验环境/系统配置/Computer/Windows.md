@@ -390,6 +390,7 @@ C:\Windows\System32\drivers\etc\hosts
 |    [Firefox](https://www.mozilla.org/en-US/firefox/new/)     |
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
+|                 [Git](https://git-scm.com/)                  |
 |           [GlassWire](https://www.glasswire.com/)            |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |            [ImageGlass](https://imageglass.org/)             |
@@ -397,12 +398,13 @@ C:\Windows\System32\drivers\etc\hosts
 |             [KeePassXC](https://keepassxc.org/)              |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
+|            [Node.js (LTS)](https://nodejs.org/en)            |
 |         [Notepad++](https://notepad-plus-plus.org/)          |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |              [Potplayer](https://potplayer.tv/)              |
+|              [Python](https://www.python.org/)               |
 |         [qBittorrent](https://www.qbittorrent.org/)          |
-|                  [Scoop](https://scoop.sh/)                  |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
 |              [Telegram](https://telegram.org/)               |
@@ -411,12 +413,17 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |
 |      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
+|                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 | [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US) |
 |                [微信](https://weixin.qq.com/)                |
 |                 [Xmind](https://xmind.app/)                  |
 |                [Yakit](https://yaklang.com/)                 |
+
+|      |
+| ---- |
+|      |
 
 ## 6. 使用
 

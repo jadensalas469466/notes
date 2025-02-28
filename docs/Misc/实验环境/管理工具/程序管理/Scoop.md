@@ -40,21 +40,7 @@ scoop bucket add spc https://github.com/lzwme/scoop-proxy-cn
 scoop install sudo scoop-search vim sdelete python
 ```
 
-## 3. 部署
-
-|                            scoop                             |
-| :----------------------------------------------------------: |
-|              [aria2](https://aria2.github.io/)               |
-|                [7zip](https://www.7-zip.org/)                |
-|                 [git](https://git-scm.com/)                  |
-|          [gsudo](https://github.com/gerardog/gsudo)          |
-|  [scoop-search](https://github.com/tokiedokie/scoop-search)  |
-| [sdelete](https://learn.microsoft.com/zh-cn/sysinternals/downloads/sdelete) |
-|                 [vim](https://www.vim.org/)                  |
-|              [python](https://www.python.org/)               |
-|             [nodejs-lts](https://nodejs.org/en)              |
-
-## 4. 使用
+## 3. 使用
 
 查看帮助
 
