@@ -381,6 +381,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 |                            物理机                            |
 | :----------------------------------------------------------: |
+|               [7-Zip](https://www.7-zip.org/)                |
 |                [AnyTXT](https://anytxt.net/)                 |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |

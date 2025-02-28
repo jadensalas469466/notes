@@ -52,6 +52,7 @@ scoop install sudo scoop-search vim sdelete python
 | [sdelete](https://learn.microsoft.com/zh-cn/sysinternals/downloads/sdelete) |
 |                 [vim](https://www.vim.org/)                  |
 |              [python](https://www.python.org/)               |
+|             [nodejs-lts](https://nodejs.org/en)              |
 
 ## 4. 使用
 
