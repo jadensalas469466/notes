@@ -398,7 +398,6 @@ C:\Windows\System32\drivers\etc\hosts
 |             [KeePassXC](https://keepassxc.org/)              |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
-|            [Node.js (LTS)](https://nodejs.org/en)            |
 |         [Notepad++](https://notepad-plus-plus.org/)          |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
