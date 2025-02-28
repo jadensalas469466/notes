@@ -2,9 +2,9 @@
 
 ## 1. 安装
 
-勾选 `Create .bat files` 后执行默认安装
+添加到环境变量
 
-![勾选 Create .bat files 后执行默认安装](./../../../../../../images/Vim/%E5%8B%BE%E9%80%89%20Create%20.bat%20files%20%E5%90%8E%E6%89%A7%E8%A1%8C%E9%BB%98%E8%AE%A4%E5%AE%89%E8%A3%85.png)
+![添加到环境变量](./../../../../../../images/Vim/%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 ## 2. 使用
 
