@@ -12,6 +12,10 @@
 
 ![设置暗黑模式](./../../../../../../images/Notepad++/%E8%AE%BE%E7%BD%AE%E6%9A%97%E9%BB%91%E6%A8%A1%E5%BC%8F.png)
 
+开启自动换行
+
+![开启自动换行](./../../../../../../images/Notepad++/%E5%BC%80%E5%90%AF%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C.png)
+
 **安装 Dracula 主题**
 
 下载到 Notepad++ 根目录中
