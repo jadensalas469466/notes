@@ -2,25 +2,44 @@
 
 ## 1. 使用
 
+**Debian**
+
 创建虚拟环境
 
 ```
-┌──(root@debian)-[~/path]
-└─# python3 -m venv ./venv
+python3 -m venv ./venv
 ```
 
 激活虚拟环境
 
 ```
-┌──(root@debian)-[~/path]
-└─# source ./venv/bin/activate
+source ./venv/bin/activate
 ```
 
 退出虚拟环境
 
 ```
-┌──(root@debian)-[~/path]
-└─# deactivate
+deactivate
+```
+
+**Windows**
+
+创建虚拟环境
+
+```
+python -m venv .\venv
+```
+
+激活虚拟环境
+
+```
+.\venv\Scripts\Activate.ps1
+```
+
+退出虚拟环境
+
+```
+deactivate
 ```
 
 ---

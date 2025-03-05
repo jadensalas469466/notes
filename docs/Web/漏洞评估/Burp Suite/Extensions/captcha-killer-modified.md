@@ -1,22 +1,35 @@
-一款用于验证码爆破的 Burp Suite 插件。
+一款用于验证码识别的 Burp Suite 插件.
 
-## 1 安装
+## 1. 安装
+
+克隆到本地
+
+```
+git clone https://github.com/f0ng/captcha-killer-modified.git
+```
+
+创建虚拟环境
+
+```
+python -m venv ./venv
+```
+
+激活虚拟环境
+
+```
+source ./venv/bin/activate
+```
 
 安装依赖
 
-```powershell
-PS D:\share> pip install argparse ddddocr
+```
+pip install -r requirement.txt
 ```
 
-运行 [codereg](https://github.com/f0ng/captcha-killer-modified/blob/main/codereg.py) 
+运行 [codereg](https://github.com/f0ng/captcha-killer-modified/blob/main/codereg.py)
 
 ```
-欢迎使用ddddocr，本项目专注带动行业内卷，个人博客:wenanzhe.com
-训练数据支持来源于:http://146.56.204.113:19199/preview
-爬虫框架feapder可快速一键接入，快速开启爬虫之旅：https://github.com/Boris-code/feapder
-谷歌reCaptcha验证码 / hCaptcha验证码 / funCaptcha验证码商业级识别接口：https://yescaptcha.com/i/NSwk7i
-======== Running on http://0.0.0.0:8888 ========
-(Press CTRL+C to quit)
+python codereg.py
 ```
 
 ## 2 使用
