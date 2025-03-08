@@ -1,11 +1,17 @@
 将目标的敏感信息缓存到 URL 中.
 
+为方便演示, 将结果: `敏感信息,X-Cache` 以数字 `0` 和 `1` 组合演示;
+不存在的信息用 `0` 表示, 存在的信息用 `1` 表示
+
 ## 1. PoC
 
-1. 访问 https://example.com/my-account 可以得到敏感信息
-2. 构造 URL https://example.com/my-account/test.js 并发送请求
-   响应中包含 `X-Cache: miss` 和 `Cache-Control: max-age=30` 
-3. 在 30 秒内重新发送请求
+1. 访问 https://example.com/my-account 1,0
+2. 访问 https://example.com/my-accounttest 0,0
+3. 访问 https://example.com/my-account/test 1,0
+   (在这一步测试可用的分隔符)
+4. 访问 https://example.com/my-account/test.js 1,1
+   (后缀可能是: `.js` , `.css` , `.ico` , `.exe`)
+5.  `Cache-Control: max-age=30` 则在 30 秒内重新发送请求
    响应中的 `X-Cache: miss` 变为 `X-Cache: hit` 
 
 ## 2. Exploit
