@@ -6,7 +6,7 @@
 
 > https://developer.android.com/studio/run/win-usb?hl=zh-cn
 >
->  usb_driver-windows.zip 
+>  usb_driver-windows.zip
 
  Android SDK Platform-Tools 
 

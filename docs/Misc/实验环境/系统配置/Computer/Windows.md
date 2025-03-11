@@ -420,10 +420,6 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Xmind](https://xmind.app/)                  |
 |                [Yakit](https://yaklang.com/)                 |
 
-|      |
-| ---- |
-|      |
-
 ## 6. 使用
 
 ### 6.1 查看帮助

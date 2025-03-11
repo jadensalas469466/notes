@@ -10,8 +10,6 @@
 
 安装 Npcap
 
-> 若已安装 namp 则不需要
-
 ![安装 Npcap](./../../../../images/Wireshark/%E5%AE%89%E8%A3%85%20Npcap.png)
 
 安装 USBPcap
