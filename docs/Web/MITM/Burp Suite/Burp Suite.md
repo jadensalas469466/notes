@@ -128,7 +128,7 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 
 ## 6. 使用
 
-推荐使用 Firefox 转发数据包到 Burp Suite, 避免 Chrome 中过多的 Extensions 对 Burp Suite 造成干扰
+推荐使用 Burp Suite 内置的 Chromium, 避免 Chrome 中过多的 Extensions 对 Burp Suite 造成干扰
 
 ### 6.1. Proxy
 
