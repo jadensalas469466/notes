@@ -1,4 +1,4 @@
-图形化用户界面操作系统。
+图形化用户界面操作系统.
 
 ## 1. 准备
 
@@ -401,7 +401,6 @@ C:\Windows\System32\drivers\etc\hosts
 |         [qBittorrent](https://www.qbittorrent.org/)          |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
-|              [Telegram](https://telegram.org/)               |
 |            [TTime](https://ttime.timerecord.cn/)             |
 |     [TurboTop](https://www.savardsoftware.com/turbotop/)     |
 |                 [Typora](https://typora.io/)                 |
@@ -412,8 +411,6 @@ C:\Windows\System32\drivers\etc\hosts
 | [VMware](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 | [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US) |
 |                [微信](https://weixin.qq.com/)                |
-|                 [Xmind](https://xmind.app/)                  |
-|                [Yakit](https://yaklang.com/)                 |
 
 ## 6. 使用
 
