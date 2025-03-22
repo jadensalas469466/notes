@@ -383,7 +383,6 @@ C:\Windows\System32\drivers\etc\hosts
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
 | [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
 |        [Everything](https://www.voidtools.com/zh-cn/)        |
-|    [Firefox](https://www.mozilla.org/en-US/firefox/new/)     |
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
 |                 [Git](https://git-scm.com/)                  |
@@ -394,6 +393,7 @@ C:\Windows\System32\drivers\etc\hosts
 |             [KeePassXC](https://keepassxc.org/)              |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
+|             [MuMuPlayer](https://mumu.163.com/)              |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |              [Potplayer](https://potplayer.tv/)              |

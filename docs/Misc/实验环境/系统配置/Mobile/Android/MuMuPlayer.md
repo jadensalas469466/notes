@@ -1,6 +1,6 @@
-一款 Windows 平台的安卓模拟器
+一款 Windows 平台的安卓模拟器.
 
-## 1 初始化
+## 1. 初始化
 
 配置设置中心
 
@@ -8,7 +8,7 @@
 
 安装 [酷安](https://www.coolapk.com/)
 
-### 1.1 配置 ADB 调试
+### 1.1. 配置 ADB 调试
 
 将 ADB 加入环境变量
 
@@ -88,7 +88,7 @@ root
 com.tx.zqzs.yofun.mumu
 ```
 
-### 1.2 安装 burp 证书
+### 1.2. 安装 burp 证书
 
 安装 Amaze
 
@@ -108,7 +108,7 @@ com.tx.zqzs.yofun.mumu
 
 下载 cacert.der 到 debian
 
-> http://burpsuite/
+> http://127.0.0.1:8080/
 
 将 cacert.der 转换为 cacert.pem
 
@@ -123,8 +123,6 @@ openssl x509 -inform PEM -subject_hash_old -in cacert.pem
 ```
 
 重命名为 9a5ba575.0 并复制到 C:\Users\sec\Documents\MuMu共享文件夹\Download
-
-![使用系统应用文件将 9a5ba575.0 复制到 Download](./../../../../../../images/MuMu%E6%A8%A1%E6%8B%9F%E5%99%A8/%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E5%BA%94%E7%94%A8%E6%96%87%E4%BB%B6%E5%B0%86%209a5ba575.0%20%E5%A4%8D%E5%88%B6%E5%88%B0%20Download.png)
 
 使用 Amaze 将 9a5ba575.0 复制到 cacerts 目录
 
@@ -146,7 +144,7 @@ openssl x509 -inform PEM -subject_hash_old -in cacert.pem
 
 ![添加 burp 代理](./../../../../../../images/MuMu%E6%A8%A1%E6%8B%9F%E5%99%A8/%E6%B7%BB%E5%8A%A0%20burp%20%E4%BB%A3%E7%90%86.png)
 
-### 1.3 安装 fiddler 证书
+### 1.3. 安装 fiddler 证书
 
 导出证书
 
@@ -204,7 +202,7 @@ openssl x509 -inform PEM -subject_hash_old -in cacert.pem
 
 ![添加 fiddler 代理](./../../../../../../images/MuMu%E6%A8%A1%E6%8B%9F%E5%99%A8/%E6%B7%BB%E5%8A%A0%20fiddler%20%E4%BB%A3%E7%90%86.png)
 
-## 2 使用
+## 2. 使用
 
 在 mumuplayer 中运行任意联网程序，使用 CSNAS 找到运行环境路径
 
@@ -218,4 +216,4 @@ C:\Program Files\MuMuVMMVbox\Hypervisor\MuMuVMMHeadless.exe
 
 参考链接
 
-- [MuMu模拟器](https://mumu.163.com/)
+- [MuMuPlayer](https://mumu.163.com/)

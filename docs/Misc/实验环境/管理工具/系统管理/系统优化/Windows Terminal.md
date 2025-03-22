@@ -2,6 +2,10 @@ Windows 上的命令行工具.
 
 ## 1. 初始化
 
+修改启动大小和并在启动时居中
+
+![修改启动大小和并在启动时居中](./../../../../../../images/Windows%20Terminal/%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E5%A4%A7%E5%B0%8F%E5%92%8C%E5%B9%B6%E5%9C%A8%E5%90%AF%E5%8A%A8%E6%97%B6%E5%B1%85%E4%B8%AD.png)
+
 修改主题
 
 ![修改主题](./../../../../../../images/Windows%20Terminal/%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98.png)
