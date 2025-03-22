@@ -1,38 +1,34 @@
 一款 Markdown 编辑器.
 
-## 1 初始化
+## 1. 初始化
 
-将解压文件的内容移动到 `C:\Users\sec\AppData\Roaming\Typora\themes` , 重启生效
+Files
 
-> https://draculatheme.com/typora
+![Files](C:\Users\sec\share\github\notes\images\Typora\Files.png)
 
-文件
+Editor
 
-![文件](./../../../../../../../images/Typora/%E6%96%87%E4%BB%B6.png)
+![Editor](C:\Users\sec\share\github\notes\images\Typora\Editor.png)
 
-编辑器
+Image
 
-![编辑器](./../../../../../../../images/Typora/%E7%BC%96%E8%BE%91%E5%99%A8.png)
-
-图像
-
-![图像](./../../../../../../../images/Typora/%E5%9B%BE%E5%83%8F.png)
+![Image](./../../../../../../../images/Typora/Image.png)
 
 Markdown
 
 ![Markdown](./../../../../../../../images/Typora/Markdown.png)
 
-外观
+Appearance
 
-![外观](./../../../../../../../images/Typora/%E5%A4%96%E8%A7%82.png)
+![Appearance](./../../../../../../../images/Typora/Appearance.png)
 
-通用
+General
 
-![通用](./../../../../../../../images/Typora/%E9%80%9A%E7%94%A8.png)
+![General](./../../../../../../../images/Typora/General.png)
 
 ---
 
-参考链接
+Reference Links
 
 - [Typora](https://typora.io/)
 - [Typora Support](https://support.typora.io/)

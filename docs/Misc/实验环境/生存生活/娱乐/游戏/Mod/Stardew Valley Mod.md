@@ -4,7 +4,7 @@
 
 > https://www.nexusmods.com/stardewvalley/mods/2400
 >
-> `SMAPI 4.0.8-2400-4-0-8-1713751744.zip` 
+> `SMAPI.zip` 
 
 1. 将 `SMAPI installer` 复制到 `C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley` 
 
@@ -18,39 +18,41 @@
 
 ![修改启动项](./../../../../../../../images/Stardew%20Valley%20Mod/%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E9%A1%B9.png)
 
-将需要安装的模块复制到以下路径即可
+将需要安装的模块解压到以下路径即可
 
 > C:\Program Files (x86)\Steam\steamapps\common\Stardew Valley\Mods
 
-> 通用 Mod 配置菜单: https://www.nexusmods.com/stardewvalley/mods/5098
+> GenericModConfigMenu: https://www.nexusmods.com/stardewvalley/mods/5098
 >
-> 核心模组: https://www.nexusmods.com/stardewvalley/mods/3213
+> StardewHack: https://www.nexusmods.com/stardewvalley/mods/3213
 >
-> UI 信息: https://www.nexusmods.com/stardewvalley/mods/7098
+> UIInfoSuite2: https://www.nexusmods.com/stardewvalley/mods/7098
 >
-> F1 查看详细信息: https://www.nexusmods.com/stardewvalley/mods/541
+> ContentPatcher: https://www.nexusmods.com/stardewvalley/mods/1915
 >
-> 缩放视野: https://www.nexusmods.com/stardewvalley/mods/7363
+> LookupAnything: https://www.nexusmods.com/stardewvalley/mods/541
 >
-> 跳过钓鱼游戏: https://www.nexusmods.com/stardewvalley/mods/2697
+> ZoomLevel: https://www.nexusmods.com/stardewvalley/mods/7363
 >
-> 快速动画: https://www.nexusmods.com/stardewvalley/mods/1089
+> SkipFishingMinigameDotnet5: https://www.nexusmods.com/stardewvalley/mods/2697
 >
-> 自动门: https://www.nexusmods.com/stardewvalley/mods/3109
+> FastAnimations: https://www.nexusmods.com/stardewvalley/mods/1089
 >
-> 镰刀收割: https://www.nexusmods.com/stardewvalley/mods/2731
+> AutomaticGates: https://www.nexusmods.com/stardewvalley/mods/3109
 >
-> 可通行的农作物: https://www.nexusmods.com/stardewvalley/mods/15223
+> HarvestWithScythe: https://www.nexusmods.com/stardewvalley/mods/2731
 >
-> 随处打开箱子: https://www.nexusmods.com/stardewvalley/mods/518
+> PassableCrops: https://www.nexusmods.com/stardewvalley/mods/15223
 >
-> 梯子定位: https://www.nexusmods.com/stardewvalley/mods/3094
+> ChestsAnywhere: https://www.nexusmods.com/stardewvalley/mods/518
 >
-> 拖拉机: https://www.nexusmods.com/stardewvalley/mods/1401 
+> LadderLocator: https://www.nexusmods.com/stardewvalley/mods/3094
 >
-> 自动生产: https://www.nexusmods.com/stardewvalley/mods/1063
+> TractorMod: https://www.nexusmods.com/stardewvalley/mods/1401 
 >
-> 沙漠矿洞电梯: https://www.nexusmods.com/stardewvalley/mods/963
+> Automate: https://www.nexusmods.com/stardewvalley/mods/1063
 >
-> 增加木匠售品: https://www.nexusmods.com/stardewvalley/mods/26961
+> SkullCavernElevator: https://www.nexusmods.com/stardewvalley/mods/963
+>
+> Robin Sells Machines: https://www.nexusmods.com/stardewvalley/mods/26961
 

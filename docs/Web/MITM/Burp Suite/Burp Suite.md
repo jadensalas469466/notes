@@ -1,4 +1,4 @@
-一款用于 Web 应用漏洞测试的工具。
+一款用于 Web 应用漏洞测试的工具.
 
 ## 1. 准备
 
@@ -62,9 +62,9 @@ WshShell.Run command, 0
 
 浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` 并安装
 
-> http://burpsuite/
+> http://127.0.0.1:8080/
 
-![浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` ](./../../../../images/Burp%20Suite/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE%20Burp%20Suite%20%E4%BB%A3%E7%90%86%E6%89%93%E5%BC%80%E4%BB%A5%E4%B8%8B%E9%93%BE%E6%8E%A5%EF%BC%8C%E4%B8%8B%E8%BD%BD%20%60cacert.der%60%20.png)
+![浏览器配置 Burp Suite 代理打开以下链接，下载 cacert.der](./../../../../images/Burp%20Suite/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE%20Burp%20Suite%20%E4%BB%A3%E7%90%86%E6%89%93%E5%BC%80%E4%BB%A5%E4%B8%8B%E9%93%BE%E6%8E%A5%EF%BC%8C%E4%B8%8B%E8%BD%BD%20cacert.der.png)
 
 ## 4. 初始化
 
@@ -76,9 +76,9 @@ WshShell.Run command, 0
 
 ![使用默认配置启动](./../../../../images/Burp%20Suite/%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E5%90%AF%E5%8A%A8.png)
 
-更改外观字体大小和主题
+更改外观字体大小
 
-![更改外观字体大小和主题](./../../../../images/Burp%20Suite/%E6%9B%B4%E6%94%B9%E5%A4%96%E8%A7%82%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E5%92%8C%E4%B8%BB%E9%A2%98.png)
+![更改外观字体大小](./../../../../images/Burp%20Suite/%E6%9B%B4%E6%94%B9%E5%A4%96%E8%A7%82%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F.png)
 
 修改 HTTP 消息显示字体
 
@@ -107,28 +107,13 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 |                          Extensions                          |
 | :----------------------------------------------------------: |
 |            [HaE](https://github.com/gh0stkey/HaE)            |
-| [BurpFingerPrint](https://github.com/shuanx/BurpFingerPrint) |
-|   [BurpAPIFinder](https://github.com/shuanx/BurpAPIFinder)   |
-|          [Knife](https://github.com/bit4woo/knife)           |
-|        [OneScan](https://github.com/vaycore/OneScan)         |
-|     [RouteVulScan](https://github.com/F6jO/RouteVulScan)     |
-| [BurpShiroPassiveScan](https://github.com/pmiaowu/BurpShiroPassiveScan) |
-| [BurpFastJsonScan](https://github.com/pmiaowu/BurpFastJsonScan) |
-| [WooYun-Payload](https://github.com/boy-hack/wooyun-payload) |
-|        [xia SQL](https://github.com/smxiazi/xia_sql)         |
-| [Turbo Intruder](https://github.com/portswigger/turbo-intruder) |
 |       [BypassPro](https://github.com/0x727/BypassPro)        |
-|  [BurpFakeIP](https://github.com/TheKingOfDuck/BurpFakeIP)   |
-| [captcha-killer-modified](https://github.com/f0ng/captcha-killer-modified) |
-|   [Hackvertor](https://github.com/portswigger/hackvertor)    |
-|    [Retire.js](https://github.com/portswigger/retire-js)     |
-|     [Autorize](https://github.com/portswigger/autorize)      |
-| [AutoRepeater](https://github.com/portswigger/auto-repeater) |
-|        [Authz](https://github.com/PortSwigger/authz)         |
+| [Turbo Intruder](https://github.com/portswigger/turbo-intruder) |
+| [SMS Bomb Fuzzer](https://github.com/yuziiiiiiiiii/SMS_Bomb_Fuzzer) |
+|  [burpFakeIP](https://github.com/TheKingOfDuck/BurpFakeIP)   |
+|        [xia SQL](https://github.com/smxiazi/xia_sql)         |
 
 ## 6. 使用
-
-推荐使用 Incognito 模式, 避免过多的 Extensions 对 Burp Suite 造成干扰
 
 ### 6.1. Proxy
 

@@ -350,10 +350,6 @@ C:\Windows\System32\drivers\etc\hosts
 
 使用 Dism++ 修改系统设置
 
-设置背景色为: `#282A36` 
-
-设置主题色为: `#44475A` 
-
 使用 [Office Tool Plus](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/ban-gong-ruan-jian/wen-ben-wen-dang/wen-dang-bian-ji/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio.
 
 关机，快照命名为 `初始化` 
@@ -398,7 +394,6 @@ C:\Windows\System32\drivers\etc\hosts
 |             [KeePassXC](https://keepassxc.org/)              |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
-|         [Notepad++](https://notepad-plus-plus.org/)          |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |              [Potplayer](https://potplayer.tv/)              |
