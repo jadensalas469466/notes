@@ -1,3 +1,19 @@
+[泛微](https://www.weaver.com.cn/)
+
+![Weaver](./../../../images/FingerPrints/Weaver.png)
+
+[蓝凌](https://www.landray.com.cn/)
+
+![Landray](./../../../images/FingerPrints/Landray.png)
+
+[Spring](https://spring.io/)
+
+![Spring](./../../../images/FingerPrints/Spring.png)
+
+[ThinkPHP](https://www.thinkphp.cn/)
+
+![ThinkPHP](./../../../images/FingerPrints/ThinkPHP.png)
+
 ## oss
 
 ```
