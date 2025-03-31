@@ -17,4 +17,4 @@ http://example.com/demo.php/?img=coca-cola.jpg&width=100&height=100
 References
 
 - [新类型【漏洞】验证码大小可控导致的拒绝服务攻击漏洞](https://zhuanlan.zhihu.com/p/41800341)
-- 
+- [demo](https://github.com/jadensalas469466/demo)
