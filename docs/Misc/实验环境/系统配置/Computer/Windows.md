@@ -407,6 +407,7 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |
 |      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
+|                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 | [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US) |

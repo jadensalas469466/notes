@@ -134,6 +134,8 @@ xss" onerror="alert(1)"
 > 触发 PDF-XSS 需要 PDF 查看器中可执行嵌入的 JavaScript; 如 Chromium, Adobe Acrobat
 >
 > 访问 PDF-XSS 链接时的请求参数不能随意删除，否则无法触发
+>
+> 社工时可以使用 [iLovePDF](https://www.ilovepdf.com/zh-cn/merge_pdf) 将正常 PDF 与 PDF-XSS 合并
 
 若目标仅在前端校验可上传一张 PNG 文件，然后在 Burp Suite 中修改为 HTML
 
