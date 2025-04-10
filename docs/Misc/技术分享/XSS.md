@@ -1,4 +1,10 @@
-XSS 最终是在前端执行的, 而后端往往会对传入的字符进行处理, 避免执行 XSS.
+攻击者在网页中注入恶意脚本，当用户访问页面时，脚本在用户浏览器中执行，从而达到窃取数据、模拟操作等目的.
+
+> 只可作用于触发 XSS 的网站, 如: 
+>
+> 在 example.com 上传 PDF-XSS, 打开时会调用 test.com 提供的 PDF 查看器并触发 XSS;
+>
+> 那么此时的 XSS 只作用于 test.com, 不会影响 example.com.
 
 ## 1. 原理
 
@@ -91,7 +97,7 @@ onfocus="alert(1)"	    # 元素获得焦点时触发（如 <input>）
 提交这个字符串可以判断过滤了哪些字符，有的字符只可在 IE 中使用
 
 ```
-xss"""'`>,:;onmousemovejavascriptstyle(1)
+xss"""'''```<>,:;onmousemovejavascriptstyle(1)
 ```
 
 ```

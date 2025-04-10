@@ -2,10 +2,10 @@
 
 ## 1. 准备
 
-zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
+Windows 10 IoT Enterprise LTSC 2021
 
 ```
-https://www.microsoft.com/zh-cn/evalcenter/download-windows-10-enterprise
+https://massgrave.dev/windows_ltsc_links
 ```
 
 VMware
@@ -391,7 +391,6 @@ C:\Windows\System32\drivers\etc\hosts
 |            [ImageGlass](https://imageglass.org/)             |
 |     [Java](https://www.java.com/en/download/manual.jsp)      |
 |             [KeePassXC](https://keepassxc.org/)              |
-|        [Koodo Reader](https://www.koodoreader.com/en)        |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
 |             [MuMuPlayer](https://mumu.163.com/)              |

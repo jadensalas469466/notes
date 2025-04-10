@@ -10,6 +10,12 @@
 https://api.map.baidu.com/api?v=1.0&&type=webgl&ak=SA1vncDqp8vNAVIn1WUGIQkE7G5cDdbP
 ```
 
+```
+web.body="https://api.map.baidu.com/api?v=webgl"&&web.body="&&type="&&web.body="&ak="
+```
+
+
+
 ### 1.2. PoC
 
 ```
