@@ -391,6 +391,7 @@ C:\Windows\System32\drivers\etc\hosts
 |            [ImageGlass](https://imageglass.org/)             |
 |     [Java](https://www.java.com/en/download/manual.jsp)      |
 |             [KeePassXC](https://keepassxc.org/)              |
+|        [Koodo Reader](https://www.koodoreader.com/en)        |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
 |             [MuMuPlayer](https://mumu.163.com/)              |

