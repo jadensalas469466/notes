@@ -1,4 +1,4 @@
-一款开源的数据同步工具。
+一款开源的数据同步工具.
 
 ## 1 安装
 
@@ -28,14 +28,16 @@ PS C:\Users\sec> regsvr32 jscript.dll
 
 安装 Syncthing
 
-```shell
-root@server:~# apt install -y syncthing
+```
+┌──(root@debian)-[~]
+└─# apt install -y syncthing
 ```
 
 添加 systemd 系统服务配置文件
 
-```shell
-root@server:~# vim /etc/systemd/system/syncthing@.service
+```
+┌──(root@debian)-[~]
+└─# vim /etc/systemd/system/syncthing@.service
 ```
 
 ```
@@ -77,20 +79,23 @@ WantedBy=multi-user.target
 
 设置防火墙规则
 
-```shell
-root@server:~# ufw allow 8384
+```
+┌──(root@debian)-[~]
+└─# ufw allow 8384
 ```
 
 重新加载 systemd 系统服务配置文件
 
-```shell
-root@server:~# systemctl daemon-reload
+```
+┌──(root@debian)-[~]
+└─# systemctl daemon-reload
 ```
 
 以 root 权限启动 Syncthing 服务并设置开机自启
 
-```shell
-root@server:~# systemctl enable --now syncthing@root.service
+```
+┌──(root@debian)-[~]
+└─# systemctl enable --now syncthing@root.service
 ```
 
 ## 2 初始化
@@ -100,6 +105,10 @@ root@server:~# systemctl enable --now syncthing@root.service
 ```
 https://127.0.0.1:8384/
 ```
+
+同意上传报告
+
+![同意上传报告](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E5%90%8C%E6%84%8F%E4%B8%8A%E4%BC%A0%E6%8A%A5%E5%91%8A.png)
 
 对控制台进行初始化设置
 
@@ -117,13 +126,9 @@ https://127.0.0.1:8384/
 
 ![连接设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E7%BD%AE.png)
 
-编辑默认的文件夹
+移除默认的文件夹
 
-![编辑默认的文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E7%BC%96%E8%BE%91%E9%BB%98%E8%AE%A4%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9.png)
-
-移除这个文件夹
-
-![移除这个文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E7%A7%BB%E9%99%A4%E8%BF%99%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9.png)
+![移除默认的文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E7%A7%BB%E9%99%A4%E9%BB%98%E8%AE%A4%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
 ### 2.1 添加远程设备
 
@@ -159,7 +164,7 @@ https://127.0.0.1:8384/
 
 常规设置
 
-![常规配置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/Windows/%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE.png)
+![常规设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/Windows/%E5%B8%B8%E8%A7%84%E8%AE%BE%E7%BD%AE.png)
 
 共享设置
 
@@ -175,7 +180,7 @@ https://127.0.0.1:8384/
 
 ### 2.2.1.2 debian
 
-接受请求添加新文件
+接受请求添加新文件夹
 
 ![接受请求添加新文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/debian/%E6%8E%A5%E5%8F%97%E8%AF%B7%E6%B1%82%E6%B7%BB%E5%8A%A0%E6%96%B0%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
@@ -201,7 +206,7 @@ https://127.0.0.1:8384/
 
 常规设置
 
-![常规配置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/Windows/%E5%B8%B8%E8%A7%84%E9%85%8D%E7%BD%AE.png)
+![常规设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/Windows/%E5%B8%B8%E8%A7%84%E8%AE%BE%E7%BD%AE.png)
 
 共享设置
 
