@@ -63,6 +63,7 @@ xss"""'''```<>＜＞.,:;onmousemovejavascriptstyle(1)
 ### 2.1. 案例
 
 - [使用全角尖括号绕过](https://hackerone.com/reports/639684)
+- [在线 Markdown 渲染链接时将标题与链接拼接](https://hackerone.com/reports/526325)
 
 ## 3. 文件解析类
 
