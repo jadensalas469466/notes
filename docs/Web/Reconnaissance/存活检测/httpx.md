@@ -18,7 +18,5 @@ httpx -l fileName.txt -o fileName.txt
 
 ---
 
-参考链接
-
 - [httpx](https://www.kali.org/tools/httpx-toolkit/)
 

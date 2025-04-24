@@ -1,4 +1,4 @@
-## 1 安装
+## 1. 安装
 
 安装
 
@@ -6,7 +6,7 @@
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
-## 2 初始化
+## 2. 初始化
 
 初始化运行
 
@@ -20,7 +20,7 @@ subfinder -ls
 vim /root/.config/subfinder/provider-config.yaml
 ```
 
-## 3 使用
+## 3. 使用
 
 经典扫描
 
@@ -36,6 +36,5 @@ root@debian:~# subfinder -d example.com -active -ip -o HostIP.txt
 
 ---
 
-参考链接
-
 - [subfinder](https://www.kali.org/tools/subfinder/)
+

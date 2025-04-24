@@ -63,7 +63,5 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ---
 
-参考链接
-
 - [hostCollision](https://github.com/alwaystest18/hostCollision)
 

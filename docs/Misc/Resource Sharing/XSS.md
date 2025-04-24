@@ -6,7 +6,7 @@
 >
 > 那么此时的 XSS 只作用于 test.com, 不会影响 example.com.
 
-Reflected XSS 和 DOM XSS 危害和影响较小, 建议只测试 Stored XSS;
+Reflected-XSS和DOM-XSS时常不收,留意公告
 
 ## 1. 原理
 
@@ -29,12 +29,18 @@ Host: web-security-academy.net
 
 ### 1.1 常用执行函数
 
-| 弹窗验证                  | 控制台验证                      |
-| ------------------------- | ------------------------------- |
-| alert(document.cookie);   | console.log(document.cookie);   |
-| confirm(document.cookie); | console.info(document.cookie);  |
-| prompt(document.cookie);  | console.error(document.cookie); |
-|                           | console.warn(document.cookie);  |
+| 弹窗验证                 | 控制台验证                     |
+| ------------------------ | ------------------------------ |
+| alert(document.cookie)   | console.log(document.cookie)   |
+| confirm(document.cookie) | console.info(document.cookie)  |
+| prompt(document.cookie)  | console.error(document.cookie) |
+|                          | console.warn(document.cookie)  |
+
+若无法弹窗验证或者控制台验证可以尝试组合CSRF使用
+
+```
+<img src="http://example.com/login">
+```
 
 ### 1.2 常用触发事件
 
@@ -52,7 +58,29 @@ onfocus="alert(1)"	    # 元素获得焦点时触发（如 <input>）
 
 ## 2. 数据提交类
 
-在目标网站提交使用 XSS 构造的数据
+在目标网站提交使用XSS构造的数据
+
+先使用无危害标签测试是否可以解析,若可以解析则存在XSS
+
+```
+<s>1
+<h1>1</h1>
+<p>1</p>
+</tExtArEa><h1>1</h1>#
+</tExtArEa><s>1#//--+
+'"></tExtArEa><s>1#//--+
+```
+
+在Burp中测试GET请求时需要对空格进行URL编码,若成功解析则标签是彩色的
+
+某些标签的内容无法解析,需要闭合
+
+```
+<xmp></xmp>
+<title></title>
+<iframe></iframe>
+<textarea></textarea>
+```
 
 提交这个字符串可以判断过滤了哪些字符，有的字符只可在 IE 中使用
 
@@ -76,6 +104,8 @@ xss"""'''```<>＜＞.,:;onmousemovejavascriptstyle(1)
 > 访问 PDF-XSS 链接时的请求参数不能随意删除，否则无法触发
 >
 > 社工时可以使用 [iLovePDF](https://www.ilovepdf.com/zh-cn/merge_pdf) 将正常 PDF 与 PDF-XSS 合并
+>
+> 由于PDF-XSS只能弹窗,SRC一般不收,要留意公告
 
 若目标仅在前端校验可上传一张 PNG 文件，然后在 Burp Suite 中修改为 HTML
 

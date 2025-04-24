@@ -523,8 +523,8 @@ PS C:\Users\sec> ssh root@debian
 |      [subfinder](https://www.kali.org/tools/subfinder/)      |
 |          [naabu](https://www.kali.org/tools/naabu/)          |
 |      [httpx](https://www.kali.org/tools/httpx-toolkit/)      |
-|    [cdnNone](https://github.com/jadensalas469466/cdnNone)    |
-|      [ipGet](https://github.com/jadensalas469466/ipGet)      |
+| [cdnNone](https://github.com/jadensalas469466/tools/blob/main/hack/cdnNone.py) |
+| [ipGet](https://github.com/jadensalas469466/tools/blob/main/hack/ipGet.py) |
 | [hostCollision](https://github.com/alwaystest18/hostCollision) |
 |        [whatweb](https://www.kali.org/tools/whatweb/)        |
 |        [wafw00f](https://www.kali.org/tools/wafw00f/)        |

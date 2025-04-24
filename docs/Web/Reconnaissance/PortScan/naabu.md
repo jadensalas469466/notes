@@ -10,14 +10,12 @@ go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 
 ## 2. 使用
 
-扫描 Top 1000 端口并跳过 CND
+扫描 Top 1000 端口开放的目标
 
 ```
-root@debian:~# naabu -l fileName.txt -tp 1000 -ec -o fileName.txt
+root@debian:~# naabu -l fileName.txt -tp 1000 -o fileName.txt
 ```
 
 ---
-
-参考链接
 
 - [naabu](https://www.kali.org/tools/naabu/)

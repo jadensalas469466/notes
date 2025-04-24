@@ -51,6 +51,4 @@ cdnNone -d fileName.txt -o fileName.txt
 
 ---
 
-参考链接
-
 - [cdnNone](https://github.com/jadensalas469466/tools/blob/main/hack/cdnNone.py)

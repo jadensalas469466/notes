@@ -51,7 +51,5 @@ ipGet -d fileName.txt -o fileName.txt
 
 ---
 
-参考链接
-
 - [ipGet](https://github.com/jadensalas469466/tools/blob/main/hack/ipGet.py)
 
