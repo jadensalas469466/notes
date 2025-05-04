@@ -15,11 +15,10 @@
 
 ```
 ┌──(root@debian)-[~]
-└─# dirsearch -u [url]
+└─# dirsearch -u https://example.com -r --format=json -o fileName.json
 ```
 
 ---
 
-参考链接
-
 - [dirsearch](https://www.kali.org/tools/dirsearch/)
+

@@ -18,7 +18,5 @@ whatweb -v -a 3 --log-json=fileName.json https://example.com
 
 ---
 
-参考链接
-
 - [whatweb](https://www.kali.org/tools/whatweb/)
 

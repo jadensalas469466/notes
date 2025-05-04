@@ -1,3 +1,21 @@
+## 1. 判断方法
+
+### 1.1. 自动
+
+```
+FOF
+Wappalyzer
+whatweb
+dirsearch
+```
+
+### 1.2. 手动
+
+```
+View page source # 查看源码
+https://example.com/<index.html> # 遍历敏感文件后缀
+```
+
 [泛微](https://www.weaver.com.cn/)
 
 ![Weaver](./../../../images/FingerPrints/Weaver.png)
@@ -14,7 +32,7 @@
 
 ![ThinkPHP](./../../../images/FingerPrints/ThinkPHP.png)
 
-## oss
+## OSS
 
 ```
 accessKey

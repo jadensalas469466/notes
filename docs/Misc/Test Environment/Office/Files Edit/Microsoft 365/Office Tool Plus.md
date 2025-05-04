@@ -1,4 +1,4 @@
-一个 Office 部署工具
+一个 Office 部署工具.
 
 ## 1 部署
 
@@ -8,21 +8,20 @@
 
 添加产品
 
-![添加产品](./../../../../../../images/Office%20Tool%20Plus/%E6%B7%BB%E5%8A%A0%E4%BA%A7%E5%93%81.png)
-
-选择产品
-
 ```
 Office LTSC 专业增强版 2024 -批量许可证
+Visio LTSC 专业版 2024 - 批量许可证
 ```
 
-![选择产品](./../../../../../../images/Office%20Tool%20Plus/%E9%80%89%E6%8B%A9%E4%BA%A7%E5%93%81.png)
+![添加产品](./../../../../../../images/Office%20Tool%20Plus/%E6%B7%BB%E5%8A%A0%E4%BA%A7%E5%93%81.png)
 
 选择应用程序
 
 ![选择应用程序](./../../../../../../images/Office%20Tool%20Plus/%E9%80%89%E6%8B%A9%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.png)
 
-> 保留 Excel、PowerPoint、Word
+> 由于 Visio 是单独的产品, 无需选择;
+>
+> 保留 Word, Excel, PowerPoint 即可
 
 添加语言
 
@@ -71,8 +70,6 @@ PS C:\Windows\system32> irm https://get.activated.win | iex
 > 若不成功则更换 KMS 主机再次尝试
 
 ---
-
-参考链接
 
 - [Office Tool Plus](https://www.officetool.plus/)
 - [Office Tool Plus Documentation](https://www.officetool.plus/zh-cn/)

@@ -350,7 +350,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 使用 Dism++ 修改系统设置
 
-使用 [Office Tool Plus](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/ban-gong-ruan-jian/wen-ben-wen-dang/wen-dang-bian-ji/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint
+使用 [Office Tool Plus](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/ban-gong-ruan-jian/wen-ben-wen-dang/wen-dang-bian-ji/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
 
 关机，快照命名为 `初始化` 
 
@@ -391,7 +391,6 @@ C:\Windows\System32\drivers\etc\hosts
 |            [ImageGlass](https://imageglass.org/)             |
 |     [Java](https://www.java.com/en/download/manual.jsp)      |
 |             [KeePassXC](https://keepassxc.org/)              |
-|        [Koodo Reader](https://www.koodoreader.com/en)        |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
 |             [MuMuPlayer](https://mumu.163.com/)              |

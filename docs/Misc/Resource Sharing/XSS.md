@@ -204,7 +204,7 @@ xss" onmousemove="alert(6)">
 
 ```
 javascript:alert(6)
-<a href="javascript:alert(6)">javascript:alert(6)</a>
+<a href="javascript:alert(1)">javascript:alert(6)</a>
 ```
 
 双写绕过，有的过滤规则是将 javascript 或 script 替换为空

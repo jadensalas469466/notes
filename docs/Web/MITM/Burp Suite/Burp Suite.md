@@ -130,6 +130,12 @@ Pitchfork     # 多个字典, 并行测试
 Cluster bomb  # 多个字典, 穷举测试
 ```
 
+使用 Grep - Match 匹配中文时需要使用 Regex 类型匹配 UTF-8 编码
+
+```python
+print("登录失败".encode("utf-8"))
+```
+
 ### 6.1.2. Intercept response
 
 在 Burp Suite 的 Intercepr 中拦截返回包
