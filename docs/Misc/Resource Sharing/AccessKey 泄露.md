@@ -2,6 +2,12 @@ AccessKey ID 和 AccessKey Secret 是调用云服务器 API 时用于完成身�
 
  AccessKey 泄露会对该账号下所有资源的安全带来威胁.
 
+Scan a repo for only verified secrets
+
+```
+trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,unknown
+```
+
 HUNTER
 
 ```
