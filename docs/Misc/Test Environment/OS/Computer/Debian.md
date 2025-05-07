@@ -516,6 +516,7 @@ PS C:\Users\sec> ssh root@debian
 | [Pikachu](https://github.com/zhuifengshaonianhanlu/pikachu) |
 |          [DVWA](https://github.com/digininja/DVWA)          |
 |         [Vulhub](https://github.com/vulhub/vulhub)          |
+|   [Vulinbox](https://yaklang.io/Yaklab/vulinbox/vulinbox)   |
 
 |                             工具                             |
 | :----------------------------------------------------------: |

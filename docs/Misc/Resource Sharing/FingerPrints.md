@@ -3,7 +3,7 @@
 ### 1.1. 自动
 
 ```
-FOF
+FOFA
 Wappalyzer
 whatweb
 dirsearch

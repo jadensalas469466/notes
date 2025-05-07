@@ -413,6 +413,7 @@ C:\Windows\System32\drivers\etc\hosts
 | [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US) |
 |                [微信](https://weixin.qq.com/)                |
 |                 [Xmind](https://xmind.app/)                  |
+|                 [Yakit](https://yaklang.io/)                 |
 
 ## 6. 使用
 

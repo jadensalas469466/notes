@@ -17,11 +17,31 @@ Web 漏洞 PoC 扫描工具.
 └─# go build ./cmd/afrog/main.go
 ```
 
-查看帮助
+编写运行脚本
 
 ```
 ┌──(root@debian)-[~/tools/apps/afrog]
-└─# ./main -h
+└─# vim ./afrog.sh
+```
+
+```sh
+#!/bin/bash
+
+# 错误检测
+set -e
+
+# 获取链接的实际路径并切换到该目录
+cd "$(dirname "$(readlink -f "$0")")"
+
+# 运行 afrog
+./main "$@"
+```
+
+创建链接
+
+```
+┌──(root@debian)-[~/tools/apps/afrog]
+└─# chmod +x ./afrog.sh && ln -s /root/tools/apps/afrog/afrog.sh /usr/local/bin/afrog && cd
 ```
 
 ## 2. 初始化
@@ -63,40 +83,6 @@ reverse:
     api_url: ""
 webhook:
   dingtalk:
-```
-
-编写运行脚本
-
-```
-┌──(root@debian)-[~/tools/apps/afrog]
-└─# vim ./afrog.sh
-```
-
-```sh
-#!/bin/bash
-
-# 错误检测
-set -e
-
-# 获取链接的实际路径并切换到该目录
-cd "$(dirname "$(readlink -f "$0")")"
-
-# 运行 afrog
-./main "$@"
-```
-
-创建链接
-
-```
-┌──(root@debian)-[~/tools/apps/afrog]
-└─# chmod +x ./afrog.sh && ln -s /root/tools/apps/afrog/afrog.sh /usr/local/bin/afrog && cd
-```
-
-查看帮助
-
-```
-┌──(root@debian)-[~]
-└─# afrog -h
 ```
 
 ## 3. 使用

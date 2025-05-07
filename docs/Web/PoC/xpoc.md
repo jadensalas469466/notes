@@ -17,7 +17,7 @@ Web 漏洞 POC 扫描工具.
 && rm -rf ./xpoc_linux_amd64.zip
 ```
 
-编写脚本
+编写运行脚本
 
 ```
 ┌──(root@debian)-[~]
