@@ -32,6 +32,4 @@ C:\Users\sec\AppData\Local\Programs\Yakit
 
 ---
 
-参考链接
-
-- [Yakit](https://github.com/yaklang/yakit)
+- [Yakit](https://yaklang.io/)
