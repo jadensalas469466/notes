@@ -38,6 +38,4 @@ Windows 上的命令行工具.
 
 ---
 
-参考链接
-
-- [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US)
+- [WindowsTerminal](https://github.com/microsoft/terminal)
