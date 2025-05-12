@@ -2,7 +2,7 @@
 
 ## 1. 准备
 
-Windows 10 IoT Enterprise LTSC 2021
+Windows 10 Enterprise LTSC 2021
 
 ```
 https://massgrave.dev/windows_ltsc_links
@@ -196,8 +196,8 @@ VMware
 输入语言和其他首选项
 
 ```
-要安装的语言: 中文(简体, 中国)
-时间和货币格式: 中文(简体, 中国)
+要安装的语言: 中文 (简体, 中国)
+时间和货币格式: 中文 (简体, 中国)
 键盘和输入方法: 微软拼音
 ```
 
@@ -279,11 +279,11 @@ sec
 
 ```
 你第一个宠物的名字是什么?
-123456
+sec
 你出生城市的名称是什么?
-123456
+sec
 你的母校名称是什么?
-123456
+sec
 ```
 
 为你的设备选择隐私设置
@@ -300,6 +300,8 @@ sec
 关机，快照命名为 `安装` 
 
 ## 4. 初始化
+
+安装驱动并更新
 
 [配置电源选项](https://keithpeck177271.gitbook.io/notes/misc/wen-ti-ji-jin/issues-of-windows#id-2-tui-jian-dian-yuan-she-zhi)
 
@@ -346,11 +348,11 @@ C:\Windows\System32\drivers\etc\hosts
 计算机配置 > 管理模板 > 控制面板 > 个性化 > 不显示锁屏 > 已启用
 ```
 
-更新并设置 驱动, Windows, Edge
+更新并设置 Windows, Edge
 
 使用 Dism++ 修改系统设置
 
-使用 [Office Tool Plus](https://keithpeck177271.gitbook.io/notes/misc/shi-yan-huan-jing/ban-gong-ruan-jian/wen-ben-wen-dang/wen-dang-bian-ji/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
+使用 [Office Tool Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
 
 关机，快照命名为 `初始化` 
 
@@ -707,4 +709,3 @@ Remove-Item "C:\path\to\directory" -Recurse
 参考链接
 
 - [Windows](https://learn.microsoft.com/zh-cn/windows/)
-
