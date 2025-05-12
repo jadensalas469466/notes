@@ -18,17 +18,11 @@ Windows 上的命令行工具.
 
 ![修改启动目录为家目录](./../../../../../../images/Windows%20Terminal/%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E7%9B%AE%E5%BD%95%E4%B8%BA%E5%AE%B6%E7%9B%AE%E5%BD%95.png)
 
-创建快捷方式
+为快捷方式快捷键添加
 
-```
-目标: C:\Program Files\WindowsApps\Microsoft.WindowsTerminal\wt.exe
-起始位置: C:\Program Files\WindowsApps\Microsoft.WindowsTerminal
-快捷键: Ctrl + Alt +T
-```
+![为快捷方式快捷键添加](./../../../../../../images/Windows%20Terminal/%E4%B8%BA%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%B7%BB%E5%8A%A0.png)
 
-![创建快捷方式](./../../../../../../images/Windows%20Terminal/%E5%88%9B%E5%BB%BA%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F.png)
 
-> 可通过 Geek 查看 Microsoftt Store Apps 中 `终端` 的安装文件夹
 
 ## 2. 使用
 
