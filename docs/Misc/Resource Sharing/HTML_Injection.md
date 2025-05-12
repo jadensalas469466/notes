@@ -17,10 +17,10 @@ Reflected 和 DOM 时常不收, 留意公告
 在评论区发送一个 HTML 标签
 
 ```
-<a href="https://evil.com">CLICK</a>
+<a href=https://evil.com>CLICK</a>
 ```
 
-会在评论区解析为 <a href="https://evil.com">CLICK</a>, 若用户点击则会跳转到恶意网站
+会在评论区解析为 <a href=https://evil.com>CLICK</a>, 若用户点击则会跳转到恶意网站
 
 ### 1.1. 存在位置
 
@@ -39,7 +39,7 @@ Reflected 和 DOM 时常不收, 留意公告
   ```
 
   ```
-  <a href="https://example.com">CLICK</a>
+  <a href=https://example.com>CLICK</a>
   ```
 
   > 响应包中 `value` 的值由请求包中的 `Referer` 的值控制, 那么可能存在 HTML Injection
@@ -93,8 +93,8 @@ Reflected 和 DOM 时常不收, 留意公告
 ```
 <s>
 <h1>hack</h1>
-<a href="https://evil.com">CLICK</a>
-<img src="https://evil.com/test.svg">
+<a href=https://evil.com>CLICK</a>
+<img src=https://evil.com/test.svg>
 ```
 
 ## 3. 文件解析类

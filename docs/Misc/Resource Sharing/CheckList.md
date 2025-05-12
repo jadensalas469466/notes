@@ -68,9 +68,9 @@ domain="10086.cn" && http.header.status_code="200" && country="CN"
 
 在 Open Multiple URLs 中访问每个站点, 保留有业务的站点;
 
-手工访问每个功能点, 使用 Xmind 绘制逻辑图, 
+手工访问每个功能点, 使用 Xmind 绘制思维导图, 在 Site map 中将所有域名添加到白名单;
 
-手工测试每个功能点, 使用 Visio 绘制流程图.
+手工测试每个功能点, 使用 Visio 绘制流程图, 在 HTTP history 中将多余的数据包添加到黑名单.
 
 ## 4. 信息泄露
 

@@ -104,16 +104,9 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 
 ![启动 Burp Suite , 配置 JAR 环境](./../../../../images/Burp_Suite/%E5%90%AF%E5%8A%A8%20Burp%20Suite%20,%20%E9%85%8D%E7%BD%AE%20JAR%20%E7%8E%AF%E5%A2%83.png)
 
-|                          Extensions                          |
-| :----------------------------------------------------------: |
-|            [HaE](https://github.com/gh0stkey/HaE)            |
-|       [BypassPro](https://github.com/0x727/BypassPro)        |
-| [Turbo Intruder](https://github.com/portswigger/turbo-intruder) |
-| [SMS Bomb Fuzzer](https://github.com/yuziiiiiiiiii/SMS_Bomb_Fuzzer) |
-|  [burpFakeIP](https://github.com/TheKingOfDuck/BurpFakeIP)   |
-|        [xia SQL](https://github.com/smxiazi/xia_sql)         |
-
 ## 6. 使用
+
+在不涉及多账号测试时一律使用 Burp Suite 内置的浏览器
 
 ### 6.1. Proxy
 

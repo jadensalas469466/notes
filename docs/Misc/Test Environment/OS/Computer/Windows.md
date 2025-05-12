@@ -398,6 +398,7 @@ C:\Windows\System32\drivers\etc\hosts
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |              [Potplayer](https://potplayer.tv/)              |
+|           [Proxifier](https://www.proxifier.com/)            |
 |              [Python](https://www.python.org/)               |
 |         [qBittorrent](https://www.qbittorrent.org/)          |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
