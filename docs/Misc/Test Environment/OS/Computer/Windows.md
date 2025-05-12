@@ -411,7 +411,7 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
-| [Windows Terminal](https://apps.microsoft.com/detail/9n0dx20hk701?hl=en-us&gl=US) |
+|  [Windows Terminal](https://github.com/microsoft/terminal)   |
 |                [微信](https://weixin.qq.com/)                |
 |                 [Xmind](https://xmind.app/)                  |
 |                 [Yakit](https://yaklang.io/)                 |
