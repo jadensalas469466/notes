@@ -1,10 +1,6 @@
-使不支持代理的应用程序通过代理进行连接。
+Proxifier allows network applications that do not support working through proxy servers to operate through a SOCKS or HTTPS proxy and chains.
 
-## 1 安装
-
-取消其他任务
-
-![取消其他任务](./../../../../../images/Proxifier/%E5%8F%96%E6%B6%88%E5%85%B6%E4%BB%96%E4%BB%BB%E5%8A%A1.png)
+## 1. 安装
 
 输入注册密码
 
@@ -18,7 +14,7 @@ F9ZN9-MYUAM-LSS3K-SBN7B-UT9PF
 
 ![输入注册密码](./../../../../../images/Proxifier/%E8%BE%93%E5%85%A5%E6%B3%A8%E5%86%8C%E5%AF%86%E7%A0%81.png)
 
-## 2 初始化
+## 2. 初始化
 
 添加 Burp Suite 代理
 
@@ -28,7 +24,7 @@ F9ZN9-MYUAM-LSS3K-SBN7B-UT9PF
 
 ![创建  java.exe 和 xray.exe 直连规则](./../../../../../images/Proxifier/%E5%88%9B%E5%BB%BA%20%20java.exe%20%E5%92%8C%20xray.exe%20%E7%9B%B4%E8%BF%9E%E8%A7%84%E5%88%99.png)
 
-## 3 使用
+## 3. 使用
 
 配置代理
 
@@ -43,7 +39,5 @@ F9ZN9-MYUAM-LSS3K-SBN7B-UT9PF
 ![创建规则只转发 HD-Player.exe 的流量](./../../../../../images/Proxifier/%E5%88%9B%E5%BB%BA%E8%A7%84%E5%88%99%E5%8F%AA%E8%BD%AC%E5%8F%91%20HD-Player.exe%20%E7%9A%84%E6%B5%81%E9%87%8F.png)
 
 ---
-
-参考链接
 
 - [Proxifier](https://www.proxifier.com/)

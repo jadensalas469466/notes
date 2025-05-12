@@ -2,16 +2,19 @@
 
 ## 1. 准备
 
-需要 JRE 8 环境
-
 - [JRE 8](https://www.java.com/en/download/manual.jsp)
 - [Burp Suite Professional](https://portswigger.net/burp/releases#professional)
 
 ## 2. 配置
 
-将注册机复制到安装目录
+将注册机和启动脚本复制到安装目录
 
-![将注册机复制到安装目录](./../../../../images/Burp_Suite/%E5%B0%86%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%A4%8D%E5%88%B6%E5%88%B0%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png)
+```
+C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpLoaderKeygen.jar
+C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpSuitePro.vbs
+```
+
+![将注册机和启动脚本复制到安装目录](C:\Users\sec\share\github\notes\images\Burp_Suite\将注册机和启动脚本复制到安装目录.png)
 
 ## 3. 安装
 
@@ -31,40 +34,11 @@
 
 ![复制粘贴注册码](./../../../../images/Burp_Suite/%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E6%B3%A8%E5%86%8C%E7%A0%81.png)
 
-> 完成注册
-
-在安装目录编写 VBS 启动脚本
-
-```vbscript
-Dim WshShell, javaPath, burpLoaderKeygen, burpSuiteJar, javaOptions
-
-' 定义路径和参数
-javaPath = "C:\Users\sec\AppData\Local\Programs\BurpSuitePro\jre\bin\java.exe"
-burpLoaderKeygen = "C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpLoaderKeygen.jar"
-burpSuiteJar = "C:\Users\sec\AppData\Local\Programs\BurpSuitePro\burpsuite_pro.jar"
-javaOptions = "--add-opens=java.desktop/javax.swing=ALL-UNNAMED " & _
-           "--add-opens=java.base/java.lang=ALL-UNNAMED " & _
-           "--add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED " & _
-           "--add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED " & _
-           "--add-opens=java.base/jdk.internal.org.objectweb.asm.Opcodes=ALL-UNNAMED"
-
-' 构建命令
-Dim command
-command = Chr(34) & javaPath & Chr(34) & " " & javaOptions & " -javaagent:" & Chr(34) & burpLoaderKeygen & Chr(34) & " -noverify -jar " & Chr(34) & burpSuiteJar & Chr(34)
-
-' 执行命令
-Set WshShell = CreateObject("WScript.Shell")
-WshShell.Run command, 0
+修改 Burp Suite Professional 快捷方式的目标
 
 ```
-
-将 Burp Suite Professional 快捷方式的目标修改为启动脚本
-
-浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` 并安装
-
-> http://127.0.0.1:8080/
-
-![浏览器配置 Burp Suite 代理打开以下链接，下载 cacert.der](./../../../../images/Burp_Suite/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE%20Burp%20Suite%20%E4%BB%A3%E7%90%86%E6%89%93%E5%BC%80%E4%BB%A5%E4%B8%8B%E9%93%BE%E6%8E%A5%EF%BC%8C%E4%B8%8B%E8%BD%BD%20cacert.der.png)
+C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpSuitePro.vbs
+```
 
 ## 4. 初始化
 
@@ -75,6 +49,12 @@ WshShell.Run command, 0
 使用默认配置启动
 
 ![使用默认配置启动](./../../../../images/Burp_Suite/%E4%BD%BF%E7%94%A8%E9%BB%98%E8%AE%A4%E9%85%8D%E7%BD%AE%E5%90%AF%E5%8A%A8.png)
+
+浏览器配置 Burp Suite 代理打开以下链接，下载 `cacert.der` 并安装
+
+> http://127.0.0.1:8080/
+
+![浏览器配置 Burp Suite 代理打开以下链接，下载 cacert.der](./../../../../images/Burp_Suite/%E6%B5%8F%E8%A7%88%E5%99%A8%E9%85%8D%E7%BD%AE%20Burp%20Suite%20%E4%BB%A3%E7%90%86%E6%89%93%E5%BC%80%E4%BB%A5%E4%B8%8B%E9%93%BE%E6%8E%A5%EF%BC%8C%E4%B8%8B%E8%BD%BD%20cacert.der.png)
 
 更改外观字体大小
 
@@ -87,8 +67,6 @@ WshShell.Run command, 0
 指定 UTF-8 字符集
 
 ![指定 UTF-8 字符集](./../../../../images/Burp_Suite/%E6%8C%87%E5%AE%9A%20UTF-8%20%E5%AD%97%E7%AC%A6%E9%9B%86.png)
-
-## 5.1 部署
 
 在安装目录创建文件夹 `Extensions` 
 
@@ -103,6 +81,8 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 启动 Burp Suite , 配置 JAR 环境
 
 ![启动 Burp Suite , 配置 JAR 环境](./../../../../images/Burp_Suite/%E5%90%AF%E5%8A%A8%20Burp%20Suite%20,%20%E9%85%8D%E7%BD%AE%20JAR%20%E7%8E%AF%E5%A2%83.png)
+
+> 安装其它插件
 
 ## 6. 使用
 

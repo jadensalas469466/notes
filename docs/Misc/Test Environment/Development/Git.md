@@ -258,6 +258,4 @@ git config --global core.autocrlf false
 
 ---
 
-参考链接
-
 - [Git](https://git-scm.com/)

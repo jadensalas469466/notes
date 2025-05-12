@@ -352,7 +352,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 使用 Dism++ 修改系统设置
 
-使用 [Office Tool Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
+使用 [Office_Tool_Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
 
 关机，快照命名为 `初始化` 
 
@@ -380,18 +380,19 @@ C:\Windows\System32\drivers\etc\hosts
 |                            物理机                            |
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
-|                [AnyTXT](https://anytxt.net/)                 |
+|            [Anytxt Searcher](https://anytxt.net/)            |
+|              [aria2](https://aria2.github.io/)               |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
 | [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
-|        [Everything](https://www.voidtools.com/zh-cn/)        |
+|           [Everything](https://www.voidtools.com/)           |
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
 |                 [Git](https://git-scm.com/)                  |
 |           [GlassWire](https://www.glasswire.com/)            |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |            [ImageGlass](https://imageglass.org/)             |
-|     [Java](https://www.java.com/en/download/manual.jsp)      |
+|               [Java](https://www.java.com/en/)               |
 |             [KeePassXC](https://keepassxc.org/)              |
 |         [Koodo Reader](https://www.koodoreader.com/)         |
 |             [LocalSend](https://localsend.org/)              |
