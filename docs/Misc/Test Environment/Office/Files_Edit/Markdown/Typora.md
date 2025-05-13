@@ -1,4 +1,4 @@
-一款 Markdown 编辑器.
+A minimal Markdown editor and reader.
 
 ## 1. 初始化
 
@@ -12,23 +12,21 @@ Editor
 
 Image
 
-![Image](./../../../../../../../images/Typora/Image.png)
+![Image](./../../../../../../images/Typora/Image.png)
 
 Markdown
 
-![Markdown](./../../../../../../../images/Typora/Markdown.png)
+![Markdown](./../../../../../../images/Typora/Markdown.png)
 
 Appearance
 
-![Appearance](./../../../../../../../images/Typora/Appearance.png)
+![Appearance](./../../../../../../images/Typora/Appearance.png)
 
 General
 
-![General](./../../../../../../../images/Typora/General.png)
+![General](./../../../../../../images/Typora/General.png)
 
 ---
-
-Reference Links
 
 - [Typora](https://typora.io/)
 - [Typora Support](https://support.typora.io/)

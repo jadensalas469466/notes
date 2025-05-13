@@ -707,6 +707,4 @@ Remove-Item "C:\path\to\directory" -Recurse
 
 ---
 
-参考链接
-
 - [Windows](https://learn.microsoft.com/zh-cn/windows/)

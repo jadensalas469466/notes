@@ -759,8 +759,6 @@ export https_proxy=$http_prox
 
 ---
 
-参考链接
-
 - [Debian](https://www.debian.org/)
 - [Debian Docs](https://www.debian.org/doc/)
 

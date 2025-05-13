@@ -1,14 +1,14 @@
-一个 Windows 平台上的 V2Ray 客户端。
+A GUI client for Windows, Linux and macOS, support Xray and sing-box and others.
 
-## 1 安装
+## 1. 安装
 
-主题跟随系统
+设置主题跟随系统
 
-![主题跟随系统](./../../../../../../images/V2RayN/%E4%B8%BB%E9%A2%98%E8%B7%9F%E9%9A%8F%E7%B3%BB%E7%BB%9F.png)
+![设置主题跟随系统](./../../../../../images/V2RayN/%E8%AE%BE%E7%BD%AE%E4%B8%BB%E9%A2%98%E8%B7%9F%E9%9A%8F%E7%B3%BB%E7%BB%9F.png)
 
-添加 VMess 服务器
+添加代理服务器
 
-![添加 VMess 服务器](./../../../../../images/V2RayN/%E6%B7%BB%E5%8A%A0%20VMess%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
+![添加代理服务器](./../../../../../images/V2RayN/%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
 
 更新全部订阅（不通过代理）
 
@@ -22,26 +22,6 @@
 
 ![路由设置为全局](./../../../../../images/V2RayN/%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE%E4%B8%BA%E5%85%A8%E5%B1%80.png)
 
-关闭阻断广告
-
-![关闭阻断广告](./../../../../../images/V2RayN/%E5%85%B3%E9%97%AD%E9%98%BB%E6%96%AD%E5%B9%BF%E5%91%8A.png)
-
-## 2 使用
-
-全选后测试延迟
-
-![全选后测试延迟](./../../../../../images/V2RayN/%E5%85%A8%E9%80%89%E5%90%8E%E6%B5%8B%E8%AF%95%E5%BB%B6%E8%BF%9F.png)
-
-按测试结果排序
-
-![按测试结果排序](./../../../../../images/V2RayN/%E6%8C%89%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C%E6%8E%92%E5%BA%8F.png)
-
-设为活动服务器
-
-![设为活动服务器](./../../../../../images/V2RayN/%E8%AE%BE%E4%B8%BA%E6%B4%BB%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
-
 ---
-
-参考链接
 
 - [V2RayN](https://github.com/2dust/v2rayN)
