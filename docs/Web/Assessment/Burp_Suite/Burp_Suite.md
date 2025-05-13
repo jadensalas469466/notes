@@ -14,7 +14,7 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpLoaderKeygen.jar
 C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpSuitePro.vbs
 ```
 
-![将注册机和启动脚本复制到安装目录](C:\Users\sec\share\github\notes\images\Burp_Suite\将注册机和启动脚本复制到安装目录.png)
+![将注册机和启动脚本复制到安装目录](./../../../../images/Burp_Suite/%E5%B0%86%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%92%8C%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC%E5%A4%8D%E5%88%B6%E5%88%B0%E5%AE%89%E8%A3%85%E7%9B%AE%E5%BD%95.png)
 
 ## 3. 安装
 

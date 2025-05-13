@@ -4,11 +4,11 @@ A minimal Markdown editor and reader.
 
 Files
 
-![Files](C:\Users\sec\share\github\notes\images\Typora\Files.png)
+![Files](./../../../../../../images/Typora/Files.png)
 
 Editor
 
-![Editor](C:\Users\sec\share\github\notes\images\Typora\Editor.png)
+![Editor](./../../../../../../images/Typora/Editor.png)
 
 Image
 

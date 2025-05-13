@@ -8,7 +8,7 @@ Windows 10 Enterprise LTSC 2021
 https://massgrave.dev/windows_ltsc_links
 ```
 
-VMware
+VMware Workstation Pro
 
 ```
 https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
@@ -413,7 +413,7 @@ C:\Windows\System32\drivers\etc\hosts
 |      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
 |                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
-| [VMware](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
+| [VMware Workstation Pro](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 |   [WindowsTerminal](https://github.com/microsoft/terminal)   |
 |                [微信](https://weixin.qq.com/)                |
 |                 [Xmind](https://xmind.app/)                  |

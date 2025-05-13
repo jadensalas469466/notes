@@ -1,4 +1,4 @@
-开源漏洞评估工具, 方便使用.
+专注于安全领域，使用 DSL 模式提供安全领域能力基座和技术解决方案：漏洞扫描，反连检测，劫持手动测试，特殊协议支持，一应俱全.
 
 ## 1. Install
 
@@ -31,5 +31,7 @@ C:\Users\sec\AppData\Local\Programs\Yakit
 ![修改劫持代理端口为 8080](./../../../images/Yakit/%E4%BF%AE%E6%94%B9%E5%8A%AB%E6%8C%81%E4%BB%A3%E7%90%86%E7%AB%AF%E5%8F%A3%E4%B8%BA%208080.png)
 
 ---
+
+Refrences
 
 - [Yakit](https://yaklang.io/)

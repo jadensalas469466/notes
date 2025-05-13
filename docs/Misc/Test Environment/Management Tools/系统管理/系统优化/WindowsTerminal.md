@@ -26,10 +26,10 @@ Windows Terminal is a new, modern, feature-rich, productive terminal application
 
 ![打开配置文件](./../../../../../../images/Windows%20Terminal/%E6%89%93%E5%BC%80%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6.png)
 
-添加自定义的配色方案到 `"schemes"`
+添加自定义的配色方案到 `"schemes"` 
 
 ```
-
+https://github.com/jadensalas469466/config/blob/main/WindowsTerminal/schemes.json
 ```
 
 修改配色方案
