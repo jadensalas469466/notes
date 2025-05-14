@@ -43,7 +43,7 @@ apt install -y git
 配置代理
 
 ```
-git config --global http.proxy 'http://127.0.0.1:10808'
+git config --global http.proxy "http://127.0.0.1:10808"
 ```
 
 ### 2.2. Windows
@@ -51,7 +51,7 @@ git config --global http.proxy 'http://127.0.0.1:10808'
 配置代理
 
 ```
-git config --global http.proxy 'http://127.0.0.1:10808'
+git config --global http.proxy "http://127.0.0.1:10808"
 ```
 
 配置用户名

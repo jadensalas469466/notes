@@ -329,11 +329,11 @@ PS C:\Windows\system32> irm https://get.activated.win | iex
 
 ```
 IPv4: 开
-IP 地址: <host-ip>
+IP 地址: 192.168.36.202
 子网掩码: 255.255.255.0
-默认网关: 192.168.1.1
-首选 DNS 服务器: 8.8.8.8
-备用 DNS 服务器: 8.8.4.4
+默认网关: 192.168.36.2
+首选 DNS 服务器: 192.168.36.2
+备用 DNS 服务器: 
 ```
 
 在 `hosts` 文件添加域名映射
@@ -364,9 +364,12 @@ C:\Windows\System32\drivers\etc\hosts
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
 |             [Geek](https://geekuninstaller.com/)             |
+|         [Notepad++](https://notepad-plus-plus.org/)          |
 | [OpenSSH](https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell) |
-|           [phpStudy](https://www.xp.cn/php-study)            |
-|          [phpStudyPro](https://www.xp.cn/php-study)          |
+|               [Laragon](https://laragon.org/)                |
+|          [DVWA](https://github.com/digininja/DVWA)           |
+| [Pikachu](https://github.com/zhuifengshaonianhanlu/pikachu)  |
+|   [Vulinbox](https://yaklang.io/Yaklab/vulinbox/vulinbox)    |
 
 |                            笔记本                            |
 | :----------------------------------------------------------: |
@@ -398,6 +401,7 @@ C:\Windows\System32\drivers\etc\hosts
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
 |             [MuMuPlayer](https://mumu.163.com/)              |
+|         [Notepad++](https://notepad-plus-plus.org/)          |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |              [Potplayer](https://potplayer.tv/)              |

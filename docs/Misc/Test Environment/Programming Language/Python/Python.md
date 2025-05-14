@@ -34,7 +34,7 @@ apt install -y python3 python3-pip python3-venv python3-dev
 配置镜像加速
 
 ```
-python3 -m pip config set global.index-url 'https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple'
+python3 -m pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 ```
 
 ## 3. use

@@ -97,7 +97,7 @@ C:\Users\sec\Documents\Virtual Machines\debian
 网络连接
 
 ```
-使用桥接网络
+使用网络地址转换
 ```
 
 SCSI 控制器
@@ -406,22 +406,22 @@ zsh zsh-syntax-highlighting zsh-autosuggestions \
 Name=ens33
 
 [Network]
-Address=192.168.1.203/24
-Gateway=192.168.1.1
-DNS=8.8.8.8
-DNS=8.8.4.4
+Address=192.168.36.201/24
+Gateway=192.168.36.2
+DNS=192.168.36.2
 ```
 
-配置 DNS 服务器
+查看 DNS 配置
 
 ```
 ┌──(root@debian)-[~]
-└─# nano /etc/resolv.conf
+└─# cat /etc/resolv.conf
 ```
 
 ```
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+domain localdomain
+search localdomain
+nameserver 192.168.36.2
 ```
 
 在 `hosts` 文件添加域名映射
@@ -493,12 +493,9 @@ PS C:\Users\sec> ssh root@debian.local
 |              [Docker](https://www.docker.com/)               |
 |           [MongoDB](https://www.mongodb.com/zh-cn)           |
 
-|                            靶场                             |
-| :---------------------------------------------------------: |
-| [Pikachu](https://github.com/zhuifengshaonianhanlu/pikachu) |
-|          [DVWA](https://github.com/digininja/DVWA)          |
-|         [Vulhub](https://github.com/vulhub/vulhub)          |
-|   [Vulinbox](https://yaklang.io/Yaklab/vulinbox/vulinbox)   |
+|                    靶场                    |
+| :----------------------------------------: |
+| [Vulhub](https://github.com/vulhub/vulhub) |
 
 |                         工具                         |
 | :--------------------------------------------------: |
@@ -515,12 +512,12 @@ PS C:\Users\sec> ssh root@debian.local
 | :----------------------------------------------------------: |
 |              [UFW](https://github.com/jbq/ufw)               |
 |       [fail2ban](https://github.com/fail2ban/fail2ban)       |
-|               [Xray](https://xtls.github.io/)                |
+| [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
 |              [Tor](https://www.torproject.org/)              |
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/test-environment/zi-jian-dns-fu-wu-qi) |
 |             [Syncthing](https://syncthing.net/)              |
 
-## 6 使用
+## 6. 使用
 
 ### 6.1. 配置无线网卡驱动
 
