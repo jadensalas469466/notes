@@ -484,6 +484,7 @@ PS C:\Users\sec> ssh root@debian.local
 |                             环境                             |
 | :----------------------------------------------------------: |
 | [proxy](https://github.com/jadensalas469466/tools/blob/main/other/proxy.sh) |
+|               [Xray](https://xtls.github.io/)                |
 |  [Proxychains-NG](https://github.com/rofl0r/proxychains-ng)  |
 |      [Tor](https://gitlab.torproject.org/tpo/core/tor)       |
 |              [Git](https://github.com/git/git)               |
@@ -491,7 +492,6 @@ PS C:\Users\sec> ssh root@debian.local
 |                    [Go](https://go.dev/)                     |
 |              [Docker](https://www.docker.com/)               |
 |           [MongoDB](https://www.mongodb.com/zh-cn)           |
-|        [glow](https://github.com/charmbracelet/glow)         |
 
 |                            靶场                             |
 | :---------------------------------------------------------: |
@@ -519,7 +519,7 @@ PS C:\Users\sec> ssh root@debian.local
 
 |                      server                      |
 | :----------------------------------------------: |
-|       [Project X](https://xtls.github.io/)       |
+|         [Xray](https://xtls.github.io/)          |
 |        [UFW](https://github.com/jbq/ufw)         |
 | [fail2ban](https://github.com/fail2ban/fail2ban) |
 |        [Tor](https://www.torproject.org/)        |

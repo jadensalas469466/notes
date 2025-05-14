@@ -1,6 +1,8 @@
-一个匿名网络浏览工具.
+Tor protects your privacy on the internet by hiding the connection between
+your Internet address and the services you use. We believe Tor is reasonably
+secure, but please ensure you read the instructions and configure it properly.
 
-## 1 安装
+## 1. install
 
 安装
 
@@ -8,13 +10,13 @@
 apt install -y tor
 ```
 
-## 2 初始化
+## 2. init
 
 配置为每分钟切换一次代理链
 
 ```
-echo 'MaxCircuitDirtiness 60' >> /etc/tor/torrc \
-&& echo 'NewCircuitPeriod 60' >> /etc/tor/torrc
+echo "MaxCircuitDirtiness 60" >> /etc/tor/torrc \
+&& echo "NewCircuitPeriod 60" >> /etc/tor/torrc
 ```
 
 配置开机自启

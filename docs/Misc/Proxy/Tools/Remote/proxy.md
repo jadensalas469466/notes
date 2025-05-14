@@ -1,32 +1,32 @@
-用于配置系统代理.
+用于配置全局代理.
 
-## 1. 安装
+## 1. install
 
 将脚本下载到本地
 
 ```
-mkdir -p /root/proxy && curl -L https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/proxy.sh -o /root/proxy/proxy.sh
+mkdir -p /root/proxy && cd /root/proxy && \
+curl -LO https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/proxy.sh
 ```
 
-创建链接
+写入环境变量
 
 ```
-chmod +x /root/proxy/proxy.sh \
-&& ln -s /root/proxy/proxy.sh /usr/local/bin/proxy
+echo "source /root/proxy/proxy.sh" >> ~/.zshrc && source ~/.zshrc
 ```
 
-## 2. 使用
+## 2. use
 
 配置代理
 
 ```
-source proxy <ip:port>
+proxy <ip:port>
 ```
 
 取消代理
 
 ```
-source proxy
+proxy
 ```
 
 ---

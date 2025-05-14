@@ -1,4 +1,4 @@
-分布式版本控制系统.
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 ```
 工作区 add-> 暂存区 commit-> 本地仓库 <-pull||push-> 远程仓库
@@ -6,9 +6,15 @@
 
 > HEAD 指的是最新一次的提交
 
-## 1. 安装
+## 1. install
 
-**Windows 安装**
+### 1.1. Debian
+
+```
+apt install -y git
+```
+
+### 1.2. Windows
 
 添加到环境变量
 
@@ -22,13 +28,7 @@
 
 ![默认使用命令行启动](./../../../../images/Git/%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8.png)
 
-**Linux 安装**
-
-```
-apt install -y git
-```
-
-## 2. 初始化
+## 2. init
 
 在 Github 开启私人电子邮箱
 
@@ -38,7 +38,15 @@ apt install -y git
 
 ![选择凭证管理器](./../../../../images/Git/%E9%80%89%E6%8B%A9%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8.png)
 
-### 2.1. Windows
+### 2.1. Linux
+
+配置代理
+
+```
+git config --global http.proxy 'http://127.0.0.1:10808'
+```
+
+### 2.2. Windows
 
 配置代理
 
@@ -58,15 +66,7 @@ git config --global user.name "sec"
 git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
-### 2.2. Linux
-
-配置代理
-
-```
-git config --global http.proxy 'http://127.0.0.1:10808'
-```
-
-## 3. 使用
+## 3. use
 
 ### 3.1. 基础
 

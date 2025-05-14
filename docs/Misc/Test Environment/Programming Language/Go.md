@@ -1,27 +1,33 @@
-一种高效的编程语言.
+Build simple, secure, scalable systems with Go.
 
-## 1. 安装
+## 1. install
+
+安装
 
 ```
-curl -LO https://go.dev/dl/go1.23.4.linux-amd64.tar.gz \
-&& tar -C /usr/local -xzf go1.23.4.linux-amd64.tar.gz \
-&& rm -rf go1.23.4.linux-amd64.tar.gz \
-&& echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc \
+bash -c "$(curl -fsSL https://github.com/jadensalas469466/tools/raw/main/other/go_install.sh)"
+```
+
+配置环境变量
+
+```
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc \
 && echo 'export GOPATH=/root/tools/apps/go' >> ~/.zshrc \
 && echo 'export GOBIN=$GOPATH/bin' >> ~/.zshrc \
 && echo 'export PATH=$PATH:$GOBIN' >> ~/.zshrc \
-&& source ~/.zshrc
+&& source ~/.zshrc \
+&& go version
 ```
 
-## 2. 初始化
+## 2. init
 
-配置源
+配置代理
 
 ```
 go env -w GOPROXY='https://goproxy.cn,direct'
 ```
 
-## 3. 使用
+## 3. use
 
 创建项目 `D:\share\code\go\main.go` 
 

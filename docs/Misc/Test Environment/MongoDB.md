@@ -1,6 +1,6 @@
 非关系型数据库管理系统.
 
-## 1 安装
+## 1. install
 
 安装 `mariadb` 
 
@@ -8,7 +8,7 @@
 apt install -y mariadb-server mariadb-client
 ```
 
-## 2 初始化
+## 2. init
 
 设置 `mysql` 服务端开机自启
 
@@ -20,6 +20,9 @@ systemctl enable --now mysql.service
 
 ```
 mysql -u root -p
+```
+
+```
 Enter password:
 ```
 
@@ -28,7 +31,7 @@ MariaDB [(none)]> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
 MariaDB [(none)]> exit;
 ```
 
-## 3 使用
+## 3. use
 
 运行服务
 
@@ -77,7 +80,7 @@ MariaDB [(none)]> use  security;
 MariaDB [security]> show tables;
 ```
 
-### 3.1 SUBSTRING
+### 3.1. SUBSTRING
 
 `SUBSTRING` 函数用于提取字符串的子串。在 MySQL 中，`SUBSTRING` 函数的语法如下：
 
@@ -107,7 +110,7 @@ MariaDB [security]> SELECT SUBSTRING(password, 1, 1) FROM users WHERE username =
 1 row in set (0.00 sec)
 ```
 
-### 3.2 LIMIT
+### 3.2. LIMIT
 
 `LIMIT 1,2` 表示从第二行开始取二行相当于
 
@@ -134,7 +137,7 @@ MariaDB [security]> select * from users limit 3;
 | 2    | Angelina | I- kill- you |
 | 3    | Dummy    | p@ssword     |
 
-### 3.3 order by
+### 3.3. order by
 
 根据 `id` 列升序列出 `users` 数据表
 

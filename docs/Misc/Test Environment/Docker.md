@@ -1,15 +1,14 @@
-一个用于创建和管理容器的工具.
+Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
 
-## 1. 安装
+## 1. install
 
 安装
 
 ```
-curl -fsSL https://get.docker.com -o get-docker.sh \
-&& sh ./get-docker.sh && rm -rf ./get-docker.sh
+bash -c "$(curl -fsSL https://get.docker.com)"
 ```
 
-## 2. 初始化
+## 2. init
 
 配置代理
 
@@ -22,7 +21,7 @@ mkdir -p /etc/systemd/system/docker.service.d \
 [Service]
 Environment="HTTP_PROXY=http://127.0.0.1:10808"
 Environment="HTTPS_PROXY=http://127.0.0.1:10808"
-Environment="NO_PROXY=localhost,127.0.0.1,192.168.1.0/24"
+Environment="NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,::1"
 ```
 
 重启 Docker 加载配置
@@ -31,7 +30,7 @@ Environment="NO_PROXY=localhost,127.0.0.1,192.168.1.0/24"
 systemctl daemon-reload && systemctl restart docker.service
 ```
 
-## 3 使用
+## 3. use
 
 拉取镜像
 

@@ -24,6 +24,6 @@ curl -LO https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh 
 
 Refrences
 
-- [Project X](https://xtls.github.io/)
+- [Xray](https://xtls.github.io/)
 - [v2ray-agent](https://github.com/mack-a/v2ray-agent)
 
