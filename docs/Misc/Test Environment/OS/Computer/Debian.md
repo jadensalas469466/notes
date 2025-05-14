@@ -511,14 +511,14 @@ PS C:\Users\sec> ssh root@debian.local
 |  [dirsearch](https://www.kali.org/tools/dirsearch/)  |
 |     [nuclei](https://www.kali.org/tools/nuclei/)     |
 
-|                      server                      |
-| :----------------------------------------------: |
-|         [Xray](https://xtls.github.io/)          |
-|        [UFW](https://github.com/jbq/ufw)         |
-| [fail2ban](https://github.com/fail2ban/fail2ban) |
-|        [Tor](https://www.torproject.org/)        |
-|       [Syncthing](https://syncthing.net/)        |
-|    [bind9](https://www.kali.org/tools/bind9/)    |
+|                            server                            |
+| :----------------------------------------------------------: |
+|              [UFW](https://github.com/jbq/ufw)               |
+|       [fail2ban](https://github.com/fail2ban/fail2ban)       |
+|               [Xray](https://xtls.github.io/)                |
+|              [Tor](https://www.torproject.org/)              |
+| [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/test-environment/zi-jian-dns-fu-wu-qi) |
+|             [Syncthing](https://syncthing.net/)              |
 
 ## 6 使用
 
