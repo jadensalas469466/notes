@@ -484,7 +484,6 @@ PS C:\Users\sec> ssh root@debian.local
 |                             环境                             |
 | :----------------------------------------------------------: |
 | [proxy](https://github.com/jadensalas469466/tools/blob/main/other/proxy.sh) |
-|             [Project X](https://xtls.github.io/)             |
 |  [Proxychains-NG](https://github.com/rofl0r/proxychains-ng)  |
 |      [Tor](https://gitlab.torproject.org/tpo/core/tor)       |
 |              [Git](https://github.com/git/git)               |
@@ -732,7 +731,7 @@ Pin-Priority: 800
 配置代理
 
 ```
-export http_proxy=http://192.168.1.201:10808 && \
+export http_proxy=http://ip:port && \
 export https_proxy=$http_proxy
 ```
 
