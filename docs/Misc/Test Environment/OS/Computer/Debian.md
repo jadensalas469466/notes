@@ -370,7 +370,7 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main 
 ┌──(root@debian)-[~]
 └─# apt install -y vim curl sudo tree unzip apache2 build-essential libpcap-dev \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
-&& systemctl enable --now apache2.service \
+&& systemctl disable --now apache2.service \
 && chsh -s $(which zsh)
 ```
 
@@ -500,22 +500,16 @@ PS C:\Users\sec> ssh root@debian.local
 |         [Vulhub](https://github.com/vulhub/vulhub)          |
 |   [Vulinbox](https://yaklang.io/Yaklab/vulinbox/vulinbox)   |
 
-|                             工具                             |
-| :----------------------------------------------------------: |
-|           [nmap](https://www.kali.org/tools/nmap/)           |
-|      [subfinder](https://www.kali.org/tools/subfinder/)      |
-|          [naabu](https://www.kali.org/tools/naabu/)          |
-|      [httpx](https://www.kali.org/tools/httpx-toolkit/)      |
-| [cdnNone](https://github.com/jadensalas469466/tools/blob/main/hack/cdnNone.py) |
-| [ipGet](https://github.com/jadensalas469466/tools/blob/main/hack/ipGet.py) |
-| [hostCollision](https://github.com/alwaystest18/hostCollision) |
-|        [whatweb](https://www.kali.org/tools/whatweb/)        |
-|        [wafw00f](https://www.kali.org/tools/wafw00f/)        |
-|         [nuclei](https://www.kali.org/tools/nuclei/)         |
-|          [nikto](https://www.kali.org/tools/nikto/)          |
-|           [ffuf](https://www.kali.org/tools/ffuf/)           |
-|      [dirsearch](https://www.kali.org/tools/dirsearch/)      |
-|     [truffleHog](https://www.kali.org/tools/trufflehog/)     |
+|                         工具                         |
+| :--------------------------------------------------: |
+|    [whatweb](https://www.kali.org/tools/whatweb/)    |
+|    [wafw00f](https://www.kali.org/tools/wafw00f/)    |
+| [truffleHog](https://www.kali.org/tools/trufflehog/) |
+|      [nikto](https://www.kali.org/tools/nikto/)      |
+|       [nmap](https://www.kali.org/tools/nmap/)       |
+|       [ffuf](https://www.kali.org/tools/ffuf/)       |
+|  [dirsearch](https://www.kali.org/tools/dirsearch/)  |
+|     [nuclei](https://www.kali.org/tools/nuclei/)     |
 
 |                      server                      |
 | :----------------------------------------------: |
@@ -524,7 +518,7 @@ PS C:\Users\sec> ssh root@debian.local
 | [fail2ban](https://github.com/fail2ban/fail2ban) |
 |        [Tor](https://www.torproject.org/)        |
 |       [Syncthing](https://syncthing.net/)        |
-|  [bind9](https://github.com/isc-projects/bind9)  |
+|    [bind9](https://www.kali.org/tools/bind9/)    |
 
 ## 6 使用
 
