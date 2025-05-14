@@ -5,15 +5,14 @@
 将脚本下载到本地
 
 ```
-mkdir /root/tools/apps/proxy \
-&& curl -L https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/proxy.sh -o /root/tools/apps/proxy/proxy.sh
+mkdir -p /root/proxy && curl -L https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/proxy.sh -o /root/proxy/proxy.sh
 ```
 
 创建链接
 
 ```
-chmod +x /root/tools/apps/proxy/proxy.sh \
-&& ln -s /root/tools/apps/proxy/proxy.sh /usr/local/bin/proxy
+chmod +x /root/proxy/proxy.sh \
+&& ln -s /root/proxy/proxy.sh /usr/local/bin/proxy
 ```
 
 ## 2. 使用
@@ -21,18 +20,18 @@ chmod +x /root/tools/apps/proxy/proxy.sh \
 配置代理
 
 ```
-proxy <ip:port>
+source proxy <ip:port>
 ```
 
 取消代理
 
 ```
-proxy
+source proxy
 ```
 
 ---
 
-参考链接
+Refrences
 
 - [proxy](https://github.com/jadensalas469466/tools/blob/main/other/proxy.sh)
 

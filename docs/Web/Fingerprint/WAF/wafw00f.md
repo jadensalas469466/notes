@@ -18,6 +18,6 @@ wafw00f -v -a -o fileName.json https://example.com
 
 ---
 
-参考链接
+Refrences
 
 - [wafw00f](https://www.kali.org/tools/wafw00f/)

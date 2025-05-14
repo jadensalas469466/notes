@@ -26,7 +26,7 @@
 
 ---
 
-参考链接
+Refrences
 
 - [HaE](https://github.com/gh0stkey/HaE)
 - [HaE入门到精通：三条影响你一生的HaE规则](https://blog.zgsec.cn/archives/481.html)

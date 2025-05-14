@@ -128,6 +128,6 @@ scoop bucket add main https://ghp.ci/github.com/ScoopInstaller/Main    # 配置 
 
 ---
 
-参考链接
+Refrences
 
 - [scoop](https://scoop.sh/)

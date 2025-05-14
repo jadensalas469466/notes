@@ -526,7 +526,7 @@ Version 3.6               May 2014                CRUNCH(1)
 
 ---
 
-参考链接
+Refrences
 
 - [Crunch](https://www.kali.org/tools/crunch/)
 

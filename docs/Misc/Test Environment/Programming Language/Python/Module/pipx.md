@@ -80,7 +80,7 @@
 
 ---
 
-参考链接
+Refrences
 
 - [pipx](https://pipx.pypa.io/stable/)
 

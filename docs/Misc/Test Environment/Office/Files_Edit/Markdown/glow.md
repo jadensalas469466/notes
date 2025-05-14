@@ -16,6 +16,6 @@ glow fileName.md
 
 ---
 
-参考链接
+Refrences
 
 - [glow](https://github.com/charmbracelet/glow)

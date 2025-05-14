@@ -123,7 +123,7 @@ pyenv local --unset   # 取消当前目录设置
 
 ---
 
-参考链接
+Refrences
 
 - [Pyenv](https://github.com/pyenv/pyenv#installation)
 

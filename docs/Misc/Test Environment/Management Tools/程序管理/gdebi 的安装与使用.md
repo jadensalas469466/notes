@@ -20,7 +20,7 @@ gdebi 是一款 Debian 的软件管理工具。
 
 ---
 
-参考链接
+Refrences
 
 - [gdebi](https://github.com/linuxmint/gdebi)
 

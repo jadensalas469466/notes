@@ -37,7 +37,7 @@ deactivate
 
 ---
 
-参考链接
+Refrences
 
 - [Bash](https://www.gnu.org/software/bash/)
 

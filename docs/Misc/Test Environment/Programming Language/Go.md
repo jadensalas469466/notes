@@ -79,7 +79,7 @@ func main() {
 
 ---
 
-参考链接
+Refrences
 
 - [Go](https://go.dev/)
 - [Go Documentation](https://go.dev/doc/)

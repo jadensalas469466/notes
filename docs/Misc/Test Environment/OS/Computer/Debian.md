@@ -1,8 +1,8 @@
-一个稳定的服务器操作系统.
+Debian is a complete Free Operating System!
 
-## 1. 准备
+## 1. ready
 
-debian-12.8.0-amd64-DVD-1.iso
+debian-12.10.0-amd64-DVD-1.iso
 
 ```
 https://www.debian.org/distrib/
@@ -20,7 +20,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 C:\Users\sec\Documents\Virtual Machines\debian
 ```
 
-## 2. 配置
+## 2. config
 
 移动镜像文件到 `iso` 文件夹
 
@@ -134,7 +134,7 @@ SCSI
 C:\Users\sec\Documents\Virtual Machines\debian\debian.vmdk
 ```
 
-自定义硬件
+编辑虚拟机设置
 
 处理器
 
@@ -147,10 +147,10 @@ CD/DVD
 
 ```
 使用 ISO 映像文件
-C:\Users\sec\Documents\Virtual Machines\iso\debian-12.8.0-amd64-DVD-1.iso
+C:\Users\sec\Documents\Virtual Machines\iso\debian-12.10.0-amd64-DVD-1.iso
 ```
 
-拍摄快照并命名为 `配置` 
+拍摄快照并命名为 `config` 
 
 ## 3. Install
 
@@ -320,14 +320,14 @@ Password: 123456
 └─# ip a
 ```
 
-关机，拍摄快照并命名为 `Install` 
+关机，拍摄快照并命名为 `install` 
 
 ```
 ┌──(root@debian)-[~]
 └─# init 0
 ```
 
-## 4. 初始化
+## 4. init
 
 启动虚拟机，使用 SSH 登录 `sec` 用户
 
@@ -353,7 +353,7 @@ PS C:\Users\sec> ssh sec@<os-ip>
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
-deb https://security.debian.org/debian-security bookworm-security main contrib non-free non-free-firmware
+deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
 ```
 
 更新系统
@@ -371,8 +371,7 @@ deb https://security.debian.org/debian-security bookworm-security main contrib n
 └─# apt install -y vim curl sudo tree unzip apache2 build-essential libpcap-dev \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
 && systemctl enable --now apache2.service \
-&& chsh -s $(which zsh) \
-&& nodejs npm
+&& chsh -s $(which zsh)
 ```
 
 允许远程登录 `root` 并配置稳定连接
@@ -395,25 +394,22 @@ zsh zsh-syntax-highlighting zsh-autosuggestions \
 └─# systemctl restart ssh.service
 ```
 
-配置网络接口参数
+配置网络
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/network/interfaces
+└─# systemctl disable NetworkManager --now || true && systemctl enable systemd-networkd --now && nano /etc/systemd/network/static.network
 ```
 
 ```
-10  # The primary network interface
-11  allow-hotplug ens33
-12  # iface ens33 inet dhcp
-auto ens33
-iface ens33 inet static
-    address 192.168.1.203
-    netmask 255.255.255.0
-    gateway 192.168.1.1
-    dns-nameservers 8.8.8.8 8.8.4.4
-19  # This is an autoconfigured IPv6 interface
-20  # iface ens33 inet6 auto
+[Match]
+Name=ens33
+
+[Network]
+Address=192.168.1.203/24
+Gateway=192.168.1.1
+DNS=8.8.8.8
+DNS=8.8.4.4
 ```
 
 配置 DNS 服务器
@@ -432,7 +428,7 @@ nameserver 8.8.4.4
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/hosts
+└─# nano /etc/hosts
 ```
 
 重启
@@ -451,7 +447,7 @@ PS C:\Users\sec> ssh-keygen -R <os-ip>
 等待虚拟机启动, 使用 SSH 登录 `root` 用户
 
 ```
-PS C:\Users\sec> ssh root@debian
+PS C:\Users\sec> ssh root@debian.local
 ```
 
 测试网络
@@ -469,39 +465,26 @@ PS C:\Users\sec> ssh root@debian
 && source ~/.zshrc
 ```
 
-配置 tldr
-
-```
-┌──(root@debian)-[~]
-└─# mkdir -p /root/.local/share/tldr \
-&& apt install -y tldr \
-&& tldr -u
-```
-
 创建目录
 
 ```
 ┌──(root@debian)-[~]
-└─# mkdir -p \
-/root/tools/apps \
-/root/tools/drivers \
-/root/tools/scripts \
-/var/www/html/upload
+└─# mkdir -p /var/www/html/upload
 ```
 
-关机，拍摄快照并命名为 `初始化` 
+关机，拍摄快照并命名为 `init` 
 
 ```
 ┌──(root@debian)-[~]
 └─# init 0
 ```
 
-## 5. Deploy
+## 5. deploy
 
 |                             环境                             |
 | :----------------------------------------------------------: |
 | [proxy](https://github.com/jadensalas469466/tools/blob/main/other/proxy.sh) |
-|               [Xray](https://xtls.github.io/)                |
+|             [Project X](https://xtls.github.io/)             |
 |  [Proxychains-NG](https://github.com/rofl0r/proxychains-ng)  |
 |      [Tor](https://gitlab.torproject.org/tpo/core/tor)       |
 |              [Git](https://github.com/git/git)               |
@@ -638,29 +621,23 @@ dpkg -l | grep ssh
 
 ### 6.3. 挂载共享文件
 
-打开配置文件配置别名
+创建目录
 
 ```
 ┌──(root@debian)-[~]
-└─# vim ~/.bashrc
+└─# mkdir -p /mnt/vmware
 ```
 
-```
-alias share='vmhgfs-fuse .host:/ /mnt'
-```
-
-使配置生效
+配置别名
 
 ```
 ┌──(root@debian)-[~]
-└─# source ~/.zshrc
+└─# echo "alias share='vmhgfs-fuse .host:/ /mnt/vmware'" >> ~/.zshrc && source ~/.zshrc
 ```
 
 ### 6.4. 历史命令
 
-> 存储历史命令的文件: `~/.bash_history` 
-
-覆盖历史命令
+擦除历史命令
 
 ```
 ┌──(root@debian)-[~]
@@ -752,12 +729,23 @@ Pin-Priority: 800
 
 ### 6.7. 配置全局代理
 
+配置代理
+
 ```
-export http_proxy=socks5://192.168.1.201:10808
-export https_proxy=$http_prox
+export http_proxy=http://192.168.1.201:10808 && \
+export https_proxy=$http_proxy
+```
+
+取消代理
+
+```
+unset http_proxy && \
+unset https_proxy
 ```
 
 ---
+
+Refrences
 
 - [Debian](https://www.debian.org/)
 - [Debian Docs](https://www.debian.org/doc/)

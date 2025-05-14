@@ -531,7 +531,7 @@ Nmap 内置了许多脚本，都存放在以下目录中。
 
 ---
 
-参考链接
+Refrences
 
 - [Nmap](https://nmap.org/)
 - [Nmap 参考指南](https://nmap.org/man/zh/)

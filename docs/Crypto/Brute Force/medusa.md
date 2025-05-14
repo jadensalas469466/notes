@@ -50,6 +50,6 @@ ALERT: 必须提供主机信息。
 
 ---
 
-参考链接
+Refrences
 
 - [medusa](https://www.kali.org/tools/medusa/)

@@ -96,6 +96,6 @@ ls /root/tools/apps/finger/output/
 
 ---
 
-参考链接
+Refrences
 
 - [Finger](https://github.com/EASY233/Finger)

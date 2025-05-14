@@ -101,6 +101,6 @@ root@debian:~# python3 -m pip config unset global.proxy
 
 ---
 
-参考链接
+Refrences
 
 - [pip](https://pip.pypa.io/en/stable/)

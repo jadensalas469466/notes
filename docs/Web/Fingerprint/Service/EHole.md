@@ -70,6 +70,6 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ---
 
-参考链接
+Refrences
 
 - [EHole](https://github.com/EdgeSecurityTeam/EHole)

@@ -1,6 +1,6 @@
-图形化用户界面操作系统.
+Windows is a product line of proprietary graphical operating systems developed and marketed by Microsoft.
 
-## 1. 准备
+## 1. ready
 
 Windows 10 Enterprise LTSC 2021
 
@@ -20,7 +20,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 C:\Users\sec\Documents\Virtual Machines\windows
 ```
 
-## 2. 配置
+## 2. config
 
 移动镜像文件到 `iso` 文件夹
 
@@ -189,9 +189,9 @@ VMware
 只读
 ```
 
-拍摄快照并命名为 `配置` 
+拍摄快照并命名为 `config` 
 
-## 3. Install
+## 3. install
 
 输入语言和其他首选项
 
@@ -297,9 +297,9 @@ sec
 广告 ID: 否
 ```
 
-关机，快照命名为 `安装` 
+关机，快照命名为 `Install` 
 
-## 4. 初始化
+## 4. init
 
 安装驱动并更新
 
@@ -352,13 +352,13 @@ C:\Windows\System32\drivers\etc\hosts
 
 使用 Dism++ 修改系统设置
 
-使用 [Office_Tool_Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
+使用 [Office_Tool_Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files_edit/microsoft_365/office_tool_plus) 安装 Word, Excel, PowerPoint, Visio
 
-关机，快照命名为 `初始化` 
+关机，快照命名为 `init` 
 
 配置 SMB 文件共享
 
-## 5. Deploy
+## 5. deploy
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |
@@ -419,7 +419,7 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Xmind](https://xmind.app/)                  |
 |                 [Yakit](https://yaklang.io/)                 |
 
-## 6. 使用
+## 6. use
 
 ### 6.1 查看帮助
 
@@ -706,5 +706,7 @@ Remove-Item "C:\path\to\directory" -Recurse
 ![选择存储到受信任的根证书颁发机构](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
 
 ---
+
+Refrences
 
 - [Windows](https://learn.microsoft.com/zh-cn/windows/)

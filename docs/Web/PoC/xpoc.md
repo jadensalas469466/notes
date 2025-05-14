@@ -72,6 +72,6 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ---
 
-参考链接
+Refrences
 
 - [xpoc](https://github.com/chaitin/xpoc)

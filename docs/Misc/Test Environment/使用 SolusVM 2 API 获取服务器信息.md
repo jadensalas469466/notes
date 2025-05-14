@@ -58,7 +58,7 @@ root@server:~# curl -L https://raw.githubusercontent.com/jadensalas469466/tools/
 
 ---
 
-参考链接
+Refrences
 
 - [SolusVM 2 Documentation](https://docs.solusvm.com/)
 - [Caddy Documentation](https://caddyserver.com/docs/)

@@ -24,6 +24,6 @@ nikto -h https://example.com -p 443 -ssl -o fileName.htm -Format htm
 
 ---
 
-参考链接
+Refrences
 
 - [nikto](https://www.kali.org/tools/nikto/)

@@ -46,6 +46,6 @@ C:\Program Files\Notepad++\notepad-plus-plus\Dracula.xml
 
 ---
 
-参考链接
+Refrences
 
 - [Notepad++](https://notepad-plus-plus.org/)

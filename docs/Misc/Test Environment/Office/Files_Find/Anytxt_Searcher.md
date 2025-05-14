@@ -18,5 +18,7 @@ A Desktop Search Tool with A Powerful Full-Text Search Engine.
 
 ---
 
+Refrences
+
 - [Anytxt Searcher](https://anytxt.net/)
 

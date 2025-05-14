@@ -64,6 +64,6 @@ root@debian:~# dddd -t example.com
 
 ---
 
-参考链接
+Refrences
 
 - [dddd](https://github.com/SleepingBag945/dddd)

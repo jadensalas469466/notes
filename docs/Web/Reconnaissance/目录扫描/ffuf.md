@@ -26,6 +26,6 @@ ffuf -recursion-depth 3 \
 
 ---
 
-参考链接
+Refrences
 
 - [ffuf](https://www.kali.org/tools/ffuf/)

@@ -22,6 +22,6 @@
 
 ---
 
-参考链接
+Refrences
 
 - [OpenVPN](https://openvpn.net/)

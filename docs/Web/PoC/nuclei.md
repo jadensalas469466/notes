@@ -38,7 +38,7 @@ ls /root/.local/nuclei-templates
 
 ---
 
-参考链接
+Refrences
 
 - [nuclei](https://www.kali.org/tools/nuclei/)
 

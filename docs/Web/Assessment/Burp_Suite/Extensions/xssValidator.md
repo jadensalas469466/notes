@@ -328,6 +328,6 @@ payload 类型选择 Extension-generated
 
 ---
 
-参考链接
+Refrences
 
 - [xssValidator](https://github.com/portswigger/xss-validator)

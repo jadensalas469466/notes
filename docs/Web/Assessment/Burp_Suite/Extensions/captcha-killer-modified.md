@@ -70,6 +70,6 @@ Payload 2 要选择 captcha-killer-modified
 
 ---
 
-参考链接
+Refrences
 
 - [captcha-killer-modified](https://github.com/f0ng/captcha-killer-modified)

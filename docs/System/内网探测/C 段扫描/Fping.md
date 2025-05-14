@@ -11,7 +11,7 @@ C 段扫描。
 
 ---
 
-参考链接
+Refrences
 
 - [Fping](https://www.kali.org/tools/fping/)
 

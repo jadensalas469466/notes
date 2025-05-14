@@ -25,6 +25,8 @@ DNS 侦查工具，用于定位非连续 IP 空间。
 └─# fierce --domain [domain] --subdomains [name]
 ```
 
-参考链接
+---
+
+Refrences
 
 - [Fierce](https://github.com/mschwager/fierce)

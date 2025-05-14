@@ -20,9 +20,3 @@ dpkg -l | grep <app-name>
 dpkg -r      <app-name> # 卸载软件 (保留配置文件)
 dpkg --purge <app-name> # 卸载软件 (不保留配置文件)
 ```
-
----
-
-参考链接
-
-- 

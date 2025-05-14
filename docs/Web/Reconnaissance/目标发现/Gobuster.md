@@ -20,6 +20,6 @@
 
 ---
 
-参考链接
+Refrences
 
 - [Gobuster](https://www.kali.org/tools/gobuster/)

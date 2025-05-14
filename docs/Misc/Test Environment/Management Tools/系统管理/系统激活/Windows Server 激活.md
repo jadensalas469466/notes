@@ -53,6 +53,6 @@ C:\Users\sec>slmgr.vbs -xpr
 
 ---
 
-参考链接
+Refrences
 
 - [密钥管理服务 (KMS) 客户端激活和产品密钥](https://learn.microsoft.com/zh-cn/windows-server/get-started/kms-client-activation-keys#windows-server-2008-r2)

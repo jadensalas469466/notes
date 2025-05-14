@@ -22,7 +22,7 @@ curl -LO https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh 
 
 ---
 
-参考链接
+Refrences
 
 - [Project X](https://xtls.github.io/)
 - [v2ray-agent](https://github.com/mack-a/v2ray-agent)

@@ -84,6 +84,6 @@ python3 dirmap.py "$@"
 
 ---
 
-参考链接
+Refrences
 
 - [Dirmap](https://github.com/H4ckForJob/dirmap)

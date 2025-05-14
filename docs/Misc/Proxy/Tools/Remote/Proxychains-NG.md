@@ -32,11 +32,11 @@ proxychains4 curl ip.sb
 通过代理执行程序
 
 ```
-proxychains4 appRun
+proxychains4 <app_run>
 ```
 
 ---
 
-参考链接
+Refrences
 
 - [Proxychains-NG](https://github.com/rofl0r/proxychains-ng)

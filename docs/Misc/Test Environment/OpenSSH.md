@@ -285,6 +285,6 @@ PS C:\Windows\system32> Restart-Service sshd
 
 ---
 
-参考链接
+Refrences
 
 - [OpenSSH](https://www.openssh.com/)

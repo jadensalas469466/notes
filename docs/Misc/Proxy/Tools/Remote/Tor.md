@@ -27,7 +27,7 @@ systemctl enable --now tor.service
 
 ---
 
-参考链接
+Refrences
 
 - [Tor](https://gitlab.torproject.org/tpo/core/tor)
 - [Tor Project](https://www.torproject.org/)

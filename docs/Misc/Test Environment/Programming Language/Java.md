@@ -65,7 +65,7 @@ OpenJDK 64-Bit Server VM (Temurin)(build 25.412-b08, mixed mode)
 
 ---
 
-参考链接
+Refrences
 
 - [Open JDK](https://adoptium.net/zh-CN/)
 - [Oracle JDK](https://www.java.com/en/download/manual.jsp)

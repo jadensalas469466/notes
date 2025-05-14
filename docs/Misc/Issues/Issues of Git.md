@@ -67,7 +67,7 @@ git config --global http.sslBackend schannel
 
 ---
 
-参考链接
+Refrences
 
 - [Git](https://git-scm.com/)
 - [Git Documentation](https://git-scm.com/doc)

@@ -46,6 +46,6 @@ apt autoremove --purge # 自动删除未使用的依赖 (不保留配置文件)
 
 ---
 
-参考链接
+Refrences
 
 - [apt](https://wiki.debian.org/zh_CN/Apt)
