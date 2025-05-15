@@ -29,5 +29,5 @@ systemctl enable --now tor.service
 
 Refrences
 
-- [Tor](https://gitlab.torproject.org/tpo/core/tor)
+- [Tor](https://www.torproject.org/)
 

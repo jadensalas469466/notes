@@ -486,8 +486,8 @@ PS C:\Users\sec> ssh root@debian.local
 | [proxy](https://github.com/jadensalas469466/tools/raw/main/other/proxy.sh) |
 |               [Xray](https://xtls.github.io/)                |
 | [proxychains-ng](https://www.kali.org/tools/proxychains-ng/) |
-|      [Tor](https://gitlab.torproject.org/tpo/core/tor)       |
-|            [git](https://www.kali.org/tools/git/)            |
+|              [Tor](https://www.torproject.org/)              |
+|                 [Git](https://git-scm.com/)                  |
 |              [Python](https://www.python.org/)               |
 |                    [Go](https://go.dev/)                     |
 |              [Docker](https://www.docker.com/)               |
