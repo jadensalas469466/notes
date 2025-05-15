@@ -1,6 +1,6 @@
-Web 漏洞 POC 扫描工具.
+Nuclei is used to send requests across targets based on a template leading to zero false positives and providing fast scanning on large number of hosts. Nuclei offers scanning for a variety of protocols including TCP, DNS, HTTP, File, etc. With powerful and flexible templating, all kinds of security checks can be modelled with Nuclei.
 
-## 1. 安装
+## 1. install
 
 安装
 
@@ -8,7 +8,7 @@ Web 漏洞 POC 扫描工具.
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
-## 2. 初始化
+## 2. init
 
 更新模板
 
@@ -16,7 +16,7 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 nuclei -update-templates
 ```
 
-## 3. 使用
+## 3. use
 
 指定 PoC 验证目标漏洞
 

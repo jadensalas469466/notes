@@ -1,21 +1,19 @@
-一个简化的防火墙管理工具。
+ufw aims to provide an easy to use interface for people unfamiliar with firewall concepts, while at the same time simplifies complicated iptables commands to help an administrator who knows what he or she is doing.
 
-## 1 安装
+## 1. install
 
 安装
 
-```shell
-┌──(root㉿a-kali-23)-[~]
-└─# sudo apt install -y ufw 
+```
+apt install -y ufw 
 ```
 
-## 2 使用
+## 2. use
 
 查看使用帮助
 
-```shell
-┌──(root㉿a-kali-23)-[~]
-└─# ufw -h
+```
+ufw -h
 ```
 
 ```
@@ -55,4 +53,4 @@ Application profile commands:
 
 Refrences
 
-- [UFW](https://github.com/jbq/ufw)
+- [ufw](https://github.com/jbq/ufw)

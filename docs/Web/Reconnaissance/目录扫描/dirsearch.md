@@ -1,21 +1,19 @@
-目录扫描.
+This package contains is a command-line tool designed to brute force directories and files in webservers.
 
-## 1 安装
+## 1. install
 
 安装
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y dirsearch
+apt install -y dirsearch
 ```
 
-## 2 使用
+## 2. use
 
 对目标进行目录扫描
 
 ```
-┌──(root@debian)-[~]
-└─# dirsearch -u https://example.com -r --format=json -o fileName.json
+dirsearch -u https://example.com -r --format=json -o fileName.json
 ```
 
 ---
