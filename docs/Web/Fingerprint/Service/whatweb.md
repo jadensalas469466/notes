@@ -1,4 +1,4 @@
-WhatWeb identifies websites. It recognises web technologies including content management systems (CMS), blogging platforms, statistic/analytics packages, JavaScript libraries, web servers, and embedded devices.
+Identify the technology stack that powers a website and explore the Web of Things.
 
 ## 1. install
 

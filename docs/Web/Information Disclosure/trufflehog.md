@@ -1,4 +1,4 @@
-TruffleHog is the most powerful secrets Discovery, Classification, Validation, and Analysis tool. In this context secret refers to a credential a machine uses to authenticate itself to another machine. This includes API keys, database passwords, private encryption keys, and more...
+Find, verify, and analyze leaked credentials.
 
 ## 1. install
 
@@ -20,4 +20,4 @@ trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,u
 
 Refrences
 
-- [truffleHog](https://www.kali.org/tools/trufflehog/)
+- [trufflehog](https://www.kali.org/tools/trufflehog/)

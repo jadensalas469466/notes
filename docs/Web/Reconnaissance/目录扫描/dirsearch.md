@@ -1,4 +1,4 @@
-This package contains is a command-line tool designed to brute force directories and files in webservers.
+An advanced web path brute-forcer.
 
 ## 1. install
 
