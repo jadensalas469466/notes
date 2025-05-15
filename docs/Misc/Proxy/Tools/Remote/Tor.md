@@ -1,6 +1,4 @@
-Tor protects your privacy on the internet by hiding the connection between
-your Internet address and the services you use. We believe Tor is reasonably
-secure, but please ensure you read the instructions and configure it properly.
+Tor protects your privacy on the internet by hiding the connection between your Internet address and the services you use. We believe Tor is reasonably secure, but please ensure you read the instructions and configure it properly.
 
 ## 1. install
 
@@ -32,5 +30,4 @@ systemctl enable --now tor.service
 Refrences
 
 - [Tor](https://gitlab.torproject.org/tpo/core/tor)
-- [Tor Project](https://www.torproject.org/)
 

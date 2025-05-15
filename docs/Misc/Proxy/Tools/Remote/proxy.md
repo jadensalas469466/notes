@@ -33,5 +33,5 @@ proxy
 
 Refrences
 
-- [proxy](https://github.com/jadensalas469466/tools/blob/main/other/proxy.sh)
+- [proxy](https://github.com/jadensalas469466/tools/raw/main/other/proxy.sh)
 
