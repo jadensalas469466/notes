@@ -483,8 +483,8 @@ PS C:\Users\sec> ssh root@debian.local
 
 |                             环境                             |
 | :----------------------------------------------------------: |
-| [proxy](https://github.com/jadensalas469466/tools/blob/main/other/proxy.sh) |
-|               [Xray](https://xtls.github.io/)                |
+| [proxy](https://keithpeck177271.gitbook.io/notes/misc/proxy/tools/remote/proxy) |
+|               [xray](https://xtls.github.io/)                |
 |  [Proxychains-NG](https://github.com/rofl0r/proxychains-ng)  |
 |      [Tor](https://gitlab.torproject.org/tpo/core/tor)       |
 |              [Git](https://github.com/git/git)               |
