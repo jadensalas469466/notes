@@ -13,7 +13,7 @@ apt install -y proxychains4
 修改配置文件
 
 ```
-vim /etc/proxychains4.conf
+nano /etc/proxychains4.conf
 ```
 
 ```

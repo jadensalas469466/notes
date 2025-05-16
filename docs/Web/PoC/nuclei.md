@@ -8,15 +8,13 @@ Nuclei is a fast, customizable vulnerability scanner powered by the global secur
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
-## 2. init
+## 2. use
 
 更新模板
 
 ```
 nuclei -update-templates
 ```
-
-## 3. use
 
 指定 PoC 验证目标漏洞
 

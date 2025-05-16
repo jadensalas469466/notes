@@ -13,7 +13,7 @@ apt install -y whatweb
 识别目标使用的 Web 服务
 
 ```
-whatweb -v -a 3 --log-json=fileName.json https://example.com
+whatweb -a 3 -v --color=never https://example.com > whatweb_example.com.txt
 ```
 
 ---

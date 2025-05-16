@@ -6,7 +6,7 @@ SSRF（服务器端请求伪造）漏洞是一种通过诱导服务器发起未�
 
 例如：
 
-1. 发送 `HTTP` 请求：https://www.g.cn/xxx.php?image=https://www.kali.org/kali.jpg
+1. 发送 `HTTP` 请求：https://www.example.com/xxx.php?image=https://www.kali.org/kali.jpg
 2. 服务器接收到请求之后获取 http://www.kali.org/kali.jpg 图片
 3. 服务器获取到图片后将图片返回给用户
 

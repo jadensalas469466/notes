@@ -417,7 +417,7 @@ C:\Windows\System32\drivers\etc\hosts
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware Workstation Pro](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 |   [WindowsTerminal](https://github.com/microsoft/terminal)   |
-|                [微信](https://weixin.qq.com/)                |
+|               [WeChat](https://weixin.qq.com/)               |
 |                 [Xmind](https://xmind.app/)                  |
 |                 [Yakit](https://yaklang.io/)                 |
 

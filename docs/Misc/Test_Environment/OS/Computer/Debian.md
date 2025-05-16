@@ -454,7 +454,7 @@ PS C:\Users\sec> ssh root@debian.local
 
 ```
 ┌──(root@debian)-[~]
-└─# ping g.cn -c 3
+└─# ping ipinfo.ip -c 3
 ```
 
 配置 Zsh
@@ -465,7 +465,7 @@ PS C:\Users\sec> ssh root@debian.local
 && source ~/.zshrc
 ```
 
-创建目录
+创建上传目录
 
 ```
 ┌──(root@debian)-[~]
@@ -481,7 +481,7 @@ PS C:\Users\sec> ssh root@debian.local
 
 ## 5. deploy
 
-|                             环境                             |
+|                             env                              |
 | :----------------------------------------------------------: |
 | [proxy](https://github.com/jadensalas469466/tools/raw/main/other/proxy.sh) |
 |               [Xray](https://xtls.github.io/)                |
@@ -493,7 +493,7 @@ PS C:\Users\sec> ssh root@debian.local
 |              [Docker](https://www.docker.com/)               |
 |               [MariaDB](https://mariadb.org/)                |
 
-|                         工具                         |
+|                        tools                         |
 | :--------------------------------------------------: |
 |    [whatweb](https://www.kali.org/tools/whatweb/)    |
 |    [wafw00f](https://www.kali.org/tools/wafw00f/)    |

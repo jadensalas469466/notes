@@ -30,7 +30,7 @@ warmchina121.com
 
 ## 2. 信息收集
 
-某些业务会收集在[站点导航](https://www.10086.cn/web_notice/navigation/)中, 直接访问即可
+某些网站会收集在[站点导航](https://www.10086.cn/web_notice/navigation/)中, 直接访问即可
 
 Shodan
 
@@ -68,9 +68,9 @@ domain="10086.cn" && http.header.status_code="200" && country="CN"
 
 在 Open Multiple URLs 中访问每个站点, 保留有业务的站点;
 
-手工访问每个功能点, 使用 Xmind 绘制思维导图, 在 Site map 中将所有域名添加到白名单;
+手工访问每个业务板块, 使用 Xmind 绘制思维导图;
 
-手工测试每个功能点, 使用 Visio 绘制流程图, 在 HTTP history 中将多余的数据包添加到黑名单.
+手工测试每个功能点, 使用 Visio 绘制流程图.
 
 ## 4. 信息泄露
 
