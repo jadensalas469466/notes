@@ -88,6 +88,8 @@ C:\Users\sec\AppData\Local\Temp\vmware-sec\VMwareDnD
 
 导出为 OVF
 
+> 直接复制整个虚拟机目录可保留快照, 但需要制作成压缩包后再进行传输
+
 ![导出为 OVF](./../../../images/VMware_Workstation_Pro/%E5%AF%BC%E5%87%BA%E4%B8%BA%20OVF.png)
 
 **共享文件**
