@@ -506,15 +506,15 @@ PS C:\Users\sec> ssh root@debian.local
 
 |                            server                            |
 | :----------------------------------------------------------: |
-|                  配置 SSH 密钥对连接服务器                   |
+| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/test_environment/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
 |              [UFW](https://github.com/jbq/ufw)               |
 |       [fail2ban](https://github.com/fail2ban/fail2ban)       |
 | [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
-|              [Tor](https://www.torproject.org/)              |
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/test-environment/zi-jian-dns-fu-wu-qi) |
 |             [Syncthing](https://syncthing.net/)              |
+|              [Tor](https://www.torproject.org/)              |
 
-## 6. 使用
+## 6. use
 
 ### 6.1. 配置无线网卡驱动
 

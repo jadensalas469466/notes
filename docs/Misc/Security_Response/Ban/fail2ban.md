@@ -13,7 +13,7 @@ apt install -y fail2ban
 修改配置文件
 
 ```
-cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local && vim /etc/fail2ban/jail.local
+cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local && nano /etc/fail2ban/jail.local
 ```
 
 ```
