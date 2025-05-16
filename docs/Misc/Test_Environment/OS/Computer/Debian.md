@@ -506,6 +506,7 @@ PS C:\Users\sec> ssh root@debian.local
 
 |                            server                            |
 | :----------------------------------------------------------: |
+|                  配置 SSH 密钥对连接服务器                   |
 |              [UFW](https://github.com/jbq/ufw)               |
 |       [fail2ban](https://github.com/fail2ban/fail2ban)       |
 | [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
