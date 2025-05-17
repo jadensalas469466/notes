@@ -8,19 +8,28 @@
 中国移动所有产品和服务
 ```
 
-### 1.2. ICP 备案查询
+## 1.2. Whois
 
-[ICP/IP地址/域名信息备案管理系统](https://beian.miit.gov.cn/)
+查询域名, 获取注册信息
 
-搜索主域名 `10086.cn`, 获取主办单位名称
+```
+whois 10086.cn
+```
 
 ```
 中国移动通信有限公司
 ```
 
-搜索主办单位名称 `中国移动通信有限公司` , 获取网站域名
+### 1.3. ICP 备案查询
+
+[ICP/IP地址/域名信息备案管理系统](https://beian.miit.gov.cn/)
+
+通过主办单位名称, 备案号, 域名互相反查
 
 ```
+中国移动通信有限公司
+京ICP备05002571号
+
 10086.cn
 cmccb2b.com
 monternet.com
@@ -28,9 +37,17 @@ chinamobile.com
 warmchina121.com
 ```
 
+> 即使主域名无法访, 也需要保存, 后期可收集子域名
+
 ## 2. 信息收集
 
 某些网站会收集在[站点导航](https://www.10086.cn/web_notice/navigation/)中, 直接访问即可
+
+subfinder
+
+```
+subfinder -d 10086.cn -o subfinder_10086.cn.txt
+```
 
 Shodan
 

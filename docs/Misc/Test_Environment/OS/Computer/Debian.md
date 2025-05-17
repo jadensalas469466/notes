@@ -495,13 +495,15 @@ PS C:\Users\sec> ssh root@debian.local
 
 |                        tools                         |
 | :--------------------------------------------------: |
+|      [whois](https://www.kali.org/tools/whois/)      |
+|  [subfinder](https://www.kali.org/tools/subfinder/)  |
 |    [whatweb](https://www.kali.org/tools/whatweb/)    |
 |    [wafw00f](https://www.kali.org/tools/wafw00f/)    |
 | [trufflehog](https://www.kali.org/tools/trufflehog/) |
+|  [dirsearch](https://www.kali.org/tools/dirsearch/)  |
 |      [nikto](https://www.kali.org/tools/nikto/)      |
 |       [nmap](https://www.kali.org/tools/nmap/)       |
 |       [ffuf](https://www.kali.org/tools/ffuf/)       |
-|  [dirsearch](https://www.kali.org/tools/dirsearch/)  |
 |     [nuclei](https://www.kali.org/tools/nuclei/)     |
 
 |                            server                            |

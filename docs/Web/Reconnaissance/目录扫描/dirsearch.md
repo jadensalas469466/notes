@@ -13,7 +13,7 @@ apt install -y dirsearch
 对目标进行目录扫描
 
 ```
-dirsearch -u https://example.com -r --format=json -o fileName.json
+dirsearch -u https://example.com -r --format=html -o dirsearch_example.com.html
 ```
 
 ---
