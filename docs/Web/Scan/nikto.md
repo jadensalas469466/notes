@@ -10,16 +10,22 @@ apt install -y nikto
 
 ## 2. use
 
-经典扫描
+对单个目标进行扫描
 
 ```
-nikto -h http://example.com -o fileName.htm -Format htm
+nikto -h <host> -Format htm -o nikto_<host>.htm
 ```
 
-扫描 HTTPS 网站
+对多个目标进行扫描
 
 ```
-nikto -h https://example.com -p 443 -ssl -o fileName.htm -Format htm
+nikto -h host.txt -Format htm -o nikto_host.htm
+```
+
+指定 HTTPS 端口扫描
+
+```
+nikto -h host.txt -p 443 -ssl -Format htm -o nikto_host.htm
 ```
 
 ---

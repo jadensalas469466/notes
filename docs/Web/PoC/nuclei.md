@@ -8,35 +8,37 @@ Nuclei is a fast, customizable vulnerability scanner powered by the global secur
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
-## 2. use
+## 2. init
 
-更新模板
-
-```
-nuclei -update-templates
-```
-
-指定 PoC 验证目标漏洞
+克隆模板
 
 ```
-nuclei -u https://example.com -t fileName.yaml -je fileName.json
+git clone https://github.com/projectdiscovery/nuclei-templates.git
 ```
 
-更新模板
+## 3. use
+
+更新程序和模板
 
 ```
-nuclei -update-templates
+nuclei -up && nuclei -ut
 ```
 
-查看模板
+经典扫描
 
 ```
-ls /root/.local/nuclei-templates
+nuclei -l host.txt -o nuclei_host.txt
+```
+
+指定 PoC 模板验证目标漏洞
+
+```
+nuclei -l host.txt -t /root/poc -o nuclei_host.txt
 ```
 
 ---
 
 Refrences
 
-- [nuclei](https://www.kali.org/tools/nuclei/)
+- [nuclei](https://github.com/projectdiscovery/nuclei)
 

@@ -28,4 +28,4 @@ ffuf -recursion-depth 3 \
 
 Refrences
 
-- [ffuf](https://www.kali.org/tools/ffuf/)
+- [ffuf](https://github.com/ffuf/ffuf)

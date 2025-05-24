@@ -20,4 +20,4 @@ trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,u
 
 Refrences
 
-- [trufflehog](https://www.kali.org/tools/trufflehog/)
+- [trufflehog](https://github.com/trufflesecurity/trufflehog)

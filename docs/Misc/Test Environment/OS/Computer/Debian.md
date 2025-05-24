@@ -378,7 +378,7 @@ zsh zsh-syntax-highlighting zsh-autosuggestions \
 
 ```
 ┌──(root@debian)-[~]
-└─# vim /etc/ssh/sshd_config
+└─# nano -l /etc/ssh/sshd_config
 ```
 
 ```
@@ -493,18 +493,21 @@ PS C:\Users\sec> ssh root@debian.local
 |              [Docker](https://www.docker.com/)               |
 |               [MariaDB](https://mariadb.org/)                |
 
-|                        tools                         |
-| :--------------------------------------------------: |
-|      [whois](https://www.kali.org/tools/whois/)      |
-|  [subfinder](https://www.kali.org/tools/subfinder/)  |
-|    [whatweb](https://www.kali.org/tools/whatweb/)    |
-|    [wafw00f](https://www.kali.org/tools/wafw00f/)    |
-| [trufflehog](https://www.kali.org/tools/trufflehog/) |
-|  [dirsearch](https://www.kali.org/tools/dirsearch/)  |
-|      [nikto](https://www.kali.org/tools/nikto/)      |
-|       [nmap](https://www.kali.org/tools/nmap/)       |
-|       [ffuf](https://www.kali.org/tools/ffuf/)       |
-|     [nuclei](https://www.kali.org/tools/nuclei/)     |
+|                            tools                            |
+| :---------------------------------------------------------: |
+|         [whois](https://www.kali.org/tools/whois/)          |
+|     [dirsearch](https://www.kali.org/tools/dirsearch/)      |
+|          [nmap](https://www.kali.org/tools/nmap/)           |
+|       [whatweb](https://www.kali.org/tools/whatweb/)        |
+|       [wafw00f](https://www.kali.org/tools/wafw00f/)        |
+|         [nikto](https://www.kali.org/tools/nikto/)          |
+| [subfinder](https://github.com/projectdiscovery/subfinder)  |
+|     [naabu](https://github.com/projectdiscovery/naabu)      |
+|     [httpx](https://github.com/projectdiscovery/httpx)      |
+|    [katana](https://github.com/projectdiscovery/katana)     |
+|    [nuclei](https://github.com/projectdiscovery/nuclei)     |
+| [trufflehog](https://github.com/trufflesecurity/trufflehog) |
+|            [ffuf](https://github.com/ffuf/ffuf)             |
 
 |                            server                            |
 | :----------------------------------------------------------: |
