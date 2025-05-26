@@ -1,26 +1,26 @@
 Debian is a complete Free Operating System!
 
-## 1. ready
+## 1. Setup
 
-debian-12.10.0-amd64-DVD-1.iso
+debian-12.11.0-amd64-DVD-1.iso
 
 ```
 https://www.debian.org/distrib/
 ```
 
-VMware
+VMware Workstation Pro
 
 ```
 https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 ```
 
-目录
+Directory
 
 ```
 C:\Users\sec\Documents\Virtual Machines\debian
 ```
 
-## 2. config
+## 2. Config
 
 移动镜像文件到 `iso` 文件夹
 
@@ -316,37 +316,33 @@ Password: 123456
 查看 IP
 
 ```
-┌──(root@debian)-[~]
-└─# ip a
+root@debian:~# ip a
 ```
 
 关机，拍摄快照并命名为 `install` 
 
 ```
-┌──(root@debian)-[~]
-└─# init 0
+root@debian:~# shutdown -h now
 ```
 
-## 4. init
+## 4. Init
 
 启动虚拟机，使用 SSH 登录 `sec` 用户
 
 ```
-PS C:\Users\sec> ssh sec@<os-ip>
+PS C:\Users\sec> ssh sec@<ip>
 ```
 
 切换到 `root` 用户
 
 ```
-┌──(sec@debian)-[~]
-└─$ su - root
+sec@debian:~$ su - root
 ```
 
 配置 `apt` 源
 
 ```
-┌──(root@debian)-[~]
-└─# nano /etc/apt/sources.list
+root@debian:~# nano /etc/apt/sources.list
 ```
 
 ```
@@ -359,46 +355,47 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main 
 更新系统
 
 ```
-┌──(root@debian)-[~]
-└─# apt update && apt full-upgrade \
+root@debian:~# apt update && apt full-upgrade \
 && apt clean && apt autoremove --purge
 ```
 
 安装常用工具
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y vim curl sudo tree unzip apache2 build-essential libpcap-dev \
+root@debian:~# apt install -y vim curl passwd sudo tree unzip apache2 build-essential libpcap-dev \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
 && systemctl disable --now apache2.service \
-&& chsh -s $(which zsh)
+&& usermod -aG sudo sec
 ```
 
-允许远程登录 `root` 并配置稳定连接
+配置 SSH 稳定连接
 
 ```
-┌──(root@debian)-[~]
-└─# nano -l /etc/ssh/sshd_config
+root@debian:~# nano -l /etc/ssh/sshd_config
 ```
 
 ```
- 33 PermitRootLogin yes
  99 ClientAliveInterval 60
 100 ClientAliveCountMax 60
 ```
 
-重启 SSH
+重启 SSH 服务
 
 ```
-┌──(root@debian)-[~]
-└─# systemctl restart ssh.service
+root@debian:~# systemctl restart ssh.service
+```
+
+配置 Zsh
+
+```
+root@debian:~# chsh -s $(which zsh) \
+&& curl -LO https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc
 ```
 
 配置网络
 
 ```
-┌──(root@debian)-[~]
-└─# systemctl disable NetworkManager --now || true && systemctl enable systemd-networkd --now && nano /etc/systemd/network/static.network
+root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable systemd-networkd --now && nano /etc/systemd/network/static.network
 ```
 
 ```
@@ -414,8 +411,7 @@ DNS=192.168.36.2
 查看 DNS 配置
 
 ```
-┌──(root@debian)-[~]
-└─# cat /etc/resolv.conf
+root@debian:~# cat /etc/resolv.conf
 ```
 
 ```
@@ -427,66 +423,59 @@ nameserver 192.168.36.2
 在 `hosts` 文件添加域名映射
 
 ```
-┌──(root@debian)-[~]
-└─# nano /etc/hosts
+root@debian:~# nano /etc/hosts
 ```
 
 重启
 
 ```
-┌──(root@debian)-[~]
-└─# reboot
+root@debian:~# shutdown -r now
 ```
 
 在 Powershell 中删除 SSH 连接缓存
 
 ```
-PS C:\Users\sec> ssh-keygen -R <os-ip>
+PS C:\Users\sec> ssh-keygen -R <ip>
 ```
 
-等待虚拟机启动, 使用 SSH 登录 `root` 用户
+等待虚拟机启动, 重新连接 SSH
 
 ```
-PS C:\Users\sec> ssh root@debian.local
+PS C:\Users\sec> ssh sec@debian.local
 ```
 
 测试网络
 
 ```
-┌──(root@debian)-[~]
-└─# ping ipinfo.ip -c 3
+sec@debian:~$ ping mit.edu -c 3
 ```
 
 配置 Zsh
 
 ```
-┌──(root@debian)-[~]
-└─# curl -LO https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc \
-&& source ~/.zshrc
+sec@debian:~$ chsh -s $(which zsh) \
+&& curl -LO https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc
 ```
 
 创建上传目录
 
 ```
-┌──(root@debian)-[~]
-└─# mkdir -p /var/www/html/upload
+sec@debian:~$ sudo mkdir -p /var/www/html/upload
 ```
 
 关机，拍摄快照并命名为 `init` 
 
 ```
-┌──(root@debian)-[~]
-└─# init 0
+sec@debian:~$ sudo shutdown -h now
 ```
 
-## 5. deploy
+## 5. Deploy
 
 |                             env                              |
 | :----------------------------------------------------------: |
 | [proxy](https://github.com/jadensalas469466/tools/raw/main/other/proxy.sh) |
-|               [Xray](https://xtls.github.io/)                |
+|               [xray](https://xtls.github.io/)                |
 | [proxychains-ng](https://www.kali.org/tools/proxychains-ng/) |
-|              [Tor](https://www.torproject.org/)              |
 |                 [Git](https://git-scm.com/)                  |
 |              [Python](https://www.python.org/)               |
 |                    [Go](https://go.dev/)                     |
@@ -501,13 +490,18 @@ PS C:\Users\sec> ssh root@debian.local
 |       [whatweb](https://www.kali.org/tools/whatweb/)        |
 |       [wafw00f](https://www.kali.org/tools/wafw00f/)        |
 |         [nikto](https://www.kali.org/tools/nikto/)          |
+|         [hydra](https://www.kali.org/tools/hydra/)          |
+|        [medusa](https://www.kali.org/tools/medusa/)         |
+|          [metasploit](https://www.metasploit.com/)          |
 | [subfinder](https://github.com/projectdiscovery/subfinder)  |
 |     [naabu](https://github.com/projectdiscovery/naabu)      |
 |     [httpx](https://github.com/projectdiscovery/httpx)      |
 |    [katana](https://github.com/projectdiscovery/katana)     |
+|   [mapcidr](https://github.com/projectdiscovery/mapcidr)    |
 |    [nuclei](https://github.com/projectdiscovery/nuclei)     |
 | [trufflehog](https://github.com/trufflesecurity/trufflehog) |
 |            [ffuf](https://github.com/ffuf/ffuf)             |
+|        [sliver](https://github.com/BishopFox/sliver)        |
 
 |                            server                            |
 | :----------------------------------------------------------: |
@@ -519,7 +513,7 @@ PS C:\Users\sec> ssh root@debian.local
 |             [Syncthing](https://syncthing.net/)              |
 |              [Tor](https://www.torproject.org/)              |
 
-## 6. use
+## 6. Usage
 
 ### 6.1. 配置无线网卡驱动
 
@@ -575,40 +569,10 @@ PS C:\Users\sec> ssh root@debian.local
 
 ### 6.2. 系统信息
 
-查看 CPU 使用情况
+查看内核版本
 
 ```
-top
-```
-
-查看详细的 CPU 信息
-
-```
-lscpu
-```
-
-查看内存使用情况
-
-```
-free -h
-```
-
-查看磁盘使用情况
-
-```
-df -h
-```
-
-查看详细的磁盘信息
-
-```
-lsblk
-```
-
-列出已安装的与SSH相关的软件包
-
-```
-dpkg -l | grep ssh
+uname -r
 ```
 
 ### 6.3. 挂载共享文件
@@ -669,57 +633,7 @@ tail -f /root/log.txt
 kill -9 <PID>
 ```
 
-### 6.6. 添加多个源并更新为 Kali
-
-导入 Kali 的 GPG 密钥
-
-```
-┌──(root@debian)-[~]
-└─# curl -fsSL https://archive.kali.org/archive-key.asc \
-| tee /etc/apt/trusted.gpg.d/kali.asc
-```
-
-配置 `apt` 源
-
-```
-┌──(root@debian)-[~]
-└─# nano /etc/apt/sources.list
-```
-
-```
-deb https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main non-free contrib non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ testing main contrib non-free non-free-firmware
-```
-
-配置优先级
-
-```
-┌──(root@debian)-[~]
-└─# nano /etc/apt/preferences
-```
-
-```
-Package: *
-Pin: release o=Kali,a=kali-rolling
-Pin-Priority: 900
-
-Package: *
-Pin: release o=Debian,a=testing
-Pin-Priority: 800
-```
-
-获取更新并更新系统
-
-```
-┌──(root@debian)-[~]
-└─# apt update \
-&& apt upgrade \
-&& apt dist-upgrade \
-&& apt clean \
-&& apt autoremove --purge
-```
-
-### 6.7. 配置全局代理
+### 6.6. 配置全局代理
 
 配置代理
 

@@ -5,7 +5,7 @@ MariaDB Server: the innovative open source database.
 安装 `mariadb` 
 
 ```
-apt install -y mariadb-server mariadb-client
+sudo apt install -y mariadb-server mariadb-client
 ```
 
 ## 2. init
@@ -13,13 +13,13 @@ apt install -y mariadb-server mariadb-client
 启动 `mysql` 
 
 ```
-systemctl start mysql.service
+sudo systemctl start mysql.service
 ```
 
-设置密码
+配置  `mysql` 
 
 ```
-mysql -u root -p
+sudo mysql -u root -p
 ```
 
 ```
@@ -27,8 +27,17 @@ Enter password:
 ```
 
 ```
-MariaDB [(none)]> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');
-MariaDB [(none)]> exit;
+MariaDB [(none)]> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456';
+
+MariaDB [(none)]> CREATE USER 'sec'@'localhost' IDENTIFIED BY '123456';
+
+MariaDB [(none)]> CREATE DATABASE sec;
+
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON sec.* TO 'sec'@'localhost';
+
+MariaDB [(none)]> FLUSH PRIVILEGES;
+
+MariaDB [(none)]> EXIT;
 ```
 
 > 每安装一个其它版本的 MariaDB 都需要设置密码.
@@ -44,42 +53,39 @@ sudo systemctl start mysql.service
 修改密码
 
 ```
-mysql -u root -p
-Enter password:
-MariaDB [(none)]> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456');
-MariaDB [(none)]> exit;
+MariaDB [(none)]> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456'; # 新版语法
+
+MariaDB [(none)]> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456'); # 旧版语法
 ```
 
 登录
 
 ```
-mysql -u root -p
+mysql -u sec -p
 ```
 
 退出
 
-```mysql
+```
 MariaDB [(none)]> exit;
 ```
 
 列出数据库
 
-```mysql
+```
 MariaDB [(none)]> show databases;
 ```
 
 选择数据库
 
-```mysql
-MariaDB [(none)]> use  security;
 ```
-
-> 这是靶场 `sqli-labs` 的数据库
+MariaDB [(none)]> use  sec;
+```
 
 列出数据表
 
-```mysql
-MariaDB [security]> show tables;
+```
+MariaDB [sec]> show tables;
 ```
 
 ### 3.1. SUBSTRING

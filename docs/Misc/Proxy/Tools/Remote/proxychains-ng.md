@@ -1,19 +1,19 @@
 Proxychains is a UNIX program, that hooks network-related libc functions in dynamically linked programs via a preloaded DLL (dlsym(), LD_PRELOAD) and redirects the connections through SOCKS4a/5 or HTTP proxies. It supports TCP only (no UDP/ICMP etc).
 
-## 1. install
+## 1. Install
 
 安装
 
 ```
-apt install -y proxychains4
+sudo apt install -y proxychains4
 ```
 
-## 2. init
+## 2. Init
 
 修改配置文件
 
 ```
-nano /etc/proxychains4.conf
+sudo nano -l /etc/proxychains4.conf
 ```
 
 ```
@@ -24,10 +24,10 @@ nano /etc/proxychains4.conf
 测试代理
 
 ```
-proxychains4 curl ip.sb
+proxychains4 curl ipinfo.io
 ```
 
-## 3. use
+## 3. Usage
 
 通过代理执行程序
 

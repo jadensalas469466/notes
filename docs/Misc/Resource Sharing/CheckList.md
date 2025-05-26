@@ -95,6 +95,8 @@ naabu -l dig_ip.txt -tp 1000 -o naabu_ip:port.txt
 
 ### 2.4. HTTP Status
 
+筛选出 Web 端口
+
 ```
 httpx -l naabu_ip:port.txt -o httpx_url.txt
 ```
@@ -104,7 +106,7 @@ httpx -l naabu_ip:port.txt -o httpx_url.txt
 ### 2.5. Directory
 
 ```
-dirsearch -l httpx_url.txt --format=plain -o /root/dirsearch_url.txt
+dirsearch -w /root/wordlist.txt -l /root/httpx_url.txt --format=plain -o /root/dirsearch_url.txt
 ```
 
 ### 2.6. Spider
@@ -136,7 +138,7 @@ wafw00f -a -v -i httpx_url.txt -o wafw00f_url.txt
 ## 3. Scan
 
 ```
-nikto -h dig_ip.txt -Format htm -o nikto_ip.htm
+nikto -h httpx_url.txt -Format htm -o nikto_url.htm
 ```
 
 ## 4. PoC

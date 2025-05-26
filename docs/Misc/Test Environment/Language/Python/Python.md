@@ -15,12 +15,12 @@ python3 -m pip
 python3 -m venv
 ```
 
-## 1. install
+## 1. Install
 
 ### 1.1. Debian
 
 ```
-apt install -y python3 python3-pip python3-venv python3-dev
+sudo apt install -y python3 python3-pip python3-venv python3-dev
 ```
 
 ### 1.2. Windows
@@ -29,7 +29,7 @@ apt install -y python3 python3-pip python3-venv python3-dev
 
 ![使用管理员权限安装并添加到环境变量](./../../../../../images/Python/%E4%BD%BF%E7%94%A8%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E5%AE%89%E8%A3%85%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
-## 2. init
+## 2. Init
 
 配置镜像加速
 
@@ -37,7 +37,7 @@ apt install -y python3 python3-pip python3-venv python3-dev
 python3 -m pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 ```
 
-## 3. use
+## 3. Usage
 
 > 一般情况下， Python 读一行执行一行
 

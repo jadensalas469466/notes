@@ -1,6 +1,6 @@
 Windows is a product line of proprietary graphical operating systems developed and marketed by Microsoft.
 
-## 1. ready
+## 1. Step
 
 Windows 10 Enterprise LTSC 2021
 
@@ -20,7 +20,7 @@ https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 C:\Users\sec\Documents\Virtual Machines\windows
 ```
 
-## 2. config
+## 2. Config
 
 移动镜像文件到 `iso` 文件夹
 
@@ -191,7 +191,7 @@ VMware
 
 拍摄快照并命名为 `config` 
 
-## 3. install
+## 3. Install
 
 输入语言和其他首选项
 
@@ -299,7 +299,7 @@ sec
 
 关机，快照命名为 `install` 
 
-## 4. init
+## 4. Init
 
 安装驱动并更新
 
@@ -358,7 +358,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 配置 SMB 文件共享
 
-## 5. deploy
+## 5. Deploy
 
 |                            虚拟机                            |
 | :----------------------------------------------------------: |
@@ -421,7 +421,7 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Xmind](https://xmind.app/)                  |
 |                 [Yakit](https://yaklang.io/)                 |
 
-## 6. use
+## 6. Usage
 
 ### 6.1 查看帮助
 

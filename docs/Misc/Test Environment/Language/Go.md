@@ -1,30 +1,20 @@
 Build simple, secure, scalable systems with Go.
 
-## 1. install
+## 1. Install
 
 安装
 
 ```
-bash -c "$(curl -fsSL https://github.com/jadensalas469466/tools/raw/main/other/go_install.sh)"
+curl -fsSL https://github.com/jadensalas469466/tools/raw/main/other/go_install.sh | sh
 ```
 
-配置环境变量
+加载环境变量
 
 ```
-cat << 'EOF' >> ~/.zshrc
-
-# go env
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOBIN
-
-EOF
-
 source ~/.zshrc
 ```
 
-## 2. init
+## 2. Init
 
 配置镜像加速
 
@@ -32,7 +22,7 @@ source ~/.zshrc
 go env -w GOPROXY="https://proxy.golang.org,direct"
 ```
 
-## 3. use
+## 3. Usage
 
 查看配置
 

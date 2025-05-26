@@ -1,21 +1,20 @@
 用于配置全局代理.
 
-## 1. install
+## 1. Install
 
-将脚本下载到本地
+安装
 
 ```
-mkdir -p /root/proxy && cd /root/proxy && \
-curl -LO https://raw.githubusercontent.com/jadensalas469466/tools/refs/heads/main/other/proxy.sh
+curl -fsSL https://github.com/jadensalas469466/tools/raw/main/other/proxy_install.sh | bash
 ```
 
 写入环境变量
 
 ```
-echo "source /root/proxy/proxy.sh" >> ~/.zshrc && source ~/.zshrc
+echo "source ~/.local/bin/proxy.sh" >> ~/.zshrc && source ~/.zshrc
 ```
 
-## 2. use
+## 2. Usage
 
 配置代理
 

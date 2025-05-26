@@ -5,7 +5,7 @@ Intelligent WHOIS client.
 安装
 
 ```
-apt install -y whois
+sudo apt install -y whois
 ```
 
 ## 2. use

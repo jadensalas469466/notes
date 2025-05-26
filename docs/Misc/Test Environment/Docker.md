@@ -5,7 +5,7 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 安装
 
 ```
-bash -c "$(curl -fsSL https://get.docker.com)"
+curl -fsSL https://get.docker.com) | sh
 ```
 
 ## 2. init
@@ -13,8 +13,8 @@ bash -c "$(curl -fsSL https://get.docker.com)"
 配置代理
 
 ```
-mkdir -p /etc/systemd/system/docker.service.d \
-&& nano /etc/systemd/system/docker.service.d/http-proxy.conf
+sudo mkdir -p /etc/systemd/system/docker.service.d \
+&& sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf
 ```
 
 ```
@@ -27,7 +27,7 @@ Environment="NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,::1"
 重启 Docker 加载配置
 
 ```
-systemctl daemon-reload && systemctl restart docker.service
+sudo systemctl daemon-reload && sudo systemctl restart docker.service
 ```
 
 ## 3. use

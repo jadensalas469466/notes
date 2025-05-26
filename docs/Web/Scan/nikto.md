@@ -5,7 +5,7 @@ Nikto is a pluggable web server and CGI scanner written in Perl, using rfp’s L
 安装
 
 ```
-apt install -y nikto
+sudo apt install -y nikto
 ```
 
 ## 2. use

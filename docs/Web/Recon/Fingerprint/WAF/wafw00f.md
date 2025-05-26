@@ -5,7 +5,7 @@ The Web Application Firewall Fingerprinting Tool.
 安装
 
 ```
-apt install -y wafw00f
+sudo apt install -y wafw00f
 ```
 
 ## 2. use

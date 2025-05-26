@@ -5,7 +5,7 @@ Nmap is a utility for network exploration or security auditing.
 安装
 
 ```
-apt install -y nmap
+sudo apt install -y nmap
 ```
 
 ## 2. use

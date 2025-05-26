@@ -1,6 +1,6 @@
 ffuf is a fast web fuzzer written in Go that allows typical directory discovery, virtual host discovery (without DNS records) and GET and POST parameter fuzzing.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ ffuf is a fast web fuzzer written in Go that allows typical directory discovery,
 go install github.com/ffuf/ffuf/v2@latest
 ```
 
-## 2. use
+## 2. Usage
 
 GET 扫描
 

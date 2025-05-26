@@ -6,12 +6,12 @@ Git is a free and open source distributed version control system designed to han
 
 > HEAD 指的是最新一次的提交
 
-## 1. install
+## 1. Install
 
 ### 1.1. Debian
 
 ```
-apt install -y git
+sudo apt install -y git
 ```
 
 ### 1.2. Windows
@@ -28,7 +28,7 @@ apt install -y git
 
 ![默认使用命令行启动](./../../../../images/Git/%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8.png)
 
-## 2. init
+## 2. Init
 
 在 Github 开启私人电子邮箱
 
@@ -66,7 +66,7 @@ git config --global user.name "sec"
 git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
-## 3. use
+## 3. Usage
 
 ### 3.1. 基础
 

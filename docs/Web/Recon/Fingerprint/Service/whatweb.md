@@ -5,7 +5,7 @@ Identify the technology stack that powers a website and explore the Web of Thing
 安装
 
 ```
-apt install -y whatweb
+sudo apt install -y whatweb
 ```
 
 ## 2. use
