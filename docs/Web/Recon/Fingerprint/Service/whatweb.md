@@ -1,6 +1,6 @@
 Identify the technology stack that powers a website and explore the Web of Things.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ Identify the technology stack that powers a website and explore the Web of Thing
 sudo apt install -y whatweb
 ```
 
-## 2. use
+## 2. Usage
 
 识别单个目标使用的 Web 服务
 

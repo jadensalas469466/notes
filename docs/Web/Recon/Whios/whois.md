@@ -1,6 +1,6 @@
 Intelligent WHOIS client.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ Intelligent WHOIS client.
 sudo apt install -y whois
 ```
 
-## 2. use
+## 2. Usage
 
 经典查询
 

@@ -2,7 +2,7 @@ This tool is a proof of concept code, to give researchers and security
 consultants the possibility to show how easy it would be to gain unauthorized
 access from remote to a system.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -10,7 +10,7 @@ access from remote to a system.
 sudo apt install -y hydra
 ```
 
-## 2. use
+## 2. Usage
 
 basic auth
 

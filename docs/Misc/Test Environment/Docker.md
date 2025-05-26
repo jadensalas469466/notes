@@ -1,6 +1,6 @@
 Docker helps developers build, share, run, and verify applications anywhere — without tedious environment configuration or management.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 curl -fsSL https://get.docker.com) | sh
 ```
 
-## 2. init
+## 2. Init
 
 配置代理
 
@@ -30,7 +30,7 @@ Environment="NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,::1"
 sudo systemctl daemon-reload && sudo systemctl restart docker.service
 ```
 
-## 3. use
+## 3. Usage
 
 拉取镜像
 

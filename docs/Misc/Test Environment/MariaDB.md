@@ -1,6 +1,6 @@
 MariaDB Server: the innovative open source database.
 
-## 1. install
+## 1. Install
 
 安装 `mariadb` 
 
@@ -8,7 +8,7 @@ MariaDB Server: the innovative open source database.
 sudo apt install -y mariadb-server mariadb-client
 ```
 
-## 2. init
+## 2. Init
 
 启动 `mysql` 
 
@@ -42,7 +42,7 @@ MariaDB [(none)]> EXIT;
 
 > 每安装一个其它版本的 MariaDB 都需要设置密码.
 
-## 3. use
+## 3. Usage
 
 运行服务
 

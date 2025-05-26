@@ -1,6 +1,6 @@
 Nikto is a pluggable web server and CGI scanner written in Perl, using rfp’s LibWhisker to perform fast security or informational checks.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ Nikto is a pluggable web server and CGI scanner written in Perl, using rfp’s L
 sudo apt install -y nikto
 ```
 
-## 2. use
+## 2. Usage
 
 对单个目标进行扫描
 

@@ -1,6 +1,6 @@
 The Web Application Firewall Fingerprinting Tool.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ The Web Application Firewall Fingerprinting Tool.
 sudo apt install -y wafw00f
 ```
 
-## 2. use
+## 2. Usage
 
 识别单个目标使用的 WAF
 

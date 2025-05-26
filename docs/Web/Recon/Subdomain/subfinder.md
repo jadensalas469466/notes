@@ -1,6 +1,6 @@
 Fast passive subdomain enumeration tool.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ Fast passive subdomain enumeration tool.
 go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
-## 2. use
+## 2. Use
 
 经典扫描
 

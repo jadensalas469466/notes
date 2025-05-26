@@ -1,6 +1,6 @@
 Nmap is a utility for network exploration or security auditing.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ Nmap is a utility for network exploration or security auditing.
 sudo apt install -y nmap
 ```
 
-## 2. use
+## 2. Usage
 
 对单个目标进行端口扫描
 

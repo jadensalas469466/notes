@@ -1,6 +1,6 @@
 An advanced web path brute-forcer.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ An advanced web path brute-forcer.
 sudo apt install -y dirsearch
 ```
 
-## 2. use
+## 2. Usage
 
 对单个目标进行经典扫描
 

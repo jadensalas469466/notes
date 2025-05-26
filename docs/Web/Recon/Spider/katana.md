@@ -1,6 +1,6 @@
 A next-generation crawling and spidering framework.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ A next-generation crawling and spidering framework.
 go install github.com/projectdiscovery/katana/cmd/katana@latest
 ```
 
-## 2. use
+## 2. Usage
 
 对单个目标进行爬虫
 

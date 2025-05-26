@@ -1,6 +1,6 @@
 Nuclei is a fast, customizable vulnerability scanner powered by the global security community and built on a simple YAML-based DSL, enabling collaboration to tackle trending vulnerabilities on the internet.
 
-## 1. install
+## 1. Install
 
 安装
 
@@ -8,7 +8,7 @@ Nuclei is a fast, customizable vulnerability scanner powered by the global secur
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
-## 2. init
+## 2. Init
 
 克隆模板
 
@@ -16,7 +16,7 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 git clone https://github.com/projectdiscovery/nuclei-templates.git
 ```
 
-## 3. use
+## 3. Usage
 
 更新程序和模板
 
