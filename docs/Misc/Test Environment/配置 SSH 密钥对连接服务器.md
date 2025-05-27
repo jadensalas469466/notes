@@ -96,8 +96,9 @@ PS C:\Users\sec> Get-Content $env:USERPROFILE\.ssh\ssh_test.pub | Set-Clipboard
 将复制的内容写入 `~/.ssh/authorized_keys` 文件
 
 ```
-┌──(root@debian)-[~]
-└─# nano ~/.ssh/authorized_keys
+┌──(sec@debian)-[~]
+└─$ mkdir -p -m 700 ~/.ssh && touch ~/.ssh/authorized_keys \
+&& chmod 600 ~/.ssh/authorized_keys && nano ~/.ssh/authorized_keys
 ```
 
 > 若为 Windows 服务器则可以使用如下方法：
@@ -122,11 +123,11 @@ PS C:\Users\sec> Get-Content $env:USERPROFILE\.ssh\ssh_test.pub | Set-Clipboard
 
 ## 4. 配置使用密钥对登录
 
-启用密钥对登录并禁止密码登录
+开启密钥对登录并禁用密码登录
 
 ```
-┌──(root@debian)-[~]
-└─# nano -l /etc/ssh/sshd_config
+┌──(sec@debian)-[~]
+└─# sudo nano -l /etc/ssh/sshd_config
 ```
 
 ```
@@ -137,8 +138,8 @@ PS C:\Users\sec> Get-Content $env:USERPROFILE\.ssh\ssh_test.pub | Set-Clipboard
 重启 SSH 服务
 
 ```
-┌──(root@debian)-[~]
-└─# systemctl restart sshd.service
+┌──(sec@debian)-[~]
+└─# sudo systemctl restart sshd.service
 ```
 
 > Windows 重启 SSH 服务: 

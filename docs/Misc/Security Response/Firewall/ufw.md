@@ -1,19 +1,19 @@
 ufw aims to provide an easy to use interface for people unfamiliar with firewall concepts, while at the same time simplifies complicated iptables commands to help an administrator who knows what he or she is doing.
 
-## 1. install
+## 1. Install
 
 安装
 
 ```
-apt install -y ufw 
+sudo apt install -y ufw 
 ```
 
-## 2. use
+## 2. Usage
 
 查看使用帮助
 
 ```
-ufw -h
+sudo ufw -h
 ```
 
 ```

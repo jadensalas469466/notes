@@ -84,7 +84,7 @@ domain="10086.cn" && http.header.status_code="200" && country="CN"
 ### 2.2. DNS
 
 ```
-dig +short 10086.cn > dig_ip.txt
+dig +short A 10086.cn > dig_ip.txt | tee dig_ip.txt
 ```
 
 ### 2.3. Port

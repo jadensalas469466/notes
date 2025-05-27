@@ -10,8 +10,8 @@
 配置代理
 
 ```
-curl -LO https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh \
-&& bash ./install.sh && rm -rf ./install.sh
+curl -LO https://github.com/mack-a/v2ray-agent/raw/master/install.sh \
+&& su -c "bash ./install.sh" && rm -f ./install.sh && exit"
 ```
 
 ```

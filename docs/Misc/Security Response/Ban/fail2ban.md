@@ -1,19 +1,20 @@
 可以防止攻击者在短时间内对目标端口进行暴力破解.
 
-## 1. install
+## 1. Install
 
 安装
 
 ```
-apt install -y fail2ban
+sudo apt install -y fail2ban
 ```
 
-## 2. init
+## 2. Init
 
 修改配置文件
 
 ```
-cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local && nano /etc/fail2ban/jail.local
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local \
+&& sudo nano -l /etc/fail2ban/jail.local
 ```
 
 ```
@@ -22,20 +23,20 @@ cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local && nano /etc/fail2ban/jail.l
 281 port     = ssh
 282 logpath = %(sshd_log)s
 283 backend = %(sshd_backend)s
-284 filter = sshd
-285 action = iptables[name=SSH,port=ssh,protocol=tcp] 
-286 bantime  = 86400
-287 maxretry = 5
-288 findtime = 300
+filter = sshd
+action = iptables[name=SSH,port=ssh,protocol=tcp] 
+bantime  = 86400
+maxretry = 5
+findtime = 300
 ```
 
 运行 `fail2ban` 服务
 
 ```
-systemctl enable --now fail2ban.service
+sudo systemctl enable --now fail2ban.service
 ```
 
-## 3. use
+## 3. Usage
 
 查看封禁的 IP
 
