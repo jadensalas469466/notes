@@ -5,7 +5,7 @@ Build simple, secure, scalable systems with Go.
 安装
 
 ```
-curl -fsSL https://github.com/jadensalas469466/tools/raw/main/other/go_install.sh | sh
+curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/go_install.sh | sh
 ```
 
 加载环境变量

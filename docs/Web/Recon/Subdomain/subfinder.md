@@ -31,7 +31,7 @@ subfinder -ls
 配置 API
 
 ```
-vim /root/.config/subfinder/provider-config.yaml
+nano ~/.config/subfinder/provider-config.yaml
 ```
 
 ---

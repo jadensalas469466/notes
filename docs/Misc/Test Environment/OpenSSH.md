@@ -1,10 +1,10 @@
 OpenSSH is the premier connectivity tool for remote login with the SSH protocol. It encrypts all traffic to eliminate eavesdropping, connection hijacking, and other attacks.
 
-## 1. install
+## 1. Install
 
 ### 1.1. Windows
 
-运行 Powershell，检查是否安装 OpenSSH
+使用管理员权限运行 Powershell，检查是否安装 OpenSSH
 
 ```powershell
 PS C:\Windows\system32> Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
@@ -42,7 +42,7 @@ PS C:\Windows\system32> Remove-WindowsCapability -Online -Name OpenSSH.Client~~~
 PS C:\Windows\system32> Remove-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
 ```
 
-## 2. init
+## 2. Init
 
 ### 2.1. Windows
 
@@ -75,7 +75,7 @@ PS C:\Windows\system32> if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" 
 }
 ```
 
-## 3. use
+## 3. Usage
 
 ### 3.1. 连接
 
@@ -102,15 +102,15 @@ PS C:\Windows\system32> Remove-Item C:\Users\sec\.ssh\known_hosts
 生成私钥
 
 ```powershell
-PS C:\Windows\system32> ssh-keygen -t ed25519 -f C:\Users\sec\.ssh\test
+PS C:\Windows\system32> ssh-keygen -t ed25519 -f C:\Users\sec\.ssh\ssh_test
 ```
 
 ```
 Generating public/private ed25519 key pair.
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
-Your identification has been saved in C:\Users\sec\.ssh\test
-Your public key has been saved in C:\Users\sec\.ssh\test.pub
+Your identification has been saved in C:\Users\sec\.ssh\ssh_test
+Your public key has been saved in C:\Users\sec\.ssh\ssh_test.pub
 The key fingerprint is:
 SHA256:UBde/s2O/viAqb0hZxf5W1qO0kXpu9QayAK9NtwEJZc sec@desktop
 The key's randomart image is:
@@ -136,8 +136,8 @@ PS C:\Windows\system32> ls C:\Users\sec\.ssh\
 ```
 Mode                LastWriteTime         Length Name
 ----                -------------         ------ ----
--a----        2024/10/24     17:17            444 test
--a----        2024/10/24     17:17             94 test.pub
+-a----        2024/10/24     17:17            444 ssh_test
+-a----        2024/10/24     17:17             94 ssh_test.pub
 ```
 
 ### 3.3. 保存私钥
@@ -169,12 +169,12 @@ Running  ssh-agent          OpenSSH Authentication Agent
 将私钥载入 ssh-agent
 
 ```powershell
-PS C:\Windows\system32> ssh-add $env:USERPROFILE\.ssh\test
+PS C:\Windows\system32> ssh-add $env:USERPROFILE\.ssh\ssh_test
 ```
 
 ```
-Enter passphrase for C:\Users\sec\.ssh\test:123456
-Identity added: C:\Users\sec\.ssh\test (sec@desktop)
+Enter passphrase for C:\Users\sec\.ssh\ssh_test:123456
+Identity added: C:\Users\sec\.ssh\ssh_test (sec@desktop)
 ```
 
 > 添加到 ssh-agent 后，可将私钥文件备份到一个安全位置，然后将其从本地系统中删除
@@ -188,7 +188,7 @@ PS C:\Windows\system32> ssh-add -l
 从 ssh-agent 中移除指定私钥
 
 ```powershell
-PS C:\Windows\system32> ssh-add -d $env:USERPROFILE\.ssh\test
+PS C:\Windows\system32> ssh-add -d $env:USERPROFILE\.ssh\ssh_test
 ```
 
 移除所有私钥
@@ -202,13 +202,13 @@ PS C:\Windows\system32> ssh-add -D
 复制公钥内容到剪切板
 
 ```powershell
-PS C:\Windows\system32> Get-Content $env:USERPROFILE\.ssh\test.pub | Set-Clipboard
+PS C:\Windows\system32> Get-Content $env:USERPROFILE\.ssh\ssh_test.pub | Set-Clipboard
 ```
 
 设置 $authorizedKey 变量复制公钥内容到剪切板
 
 ```powershell
-PS C:\Windows\system32> $authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\test.pub
+PS C:\Windows\system32> $authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\ssh_test.pub
 ```
 
 设置 $remotePowershell 变量将公钥内容复制到服务器上的 authorized_keys 文件中
@@ -237,7 +237,7 @@ Mode                 LastWriteTime         Length Name
 d-----          2024/6/7     22:00                .ssh
 ```
 
-> 客户端公钥 `C:\Users\sec\.ssh\test.pub` 的内容需放置在服务器上的 `~/.ssh/authorized_keys` 文件中
+> 客户端公钥 `C:\Users\sec\.ssh\ssh_test.pub` 的内容需放置在服务器上的 `~/.ssh/authorized_keys` 文件中
 
 ### 3.5. 启用密钥登录
 

@@ -348,7 +348,6 @@ root@debian:~# nano /etc/apt/sources.list
 ```
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-backports main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
 ```
 
@@ -362,7 +361,7 @@ root@debian:~# apt update && apt full-upgrade \
 安装常用工具
 
 ```
-root@debian:~# apt install -y vim curl passwd sudo tree unzip apache2 build-essential libpcap-dev \
+root@debian:~# apt install -y vim curl passwd sudo tree unzip apache2 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
 && systemctl disable --now apache2.service \
 && usermod -aG sudo sec
@@ -389,7 +388,7 @@ root@debian:~# systemctl restart ssh.service
 
 ```
 root@debian:~# chsh -s $(which zsh) \
-&& curl -LO https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc
+&& curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
 配置网络
@@ -454,13 +453,26 @@ sec@debian:~$ ping mit.edu -c 3
 
 ```
 sec@debian:~$ chsh -s $(which zsh) \
-&& curl -LO https://raw.githubusercontent.com/jadensalas469466/config/refs/heads/main/Zsh/.zshrc
+&& curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
-创建上传目录
+创建目录并配置权限
 
 ```
-sec@debian:~$ sudo mkdir -p /var/www/html/upload
+sec@debian:~$ sudo mkdir -p /var/www/html/exploit \
+&& sudo cp /etc/apache2/sites-available/000-default.conf \
+/etc/apache2/sites-available/000-default.conf.bak \
+&& sudo nano /etc/apache2/sites-available/000-default.conf
+```
+
+```
+DocumentRoot /var/www/html
+
+<Directory /var/www/html/exploit>
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+</Directory>
 ```
 
 关机，拍摄快照并命名为 `init` 
@@ -506,12 +518,14 @@ sec@debian:~$ sudo shutdown -h now
 |                            server                            |
 | :----------------------------------------------------------: |
 | [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/test_environment/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
-|              [UFW](https://github.com/jbq/ufw)               |
+|              [ufw](https://github.com/jbq/ufw)               |
 |       [fail2ban](https://github.com/fail2ban/fail2ban)       |
 | [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/test-environment/zi-jian-dns-fu-wu-qi) |
-|             [Syncthing](https://syncthing.net/)              |
+| [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/test-environment/management-tools/shu-ju-guan-li/shu-ju-tong-bu/pei-zhi-syncthing-shu-ju-tong-bu) |
 |              [Tor](https://www.torproject.org/)              |
+|          [metasploit](https://www.metasploit.com/)           |
+|        [sliver](https://github.com/BishopFox/sliver)         |
 
 ## 6. Usage
 
@@ -647,6 +661,46 @@ export https_proxy=$http_proxy
 ```
 unset http_proxy && \
 unset https_proxy
+```
+
+### 6.7. 创建用户
+
+创建一个普通用户
+
+```
+adduser sec
+```
+
+### 6.8. SSH 相关配置
+
+SSH 配置文件
+
+```
+nano -l /etc/ssh/sshd_config
+```
+
+使用 root 登录 (默认禁止)
+
+```
+33 #PermitRootLogin prohibit-password
+```
+
+密钥对登录 (默认禁止)
+
+```
+38 #PubkeyAuthentication yes
+```
+
+密码登录 (默认允许)
+
+```
+57 #PasswordAuthentication yes
+```
+
+重启 SSH 服务
+
+```
+root@debian:~# systemctl restart ssh.service
 ```
 
 ---

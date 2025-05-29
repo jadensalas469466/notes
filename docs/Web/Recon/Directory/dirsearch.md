@@ -13,25 +13,25 @@ sudo apt install -y dirsearch
 对单个目标进行经典扫描
 
 ```
-dirsearch -w /root/wordlist.txt -u https://example.com --format=plain -o /root/dirsearch_example.com.txt
+dirsearch -w ~/wordlist.txt -u https://example.com --format=plain -o ~/dirsearch_example.com.txt
 ```
 
 对多个目标进行经典扫描
 
 ```
-dirsearch -w /root/wordlist.txt -l /root/url.txt --format=plain -o /root/dirsearch_url.txt
+dirsearch -w ~/wordlist.txt -l ~/url.txt --format=plain -o ~/dirsearch_url.txt
 ```
 
 递归扫描
 
 ```
-dirsearch -w /root/wordlist.txt -l /root/url.txt -r --format=plain -o /root/dirsearch_example.com.txt
+dirsearch -w ~/wordlist.txt -l ~/url.txt -r --format=plain -o ~/dirsearch_example.com.txt
 ```
 
 扩展扫描
 
 ```
-dirsearch -w /root/wordlist.txt -e * -l /root/url.txt --format=plain -o /root/dirsearch_url.txt
+dirsearch -w ~/wordlist.txt -e * -l ~/url.txt --format=plain -o ~/dirsearch_url.txt
 ```
 
 > `-e *` , 以字典中出现的后缀添加扩展

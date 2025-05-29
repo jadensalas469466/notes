@@ -1,8 +1,8 @@
 Syncthing is a continuous file synchronization program.
 
-## 1 安装
+## 1. Install
 
-### 1.1 Windows
+### 1.1. Windows
 
 使用默认配置
 
@@ -24,20 +24,20 @@ PS C:\Users\sec> regsvr32 jscript.dll
 
 > 注册成功后将 Syncthing 卸载，重新安装即可
 
-### 1.2 debian
+### 1.2. Debian
 
 安装 Syncthing
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y syncthing
+┌──(sec@debian)-[~]
+└─# sudo apt install -y syncthing
 ```
 
 添加 systemd 系统服务配置文件
 
 ```
-┌──(root@debian)-[~]
-└─# vim /etc/systemd/system/syncthing@.service
+┌──(sec@debian)-[~]
+└─# sudo nano /etc/systemd/system/syncthing@.service
 ```
 
 ```
@@ -63,10 +63,6 @@ SystemCallArchitectures=native
 MemoryDenyWriteExecute=true
 NoNewPrivileges=true
 
-# Elevated permissions to sync ownership (disabled by default),
-# see https://docs.syncthing.net/advanced/folder-sync-ownership
-#AmbientCapabilities=CAP_CHOWN CAP_FOWNER
-
 [Install]
 WantedBy=multi-user.target
 ```
@@ -80,25 +76,25 @@ WantedBy=multi-user.target
 设置防火墙规则
 
 ```
-┌──(root@debian)-[~]
-└─# ufw allow 8384
+┌──(sec@debian)-[~]
+└─# sudo ufw allow 8384
 ```
 
 重新加载 systemd 系统服务配置文件
 
 ```
-┌──(root@debian)-[~]
-└─# systemctl daemon-reload
+┌──(sec@debian)-[~]
+└─# sudo systemctl daemon-reload
 ```
 
-以 root 权限启动 Syncthing 服务并设置开机自启
+以 sec 用户身份启动 Syncthing 服务并设置开机自启
 
 ```
-┌──(root@debian)-[~]
-└─# systemctl enable --now syncthing@root.service
+┌──(sec@debian)-[~]
+└─# sudo systemctl enable --now syncthing@sec.service
 ```
 
-## 2 初始化
+## 2. Init
 
 启动 Syncthing
 
@@ -109,10 +105,6 @@ WantedBy=multi-user.target
 ```
 https://127.0.0.1:8384/
 ```
-
-同意上传报告
-
-![同意上传报告](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E5%90%8C%E6%84%8F%E4%B8%8A%E4%BC%A0%E6%8A%A5%E5%91%8A.png)
 
 对控制台进行初始化设置
 
@@ -134,7 +126,7 @@ https://127.0.0.1:8384/
 
 ![移除默认的文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E7%A7%BB%E9%99%A4%E9%BB%98%E8%AE%A4%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
-### 2.1 添加远程设备
+### 2.1. 添加远程设备
 
 在 debian 控制台选择显示 ID
 
@@ -156,15 +148,15 @@ https://127.0.0.1:8384/
 
 ![在 debian 控制台接受请求](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E5%9C%A8%20debian%20%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%8E%A5%E5%8F%97%E8%AF%B7%E6%B1%82.png)
 
-### 2.2 设置文件同步
+### 2.2. 设置文件同步
 
 在控制台添加文件夹
 
 ![在控制台添加文件夹](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/debian/%E5%9C%A8%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E5%A4%B9.png)
 
-### 2.2.1 单向同步
+### 2.2.1. 单向同步
 
-### 2.2.1.1 Windows
+### 2.2.1.1. Windows
 
 常规设置
 
@@ -182,7 +174,7 @@ https://127.0.0.1:8384/
 
 ![高级设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/Windows/%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE.png)
 
-### 2.2.1.2 debian
+### 2.2.1.2. Debian
 
 接受请求添加新文件夹
 
@@ -206,7 +198,7 @@ https://127.0.0.1:8384/
 
 ### 2.2.2 双向同步
 
-### 2.2.2.1 Windows
+### 2.2.2.1. Windows
 
 常规设置
 
@@ -224,7 +216,7 @@ https://127.0.0.1:8384/
 
 ![高级设置](./../../../../../../images/%E9%85%8D%E7%BD%AE%20Syncthing%20%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E5%90%8C%E6%AD%A5/%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE.png)
 
-### 2.2.2.2 debain
+### 2.2.2.2. Debian
 
 常规设置
 

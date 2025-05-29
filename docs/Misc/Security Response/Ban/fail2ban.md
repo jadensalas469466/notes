@@ -5,7 +5,8 @@
 安装
 
 ```
-sudo apt install -y fail2ban
+┌──(sec@debian)-[~]
+└─# sudo apt install -y fail2ban
 ```
 
 ## 2. Init
@@ -13,7 +14,8 @@ sudo apt install -y fail2ban
 修改配置文件
 
 ```
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local \
+┌──(sec@debian)-[~]
+└─# sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local \
 && sudo nano -l /etc/fail2ban/jail.local
 ```
 
@@ -33,7 +35,8 @@ findtime = 300
 运行 `fail2ban` 服务
 
 ```
-sudo systemctl enable --now fail2ban.service
+┌──(sec@debian)-[~]
+└─# sudo systemctl enable --now fail2ban.service
 ```
 
 ## 3. Usage
@@ -41,13 +44,15 @@ sudo systemctl enable --now fail2ban.service
 查看封禁的 IP
 
 ```
-fail2ban-client status sshd | grep -A 5 "IP list"
+┌──(sec@debian)-[~]
+└─# fail2ban-client status sshd | grep -A 5 "IP list"
 ```
 
 移除封禁的 IP
 
 ```
-fail2ban-client set sshd unbanip [ban_ip]
+┌──(sec@debian)-[~]
+└─# fail2ban-client set sshd unbanip [ban_ip]
 ```
 
 ---

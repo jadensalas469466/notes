@@ -10,8 +10,9 @@
 配置代理
 
 ```
-curl -LO https://github.com/mack-a/v2ray-agent/raw/master/install.sh \
-&& su -c "bash ./install.sh" && rm -f ./install.sh && exit"
+┌──(sec@debian)-[~]
+└─# curl -LO https://github.com/mack-a/v2ray-agent/raw/master/install.sh \
+&& su -c "bash ./install.sh && rm -f ./install.sh && exit"
 ```
 
 ```
@@ -19,6 +20,10 @@ curl -LO https://github.com/mack-a/v2ray-agent/raw/master/install.sh \
 请选择:1.Xray-core
 请选择:7.VLESS+Reality+uTLS+Vision[推荐]
 ```
+
+> 仅保留二维码 VLESS(VLESS+reality+uTLS+Vision) 即可
+>
+> 记得使用 `sudo ufw allow port` 开放端口
 
 ---
 
