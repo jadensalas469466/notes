@@ -5,7 +5,7 @@ dig  is a flexible tool for interrogating DNS name servers.
 查询 A 记录
 
 ```
-dig +short A example.com
+dig +short A example.com | tee -a dig_ip.txt
 ```
 
 ---

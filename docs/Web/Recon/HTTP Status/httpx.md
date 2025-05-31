@@ -5,7 +5,8 @@ httpx is a fast and multi-purpose HTTP toolkit that allows running multiple prob
 安装
 
 ```
-go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
+┌──(sec@debian)-[~]
+└─$ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 ```
 
 ## 2. Usage
@@ -13,7 +14,8 @@ go install -v github.com/projectdiscovery/httpx/cmd/httpx@latest
 检测存活的站点
 
 ```
-httpx -l host.txt -o httpx_url.txt
+┌──(sec@debian)-[~]
+└─$ httpx -l host.txt -o httpx_url.txt
 ```
 
 ---

@@ -5,7 +5,8 @@ Nuclei is a fast, customizable vulnerability scanner powered by the global secur
 安装
 
 ```
-go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+┌──(sec@debian)-[~]
+└─$ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 ```
 
 ## 2. Init
@@ -13,7 +14,15 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 克隆模板
 
 ```
-git clone https://github.com/projectdiscovery/nuclei-templates.git
+┌──(sec@debian)-[~]
+└─$ git clone https://github.com/projectdiscovery/nuclei-templates.git
+```
+
+更新程序和模板
+
+```
+┌──(sec@debian)-[~]
+└─$ nuclei -up && nuclei -ut
 ```
 
 ## 3. Usage
@@ -21,19 +30,22 @@ git clone https://github.com/projectdiscovery/nuclei-templates.git
 更新程序和模板
 
 ```
-nuclei -up && nuclei -ut
+┌──(sec@debian)-[~]
+└─$ nuclei -up && nuclei -ut
 ```
 
 经典扫描
 
 ```
-nuclei -l host.txt -o nuclei_host.txt
+┌──(sec@debian)-[~]
+└─$ nuclei -l host.txt -o nuclei_host.txt
 ```
 
 指定 PoC 模板验证目标漏洞
 
 ```
-nuclei -l host.txt -t ~/poc -o nuclei_host.txt
+┌──(sec@debian)-[~]
+└─$ nuclei -l host.txt -t ~/poc -o nuclei_host.txt
 ```
 
 ---

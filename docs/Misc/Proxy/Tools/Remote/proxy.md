@@ -5,13 +5,15 @@
 安装
 
 ```
-curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/proxy_install.sh | bash
+┌──(sec@debian)-[~]
+└─$ curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/proxy_install.sh | bash
 ```
 
 加载环境变量
 
 ```
-source ~/.zshrc
+┌──(sec@debian)-[~]
+└─$ source ~/.zshrc
 ```
 
 ## 2. Usage
@@ -19,13 +21,15 @@ source ~/.zshrc
 配置代理
 
 ```
-proxy <ip:port>
+┌──(sec@debian)-[~]
+└─$ proxy <ip:port>
 ```
 
 取消代理
 
 ```
-proxy
+┌──(sec@debian)-[~]
+└─$ proxy
 ```
 
 ---

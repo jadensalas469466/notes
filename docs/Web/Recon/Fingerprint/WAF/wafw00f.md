@@ -5,7 +5,8 @@ The Web Application Firewall Fingerprinting Tool.
 安装
 
 ```
-sudo apt install -y wafw00f
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y wafw00f
 ```
 
 ## 2. Usage
@@ -13,13 +14,15 @@ sudo apt install -y wafw00f
 识别单个目标使用的 WAF
 
 ```
-wafw00f -a -v https://example.com -o wafw00f_example.com.txt
+┌──(sec@debian)-[~]
+└─$ wafw00f -a -v https://example.com -o wafw00f_example.com.txt
 ```
 
 识别多个目标使用的 WAF
 
 ```
-wafw00f -a -v -i url.txt -o wafw00f_url.txt
+┌──(sec@debian)-[~]
+└─$ wafw00f -a -v -i url.txt -o wafw00f_url.txt
 ```
 
 ---

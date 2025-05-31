@@ -5,7 +5,8 @@ Utility program to perform multiple operations for a given subnet/CIDR ranges.
 安装
 
 ```
-go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
+┌──(sec@debian)-[~]
+└─$ go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
 ```
 
 ## 2. Usage
@@ -13,7 +14,8 @@ go install -v github.com/projectdiscovery/mapcidr/cmd/mapcidr@latest
 C 段扫描
 
 ```
-mapcidr -cidr 173.0.84.0/24
+┌──(sec@debian)-[~]
+└─$ mapcidr -cidr 173.0.84.0/24
 ```
 
 ---

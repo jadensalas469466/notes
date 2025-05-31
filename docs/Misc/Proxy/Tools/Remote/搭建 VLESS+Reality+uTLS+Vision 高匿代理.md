@@ -23,7 +23,7 @@
 
 > 仅保留二维码 VLESS(VLESS+reality+uTLS+Vision) 即可
 >
-> 记得使用 `sudo ufw allow port` 开放端口
+> 记得使用 `sudo ufw allow <port>` 开放端口
 
 ---
 

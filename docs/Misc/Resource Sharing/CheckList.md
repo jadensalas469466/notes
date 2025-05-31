@@ -13,7 +13,7 @@
 查询域名, 获取注册信息
 
 ```
-whois 10086.cn
+whois 10086.cn | tee -a whois.txt
 ```
 
 ```
@@ -37,7 +37,7 @@ chinamobile.com
 warmchina121.com
 ```
 
-> 即使主域名无法访, 也需要保存, 后期可收集子域名
+> 即使主域名无法访问, 也需要保存, 后期可收集子域名
 
 ## 2. Recon
 
@@ -81,55 +81,139 @@ ZoomEye
 domain="10086.cn" && http.header.status_code="200" && country="CN"
 ```
 
+> 整合所有域名为 `subdomain.txt` 
+
 ### 2.2. DNS
 
 ```
-dig +short A 10086.cn > dig_ip.txt | tee dig_ip.txt
+dig +short A 10086.cn | tee -a dig_ip.txt
+```
+
+> 使用 CDN 的 IP 仅保留主 IP
+
+> 若在查询 A 记录时发现多个域名使用同一个 IP
+>
+> 手工访问 `subdomain.txt` 中的每个域名
+>
+> 若是同一站点仅保留一个即可, 如: `10086.cn` 和 `www.10086.cn` 
+
+awk 去重
+
+```
+awk '!seen[$0]++' dig_ip.txt > dig_ip.txt.tmp && mv dig_ip.txt.tmp dig_ip.txt
 ```
 
 ### 2.3. Port
 
+naabu Top 100 端口扫描
+
 ```
-naabu -l dig_ip.txt -tp 1000 -o naabu_ip:port.txt
+sudo naabu -l dig_ip.txt -tp 100 -Pn -o naabu_ip-port.txt
 ```
+
+生成 `domain-port.txt` , 避免目标配置了仅从域名访问
+
+```
+python3 ./domain-port.py
+```
+
+masscan 全端口扫描
+
+```
+sudo masscan -p- -iL dig_ip.txt -oL masscan_port.txt
+```
+
+awk 提取出每个 IP 的开放端口
+
+```
+awk '/^open/ {print $4, $3}' masscan_port.txt | sort -k1,1 -k2n | \
+awk '{ips[$1] = (ips[$1] ? ips[$1]","$2 : $1":"$2)} END {for (ip in ips) print ips[ip]}' | tee awk_ip-port.txt
+```
+
+```
+36.160.4.7:135,445,902
+36.160.4.161:1026,5040,5357
+```
+
+nmap 指定端口识别
+
+```
+sudo nmap -p 135,445,902,65535 -T4 -Pn -sV -O 36.160.4.7 -oN nmap_port.txt
+```
+
+> 指定一个不常用的端口用于系统检测如: `65535` 
 
 ### 2.4. HTTP Status
 
 筛选出 Web 端口
 
 ```
-httpx -l naabu_ip:port.txt -o httpx_url.txt
+httpx -l domain-port.txt -o httpx_url.txt
 ```
 
-> 若一个 `ip:port` 同时存在 HTTP 和 HTTPS, 仅保留 HTTP 即可
+> 若一个站点同时存在 HTTP 和 HTTPS, 仅保留 HTTP 即可
 
 ### 2.5. Directory
 
+默认扫描
+
 ```
-dirsearch -w /root/wordlist.txt -l /root/httpx_url.txt --format=plain -o /root/dirsearch_url.txt
+dirsearch -l ~/httpx_url.txt --format=plain -o ~/dirsearch_default.txt
+```
+
+H2-9000低危版本.txt
+
+```
+dirsearch -w ~/H2-9000低危版本.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_H2-9000低危版本.txt
+```
+
+raft-large-files.txt
+
+```
+dirsearch -w ~/raft-large-files.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-files.txt
+```
+
+raft-large-directories.txt
+
+```
+dirsearch -w ~/raft-large-directories.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-directories.txt
+```
+
+生成 `dirsearch_url.txt` , 删除无效 URL 并去重
+
+```
+python3 ./dirsearch_url.py
+```
+
+手工访问 `dirsearch_url.txt` 并整理
+
+```
+无访问内容的归类为 false.txt
+将有访问内容的 URL 归类为 true.txt
+
+并剔除 dirsearch 生成的信息, 仅保留 URL
+awk '{print $3}' true.txt > true_url.txt
+
+true_url.txt 中添加跟站点: http://zhongguoshequ1990.org:80/
 ```
 
 ### 2.6. Spider
 
+爬取 JS
+
 ```
-katana -list httpx_url.txt -o katana_url.txt
+katana -list true_url.txt -jc -e cdn,private-ips -o katana_url.txt
 ```
 
 ### 2.7. FingerPrints
 
-nmap
-
-```
-nmap -T4 -Pn -p- -sV -O -iL dig_ip.txt -oN nmap_port.txt
-```
-
-Server
+whatweb
 
 ```
 whatweb -a 3 -v --color=never -i httpx_url.txt > whatweb_url.txt
 ```
 
-WAF
+wafw00f
 
 ```
 wafw00f -a -v -i httpx_url.txt -o wafw00f_url.txt
@@ -144,7 +228,7 @@ nikto -h httpx_url.txt -Format htm -o nikto_url.htm
 ## 4. PoC
 
 ```
-nuclei -l url.txt -o nuclei_url.txt
+nuclei -l httpx_url.txt -o nuclei_url.txt
 ```
 
 > 这里的 `url.txt` 整合了 `dirsearch_url.txt` , `katana_url.txt` 和 `nikto_ip.htm` 中脆弱的 URL

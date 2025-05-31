@@ -5,7 +5,8 @@ MariaDB Server: the innovative open source database.
 安装 `mariadb` 
 
 ```
-sudo apt install -y mariadb-server mariadb-client
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y mariadb-server mariadb-client
 ```
 
 ## 2. Init
@@ -13,13 +14,15 @@ sudo apt install -y mariadb-server mariadb-client
 启动 `mysql` 
 
 ```
-sudo systemctl start mysql.service
+┌──(sec@debian)-[~]
+└─$ sudo systemctl start mysql.service
 ```
 
 配置  `mysql` 
 
 ```
-sudo mysql -u root -p
+┌──(sec@debian)-[~]
+└─$ sudo mysql -u root -p
 ```
 
 ```
@@ -47,7 +50,15 @@ MariaDB [(none)]> EXIT;
 运行服务
 
 ```
-sudo systemctl start mysql.service
+┌──(sec@debian)-[~]
+└─$ sudo systemctl start mysql.service
+```
+
+登录
+
+```
+┌──(sec@debian)-[~]
+└─$ mysql -u sec -p
 ```
 
 修改密码
@@ -56,12 +67,6 @@ sudo systemctl start mysql.service
 MariaDB [(none)]> ALTER USER 'root'@'localhost' IDENTIFIED BY '123456'; # 新版语法
 
 MariaDB [(none)]> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123456'); # 旧版语法
-```
-
-登录
-
-```
-mysql -u sec -p
 ```
 
 退出

@@ -5,7 +5,8 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 安装
 
 ```
-curl -fsSL https://get.docker.com) | sh
+┌──(sec@debian)-[~]
+└─$ curl -fsSL https://get.docker.com | sh
 ```
 
 ## 2. Init
@@ -13,7 +14,8 @@ curl -fsSL https://get.docker.com) | sh
 配置代理
 
 ```
-sudo mkdir -p /etc/systemd/system/docker.service.d \
+┌──(sec@debian)-[~]
+└─$ sudo mkdir -p /etc/systemd/system/docker.service.d \
 && sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf
 ```
 
@@ -27,7 +29,8 @@ Environment="NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,::1"
 重启 Docker 加载配置
 
 ```
-sudo systemctl daemon-reload && sudo systemctl restart docker.service
+┌──(sec@debian)-[~]
+└─$ sudo systemctl daemon-reload && sudo systemctl restart docker.service
 ```
 
 ## 3. Usage
@@ -35,7 +38,8 @@ sudo systemctl daemon-reload && sudo systemctl restart docker.service
 拉取镜像
 
 ```
-docker pull <URL>
+┌──(sec@debian)-[~]
+└─$ docker pull <URL>
 ```
 
 ---

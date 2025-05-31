@@ -5,33 +5,40 @@ Nmap is a utility for network exploration or security auditing.
 安装
 
 ```
-sudo apt install -y nmap
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y nmap
 ```
 
 ## 2. Usage
 
-对单个目标进行端口扫描
+> 系统监测需要扫描一个开放端口和一个关闭端口, 指定一个不常用的端口用于系统检测如: `65535`
+
+扫描单个目标的指定端口
 
 ```
-nmap -T4 -Pn -p- -sV -O <host> -oN nmap_<host>.txt
+┌──(sec@debian)-[~]
+└─$ sudo nmap -p 22,80,443,65535 -T4 -Pn -sV -O <host> -oN nmap_port.txt
 ```
 
-对多个目标进行端口扫描
+扫描多个目标的指定端口
 
 ```
-nmap -T4 -Pn -p- -sV -O -iL host.txt -oN nmap_host.txt
+┌──(sec@debian)-[~]
+└─$ sudo nmap -p 22,80,443,65535 -T4 -Pn -sV -O -iL host.txt -oN nmap_port.txt
 ```
 
 Bypass
 
 ```
-nmap -T4 -Pn -p- -sV -O -f -D RND:10 <host> -oN nmap_<host>.txt
+┌──(sec@debian)-[~]
+└─$ sudo nmap -p 22,80,443,65535 -T4 -Pn -sV -O -f -D RND:10 <host> -oN nmap_port.txt
 ```
 
 漏洞扫描
 
 ```
-nmap --script=vuln <host> -oN result.txt
+┌──(sec@debian)-[~]
+└─$ sudo nmap --script=vuln <host> -oN nmap_port.txt
 ```
 
 ---

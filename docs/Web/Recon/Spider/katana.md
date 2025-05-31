@@ -5,7 +5,8 @@ A next-generation crawling and spidering framework.
 安装
 
 ```
-go install github.com/projectdiscovery/katana/cmd/katana@latest
+┌──(sec@debian)-[~]
+└─$ go install github.com/projectdiscovery/katana/cmd/katana@latest
 ```
 
 ## 2. Usage
@@ -13,13 +14,22 @@ go install github.com/projectdiscovery/katana/cmd/katana@latest
 对单个目标进行爬虫
 
 ```
-katana -u http://example.com -o katana_example.com.txt
+┌──(sec@debian)-[~]
+└─$ katana -u http://example.com -e cdn,private-ips -o katana_example.com.txt
 ```
 
 对多个目标进行爬虫
 
 ```
-katana -list url.txt -o katana_url.txt
+┌──(sec@debian)-[~]
+└─$ katana -list url.txt -e cdn,private-ips -o katana_url.txt
+```
+
+爬取 JS
+
+```
+┌──(sec@debian)-[~]
+└─$ katana -list url.txt -jc -e cdn,private-ips -o katana_url.txt
 ```
 
 ---

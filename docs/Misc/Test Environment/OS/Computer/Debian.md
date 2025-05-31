@@ -497,8 +497,9 @@ sec@debian:~$ sudo shutdown -h now
 |                            tools                            |
 | :---------------------------------------------------------: |
 |         [whois](https://www.kali.org/tools/whois/)          |
-|     [dirsearch](https://www.kali.org/tools/dirsearch/)      |
+|       [masscan](https://www.kali.org/tools/masscan/)        |
 |          [nmap](https://www.kali.org/tools/nmap/)           |
+|     [dirsearch](https://www.kali.org/tools/dirsearch/)      |
 |       [whatweb](https://www.kali.org/tools/whatweb/)        |
 |       [wafw00f](https://www.kali.org/tools/wafw00f/)        |
 |         [nikto](https://www.kali.org/tools/nikto/)          |
@@ -514,6 +515,12 @@ sec@debian:~$ sudo shutdown -h now
 | [trufflehog](https://github.com/trufflesecurity/trufflehog) |
 |            [ffuf](https://github.com/ffuf/ffuf)             |
 |        [sliver](https://github.com/BishopFox/sliver)        |
+
+关机，拍摄快照并命名为 `deploy` 
+
+```
+sec@debian:~$ sudo shutdown -h now
+```
 
 |                            server                            |
 | :----------------------------------------------------------: |

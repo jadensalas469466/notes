@@ -73,5 +73,5 @@ PS C:\Windows\system32> irm https://get.activated.win | iex
 
 Refrences
 
-- [Office%20Tool%20Plus](https://www.officetool.plus/)
-- [Office%20Tool%20Plus Documentation](https://www.officetool.plus/zh-cn/)
+- [Office Tool Plus](https://www.officetool.plus/)
+- [Office Tool Plus Documentation](https://www.officetool.plus/zh-cn/)

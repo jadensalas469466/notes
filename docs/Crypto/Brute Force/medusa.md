@@ -5,7 +5,8 @@ Medusa is a speedy, parallel, and modular, login brute-forcer. The goal is to su
 安装
 
 ```
-sudo apt install -y medusa
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y medusa
 ```
 
 ---

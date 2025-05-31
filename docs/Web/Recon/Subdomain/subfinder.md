@@ -5,7 +5,8 @@ Fast passive subdomain enumeration tool.
 安装
 
 ```
-go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
+┌──(sec@debian)-[~]
+└─$ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
 ## 2. Use
@@ -13,25 +14,29 @@ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 经典扫描
 
 ```
-subfinder -d example.com -o subfinder_example.com.txt
+┌──(sec@debian)-[~]
+└─$ subfinder -d example.com -o subfinder_example.com.txt
 ```
 
 扫描存活的 Host 并显示 IP
 
 ```
-subfinder -d example.com -active -ip -o subfinder_example.com_active_ip.txt
+┌──(sec@debian)-[~]
+└─$ subfinder -d example.com -active -ip -o subfinder_example.com_active_ip.txt
 ```
 
 查看 API 配置
 
 ```
-subfinder -ls
+┌──(sec@debian)-[~]
+└─$ subfinder -ls
 ```
 
 配置 API
 
 ```
-nano ~/.config/subfinder/provider-config.yaml
+┌──(sec@debian)-[~]
+└─$ nano ~/.config/subfinder/provider-config.yaml
 ```
 
 ---

@@ -5,7 +5,8 @@ Proxychains is a UNIX program, that hooks network-related libc functions in dyna
 安装
 
 ```
-sudo apt install -y proxychains4
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y proxychains4
 ```
 
 ## 2. Init
@@ -13,7 +14,8 @@ sudo apt install -y proxychains4
 修改配置文件
 
 ```
-sudo nano -l /etc/proxychains4.conf
+┌──(sec@debian)-[~]
+└─$ sudo nano -l /etc/proxychains4.conf
 ```
 
 ```
@@ -24,7 +26,8 @@ sudo nano -l /etc/proxychains4.conf
 测试代理
 
 ```
-proxychains4 curl ipinfo.io
+┌──(sec@debian)-[~]
+└─$ proxychains4 curl ipinfo.io
 ```
 
 ## 3. Usage
@@ -32,7 +35,8 @@ proxychains4 curl ipinfo.io
 通过代理执行程序
 
 ```
-proxychains4 <app_run>
+┌──(sec@debian)-[~]
+└─$ proxychains4 <cmd>
 ```
 
 ---

@@ -7,7 +7,8 @@ access from remote to a system.
 安装
 
 ```
-sudo apt install -y hydra
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y hydra
 ```
 
 ## 2. Usage
@@ -15,19 +16,22 @@ sudo apt install -y hydra
 basic auth
 
 ```
-hydra <host> -s <port> http-get /[protected_page] -L username.txt -P password.txt -e ns -vV
+┌──(sec@debian)-[~]
+└─$ hydra <host> -s <port> http-get /[protected_page] -L username.txt -P password.txt -e ns -vV
 ```
 
 ssh
 
 ```
-hydra <host> ssh -l root -P password.txt -t 4 -e ns -vV
+┌──(sec@debian)-[~]
+└─$ hydra <host> ssh -l root -P password.txt -t 4 -e ns -vV
 ```
 
 ftp
 
 ```
-hydra <host> ftp -L username.txt -P password.txt -e ns -vV
+┌──(sec@debian)-[~]
+└─$ hydra <host> ftp -L username.txt -P password.txt -e ns -vV
 ```
 
 ---

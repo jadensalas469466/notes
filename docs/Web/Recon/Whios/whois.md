@@ -5,7 +5,8 @@ Intelligent WHOIS client.
 安装
 
 ```
-sudo apt install -y whois
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y whois
 ```
 
 ## 2. Usage
@@ -13,7 +14,8 @@ sudo apt install -y whois
 经典查询
 
 ```
-whois example.com
+┌──(sec@debian)-[~]
+└─$ whois example.com | tee -a whois.txt
 ```
 
 ---

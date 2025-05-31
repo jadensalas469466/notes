@@ -5,7 +5,8 @@ Identify the technology stack that powers a website and explore the Web of Thing
 安装
 
 ```
-sudo apt install -y whatweb
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y whatweb
 ```
 
 ## 2. Usage
@@ -13,13 +14,15 @@ sudo apt install -y whatweb
 识别单个目标使用的 Web 服务
 
 ```
-whatweb -a 3 -v <host> --color=never > whatweb_<host>.txt
+┌──(sec@debian)-[~]
+└─$ whatweb -a 3 -v <host> --color=never > whatweb_<host>.txt
 ```
 
 识别多个目标使用的 Web 服务
 
 ```
-whatweb -a 3 -v --color=never -i host.txt > whatweb_host.txt
+┌──(sec@debian)-[~]
+└─$ whatweb -a 3 -v --color=never -i host.txt > whatweb_url.txt
 ```
 
 ---

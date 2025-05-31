@@ -11,7 +11,8 @@ Git is a free and open source distributed version control system designed to han
 ### 1.1. Debian
 
 ```
-sudo apt install -y git
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y git
 ```
 
 ### 1.2. Windows
@@ -43,7 +44,8 @@ sudo apt install -y git
 配置代理
 
 ```
-git config --global http.proxy "http://127.0.0.1:10808"
+┌──(sec@debian)-[~]
+└─$ git config --global http.proxy "http://127.0.0.1:10808"
 ```
 
 ### 2.2. Windows

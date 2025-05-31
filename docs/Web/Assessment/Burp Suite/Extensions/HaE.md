@@ -8,10 +8,6 @@
 
 ![获取官方规则库](./../../../../../images/HaE/%E8%8E%B7%E5%8F%96%E5%AE%98%E6%96%B9%E8%A7%84%E5%88%99%E5%BA%93.png)
 
-添加规则
-
-> https://github.com/jadensalas469466/tools/raw/refs/heads/main/app/other/Burp%20Suite/Extensions/HaE/HaE.zip
-
 配置文件 Config.yml 和规则文件 Rules.yml 放在固定目录下：
 
 > Linux/Mac用户的配置文件目录：~/.config/HaE/

@@ -5,7 +5,8 @@ Find, verify, and analyze leaked credentials.
 安装
 
 ```
-curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b ~/.local/bin
+┌──(sec@debian)-[~]
+└─$ curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b ~/.local/bin
 ```
 
 ## 2. Usage
@@ -15,7 +16,8 @@ curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scr
 Scan a repo for only verified secrets
 
 ```
-trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,unknown
+┌──(sec@debian)-[~]
+└─$ trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,unknown
 ```
 
 ---
