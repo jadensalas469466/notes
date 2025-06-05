@@ -1,12 +1,12 @@
 Notepad++ is a free (as in “free speech” and also as in “free beer”) source code editor and Notepad replacement that supports several languages.
 
-## 1. install
+## 1. Install
 
 安装全部组件
 
 ![安装全部组件](./../../../../../images/Notepad++/%E5%AE%89%E8%A3%85%E5%85%A8%E9%83%A8%E7%BB%84%E4%BB%B6.png)
 
-## 2. init
+## 2. Init
 
 开启自动换行
 

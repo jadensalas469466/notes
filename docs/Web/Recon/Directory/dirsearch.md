@@ -36,7 +36,7 @@ An advanced web path brute-forcer.
 
 ```
 ┌──(sec@debian)-[~]
-└─$ dirsearch -w ~/wordlist_EXT.txt -e ~/wordlist.txt -l ~/url.txt --format=plain -o ~/dirsearch_url.txt
+└─$ dirsearch -w ~/wordlist_EXT.txt -e php,phtml,asp,aspx,jsp,jspx,html,shtml,js,cgi -l ~/url.txt --format=plain -o ~/dirsearch_url.txt
 ```
 
 > `-e php,asp,jsp` , 添加指定扩展

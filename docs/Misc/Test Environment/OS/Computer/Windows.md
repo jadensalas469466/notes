@@ -97,7 +97,7 @@ BIOS
 此虚拟机的内存
 
 ```
-4096 MB
+8192 MB
 ```
 
 网络连接
@@ -329,7 +329,7 @@ PS C:\Windows\system32> irm https://get.activated.win | iex
 
 ```
 IPv4: 开
-IP 地址: 192.168.36.202
+IP 地址: 192.168.36.204
 子网掩码: 255.255.255.0
 默认网关: 192.168.36.2
 首选 DNS 服务器: 192.168.36.2
@@ -342,6 +342,10 @@ IP 地址: 192.168.36.202
 C:\Windows\System32\drivers\etc\hosts
 ```
 
+```
+192.168.36.204    windows.local
+```
+
 运行 `gpedit.msc` , 启用不显示锁屏
 
 ```
@@ -350,9 +354,9 @@ C:\Windows\System32\drivers\etc\hosts
 
 更新并设置 Windows, Edge
 
-使用 Dism++ 修改系统设置
+使用 [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) 修改系统设置
 
-使用 [Office_Tool_Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files_edit/microsoft_365/office_tool_plus) 安装 Word, Excel, PowerPoint, Visio
+使用 [Office_Tool_Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
 
 关机，快照命名为 `init` 
 
@@ -360,14 +364,14 @@ C:\Windows\System32\drivers\etc\hosts
 
 ## 5. Deploy
 
-|                            虚拟机                            |
-| :----------------------------------------------------------: |
-|               [7-Zip](https://www.7-zip.org/)                |
-|             [Geek](https://geekuninstaller.com/)             |
-|         [Notepad++](https://notepad-plus-plus.org/)          |
-| [OpenSSH](https://learn.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse?tabs=powershell) |
-|               [Laragon](https://laragon.org/)                |
-|          [DVWA](https://github.com/digininja/DVWA)           |
+|                   虚拟机                    |
+| :-----------------------------------------: |
+|       [7-Zip](https://www.7-zip.org/)       |
+|    [Geek](https://geekuninstaller.com/)     |
+| [Notepad++](https://notepad-plus-plus.org/) |
+|     [OpenSSH](https://www.openssh.com/)     |
+|       [Laragon](https://laragon.org/)       |
+|  [DVWA](https://github.com/digininja/DVWA)  |
 
 |                            笔记本                            |
 | :----------------------------------------------------------: |

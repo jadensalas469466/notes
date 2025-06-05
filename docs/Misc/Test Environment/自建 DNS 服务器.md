@@ -1,4 +1,4 @@
-搭建私人 DNS 服务器，避免国际 DNS 服务器被 [GFW](https://github.com/gfwlist/gfwlist) 污染.
+搭建私人 DNS 服务器，避免国际 DNS 服务器被 [GFW](https://en.greatfire.org/) 污染.
 
 ## 1. Deply
 

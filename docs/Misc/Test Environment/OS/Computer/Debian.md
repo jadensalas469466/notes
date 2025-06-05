@@ -97,7 +97,7 @@ C:\Users\sec\Documents\Virtual Machines\debian
 网络连接
 
 ```
-使用网络地址转换
+使用桥接网络
 ```
 
 SCSI 控制器
@@ -313,7 +313,7 @@ debian login: root
 Password: 123456
 ```
 
-查看 IP
+查看 IP 和网卡
 
 ```
 root@debian:~# ip a
@@ -394,7 +394,7 @@ root@debian:~# chsh -s $(which zsh) \
 配置网络
 
 ```
-root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable systemd-networkd --now && nano /etc/systemd/network/static.network
+root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable systemd-networkd.service --now && nano /etc/systemd/network/static.network
 ```
 
 ```
@@ -402,27 +402,25 @@ root@debian:~# systemctl disable NetworkManager --now || true && systemctl enabl
 Name=ens33
 
 [Network]
-Address=192.168.36.201/24
-Gateway=192.168.36.2
-DNS=192.168.36.2
+Address=192.168.1.203/24
+Gateway=192.168.1.1
+DNS=8.8.8.8
+DNS=8.8.4.4
 ```
 
-查看 DNS 配置
+修改 DNS 配置
 
 ```
-root@debian:~# cat /etc/resolv.conf
-```
-
-```
-domain localdomain
-search localdomain
-nameserver 192.168.36.2
+root@debian:~# echo "supersede domain-name-servers 8.8.8.8, 8.8.4.4;" >> /etc/dhcp/dhclient.conf
 ```
 
 在 `hosts` 文件添加域名映射
 
 ```
-root@debian:~# nano /etc/hosts
+root@debian:~# cat <<'EOF'>> /etc/hosts
+
+192.168.1.203     debian.local
+EOF
 ```
 
 重启
@@ -460,20 +458,16 @@ sec@debian:~$ chsh -s $(which zsh) \
 
 ```
 sec@debian:~$ sudo mkdir -p /var/www/html/exploit \
-&& sudo cp /etc/apache2/sites-available/000-default.conf \
-/etc/apache2/sites-available/000-default.conf.bak \
-&& sudo nano /etc/apache2/sites-available/000-default.conf
+&& sudo chown -R www-data:www-data /var/www/html/exploit \
+&& sudo chmod 2755 /var/www/html/exploit
 ```
 
-```
-DocumentRoot /var/www/html
-
-<Directory /var/www/html/exploit>
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-</Directory>
-```
+> 每次在 `/var/www/html/exploit/` 中加入文件后都要授予下载权限
+>
+> ```
+> ┌──(sec@debian)-[~]
+> └─# sudo chmod 644 /var/www/html/exploit/*
+> ```
 
 关机，拍摄快照并命名为 `init` 
 

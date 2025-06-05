@@ -58,7 +58,7 @@ MariaDB [(none)]> EXIT;
 
 ```
 ┌──(sec@debian)-[~]
-└─$ mysql -u sec -p
+└─$ mysql -u root -p
 ```
 
 修改密码
@@ -90,7 +90,7 @@ MariaDB [(none)]> use  sec;
 列出数据表
 
 ```
-MariaDB [sec]> show tables;
+MariaDB [root]> show tables;
 ```
 
 ### 3.1. SUBSTRING

@@ -1,6 +1,6 @@
 一个 Office 部署工具.
 
-## 1. 部署
+## 1. Deploy
 
 配置部署
 
@@ -39,7 +39,7 @@ Visio LTSC 专业版 2024 - 批量许可证
 PS C:\Windows\system32> irm https://get.activated.win | iex
 ```
 
-### 2.2. 使用 Office%20Tool%20Plus 激活
+### 2.2. 使用 Office Tool Plus 激活
 
 获取主机名
 

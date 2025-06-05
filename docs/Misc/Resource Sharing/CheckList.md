@@ -176,7 +176,15 @@ dirsearch -w ~/raft-large-files.txt -l ~/httpx_url.txt --format=plain -o ~/dirse
 raft-large-directories.txt
 
 ```
-dirsearch -w ~/raft-large-directories.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-directories.txt
+dirsearch -w ~/raft-large-words_EXT.txt -e php,phtml,asp,aspx,jsp,jspx,html,shtml,js,cgi -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-words_EXT.txt
+```
+
+raft-large-words.txt
+
+> 给没有 `.` 的行添加 `.%EXT%` : `sed '/\./! s/$/.%EXT%/' ~/raft-large-words.txt > ~/raft-large-words_EXT.txt` 
+
+```
+dirsearch -w ~/raft-large-words_EXT.txt -e php,phtml,asp,aspx,jsp,jspx,html,shtml,js,cgi -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-words_EXT.txt
 ```
 
 生成 `dirsearch_url.txt` , 删除无效 URL 并去重

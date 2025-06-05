@@ -11,7 +11,7 @@ Nmap is a utility for network exploration or security auditing.
 
 ## 2. Usage
 
-> 系统监测需要扫描一个开放端口和一个关闭端口, 指定一个不常用的端口用于系统检测如: `65535`
+> 系统监测需要扫描一个开放端口和一个关闭端口, 指定一个不常用的端口用于系统检测如: `65535` 
 
 扫描单个目标的指定端口
 

@@ -1,13 +1,13 @@
 Modern & Powerful - Easy Operation
 Productive. Portable. Fast. Effective. Awesome!
 
-## 1. install
+## 1. Install
 
 取消推荐配置
 
 ![取消推荐配置](./../../../../../images/Laragon/%E5%8F%96%E6%B6%88%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE.png)
 
-## 2. init
+## 2. Init
 
 修改协议配置
 
@@ -22,7 +22,7 @@ SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
 SSLProxyProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
 ```
 
-## 3. use
+## 3. Usage
 
 ### 3.1. 更换程序版本
 

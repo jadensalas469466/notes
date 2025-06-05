@@ -1,6 +1,6 @@
 Build and test nearly any app with the world's leading desktop hypervisor app for Windows and Linux.
 
-## 1. ready
+## 1. Step
 
 创建一个用于存储镜像的目录文件
 
@@ -14,7 +14,7 @@ C:\Users\sec\Documents\Virtual Machines\iso
 C:\Users\sec\share\VMware
 ```
 
-## 2. install
+## 2. Install
 
 安装后选择用于个人用途即可使用
 
@@ -26,7 +26,9 @@ C:\Users\sec\share\VMware
 MC60H-DWHD5-H80U9-6V85M-8280D
 ```
 
-### 2.1. 配置首选项
+## 3. Init
+
+### 3.1. 配置首选项
 
 打开首选项
 
@@ -40,7 +42,7 @@ MC60H-DWHD5-H80U9-6V85M-8280D
 
 ![配置手动代理](./../../../../images/VMware%20Workstation%20Pro/%E9%85%8D%E7%BD%AE%E6%89%8B%E5%8A%A8%E4%BB%A3%E7%90%86.png)
 
-### 2.2. 配置虚拟网络
+### 3.2. 配置虚拟网络
 
 打开虚拟网络编辑器
 
@@ -62,7 +64,7 @@ NAT 模式
 
 ![NAT 模式](./../../../../images/VMware%20Workstation%20Pro/NAT%20%E6%A8%A1%E5%BC%8F.png)
 
-## 3. use
+## 4. Usage
 
 风险文件夹
 
