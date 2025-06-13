@@ -11,6 +11,13 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 
 ## 2. Init
 
+将当前用户追加到 `docker` 用户组
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo usermod -aG docker $USER && newgrp docker
+```
+
 配置代理
 
 ```

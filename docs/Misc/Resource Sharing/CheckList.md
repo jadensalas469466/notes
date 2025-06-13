@@ -13,7 +13,8 @@
 查询域名, 获取注册信息
 
 ```
-whois 10086.cn | tee -a whois.txt
+┌──(sec@debian)-[~]
+└─$ whois 10086.cn | tee -a whois.txt
 ```
 
 ```
@@ -48,7 +49,8 @@ warmchina121.com
 subfinder
 
 ```
-subfinder -d 10086.cn -o subfinder_10086.cn.txt
+┌──(sec@debian)-[~]
+└─$ subfinder -d 10086.cn -o subfinder_10086.cn.txt
 ```
 
 Shodan
@@ -86,7 +88,8 @@ domain="10086.cn" && http.header.status_code="200" && country="CN"
 ### 2.2. DNS
 
 ```
-dig +short A 10086.cn | tee -a dig_ip.txt
+┌──(sec@debian)-[~]
+└─$ dig +short A 10086.cn | tee -a dig_ip.txt
 ```
 
 > 使用 CDN 的 IP 仅保留主 IP
@@ -100,7 +103,8 @@ dig +short A 10086.cn | tee -a dig_ip.txt
 awk 去重
 
 ```
-awk '!seen[$0]++' dig_ip.txt > dig_ip.txt.tmp && mv dig_ip.txt.tmp dig_ip.txt
+┌──(sec@debian)-[~]
+└─$ awk '!seen[$0]++' dig_ip.txt > dig_ip.txt.tmp && mv dig_ip.txt.tmp dig_ip.txt
 ```
 
 ### 2.3. Port
@@ -108,25 +112,29 @@ awk '!seen[$0]++' dig_ip.txt > dig_ip.txt.tmp && mv dig_ip.txt.tmp dig_ip.txt
 naabu Top 100 端口扫描
 
 ```
-sudo naabu -l dig_ip.txt -tp 100 -Pn -o naabu_ip-port.txt
+┌──(sec@debian)-[~]
+└─$ sudo naabu -l dig_ip.txt -tp 100 -Pn -o naabu_ip-port.txt
 ```
 
 生成 `domain-port.txt` , 避免目标配置了仅从域名访问
 
 ```
-python3 ./domain-port.py
+┌──(sec@debian)-[~]
+└─$ python3 ./domain-port.py
 ```
 
 masscan 全端口扫描
 
 ```
-sudo masscan -p- -iL dig_ip.txt -oL masscan_port.txt
+┌──(sec@debian)-[~]
+└─$ sudo masscan -p- -iL dig_ip.txt -oL masscan_port.txt
 ```
 
 awk 提取出每个 IP 的开放端口
 
 ```
-awk '/^open/ {print $4, $3}' masscan_port.txt | sort -k1,1 -k2n | \
+┌──(sec@debian)-[~]
+└─$ awk '/^open/ {print $4, $3}' masscan_port.txt | sort -k1,1 -k2n | \
 awk '{ips[$1] = (ips[$1] ? ips[$1]","$2 : $1":"$2)} END {for (ip in ips) print ips[ip]}' | tee awk_ip-port.txt
 ```
 
@@ -138,7 +146,8 @@ awk '{ips[$1] = (ips[$1] ? ips[$1]","$2 : $1":"$2)} END {for (ip in ips) print i
 nmap 指定端口识别
 
 ```
-sudo nmap -p 135,445,902,65535 -T4 -Pn -sV -O 36.160.4.7 -oN nmap_port.txt
+┌──(sec@debian)-[~]
+└─$ sudo nmap -p 135,445,902,65535 -T4 -Pn -sV -O 36.160.4.7 -oN nmap_port.txt
 ```
 
 > 指定一个不常用的端口用于系统检测如: `65535` 
@@ -148,7 +157,8 @@ sudo nmap -p 135,445,902,65535 -T4 -Pn -sV -O 36.160.4.7 -oN nmap_port.txt
 筛选出 Web 端口
 
 ```
-httpx -l domain-port.txt -o httpx_url.txt
+┌──(sec@debian)-[~]
+└─$ httpx -l domain-port.txt -o httpx_url.txt
 ```
 
 > 若一个站点同时存在 HTTP 和 HTTPS, 仅保留 HTTP 即可
@@ -158,25 +168,29 @@ httpx -l domain-port.txt -o httpx_url.txt
 默认扫描
 
 ```
-dirsearch -l ~/httpx_url.txt --format=plain -o ~/dirsearch_default.txt
+┌──(sec@debian)-[~]
+└─$ dirsearch -l ~/httpx_url.txt --format=plain -o ~/dirsearch_default.txt
 ```
 
 H2-9000低危版本.txt
 
 ```
-dirsearch -w ~/H2-9000低危版本.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_H2-9000低危版本.txt
+┌──(sec@debian)-[~]
+└─$ dirsearch -w ~/H2-9000低危版本.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_H2-9000低危版本.txt
 ```
 
 raft-large-files.txt
 
 ```
-dirsearch -w ~/raft-large-files.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-files.txt
+┌──(sec@debian)-[~]
+└─$ dirsearch -w ~/raft-large-files.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-files.txt
 ```
 
 raft-large-directories.txt
 
 ```
-dirsearch -w ~/raft-large-words_EXT.txt -e php,phtml,asp,aspx,jsp,jspx,html,shtml,js,cgi -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-words_EXT.txt
+┌──(sec@debian)-[~]
+└─$ dirsearch -w ~/raft-large-directories.txt -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-directories.txt
 ```
 
 raft-large-words.txt
@@ -184,13 +198,15 @@ raft-large-words.txt
 > 给没有 `.` 的行添加 `.%EXT%` : `sed '/\./! s/$/.%EXT%/' ~/raft-large-words.txt > ~/raft-large-words_EXT.txt` 
 
 ```
-dirsearch -w ~/raft-large-words_EXT.txt -e php,phtml,asp,aspx,jsp,jspx,html,shtml,js,cgi -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-words_EXT.txt
+┌──(sec@debian)-[~]
+└─$ dirsearch -w ~/raft-large-words_EXT.txt -e php,phtml,asp,aspx,jsp,jspx,html,shtml,js,cgi -l ~/httpx_url.txt --format=plain -o ~/dirsearch_raft-large-words_EXT.txt
 ```
 
 生成 `dirsearch_url.txt` , 删除无效 URL 并去重
 
 ```
-python3 ./dirsearch_url.py
+┌──(sec@debian)-[~]
+└─$ python3 ./dirsearch_url.py
 ```
 
 手工访问 `dirsearch_url.txt` 并整理
@@ -202,15 +218,14 @@ python3 ./dirsearch_url.py
 并剔除 dirsearch 生成的信息, 仅保留 URL
 awk '{print $3}' true.txt > true_url.txt
 
-true_url.txt 中添加跟站点: http://zhongguoshequ1990.org:80/
+true_url.txt 中添加跟站点: https://10086.cn:443/
 ```
 
 ### 2.6. Spider
 
-爬取 JS
-
 ```
-katana -list true_url.txt -jc -e cdn,private-ips -o katana_url.txt
+┌──(sec@debian)-[~]
+└─$ katana -list true_url.txt -iqp -e cdn,private-ips -ef css -o katana_url.txt
 ```
 
 ### 2.7. FingerPrints
@@ -218,45 +233,65 @@ katana -list true_url.txt -jc -e cdn,private-ips -o katana_url.txt
 whatweb
 
 ```
-whatweb -a 3 -v --color=never -i httpx_url.txt > whatweb_url.txt
+┌──(sec@debian)-[~]
+└─$ whatweb -a 3 -v --color=never -i httpx_url.txt | tee whatweb_url.txt
 ```
 
 wafw00f
 
 ```
-wafw00f -a -v -i httpx_url.txt -o wafw00f_url.txt
+┌──(sec@debian)-[~]
+└─$ wafw00f -a -v -i httpx_url.txt -o wafw00f_url.txt
 ```
 
 ## 3. Scan
 
 ```
-nikto -h httpx_url.txt -Format htm -o nikto_url.htm
+┌──(sec@debian)-[~]
+└─$ nikto -h httpx_url.txt -Format htm -o nikto_url.htm
 ```
 
-## 4. PoC
+## 4. 筛选
+
+手工访问 `dirsearch_url.txt` , `katana_url.txt` 和 `nikto_ip.htm` 中的 URL, 并将脆弱站点整合到 `url.txt` 
+
+## 5. PoC
 
 ```
-nuclei -l httpx_url.txt -o nuclei_url.txt
+┌──(sec@debian)-[~]
+└─$ nuclei -l url.txt -o nuclei_url.txt
 ```
 
-> 这里的 `url.txt` 整合了 `dirsearch_url.txt` , `katana_url.txt` 和 `nikto_ip.htm` 中脆弱的 URL
+## 6. 信息泄露
 
-## 5. 信息泄露
-
-### 5.1. 扫描仓库
+### 6.1. 扫描仓库
 
 Scan a repo for only verified secrets
 
 ```
-trufflehog git https://github.com/10086.cn/test_keys --results=verified,unknown
+┌──(sec@debian)-[~]
+└─$ trufflehog git https://github.com/10086.cn/test_keys --results=verified,unknown
 ```
 
-### 5.2. AccessKey 泄露
+### 6.2. AccessKey 泄露
 
-## 6. 关系梳理
+## 7. 手工测试
 
-在 Open Multiple URLs 中访问每个站点, 保留有业务的站点;
+访问 `url.txt` 中的每个站点
 
-手工访问每个业务板块, 使用 Xmind 绘制思维导图;
+## 8. 关系梳理
 
-手工测试每个功能点, 使用 Visio 绘制流程图.
+手工访问每个业务板块, 对每个站点进行爬虫, 使用 Xmind 绘制思维导图;
+
+```
+┌──(sec@debian)-[~]
+└─$ katana -u https://10086.cn:443/test -e cdn,private-ips -ef css -o katana_10086.cn-443-test.txt
+```
+
+手工测试每个功能点, 爬取每个业务板块的 JS, 使用 Visio 绘制流程图.
+
+```
+┌──(sec@debian)-[~]
+└─$ katana -u https://10086.cn:443/test -jc -e cdn,private-ips -em js -o katana_10086.cn-443-test-js.txt
+```
+

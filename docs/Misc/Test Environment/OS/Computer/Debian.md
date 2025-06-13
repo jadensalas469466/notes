@@ -683,7 +683,9 @@ nano -l /etc/ssh/sshd_config
 使用 root 登录 (默认禁止)
 
 ```
-33 #PermitRootLogin prohibit-password
+33 #PermitRootLogin prohibit-password # 禁止以 root 身份登录
+33 PermitRootLogin prohibit-password  # 允许 root 以密钥登录
+33 PermitRootLogin yes                # 允许 root 以密码登录
 ```
 
 密钥对登录 (默认禁止)
