@@ -508,6 +508,7 @@ sec@debian:~$ sudo shutdown -h now
 |    [nuclei](https://github.com/projectdiscovery/nuclei)     |
 | [trufflehog](https://github.com/trufflesecurity/trufflehog) |
 |            [ffuf](https://github.com/ffuf/ffuf)             |
+|        [sqlmap](https://www.kali.org/tools/sqlmap/)         |
 |        [sliver](https://github.com/BishopFox/sliver)        |
 
 关机，拍摄快照并命名为 `deploy` 

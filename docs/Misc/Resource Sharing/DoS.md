@@ -1,8 +1,20 @@
-## 时间查询DoS
+## 文件名 DoS
+
+上传文件时, 文件名没有长度限制导致 DoS;
+
+某些情况下上传处可能无法直接 DoS, 但是在 API 读取文件名时可能产生 DoS
+
+---
+
+Refrences
+
+- [profile-picture name parameter with large value lead to DoS for other users and programs on the platform](https://hackerone.com/reports/764434)
+
+## 时间查询 DoS
 
 原本的查询范围是2020年1月1日到2024年1月1日,
 
-可以抓包修改为1000年1月1日到9000年1月1日,造成拒DoS.
+可以抓包修改为1000年1月1日到9000年1月1日,造成 DoS.
 
 ## Image DoS
 

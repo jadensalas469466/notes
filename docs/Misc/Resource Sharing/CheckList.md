@@ -281,17 +281,19 @@ Scan a repo for only verified secrets
 
 ## 8. 关系梳理
 
-手工访问每个业务板块, 对每个站点进行爬虫, 使用 Xmind 绘制思维导图;
+对每个站点进行爬虫
 
 ```
 ┌──(sec@debian)-[~]
-└─$ katana -u https://10086.cn:443/test -e cdn,private-ips -ef css -o katana_10086.cn-443-test.txt
+└─$ katana -u https://10086.cn:443/test/ -iqp -e cdn,private-ips -ef css -o katana_10086.cn-443-test.txt
 ```
 
-手工测试每个功能点, 爬取每个业务板块的 JS, 使用 Visio 绘制流程图.
+保存 FindSomething 中的结果
 
 ```
-┌──(sec@debian)-[~]
-└─$ katana -u https://10086.cn:443/test -jc -e cdn,private-ips -em js -o katana_10086.cn-443-test-js.txt
+findsomething_10086.cn-443-test.txt
 ```
 
+手工访问每个业务板块, 使用 Xmind 绘制思维导图;
+
+手工测试每个功能点, 使用 Visio 绘制流程图.
