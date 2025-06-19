@@ -8,20 +8,7 @@
 中国移动所有产品和服务
 ```
 
-### 1.2. Whois
-
-查询域名, 获取注册信息
-
-```
-┌──(sec@debian)-[~]
-└─$ whois 10086.cn | tee -a whois.txt
-```
-
-```
-中国移动通信有限公司
-```
-
-### 1.3. ICP
+### 1.2. ICP
 
 [ICP/IP地址/域名信息备案管理系统](https://beian.miit.gov.cn/)
 
