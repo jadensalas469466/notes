@@ -297,7 +297,7 @@ sec
 广告 ID: 否
 ```
 
-关机，快照命名为 `install` 
+关机，拍摄快照并命名为 `install` 
 
 ## 4. Init
 
@@ -358,9 +358,9 @@ C:\Windows\System32\drivers\etc\hosts
 
 使用 [Office_Tool_Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
 
-关机，快照命名为 `init` 
+关机，拍摄快照并命名为 `init` 
 
-配置 SMB 文件共享
+台式机配置 SMB 文件共享
 
 ## 5. Deploy
 
@@ -369,6 +369,8 @@ C:\Windows\System32\drivers\etc\hosts
 |       [7-Zip](https://www.7-zip.org/)       |
 |    [Geek](https://geekuninstaller.com/)     |
 | [Notepad++](https://notepad-plus-plus.org/) |
+
+关机，拍摄快照并命名为 `deploy` 
 
 |                            笔记本                            |
 | :----------------------------------------------------------: |

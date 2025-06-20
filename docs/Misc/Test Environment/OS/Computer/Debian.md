@@ -477,7 +477,7 @@ sec@debian:~$ sudo shutdown -h now
 
 ## 5. Deploy
 
-|                             env                              |
+|                            local                             |
 | :----------------------------------------------------------: |
 | [proxy](https://github.com/jadensalas469466/tools/raw/main/other/proxy.sh) |
 |               [xray](https://xtls.github.io/)                |
@@ -488,7 +488,6 @@ sec@debian:~$ sudo shutdown -h now
 |              [Docker](https://www.docker.com/)               |
 |               [MariaDB](https://mariadb.org/)                |
 |          [DVWA](https://github.com/digininja/DVWA)           |
-| [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) |
 
 关机，拍摄快照并命名为 `deploy` 
 
@@ -505,8 +504,6 @@ sec@debian:~$ sudo shutdown -h now
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/test-environment/zi-jian-dns-fu-wu-qi) |
 | [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/test-environment/management-tools/shu-ju-guan-li/shu-ju-tong-bu/pei-zhi-syncthing-shu-ju-tong-bu) |
 |              [Tor](https://www.torproject.org/)              |
-|          [metasploit](https://www.metasploit.com/)           |
-|        [sliver](https://github.com/BishopFox/sliver)         |
 
 ## 6. Usage
 
