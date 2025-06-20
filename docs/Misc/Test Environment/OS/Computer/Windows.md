@@ -356,7 +356,7 @@ C:\Windows\System32\drivers\etc\hosts
 
 使用 [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) 修改系统设置
 
-使用 [Office_Tool_Plus](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-365/office-tool-plus) 安装 Word, Excel, PowerPoint, Visio
+使用 [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-office/office-deployment-tool) 安装 Word, Excel, PowerPoint, Visio
 
 关机，拍摄快照并命名为 `init` 
 
