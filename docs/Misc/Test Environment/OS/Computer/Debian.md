@@ -2,7 +2,7 @@ Debian is a complete Free Operating System!
 
 ## 1. Setup
 
-debian-12.11.0-amd64-DVD-1.iso
+64-bit PC torrents (DVD)
 
 ```
 https://www.debian.org/distrib/
@@ -147,7 +147,7 @@ CD/DVD
 
 ```
 使用 ISO 映像文件
-C:\Users\sec\Documents\Virtual Machines\iso\debian-12.10.0-amd64-DVD-1.iso
+C:\Users\sec\Documents\Virtual Machines\iso\debian-amd64-DVD-1.iso
 ```
 
 拍摄快照并命名为 `config` 
@@ -487,28 +487,8 @@ sec@debian:~$ sudo shutdown -h now
 |                    [Go](https://go.dev/)                     |
 |              [Docker](https://www.docker.com/)               |
 |               [MariaDB](https://mariadb.org/)                |
-
-|                            tools                            |
-| :---------------------------------------------------------: |
-|         [whois](https://www.kali.org/tools/whois/)          |
-|       [masscan](https://www.kali.org/tools/masscan/)        |
-|          [nmap](https://www.kali.org/tools/nmap/)           |
-|     [dirsearch](https://www.kali.org/tools/dirsearch/)      |
-|       [whatweb](https://www.kali.org/tools/whatweb/)        |
-|       [wafw00f](https://www.kali.org/tools/wafw00f/)        |
-|         [nikto](https://www.kali.org/tools/nikto/)          |
-|         [hydra](https://www.kali.org/tools/hydra/)          |
-|        [medusa](https://www.kali.org/tools/medusa/)         |
-|          [metasploit](https://www.metasploit.com/)          |
-| [subfinder](https://github.com/projectdiscovery/subfinder)  |
-|     [naabu](https://github.com/projectdiscovery/naabu)      |
-|     [httpx](https://github.com/projectdiscovery/httpx)      |
-|    [katana](https://github.com/projectdiscovery/katana)     |
-|   [mapcidr](https://github.com/projectdiscovery/mapcidr)    |
-|    [nuclei](https://github.com/projectdiscovery/nuclei)     |
-| [trufflehog](https://github.com/trufflesecurity/trufflehog) |
-|            [ffuf](https://github.com/ffuf/ffuf)             |
-|        [sliver](https://github.com/BishopFox/sliver)        |
+|          [DVWA](https://github.com/digininja/DVWA)           |
+| [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) |
 
 关机，拍摄快照并命名为 `deploy` 
 

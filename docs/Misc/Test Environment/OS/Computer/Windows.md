@@ -14,7 +14,7 @@ VMware Workstation Pro
 https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 ```
 
-目录
+Directory
 
 ```
 C:\Users\sec\Documents\Virtual Machines\windows
@@ -97,7 +97,7 @@ BIOS
 此虚拟机的内存
 
 ```
-8192 MB
+4096 MB
 ```
 
 网络连接
@@ -369,9 +369,6 @@ C:\Windows\System32\drivers\etc\hosts
 |       [7-Zip](https://www.7-zip.org/)       |
 |    [Geek](https://geekuninstaller.com/)     |
 | [Notepad++](https://notepad-plus-plus.org/) |
-|     [OpenSSH](https://www.openssh.com/)     |
-|       [Laragon](https://laragon.org/)       |
-|  [DVWA](https://github.com/digininja/DVWA)  |
 
 |                            笔记本                            |
 | :----------------------------------------------------------: |

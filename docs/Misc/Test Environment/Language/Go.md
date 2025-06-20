@@ -6,7 +6,7 @@ Build simple, secure, scalable systems with Go.
 
 ```
 ┌──(sec@debian)-[~]
-└─$ curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/go_install.sh | sh
+└─$ curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/go_install.sh | bash
 ```
 
 加载环境变量
