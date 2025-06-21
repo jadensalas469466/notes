@@ -1,6 +1,6 @@
-## 1. 安装
+## 1. Install
 
-安装shodan
+安装
 
 ```
 ┌──(root@debian)-[~]
@@ -21,7 +21,7 @@
 └─# source ~/.zshrc
 ```
 
-## 2. 初始化
+## 2. Init
 
 添加API
 
@@ -30,7 +30,7 @@
 └─# shodan init <api_key>
 ```
 
-## 3. 使用
+## 3. Usage
 
 ```
 shodan search hostname:10086.cn country:CN # hostname="10086.cn"&&country="CN"

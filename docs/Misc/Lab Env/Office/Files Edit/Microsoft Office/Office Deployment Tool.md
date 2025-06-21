@@ -42,7 +42,7 @@ PowerPoint
 Languages
 
 ```
-Chinese (Simplified, China)
+English (United States)
 ```
 
 Installation
