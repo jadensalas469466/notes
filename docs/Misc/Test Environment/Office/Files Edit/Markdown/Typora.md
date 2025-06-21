@@ -1,6 +1,6 @@
 A minimal Markdown editor and reader.
 
-## 1. 初始化
+## 1. Init
 
 Files
 

@@ -420,8 +420,6 @@ C:\Windows\System32\drivers\etc\hosts
 | [VMware Workstation Pro](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 |   [WindowsTerminal](https://github.com/microsoft/terminal)   |
 |               [WeChat](https://weixin.qq.com/)               |
-|                 [Xmind](https://xmind.app/)                  |
-|                 [Yakit](https://yaklang.io/)                 |
 
 ## 6. Usage
 

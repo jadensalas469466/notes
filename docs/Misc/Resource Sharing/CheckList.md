@@ -45,6 +45,4 @@ fofa查询 domain="10086.cn" && status_code="200" && country="CN" && cert.is_val
 
 ## 4. 手工测试
 
-手工访问每个业务板块, 使用 Xmind 绘制思维导图;
-
-手工测试每个功能点, 使用 Visio 绘制流程图.
+手工访问每个业务板块, 记录已经测试的业务并使用 Visio 绘制流程图.
