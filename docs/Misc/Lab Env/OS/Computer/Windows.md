@@ -419,7 +419,6 @@ C:\Windows\System32\drivers\etc\hosts
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware Workstation Pro](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 |   [WindowsTerminal](https://github.com/microsoft/terminal)   |
-|               [WeChat](https://weixin.qq.com/)               |
 
 ## 6. Usage
 

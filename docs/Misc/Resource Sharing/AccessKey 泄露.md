@@ -7,7 +7,7 @@ AccessKey 泄露会对该账号下所有资源的安全带来威胁.
 Google
 
 ```
-site:"example.com" "AccessKeyID" OR "AccessKeySecret"
+site:"example.com" ("AccessKeyID" OR "AccessKeySecret")
 ```
 
 HUNTER

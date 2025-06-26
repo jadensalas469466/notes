@@ -1,4 +1,4 @@
-攻击者在网页中注入恶意脚本，当用户访问页面时，脚本在用户浏览器中执行，从而达到窃取数据、模拟操作等目的.
+Cross-site scripting (also known as XSS) is a web security vulnerability that allows an attacker to compromise the interactions that users have with a vulnerable application.
 
 > 只可作用于触发 XSS 的网站, 如: 
 >
