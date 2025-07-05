@@ -1,12 +1,4 @@
-## 1. 安装
-
-安装
-
-```
-scoop install -y sdelete
-```
-
-## 2. 使用
+## 1. Usage
 
 默认删除
 
@@ -26,3 +18,8 @@ sdelete -p 3 file
 sdelete -z C:
 ```
 
+---
+
+Refrences
+
+- [SDelete](https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete)

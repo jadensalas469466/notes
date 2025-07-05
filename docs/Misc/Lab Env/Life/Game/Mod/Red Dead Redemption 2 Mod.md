@@ -1,5 +1,3 @@
-若存在存档丢失，将 `C:\Users\sec\Documents\Rockstar Games\Red Dead Redemption 2\Profiles` 中的存档删除，重启游戏后在 Rockstar Games Launcher 中开启云存档即可
-
 登录 [Nexus Mods](https://www.nexusmods.com/)
 
 下载 `Mod Loader` 和 `ScriptHookRDR2 V2` 
@@ -22,8 +20,8 @@
 >
 >  `Rampage Chinese - Simplified.zip` 
 
-1. 将 `Mod Loader` 中的 `dinput8.dll` 
-    `ScriptHookRDR2 V2` 中的 `sdk` 和 `ScriptHookRDR2.dll` 
+1. 将 `Mod Loader` 中的 `dinput8.dll` ;
+    `ScriptHookRDR2 V2` 中的 `sdk` 和 `ScriptHookRDR2.dll` ;
     `Rampage` 中的 `RampageFiles` 和 `Rampage.asi` 复制到
 
    ```

