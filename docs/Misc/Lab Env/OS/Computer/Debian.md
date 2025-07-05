@@ -479,7 +479,7 @@ sec@debian:~$ sudo shutdown -h now
 
 |                            local                             |
 | :----------------------------------------------------------: |
-| [proxy](https://github.com/jadensalas469466/tools/raw/main/other/proxy.sh) |
+| [proxy](https://github.com/jadensalas469466/scripts/blob/main/proxy_install.sh) |
 |               [xray](https://xtls.github.io/)                |
 | [proxychains-ng](https://www.kali.org/tools/proxychains-ng/) |
 |                 [Git](https://git-scm.com/)                  |
@@ -499,12 +499,12 @@ sec@debian:~$ sudo shutdown -h now
 
 |                            server                            |
 | :----------------------------------------------------------: |
-| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/test_environment/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
+| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
 |              [ufw](https://github.com/jbq/ufw)               |
 |       [fail2ban](https://github.com/fail2ban/fail2ban)       |
-| [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
-| [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/test-environment/zi-jian-dns-fu-wu-qi) |
-| [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/test-environment/management-tools/shu-ju-guan-li/shu-ju-tong-bu/pei-zhi-syncthing-shu-ju-tong-bu) |
+| [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
+| [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
+| [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
 |              [Tor](https://www.torproject.org/)              |
 
 ## 6. Usage

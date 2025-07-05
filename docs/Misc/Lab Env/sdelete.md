@@ -1,3 +1,5 @@
+SDelete implements the Department of Defense clearing and sanitizing standard DOD 5220.22-M, to give you confidence that once deleted with *SDelete*, your file data is gone forever.
+
 ## 1. Usage
 
 默认删除
