@@ -117,3 +117,10 @@ This is a test text.                 # 正常字符
 为避免再次误触还应该关闭输入法设置的 `全半角切换` 快捷键
 
 ![为避免再次误触还应该关闭输入法设置的 `全半角切换` 快捷键](./../../../images/Issues%20of%20Windows/%E4%B8%BA%E9%81%BF%E5%85%8D%E5%86%8D%E6%AC%A1%E8%AF%AF%E8%A7%A6%E8%BF%98%E5%BA%94%E8%AF%A5%E5%85%B3%E9%97%AD%E8%BE%93%E5%85%A5%E6%B3%95%E8%AE%BE%E7%BD%AE%E7%9A%84%20%60%E5%85%A8%E5%8D%8A%E8%A7%92%E5%88%87%E6%8D%A2%60%20%E5%BF%AB%E6%8D%B7%E9%94%AE.png)
+
+## 6. Windows11 跳过联网
+
+1. 断掉网络设备
+2. 在安装界面按 Shift+F10 调出 CMD
+3. 执行 `oobe\bypassnro`
+4. 重新进入安装界面后可跳过联网
