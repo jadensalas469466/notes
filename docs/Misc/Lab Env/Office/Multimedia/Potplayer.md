@@ -1,6 +1,6 @@
 Provides the maximum performance with the minumum resource using DXVA, CUDA, QuickSync.
 
-## 1. 安装
+## 1. Install
 
 关联所有格式
 

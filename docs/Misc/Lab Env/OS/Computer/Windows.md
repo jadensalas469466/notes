@@ -405,7 +405,6 @@ C:\Windows\System32\drivers\etc\hosts
 |         [Notepad++](https://notepad-plus-plus.org/)          |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
-|              [Potplayer](https://potplayer.tv/)              |
 |           [Proxifier](https://www.proxifier.com/)            |
 |         [qBittorrent](https://www.qbittorrent.org/)          |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
@@ -415,6 +414,7 @@ C:\Windows\System32\drivers\etc\hosts
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |
 |      [VeraCrypt](https://www.veracrypt.fr/en/Home.html)      |
+|        [VLC media player](https://www.videolan.org/)         |
 |                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 | [VMware Workstation Pro](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
