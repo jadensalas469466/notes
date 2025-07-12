@@ -45,35 +45,10 @@ Languages
 English (United States)
 ```
 
-Installation
-
-```
-Office Content Delivery Network (CDN)
-Show installation to user
-```
-
-Update and upgrade
-
-```
-Office Content Delivery Network (CDN)
-Automatically check for updates
-Uninstall any MSI versions of Office, including Visio and Project
-Uninstall Visio
-Uninstall Project
-Uninstall SharePoint Designer
-Uninstall InfoPath
-```
-
 Licensing and activation
 
 ```
 Automatically accept the license terms
-```
-
-Product key
-
-```
-KMS
 ```
 
 ### 1.2. 导出配置
@@ -104,7 +79,7 @@ PS C:\Users\sec\Downloads> .\setup.exe /configure .\Configuration.xml
 
 ## 3. Activation
 
-使用 [Microsoft Activation Scripts (MAS)](https://massgrave.dev/) 激活
+Activation
 
 ```
 PS C:\Users\sec\Downloads> irm https://get.activated.win | iex
@@ -116,3 +91,4 @@ Refrences
 
 - [Overview of the Office Customization Tool](https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/overview-office-customization-tool)
 - [Overview of the Office Deployment Tool](https://learn.microsoft.com/en-us/microsoft-365-apps/deploy/overview-office-deployment-tool)
+

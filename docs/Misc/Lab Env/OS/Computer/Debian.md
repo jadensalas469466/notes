@@ -2,159 +2,40 @@ Debian is a complete Free Operating System!
 
 ## 1. Setup
 
-64-bit PC torrents (DVD)
-
-```
-https://www.debian.org/distrib/
-```
-
-VMware Workstation Pro
-
-```
-https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
-```
-
-Directory
-
-```
-C:\Users\sec\Documents\Virtual Machines\debian
-```
+- [VirtualBox](https://www.virtualbox.org/)
+- [Debian](https://www.debian.org/)
 
 ## 2. Config
 
-移动镜像文件到 `iso` 文件夹
+Move the image file to the directory
 
 ```
-C:\Users\sec\Documents\Virtual Machines\iso
+C:\Users\sec\VirtualBox VMs\iso
 ```
 
-VMware Workstation Pro
+Create Virtual Machine
 
 ```
-创建新的虚拟机
+> Name and Operating System
+Name: debian
+Folder: C:\Users\sec\VirtualBox VMs
+ISO lmage: C:\Users\sec\VirtualBox VMs\iso\debian-amd64-DVD-1.iso
+Version: Debian (64-bit)
+☑ Skip Unattended Installation
+
+> Hardware
+Base Memory: 4096 MB
+Processors: 1 CPU
+
+> Hard Disk
+Hard Disk File Size: 64.00GB
 ```
 
-您希望使用什么类型的配置？
-
-```
-自定义
-```
-
-硬件兼容性
-
-```
-Workstation 17.5 or later
-```
-
-安装来源
-
-```
-稍后安装操作系统
-```
-
-客户机操作系统
-
-```
-Linux
-```
-
-版本
-
-```
-Debian 12.x 64 位
-```
-
-虚拟机名称
-
-```
-debian
-```
-
-位置
-
-```
-C:\Users\sec\Documents\Virtual Machines\debian
-```
-
-处理器数量
-
-```
-1
-```
-
-每个处理器的内核数量
-
-```
-2
-```
-
-此虚拟机的内存
-
-```
-4096 MB
-```
-
-网络连接
-
-```
-使用桥接网络
-```
-
-SCSI 控制器
-
-```
-LSI Logic
-```
-
-虚拟磁盘类型
-
-```
-SCSI
-```
-
-磁盘
-
-```
-创建新虚拟磁盘
-```
-
-最大磁盘大小
-
-```
-64.0 GB
-```
-
-```
-将虚拟磁盘存储为单个文件
-```
-
-磁盘文件
-
-```
-C:\Users\sec\Documents\Virtual Machines\debian\debian.vmdk
-```
-
-编辑虚拟机设置
-
-处理器
-
-```
-虚拟化引擎
-虚拟化 Intel VT-x/EPT 或 AMD-V/RVI
-```
-
-CD/DVD
-
-```
-使用 ISO 映像文件
-C:\Users\sec\Documents\Virtual Machines\iso\debian-amd64-DVD-1.iso
-```
-
-拍摄快照并命名为 `config` 
+Take Snapshot: `config` 
 
 ## 3. Install
 
-开启此虚拟机进行安装
+Start the VM to install
 
 Debian GNU/Linux installer menu
 
@@ -229,7 +110,7 @@ Re-enter password to verify:
 Configure the clock
 
 ```
-Select a location in your time zone:
+Select your time zone:
 Eastern
 ```
 
@@ -296,7 +177,7 @@ Install the GRUB boot loader to your primary drive?
 
 ```
 Device for boot loader installation:
-/dev/
+Default
 ```
 
 Finish the installation
@@ -306,20 +187,14 @@ Please choose <Continue> to reboot.
 <Continue>
 ```
 
-登录
+Login
 
 ```
 debian login: root
 Password: 123456
 ```
 
-查看 IP 和网卡
-
-```
-root@debian:~# ip a
-```
-
-关机，拍摄快照并命名为 `install` 
+Take Snapshot: `install` 
 
 ```
 root@debian:~# shutdown -h now
@@ -327,19 +202,25 @@ root@debian:~# shutdown -h now
 
 ## 4. Init
 
-启动虚拟机，使用 SSH 登录 `sec` 用户
+Port Forwarding Rules
+
+| Name | Host Port | Guest Port |
+| ---- | --------- | ---------- |
+| SSH  | 49222     | 22         |
+
+Start the VM and SSH to `sec` 
 
 ```
-PS C:\Users\sec> ssh sec@<ip>
+PS C:\Users\sec> ssh -p 49222 sec@127.0.0.1
 ```
 
-切换到 `root` 用户
+Use `su` switch to `root` 
 
 ```
 sec@debian:~$ su - root
 ```
 
-配置 `apt` 源
+Configuring Apt Sources
 
 ```
 root@debian:~# nano /etc/apt/sources.list
@@ -351,14 +232,14 @@ deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib n
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
 ```
 
-更新系统
+Update the system
 
 ```
 root@debian:~# apt update && apt full-upgrade \
 && apt clean && apt autoremove --purge
 ```
 
-安装常用工具
+Install common tools
 
 ```
 root@debian:~# apt install -y vim curl passwd sudo tree unzip apache2 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
@@ -367,7 +248,7 @@ zsh zsh-syntax-highlighting zsh-autosuggestions \
 && usermod -aG sudo sec
 ```
 
-配置 SSH 稳定连接
+Keep SSH session alive
 
 ```
 root@debian:~# nano -l /etc/ssh/sshd_config
@@ -378,83 +259,62 @@ root@debian:~# nano -l /etc/ssh/sshd_config
 100 ClientAliveCountMax 60
 ```
 
-重启 SSH 服务
+Restart SSH service
 
 ```
 root@debian:~# systemctl restart ssh.service
 ```
 
-配置 Zsh
+Configuring Zsh
 
 ```
 root@debian:~# chsh -s $(which zsh) \
 && curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
-配置网络
+Configuring Network
 
 ```
-root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable systemd-networkd.service --now && nano /etc/systemd/network/static.network
+root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable networking.service --now
+```
+
+Change DNS servers
+
+```
+root@debian:~# nano /etc/resolv.conf
 ```
 
 ```
-[Match]
-Name=ens33
-
-[Network]
-Address=192.168.1.203/24
-Gateway=192.168.1.1
-DNS=8.8.8.8
-DNS=8.8.4.4
+nameserver 8.8.8.8
+nameserver 8.8.4.4
 ```
 
-修改 DNS 配置
-
-```
-root@debian:~# echo "supersede domain-name-servers 8.8.8.8, 8.8.4.4;" >> /etc/dhcp/dhclient.conf
-```
-
-在 `hosts` 文件添加域名映射
-
-```
-root@debian:~# cat <<'EOF'>> /etc/hosts
-
-192.168.1.203     debian.local
-EOF
-```
-
-重启
+Restart
 
 ```
 root@debian:~# shutdown -r now
 ```
 
-在 Powershell 中删除 SSH 连接缓存
+Wait for the VM to start up, then reconnect SSH
 
 ```
-PS C:\Users\sec> ssh-keygen -R <ip>
+PS C:\Users\sec> ssh -p 49222 sec@127.0.0.1
 ```
 
-等待虚拟机启动, 重新连接 SSH
-
-```
-PS C:\Users\sec> ssh sec@debian.local
-```
-
-测试网络
+Network testing
 
 ```
 sec@debian:~$ ping mit.edu -c 3
 ```
 
-配置 Zsh
+Configuring Zsh
 
 ```
 sec@debian:~$ chsh -s $(which zsh) \
 && curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
-创建目录并配置权限
+Create directory
 
 ```
 sec@debian:~$ sudo mkdir -p /var/www/html/exploit \
@@ -462,14 +322,14 @@ sec@debian:~$ sudo mkdir -p /var/www/html/exploit \
 && sudo chmod 2755 /var/www/html/exploit
 ```
 
-> 每次在 `/var/www/html/exploit/` 中加入文件后都要授予下载权限
+> Grant download permissions every time a file is added to this directory
 >
 > ```
 > ┌──(sec@debian)-[~]
 > └─# sudo chmod 644 /var/www/html/exploit/*
 > ```
 
-关机，拍摄快照并命名为 `init` 
+Take Snapshot: `init` 
 
 ```
 sec@debian:~$ sudo shutdown -h now
@@ -489,10 +349,11 @@ sec@debian:~$ sudo shutdown -h now
 |               [MariaDB](https://mariadb.org/)                |
 |          [DVWA](https://github.com/digininja/DVWA)           |
 
-关机，拍摄快照并命名为 `deploy` 
+Take Snapshot: `deploy` 
 
 ```
-sec@debian:~$ sudo shutdown -h now
+┌──(sec@debian)-[~]
+└─$ sudo shutdown -h now
 ```
 
 > 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
@@ -683,6 +544,44 @@ nano -l /etc/ssh/sshd_config
 
 ```
 root@debian:~# systemctl restart ssh.service
+```
+
+### 6.8. 配置网络
+
+查看网络接口
+
+```
+root@debian:~# ip link
+```
+
+为指定接口配置静态 IP
+
+```
+root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable networking.service --now && nano -l /etc/network/interfaces
+```
+
+```
+10  # The primary network interface
+11  allow-hotplug ens33
+12  # iface ens33 inet dhcp
+auto ens33
+iface ens33 inet static
+    address <os-ip>
+    gateway 192.168.1.1
+    netmask 255.255.255.0
+18  # This is an autoconfigured IPv6 interface
+19  # iface ens33 inet6 auto
+```
+
+配置 DNS 服务器
+
+```
+root@debian:~# nano /etc/resolv.conf
+```
+
+```
+nameserver 8.8.8.8
+nameserver 8.8.4.4
 ```
 
 ---

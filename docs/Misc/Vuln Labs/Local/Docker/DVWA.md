@@ -59,15 +59,21 @@ Damn Vulnerable Web Application (DVWA).
 └─$ docker compose up -d
 ```
 
+Port Forwarding Rules
+
+| Name | Host Port | Guest Port |
+| ---- | --------- | ---------- |
+| DVWA | 49180     | 4280       |
+
 点击 `Create / Reset Database` 初始化
 
-> http://debian.local:4280/setup.php
+> http://127.0.0.1:49180/setup.php
 
 ## 4. Usage
 
-登录 `admin:password`
+登录 `admin:password` 
 
-> http://debian.local:4280/login.php
+> http://127.0.0.1:49180/login.php
 
 修改安全级别
 
@@ -75,7 +81,7 @@ Damn Vulnerable Web Application (DVWA).
 
 ### 4.1. csrf
 
-> http://debian.local:4280/vulnerabilities/csrf/
+> http://127.0.0.1:49180/vulnerabilities/csrf/
 
 > 1. 攻击者首先会在自己的个人账户上获取敏感操作的请求包，如：修改密码，修改邮箱，修改手机号，账号删除，转账等操作
 > 2. 之后会利用这些请求包构造一个网页形式的 poc，将这个 poc 发送到公网
@@ -147,7 +153,7 @@ Damn Vulnerable Web Application (DVWA).
     <meta name="referrer" content="unsafe-url">
 </head>
 <body>
-    <a href="http://debian.local:4280/vulnerabilities/csrf/?password_new=123456&password_conf=123456&Change=Change" referrer="unsafe-url">
+    <a href="http://127.0.0.1:49180/vulnerabilities/csrf/?password_new=123456&password_conf=123456&Change=Change" referrer="unsafe-url">
         csrf
     </a>
 </body>

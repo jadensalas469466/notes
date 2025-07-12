@@ -11,7 +11,7 @@ Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. 
 
 ## 2. Init
 
-将 [v2ray-agent](https://github.com/mack-a/v2ray-agent) 生成的客户端配置文件写入 `config.json`
+将 [v2ray-agent](https://github.com/mack-a/v2ray-agent) 生成的客户端配置文件写入 `config.json` 
 
 ```
 ┌──(sec@debian)-[~]

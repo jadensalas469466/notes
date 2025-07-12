@@ -2,386 +2,221 @@ Windows is a product line of proprietary graphical operating systems developed a
 
 ## 1. Step
 
-Windows 10 Enterprise LTSC 2021
-
-```
-https://massgrave.dev/windows_ltsc_links
-```
-
-VMware Workstation Pro
-
-```
-https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
-```
-
-Directory
-
-```
-C:\Users\sec\Documents\Virtual Machines\windows
-```
+- [VirtualBox](https://www.virtualbox.org/)
+- [Windows 10 IoT Enterprise LTSC 2021](https://massgrave.dev/windows_ltsc_links)
 
 ## 2. Config
 
-移动镜像文件到 `iso` 文件夹
+Move the image file to the directory
 
 ```
-C:\Users\sec\Documents\Virtual Machines\iso
+C:\Users\sec\VirtualBox VMs\iso
 ```
 
-VMware Workstation Pro
+Create Virtual Machine
 
 ```
-创建新的虚拟机
+> Name and Operating System
+Name: windows
+Folder: C:\Users\sec\VirtualBox VMs
+ISO lmage: C:\Users\sec\VirtualBox VMs\iso\en-us_windows_10_enterprise_ltsc_2021_x64_dvd.iso
+Version: Windows 10 (64-bit)
+☑ Skip Unattended Installation
+
+> Hardware
+Base Memory: 8192 MB
+Processors: 1 CPU
+
+> Hard Disk
+Hard Disk File Size: 64.00GB
 ```
 
-您希望使用什么类型的配置？
-
-```
-自定义
-```
-
-硬件兼容性
-
-```
-Workstation 17.5 or later
-```
-
-安装来源
-
-```
-稍后安装操作系统
-```
-
-客户机操作系统
-
-```
-Microsoft Windows
-```
-
-版本
-
-```
-Windows 10 x64
-```
-
-虚拟机名称
-
-```
-windows
-```
-
-位置
-
-```
-C:\Users\sec\Documents\Virtual Machines\windows
-```
-
-固件类型
-
-```
-BIOS
-```
-
-处理器数量
-
-```
-1
-```
-
-每个处理器的内核数量
-
-```
-2
-```
-
-此虚拟机的内存
-
-```
-4096 MB
-```
-
-网络连接
-
-```
-使用网络地址转换
-```
-
-SCSI 控制器
-
-```
-LSI Logic SAS
-```
-
-虚拟磁盘类型
-
-```
-NVMe
-```
-
-磁盘
-
-```
-创建新虚拟磁盘
-```
-
-最大磁盘大小
-
-```
-64.0 GB
-```
-
-```
-将虚拟磁盘存储为单个文件
-```
-
-磁盘文件
-
-```
-C:\Users\sec\Documents\Virtual Machines\windows\windows.vmdk
-```
-
-编辑虚拟机设置
-
-处理器
-
-```
-虚拟化引擎
-虚拟化 Intel VT-x/EPT 或 AMD-V/RVI
-```
-
-CD/DVD
-
-```
-使用 ISO 映像文件
-C:\Users\sec\Documents\Virtual Machines\iso\zh-cn_windows_10_enterprise_ltsc_2021_x64_dvd_033b7312.iso
-```
-
-显示
-
-```
-3D 图形
-关闭加速 3D 图形
-```
-
-文件夹共享
-
-```
-总是启用
-```
-
-```
-在 Windows 客户机中映射为网络驱动器
-```
-
-添加共享文件夹
-
-```
-主机路径
-C:\Users\sec\share\VMware
-名称
-VMware
-```
-
-其他属性
-
-```
-启用此共享
-只读
-```
-
-拍摄快照并命名为 `config` 
+Take Snapshot: `config` 
 
 ## 3. Install
 
-输入语言和其他首选项
+Windows Setup
 
 ```
-要安装的语言: 中文 (简体, 中国)
-时间和货币格式: 中文 (简体, 中国)
-键盘和输入方法: 微软拼音
+Language to install: English (United States)
+Time and currency format: English (United States)
+Keyboard or input method: US
 ```
 
-现在安装
+Install now
 
-适用的声明和许可条款
+I don't have a product key
 
-```
-我接受许可条款
-```
-
-你想执行哪种类型的安装
+Select the operating system you want to install
 
 ```
-自定义: 仅安装 Windows
+Windows 10 Enterprise LTSC
 ```
 
-您想将 Windows 安装在哪里?
+Applicable notices and license terms
 
 ```
-驱动器 0 未分配的空间
+☑ I accept the license terms
 ```
 
-让我们先从区域设置开始。这样对吧?
+Which type of installation do you want?
 
 ```
-中国
+Custom: Install Windows only
 ```
 
-这种键盘布局是否合适?
+Where do you want to install Windows?
 
 ```
-微软拼音
+Drive 0 Unallocated Space
 ```
 
-是否要添加第二种键盘布局?
+Let's start with reqion. Is this right?
 
 ```
-添加布局
+United States
 ```
 
-你的第二个键盘布局想使用哪种语言?
+Is this the right keyboard layout?
 
 ```
-英语(美国)
+US
 ```
 
-你要使用哪个键盘布局?
+Want to add a second keyboard layout?
 
 ```
-美式键盘
+Add layout
 ```
 
-通过 Microsoft 登录
+What language do you want to use for your second keyboard layout?
 
 ```
-改为域加入
+Chinese (Simplified, China)
 ```
 
-谁将会使用这台电脑?
+Which keyboard layout would you like to use?
+
+```
+Microsoft Pinyin
+```
+
+Sign in with Microsoft
+
+```
+Domain join instead
+```
+
+Who's going to use this PC?
 
 ```
 sec
 ```
 
-创建容易记住的密码
+Create a super memorable password
 
 ```
 123456
 ```
 
-确认你的密码
+Confirm your password
 
 ```
 123456
 ```
 
-为此帐户创建安全问题
+Create security questions for this account
 
 ```
-你第一个宠物的名字是什么?
+What's the name of the city where you were born?
 sec
-你出生城市的名称是什么?
+What's the name of the city where your parents met?
 sec
-你的母校名称是什么?
+What's the name of the first school you attended?
 sec
 ```
 
-为你的设备选择隐私设置
+Choose privacy settings for your device
 
 ```
-位置: 否
-诊断数据: 否
-量身定制的体验: 否
-查找我的设备: 否
-墨迹书写和键入: 否
-广告 ID: 否
+Location: No
+Diagnostic data: No
+Tailored experiences: No
+Find my device: No
+Inking & typing: No
+Advertising ID: No
 ```
 
-关机，拍摄快照并命名为 `install` 
+Shut down, Take Snapshot: `install` 
 
 ## 4. Init
 
-安装驱动并更新
+Install drivers and update the system
 
-[配置电源选项](https://keithpeck177271.gitbook.io/notes/misc/wen-ti-ji-jin/issues-of-windows#id-2-tui-jian-dian-yuan-she-zhi)
+[Power & sleep](https://keithpeck177271.gitbook.io/notes/misc/wen-ti-ji-jin/issues-of-windows#id-2-tui-jian-dian-yuan-she-zhi)
 
-以管理员权限运行 PowerShell
+Run PowerShell as administrator
 
-禁用快速启动和休眠功能
+Disable hibernation
 
 ```powershell
 PS C:\Windows\system32> powercfg -h off
 ```
 
-使用 [Microsoft Activation Scripts (MAS)](https://massgrave.dev/) 激活
+Activation
 
 ```powershell
 PS C:\Windows\system32> irm https://get.activated.win | iex
 ```
 
-网络配置文件
+Network profile
 
 ```
-专用
+Private
 ```
 
-网络设置
+Change adapter options
 
 ```
-IPv4: 开
-IP 地址: 192.168.36.204
-子网掩码: 255.255.255.0
-默认网关: 192.168.36.2
-首选 DNS 服务器: 192.168.36.2
-备用 DNS 服务器: 
+Preferred DNS server: 8.8.8.8
+Alternate DNS server: 8.8.4.4
 ```
 
-在 `hosts` 文件添加域名映射
-
-```shell
-C:\Windows\System32\drivers\etc\hosts
-```
+Run `gpedit.msc` , Do not display the lock screen
 
 ```
-192.168.36.204    windows.local
+Computer Configuration > Administrative Templates > Control Panel > Personalization > Do not display the lock screen > Enabled
 ```
 
-运行 `gpedit.msc` , 启用不显示锁屏
+Update and configure Windows and Edge
 
-```
-计算机配置 > 管理模板 > 控制面板 > 个性化 > 不显示锁屏 > 已启用
-```
+Use [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) to change system settings
 
-更新并设置 Windows, Edge
+Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-edit/microsoft-office/office-deployment-tool) to install Word, Excel, PowerPoint, Visio
 
-使用 [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) 修改系统设置
+Shut down, Take Snapshot: `init` 
 
-使用 [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/test-environment/office/files-edit/microsoft-office/office-deployment-tool) 安装 Word, Excel, PowerPoint, Visio
-
-关机，拍摄快照并命名为 `init` 
-
-台式机配置 SMB 文件共享
+Desktop needs to configure SMB
 
 ## 5. Deploy
 
-|                   虚拟机                    |
-| :-----------------------------------------: |
-|       [7-Zip](https://www.7-zip.org/)       |
-|    [Geek](https://geekuninstaller.com/)     |
-| [Notepad++](https://notepad-plus-plus.org/) |
+|                  VM                  |
+| :----------------------------------: |
+|   [7-Zip](https://www.7-zip.org/)    |
+| [Geek](https://geekuninstaller.com/) |
 
-关机，拍摄快照并命名为 `deploy` 
+Shut down, Take Snapshot: `deploy` 
 
-|                            笔记本                            |
+|                            Laptop                            |
 | :----------------------------------------------------------: |
 | [Lenovo System Update](https://www.lenovo.com/us/en/software/lenovo-system-update) |
 
-|                            台式机                            |
+|                           Desktop                            |
 | :----------------------------------------------------------: |
 | [AMD Software꞉ Adrenalin Edition](https://www.amd.com/zh-cn/support/download/drivers.html) |
 | [Twinkle Tray](https://github.com/xanderfrangos/twinkle-tray) |
 
-|                            物理机                            |
+|                              PM                              |
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
 |            [Anytxt Searcher](https://anytxt.net/)            |
