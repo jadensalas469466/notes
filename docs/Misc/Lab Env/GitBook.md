@@ -55,6 +55,14 @@ Initial sync
 
 ![Initial sync](./../../../images/GitBook/Initial%20sync.png)
 
+View space
+
+![View space](./../../../images/GitBook/View%20space.png)
+
+Complete tasks
+
+![Complete tasks](./../../../images/GitBook/Complete%20tasks.png)
+
 ---
 
 Refrences
