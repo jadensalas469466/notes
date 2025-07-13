@@ -45,4 +45,12 @@ fofa查询 domain="10086.cn" && status_code="200" && country="CN" && cert.is_val
 
 ## 4. 手工测试
 
-手工访问每个业务板块, 记录已经测试的业务并使用 Visio 绘制流程图.
+手工访问每个业务板块, 记录已经测试的业务并使用 Mermaid 绘制流程图.
+
+```Mermaid
+graph TD
+1[Start] --> 2{Decision};
+2{Decision} --A--> 3[Result1];
+2{Decision} --B--> 4[Result2];
+```
+

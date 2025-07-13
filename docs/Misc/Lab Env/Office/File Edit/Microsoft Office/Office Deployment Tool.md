@@ -6,49 +6,15 @@ The Office Deployment Tool (ODT) is a command-line tool that you can use to down
 
 ### 1.1. 自定义配置
 
-Architecture
+Deployment settings
 
 ```
-64-bit
-```
-
-Office Suites
-
-```
-Office LTSC Professional Plus 2024 - Volume License
-```
-
-Visio
-
-```
-Visio LTSC Professional 2024 - Volume License
-```
-
-Update channel
-
-```
-Office LTSC 2024 Perpetual Enterprise
-Latest
-```
-
-Apps
-
-```
-Word
-Excel
-PowerPoint
-```
-
-Languages
-
-```
-English (United States)
-```
-
-Licensing and activation
-
-```
-Automatically accept the license terms
+Architecture: 64-bit
+Office Suites: Office LTSC Professional Plus 2024 - Volume License
+Update channel: Office LTSC 2024 Perpetual Enterprise; Latest
+Apps: Word, Excel, PowerPoint
+Languages: English (United States)
+Licensing and activation: Automatically accept the license terms
 ```
 
 ### 1.2. 导出配置

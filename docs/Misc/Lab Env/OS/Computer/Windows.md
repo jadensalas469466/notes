@@ -542,6 +542,14 @@ Remove-Item "C:\path\to\directory" -Recurse
 
 ![选择存储到受信任的根证书颁发机构](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
 
+### 6.19 SSH 连接记录
+
+SSH 连接记录
+
+```
+C:/Users/sec/.ssh/known_hosts
+```
+
 ---
 
 Refrences
