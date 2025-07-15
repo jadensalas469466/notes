@@ -1,11 +1,19 @@
 一个想帮你总结所有类型的上传漏洞的靶场
 
-## 1. install
+## 1. Install
 
-下载
+安装依赖
 
-```shell
-[root@centos ~]# git clone https://github.com/c0ny1/upload-labs.git
+```
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y apache2 mariadb-server mariadb-client php php-mysqli
+```
+
+Clone
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo -E git clone https://github.com/c0ny1/upload-labs.git /var/www/html/upload-labs
 ```
 
 准备
@@ -45,7 +53,7 @@ fclose($myfile);
 
 访问
 
-> http://centos7-6.local/upload-labs/
+> http://127.0.0.1:60080/upload-labs/
 
 ### 2.1. Pass-01
 

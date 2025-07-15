@@ -206,12 +206,13 @@ Port Forwarding Rules
 
 | Name | Host Port | Guest Port |
 | ---- | --------- | ---------- |
-| SSH  | 49222     | 22         |
+| SSH  | 60022     | 22         |
+| Web  | 60080     | 80         |
 
 Start the VM and SSH to `sec` 
 
 ```
-PS C:\Users\sec> ssh -p 49222 sec@127.0.0.1
+PS C:\Users\sec> ssh -p 60022 sec@127.0.0.1
 ```
 
 Use `su` switch to `root` 
@@ -244,7 +245,7 @@ Install common tools
 ```
 root@debian:~# apt install -y vim curl passwd sudo tree unzip apache2 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
-&& systemctl disable --now apache2.service \
+&& systemctl enable --now apache2.service \
 && usermod -aG sudo sec
 ```
 
@@ -298,7 +299,7 @@ root@debian:~# shutdown -r now
 Wait for the VM to start up, then reconnect SSH
 
 ```
-PS C:\Users\sec> ssh -p 49222 sec@127.0.0.1
+PS C:\Users\sec> ssh -p 60022 sec@127.0.0.1
 ```
 
 Network testing
@@ -347,7 +348,8 @@ sec@debian:~$ sudo shutdown -h now
 |                    [Go](https://go.dev/)                     |
 |              [Docker](https://www.docker.com/)               |
 |               [MariaDB](https://mariadb.org/)                |
-|          [DVWA](https://github.com/digininja/DVWA)           |
+|          [dvwa](https://github.com/digininja/DVWA)           |
+| [pikachu](https://github.com/zhuifengshaonianhanlu/pikachu)  |
 
 Take Snapshot: `deploy` 
 
@@ -566,7 +568,7 @@ root@debian:~# systemctl disable NetworkManager --now || true && systemctl enabl
 12  # iface ens33 inet dhcp
 auto ens33
 iface ens33 inet static
-    address <os-ip>
+    address 192.168.1.6
     gateway 192.168.1.1
     netmask 255.255.255.0
 18  # This is an autoconfigured IPv6 interface
