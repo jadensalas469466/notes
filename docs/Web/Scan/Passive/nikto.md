@@ -34,7 +34,7 @@ Nikto is a pluggable web server and CGI scanner written in Perl, using rfp’s L
 
 ---
 
-Refrences
+References
 
 - [nikto](https://www.kali.org/tools/nikto/)
 

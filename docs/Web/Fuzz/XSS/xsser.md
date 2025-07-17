@@ -27,6 +27,6 @@ XSS Fuzz。
 
 ---
 
-Refrences
+References
 
 - [XSSer](https://www.kali.org/tools/xsser/)

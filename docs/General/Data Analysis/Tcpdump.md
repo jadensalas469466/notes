@@ -96,7 +96,7 @@ C:\Users\Windows 10>netstat -ano | findstr "ESTABLISHED"
 
 ---
 
-Refrences
+References
 
 - [Tcpdump](https://www.kali.org/tools/tcpdump/)
 

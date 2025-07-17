@@ -41,7 +41,7 @@ Proxychains is a UNIX program, that hooks network-related libc functions in dyna
 
 ---
 
-Refrences
+References
 
 - [proxychains-ng](https://www.kali.org/tools/proxychains-ng/)
 

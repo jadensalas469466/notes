@@ -34,6 +34,6 @@ root@server:~# chmod 644 /etc/ssl/caddy/ssl-test.crt
 
 ---
 
-Refrences
+References
 
 - [OpenSSL](https://github.com/openssl/openssl)

@@ -39,6 +39,6 @@
 
 ---
 
-Refrences
+References
 
 - [Netdiscover](https://www.kali.org/tools/netdiscover/)

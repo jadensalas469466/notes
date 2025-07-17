@@ -43,6 +43,6 @@ Bypass
 
 ---
 
-Refrences
+References
 
 - [nmap](https://www.kali.org/tools/nmap/)

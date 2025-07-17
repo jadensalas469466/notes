@@ -260,7 +260,7 @@ git config --global core.autocrlf false
 
 ---
 
-Refrences
+References
 
 - [Git](https://git-scm.com/)
 

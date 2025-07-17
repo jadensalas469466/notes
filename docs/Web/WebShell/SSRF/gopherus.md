@@ -96,6 +96,6 @@ sh-4.2#
 
 ---
 
-Refrences
+References
 
 - [Gopherus](https://github.com/tarunkant/Gopherus)

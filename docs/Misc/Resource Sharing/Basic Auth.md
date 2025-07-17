@@ -26,6 +26,6 @@ hydra 192.168.36.55 -s 81 http-get / -L username.txt -P password.txt -e ns -vV
 
 ---
 
-Refrences
+References
 
 - [The 'Basic' HTTP Authentication Scheme](https://datatracker.ietf.org/doc/html/rfc7617)

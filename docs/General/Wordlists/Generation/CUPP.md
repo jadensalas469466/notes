@@ -69,6 +69,6 @@ options:
 
 ---
 
-Refrences
+References
 
 - [CUPP](https://github.com/Mebus/cupp)

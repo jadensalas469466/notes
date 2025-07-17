@@ -41,6 +41,6 @@
 
 ---
 
-Refrences
+References
 
 - [theHarvester](https://github.com/laramies/theHarvester)

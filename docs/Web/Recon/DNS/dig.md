@@ -10,6 +10,6 @@ dig +short A example.com | tee -a dig_ip.txt
 
 ---
 
-Refrences
+References
 
 - [dig](https://www.kali.org/tools/bind9/#dig)

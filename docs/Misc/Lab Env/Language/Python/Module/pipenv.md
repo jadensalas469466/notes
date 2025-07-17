@@ -4,7 +4,7 @@
 
 ---
 
-Refrences
+References
 
 - [pipenv](https://pipenv.pypa.io/en/latest/)
 

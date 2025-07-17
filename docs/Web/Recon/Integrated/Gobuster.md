@@ -20,6 +20,6 @@
 
 ---
 
-Refrences
+References
 
 - [Gobuster](https://www.kali.org/tools/gobuster/)

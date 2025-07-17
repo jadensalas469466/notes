@@ -11,7 +11,7 @@ Web plugins
 
 ---
 
-Refrences
+References
 
 - [VLC media player](https://www.videolan.org/)
 

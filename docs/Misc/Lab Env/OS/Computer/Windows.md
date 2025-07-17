@@ -552,6 +552,6 @@ C:/Users/sec/.ssh/known_hosts
 
 ---
 
-Refrences
+References
 
 - [Windows](https://learn.microsoft.com/zh-cn/windows/)

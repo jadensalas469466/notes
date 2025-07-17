@@ -27,7 +27,7 @@ Identify the technology stack that powers a website and explore the Web of Thing
 
 ---
 
-Refrences
+References
 
 - [whatweb](https://www.kali.org/tools/whatweb/)
 

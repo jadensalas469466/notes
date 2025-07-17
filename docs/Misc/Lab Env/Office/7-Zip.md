@@ -14,6 +14,6 @@
 
 ---
 
-Refrences
+References
 
 - [7-Zip](https://www.7-zip.org/)

@@ -108,6 +108,6 @@ XSStrike v3.1.5
 
 ---
 
-Refrences
+References
 
 - [XSStrike](https://github.com/s0md3v/XSStrike)

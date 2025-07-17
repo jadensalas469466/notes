@@ -28,6 +28,6 @@ GET 扫描
 
 ---
 
-Refrences
+References
 
 - [ffuf](https://github.com/ffuf/ffuf)

@@ -27,6 +27,6 @@
 
 ---
 
-Refrences
+References
 
 - [HTTrack](https://www.httrack.com/)

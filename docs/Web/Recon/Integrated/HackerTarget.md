@@ -75,7 +75,7 @@ Which option number :
 
 ---
 
-Refrences
+References
 
 - [HackerTarget](https://github.com/pyhackertarget/hackertarget)
 

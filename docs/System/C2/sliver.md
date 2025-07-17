@@ -163,7 +163,7 @@ sliver > exit
 
 ---
 
-Refrences
+References
 
 - [sliver](https://github.com/BishopFox/sliver)
 

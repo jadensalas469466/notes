@@ -80,6 +80,6 @@ PS C:\Users\sec> \path\venv\Scripts\Activate.ps1
 
 ---
 
-Refrences
+References
 
 - [virtualenv](https://virtualenv.pypa.io/en/latest/)

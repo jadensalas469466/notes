@@ -129,7 +129,7 @@ http://192.168.6.76/upload/webshell.php
 
 ---
 
-Refrences
+References
 
 - [AntSword 加载器](https://github.com/AntSwordProject/AntSword-Loader)
 - [AntSword](https://github.com/AntSwordProject/antSword)

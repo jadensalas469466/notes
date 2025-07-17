@@ -27,7 +27,7 @@ The Web Application Firewall Fingerprinting Tool.
 
 ---
 
-Refrences
+References
 
 - [wafw00f](https://www.kali.org/tools/wafw00f/)
 

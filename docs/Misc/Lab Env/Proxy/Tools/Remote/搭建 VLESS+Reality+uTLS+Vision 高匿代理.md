@@ -27,7 +27,7 @@
 
 ---
 
-Refrences
+References
 
 - [Xray](https://xtls.github.io/)
 - [v2ray-agent](https://github.com/mack-a/v2ray-agent)

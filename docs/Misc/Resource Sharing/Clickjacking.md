@@ -16,7 +16,7 @@
 
 ---
 
-Refrences
+References
 
 - [OWASP Clickjacking](https://owasp.org/www-community/attacks/Clickjacking)
 - [PortSwigger Clickjacking](https://portswigger.net/web-security/clickjacking)

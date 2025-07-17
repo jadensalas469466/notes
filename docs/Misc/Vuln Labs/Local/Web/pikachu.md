@@ -52,6 +52,6 @@ Visit
 
 ---
 
-Refrences
+References
 
 - [pikachu](https://github.com/zhuifengshaonianhanlu/pikachu)

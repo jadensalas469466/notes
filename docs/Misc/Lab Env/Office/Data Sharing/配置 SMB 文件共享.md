@@ -157,7 +157,7 @@ Microsoft 网络客户端：对通信进行数字签名(始终)：已禁用
 
 ---
 
-Refrences
+References
 
 - [Windows 10/ 11 下安全并正确地使用 SMB 共享](https://post.smzdm.com/p/akxwkxqk/)
 

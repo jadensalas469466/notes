@@ -18,6 +18,6 @@
 
 ---
 
-Refrences
+References
 
 - [Adobe Acrobat Reader](https://get.adobe.com/cn/reader/)

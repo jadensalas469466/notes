@@ -322,6 +322,6 @@ BurpSuite 开启上游服代理, 配置代理启动 `sqlmap`
 
 ---
 
-Refrences
+References
 
 - [sqlmap](https://www.kali.org/tools/sqlmap/)

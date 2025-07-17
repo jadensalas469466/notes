@@ -30,6 +30,6 @@ aria2c --all-proxy="http://127.0.0.1:10808" "https://example.com/file_name.zip"
 
 ---
 
-Refrences
+References
 
 - [aria2](https://aria2.github.io/)

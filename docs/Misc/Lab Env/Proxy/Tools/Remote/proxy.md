@@ -34,7 +34,7 @@
 
 ---
 
-Refrences
+References
 
 - [proxy](https://github.com/jadensalas469466/tools/raw/main/other/proxy.sh)
 

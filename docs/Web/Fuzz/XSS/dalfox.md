@@ -803,6 +803,6 @@ XSS Fuzz。
 
 ---
 
-Refrences
+References
 
 - [DalFox](https://dalfox.hahwul.com/)

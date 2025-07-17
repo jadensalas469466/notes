@@ -22,7 +22,7 @@
 
 ---
 
-Refrences
+References
 
 - [xrdp](https://www.xrdp.org/)
 

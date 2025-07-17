@@ -41,7 +41,7 @@ Fast passive subdomain enumeration tool.
 
 ---
 
-Refrences
+References
 
 - [subfinder](https://github.com/projectdiscovery/subfinder)
 

@@ -20,7 +20,7 @@ A fast port scanner written in go with a focus on reliability and simplicity. De
 
 ---
 
-Refrences
+References
 
 - [naabu](https://github.com/projectdiscovery/naabu)
 

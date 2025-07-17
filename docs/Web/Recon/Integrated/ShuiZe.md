@@ -92,6 +92,6 @@ root@debian:~# shuize --domainFile FileName.txt
 
 ---
 
-Refrences
+References
 
 - [ShuiZe](https://github.com/0x727/ShuiZe_0x727)

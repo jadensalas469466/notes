@@ -22,6 +22,6 @@
 
 ---
 
-Refrences
+References
 
 - [OpenVPN](https://openvpn.net/)

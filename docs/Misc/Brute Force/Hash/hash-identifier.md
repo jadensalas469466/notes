@@ -25,6 +25,6 @@ Possible Hashs:
 
 ---
 
-Refrences
+References
 
 - [hash-identifier](https://www.kali.org/tools/hash-identifier/#hash-identifier)

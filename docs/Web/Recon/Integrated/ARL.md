@@ -114,7 +114,7 @@ https://example.com:5003
 
 ---
 
-Refrences
+References
 
 - [ARL](https://github.com/Aabyss-Team/ARL)
 - [ARL 资产灯塔系统安装和使用文档](https://tophanttechnology.github.io/ARL-doc/)

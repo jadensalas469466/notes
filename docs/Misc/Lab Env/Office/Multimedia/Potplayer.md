@@ -12,6 +12,6 @@ Provides the maximum performance with the minumum resource using DXVA, CUDA, Qui
 
 ---
 
-Refrences
+References
 
 - [Potplayer](https://potplayer.tv/)

@@ -51,7 +51,7 @@ Environment="NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,::1"
 
 ---
 
-Refrences
+References
 
 - [Docker](https://www.docker.com/)
 - [Docker Documentation](https://docs.docker.com/)

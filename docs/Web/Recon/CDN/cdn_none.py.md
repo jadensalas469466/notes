@@ -51,6 +51,6 @@ cdn_none -d fileName.txt -o fileName.txt
 
 ---
 
-Refrences
+References
 
 - [cdn_none.py](https://github.com/jadensalas469466/tools/blob/main/hack/cdn_none.py)

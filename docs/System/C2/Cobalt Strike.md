@@ -66,6 +66,6 @@
 
 ---
 
-Refrences
+References
 
 - [Cobalt Strike](https://www.cobaltstrike.com/)

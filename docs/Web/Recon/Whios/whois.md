@@ -20,7 +20,7 @@ Intelligent WHOIS client.
 
 ---
 
-Refrences
+References
 
 - [whois](https://www.kali.org/tools/whois/)
 

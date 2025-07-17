@@ -34,6 +34,6 @@ iptables -F
 
 ---
 
-Refrences
+References
 
 - [iptables](https://wiki.debian.org/iptables)

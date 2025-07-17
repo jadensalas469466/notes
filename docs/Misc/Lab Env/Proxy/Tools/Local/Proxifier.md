@@ -40,6 +40,6 @@ F9ZN9-MYUAM-LSS3K-SBN7B-UT9PF
 
 ---
 
-Refrences
+References
 
 - [Proxifier](https://www.proxifier.com/)

@@ -108,7 +108,7 @@ C:\Users\sec\share\VMware
 
 ---
 
-Refrences
+References
 
 - [VMware](https://www.vmware.com/)
 - [VMware Documentation](https://docs.vmware.com/cn/)

@@ -31,6 +31,6 @@ Do you want to extract the wordlist rockyou.txt? [Y/n]
 
 ---
 
-Refrences
+References
 
 - [Wordlists](https://www.kali.org/tools/wordlists/)

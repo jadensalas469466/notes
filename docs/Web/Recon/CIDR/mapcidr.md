@@ -20,6 +20,6 @@ C 段扫描
 
 ---
 
-Refrences
+References
 
 - [mapcidr](https://github.com/projectdiscovery/mapcidr)

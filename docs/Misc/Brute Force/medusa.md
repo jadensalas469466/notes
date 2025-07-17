@@ -11,6 +11,6 @@ Medusa is a speedy, parallel, and modular, login brute-forcer. The goal is to su
 
 ---
 
-Refrences
+References
 
 - [medusa](https://www.kali.org/tools/medusa/)

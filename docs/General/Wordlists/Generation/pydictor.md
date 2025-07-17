@@ -103,6 +103,6 @@ world
 
 ---
 
-Refrences
+References
 
 - [pydictor](https://github.com/LandGrey/pydictor)

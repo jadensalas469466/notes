@@ -9,6 +9,6 @@
 
 ---
 
-Refrences
+References
 
 - [Arping](https://www.kali.org/tools/arping/)

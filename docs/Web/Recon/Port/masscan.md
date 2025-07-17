@@ -27,6 +27,6 @@ This is an Internet-scale port scanner. It can scan the entire Internet in under
 
 ---
 
-Refrences
+References
 
 - [masscan](https://github.com/robertdavidgraham/masscan)

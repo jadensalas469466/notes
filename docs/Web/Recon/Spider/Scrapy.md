@@ -27,6 +27,6 @@
 
 ---
 
-Refrences
+References
 
 - [Scrapy](https://scrapy.org/)

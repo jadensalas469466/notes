@@ -68,6 +68,6 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ---
 
-Refrences
+References
 
 - [Adinfo](https://github.com/lzzbb/Adinfo)

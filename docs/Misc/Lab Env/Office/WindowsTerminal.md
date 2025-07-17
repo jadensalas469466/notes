@@ -44,7 +44,7 @@ https://github.com/jadensalas469466/config/blob/main/WindowsTerminal/schemes.jso
 
 ---
 
-Refrences
+References
 
 - [WindowsTerminal](https://github.com/microsoft/terminal)
 

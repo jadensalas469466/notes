@@ -53,7 +53,7 @@ PS C:\Users\sec\Downloads> irm https://get.activated.win | iex
 
 ---
 
-Refrences
+References
 
 - [Overview of the Office Customization Tool](https://learn.microsoft.com/en-us/microsoft-365-apps/admin-center/overview-office-customization-tool)
 - [Overview of the Office Deployment Tool](https://learn.microsoft.com/en-us/microsoft-365-apps/deploy/overview-office-deployment-tool)

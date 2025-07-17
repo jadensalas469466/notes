@@ -22,6 +22,6 @@ Scan a repo for only verified secrets
 
 ---
 
-Refrences
+References
 
 - [trufflehog](https://github.com/trufflesecurity/trufflehog)

@@ -37,7 +37,7 @@ deactivate
 
 ---
 
-Refrences
+References
 
 - [Bash](https://www.gnu.org/software/bash/)
 

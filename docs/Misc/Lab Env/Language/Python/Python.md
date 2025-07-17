@@ -95,7 +95,7 @@ SyntaxError: invalid character '“' (U+201C)
 
 ---
 
-Refrences
+References
 
 - [Python](https://www.python.org/)
 - [Python Documentation](https://www.python.org/doc/)

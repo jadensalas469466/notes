@@ -61,6 +61,6 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ---
 
-Refrences
+References
 
 - [vscan](https://github.com/veo/vscan)

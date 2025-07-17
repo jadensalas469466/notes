@@ -89,7 +89,7 @@ wp-themes.txt
 
 ---
 
-Refrences
+References
 
 - [Metasploit-Framework](https://www.kali.org/tools/metasploit-framework/)
 

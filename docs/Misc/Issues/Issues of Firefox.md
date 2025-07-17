@@ -22,7 +22,7 @@ Firefox 检测到潜在的安全威胁，并因 github.com 要求安全连接而
 
 ---
 
-Refrences
+References
 
 - [Firefox Browser](https://www.mozilla.org/en-US/firefox/new/)
 

@@ -588,7 +588,7 @@ nameserver 8.8.4.4
 
 ---
 
-Refrences
+References
 
 - [Debian](https://www.debian.org/)
 - [Debian Docs](https://www.debian.org/doc/)

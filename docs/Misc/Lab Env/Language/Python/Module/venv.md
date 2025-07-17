@@ -44,7 +44,7 @@ deactivate
 
 ---
 
-Refrences
+References
 
 - [venv](https://docs.python3.org/zh-cn/3.13/library/venv.html)
 

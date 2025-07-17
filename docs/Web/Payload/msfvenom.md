@@ -155,6 +155,6 @@ Options:
 
 ---
 
-Refrences
+References
 
 - [msfvenom](https://www.kali.org/tools/metasploit-framework/#msfvenom)

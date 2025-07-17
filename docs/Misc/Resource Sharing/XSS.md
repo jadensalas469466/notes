@@ -457,7 +457,7 @@ hello:expr/**/ession(alert(1))
 
 ---
 
-Refrences
+References
 
 - [CWE-79](https://hackerone.com/hacktivity/cwe_discovery?id=cwe-79)
 - [The return of the ＜](https://hackerone.com/reports/639684)

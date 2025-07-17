@@ -51,7 +51,7 @@ func main() {
 
 ---
 
-Refrences
+References
 
 - [Go](https://go.dev/)
 - [Go Documentation](https://go.dev/doc/)

@@ -49,6 +49,6 @@ root@debian:~# crawlergo [url]
 
 ---
 
-Refrences
+References
 
 - [crawlergo](https://github.com/Qianlitp/crawlergo)

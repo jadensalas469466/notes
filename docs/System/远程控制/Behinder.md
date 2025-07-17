@@ -89,6 +89,6 @@ shell.ashx  shell.aspx  shell.jsp  shell.php
 
 ---
 
-Refrences
+References
 
 - [Behinder](https://github.com/rebeyond/Behinder)

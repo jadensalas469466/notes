@@ -52,7 +52,7 @@ trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,u
 
 ---
 
-Refrences
+References
 
 - [云业务 AccessKey 标识特征整理](https://wiki.teamssix.com/cloudservice/more/)
 - [云上攻防 | 记一次AccessKey值泄露的挖掘和分析](https://rivers.chaitin.cn/blog/cqq5arp0lnec5jjugkqg)

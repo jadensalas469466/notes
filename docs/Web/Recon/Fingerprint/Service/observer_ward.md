@@ -39,6 +39,6 @@ observer_ward --update-self   # 更新程序
 
 ---
 
-Refrences
+References
 
 - [observer_ward](https://github.com/emo-crab/observer_ward)

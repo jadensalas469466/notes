@@ -632,7 +632,7 @@ http://192.168.1.76/sqli-labs/Less-8/?id=1' and if(ascii(substr(database(),1,1))
 
 ---
 
-Refrences
+References
 
 - [SQL injection](https://portswigger.net/web-security/sql-injection)
 - [SQL Injection](https://swisskyrepo.github.io/PayloadsAllTheThings/SQL%20Injection/)

@@ -50,7 +50,7 @@ Nuclei is a fast, customizable vulnerability scanner powered by the global secur
 
 ---
 
-Refrences
+References
 
 - [nuclei](https://github.com/projectdiscovery/nuclei)
 

@@ -1235,6 +1235,6 @@ hello
 
 ---
 
-Refrences
+References
 
 - [XSS Challenges](https://xss-quiz.int21h.jp/)

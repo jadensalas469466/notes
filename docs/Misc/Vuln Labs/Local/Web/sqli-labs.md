@@ -258,6 +258,6 @@ http://127.0.0.1:60080/sqli-labs/Less-1/?id=1' and (select count(*) from informa
 
 ---
 
-Refrences
+References
 
 - [sqli-labs](https://github.com/Audi-1/sqli-labs)

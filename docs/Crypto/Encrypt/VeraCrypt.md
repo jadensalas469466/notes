@@ -84,6 +84,6 @@
 
 ---
 
-Refrences
+References
 
 - [VeraCrypt](https://www.veracrypt.fr/en/Home.html)

@@ -13,7 +13,7 @@ Online KMS  |  Windows / Office  |   180 Days
 
 ---
 
-Refrences
+References
 
 - [Microsoft Activation Scripts (MAS)](https://massgrave.dev/)
 

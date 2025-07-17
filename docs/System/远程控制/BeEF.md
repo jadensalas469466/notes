@@ -228,6 +228,6 @@ adobe_flash_update.png  basic.html       butcher   plain.html    secret_page.htm
 
 ---
 
-Refrences
+References
 
 - [BeEF](https://beefproject.com/)

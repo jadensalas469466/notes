@@ -20,7 +20,7 @@ httpx is a fast and multi-purpose HTTP toolkit that allows running multiple prob
 
 ---
 
-Refrences
+References
 
 - [httpx](https://github.com/projectdiscovery/httpx)
 

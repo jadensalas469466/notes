@@ -88,6 +88,6 @@ deactivate
 
 ---
 
-Refrences
+References
 
 - [ip2domain](https://github.com/Sma11New/ip2domain)

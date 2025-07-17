@@ -211,6 +211,6 @@ msf6 auxiliary(scanner/mysql/mysql_login) > run
 
 ---
 
-Refrences
+References
 
 - [Metasploitable 2](https://docs.rapid7.com/metasploit/metasploitable-2/)

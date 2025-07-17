@@ -677,6 +677,6 @@ C:\Users\windows>nc -Ldp 443 -e cmd.exe
 
 ---
 
-Refrences
+References
 
 - [Frp](https://gofrp.org/)

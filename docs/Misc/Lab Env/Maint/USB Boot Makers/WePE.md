@@ -52,6 +52,6 @@ TinkPad 启动引导界面按 F12
 
 ---
 
-Refrences
+References
 
 - [WePE](https://www.wepe.com.cn/)

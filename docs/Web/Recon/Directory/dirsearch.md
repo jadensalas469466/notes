@@ -49,7 +49,7 @@ An advanced web path brute-forcer.
 
 ---
 
-Refrences
+References
 
 - [dirsearch](https://www.kali.org/tools/dirsearch/)
 

@@ -174,7 +174,7 @@ MariaDB [security]> select * from users order by id desc;
 
 ---
 
-Refrences
+References
 
 - [MariaDB](https://mariadb.org/)
 

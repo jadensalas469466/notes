@@ -49,7 +49,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ---
 
-Refrences
+References
 
 - [Vulinbox](https://yaklang.io/Yaklab/vulinbox/vulinbox)
 

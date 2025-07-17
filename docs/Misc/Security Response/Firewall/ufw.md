@@ -53,6 +53,6 @@ Application profile commands:
 
 ---
 
-Refrences
+References
 
 - [ufw](https://github.com/jbq/ufw)
