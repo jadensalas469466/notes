@@ -6,7 +6,7 @@
 
 ---
 
-Refrences
+References
 
 - [profile-picture name parameter with large value lead to DoS for other users and programs on the platform](https://hackerone.com/reports/764434)
 
@@ -39,7 +39,7 @@ http://example.com/demo.php/?img=coca-cola.jpg&width=100&height=100
 
 ---
 
-Refrences
+References
 
 - [新类型【漏洞】验证码大小可控导致的拒绝服务攻击漏洞](https://zhuanlan.zhihu.com/p/41800341)
 
@@ -137,7 +137,7 @@ Word, Excel, PowerPoint 文件解压后存在 XML 文件, 压缩后可回复文�
 
 ---
 
-Refrences
+References
 
 - [企业src中dos漏洞的挖掘【小火炬公开课】](https://www.bilibili.com/video/BV1xYweeKELq/?spm_id_from=333.1387.favlist.content.click&vd_source=2dcc7806c9580af60063ca1edb63852d)
 - [A better zip bomb](https://www.bamsoftware.com/hacks/zipbomb/)
