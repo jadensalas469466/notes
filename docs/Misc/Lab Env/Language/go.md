@@ -53,6 +53,5 @@ func main() {
 
 References
 
-- [Go](https://go.dev/)
-- [Go Documentation](https://go.dev/doc/)
+- [go](https://go.dev/)
 
