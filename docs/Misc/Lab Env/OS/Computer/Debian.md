@@ -364,10 +364,10 @@ Take Snapshot: `deploy`
 
 |                            server                            |
 | :----------------------------------------------------------: |
-| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
+| [配置 ssh 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
 | [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
 | [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban) |
-| [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
+| [搭建高匿代理](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
 | [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
 | [tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
