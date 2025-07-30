@@ -61,7 +61,7 @@ source /root/tools/apps/finger/venv/bin/activate
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 finger
-python3 Finger.py "$@"
+python3 ./Finger.py "$@"
 ```
 
 创建链接

@@ -27,7 +27,7 @@ set -e
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 ip_get
-python3 ip_get.py "$@"
+python3 ./ip_get.py "$@"
 ```
 
 创建链接

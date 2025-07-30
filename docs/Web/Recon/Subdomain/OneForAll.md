@@ -5,7 +5,7 @@ OneForAll 是一款功能强大的子域收集工具.
 克隆项目
 
 ```
-root@debian:~# git clone https://github.com/shmilylty/OneForAll.git /root/tools/apps/oneforall && cd /root/tools/apps/oneforall
+root@debian:~# git clone https://github.com/shmilylty/OneForAll.git ~/.local/oneforall && cd ~/.local/oneforall
 ```
 
 激活虚拟环境
@@ -53,7 +53,7 @@ source /root/tools/apps/oneforall/venv/bin/activate
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 oneforall
-python3 oneforall.py "$@"
+python3 ./oneforall.py "$@"
 ```
 
 创建链接
@@ -88,3 +88,8 @@ root@debian:~# oneforall --target FileName.txt run
 root@debian:~# ls /root/tools/apps/oneforall/results
 ```
 
+---
+
+Resferences
+
+- [OneForAll](https://github.com/shmilylty/OneForAll)

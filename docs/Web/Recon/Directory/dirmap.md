@@ -26,7 +26,8 @@ set -e
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 dirmap
-python3 dirmap.py "$@"
+python3 ./dirmap.py "$@"
+
 ```
 
 创建链接

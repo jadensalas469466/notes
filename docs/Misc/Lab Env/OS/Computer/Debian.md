@@ -349,7 +349,9 @@ sec@debian:~$ sudo shutdown -h now
 |              [Docker](https://www.docker.com/)               |
 |               [MariaDB](https://mariadb.org/)                |
 |          [dvwa](https://github.com/digininja/DVWA)           |
-| [pikachu](https://github.com/zhuifengshaonianhanlu/pikachu)  |
+|       [vulfocus](https://github.com/fofapro/vulfocus)        |
+|         [sqlmap](https://www.kali.org/tools/sqlmap/)         |
+|        [xsstrike](https://github.com/s0md3v/XSStrike)        |
 
 Take Snapshot: `deploy` 
 

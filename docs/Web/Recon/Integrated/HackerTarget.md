@@ -26,7 +26,7 @@ set -e
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 hackertarget
-python3 hackertarget.py "$@"
+python3 ./hackertarget.py "$@"
 ```
 
 创建链接

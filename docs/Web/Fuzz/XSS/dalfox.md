@@ -805,4 +805,4 @@ XSS Fuzz。
 
 References
 
-- [DalFox](https://dalfox.hahwul.com/)
+- [dalfox](https://github.com/hahwul/dalfox)

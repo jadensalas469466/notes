@@ -36,7 +36,8 @@ cd "$(dirname "$(readlink -f "$0")")"
 nohup sudo update-alternatives --set java /usr/local/jdk1.8.0_202/bin/java >/dev/null 2>&1 &
 
 # 运行 behinder
-nohup sudo java -jar Behinder.jar "$@" >/dev/null 2>&1 &
+nohup sudo java -jar ./Behinder.jar "$@" >/dev/null 2>&1 &
+
 ```
 
 创建链接

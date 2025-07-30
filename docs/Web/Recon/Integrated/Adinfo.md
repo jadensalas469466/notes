@@ -27,6 +27,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 adinfo
 ./Adinfo_linux "$@"
+
 ```
 
 创建链接

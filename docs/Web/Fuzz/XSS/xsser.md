@@ -4,7 +4,7 @@ XSS Fuzz。
 
 安装
 
-```shell
+```
 ┌──(root㉿kali)-[~]
 └─# sudo apt install -y python3-selenium && sudo apt install -y xsser
 ```
@@ -29,4 +29,4 @@ XSS Fuzz。
 
 References
 
-- [XSSer](https://www.kali.org/tools/xsser/)
+- [xsser](https://github.com/epsylon/xsser)

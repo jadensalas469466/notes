@@ -60,6 +60,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 shuize
 python3 ./ShuiZe.py "$@"
+
 ```
 
 创建链接

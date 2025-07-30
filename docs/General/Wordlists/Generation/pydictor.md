@@ -26,7 +26,8 @@ set -e
 cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 pydictor
-python3 pydictor.py "$@"
+python3 ./pydictor.py "$@"
+
 ```
 
 创建链接

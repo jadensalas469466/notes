@@ -57,7 +57,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 source /root/tools/ip2domain/venv/bin/activate
 
 # 运行 ip2domain
-python3 ip2domain.py "$@"
+python3 ./ip2domain.py "$@"
 
 # 退出虚拟环境
 deactivate

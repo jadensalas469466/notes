@@ -29,6 +29,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 # 运行 vulinbox
 ./vulinbox_linux_amd64 "$@"
+
 ```
 
 创建链接

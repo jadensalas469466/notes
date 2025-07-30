@@ -2,71 +2,89 @@ Damn Vulnerable Web Application (DVWA).
 
 ## 1. Install
 
+安装依赖
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php composer
+```
+
+Enable `mod_rewrite`
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo a2enmod rewrite && sudo systemctl restart apache2.service
+```
+
 Clone
 
 ```
 ┌──(sec@debian)-[~]
-└─$ git clone https://github.com/digininja/DVWA.git ~/.local/dvwa && cd ~/.local/dvwa
+└─$ sudo -E git clone https://github.com/digininja/DVWA.git /var/www/html/dvwa
+```
+
+Install API module
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo composer install -d /var/www/html/dvwa/vulnerabilities/api
 ```
 
 ## 2. Init
+
+Folder Permissions
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo chown -R www-data:www-data /var/www/html/dvwa/hackable/uploads /var/www/html/dvwa/config \
+&& sudo chmod -R 775 /var/www/html/dvwa/hackable/uploads /var/www/html/dvwa/config
+```
+
+PHP Configuration
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo nano -l /etc/php/8.2/apache2/php.ini && sudo systemctl restart apache2.service
+```
+
+```
+508 display_errors = On
+517 display_startup_errors = On
+866 allow_url_fopen = On
+870 allow_url_include = On
+```
 
 释放 Configuration File
 
 ```
 ┌──(sec@debian)-[~]
-└─$ cp ./config/config.inc.php.dist ./config/config.inc.php
+└─$ sudo cp /var/www/html/dvwa/config/config.inc.php.dist /var/www/html/dvwa/config/config.inc.php
 ```
 
-添加谷歌验证码 reCAPTCHA 并修改默认安全级别
+Configure
 
 ```
 ┌──(sec@debian)-[~]
-└─$ chmod -R 777 ./config && nano -l ./config/config.inc.php
+└─$ sudo nano -l /var/www/html/dvwa/config/config.inc.php
 ```
 
-```php
+```
+20 $_DVWA[ 'db_user' ]     = getenv('DB_USER') ?: 'root';
+21 $_DVWA[ 'db_password' ] = getenv('DB_PASSWORD') ?: '123456';
 27 $_DVWA[ 'recaptcha_public_key' ]  = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 28 $_DVWA[ 'recaptcha_private_key' ] = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
-33 $_DVWA[ 'default_security_level' ] = 'low';
+33 $_DVWA[ 'default_security_level' ] = getenv('DEFAULT_SECURITY_LEVEL') ?: 'low';
 ```
 
-挂载本地配置文件并允许外部的访问
+Click `Create / Reset Database`
 
-```
-┌──(sec@debian)-[~]
-└─$ nano -l ./compose.yml
-```
-
-```yml
-20     volumes:
-21       - ./config:/var/www/html/config
-24     ports:
-25       - 4280:80
-```
-
-运行容器
-
-```
-┌──(sec@debian)-[~]
-└─$ docker compose up -d
-```
-
-Port Forwarding Rules
-
-| Name | Host Port | Guest Port |
-| ---- | --------- | ---------- |
-| DVWA | 64280     | 4280       |
-
-Click `Create / Reset Database` 
-
-> http://127.0.0.1:64280/setup.php
+> http://127.0.0.1:60080/dvwa/setup.php
 
 ## 3. Usage
 
 登录 `admin:password` 
 
-> http://127.0.0.1:64280/login.php
+> http://127.0.0.1:60080/dvwa/login.php
 
 修改安全级别
 
@@ -74,7 +92,7 @@ Click `Create / Reset Database`
 
 ### 3.1. csrf
 
-> http://127.0.0.1:64280/vulnerabilities/csrf/
+> http://127.0.0.1:60080/dvwa/vulnerabilities/csrf/
 
 > 1. 攻击者首先会在自己的个人账户上获取敏感操作的请求包，如：修改密码，修改邮箱，修改手机号，账号删除，转账等操作
 > 2. 之后会利用这些请求包构造一个网页形式的 poc，将这个 poc 发送到公网
@@ -146,7 +164,7 @@ Click `Create / Reset Database`
     <meta name="referrer" content="unsafe-url">
 </head>
 <body>
-    <a href="http://127.0.0.1:64280/vulnerabilities/csrf/?password_new=123456&password_conf=123456&Change=Change" referrer="unsafe-url">
+    <a href="http://127.0.0.1:60080/dvwa/vulnerabilities/csrf/?password_new=123456&password_conf=123456&Change=Change" referrer="unsafe-url">
         csrf
     </a>
 </body>
