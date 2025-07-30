@@ -350,8 +350,8 @@ sec@debian:~$ sudo shutdown -h now
 | [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
-| [xsstrike](https://keithpeck177271.gitbook.io/notes/web/fuzz/xss/xsstrike) |
 | [sqlmap](https://keithpeck177271.gitbook.io/notes/web/fuzz/sqli/sqlmap) |
+| [xsstrike](https://keithpeck177271.gitbook.io/notes/web/fuzz/xss/xsstrike) |
 
 Take Snapshot: `deploy` 
 
