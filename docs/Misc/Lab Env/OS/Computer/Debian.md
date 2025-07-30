@@ -367,7 +367,7 @@ Take Snapshot: `deploy`
 | [配置 ssh 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
 | [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
 | [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban) |
-| [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/da-jian-gao-ni-dai-li) |
+| [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/v2ray-agent) |
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
 | [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
 | [tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
