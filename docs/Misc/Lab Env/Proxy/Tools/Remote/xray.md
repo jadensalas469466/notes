@@ -22,6 +22,4 @@ Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. 
 
 References
 
-- [xray](https://xtls.github.io/)
-- [v2ray-agent](https://github.com/mack-a/v2ray-agent)
-
+- [xray](https://xtls.github.io/) 
