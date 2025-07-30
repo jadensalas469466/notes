@@ -262,5 +262,5 @@ git config --global core.autocrlf false
 
 References
 
-- [Git](https://git-scm.com/)
+- [git](https://git-scm.com/)
 
