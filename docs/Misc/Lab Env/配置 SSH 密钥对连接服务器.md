@@ -17,7 +17,7 @@ Enter passphrase (empty for no passphrase):123456
 Enter same passphrase again:123456
 ```
 
-查看 SSH 密钥对
+查看 ssh 密钥对
 
 ```
 PS C:\Users\sec> ls C:\Users\sec\.ssh\
@@ -53,10 +53,10 @@ PS C:\Users\sec> Get-Service ssh-agent
 ```
 Status   Name               DisplayName
 ------   ----               -----------
-Running  ssh-agent          OpenSSH Authentication Agent
+Running  ssh-agent          Openssh Authentication Agent
 ```
 
-保存 SSH 私钥到 ssh-agent
+保存 ssh 私钥到 ssh-agent
 
 ```
 PS C:\Users\sec> ssh-add $env:USERPROFILE\.ssh\ssh_test
@@ -135,14 +135,14 @@ PS C:\Users\sec> Get-Content $env:USERPROFILE\.ssh\ssh_test.pub | Set-Clipboard
 57 PasswordAuthentication no
 ```
 
-重启 SSH 服务
+重启 ssh 服务
 
 ```
 ┌──(sec@debian)-[~]
 └─# sudo systemctl restart sshd.service
 ```
 
-> Windows 重启 SSH 服务: 
+> Windows 重启 ssh 服务: 
 >
 > ```
 > PS C:\Users\sec> Restart-Service sshd
