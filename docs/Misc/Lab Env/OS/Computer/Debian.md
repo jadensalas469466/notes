@@ -340,18 +340,18 @@ sec@debian:~$ sudo shutdown -h now
 
 |                            local                             |
 | :----------------------------------------------------------: |
-| [proxy](https://github.com/jadensalas469466/scripts/blob/main/proxy_install.sh) |
-|               [xray](https://xtls.github.io/)                |
-| [proxychains-ng](https://www.kali.org/tools/proxychains-ng/) |
-|                 [Git](https://git-scm.com/)                  |
-|              [Python](https://www.python.org/)               |
-|                    [Go](https://go.dev/)                     |
-|              [Docker](https://www.docker.com/)               |
-|               [MariaDB](https://mariadb.org/)                |
-|          [dvwa](https://github.com/digininja/DVWA)           |
-|       [vulfocus](https://github.com/fofapro/vulfocus)        |
-|         [sqlmap](https://www.kali.org/tools/sqlmap/)         |
-|        [xsstrike](https://github.com/s0md3v/XSStrike)        |
+| [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxy) |
+| [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
+| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxychains-ng) |
+| [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
+| [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python/python) |
+| [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
+| [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
+| [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
+| [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
+| [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
+| [xsstrike](https://keithpeck177271.gitbook.io/notes/web/fuzz/xss/xsstrike) |
+| [sqlmap](https://keithpeck177271.gitbook.io/notes/web/fuzz/sqli/sqlmap) |
 
 Take Snapshot: `deploy` 
 
@@ -365,12 +365,12 @@ Take Snapshot: `deploy`
 |                            server                            |
 | :----------------------------------------------------------: |
 | [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
-|              [ufw](https://github.com/jbq/ufw)               |
-|       [fail2ban](https://github.com/fail2ban/fail2ban)       |
+| [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
+| [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban) |
 | [搭建 VLESS+Reality+uTLS+Vision 高匿代理](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/da-jian-vless+reality+utls+vision-gao-ni-dai-li) |
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
 | [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
-|              [Tor](https://www.torproject.org/)              |
+| [tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
 
 ## 6. Usage
 
