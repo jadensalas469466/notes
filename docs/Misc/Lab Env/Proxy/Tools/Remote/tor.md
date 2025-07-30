@@ -47,7 +47,7 @@ example.onion
 
 ---
 
-References1
+References
 
 - [Tor](https://www.torproject.org/)
 - [Tor support](https://support.torproject.org/)
