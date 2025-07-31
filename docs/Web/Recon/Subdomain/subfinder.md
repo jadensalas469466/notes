@@ -9,7 +9,7 @@ Fast passive subdomain enumeration tool.
 └─$ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
-## 2. Use
+## 2. Usage
 
 经典扫描
 
