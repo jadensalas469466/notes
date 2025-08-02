@@ -350,21 +350,6 @@ sec@debian:~$ sudo shutdown -h now
 | [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
-| [whois](https://keithpeck177271.gitbook.io/notes/web/recon/whios/whois) |
-| [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan) |
-| [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap) |
-| [dirsearch](https://keithpeck177271.gitbook.io/notes/web/recon/directory/dirsearch) |
-| [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb) |
-| [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f) |
-| [nikto](https://keithpeck177271.gitbook.io/notes/web/scan/passive/nikto) |
-| [sqlmap](https://keithpeck177271.gitbook.io/notes/web/fuzz/sqli/sqlmap) |
-| [xsstrike](https://keithpeck177271.gitbook.io/notes/web/fuzz/xss/xsstrike) |
-| [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder) |
-| [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu) |
-| [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx) |
-| [katana](https://keithpeck177271.gitbook.io/notes/web/recon/spider/katana) |
-| [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei) |
-| [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog) |
 
 Take Snapshot: `deploy` 
 
