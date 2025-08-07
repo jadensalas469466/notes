@@ -1,4 +1,4 @@
-MariaDB Server: the innovative open source database.1
+MariaDB Server: the innovative open source database.
 
 ## 1. Install
 
