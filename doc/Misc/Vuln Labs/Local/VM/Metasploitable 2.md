@@ -4,15 +4,15 @@
 
 扫描虚拟机
 
-![扫描虚拟机](./../../../../../images/Metasploitable%202/%E6%89%AB%E6%8F%8F%E8%99%9A%E6%8B%9F%E6%9C%BA.png)
+![扫描虚拟机](./../../../../../image/Metasploitable%202/%E6%89%AB%E6%8F%8F%E8%99%9A%E6%8B%9F%E6%9C%BA.png)
 
 升级此虚拟机
 
-![升级此虚拟机](./../../../../../images/Metasploitable%202/%E5%8D%87%E7%BA%A7%E6%AD%A4%E8%99%9A%E6%8B%9F%E6%9C%BA.png)
+![升级此虚拟机](./../../../../../image/Metasploitable%202/%E5%8D%87%E7%BA%A7%E6%AD%A4%E8%99%9A%E6%8B%9F%E6%9C%BA.png)
 
 创建此虚拟机的新克隆
 
-![创建此虚拟机的新克隆](./../../../../../images/Metasploitable%202/%E5%88%9B%E5%BB%BA%E6%AD%A4%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%96%B0%E5%85%8B%E9%9A%86.png)
+![创建此虚拟机的新克隆](./../../../../../image/Metasploitable%202/%E5%88%9B%E5%BB%BA%E6%AD%A4%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E6%96%B0%E5%85%8B%E9%9A%86.png)
 
 虚拟机名称
 

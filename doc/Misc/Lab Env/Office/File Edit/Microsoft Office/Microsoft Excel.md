@@ -4,7 +4,7 @@
 
 分列
 
-![分列](C:\Users\sec\share\github\notes\images\Microsoft%20Excel\分列.png)
+![分列](./../../../../../../image/Microsoft%20Excel/%E5%88%86%E5%88%97.png)
 
 ---
 

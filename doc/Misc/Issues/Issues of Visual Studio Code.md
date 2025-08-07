@@ -4,4 +4,4 @@
 
 可尝试取消隐藏属性
 
-![取消隐藏属性](./../../../images/Issues%20of%20Visual%20Studio%20Code/%E5%8F%96%E6%B6%88%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7.png)
+![取消隐藏属性](./../../../image/Issues%20of%20Visual%20Studio%20Code/%E5%8F%96%E6%B6%88%E9%9A%90%E8%97%8F%E5%B1%9E%E6%80%A7.png)

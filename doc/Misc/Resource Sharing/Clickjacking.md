@@ -10,7 +10,7 @@
 
 1. 使用 [Burp Clickbandit](https://portswigger.net/burp/documentation/desktop/tools/clickbandit) 自动生成 PoC 检测目标
 
-   ![使用 Burp Clickbandit 自动生成 PoC 检测目标](./../../../images/Clickjacking/%E4%BD%BF%E7%94%A8%20Burp%20Clickbandit%20%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%20PoC%20%E6%A3%80%E6%B5%8B%E7%9B%AE%E6%A0%87.png)
+   ![使用 Burp Clickbandit 自动生成 PoC 检测目标](./../../../image/Clickjacking/%E4%BD%BF%E7%94%A8%20Burp%20Clickbandit%20%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%20PoC%20%E6%A3%80%E6%B5%8B%E7%9B%AE%E6%A0%87.png)
 
 2. 使用 [Testing for Clickjacking](https://github.com/OWASP/www-project-web-security-testing-guide/blob/master/v41/4-Web_Application_Security_Testing/11-Client_Side_Testing/09-Testing_for_Clickjacking.md) 尝试手动绕过
 

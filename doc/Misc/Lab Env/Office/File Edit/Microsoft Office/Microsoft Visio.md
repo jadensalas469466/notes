@@ -4,7 +4,7 @@
 
 显示网格
 
-![显示网格](C:\Users\sec\share\github\notes\images\Microsoft%20Visio\显示网格.png)
+![显示网格](./../../../../../../image/Microsoft%20Visio/%E6%98%BE%E7%A4%BA%E7%BD%91%E6%A0%BC.png)
 
 ---
 
