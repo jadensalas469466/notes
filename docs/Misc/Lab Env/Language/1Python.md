@@ -2,7 +2,7 @@ Python is a programming language that lets you work quicklyand integrate systems
 
 ## 1. Install
 
-### 1.1. debian
+### 1.1. Debian
 
 安装
 
@@ -11,7 +11,7 @@ Python is a programming language that lets you work quicklyand integrate systems
 └─$ sudo apt install -y python3 python3-pip python3-venv python3-dev
 ```
 
-### 1.2. windows
+### 1.2. Windows
 
 以管理员身份安装并添加到环境变量
 
@@ -83,4 +83,4 @@ PS C:\Users\sec> .\venv\Scripts\Activate.ps1
 
 References
 
-- [python](https://www.python.org/)
+- [Python](https://www.python.org/)

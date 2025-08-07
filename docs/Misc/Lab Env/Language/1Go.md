@@ -6,7 +6,7 @@ Build simple, secure, scalable systems with Go.
 
 ```
 ┌──(sec@debian)-[~]
-└─$ curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/go_install.sh | bash
+└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/go_install.sh | bash
 ```
 
 加载环境变量
@@ -47,11 +47,11 @@ func main() {
 
 ```
 
-> 使用 vscode 打开后安装相关插件 Go 和 Code Runner
+> 使用 Visual Studio Code 打开后安装相关插件 Go 和 Code Runner
 
 ---
 
 References
 
-- [go](https://go.dev/)
+- [Go](https://go.dev/)
 
