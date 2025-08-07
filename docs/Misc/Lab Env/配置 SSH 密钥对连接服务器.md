@@ -56,7 +56,7 @@ Status   Name               DisplayName
 Running  ssh-agent          Openssh Authentication Agent
 ```
 
-保存 SSH 私钥到 ssh-agent
+保存 SSH 私钥到 SSH Agent
 
 ```
 PS C:\Users\sec> ssh-add $env:USERPROFILE\.ssh\ssh_test
