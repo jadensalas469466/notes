@@ -241,6 +241,7 @@ Shut down, Take Snapshot: `deploy`
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |           [Proxifier](https://www.proxifier.com/)            |
+|              [Python](https://www.python.org/)               |
 |         [qBittorrent](https://www.qbittorrent.org/)          |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |

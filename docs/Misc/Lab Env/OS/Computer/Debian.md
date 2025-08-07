@@ -350,7 +350,6 @@ sec@debian:~$ sudo shutdown -h now
 | [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
-|                          interactsh                          |
 
 Take Snapshot: `deploy` 
 
@@ -370,6 +369,8 @@ Take Snapshot: `deploy`
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
 | [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
 | [tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
+| [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
+| [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh) |
 
 ## 6. Usage
 
