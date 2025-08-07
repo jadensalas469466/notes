@@ -7,6 +7,13 @@ Tcpdump 抓包查看三次握手的过程
 | -I   | 指定要接口（默认抓取第一个网络接口）     |
 | port | 指定端口                                 |
 
+安装
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo apt install -y tcpdump
+```
+
 抓取 ssh 远程登录Kali时，产生的 tcp 三次握手包
 
 ```
@@ -98,5 +105,5 @@ C:\Users\Windows 10>netstat -ano | findstr "ESTABLISHED"
 
 References
 
-- [Tcpdump](https://www.kali.org/tools/tcpdump/)
+- [tcpdump](https://www.kali.org/tools/tcpdump/)
 
