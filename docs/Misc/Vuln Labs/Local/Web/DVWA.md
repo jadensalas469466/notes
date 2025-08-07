@@ -248,3 +248,5 @@ http://centos7-6.local/dvwa/vulnerabilities/xss_d/?default=English#<script src="
 References
 
 - [DVWA](https://github.com/digininja/DVWA)
+
+1
