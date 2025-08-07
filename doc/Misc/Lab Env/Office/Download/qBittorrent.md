@@ -8,7 +8,7 @@ The qBittorrent project aims to provide an open-source software alternative to �
 https://cf.trackerslist.com/best.txt
 ```
 
-![添加 Tracker 列表](./../../../../../images/qBittorrent/%E6%B7%BB%E5%8A%A0%20Tracker%20%E5%88%97%E8%A1%A8.png)
+![添加 Tracker 列表](./../../../../../image/qBittorrent/%E6%B7%BB%E5%8A%A0%20Tracker%20%E5%88%97%E8%A1%A8.png)
 
 ---
 

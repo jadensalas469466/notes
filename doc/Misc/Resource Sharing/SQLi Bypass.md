@@ -89,15 +89,15 @@
 
 将黑客和目标虚拟机切换至仅主机模式
 
-![将虚拟机切换至仅主机模式](./../../../images/SQLi%20Bypass/%E5%B0%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%87%E6%8D%A2%E8%87%B3%E4%BB%85%E4%B8%BB%E6%9C%BA%E6%A8%A1%E5%BC%8F.png)
+![将虚拟机切换至仅主机模式](./../../../image/SQLi%20Bypass/%E5%B0%86%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%88%87%E6%8D%A2%E8%87%B3%E4%BB%85%E4%B8%BB%E6%9C%BA%E6%A8%A1%E5%BC%8F.png)
 
 安装 vc 运行库
 
-![安装 vc 运行库](./../../../images/SQLi%20Bypass/%E5%AE%89%E8%A3%85%20vc%20%E8%BF%90%E8%A1%8C%E5%BA%93.png)
+![安装 vc 运行库](./../../../image/SQLi%20Bypass/%E5%AE%89%E8%A3%85%20vc%20%E8%BF%90%E8%A1%8C%E5%BA%93.png)
 
 安装 phpStudy
 
-![安装 phpStudy](./../../../images/SQLi%20Bypass/%E5%AE%89%E8%A3%85%20phpStudy.png)
+![安装 phpStudy](./../../../image/SQLi%20Bypass/%E5%AE%89%E8%A3%85%20phpStudy.png)
 
 将 sqli-labs 放入站点目录
 
@@ -130,7 +130,7 @@ $dbname1 = "challenges";
 
 启动 phpStudy
 
-![启动 phpStudy](./../../../images/SQLi%20Bypass/%E5%90%AF%E5%8A%A8%20phpStudy.png)
+![启动 phpStudy](./../../../image/SQLi%20Bypass/%E5%90%AF%E5%8A%A8%20phpStudy.png)
 
 查看 IP 地址
 
@@ -158,35 +158,35 @@ Windows IP 配置
 
 点击安装数据库
 
-![点击安装数据库](./../../../images/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E5%AE%89%E8%A3%85%E6%95%B0%E6%8D%AE%E5%BA%93.png)
+![点击安装数据库](./../../../image/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E5%AE%89%E8%A3%85%E6%95%B0%E6%8D%AE%E5%BA%93.png)
 
 成功安装
 
-![成功安装](./../../../images/SQLi%20Bypass/%E6%88%90%E5%8A%9F%E5%AE%89%E8%A3%85.png)
+![成功安装](./../../../image/SQLi%20Bypass/%E6%88%90%E5%8A%9F%E5%AE%89%E8%A3%85.png)
 
 测试关卡
 
 > http://192.168.186.129/sqli-labs/Less-1/
 
-![测试关卡](./../../../images/SQLi%20Bypass/%E6%B5%8B%E8%AF%95%E5%85%B3%E5%8D%A1.png)
+![测试关卡](./../../../image/SQLi%20Bypass/%E6%B5%8B%E8%AF%95%E5%85%B3%E5%8D%A1.png)
 
 注入成功
 
-![注入成功](./../../../images/SQLi%20Bypass/%E6%B3%A8%E5%85%A5%E6%88%90%E5%8A%9F.png)
+![注入成功](./../../../image/SQLi%20Bypass/%E6%B3%A8%E5%85%A5%E6%88%90%E5%8A%9F.png)
 
 将 phpStudy 切换为系统服务模式
 
-![将 phpStudy 切换为系统服务模式](./../../../images/SQLi%20Bypass/%E5%B0%86%20phpStudy%20%E5%88%87%E6%8D%A2%E4%B8%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E6%A8%A1%E5%BC%8F.png)
+![将 phpStudy 切换为系统服务模式](./../../../image/SQLi%20Bypass/%E5%B0%86%20phpStudy%20%E5%88%87%E6%8D%A2%E4%B8%BA%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1%E6%A8%A1%E5%BC%8F.png)
 
 在任务管理器-服务中查找 `apache` 或 `httpd` 服务
 
-![在任务管理器-服务中查找 apache 或 httpd 服务](./../../../images/SQLi%20Bypass/%E5%9C%A8%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E6%9C%8D%E5%8A%A1%E4%B8%AD%E6%9F%A5%E6%89%BE%20apache%20%E6%88%96%20httpd%20%E6%9C%8D%E5%8A%A1.png)
+![在任务管理器-服务中查找 apache 或 httpd 服务](./../../../image/SQLi%20Bypass/%E5%9C%A8%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8-%E6%9C%8D%E5%8A%A1%E4%B8%AD%E6%9F%A5%E6%89%BE%20apache%20%E6%88%96%20httpd%20%E6%9C%8D%E5%8A%A1.png)
 
 >  若找不到则需要手动创建
 
 停止 phpStudy
 
-![停止 phpStudy](./../../../images/SQLi%20Bypass/%E5%81%9C%E6%AD%A2%20phpStudy.png)
+![停止 phpStudy](./../../../image/SQLi%20Bypass/%E5%81%9C%E6%AD%A2%20phpStudy.png)
 
 在管理员启动的 cmd 切换至对应的路径安装 apache 服务
 
@@ -208,23 +208,23 @@ Errors reported here must be corrected before the service can be started.
 
 启动 phpStudy ,管理员权限运行安全狗安装包
 
-![管理员权限运行安全狗安装包](./../../../images/SQLi%20Bypass/%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8%E7%8B%97%E5%AE%89%E8%A3%85%E5%8C%85.png)
+![管理员权限运行安全狗安装包](./../../../image/SQLi%20Bypass/%E7%AE%A1%E7%90%86%E5%91%98%E6%9D%83%E9%99%90%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8%E7%8B%97%E5%AE%89%E8%A3%85%E5%8C%85.png)
 
 确认相关信息
 
-![确认相关信息](./../../../images/SQLi%20Bypass/%E7%A1%AE%E8%AE%A4%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF.png)
+![确认相关信息](./../../../image/SQLi%20Bypass/%E7%A1%AE%E8%AE%A4%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF.png)
 
 由于安装缓慢，可以停止 phpStudy ，安装狗之后会自动启动服务并完成安装
 
-![由于安装缓慢，可以停止 phpStudy ，安装狗之后会自动启动服务并完成安装](./../../../images/SQLi%20Bypass/%E7%94%B1%E4%BA%8E%E5%AE%89%E8%A3%85%E7%BC%93%E6%85%A2%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%81%9C%E6%AD%A2%20phpStudy%20%EF%BC%8C%E5%AE%89%E8%A3%85%E7%8B%97%E4%B9%8B%E5%90%8E%E4%BC%9A%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%B9%B6%E5%AE%8C%E6%88%90%E5%AE%89%E8%A3%85.png)
+![由于安装缓慢，可以停止 phpStudy ，安装狗之后会自动启动服务并完成安装](./../../../image/SQLi%20Bypass/%E7%94%B1%E4%BA%8E%E5%AE%89%E8%A3%85%E7%BC%93%E6%85%A2%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%81%9C%E6%AD%A2%20phpStudy%20%EF%BC%8C%E5%AE%89%E8%A3%85%E7%8B%97%E4%B9%8B%E5%90%8E%E4%BC%9A%E8%87%AA%E5%8A%A8%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1%E5%B9%B6%E5%AE%8C%E6%88%90%E5%AE%89%E8%A3%85.png)
 
 安装完成后点击启动 phpStudy 以启动 mysql
 
-![安装完成后点击启动 phpStudy 以启动 mysql](./../../../images/SQLi%20Bypass/%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E7%82%B9%E5%87%BB%E5%90%AF%E5%8A%A8%20phpStudy%20%E4%BB%A5%E5%90%AF%E5%8A%A8%20mysql.png)
+![安装完成后点击启动 phpStudy 以启动 mysql](./../../../image/SQLi%20Bypass/%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E7%82%B9%E5%87%BB%E5%90%AF%E5%8A%A8%20phpStudy%20%E4%BB%A5%E5%90%AF%E5%8A%A8%20mysql.png)
 
 启动安全狗
 
-![启动安全狗](./../../../images/SQLi%20Bypass/%E5%90%AF%E5%8A%A8%E5%AE%89%E5%85%A8%E7%8B%97.png)
+![启动安全狗](./../../../image/SQLi%20Bypass/%E5%90%AF%E5%8A%A8%E5%AE%89%E5%85%A8%E7%8B%97.png)
 
 测试链接
 
@@ -232,7 +232,7 @@ Errors reported here must be corrected before the service can be started.
 
 可以看到拦截页面
 
-![可以看到拦截页面](./../../../images/SQLi%20Bypass/%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%8B%A6%E6%88%AA%E9%A1%B5%E9%9D%A2.png)
+![可以看到拦截页面](./../../../image/SQLi%20Bypass/%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%8B%A6%E6%88%AA%E9%A1%B5%E9%9D%A2.png)
 
 ### 1.1 旧版本的安全狗绕过
 
@@ -314,7 +314,7 @@ http://192.168.186.129/sqli-labs/Less-1/?id=1 and if(
 http://192.168.186.129/sqli-labs/Less-1/?id=1 /*!11440and*/ if(
 ```
 
-![添加条件判断注释](./../../../images/SQLi%20Bypass/%E6%B7%BB%E5%8A%A0%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E6%B3%A8%E9%87%8A.png)
+![添加条件判断注释](./../../../image/SQLi%20Bypass/%E6%B7%BB%E5%8A%A0%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E6%B3%A8%E9%87%8A.png)
 
 > 成功绕过
 >
@@ -338,7 +338,7 @@ http://192.168.186.129/sqli-labs/Less-1/?id=1'and!if(ascii(substr(database/**/(/
 
 > 不拦截，但是时间与预期不符
 
-![在 and 后加 !](./../../../images/SQLi%20Bypass/%E5%9C%A8%20and%20%E5%90%8E%E5%8A%A0%20!.png)
+![在 and 后加 !](./../../../image/SQLi%20Bypass/%E5%9C%A8%20and%20%E5%90%8E%E5%8A%A0%20!.png)
 
 在 and 后再加两个 `!` 
 
@@ -346,7 +346,7 @@ http://192.168.186.129/sqli-labs/Less-1/?id=1'and!if(ascii(substr(database/**/(/
 http://192.168.186.129/sqli-labs/Less-1/?id=1'and!!!if(ascii(substr(database/**/(/*!*/),1,1))>116,1,sleep/**/(/*!3*/))--+
 ```
 
-![在 and 后再加两个 !](./../../../images/SQLi%20Bypass/%E5%9C%A8%20and%20%E5%90%8E%E5%86%8D%E5%8A%A0%E4%B8%A4%E4%B8%AA%20!.png)
+![在 and 后再加两个 !](./../../../image/SQLi%20Bypass/%E5%9C%A8%20and%20%E5%90%8E%E5%86%8D%E5%8A%A0%E4%B8%A4%E4%B8%AA%20!.png)
 
 > 成功绕过
 >
@@ -390,31 +390,31 @@ http://192.168.186.129/sqli-labs/Less-1/?id=-1' /*!11440union*//*12*//*!11440sel
 
 在 HackBar 提交
 
-![在 HackBar 提交](./../../../images/SQLi%20Bypass/%E5%9C%A8%20HackBar%20%E6%8F%90%E4%BA%A4.png)
+![在 HackBar 提交](./../../../image/SQLi%20Bypass/%E5%9C%A8%20HackBar%20%E6%8F%90%E4%BA%A4.png)
 
 将请求发送到 Intruder 标注注释中的 1 和 2 为 payload
 
-![将请求发送到 Intruder 标注注释中的 1 和 2 为 payload](./../../../images/SQLi%20Bypass/%E5%B0%86%E8%AF%B7%E6%B1%82%E5%8F%91%E9%80%81%E5%88%B0%20Intruder%20%E6%A0%87%E6%B3%A8%E6%B3%A8%E9%87%8A%E4%B8%AD%E7%9A%84%201%20%E5%92%8C%202%20%E4%B8%BA%20payload.png)
+![将请求发送到 Intruder 标注注释中的 1 和 2 为 payload](./../../../image/SQLi%20Bypass/%E5%B0%86%E8%AF%B7%E6%B1%82%E5%8F%91%E9%80%81%E5%88%B0%20Intruder%20%E6%A0%87%E6%B3%A8%E6%B3%A8%E9%87%8A%E4%B8%AD%E7%9A%84%201%20%E5%92%8C%202%20%E4%B8%BA%20payload.png)
 
 攻击类型选择集束炸弹
 
-![攻击类型选择集束炸弹](./../../../images/SQLi%20Bypass/%E6%94%BB%E5%87%BB%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%E9%9B%86%E6%9D%9F%E7%82%B8%E5%BC%B9.png)
+![攻击类型选择集束炸弹](./../../../image/SQLi%20Bypass/%E6%94%BB%E5%87%BB%E7%B1%BB%E5%9E%8B%E9%80%89%E6%8B%A9%E9%9B%86%E6%9D%9F%E7%82%B8%E5%BC%B9.png)
 
 分别设置 1 和 2 的 Payload 类型设置为简单列表，并在列表中添加所有 mysql 支持的特殊字符
 
-![分别设置 1 和 2 的 Payload 类型设置为简单列表，并在列表中添加所有 mysql 支持的特殊字符](./../../../images/SQLi%20Bypass/%E5%88%86%E5%88%AB%E8%AE%BE%E7%BD%AE%201%20%E5%92%8C%202%20%E7%9A%84%20Payload%20%E7%B1%BB%E5%9E%8B%E8%AE%BE%E7%BD%AE%E4%B8%BA%E7%AE%80%E5%8D%95%E5%88%97%E8%A1%A8%EF%BC%8C%E5%B9%B6%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%89%80%E6%9C%89%20mysql%20%E6%94%AF%E6%8C%81%E7%9A%84%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6.png)
+![分别设置 1 和 2 的 Payload 类型设置为简单列表，并在列表中添加所有 mysql 支持的特殊字符](./../../../image/SQLi%20Bypass/%E5%88%86%E5%88%AB%E8%AE%BE%E7%BD%AE%201%20%E5%92%8C%202%20%E7%9A%84%20Payload%20%E7%B1%BB%E5%9E%8B%E8%AE%BE%E7%BD%AE%E4%B8%BA%E7%AE%80%E5%8D%95%E5%88%97%E8%A1%A8%EF%BC%8C%E5%B9%B6%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%89%80%E6%9C%89%20mysql%20%E6%94%AF%E6%8C%81%E7%9A%84%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6.png)
 
 取消 URL 编码
 
-![取消 URL 编码](./../../../images/SQLi%20Bypass/%E5%8F%96%E6%B6%88%20URL%20%E7%BC%96%E7%A0%81.png)
+![取消 URL 编码](./../../../image/SQLi%20Bypass/%E5%8F%96%E6%B6%88%20URL%20%E7%BC%96%E7%A0%81.png)
 
 清空检索 - 匹配
 
-![清空检索 - 匹配](./../../../images/SQLi%20Bypass/%E6%B8%85%E7%A9%BA%E6%A3%80%E7%B4%A2%20-%20%E5%8C%B9%E9%85%8D.png)
+![清空检索 - 匹配](./../../../image/SQLi%20Bypass/%E6%B8%85%E7%A9%BA%E6%A3%80%E7%B4%A2%20-%20%E5%8C%B9%E9%85%8D.png)
 
 开始攻击，查看结果，按长度排序
 
-![开始攻击，查看结果，按长度排序](./../../../images/SQLi%20Bypass/%E5%BC%80%E5%A7%8B%E6%94%BB%E5%87%BB%EF%BC%8C%E6%9F%A5%E7%9C%8B%E7%BB%93%E6%9E%9C%EF%BC%8C%E6%8C%89%E9%95%BF%E5%BA%A6%E6%8E%92%E5%BA%8F.png)
+![开始攻击，查看结果，按长度排序](./../../../image/SQLi%20Bypass/%E5%BC%80%E5%A7%8B%E6%94%BB%E5%87%BB%EF%BC%8C%E6%9F%A5%E7%9C%8B%E7%BB%93%E6%9E%9C%EF%BC%8C%E6%8C%89%E9%95%BF%E5%BA%A6%E6%8E%92%E5%BA%8F.png)
 
 > 发现大多数为 5335（与失败的结果相同），只有少量的 1005 和 1024，手动测试这几个即可
 
@@ -424,7 +424,7 @@ http://192.168.186.129/sqli-labs/Less-1/?id=-1' /*!11440union*//*12*//*!11440sel
 http://192.168.186.129/sqli-labs/Less-1/?id=-1' /*!11440union*//*/!*//*!11440select*/ 1,2,3 --+
 ```
 
-![提交成功的特殊符号手动测试](./../../../images/SQLi%20Bypass/%E6%8F%90%E4%BA%A4%E6%88%90%E5%8A%9F%E7%9A%84%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E6%B5%8B%E8%AF%95.png)
+![提交成功的特殊符号手动测试](./../../../image/SQLi%20Bypass/%E6%8F%90%E4%BA%A4%E6%88%90%E5%8A%9F%E7%9A%84%E7%89%B9%E6%AE%8A%E7%AC%A6%E5%8F%B7%E6%89%8B%E5%8A%A8%E6%B5%8B%E8%AF%95.png)
 
 > 成功绕过
 >
@@ -478,27 +478,27 @@ admin
 
 以管理员身份运行安全狗
 
-![以管理员身份运行安全狗](./../../../images/SQLi%20Bypass/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8%E7%8B%97.png)
+![以管理员身份运行安全狗](./../../../image/SQLi%20Bypass/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E8%BF%90%E8%A1%8C%E5%AE%89%E5%85%A8%E7%8B%97.png)
 
 点击网站防护
 
-![点击网站防护](./../../../images/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E7%BD%91%E7%AB%99%E9%98%B2%E6%8A%A4.png)
+![点击网站防护](./../../../image/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E7%BD%91%E7%AB%99%E9%98%B2%E6%8A%A4.png)
 
 点击阻止并记录
 
-![点击阻止并记录](./../../../images/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E9%98%BB%E6%AD%A2%E5%B9%B6%E8%AE%B0%E5%BD%95.png)
+![点击阻止并记录](./../../../image/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E9%98%BB%E6%AD%A2%E5%B9%B6%E8%AE%B0%E5%BD%95.png)
 
 防止 SQL 联合查询
 
-![防止 SQL 联合查询](./../../../images/SQLi%20Bypass/%E9%98%B2%E6%AD%A2%20SQL%20%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2.png)
+![防止 SQL 联合查询](./../../../image/SQLi%20Bypass/%E9%98%B2%E6%AD%A2%20SQL%20%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2.png)
 
 检测 POST
 
-![检测 POST](./../../../images/SQLi%20Bypass/%E6%A3%80%E6%B5%8B%20POST.png)
+![检测 POST](./../../../image/SQLi%20Bypass/%E6%A3%80%E6%B5%8B%20POST.png)
 
 重启 phpStudy，在重放器中再次发送 POST 请求数据包
 
-![重启 phpStudy，在重放器中再次发送 POST 请求数据包](./../../../images/SQLi%20Bypass/%E9%87%8D%E5%90%AF%20phpStudy%EF%BC%8C%E5%9C%A8%E9%87%8D%E6%94%BE%E5%99%A8%E4%B8%AD%E5%86%8D%E6%AC%A1%E5%8F%91%E9%80%81%20POST%20%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E5%8C%85.png)
+![重启 phpStudy，在重放器中再次发送 POST 请求数据包](./../../../image/SQLi%20Bypass/%E9%87%8D%E5%90%AF%20phpStudy%EF%BC%8C%E5%9C%A8%E9%87%8D%E6%94%BE%E5%99%A8%E4%B8%AD%E5%86%8D%E6%AC%A1%E5%8F%91%E9%80%81%20POST%20%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
 > 发现请求被拦截
 
@@ -508,17 +508,17 @@ admin
 
 1. 垃圾数据与前一行空一行
 
-   ![垃圾数据与前一行空一行](./../../../images/SQLi%20Bypass/%E5%9E%83%E5%9C%BE%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%89%8D%E4%B8%80%E8%A1%8C%E7%A9%BA%E4%B8%80%E8%A1%8C.png)
+   ![垃圾数据与前一行空一行](./../../../image/SQLi%20Bypass/%E5%9E%83%E5%9C%BE%E6%95%B0%E6%8D%AE%E4%B8%8E%E5%89%8D%E4%B8%80%E8%A1%8C%E7%A9%BA%E4%B8%80%E8%A1%8C.png)
 
 2. 垃圾数据的结尾必须为 &，而且不能有换行
 
-   ![垃圾数据的结尾必须为 &，而且不能有换行](./../../../images/SQLi%20Bypass/%E5%9E%83%E5%9C%BE%E6%95%B0%E6%8D%AE%E7%9A%84%E7%BB%93%E5%B0%BE%E5%BF%85%E9%A1%BB%E4%B8%BA%20&%EF%BC%8C%E8%80%8C%E4%B8%94%E4%B8%8D%E8%83%BD%E6%9C%89%E6%8D%A2%E8%A1%8C.png)
+   ![垃圾数据的结尾必须为 &，而且不能有换行](./../../../image/SQLi%20Bypass/%E5%9E%83%E5%9C%BE%E6%95%B0%E6%8D%AE%E7%9A%84%E7%BB%93%E5%B0%BE%E5%BF%85%E9%A1%BB%E4%B8%BA%20&%EF%BC%8C%E8%80%8C%E4%B8%94%E4%B8%8D%E8%83%BD%E6%9C%89%E6%8D%A2%E8%A1%8C.png)
 
    > 用脚本生成的默认就是  & 结尾
 
 再次发送
 
-![再次发送](./../../../images/SQLi%20Bypass/%E5%86%8D%E6%AC%A1%E5%8F%91%E9%80%81.png)
+![再次发送](./../../../image/SQLi%20Bypass/%E5%86%8D%E6%AC%A1%E5%8F%91%E9%80%81.png)
 
 > 成功绕过
 
@@ -532,27 +532,27 @@ admin
 
 在扩展中选中扩展文件
 
-![在扩展中选中扩展文件](./../../../images/SQLi%20Bypass/%E5%9C%A8%E6%89%A9%E5%B1%95%E4%B8%AD%E9%80%89%E4%B8%AD%E6%89%A9%E5%B1%95%E6%96%87%E4%BB%B6.png)
+![在扩展中选中扩展文件](./../../../image/SQLi%20Bypass/%E5%9C%A8%E6%89%A9%E5%B1%95%E4%B8%AD%E9%80%89%E4%B8%AD%E6%89%A9%E5%B1%95%E6%96%87%E4%BB%B6.png)
 
 点击下一个
 
-![点击下一个](./../../../images/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E4%B8%AA.png)
+![点击下一个](./../../../image/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E4%B8%8B%E4%B8%80%E4%B8%AA.png)
 
 点击关闭
 
-![点击关闭](./../../../images/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E5%85%B3%E9%97%AD.png)
+![点击关闭](./../../../image/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E5%85%B3%E9%97%AD.png)
 
 勾选 Chunked coding converter 以加载
 
-![勾选 Chunked coding converter 以加载](./../../../images/SQLi%20Bypass/%E5%8B%BE%E9%80%89%20Chunked%20coding%20converter%20%E4%BB%A5%E5%8A%A0%E8%BD%BD.png)
+![勾选 Chunked coding converter 以加载](./../../../image/SQLi%20Bypass/%E5%8B%BE%E9%80%89%20Chunked%20coding%20converter%20%E4%BB%A5%E5%8A%A0%E8%BD%BD.png)
 
 查看扩展配置
 
-![查看扩展配置](./../../../images/SQLi%20Bypass/%E6%9F%A5%E7%9C%8B%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.png)
+![查看扩展配置](./../../../image/SQLi%20Bypass/%E6%9F%A5%E7%9C%8B%E6%89%A9%E5%B1%95%E9%85%8D%E7%BD%AE.png)
 
 只开启代理即可
 
-![只开启代理即可](./../../../images/SQLi%20Bypass/%E5%8F%AA%E5%BC%80%E5%90%AF%E4%BB%A3%E7%90%86%E5%8D%B3%E5%8F%AF.png)
+![只开启代理即可](./../../../image/SQLi%20Bypass/%E5%8F%AA%E5%BC%80%E5%90%AF%E4%BB%A3%E7%90%86%E5%8D%B3%E5%8F%AF.png)
 
 > 其中分块大小表示将请求体数据每段大小，注释长度表示添加的数据大小
 >
@@ -560,11 +560,11 @@ admin
 
 点击编码请求体
 
-![点击编码请求体](./../../../images/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E7%BC%96%E7%A0%81%E8%AF%B7%E6%B1%82%E4%BD%93.png)
+![点击编码请求体](./../../../image/SQLi%20Bypass/%E7%82%B9%E5%87%BB%E7%BC%96%E7%A0%81%E8%AF%B7%E6%B1%82%E4%BD%93.png)
 
 发送请求数据包
 
-![发送请求数据包](./../../../images/SQLi%20Bypass/%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E5%8C%85.png)
+![发送请求数据包](./../../../image/SQLi%20Bypass/%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
 > 可以看到成功绕过
 >
@@ -574,7 +574,7 @@ admin
 
 在 BurpSuite 添加一个可被 Kali 访问的代理
 
-![在 BurpSuite 添加一个可被 Kali 访问的代理](./../../../images/SQLi%20Bypass/%E5%9C%A8%20BurpSuite%20%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%A2%AB%20Kali%20%E8%AE%BF%E9%97%AE%E7%9A%84%E4%BB%A3%E7%90%86.png)
+![在 BurpSuite 添加一个可被 Kali 访问的代理](./../../../image/SQLi%20Bypass/%E5%9C%A8%20BurpSuite%20%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%A2%AB%20Kali%20%E8%AE%BF%E9%97%AE%E7%9A%84%E4%BB%A3%E7%90%86.png)
 
 保存 BurpSuite 的请求数据包到 Kali 的 reg.txt
 
@@ -606,6 +606,6 @@ uname=1&passwd=2&submit=Submit
 └─# sqlmap -r reg.txt --technique U -p passwd --batch --proxy=http://192.168.1.16:8080
 ```
 
-![在 sqlmap 指定请求文件和代理爆破](./../../../images/SQLi%20Bypass/%E5%9C%A8%20sqlmap%20%E6%8C%87%E5%AE%9A%E8%AF%B7%E6%B1%82%E6%96%87%E4%BB%B6%E5%92%8C%E4%BB%A3%E7%90%86%E7%88%86%E7%A0%B4.png)
+![在 sqlmap 指定请求文件和代理爆破](./../../../image/SQLi%20Bypass/%E5%9C%A8%20sqlmap%20%E6%8C%87%E5%AE%9A%E8%AF%B7%E6%B1%82%E6%96%87%E4%BB%B6%E5%92%8C%E4%BB%A3%E7%90%86%E7%88%86%E7%A0%B4.png)
 
 > 可以看到经过扩展的请求体自动进行了分块处理
