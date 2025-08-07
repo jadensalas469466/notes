@@ -27,4 +27,4 @@ Possible Hashs:
 
 References
 
-- [hash-identifier](https://www.kali.org/tools/hash-identifier/#hash-identifier)
+- [hash-identifier](https://github.com/blackploit/hash-identifier)

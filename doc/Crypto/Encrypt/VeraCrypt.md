@@ -86,4 +86,4 @@
 
 References
 
-- [VeraCrypt](https://www.veracrypt.fr/en/Home.html)
+- [VeraCrypt](https://veracrypt.io/en/Home.html)
