@@ -338,7 +338,7 @@ sec@debian:~$ sudo shutdown -h now
 
 ## 5. Deploy
 
-|                            local                             |
+|                            Local                             |
 | :----------------------------------------------------------: |
 | [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxy) |
 | [Xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
@@ -360,7 +360,7 @@ Take Snapshot: `deploy`
 
 > 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) 
 
-|                            server                            |
+|                            Server                            |
 | :----------------------------------------------------------: |
 | [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
 | [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
