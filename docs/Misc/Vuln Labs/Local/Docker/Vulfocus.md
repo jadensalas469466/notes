@@ -69,4 +69,3 @@ References
 
 - [Vulfocus](https://fofapro.github.io/vulfocus/#/)
 
-1

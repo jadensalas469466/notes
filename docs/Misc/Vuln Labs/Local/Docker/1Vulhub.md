@@ -1,6 +1,6 @@
-综合靶场.
+综合靶场.1
 
-## 1. 安装
+## 1. Install
 
 克隆仓库
 
@@ -8,7 +8,7 @@
 git clone https://github.com/vulhub/vulhub.git
 ```
 
-## 2. 使用
+## 2. Usage
 
 查看漏洞环境
 
@@ -1341,4 +1341,4 @@ curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=sys
 
 References
 
-- [vulhub](https://github.com/vulhub/vulhub)
+- [Vulhub](https://vulhub.org/)
