@@ -45,4 +45,4 @@ Verbose Mode
 
 References
 
-- [interactsh](https://github.com/projectdiscovery/interactsh)
+- [Interactsh](https://github.com/projectdiscovery/interactsh)

@@ -358,7 +358,7 @@ Take Snapshot: `deploy`
 └─$ sudo shutdown -h now
 ```
 
-> 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+> 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) 
 
 |                            server                            |
 | :----------------------------------------------------------: |
