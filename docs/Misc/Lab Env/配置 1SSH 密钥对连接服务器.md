@@ -1,4 +1,4 @@
-1. 在客户端生成一对密钥 (公钥和私钥)
+1. 在客户端生成一对密钥 (公钥和私钥)1
 2. 将公钥复制到服务器的 `~/.ssh/authorized_keys` 文件中
 3. 启用密钥对登录并禁止密码登录
 4. 当客户端尝试连接服务器时, 服务器使用公钥验证客户端私钥的签名, 确保只有持有正确私钥的用户可以访问
@@ -17,7 +17,7 @@ Enter passphrase (empty for no passphrase):123456
 Enter same passphrase again:123456
 ```
 
-查看 ssh 密钥对
+查看 SSH 密钥对
 
 ```
 PS C:\Users\sec> ls C:\Users\sec\.ssh\
@@ -30,21 +30,21 @@ Mode                LastWriteTime         Length Name
 -a----        2024/10/24     21:44             94 ssh_test.pub
 ```
 
-## 2. 保存私钥到 ssh-agent
+## 2. 保存私钥到 SSH Agent
 
-运行 ssh-agent 服务
+运行 SSH Agent 服务
 
 ```
 PS C:\Users\sec> Start-Service ssh-agent
 ```
 
-配置 ssh-agent 服务开机自启
+配置 SSH Agent 服务开机自启
 
 ```
 PS C:\Users\sec> Get-Service ssh-agent | Set-Service -StartupType Automatic
 ```
 
-查看 ssh-agent 服务状态
+查看 SSH Agent 服务状态
 
 ```
 PS C:\Users\sec> Get-Service ssh-agent
@@ -56,7 +56,7 @@ Status   Name               DisplayName
 Running  ssh-agent          Openssh Authentication Agent
 ```
 
-保存 ssh 私钥到 ssh-agent
+保存 SSH 私钥到 ssh-agent
 
 ```
 PS C:\Users\sec> ssh-add $env:USERPROFILE\.ssh\ssh_test
@@ -67,19 +67,19 @@ Enter passphrase for C:\Users\sec\.ssh\ssh_test:123456
 Identity added: C:\Users\sec\.ssh\ssh_test (sec@desktop)
 ```
 
-> 列出 ssh-agent 中保存的私钥
+> 列出 SSH Agent 中保存的私钥
 >
 > ```
 > PS C:\Users\sec> ssh-add -l
 > ```
 >
-> 从 ssh-agent 中移除指定私钥
+> 从 SSH Agent 中移除指定私钥
 >
 > ```
 > PS C:\Users\sec> ssh-add -d $env:USERPROFILE\.ssh\ssh_test
 > ```
 >
-> 从 ssh-agent 中移除所有私钥
+> 从 SSH Agent 中移除所有私钥
 >
 > ```
 > PS C:\Users\sec> ssh-add -D
@@ -135,14 +135,14 @@ PS C:\Users\sec> Get-Content $env:USERPROFILE\.ssh\ssh_test.pub | Set-Clipboard
 57 PasswordAuthentication no
 ```
 
-重启 ssh 服务
+重启 SSH 服务
 
 ```
 ┌──(sec@debian)-[~]
 └─# sudo systemctl restart sshd.service
 ```
 
-> Windows 重启 ssh 服务: 
+> Windows 重启 SSH 服务: 
 >
 > ```
 > PS C:\Users\sec> Restart-Service sshd

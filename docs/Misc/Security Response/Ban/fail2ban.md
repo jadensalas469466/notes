@@ -1,4 +1,4 @@
-可以防止攻击者在短时间内对目标端口进行暴力破解.
+Daemon to ban hosts that cause multiple authentication errors
 
 ## 1. Install
 
