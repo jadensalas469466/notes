@@ -344,8 +344,8 @@ sec@debian:~$ sudo shutdown -h now
 | [Xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxychains-ng) |
 | [Git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
-| [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python/python) |
-| [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
+| [Python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
+| [Go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
 | [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
 | [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
