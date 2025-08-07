@@ -13,7 +13,7 @@ Port Forwarding Rules
 
 | Name     | Host Port | Guest Port |
 | -------- | --------- | ---------- |
-| vulfocus | 60088     | 60088      |
+| Vulfocus | 60088     | 60088      |
 
 Visit
 
@@ -67,5 +67,5 @@ Visit
 
 References
 
-- [vulfocus](https://fofapro.github.io/vulfocus/#/)
+- [Vulfocus](https://fofapro.github.io/vulfocus/#/)
 

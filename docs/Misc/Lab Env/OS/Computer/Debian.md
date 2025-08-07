@@ -349,7 +349,7 @@ sec@debian:~$ sudo shutdown -h now
 | [Docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
 | [MariaDB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [DVWA](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
-| [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
+| [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
 
 Take Snapshot: `deploy` 
 
