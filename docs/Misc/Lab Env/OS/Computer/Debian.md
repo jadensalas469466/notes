@@ -464,31 +464,29 @@ uname -r
 将命令行程序放在后台运行, 即使 SSH 断开连接也不会终止运行
 
 ```
-nohup <command> > /root/log.txt 2>&1 &
+┌──(sec@debian)-[~]
+└─$ nohup <command> > ~/nohup.log 2>&1 & echo $! > ~/pid.log
 ```
-
-```
-PID
-```
-
-查看后台程序
-
-```
-jobs
-```
-
-> 在当前终端关闭后将失效
 
 实时查看日志
 
 ```
-tail -f /root/log.txt
+┌──(sec@debian)-[~]
+└─$ tail -f ~/nohup.log
+```
+
+查看 PID
+
+```
+┌──(sec@debian)-[~]
+└─$ cat  ~/pid.log
 ```
 
 终止进程
 
 ```
-kill -9 <PID>
+┌──(sec@debian)-[~]
+└─$ kill -9 <PID>
 ```
 
 ### 6.6. 配置全局代理
