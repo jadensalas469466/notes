@@ -362,7 +362,7 @@ Take Snapshot: `deploy`
 
 |                            server                            |
 | :----------------------------------------------------------: |
-| [配置 ssh 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
+| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
 | [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
 | [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban) |
 | [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/v2ray-agent) |
