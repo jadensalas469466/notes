@@ -341,7 +341,7 @@ sec@debian:~$ sudo shutdown -h now
 |                            local                             |
 | :----------------------------------------------------------: |
 | [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxy) |
-| [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
+| [Xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxychains-ng) |
 | [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
 | [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python/python) |

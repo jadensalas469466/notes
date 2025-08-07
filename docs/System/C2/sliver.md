@@ -6,7 +6,7 @@ Adversary Emulation Framework.
 
 ```
 ┌──(sec@debian)-[~]
-└─$ curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/sliver_install.sh | bash
+└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/sliver_install.sh | bash
 ```
 
 ## 2. Usage

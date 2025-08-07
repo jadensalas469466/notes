@@ -6,7 +6,7 @@
 
 ```
 ┌──(sec@debian)-[~]
-└─$ curl -fsSL https://github.com/jadensalas469466/scripts/raw/main/proxy_install.sh | bash
+└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/proxy_install.sh | bash
 ```
 
 加载环境变量
