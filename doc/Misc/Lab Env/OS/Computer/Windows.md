@@ -424,7 +424,7 @@ The command completed successfully.
 
 ### 6.7 文件权限
 
-![文件权限](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
+![文件权限](./../../../../../image/Windows/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
 
 ### 6.8 查看进程
 
@@ -442,7 +442,7 @@ C:\Users\Administrator> wmic os get osarchitecture
 
 添加环境变量
 
-![添加环境变量](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
+![添加环境变量](./../../../../../image/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 > 添加多个变量时使用 `;` 间隔
 >
@@ -459,7 +459,7 @@ PS C:\Users\sec> dir C:\Windows\Temp
 
 ### 6.12 添加快捷访问
 
-![添加快捷访问](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
+![添加快捷访问](./../../../../../image/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
 
 ### 6.13 查看网络
 
@@ -513,7 +513,7 @@ PS C:\Users\sec> wslconfig /l
 
 关闭虚拟机平台
 
-![关闭虚拟机平台](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
+![关闭虚拟机平台](./../../../../../image/Windows/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
 
 ### 6.17 删除
 
@@ -533,15 +533,15 @@ Remove-Item "C:\path\to\directory" -Recurse
 
 双击证书文件安装
 
-![双击证书文件安装](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E5%8F%8C%E5%87%BB%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85.png)
+![双击证书文件安装](./../../../../../image/Windows/%E4%BD%BF%E7%94%A8/%E5%8F%8C%E5%87%BB%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85.png)
 
 选择安装到当前用户
 
-![选择安装到当前用户](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%88%B0%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7.png)
+![选择安装到当前用户](./../../../../../image/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%88%B0%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7.png)
 
 选择存储到受信任的根证书颁发机构
 
-![选择存储到受信任的根证书颁发机构](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
+![选择存储到受信任的根证书颁发机构](./../../../../../image/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
 
 ### 6.19 SSH 连接记录
 

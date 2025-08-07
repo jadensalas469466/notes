@@ -2,37 +2,37 @@
 
 选择安装全部 extcap
 
-![选择安装全部 extcap](./../../../images/Wireshark/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%85%A8%E9%83%A8%20extcap.png)
+![选择安装全部 extcap](./../../../image/Wireshark/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%85%A8%E9%83%A8%20extcap.png)
 
 关联文件
 
-![关联文件](./../../../images/Wireshark/%E5%85%B3%E8%81%94%E6%96%87%E4%BB%B6.png)
+![关联文件](./../../../image/Wireshark/%E5%85%B3%E8%81%94%E6%96%87%E4%BB%B6.png)
 
 安装 Npcap
 
-![安装 Npcap](./../../../images/Wireshark/%E5%AE%89%E8%A3%85%20Npcap.png)
+![安装 Npcap](./../../../image/Wireshark/%E5%AE%89%E8%A3%85%20Npcap.png)
 
 安装 USBPcap
 
-![安装 USBPcap](./../../../images/Wireshark/%E5%AE%89%E8%A3%85%20USBPcap.png)
+![安装 USBPcap](./../../../image/Wireshark/%E5%AE%89%E8%A3%85%20USBPcap.png)
 
 Npcap 支持捕获和处理 Wi-Fi 网络流量
 
-![Npcap 支持捕获和处理 Wi-Fi 网络流量](./../../../images/Wireshark/Npcap%20%E6%94%AF%E6%8C%81%E6%8D%95%E8%8E%B7%E5%92%8C%E5%A4%84%E7%90%86%20Wi-Fi%20%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F.png)
+![Npcap 支持捕获和处理 Wi-Fi 网络流量](./../../../image/Wireshark/Npcap%20%E6%94%AF%E6%8C%81%E6%8D%95%E8%8E%B7%E5%92%8C%E5%A4%84%E7%90%86%20Wi-Fi%20%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F.png)
 
 USBPcap 完整安装
 
-![USBPcap 完整安装](./../../../images/Wireshark/USBPcap%20%E5%AE%8C%E6%95%B4%E5%AE%89%E8%A3%85.png)
+![USBPcap 完整安装](./../../../image/Wireshark/USBPcap%20%E5%AE%8C%E6%95%B4%E5%AE%89%E8%A3%85.png)
 
 重启
 
-![重启](./../../../images/Wireshark/%E9%87%8D%E5%90%AF.png)
+![重启](./../../../image/Wireshark/%E9%87%8D%E5%90%AF.png)
 
 ## 2 初始化
 
 字体大小修改为 18
 
-![字体大小修改为 18](./../../../images/Wireshark/%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E4%BF%AE%E6%94%B9%E4%B8%BA%2018.png)
+![字体大小修改为 18](./../../../image/Wireshark/%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F%E4%BF%AE%E6%94%B9%E4%B8%BA%2018.png)
 
 ## 3 使用
 
@@ -63,11 +63,11 @@ wireshark 是一种常用的网络协议分析工具，它可以对网络中的�
 
 启动 wireshark
 
-![WireShark (1)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(1).png)
+![WireShark (1)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(1).png)
 
 选择有流量的网卡（在物理机中要用物理机网卡，any表示所有）
 
-![WireShark (2)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(2).png)
+![WireShark (2)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(2).png)
 
 ### 4.1 捕获过滤
 
@@ -96,15 +96,15 @@ oicq 以及 dns 都是基于 udp 的传输层之上的协议
 
 点开选项
 
-![WireShark (3)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(3).png)
+![WireShark (3)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(3).png)
 
 添加规则
 
-![WireShark (4)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(4).png)
+![WireShark (4)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(4).png)
 
 捕获流经 192.168.1.5 的数据包
 
-![WireShark (5)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(5).png)
+![WireShark (5)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(5).png)
 
 点击开始之后就会自动进行抓包
 
@@ -114,7 +114,7 @@ oicq 以及 dns 都是基于 udp 的传输层之上的协议
 
 显示符合条件的数据包，但依然捕获
 
-![WireShark (6)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(6).png)
+![WireShark (6)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(6).png)
 
 筛选源地址是 192.168.1.5 并且目的地址是 192.168.1.1
 
@@ -125,7 +125,7 @@ ip.src_host == 192.168.1.5 and ip.dst_host == 192.168.1.1
 
 `or 表示满足左右其中一个条件就会显示符合条件的数据包，and 表示左右 2 个条件都满足才会显示。`
 
-![WireShark (7)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(7).png)
+![WireShark (7)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(7).png)
 
 筛选192.168.1.5 和192.168.1.1 互相通信的数据包
 
@@ -133,7 +133,7 @@ ip.src_host == 192.168.1.5 and ip.dst_host == 192.168.1.1
 
 ip.addr == 192.168.1.5 && ip.addr == 192.168.1.1
 
-![WireShark (8)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(8).png)
+![WireShark (8)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(8).png)
 
 或者结合 () 使用
 
@@ -150,7 +150,7 @@ ip.addr == 192.168.1.5 && ip.addr == 192.168.1.1
 
 `关闭和开启混杂模式前，需要停止当前抓包。`
 
-![WireShark (9)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(9).png)
+![WireShark (9)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(9).png)
 
 `默认就是开启混杂模式。`
 
@@ -166,51 +166,51 @@ ip.addr == 192.168.1.5 && ip.addr == 192.168.1.1
 
 可在视图中选择显示样式
 
-![WireShark (10)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(10).png)
+![WireShark (10)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(10).png)
 
 在列头部上右键修改
 
-![WireShark (11)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(11).png)
+![WireShark (11)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(11).png)
 
 可在编辑→首选项中根据需要增改规则
 
-![WireShark (12)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(12).png)
+![WireShark (12)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(12).png)
 
 ### 5.2 统计
 
 ### 5.2.1 协议分级
 
-![WireShark (13)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(13).png)
+![WireShark (13)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(13).png)
 
 可排序
 
-![WireShark (14)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(14).png)
+![WireShark (14)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(14).png)
 
 ### 5.2.2 会话
 
-![WireShark (15)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(15).png)
+![WireShark (15)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(15).png)
 
 重点看 IPv4
 
-![WireShark (16)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(16).png)
+![WireShark (16)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(16).png)
 
 可通过传输对象过滤
 
-![WireShark (17)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(17).png)
+![WireShark (17)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(17).png)
 
 ### 5.2.3 端点
 
-![WireShark (18)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(18).png)
+![WireShark (18)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(18).png)
 
 分组长度（按照数据包大小排序）
 
-![WireShark (19)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(19).png)
+![WireShark (19)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(19).png)
 
 ### 5.2.4 追踪流
 
 右键追踪（从起点追踪）
 
-![WireShark (20)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(20).png)
+![WireShark (20)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(20).png)
 
 ### 5.3 ARP 协议
 
@@ -218,7 +218,7 @@ ip.addr == 192.168.1.5 && ip.addr == 192.168.1.1
 
 地址解析协议是一个通过解析网络层地址来找寻数据链路层地址的网络传输协议，它在 IPv4 中极其重要。ARP 是通过网络地址来定位 MAC 地址。
 
-![WireShark (21)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(21).png)
+![WireShark (21)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(21).png)
 
 info
 
@@ -228,7 +228,7 @@ Who has 192.168.1.5? Tell 192.168.1.1
 
 查看 Address Resolution Protocol (request) ARP 请求包内容：
 
-![WireShark (22)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(22).png)
+![WireShark (22)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(22).png)
 
 | 名称                                                         | 描述                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------ |
@@ -249,21 +249,21 @@ Who has 192.168.1.5? Tell 192.168.1.1
 
 把之前的数据包清空掉
 
-![WireShark (23)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(23).png)
+![WireShark (23)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(23).png)
 
 筛选 ICMP 协议的数据包
 
-![WireShark (24)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(24).png)
+![WireShark (24)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(24).png)
 
 `可以看到这是个 4 层的协议包`
 
 请求包
 
-![WireShark (25)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(25).png)
+![WireShark (25)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(25).png)
 
 应答包
 
-![WireShark (26)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(26).png)
+![WireShark (26)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(26).png)
 
 工作过程：
 
@@ -274,49 +274,49 @@ Who has 192.168.1.5? Tell 192.168.1.1
 
 `可以通过 Xshell 远程连接 Kali Linux 产生一个 TCP 协议数据包`
 
-![WireShark (27)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(27).png)
+![WireShark (27)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(27).png)
 
  SYN 数据包
 
-![WireShark (28)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(28).png)
+![WireShark (28)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(28).png)
 
 打开标志位的详细信息
 
-![WireShark (29)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(29).png)
+![WireShark (29)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(29).png)
 
 `这是一个 SYN 数据包，SYN=1 表示发送一个链接请求。这时 Seq 和 ACK 都是 0 。`
 
 第二个数据包
 
-![WireShark (30)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(30).png)
+![WireShark (30)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(30).png)
 
 Flags 位信息
 
-![WireShark (31)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(31).png)
+![WireShark (31)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(31).png)
 
 `服务端收到 SYN 连接请求返回的数据包 SYN=1,ACK=1 表示回应第一个 SYN 数据包。`
 
 看第三个数据包
 
-![WireShark (32)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(32).png)
+![WireShark (32)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(32).png)
 
 `到这里三次握手过程就结束了。`
 
 生成一个图表来观察数据交互的过程
 
-![WireShark (33)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(33).png)
+![WireShark (33)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(33).png)
 
 限制显示过滤器：使用显示过滤规则
 
 流类型：选择链接类型
 
-![WireShark (34)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(34).png)
+![WireShark (34)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(34).png)
 
 三次握手，四次挥手
 
-![WireShark (35)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(35).png)
+![WireShark (35)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(35).png)
 
-![WireShark (36)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(36).png)
+![WireShark (36)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(36).png)
 
 第一次挥手：
 
@@ -341,7 +341,7 @@ Flags 位信息
 
 HTTP 是 TCP 的上层协议，所以 TCP 的数据会包含 HTTP 协议的数据包
 
-![WireShark (37)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(37).png)
+![WireShark (37)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(37).png)
 
 `第 4 个和第 6 个是我们的 HTTP 数据包。`
 
@@ -364,9 +364,9 @@ HTTP 是 TCP 的上层协议，所以 TCP 的数据会包含 HTTP 协议的数�
 
 可右键追踪流
 
-![WireShark (38)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(38).png)
+![WireShark (38)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(38).png)
 
-![WireShark (39)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(39).png)
+![WireShark (39)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(39).png)
 
 ## 6 解决服务器被黑上不了网
 
@@ -414,7 +414,7 @@ From 192.168.1.1 (192.168.1.1) icmp_seq=1 Time to live exceeded		“超过生存
 
 使用 Wireshark 筛选 ICMP 协议
 
-![WireShark (40)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(40).png)
+![WireShark (40)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(40).png)
 
 ` 第一个包是发送了一个 ping 请求包 ttl=1
 然后收到了 192.168.1.1 返回给我们的数据包告诉我们超过数据包生存时间，数据包被丢弃`
@@ -426,7 +426,7 @@ From 192.168.1.1 (192.168.1.1) icmp_seq=1 Time to live exceeded		“超过生存
 └─# echo "2" > /proc/sys/net/ipv4/ip_default_ttl
 ```
 
-![WireShark (41)](./../../../images/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(41).png)
+![WireShark (41)](./../../../image/Wireshark/%E4%BD%BF%E7%94%A8/WireShark%20(41).png)
 
 `返回我们数据包被丢弃的源地址变成了 100.0.208.1 ，这证明了数据包在网络中已经到达了下一个网络设备才被丢弃，由此我们还判断出我们的运营商网关地址为 100.0.208.1 ，但是我们并没有到达目标主机。`
 
