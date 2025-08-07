@@ -9,7 +9,7 @@ Damn Vulnerable Web Application (DVWA).
 └─$ sudo apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php composer
 ```
 
-Enable `mod_rewrite`
+Enable `mod_rewrite` 
 
 ```
 ┌──(sec@debian)-[~]
@@ -76,7 +76,7 @@ Configure
 33 $_DVWA[ 'default_security_level' ] = getenv('DEFAULT_SECURITY_LEVEL') ?: 'low';
 ```
 
-Click `Create / Reset Database`
+Click `Create / Reset Database` 
 
 > http://127.0.0.1:60080/dvwa/setup.php
 
@@ -247,4 +247,4 @@ http://centos7-6.local/dvwa/vulnerabilities/xss_d/?default=English#<script src="
 
 References
 
-- [dvwa](https://github.com/digininja/DVWA)
+- [DVWA](https://github.com/digininja/DVWA)
