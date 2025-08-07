@@ -347,7 +347,7 @@ sec@debian:~$ sudo shutdown -h now
 | [Python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
 | [Go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
 | [Docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
-| [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
+| [MariaDB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
 

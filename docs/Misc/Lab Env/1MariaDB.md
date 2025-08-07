@@ -2,7 +2,7 @@ MariaDB Server: the innovative open source database.
 
 ## 1. Install
 
-安装 `mariadb` 
+安装
 
 ```
 ┌──(sec@debian)-[~]
@@ -12,7 +12,7 @@ MariaDB Server: the innovative open source database.
 
 ## 2. Init
 
-配置  `mysql` 
+配置密码
 
 ```
 ┌──(sec@debian)-[~]
@@ -176,5 +176,5 @@ MariaDB [security]> select * from users order by id desc;
 
 References
 
-- [mariadb](https://mariadb.org/)
+- [MariaDB](https://mariadb.org/)
 
