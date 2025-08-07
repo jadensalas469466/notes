@@ -1,4 +1,4 @@
-An OOB interaction gathering server and client library1
+An OOB interaction gathering server and client library
 
 ## 1. Install
 
