@@ -224,13 +224,11 @@ sec@debian:~$ su - root
 Configuring Apt Sources
 
 ```
-root@debian:~# nano /etc/apt/sources.list
-```
-
-```
+root@debian:~# cat << 'EOF' > /etc/apt/sources.list
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
+EOF
 ```
 
 Update the system
@@ -243,8 +241,10 @@ root@debian:~# apt update && apt full-upgrade \
 Install common tools
 
 ```
-root@debian:~# apt install -y vim curl passwd sudo tree unzip apache2 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
-zsh zsh-syntax-highlighting zsh-autosuggestions \
+root@debian:~# apt install -y curl vim passwd sudo tree unzip gnupg apache2 \
+build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
+gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor \
+zsh zsh-syntax-highlighting zsh-autosuggestions\
 && systemctl enable --now apache2.service \
 && usermod -aG sudo sec
 ```
@@ -252,12 +252,8 @@ zsh zsh-syntax-highlighting zsh-autosuggestions \
 Keep SSH session alive
 
 ```
-root@debian:~# nano -l /etc/ssh/sshd_config
-```
-
-```
- 99 ClientAliveInterval 60
-100 ClientAliveCountMax 60
+root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
+&& sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 60/' /etc/ssh/sshd_config
 ```
 
 Restart SSH service
@@ -276,18 +272,17 @@ root@debian:~# chsh -s $(which zsh) \
 Configuring Network
 
 ```
-root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable networking.service --now
+root@debian:~# systemctl disable NetworkManager --now || true \
+&& systemctl enable networking.service --now
 ```
 
 Change DNS servers
 
 ```
-root@debian:~# nano /etc/resolv.conf
-```
-
-```
+root@debian:~# cat << 'EOF' > /etc/resolv.conf
 nameserver 8.8.8.8
 nameserver 8.8.4.4
+EOF
 ```
 
 Restart
@@ -296,7 +291,21 @@ Restart
 root@debian:~# shutdown -r now
 ```
 
-Wait for the VM to start up, then reconnect SSH
+Wait for the VM to start up, then insert Guest Additions CD image
+
+```
+Enter
+```
+
+Custom Shortcuts
+
+```
+    Name: terminal
+ Command: gnome-terminal
+Shortcut: Ctrl + Alt +T
+```
+
+Reconnect SSH
 
 ```
 PS C:\Users\sec> ssh -p 60022 sec@127.0.0.1

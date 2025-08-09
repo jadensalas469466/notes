@@ -6,14 +6,16 @@ Damn Vulnerable Web Application (DVWA).
 
 ```
 ┌──(sec@debian)-[~]
-└─$ sudo apt install -y apache2 mariadb-server mariadb-client php php-mysqli php-gd libapache2-mod-php composer
+└─$ sudo apt install -y apache2 mariadb-server mariadb-client php php-mysql php-gd libapache2-mod-php composer
 ```
 
 Enable `mod_rewrite` 
 
 ```
 ┌──(sec@debian)-[~]
-└─$ sudo a2enmod rewrite && sudo systemctl restart apache2.service
+└─$ sudo systemctl enable --now apache2.service \
+&& sudo a2enmod rewrite \
+&& sudo systemctl restart apache2.service
 ```
 
 Clone

@@ -105,4 +105,3 @@ graph TD
 2{Decision} --A--> 3[Result1];
 2{Decision} --B--> 4[Result2];
 ```
-

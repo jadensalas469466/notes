@@ -23,14 +23,12 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 ```
 ┌──(sec@debian)-[~]
 └─$ sudo mkdir -p /etc/systemd/system/docker.service.d \
-&& sudo nano /etc/systemd/system/docker.service.d/http-proxy.conf
-```
-
-```
+&& cat << 'EOF' | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf > /dev/null
 [Service]
 Environment="HTTP_PROXY=http://127.0.0.1:10808"
 Environment="HTTPS_PROXY=http://127.0.0.1:10808"
 Environment="NO_PROXY=localhost,127.0.0.1,192.168.0.0/16,::1"
+EOF
 ```
 
 重启 Docker 加载配置
