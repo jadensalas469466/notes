@@ -7,7 +7,7 @@ Python is a programming language that lets you work quicklyand integrate systems
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ sudo apt install -y python3 python3-pip python3-venv python3-dev
 ```
 
@@ -22,12 +22,12 @@ Python is a programming language that lets you work quicklyand integrate systems
 配置镜像加速
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ python3 -m pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 ```
 
 ```
-PS C:\Users\sec> pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+PS C:\Users\nemo> pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 ```
 
 ## 3. Usage
@@ -37,29 +37,29 @@ PS C:\Users\sec> pip config set global.index-url "https://mirrors.tuna.tsinghua.
 创建虚拟环境
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ python3 -m venv ./venv
 ```
 
 ```
-PS C:\Users\sec> python -m venv .\venv
+PS C:\Users\nemo> python -m venv .\venv
 ```
 
 激活虚拟环境
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ source ./venv/bin/activate
 ```
 
 ```
-PS C:\Users\sec> .\venv\Scripts\Activate.ps1
+PS C:\Users\nemo> .\venv\Scripts\Activate.ps1
 ```
 
 > PowerShell 首次运行这行命令需先配置执行策略
 >
 > ```
-> PS C:\Users\sec> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+> PS C:\Users\nemo> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 > 
 > Execution Policy Change
 > The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
@@ -71,12 +71,12 @@ PS C:\Users\sec> .\venv\Scripts\Activate.ps1
 退出虚拟环境
 
 ```
-┌──(venv)─(sec@debian)-[~]
+┌──(venv)─(nemo@infosec)-[~]
 └─$ deactivate
 ```
 
 ```
-(venv) PS C:\Users\sec> deactivate
+(venv) PS C:\Users\nemo> deactivate
 ```
 
 ---

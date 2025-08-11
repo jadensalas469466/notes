@@ -10,7 +10,7 @@ Debian is a complete Free Operating System!
 Move the image file to the directory
 
 ```
-C:\Users\sec\VirtualBox VMs\iso
+C:\Users\nemo\VirtualBox VMs\iso
 ```
 
 Create Virtual Machine
@@ -18,8 +18,10 @@ Create Virtual Machine
 ```
 > Name and Operating System
 Name: debian
-Folder: C:\Users\sec\VirtualBox VMs
-ISO lmage: C:\Users\sec\VirtualBox VMs\iso\debian-amd64-DVD-1.iso
+Folder: C:\Users\nemo\VirtualBox VMs
+ISO lmage: C:\Users\nemo\VirtualBox VMs\iso\debian-amd64-DVD.iso
+Type: Linux
+Subtype: Debian
 Version: Debian (64-bit)
 ☑ Skip Unattended Installation
 
@@ -68,7 +70,7 @@ Configure the network
 
 ```
 Hostname:
-debian
+infosec
 ```
 
 ```
@@ -89,12 +91,12 @@ Re-enter password to verify:
 
 ```
 Full name for the new user:
-sec
+nemo
 ```
 
 ```
 Username for your account:
-sec
+nemo
 ```
 
 ```
@@ -190,14 +192,14 @@ Please choose <Continue> to reboot.
 Login
 
 ```
-debian login: root
+infosec login: root
 Password: 123456
 ```
 
 Take Snapshot: `install` 
 
 ```
-root@debian:~# shutdown -h now
+root@infosec:~# shutdown -h now
 ```
 
 ## 4. Init
@@ -209,22 +211,22 @@ Port Forwarding Rules
 | SSH  | 60022     | 22         |
 | Web  | 60080     | 80         |
 
-Start the VM and SSH to `sec` 
+Start the VM and SSH to `nemo` 
 
 ```
-PS C:\Users\sec> ssh -p 60022 sec@127.0.0.1
+PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
 ```
 
 Use `su` switch to `root` 
 
 ```
-sec@debian:~$ su - root
+nemo@infosec:~$ su - root
 ```
 
 Configuring Apt Sources
 
 ```
-root@debian:~# cat << 'EOF' > /etc/apt/sources.list
+root@infosec:~# cat << 'EOF' > /etc/apt/sources.list
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
@@ -234,64 +236,81 @@ EOF
 Update the system
 
 ```
-root@debian:~# apt update && apt full-upgrade \
+root@infosec:~# apt update && apt full-upgrade \
 && apt clean && apt autoremove --purge
 ```
 
 Install common tools
 
 ```
-root@debian:~# apt install -y curl vim passwd sudo tree unzip gnupg apache2 \
+root@infosec:~# apt install -y systemd-resolved passwd sudo unzip gnupg curl vim tree \
 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
 gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor \
+apache2 firefox-esr \
 zsh zsh-syntax-highlighting zsh-autosuggestions\
-&& systemctl enable --now apache2.service \
-&& usermod -aG sudo sec
+&& usermod -aG sudo nemo \
+&& systemctl enable --now apache2.service
 ```
 
 Keep SSH session alive
 
 ```
-root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
+root@infosec:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
 && sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 60/' /etc/ssh/sshd_config
 ```
 
 Restart SSH service
 
 ```
-root@debian:~# systemctl restart ssh.service
+root@infosec:~# systemctl restart ssh.service
 ```
 
 Configuring Zsh
 
 ```
-root@debian:~# chsh -s $(which zsh) \
+root@infosec:~# chsh -s $(which zsh) \
 && curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
+```
+
+Configuring Network service
+
+```
+root@infosec:~# systemctl disable --now NetworkManager || true \
+&& systemctl enable --now networking.service \
+&& systemctl enable --now systemd-networkd.service \
+&& systemctl enable --now systemd-resolved.service
 ```
 
 Configuring Network
 
 ```
-root@debian:~# systemctl disable NetworkManager --now || true \
-&& systemctl enable networking.service --now
-```
+root@infosec:~# cat << 'EOF' > /etc/systemd/network/custom.network
+[Match]
+Name=en*
 
-Change DNS servers
-
-```
-root@debian:~# cat << 'EOF' > /etc/resolv.conf
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+[Network]
+DHCP=yes
+DNS=8.8.8.8
+DNS=8.8.4.4
 EOF
+```
+
+Restart Network service
+
+```
+root@infosec:~# systemctl restart systemd-networkd.service \
+&& systemctl restart systemd-resolved.service
 ```
 
 Restart
 
 ```
-root@debian:~# shutdown -r now
+root@infosec:~# shutdown -r now
 ```
 
 Wait for the VM to start up, then insert Guest Additions CD image
+
+Press Return to close this window. . .
 
 ```
 Enter
@@ -308,26 +327,26 @@ Shortcut: Ctrl + Alt +T
 Reconnect SSH
 
 ```
-PS C:\Users\sec> ssh -p 60022 sec@127.0.0.1
+PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
 ```
 
 Network testing
 
 ```
-sec@debian:~$ ping mit.edu -c 3
+nemo@infosec:~$ ping mit.edu -c 3
 ```
 
 Configuring Zsh
 
 ```
-sec@debian:~$ chsh -s $(which zsh) \
+nemo@infosec:~$ chsh -s $(which zsh) \
 && curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
 Create directory
 
 ```
-sec@debian:~$ sudo mkdir -p /var/www/html/exploit \
+nemo@infosec:~$ sudo mkdir -p /var/www/html/exploit \
 && sudo chown -R www-data:www-data /var/www/html/exploit \
 && sudo chmod 2755 /var/www/html/exploit
 ```
@@ -335,14 +354,14 @@ sec@debian:~$ sudo mkdir -p /var/www/html/exploit \
 > Grant download permissions every time a file is added to this directory
 >
 > ```
-> ┌──(sec@debian)-[~]
+> ┌──(nemo@infosec)-[~]
 > └─# sudo chmod 644 /var/www/html/exploit/*
 > ```
 
 Take Snapshot: `init` 
 
 ```
-sec@debian:~$ sudo shutdown -h now
+nemo@infosec:~$ sudo shutdown -h now
 ```
 
 ## 5. Deploy
@@ -363,7 +382,7 @@ sec@debian:~$ sudo shutdown -h now
 Take Snapshot: `deploy` 
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ sudo shutdown -h now
 ```
 
@@ -388,7 +407,7 @@ Take Snapshot: `deploy`
 查看内核版本
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# uname -r
 6.5.0-kali3-amd64
 ```
@@ -398,7 +417,7 @@ Take Snapshot: `deploy`
 > http://http.kali.org/kali/pool/main/l/linux/
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# wget http://http.kali.org/kali/pool/main/l/linux/linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
 && dpkg -i linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
 && rm -rf linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb
@@ -407,21 +426,21 @@ Take Snapshot: `deploy`
 安装依赖
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# apt install -y build-essential dkms
 ```
 
 下载驱动
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# git clone https://github.com/aircrack-ng/rtl8812au.git /root/tools/drivers/rtl8812au
 ```
 
 安装驱动
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# cd /root/tools/drivers/rtl8812au \
 && make dkms_install \
 && cd
@@ -430,7 +449,7 @@ Take Snapshot: `deploy`
 > 卸载
 >
 > ```
-> root@debian:~# cd /root/tools/drivers/rtl8812au \
+> root@infosec:~# cd /root/tools/drivers/rtl8812au \
 > && make dkms_remove \
 > && cd
 > ```
@@ -448,14 +467,14 @@ uname -r
 创建目录
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# mkdir -p /mnt/vmware
 ```
 
 配置别名
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# echo "alias share='vmhgfs-fuse .host:/ /mnt/vmware'" >> ~/.zshrc && source ~/.zshrc
 ```
 
@@ -464,7 +483,7 @@ uname -r
 擦除历史命令
 
 ```
-┌──(root@debian)-[~]
+┌──(root@infosec)-[~]
 └─# shred -z ~/.bash_history \
 && shred -z ~/.zsh_history
 ```
@@ -474,28 +493,28 @@ uname -r
 将命令行程序放在后台运行, 即使 SSH 断开连接也不会终止运行
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ nohup <command> > ~/nohup.log 2>&1 & echo $! > ~/pid.log
 ```
 
 实时查看日志
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ tail -f ~/nohup.log
 ```
 
 查看 PID
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ cat  ~/pid.log
 ```
 
 终止进程
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ kill -9 <PID>
 ```
 
@@ -520,7 +539,7 @@ unset https_proxy
 创建一个普通用户
 
 ```
-adduser sec
+adduser nemo
 ```
 
 ### 6.8. SSH 相关配置
@@ -554,7 +573,7 @@ nano -l /etc/ssh/sshd_config
 重启 SSH 服务
 
 ```
-root@debian:~# systemctl restart ssh.service
+root@infosec:~# systemctl restart ssh.service
 ```
 
 ### 6.8. 配置网络
@@ -562,37 +581,58 @@ root@debian:~# systemctl restart ssh.service
 查看网络接口
 
 ```
-root@debian:~# ip link
+root@infosec:~# ip link
 ```
 
-为指定接口配置静态 IP
+安装依赖
 
 ```
-root@debian:~# systemctl disable NetworkManager --now || true && systemctl enable networking.service --now && nano -l /etc/network/interfaces
+root@infosec:~# apt install -y systemd-resolved
 ```
 
-```
-10  # The primary network interface
-11  allow-hotplug ens33
-12  # iface ens33 inet dhcp
-auto ens33
-iface ens33 inet static
-    address 192.168.1.6
-    gateway 192.168.1.1
-    netmask 255.255.255.0
-18  # This is an autoconfigured IPv6 interface
-19  # iface ens33 inet6 auto
-```
-
-配置 DNS 服务器
+配置服务
 
 ```
-root@debian:~# nano /etc/resolv.conf
+root@infosec:~# systemctl disable --now NetworkManager || true \
+&& systemctl enable --now networking.service \
+&& systemctl enable --now systemd-networkd.service \
+&& systemctl enable --now systemd-resolved.service
 ```
 
+动态网络
+
 ```
-nameserver 8.8.8.8
-nameserver 8.8.4.4
+root@infosec:~# cat << 'EOF' > /etc/systemd/network/custom.network
+[Match]
+Name=en*
+
+[Network]
+DHCP=yes
+DNS=8.8.8.8
+DNS=8.8.4.4
+EOF
+```
+
+静态网络
+
+```
+root@infosec:~# cat << 'EOF' > /etc/systemd/network/custom.network
+[Match]
+Name=en*
+
+[Network]
+Address=192.168.1.206/24
+Gateway=192.168.1.1
+DNS=8.8.8.8
+DNS=8.8.4.4
+EOF
+```
+
+重启网络配置
+
+```
+root@infosec:~# systemctl restart systemd-networkd.service \
+&& systemctl restart systemd-resolved.service
 ```
 
 ---

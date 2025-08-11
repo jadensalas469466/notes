@@ -3,7 +3,7 @@
 Run
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ docker run -d --restart always -p 60088:80 -v /var/run/docker.sock:/var/run/docker.sock -e VUL_IP=127.0.0.1 vulfocus/vulfocus
 ```
 

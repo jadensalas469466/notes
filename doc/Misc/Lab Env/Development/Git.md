@@ -11,7 +11,7 @@ Git is a free and open source distributed version control system designed to han
 ### 1.1. Debian
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ sudo apt install -y git
 ```
 
@@ -44,7 +44,7 @@ Git is a free and open source distributed version control system designed to han
 配置代理
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ git config --global http.proxy "http://127.0.0.1:10808"
 ```
 
@@ -53,19 +53,19 @@ Git is a free and open source distributed version control system designed to han
 配置代理
 
 ```
-git config --global http.proxy "http://127.0.0.1:10808"
+PS C:\Users\nemo> git config --global http.proxy "http://127.0.0.1:10808"
 ```
 
 配置用户名
 
 ```
-git config --global user.name "sec"
+PS C:\Users\nemo> git config --global user.name "nemo"
 ```
 
 配置邮箱
 
 ```
-git config --global user.email "<private-name>@users.noreply.github.com"
+PS C:\Users\nemo> git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
 ## 3. Usage
@@ -169,49 +169,49 @@ git clone <repository-url>
 进入本地项目目录
 
 ```
-root@debian:~# cd ./test
+root@infosec:~# cd ./test
 ```
 
 初始化仓库
 
 ```
-root@debian:~# git init
+root@infosec:~# git init
 ```
 
 命名默认分支为 `main` 
 
 ```
-root@debian:~# git branch -M main
+root@infosec:~# git branch -M main
 ```
 
 配置远程仓库
 
 ```
-root@debian:~# git remote add origin https://github.com/<user-name>/test.git
+root@infosec:~# git remote add origin https://github.com/<user-name>/test.git
 ```
 
 创建 `README.md` 文件
 
 ```
-root@debian:~# echo "test" > README.md
+root@infosec:~# echo "test" > README.md
 ```
 
 暂存指定文件的更改
 
 ```
-root@debian:~# git add README.md
+root@infosec:~# git add README.md
 ```
 
 提交
 
 ```
-root@debian:~# git commit -m "first commit"
+root@infosec:~# git commit -m "first commit"
 ```
 
 推送到远程仓库的指定分支 `main` 
 
 ```
-root@debian:~# git push -u origin main
+root@infosec:~# git push -u origin main
 ```
 
 ### 3.4. 配置

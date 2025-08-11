@@ -10,7 +10,7 @@ Windows is a product line of proprietary graphical operating systems developed a
 Move the image file to the directory
 
 ```
-C:\Users\sec\VirtualBox VMs\iso
+C:\Users\nemo\VirtualBox VMs\iso
 ```
 
 Create Virtual Machine
@@ -18,8 +18,8 @@ Create Virtual Machine
 ```
 > Name and Operating System
 Name: windows
-Folder: C:\Users\sec\VirtualBox VMs
-ISO lmage: C:\Users\sec\VirtualBox VMs\iso\en-us_windows_10_enterprise_ltsc_2021_x64_dvd.iso
+Folder: C:\Users\nemo\VirtualBox VMs
+ISO lmage: C:\Users\nemo\VirtualBox VMs\iso\en-us_windows_10_enterprise_ltsc_2021_x64_dvd.iso
 Version: Windows 10 (64-bit)
 ☑ Skip Unattended Installation
 
@@ -110,7 +110,7 @@ Domain join instead
 Who's going to use this PC?
 
 ```
-sec
+nemo
 ```
 
 Create a super memorable password
@@ -129,11 +129,11 @@ Create security questions for this account
 
 ```
 What's the name of the city where you were born?
-sec
+nemo
 What's the name of the city where your parents met?
-sec
+nemo
 What's the name of the first school you attended?
-sec
+nemo
 ```
 
 Choose privacy settings for your device
@@ -372,7 +372,7 @@ User accounts for \\A-WIN10-1903
 
 -------------------------------------------------------------------------------
 admin                    Administrator            DefaultAccount           
-Guest                    sec                      WDAGUtilityAccount       
+Guest                    nemo                      WDAGUtilityAccount       
 The command completed successfully.
 ```
 
@@ -454,7 +454,7 @@ C:\Users\Administrator> wmic os get osarchitecture
 ### 6.11 临时文件夹
 
 ```powershell
-PS C:\Users\sec> dir C:\Windows\Temp
+PS C:\Users\nemo> dir C:\Windows\Temp
 ```
 
 ### 6.12 添加快捷访问
@@ -490,25 +490,25 @@ C:\Users\Administrator> sfc /scannow
 列出当前系统上安装的 WSL 发行版
 
 ```powershell
-PS C:\Users\sec> wslconfig /l
+PS C:\Users\nemo> wslconfig /l
 ```
 
 删除 WSL 发行版
 
 ```powershell
-PS C:\Users\sec> wsl --unregister <distribution name>
+PS C:\Users\nemo> wsl --unregister <distribution name>
 ```
 
 禁用 WSL 功能
 
 ```powershell
-PS C:\Users\sec> Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+PS C:\Users\nemo> Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
 检查 WSL 状态
 
 ```powershell
-PS C:\Users\sec> wslconfig /l
+PS C:\Users\nemo> wslconfig /l
 ```
 
 关闭虚拟机平台
@@ -548,7 +548,7 @@ Remove-Item "C:\path\to\directory" -Recurse
 SSH 连接记录
 
 ```
-C:/Users/sec/.ssh/known_hosts
+C:/Users/nemo/.ssh/known_hosts
 ```
 
 ---

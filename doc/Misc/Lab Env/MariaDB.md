@@ -5,7 +5,7 @@ MariaDB Server: the innovative open source database.
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ sudo apt install -y mariadb-server mariadb-client \
 && sudo systemctl enable --now mysql.service
 ```
@@ -15,7 +15,7 @@ MariaDB Server: the innovative open source database.
 配置密码
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ sudo mysql -u root -p
 ```
 
@@ -36,14 +36,14 @@ MariaDB [(none)]> EXIT;
 运行服务
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ sudo systemctl start mysql.service
 ```
 
 登录
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@infosec)-[~]
 └─$ mysql -u root -p
 ```
 
@@ -72,7 +72,7 @@ MariaDB [(none)]> show databases;
 选择数据库
 
 ```
-MariaDB [(none)]> use  sec;
+MariaDB [(none)]> use nemo;
 ```
 
 列出数据表
