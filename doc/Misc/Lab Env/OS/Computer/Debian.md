@@ -20,8 +20,6 @@ Create Virtual Machine
 Name: debian
 Folder: C:\Users\nemo\VirtualBox VMs
 ISO lmage: C:\Users\nemo\VirtualBox VMs\iso\debian-amd64-DVD.iso
-Type: Linux
-Subtype: Debian
 Version: Debian (64-bit)
 ☑ Skip Unattended Installation
 

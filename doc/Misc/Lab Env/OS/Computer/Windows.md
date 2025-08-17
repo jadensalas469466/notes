@@ -153,7 +153,7 @@ Shut down, Take Snapshot: `install`
 
 Install drivers and update the system
 
-[Power & sleep](https://keithpeck177271.gitbook.io/notes/misc/wen-ti-ji-jin/issues-of-windows#id-2-tui-jian-dian-yuan-she-zhi)
+[Power & sleep](https://keithpeck177271.gitbook.io/note/misc/issues/issues-of-windows#id-2.-tui-jian-dian-yuan-she-zhi)
 
 Run PowerShell as administrator
 
@@ -192,7 +192,7 @@ Update and configure Windows and Edge
 
 Use [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) to change system settings
 
-Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-edit/microsoft-office/office-deployment-tool) to install Word, Excel, PowerPoint, Visio
+Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/note/misc/lab-env/office/file-edit/microsoft-office/office-deployment-tool) to install Word, Excel, PowerPoint
 
 Shut down, Take Snapshot: `init` 
 

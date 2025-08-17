@@ -40,7 +40,7 @@ Export configuration to XML
 以管理员身份运行 PowerShell 进行部署
 
 ```
-PS C:\Users\sec\Downloads> .\setup.exe /configure .\Configuration.xml
+PS C:\Windows\system32> .\setup.exe /configure .\Configuration.xml
 ```
 
 ## 3. Activation
@@ -48,7 +48,7 @@ PS C:\Users\sec\Downloads> .\setup.exe /configure .\Configuration.xml
 Activation
 
 ```
-PS C:\Users\sec\Downloads> irm https://get.activated.win | iex
+PS C:\Windows\system32> irm https://get.activated.win | iex
 ```
 
 ---
