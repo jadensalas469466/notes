@@ -243,6 +243,7 @@ Shut down, Take Snapshot: `deploy`
 |           [Proxifier](https://www.proxifier.com/)            |
 |              [Python](https://www.python.org/)               |
 |         [qBittorrent](https://www.qbittorrent.org/)          |
+|        [scrcpy](https://github.com/Genymobile/scrcpy)        |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
 |            [TTime](https://ttime.timerecord.cn/)             |
