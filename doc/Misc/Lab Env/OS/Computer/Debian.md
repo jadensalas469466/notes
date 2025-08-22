@@ -197,7 +197,7 @@ Password: 123456
 Take Snapshot: `install` 
 
 ```
-root@infosec:~# shutdown -h now
+root@infosec:~# poweroff
 ```
 
 ## 4. Init
@@ -303,7 +303,7 @@ root@infosec:~# systemctl restart systemd-networkd.service \
 Restart
 
 ```
-root@infosec:~# shutdown -r now
+root@infosec:~# reboot
 ```
 
 Wait for the VM to start up, then insert Guest Additions CD image
@@ -359,7 +359,7 @@ nemo@infosec:~$ sudo mkdir -p /var/www/html/exploit \
 Take Snapshot: `init` 
 
 ```
-nemo@infosec:~$ sudo shutdown -h now
+nemo@infosec:~$ sudo poweroff
 ```
 
 ## 5. Deploy
@@ -381,7 +381,7 @@ Take Snapshot: `deploy`
 
 ```
 ┌──(nemo@infosec)-[~]
-└─$ sudo shutdown -h now
+└─$ sudo poweroff
 ```
 
 > 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) 

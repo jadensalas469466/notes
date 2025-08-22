@@ -10,7 +10,7 @@
 
 ### 1.2. 解锁 bootloader
 
-下载 [miflash_unlock](https://www.miui.com/unlock/download.html) 
+下载 [miflash_unlock](https://www.miui.com/unlock/index.html) 
 
 > 需要将浏览器设置为中文访问
 
@@ -21,6 +21,53 @@
 将手机关机，同时按住开机键和音量下键进入 fastboot 模式
 
 最后使用 miflash_unlock 解锁
+
+### 1.3. 修补 boot
+
+从 [XiaomiROM](https://xiaomirom.com/series/) 中下载相应的 fastboot 线刷包, 解压后将 `boot.img` 传入手机
+
+使用 [Magisk](https://github.com/topjohnwu/Magisk) 将修补 `boot.img` 后的 ` magisk.img` 传入电脑
+
+### 1.4. 获取 root 权限
+
+将手机和电脑通过 USB 连接
+
+将手机关机，同时按住开机键和音量下键进入 fastboot 模式
+
+打开终端切换到 [SDK Platform Tools](https://developer.android.com/tools/releases/platform-tools) 目录文件中
+
+识别设备
+
+```
+PS C:\Users\sec\platform-tools> .\fastboot devices
+b65b7917         fastboot
+```
+
+> 若无法识别设备则换一个 USB 接口
+
+将 `magisk.img` 写入 boot 分区
+
+```
+PS C:\Users\sec\platform-tools> .\fastboot flash boot .\magisk.img
+```
+
+将手机重启后运行 shell
+
+```
+PS C:\Users\sec\platform-tools> .\adb shell
+```
+
+切换为 root 用户
+
+```
+vangogh:/ $ su
+```
+
+此时手机会弹出一个授权窗口, 授权后用户身份标识会变为 `#` 
+
+```
+vangogh:/ #
+```
 
 ---
 

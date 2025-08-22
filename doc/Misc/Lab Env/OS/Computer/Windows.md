@@ -231,7 +231,7 @@ Shut down, Take Snapshot: `deploy`
 |           [GlassWire](https://www.glasswire.com/)            |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |            [ImageGlass](https://imageglass.org/)             |
-|               [Java](https://www.java.com/en/)               |
+| [JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
 |             [KeePassXC](https://keepassxc.org/)              |
 |         [Koodo Reader](https://www.koodoreader.com/)         |
 |             [LocalSend](https://localsend.org/)              |

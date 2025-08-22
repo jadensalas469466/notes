@@ -1,4 +1,4 @@
-一种面向跨平台的编程语言。
+一种面向跨平台的编程语言.
 
 ## 1 安装
 
@@ -67,5 +67,5 @@ OpenJDK 64-Bit Server VM (Temurin)(build 25.412-b08, mixed mode)
 
 References
 
-- [Open JDK](https://adoptium.net/zh-CN/)
-- [Oracle JDK](https://www.java.com/en/download/manual.jsp)
+- [Adoptium](https://adoptium.net/)
+
