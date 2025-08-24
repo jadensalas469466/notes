@@ -304,23 +304,7 @@ Restart
 root@infosec:~# reboot
 ```
 
-Wait for the VM to start up, then insert Guest Additions CD image
-
-Press Return to close this window. . .
-
-```
-Enter
-```
-
-Custom Shortcuts
-
-```
-    Name: terminal
- Command: gnome-terminal
-Shortcut: Ctrl + Alt +T
-```
-
-Reconnect SSH
+Wait for the VM to start up, then Reconnect SSH
 
 ```
 PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
@@ -639,10 +623,26 @@ root@infosec:~# systemctl restart systemd-networkd.service \
 root@infosec:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
 ```
 
+Press Return to close this window. . .
+
+```
+Enter
+```
+
 Restart
 
 ```
 root@infosec:~# reboot
+```
+
+Wait for the VM to start up, then insert Guest Additions CD image
+
+Custom Shortcuts
+
+```
+    Name: terminal
+ Command: gnome-terminal
+Shortcut: Ctrl + Alt +T
 ```
 
 ---
