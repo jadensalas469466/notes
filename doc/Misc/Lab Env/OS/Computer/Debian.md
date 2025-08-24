@@ -241,10 +241,8 @@ root@infosec:~# apt update && apt full-upgrade \
 Install common tools
 
 ```
-root@infosec:~# apt install -y systemd-resolved passwd sudo unzip gnupg curl vim tree \
+root@infosec:~# apt install -y systemd-resolved passwd sudo unzip gnupg curl vim tree apache2 \
 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
-gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor \
-apache2 firefox-esr \
 zsh zsh-syntax-highlighting zsh-autosuggestions\
 && usermod -aG sudo nemo \
 && systemctl enable --now apache2.service
@@ -631,6 +629,20 @@ EOF
 ```
 root@infosec:~# systemctl restart systemd-networkd.service \
 && systemctl restart systemd-resolved.service
+```
+
+### 6.9. 安装桌面环境
+
+安装依赖
+
+```
+root@infosec:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
+```
+
+Restart
+
+```
+root@infosec:~# reboot
 ```
 
 ---
