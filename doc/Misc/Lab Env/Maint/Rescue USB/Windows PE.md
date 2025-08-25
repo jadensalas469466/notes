@@ -150,13 +150,13 @@ C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment 
 
 ```
 DeviceID VolumeName
-F:       WINPE
+E:       WINPE
 ```
 
 制作 Windows PE 启动盘
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>MakeWinPEMedia /UFD C:\WinPE_amd64 F:
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>MakeWinPEMedia /UFD C:\WinPE_amd64 E:
 ```
 
 ## 4. Usage
