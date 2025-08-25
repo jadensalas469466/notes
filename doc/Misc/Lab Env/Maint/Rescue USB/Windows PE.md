@@ -191,19 +191,19 @@ PS X:\windows\system32> Get-Volume
 
 ```
 DriveLetter FriendlyName
-E           Storage
+F           Storage
 ```
 
 列出指定盘下的所有文件
 
 ```
-PS X:\windows\system32> ls "E:\Maint\"
+PS X:\windows\system32> ls "F:\Maint\"
 ```
 
 挂载镜像
 
 ```
-PS X:\windows\system32> Mount-DiskImage -ImagePath "E:\Maint\windows.iso"
+PS X:\windows\system32> Mount-DiskImage -ImagePath "F:\Maint\windows.iso"
 ```
 
 ```
@@ -218,19 +218,19 @@ PS X:\windows\system32> Get-Volume
 
 ```
 DriveLetter FriendlyName
-F           CES_X64FREO_EN-US_DV9
+G           CES_X64FREO_EN-US_DV9
 ```
 
 列出指定盘下的所有文件
 
 ```
-PS X:\windows\system32> ls "F:\"
+PS X:\windows\system32> ls "G:\"
 ```
 
 运行安装程序
 
 ```
-PS X:\windows\system32> Start-Process "F:\setup.exe"
+PS X:\windows\system32> Start-Process "G:\setup.exe"
 ```
 
 ---
