@@ -194,7 +194,7 @@ DriveLetter FriendlyName
 F           Storage
 ```
 
-列出指定盘下的所有文件
+列出指定路径下的文件
 
 ```
 PS X:\windows\system32> ls "F:\Maint\"
@@ -221,7 +221,7 @@ DriveLetter FriendlyName
 G           CES_X64FREO_EN-US_DV9
 ```
 
-列出指定盘下的所有文件
+列出指定路径下的文件
 
 ```
 PS X:\windows\system32> ls "G:\"
