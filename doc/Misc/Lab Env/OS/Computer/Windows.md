@@ -223,6 +223,7 @@ Shut down, Take Snapshot: `deploy`
 |              [aria2](https://aria2.github.io/)               |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
+|         [DeepL](https://www.deepl.com/en/translator)         |
 | [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
 |           [Everything](https://www.voidtools.com/)           |
 |          [FreeFileSync](https://freefilesync.org/)           |
@@ -246,7 +247,6 @@ Shut down, Take Snapshot: `deploy`
 |        [scrcpy](https://github.com/Genymobile/scrcpy)        |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
-|            [TTime](https://ttime.timerecord.cn/)             |
 |     [TurboTop](https://www.savardsoftware.com/turbotop/)     |
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |
