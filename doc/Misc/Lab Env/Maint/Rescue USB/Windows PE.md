@@ -113,7 +113,7 @@ DISKPART> exit
 创建 Windows PE 文件的工作副本
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>copype amd64 C:\WinPE_amd64
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>copype amd64 "C:\WinPE_amd64"
 ```
 
 装载 Windows PE 启动映像
