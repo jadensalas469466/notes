@@ -39,7 +39,7 @@ Git is a free and open source distributed version control system designed to han
 
 ![选择凭证管理器](./../../../../image/Git/%E9%80%89%E6%8B%A9%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8.png)
 
-### 2.1. Linux
+### 2.1. Debian
 
 配置代理
 
