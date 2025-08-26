@@ -41,7 +41,7 @@ C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment 
 列出可用磁盘
 
 ```
-DISKPART> List disk
+DISKPART> list disk
 ```
 
 选择可移动磁盘
@@ -77,7 +77,7 @@ DISKPART> active
 格式化当前分区
 
 ```
-DISKPART> format fs=FAT32 quick label="WinPE"
+DISKPART> format fs=fat32 quick label="WinPE"
 ```
 
 为当前分区分配盘符
@@ -95,7 +95,7 @@ DISKPART> create partition primary
 格式化当前分区
 
 ```
-DISKPART> format fs=NTFS quick label="Storage"
+DISKPART> format fs=ntfs quick label="Storage"
 ```
 
 为当前分区分配盘符
@@ -119,27 +119,27 @@ C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment 
 装载 Windows PE 启动映像
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>Dism /Mount-Image /ImageFile:"C:\WinPE_amd64\media\sources\boot.wim" /index:1 /MountDir:"C:\WinPE_amd64\mount"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /mount-image /imagefile:"C:\WinPE_amd64\media\sources\boot.wim" /index:1 /mountdir:"C:\WinPE_amd64\mount"
 ```
 
 自定义 Windows PE
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>Dism /Add-Package /Image:C:\WinPE_amd64\mount /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WMI.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WMI.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>Dism /Add-Package /Image:C:\WinPE_amd64\mount /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFX.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFX.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>Dism /Add-Package /Image:"C:\WinPE_amd64\mount" /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>Dism /Add-Package /Image:"C:\WinPE_amd64\mount" /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-PowerShell.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-PowerShell.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>Dism /Add-Package /Image:"C:\WinPE_amd64\mount" /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-StorageWMI.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-StorageWMI.cab"
 ```
 
 卸载 WinPE 映像并提交更改
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>Dism /Unmount-Image /MountDir:"C:\WinPE_amd64\mount" /commit
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /unmount-image /mountdir:"C:\WinPE_amd64\mount" /commit
 ```
 
 查看 WinPE 的盘符
@@ -156,7 +156,7 @@ E:       WINPE
 制作 Windows PE 启动盘
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>MakeWinPEMedia /UFD C:\WinPE_amd64 E:
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>makewinpemedia /ufd "C:\WinPE_amd64" "E:"
 ```
 
 ## 4. Usage
@@ -169,10 +169,9 @@ X:\windows\system32>wpeutil reboot   # 重启
 ```
 
 ```
-PS X:\windows\system32> Exit             # 退出 PowerShell
-PS X:\windows\system32> Stop-Computer    # 关机
-PS X:\windows\system32> Restart-Computer # 重启
-PS X:\windows\system32> Get-DiskImage | Dismount-DiskImage # 卸载已挂载的 ISO
+PS X:\windows\system32> exit             # 退出 PowerShell
+PS X:\windows\system32> stop-computer    # 关机
+PS X:\windows\system32> restart-computer # 重启
 ```
 
 ### 4.1. 系统安装
@@ -180,13 +179,13 @@ PS X:\windows\system32> Get-DiskImage | Dismount-DiskImage # 卸载已挂载的 
 切换为 PowerShell
 
 ```
-X:\windows\system32>powershell.exe
+X:\windows\system32>powershell
 ```
 
 列出所有卷
 
 ```
-PS X:\windows\system32> Get-Volume
+PS X:\windows\system32> get-volume
 ```
 
 ```
@@ -203,7 +202,7 @@ PS X:\windows\system32> ls "F:\Maint\"
 挂载镜像
 
 ```
-PS X:\windows\system32> Mount-DiskImage -ImagePath "F:\Maint\windows.iso"
+PS X:\windows\system32> mount-diskimage -imagepath "F:\Maint\windows.iso"
 ```
 
 ```
@@ -213,7 +212,7 @@ Attached : True
 列出所有卷
 
 ```
-PS X:\windows\system32> Get-Volume
+PS X:\windows\system32> get-volume
 ```
 
 ```
@@ -230,7 +229,7 @@ PS X:\windows\system32> ls "G:\"
 运行安装程序
 
 ```
-PS X:\windows\system32> Start-Process "G:\setup.exe"
+PS X:\windows\system32> start-process "G:\setup.exe"
 ```
 
 ---
