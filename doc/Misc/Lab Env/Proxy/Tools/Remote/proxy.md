@@ -5,14 +5,14 @@
 安装
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/proxy_install.sh | bash
 ```
 
 加载环境变量
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ source ~/.zshrc
 ```
 
@@ -21,14 +21,14 @@
 配置代理
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ proxy <ip:port>
 ```
 
 取消代理
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ proxy
 ```
 

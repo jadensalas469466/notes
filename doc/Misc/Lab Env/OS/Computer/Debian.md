@@ -68,7 +68,7 @@ Configure the network
 
 ```
 Hostname:
-infosec
+debian
 ```
 
 ```
@@ -190,14 +190,14 @@ Please choose <Continue> to reboot.
 Login
 
 ```
-infosec login: root
+debian login: root
 Password: 123456
 ```
 
 Take Snapshot: `install` 
 
 ```
-root@infosec:~# poweroff
+root@debian:~# poweroff
 ```
 
 ## 4. Init
@@ -218,13 +218,13 @@ PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
 Use `su` switch to `root` 
 
 ```
-nemo@infosec:~$ su - root
+nemo@debian:~$ su - root
 ```
 
 Configuring Apt Sources
 
 ```
-root@infosec:~# cat << 'EOF' > /etc/apt/sources.list
+root@debian:~# cat << 'EOF' > /etc/apt/sources.list
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian/ bookworm-updates main contrib non-free non-free-firmware
 deb https://mirrors.tuna.tsinghua.edu.cn/debian-security bookworm-security main contrib non-free non-free-firmware
@@ -234,14 +234,14 @@ EOF
 Update the system
 
 ```
-root@infosec:~# apt update && apt full-upgrade \
+root@debian:~# apt update && apt full-upgrade \
 && apt clean && apt autoremove --purge
 ```
 
 Install common tools
 
 ```
-root@infosec:~# apt install -y systemd-resolved passwd sudo unzip gnupg curl vim tree apache2 \
+root@debian:~# apt install -y systemd-resolved passwd sudo unzip gnupg curl vim tree apache2 \
 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
 zsh zsh-syntax-highlighting zsh-autosuggestions\
 && usermod -aG sudo nemo \
@@ -251,27 +251,27 @@ zsh zsh-syntax-highlighting zsh-autosuggestions\
 Keep SSH session alive
 
 ```
-root@infosec:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
+root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
 && sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 60/' /etc/ssh/sshd_config
 ```
 
 Restart SSH service
 
 ```
-root@infosec:~# systemctl restart ssh.service
+root@debian:~# systemctl restart ssh.service
 ```
 
 Configuring Zsh
 
 ```
-root@infosec:~# chsh -s $(which zsh) \
+root@debian:~# chsh -s $(which zsh) \
 && curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
 Configuring Network service
 
 ```
-root@infosec:~# systemctl disable --now NetworkManager || true \
+root@debian:~# systemctl disable --now NetworkManager || true \
 && systemctl enable --now networking.service \
 && systemctl enable --now systemd-networkd.service \
 && systemctl enable --now systemd-resolved.service
@@ -280,7 +280,7 @@ root@infosec:~# systemctl disable --now NetworkManager || true \
 Configuring Network
 
 ```
-root@infosec:~# cat << 'EOF' > /etc/systemd/network/custom.network
+root@debian:~# cat << 'EOF' > /etc/systemd/network/custom.network
 [Match]
 Name=en*
 
@@ -294,14 +294,14 @@ EOF
 Restart Network service
 
 ```
-root@infosec:~# systemctl restart systemd-networkd.service \
+root@debian:~# systemctl restart systemd-networkd.service \
 && systemctl restart systemd-resolved.service
 ```
 
 Restart
 
 ```
-root@infosec:~# reboot
+root@debian:~# reboot
 ```
 
 Wait for the VM to start up, then Reconnect SSH
@@ -313,20 +313,20 @@ PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
 Network testing
 
 ```
-nemo@infosec:~$ ping mit.edu -c 3
+nemo@debian:~$ ping mit.edu -c 3
 ```
 
 Configuring Zsh
 
 ```
-nemo@infosec:~$ chsh -s $(which zsh) \
+nemo@debian:~$ chsh -s $(which zsh) \
 && curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
 Create directory
 
 ```
-nemo@infosec:~$ sudo mkdir -p /var/www/html/exploit \
+nemo@debian:~$ sudo mkdir -p /var/www/html/exploit \
 && sudo chown -R www-data:www-data /var/www/html/exploit \
 && sudo chmod 2755 /var/www/html/exploit
 ```
@@ -334,14 +334,14 @@ nemo@infosec:~$ sudo mkdir -p /var/www/html/exploit \
 > Grant download permissions every time a file is added to this directory
 >
 > ```
-> ┌──(nemo@infosec)-[~]
+> ┌──(nemo@debian)-[~]
 > └─# sudo chmod 644 /var/www/html/exploit/*
 > ```
 
 Take Snapshot: `init` 
 
 ```
-nemo@infosec:~$ sudo poweroff
+nemo@debian:~$ sudo poweroff
 ```
 
 ## 5. Deploy
@@ -362,7 +362,7 @@ nemo@infosec:~$ sudo poweroff
 Take Snapshot: `deploy` 
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo poweroff
 ```
 
@@ -387,7 +387,7 @@ Take Snapshot: `deploy`
 查看内核版本
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# uname -r
 6.5.0-kali3-amd64
 ```
@@ -397,7 +397,7 @@ Take Snapshot: `deploy`
 > http://http.kali.org/kali/pool/main/l/linux/
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# wget http://http.kali.org/kali/pool/main/l/linux/linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
 && dpkg -i linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
 && rm -rf linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb
@@ -406,21 +406,21 @@ Take Snapshot: `deploy`
 安装依赖
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# apt install -y build-essential dkms
 ```
 
 下载驱动
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# git clone https://github.com/aircrack-ng/rtl8812au.git /root/tools/drivers/rtl8812au
 ```
 
 安装驱动
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# cd /root/tools/drivers/rtl8812au \
 && make dkms_install \
 && cd
@@ -429,7 +429,7 @@ Take Snapshot: `deploy`
 > 卸载
 >
 > ```
-> root@infosec:~# cd /root/tools/drivers/rtl8812au \
+> root@debian:~# cd /root/tools/drivers/rtl8812au \
 > && make dkms_remove \
 > && cd
 > ```
@@ -447,14 +447,14 @@ uname -r
 创建目录
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# mkdir -p /mnt/vmware
 ```
 
 配置别名
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# echo "alias share='vmhgfs-fuse .host:/ /mnt/vmware'" >> ~/.zshrc && source ~/.zshrc
 ```
 
@@ -463,7 +463,7 @@ uname -r
 擦除历史命令
 
 ```
-┌──(root@infosec)-[~]
+┌──(root@debian)-[~]
 └─# shred -z ~/.bash_history \
 && shred -z ~/.zsh_history
 ```
@@ -473,28 +473,28 @@ uname -r
 将命令行程序放在后台运行, 即使 SSH 断开连接也不会终止运行
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ nohup <command> > ~/nohup.log 2>&1 & echo $! > ~/pid.log
 ```
 
 实时查看日志
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ tail -f ~/nohup.log
 ```
 
 查看 PID
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ cat  ~/pid.log
 ```
 
 终止进程
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ kill -9 <PID>
 ```
 
@@ -553,7 +553,7 @@ nano -l /etc/ssh/sshd_config
 重启 SSH 服务
 
 ```
-root@infosec:~# systemctl restart ssh.service
+root@debian:~# systemctl restart ssh.service
 ```
 
 ### 6.8. 配置网络
@@ -561,19 +561,19 @@ root@infosec:~# systemctl restart ssh.service
 查看网络接口
 
 ```
-root@infosec:~# ip link
+root@debian:~# ip link
 ```
 
 安装依赖
 
 ```
-root@infosec:~# apt install -y systemd-resolved
+root@debian:~# apt install -y systemd-resolved
 ```
 
 配置服务
 
 ```
-root@infosec:~# systemctl disable --now NetworkManager || true \
+root@debian:~# systemctl disable --now NetworkManager || true \
 && systemctl enable --now networking.service \
 && systemctl enable --now systemd-networkd.service \
 && systemctl enable --now systemd-resolved.service
@@ -582,7 +582,7 @@ root@infosec:~# systemctl disable --now NetworkManager || true \
 动态网络
 
 ```
-root@infosec:~# cat << 'EOF' > /etc/systemd/network/custom.network
+root@debian:~# cat << 'EOF' > /etc/systemd/network/custom.network
 [Match]
 Name=en*
 
@@ -596,7 +596,7 @@ EOF
 静态网络
 
 ```
-root@infosec:~# cat << 'EOF' > /etc/systemd/network/custom.network
+root@debian:~# cat << 'EOF' > /etc/systemd/network/custom.network
 [Match]
 Name=en*
 
@@ -611,7 +611,7 @@ EOF
 重启网络配置
 
 ```
-root@infosec:~# systemctl restart systemd-networkd.service \
+root@debian:~# systemctl restart systemd-networkd.service \
 && systemctl restart systemd-resolved.service
 ```
 
@@ -620,7 +620,7 @@ root@infosec:~# systemctl restart systemd-networkd.service \
 安装依赖
 
 ```
-root@infosec:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
+root@debian:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
 ```
 
 Press Return to close this window. . .
@@ -632,7 +632,7 @@ Enter
 Restart
 
 ```
-root@infosec:~# reboot
+root@debian:~# reboot
 ```
 
 Wait for the VM to start up, then insert Guest Additions CD image

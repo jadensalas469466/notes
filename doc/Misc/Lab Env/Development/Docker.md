@@ -5,7 +5,7 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 安装
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ curl -fsSL https://get.docker.com | sh
 ```
 
@@ -14,14 +14,14 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 将当前用户追加到 `docker` 用户组
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo usermod -aG docker $USER && newgrp docker
 ```
 
 配置代理
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo mkdir -p /etc/systemd/system/docker.service.d \
 && cat << 'EOF' | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf > /dev/null
 [Service]
@@ -34,7 +34,7 @@ EOF
 重启 Docker 加载配置
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo systemctl daemon-reload && sudo systemctl restart docker.service
 ```
 
@@ -43,7 +43,7 @@ EOF
 拉取镜像
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ docker pull <URL>
 ```
 

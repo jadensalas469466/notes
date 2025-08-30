@@ -10,6 +10,12 @@ Google
 site:"example.com" ("AccessKeyID" OR "AccessKeySecret")
 ```
 
+Search Public Code
+
+```
+"example.com" AND ("AccessKeyID" OR "AccessKeySecret")
+```
+
 HUNTER
 
 ```

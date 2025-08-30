@@ -5,14 +5,14 @@ Build simple, secure, scalable systems with Go.
 安装
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/go_install.sh | bash
 ```
 
 加载环境变量
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ source ~/.zshrc
 ```
 
@@ -21,7 +21,7 @@ Build simple, secure, scalable systems with Go.
 配置镜像加速
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ go env -w GOPROXY="https://proxy.golang.org,direct"
 ```
 
@@ -30,7 +30,7 @@ Build simple, secure, scalable systems with Go.
 查看配置
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ go env
 ```
 

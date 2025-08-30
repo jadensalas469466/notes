@@ -31,7 +31,31 @@ warmchina121.com
 
 ### 2.1. Subdomain
 
+HUNTER
+
+```
+domain.suffix="10086.cn"&&header.status_code="200"&&ip.country="CN"
+```
+
 FOFA
+
+```
+domain="10086.cn" && status_code="200" && country="CN"
+```
+
+QUAKE
+
+```
+domain:"10086.cn" AND status_code:200 AND country:"CN"
+```
+
+ZoomEye
+
+```
+domain="10086.cn" && http.header.status_code="200" && country="CN"
+```
+
+API
 
 ```
 fofa查询 domain="10086.cn" && status_code="200" && country="CN" && size=10000

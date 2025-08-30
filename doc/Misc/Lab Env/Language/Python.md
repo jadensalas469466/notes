@@ -7,7 +7,7 @@ Python is a programming language that lets you work quicklyand integrate systems
 安装
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y python3 python3-pip python3-venv python3-dev
 ```
 
@@ -22,7 +22,7 @@ Python is a programming language that lets you work quicklyand integrate systems
 配置镜像加速
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ python3 -m pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 ```
 
@@ -37,7 +37,7 @@ PS C:\Users\nemo> pip config set global.index-url "https://mirrors.tuna.tsinghua
 创建虚拟环境
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ python3 -m venv ./venv
 ```
 
@@ -48,7 +48,7 @@ PS C:\Users\nemo> python -m venv .\venv
 激活虚拟环境
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ source ./venv/bin/activate
 ```
 
@@ -71,7 +71,7 @@ PS C:\Users\nemo> .\venv\Scripts\Activate.ps1
 退出虚拟环境
 
 ```
-┌──(venv)─(nemo@infosec)-[~]
+┌──(venv)─(nemo@debian)-[~]
 └─$ deactivate
 ```
 

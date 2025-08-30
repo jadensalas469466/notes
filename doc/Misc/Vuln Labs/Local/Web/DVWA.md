@@ -5,14 +5,14 @@ Damn Vulnerable Web Application (DVWA).
 安装依赖
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y apache2 mariadb-server mariadb-client php php-mysql php-gd libapache2-mod-php composer
 ```
 
 Enable `mod_rewrite` 
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo systemctl enable --now apache2.service \
 && sudo a2enmod rewrite \
 && sudo systemctl restart apache2.service
@@ -21,14 +21,14 @@ Enable `mod_rewrite`
 Clone
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo -E git clone https://github.com/digininja/DVWA.git /var/www/html/dvwa
 ```
 
 Install API module
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo composer install -d /var/www/html/dvwa/vulnerabilities/api
 ```
 
@@ -37,7 +37,7 @@ Install API module
 Folder Permissions
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo chown -R www-data:www-data /var/www/html/dvwa/hackable/uploads /var/www/html/dvwa/config \
 && sudo chmod -R 775 /var/www/html/dvwa/hackable/uploads /var/www/html/dvwa/config
 ```
@@ -45,7 +45,7 @@ Folder Permissions
 PHP Configuration
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo nano -l /etc/php/8.2/apache2/php.ini && sudo systemctl restart apache2.service
 ```
 
@@ -59,14 +59,14 @@ PHP Configuration
 释放 Configuration File
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo cp /var/www/html/dvwa/config/config.inc.php.dist /var/www/html/dvwa/config/config.inc.php
 ```
 
 Configure
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo nano -l /var/www/html/dvwa/config/config.inc.php
 ```
 

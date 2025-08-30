@@ -5,7 +5,7 @@ Proxychains is a UNIX program, that hooks network-related libc functions in dyna
 安装
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y proxychains4
 ```
 
@@ -14,7 +14,7 @@ Proxychains is a UNIX program, that hooks network-related libc functions in dyna
 修改配置文件
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo nano -l /etc/proxychains4.conf
 ```
 
@@ -26,7 +26,7 @@ Proxychains is a UNIX program, that hooks network-related libc functions in dyna
 测试代理
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ proxychains4 curl ipinfo.io
 ```
 
@@ -35,7 +35,7 @@ Proxychains is a UNIX program, that hooks network-related libc functions in dyna
 通过代理执行程序
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ proxychains4 <cmd>
 ```
 

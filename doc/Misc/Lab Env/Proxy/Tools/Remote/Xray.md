@@ -5,7 +5,7 @@ Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. 
 安装
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo bash -c "$(curl -fsSL https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install
 ```
 
@@ -14,7 +14,7 @@ Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. 
 将 [v2ray-agent](https://github.com/mack-a/v2ray-agent) 生成的客户端配置文件写入 `config.json` 
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo nano /usr/local/etc/xray/config.json && sudo systemctl restart xray
 ```
 

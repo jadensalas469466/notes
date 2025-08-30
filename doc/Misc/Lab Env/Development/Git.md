@@ -11,7 +11,7 @@ Git is a free and open source distributed version control system designed to han
 ### 1.1. Debian
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y git
 ```
 
@@ -44,7 +44,7 @@ Git is a free and open source distributed version control system designed to han
 配置代理
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ git config --global http.proxy "http://127.0.0.1:10808"
 ```
 
@@ -169,49 +169,49 @@ git clone <repository-url>
 进入本地项目目录
 
 ```
-root@infosec:~# cd ./test
+root@debian:~# cd ./test
 ```
 
 初始化仓库
 
 ```
-root@infosec:~# git init
+root@debian:~# git init
 ```
 
 命名默认分支为 `main` 
 
 ```
-root@infosec:~# git branch -M main
+root@debian:~# git branch -M main
 ```
 
 配置远程仓库
 
 ```
-root@infosec:~# git remote add origin https://github.com/<user-name>/test.git
+root@debian:~# git remote add origin https://github.com/<user-name>/test.git
 ```
 
 创建 `README.md` 文件
 
 ```
-root@infosec:~# echo "test" > README.md
+root@debian:~# echo "test" > README.md
 ```
 
 暂存指定文件的更改
 
 ```
-root@infosec:~# git add README.md
+root@debian:~# git add README.md
 ```
 
 提交
 
 ```
-root@infosec:~# git commit -m "first commit"
+root@debian:~# git commit -m "first commit"
 ```
 
 推送到远程仓库的指定分支 `main` 
 
 ```
-root@infosec:~# git push -u origin main
+root@debian:~# git push -u origin main
 ```
 
 ### 3.4. 配置
