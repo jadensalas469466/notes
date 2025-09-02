@@ -65,49 +65,7 @@ fofa查询 domain="10086.cn" && status_code="200" && country="CN" && size=10000
 
 ## 3. Information Disclosure
 
-### 3.1. Access Control
-
-Google
-
-```
-site:"10086.cn" ("AccessKeyID" OR "AccessKeySecret")
-```
-
-Search Public Code
-
-```
-"10086.cn" AND ("AccessKeyID" OR "AccessKeySecret")
-```
-
-HUNTER
-
-```
-domain.suffix="10086.cn"&&(web.body="AccessKeyID"||web.body="AccessKeySecret")
-```
-
-FOFA
-
-```
-domain="10086.cn" && (body="AccessKeyID" || body="AccessKeySecret")
-```
-
-QUAKE
-
-```
-domain:"10086.cn" AND (body="AccessKeyID" OR body:"AccessKeySecret")
-```
-
-ZoomEye
-
-```
-domain="10086.cn" && (http.body="AccessKeyID" || http.body="AccessKeySecret")
-```
-
-得到 AccessKey 后可使用 [OSSBrowser](https://help.aliyun.com/zh/oss/developer-reference/ossbrowser-2-0-overview?spm=a2c4g.11186623.help-menu-31815.d_3_4_3_0.29b73cca99hU99) 登录
-
-### 3.2. Source Code Disclosure
-
-Search Public Code
+在 Search Public Code 或 GitHub 中审计相关仓库
 
 ```
 "10086.cn"
