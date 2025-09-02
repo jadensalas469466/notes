@@ -241,7 +241,7 @@ root@debian:~# apt update && apt full-upgrade \
 Install common tools
 
 ```
-root@debian:~# apt install -y systemd-resolved passwd sudo unzip gnupg curl vim tree apache2 \
+root@debian:~# apt install -y systemd-resolved passwd sudo unzip gnupg curl vim tree apache2 masscan nmap \
 build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
 zsh zsh-syntax-highlighting zsh-autosuggestions\
 && usermod -aG sudo nemo \

@@ -124,3 +124,18 @@ This is a test text.                 # 正常字符
 2. 在安装界面按 Shift+F10 调出 CMD
 3. 执行 `oobe\bypassnro`
 4. 重新进入安装界面后可跳过联网
+
+## 7. 任务栏安全中心图标消失
+
+创建快捷方式
+
+```
+C:\Windows\System32\SecurityHealthSystray.exe
+```
+
+到以下目录
+
+```
+C:\Users\nemo\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+```
+

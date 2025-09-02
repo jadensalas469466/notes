@@ -5,7 +5,7 @@ This is an Internet-scale port scanner. It can scan the entire Internet in under
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y masscan
 ```
 
@@ -14,14 +14,14 @@ This is an Internet-scale port scanner. It can scan the entire Internet in under
 对单个目标进行全端口扫描
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo masscan -p- <ip> -oL masscan_port.txt
 ```
 
 对多个目标进行全端口扫描
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo masscan -p- -iL ip.txt -oL masscan_port.txt
 ```
 

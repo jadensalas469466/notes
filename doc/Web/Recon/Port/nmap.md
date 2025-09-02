@@ -5,7 +5,7 @@ Nmap is a utility for network exploration or security auditing.
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y nmap
 ```
 
@@ -16,29 +16,36 @@ Nmap is a utility for network exploration or security auditing.
 扫描单个目标的指定端口
 
 ```
-┌──(sec@debian)-[~]
-└─$ sudo nmap -p 22,80,443,65535 -T4 -Pn -sV -O <host> -oN nmap_port.txt
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p <prot1,port2...> -T4 -Pn -sV -O <host> -oN nmap_port.txt
 ```
 
 扫描多个目标的指定端口
 
 ```
-┌──(sec@debian)-[~]
-└─$ sudo nmap -p 22,80,443,65535 -T4 -Pn -sV -O -iL host.txt -oN nmap_port.txt
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p <prot1,port2...> -T4 -Pn -sV -O -iL host.txt -oN nmap_port.txt
 ```
 
 Bypass
 
 ```
-┌──(sec@debian)-[~]
-└─$ sudo nmap -p 22,80,443,65535 -T4 -Pn -sV -O -f -D RND:10 <host> -oN nmap_port.txt
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p <prot1,port2...> -T4 -Pn -sV -O -f -D RND:10 <host> -oN nmap_port.txt
+```
+
+查看相关脚本
+
+```
+┌──(nemo@debian)-[~]
+└─$ ls /usr/share/nmap/scripts/
 ```
 
 漏洞扫描
 
 ```
-┌──(sec@debian)-[~]
-└─$ sudo nmap --script=vuln <host> -oN nmap_port.txt
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p <port> --script "<vuln>*" -d <host> -oN nmap_port.txt
 ```
 
 ---

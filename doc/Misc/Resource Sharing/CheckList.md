@@ -31,6 +31,8 @@ warmchina121.com
 
 ### 2.1. Subdomain
 
+> 导出 IP, URL 和 Port
+
 HUNTER
 
 ```
@@ -61,9 +63,48 @@ API
 fofa查询 domain="10086.cn" && status_code="200" && country="CN" && size=10000
 ```
 
-## 3. Information Disclosure
+### 2.2. Port
 
-### 3.1. Access Control
+使用 masscan 进行全端口扫描
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo masscan -p- <ip>
+```
+
+使用 nmap 扫描指定端口
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p <prot1,port2...> -Pn <ip>
+```
+
+## 3. PoC
+
+使用 nmap 获取服务类型和版本
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p <port> -sV <ip>
+```
+
+查看相关脚本
+
+```
+┌──(nemo@debian)-[~]
+└─$ ls /usr/share/nmap/scripts/
+```
+
+漏洞扫描
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p <port> --script "<vuln>*" -d <ip> --host-timeout 10m
+```
+
+## 4. Information Disclosure
+
+### 4.1. Access Control
 
 Google
 
@@ -111,11 +152,11 @@ Search Public Code
 "10086.cn"
 ```
 
-## 4. Automated Testing
+## 5. Automated Testing
 
 BurpSuite > Target > Scope > Crawl > Discover content > Passively scan
 
-## 5. Manual Testing
+## 6. Manual Testing
 
 访问 `subdomain.txt` 中的每个站点;
 
