@@ -6,7 +6,7 @@ SSRF（服务器端请求伪造）漏洞是一种通过诱导服务器发起未�
 
 例如：
 
-1. 发送 `HTTP` 请求：https://www.example.com/xxx.php?image=https://www.kali.org/kali.jpg
+1. 发送 `HTTP` 请求：https://www.example.com/xxx.php?images=https://www.kali.org/kali.jpg
 2. 服务器接收到请求之后获取 http://www.kali.org/kali.jpg 图片
 3. 服务器获取到图片后将图片返回给用户
 
@@ -26,7 +26,7 @@ SSRF（服务器端请求伪造）漏洞是一种通过诱导服务器发起未�
 
 7. 从 `url` 关键字中寻找：
 
-   `share` `wap` `url` `link` `src` `source` `target` `u` `3g` `display` `sourceURl` `imageURL` `domain` 
+   `share` `wap` `url` `link` `src` `source` `target` `u` `3g` `display` `sourceURl` `imagesURL` `domain` 
 
 8. `php` 中容易存在 `ssrf` 的函数：
 
@@ -74,7 +74,7 @@ http://test.local/pikachu/vul/ssrf/ssrf_curl.php?url=http://127.0.0.1/pikachu/vu
 http://test.local/pikachu/vul/ssrf/ssrf_curl.php?url=http://hack.local/
 ```
 
-![利用 ssrf 漏洞获取一个外网的页面](./../../../image/SSRF/%E5%88%A9%E7%94%A8%20ssrf%20%E6%BC%8F%E6%B4%9E%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AA%E5%A4%96%E7%BD%91%E7%9A%84%E9%A1%B5%E9%9D%A2.png)
+![利用 ssrf 漏洞获取一个外网的页面](./../../../images/SSRF/%E5%88%A9%E7%94%A8%20ssrf%20%E6%BC%8F%E6%B4%9E%E8%8E%B7%E5%8F%96%E4%B8%80%E4%B8%AA%E5%A4%96%E7%BD%91%E7%9A%84%E9%A1%B5%E9%9D%A2.png)
 
 **`burp` 验证**
 
@@ -84,7 +84,7 @@ http://test.local/pikachu/vul/ssrf/ssrf_curl.php?url=http://hack.local/
 9gqpdvx9fs7gyu2rlergsb63cuil6cu1.oastify.com
 ```
 
-![复制 Collaborator 域名](./../../../image/SSRF/%E5%A4%8D%E5%88%B6%20Collaborator%20%E5%9F%9F%E5%90%8D.png)
+![复制 Collaborator 域名](./../../../images/SSRF/%E5%A4%8D%E5%88%B6%20Collaborator%20%E5%9F%9F%E5%90%8D.png)
 
 通过 `ssrf` 访问以上域名
 
@@ -92,7 +92,7 @@ http://test.local/pikachu/vul/ssrf/ssrf_curl.php?url=http://hack.local/
 http://test.local/pikachu/vul/ssrf/ssrf_curl.php?url=http://9gqpdvx9fs7gyu2rlergsb63cuil6cu1.oastify.com/
 ```
 
-![通过 ssrf 访问以上域名](./../../../image/SSRF/%E9%80%9A%E8%BF%87%20ssrf%20%E8%AE%BF%E9%97%AE%E4%BB%A5%E4%B8%8A%E5%9F%9F%E5%90%8D.png)
+![通过 ssrf 访问以上域名](./../../../images/SSRF/%E9%80%9A%E8%BF%87%20ssrf%20%E8%AE%BF%E9%97%AE%E4%BB%A5%E4%B8%8A%E5%9F%9F%E5%90%8D.png)
 
 > 若网站有 `cdn` 可通过 `dns 轮询` 得到主服务器 `ip` 
 

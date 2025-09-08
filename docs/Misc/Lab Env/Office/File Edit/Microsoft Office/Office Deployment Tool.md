@@ -21,15 +21,15 @@ Licensing and activation: Automatically accept the license terms
 
 Export
 
-![Export](./../../../../../../image/Office%20Deployment%20Tool/Export.png)
+![Export](./../../../../../../images/Office%20Deployment%20Tool/Export.png)
 
 Keep Current Settings
 
-![Keep Current Settings](./../../../../../../image/Office%20Deployment%20Tool/Keep%20Current%20Settings.png)
+![Keep Current Settings](./../../../../../../images/Office%20Deployment%20Tool/Keep%20Current%20Settings.png)
 
 Export configuration to XML
 
-![Export configuration to XML](./../../../../../../image/Office%20Deployment%20Tool/Export%20configuration%20to%20XML.png)
+![Export configuration to XML](./../../../../../../images/Office%20Deployment%20Tool/Export%20configuration%20to%20XML.png)
 
 ## 2. Deploy
 

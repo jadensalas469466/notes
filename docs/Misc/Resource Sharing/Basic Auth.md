@@ -4,7 +4,7 @@ The "Basic" Hypertext Transfer Protocol (HTTP) authentication scheme transmits c
 
 访问网站时的登录窗口
 
-![访问网站时的登录窗口](./../../../image/Basic%20Auth/%E8%AE%BF%E9%97%AE%E7%BD%91%E7%AB%99%E6%97%B6%E7%9A%84%E7%99%BB%E5%BD%95%E7%AA%97%E5%8F%A3.png)
+![访问网站时的登录窗口](./../../../images/Basic%20Auth/%E8%AE%BF%E9%97%AE%E7%BD%91%E7%AB%99%E6%97%B6%E7%9A%84%E7%99%BB%E5%BD%95%E7%AA%97%E5%8F%A3.png)
 
 登录时的请求包
 

@@ -14,7 +14,7 @@ C:\Users\sec\VirtualBox VMs\iso
 
 Manual Proxy Configuration
 
-![Manual Proxy Configuration](./../../../image/VirtualBox/Manual%20Proxy%20Configuration.png)
+![Manual Proxy Configuration](./../../../images/VirtualBox/Manual%20Proxy%20Configuration.png)
 
 ## 3. Usage
 
@@ -22,11 +22,11 @@ Port Forwarding
 
 > 推荐设定范围为: 49152-65535
 
-![Port Forwarding](./../../../image/VirtualBox/Port%20Forwarding.png)
+![Port Forwarding](./../../../images/VirtualBox/Port%20Forwarding.png)
 
-Insert Guest Additions CD image
+Insert Guest Additions CD images
 
-![Insert Guest Additions CD image](./../../../image/VirtualBox/Insert%20Guest%20Additions%20CD%20image.png)
+![Insert Guest Additions CD images](./../../../images/VirtualBox/Insert%20Guest%20Additions%20CD%20images.png)
 
 ---
 

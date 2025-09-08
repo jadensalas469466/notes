@@ -4,19 +4,19 @@
 
 ### 1.1. Logo
 
-![logo](./../../../../image/RuoYi/logo.png)
+![logo](./../../../images/RuoYi/logo.png)
 
 ### 1.2. Frontend Page
 
-![Frontend Page](./../../../../image/RuoYi/Frontend%20Page.png)
+![Frontend Page](./../../../images/RuoYi/Frontend%20Page.png)
 
 ### 1.3. Backend Page
 
-![Backend Page](./../../../../image/RuoYi/Backend%20Page.png)
+![Backend Page](./../../../images/RuoYi/Backend%20Page.png)
 
 ### 1.4. Loading Page
 
-![Loading Page](./../../../../image/RuoYi/Loading%20Page.gif)
+![Loading Page](./../../../images/RuoYi/Loading%20Page.gif)
 
 ---
 

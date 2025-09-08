@@ -4,64 +4,64 @@
 
 Create a new site
 
-![Create a new site](./../../../image/GitBook/Create%20a%20new%20site.png)
+![Create a new site](./../../../images/GitBook/Create%20a%20new%20site.png)
 
 Site name
 
-![Site name](./../../../image/GitBook/Site%20name.png)
+![Site name](./../../../images/GitBook/Site%20name.png)
 
 Click
 
-![Click](./../../../image/GitBook/Click.png)
+![Click](./../../../images/GitBook/Click.png)
 
 Sync with Git
 
-![Sync with Git](./../../../image/GitBook/Sync%20with%20Git.png)
+![Sync with Git](./../../../images/GitBook/Sync%20with%20Git.png)
 
 Select GitHub Sync
 
-![Select GitHub Sync](./../../../image/GitBook/Select%20GitHub%20Sync.png)
+![Select GitHub Sync](./../../../images/GitBook/Select%20GitHub%20Sync.png)
 
 
 Connect with GitHub
 
-![Connect with GitHub](./../../../image/GitBook/Connect%20with%20GitHub.png)
+![Connect with GitHub](./../../../images/GitBook/Connect%20with%20GitHub.png)
 
 Authorize
 
-![Authorize](./../../../image/GitBook/Authorize.png)
+![Authorize](./../../../images/GitBook/Authorize.png)
 
 Install the GitHub app
 
-![Install the GitHub app](./../../../image/GitBook/Install%20the%20GitHub%20app.png)
+![Install the GitHub app](./../../../images/GitBook/Install%20the%20GitHub%20app.png)
 
 Select repositories
 
-![Select repositories](./../../../image/GitBook/Select%20repositories.png)
+![Select repositories](./../../../images/GitBook/Select%20repositories.png)
 
 Reconnect
 
-![Reconnect](./../../../image/GitBook/Reconnect.png)
+![Reconnect](./../../../images/GitBook/Reconnect.png)
 
 Re-authorize
 
-![Re-authorize](./../../../image/GitBook/Re-authorize.png)
+![Re-authorize](./../../../images/GitBook/Re-authorize.png)
 
 Account Settings
 
-![Account Settings](./../../../image/GitBook/Account%20Settings.png)
+![Account Settings](./../../../images/GitBook/Account%20Settings.png)
 
 Initial sync
 
-![Initial sync](./../../../image/GitBook/Initial%20sync.png)
+![Initial sync](./../../../images/GitBook/Initial%20sync.png)
 
 View space
 
-![View space](./../../../image/GitBook/View%20space.png)
+![View space](./../../../images/GitBook/View%20space.png)
 
 Complete tasks
 
-![Complete tasks](./../../../image/GitBook/Complete%20tasks.png)
+![Complete tasks](./../../../images/GitBook/Complete%20tasks.png)
 
 ---
 
