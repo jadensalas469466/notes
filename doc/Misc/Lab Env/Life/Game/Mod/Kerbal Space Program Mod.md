@@ -1,6 +1,10 @@
 下载 MOD 加载器 [CKAN](https://github.com/KSP-CKAN/CKAN)
 
-将下载后的 ckan.exe 放在游戏根目录（需要在代理环境中运行）
+将下载的程序放在游戏根目录 (需要在代理环境中运行)
+
+```
+C:\Program Files (x86)\Steam\steamapps\common\Kerbal Space Program\ ckan.exe
+```
 
 在 https://www.curseforge.com/kerbal/ 查找 MOD
 
@@ -21,8 +25,6 @@ VSB 为飞行器
 > 室外建造：Hangar Extender
 >
 > 组件自由变大变小：Tweak Scale - Rescale Everything!
->
-> Tweak Scale Companion Multipass
 >
 > 通讯强度计算：Antenna Helper
 
