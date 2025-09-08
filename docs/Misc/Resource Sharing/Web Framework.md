@@ -18,19 +18,19 @@ https://example.com/<index.html> # 遍历敏感文件后缀
 
 [泛微](https://www.weaver.com.cn/)
 
-![Weaver](./../../../../image/Web Framework/Weaver.png)
+![Weaver](./../../../images/Web Framework/Weaver.png)
 
 [蓝凌](https://www.landray.com.cn/)
 
-![Landray](./../../../../image/Web Framework/Landray.png)
+![Landray](./../../../images/Web Framework/Landray.png)
 
 [Spring](https://spring.io/)
 
-![Spring](./../../../../image/Web Framework/Spring.png)
+![Spring](./../../../images/Web Framework/Spring.png)
 
 [ThinkPHP](https://www.thinkphp.cn/)
 
-![ThinkPHP](./../../../../image/Web Framework/ThinkPHP.png)
+![ThinkPHP](./../../../images/Web Framework/ThinkPHP.png)
 
 ## OSS
 

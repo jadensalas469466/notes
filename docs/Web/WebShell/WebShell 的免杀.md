@@ -132,6 +132,6 @@ print(gen_payload(func1))
 3. 简单加密的大马
 4. 可绕过安全狗的大马
 
-![将四个 payload 放入虚拟机，使用 D 盾进行扫描](./../../../image/WebShell%20%E7%9A%84%E5%85%8D%E6%9D%80/%E5%B0%86%E5%9B%9B%E4%B8%AA%20payload%20%E6%94%BE%E5%85%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%8C%E4%BD%BF%E7%94%A8%20D%20%E7%9B%BE%E8%BF%9B%E8%A1%8C%E6%89%AB%E6%8F%8F.png)
+![将四个 payload 放入虚拟机，使用 D 盾进行扫描](./../../../images/WebShell%20%E7%9A%84%E5%85%8D%E6%9D%80/%E5%B0%86%E5%9B%9B%E4%B8%AA%20payload%20%E6%94%BE%E5%85%A5%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%8C%E4%BD%BF%E7%94%A8%20D%20%E7%9B%BE%E8%BF%9B%E8%A1%8C%E6%89%AB%E6%8F%8F.png)
 
 > 发现识别出了未加密的一句话木马（`shell-没有加密一句话.php`）和简单加密的大马（`webshell大马.php`）

@@ -16,13 +16,13 @@ Windows PE (WinPE) is a small operating system used to install, deploy, and repa
 C:\Program Files (x86)\Windows Kits\10\
 ```
 
-![安装 ADK 到默认路径](./../../../../../image/Windows%20PE/%E5%AE%89%E8%A3%85%20ADK%20%E5%88%B0%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84.png)
+![安装 ADK 到默认路径](./../../../../../images/Windows%20PE/%E5%AE%89%E8%A3%85%20ADK%20%E5%88%B0%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84.png)
 
 选择默认安装
 
 安装 WinPE 插件到默认路径
 
-![安装 WinPE 插件到默认路径](./../../../../../image/Windows%20PE/%E5%AE%89%E8%A3%85%20WinPE%20%E6%8F%92%E4%BB%B6%E5%88%B0%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84.png)
+![安装 WinPE 插件到默认路径](./../../../../../images/Windows%20PE/%E5%AE%89%E8%A3%85%20WinPE%20%E6%8F%92%E4%BB%B6%E5%88%B0%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84.png)
 
 选择默认安装
 
@@ -119,27 +119,27 @@ C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment 
 装载 Windows PE 启动映像
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /mount-image /imagefile:"C:\WinPE_amd64\media\sources\boot.wim" /index:1 /mountdir:"C:\WinPE_amd64\mount"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /mount-images /imagesfile:"C:\WinPE_amd64\media\sources\boot.wim" /index:1 /mountdir:"C:\WinPE_amd64\mount"
 ```
 
 自定义 Windows PE
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WMI.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /images:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WMI.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFX.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /images:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-NetFX.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /images:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-Scripting.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-PowerShell.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /images:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-PowerShell.cab"
 
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /image:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-StorageWMI.cab"
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /add-package /images:"C:\WinPE_amd64\mount" /packagepath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-StorageWMI.cab"
 ```
 
 卸载 WinPE 映像并提交更改
 
 ```
-C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /unmount-image /mountdir:"C:\WinPE_amd64\mount" /commit
+C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools>dism /unmount-images /mountdir:"C:\WinPE_amd64\mount" /commit
 ```
 
 查看 WinPE 的盘符
@@ -202,7 +202,7 @@ PS X:\windows\system32> ls "F:\Maint\"
 挂载镜像
 
 ```
-PS X:\windows\system32> mount-diskimage -imagepath "F:\Maint\windows.iso"
+PS X:\windows\system32> mount-diskimages -imagespath "F:\Maint\windows.iso"
 ```
 
 ```

