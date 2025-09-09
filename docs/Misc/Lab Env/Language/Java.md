@@ -5,15 +5,15 @@
 安装 JDK8
 
 ```
-┌──(nemo@infosec)-[~]
-└─$ proxychains4 curl -LO "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u462b08.tar.gz" &&  sudo tar -xzvf ./OpenJDK8U* -C /usr/local && rm -rf OpenJDK8U*
+┌──(nemo@debian)-[~]
+└─$ proxychains4 curl -LO "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u462b08.tar.gz" &&  sudo tar -xzvf ./OpenJDK8U* -C ~/.local/ && rm -f OpenJDK8U*
 ```
 
 加入环境变量
 
 ```
-┌──(nemo@infosec)-[~]
-└─$ sudo update-alternatives --install /usr/bin/java java /usr/local/jdk8u462-b08/bin/java 0811
+┌──(nemo@debian)-[~]
+└─$ sudo update-alternatives --install /usr/bin/java java ~/.local/jdk8u462-b08/bin/java 0811
 ```
 
 ## 2. Usage
@@ -21,7 +21,7 @@
 修改 JDK
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ update-alternatives --config java
 ```
 
@@ -41,14 +41,14 @@ Press <enter> to keep the current choice[*], or type selection number: 3
 查看版本
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ java -version
 ```
 
 移除 JDK
 
 ```
-┌──(nemo@infosec)-[~]
+┌──(nemo@debian)-[~]
 └─$ update-alternatives --remove java /usr/local/jdk8u412-b08/bin/java && rm -rf /usr/local/jdk8u412-b08/bin/java
 ```
 
@@ -57,4 +57,5 @@ Press <enter> to keep the current choice[*], or type selection number: 3
 References
 
 - [Adoptium](https://adoptium.net/)
+- [temurin8-binaries](https://github.com/adoptium/temurin8-binaries)
 

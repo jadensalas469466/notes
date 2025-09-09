@@ -326,7 +326,8 @@ nemo@debian:~$ chsh -s $(which zsh) \
 Create directory
 
 ```
-nemo@debian:~$ sudo mkdir -p /var/www/html/exploit \
+nemo@debian:~$ mkdir -p ~/.local/bin \
+&& sudo mkdir -p /var/www/html/exploit \
 && sudo chown -R www-data:www-data /var/www/html/exploit \
 && sudo chmod 2755 /var/www/html/exploit
 ```
@@ -348,16 +349,16 @@ nemo@debian:~$ sudo poweroff
 
 |                            Local                             |
 | :----------------------------------------------------------: |
-| [proxy](https://keithpeck177271.gitbook.io/note/misc/lab-env/proxy/tools/remote/proxy) |
-| [Xray](https://keithpeck177271.gitbook.io/note/misc/lab-env/proxy/tools/remote/xray) |
-| [proxychains-ng](https://keithpeck177271.gitbook.io/note/misc/lab-env/proxy/tools/remote/proxychains-ng) |
-| [Git](https://keithpeck177271.gitbook.io/note/misc/lab-env/development/git) |
-| [Python](https://keithpeck177271.gitbook.io/note/misc/lab-env/language/python) |
-| [Go](https://keithpeck177271.gitbook.io/note/misc/lab-env/language/go) |
-| [Docker](https://keithpeck177271.gitbook.io/note/misc/lab-env/development/docker) |
-| [MariaDB](https://keithpeck177271.gitbook.io/note/misc/lab-env/mariadb) |
-| [DVWA](https://keithpeck177271.gitbook.io/note/misc/vuln-labs/local/web/dvwa) |
-| [Vulfocus](https://keithpeck177271.gitbook.io/note/misc/vuln-labs/local/docker/vulfocus) |
+| [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxy) |
+| [Xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
+| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxychains-ng) |
+| [Git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
+| [Python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
+| [Go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
+| [Docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
+| [MariaDB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
+| [DVWA](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
+| [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
 
 Take Snapshot: `deploy` 
 
@@ -370,15 +371,15 @@ Take Snapshot: `deploy`
 
 |                            Server                            |
 | :----------------------------------------------------------: |
-| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/note/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
-| [ufw](https://keithpeck177271.gitbook.io/note/misc/security-response/firewall/ufw) |
-| [fail2ban](https://keithpeck177271.gitbook.io/note/misc/security-response/ban/fail2ban) |
-| [v2ray-agent](https://keithpeck177271.gitbook.io/note/misc/lab-env/proxy/tools/remote/v2ray-agent) |
-| [自建 DNS 服务器](https://keithpeck177271.gitbook.io/note/misc/lab-env/zi-jian-dns-fu-wu-qi) |
-| [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/note/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
-| [Tor](https://keithpeck177271.gitbook.io/note/misc/lab-env/proxy/tools/remote/tor) |
-| [Go](https://keithpeck177271.gitbook.io/note/misc/lab-env/language/go) |
-| [Interactsh](https://keithpeck177271.gitbook.io/note/web/oob/interactsh) |
+| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
+| [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
+| [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban) |
+| [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/v2ray-agent) |
+| [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
+| [配置 Syncthing 数据同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
+| [Tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
+| [Go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
+| [Interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh) |
 
 ## 6. Usage
 
