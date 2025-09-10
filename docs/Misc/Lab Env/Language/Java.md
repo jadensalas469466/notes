@@ -6,7 +6,9 @@
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ proxychains4 curl -LO "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u462b08.tar.gz" &&  sudo tar -xzvf ./OpenJDK8U* -C ~/.local/ && rm -f OpenJDK8U*
+└─$ curl -LO "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u462-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u462b08.tar.gz" \
+&& tar -xzvf ./OpenJDK8U-jdk* -C ~/.local/ \
+&& rm -f ./OpenJDK8U-jdk*
 ```
 
 加入环境变量
@@ -22,7 +24,7 @@
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ update-alternatives --config java
+└─$ sudo update-alternatives --config java
 ```
 
 ```shell
@@ -33,7 +35,7 @@ There are 3 choices for the alternative java (providing /usr/bin/java).
 * 0            /usr/lib/jvm/java-21-openjdk-amd64/bin/java   2111      auto mode
   1            /usr/lib/jvm/java-17-openjdk-amd64/bin/java   1711      manual mode
   2            /usr/lib/jvm/java-21-openjdk-amd64/bin/java   2111      manual mode
-  3            /usr/local/jdk8u412-b08/bin/java              811       manual mode
+  3            /home/nemo/.local/jdk8u462-b08/bin/java       811       manual mode
 
 Press <enter> to keep the current choice[*], or type selection number: 3
 ```
@@ -49,7 +51,8 @@ Press <enter> to keep the current choice[*], or type selection number: 3
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ update-alternatives --remove java /usr/local/jdk8u412-b08/bin/java && rm -rf /usr/local/jdk8u412-b08/bin/java
+└─$ sudo update-alternatives --remove java ~/.local/jdk8u462-b08/bin/java \
+&& rm -rf ~/.local/jdk8u462-b08/
 ```
 
 ---

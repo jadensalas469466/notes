@@ -358,7 +358,9 @@ nemo@debian:~$ sudo poweroff
 | [Docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
 | [MariaDB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [DVWA](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
+| [Vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
+| [Metasploit](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit) |
 
 Take Snapshot: `deploy` 
 

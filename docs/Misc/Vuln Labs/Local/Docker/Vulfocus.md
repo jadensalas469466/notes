@@ -4,7 +4,7 @@ Run
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ docker run -d --restart always -p 60088:80 -v /var/run/docker.sock:/var/run/docker.sock -e VUL_IP=127.0.0.1 Vulfocus/Vulfocus
+└─$ docker run -d --restart always -p 60088:80 -v /var/run/docker.sock:/var/run/docker.sock -e VUL_IP=127.0.0.1 vulfocus/vulfocus
 ```
 
 ## 2. Init
@@ -29,12 +29,12 @@ admin:admin
 
 ![修改系统配置](./../../../../../images/Vulfocus/%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E9%85%8D%E7%BD%AE.png)
 
-|                          Vulfocus                           |
-| :---------------------------------------------------------: |
-| [pikachu](https://github.com/zhuifengshaonianhanlu/pikachu) |
-|       [xss-labs](https://github.com/do0dl3/xss-labs)        |
-|      [sqli-labs](https://github.com/Audi-1/sqli-labs)       |
-|     [upload-labs](https://github.com/c0ny1/upload-labs)     |
+|         Vulfocus          |
+| :-----------------------: |
+|  vulfocus/pikachu:latest  |
+| vulfocus/xss-labs:latest  |
+| vulfocus/sqli-labs:latest |
+| glzjin/upload-labs:latest |
 
 ## 3. Usage
 
@@ -67,5 +67,5 @@ Visit
 
 References
 
-- [Vulfocus](https://fofapro.github.io/Vulfocus/#/)
+- [Vulfocus](https://fofapro.github.io/vulfocus/#/)
 

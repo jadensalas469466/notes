@@ -25,10 +25,8 @@ Enter password:
 
 ```
 MariaDB [(none)]> ALTER USER root@localhost IDENTIFIED BY '123456';
-
-MariaDB [(none)]> FLUSH PRIVILEGES;
-
-MariaDB [(none)]> EXIT;
+FLUSH PRIVILEGES;
+EXIT;
 ```
 
 ## 3. Usage
