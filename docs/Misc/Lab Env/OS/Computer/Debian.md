@@ -352,7 +352,7 @@ nemo@debian:~$ sudo poweroff
 | [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy) |
 | [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
-|                 [git](https://git-scm.com/)                  |
+| [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
 | [Python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
 | [Go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
 | [Docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
