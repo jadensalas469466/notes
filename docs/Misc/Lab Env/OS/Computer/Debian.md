@@ -369,7 +369,7 @@ nemo@debian:~$ sudo poweroff
 |                             ffuf                             |
 | [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
-| [Vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
+| [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [VulApps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
 
