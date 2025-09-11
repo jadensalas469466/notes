@@ -29,4 +29,4 @@ This is an Internet-scale port scanner. It can scan the entire Internet in under
 
 References
 
-- [masscan](https://github.com/robertdavidgraham/masscan)
+- [masscan](https://www.kali.org/tools/masscan/)
