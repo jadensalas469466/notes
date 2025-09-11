@@ -357,10 +357,21 @@ nemo@debian:~$ sudo poweroff
 | [Go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
 | [Docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
 | [MariaDB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
+|                         netdiscover                          |
+|                           masscan                            |
+|                             nmap                             |
+|                           whatweb                            |
+|                           wafw00f                            |
+|                            katana                            |
+|                          dirsearch                           |
+|                            nikto                             |
+|                            nuclei                            |
+|                             ffuf                             |
+| [Metasploit](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit) |
 | [DVWA](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [Vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
+| [VulApps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
-| [Metasploit](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit) |
 
 Take Snapshot: `deploy` 
 

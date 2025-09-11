@@ -2,7 +2,7 @@
 
 ## 1. Install
 
-克隆仓库
+克隆仓库到 ==./.local==
 
 ```
 git clone --depth 1 https://github.com/vulhub/vulhub.git
