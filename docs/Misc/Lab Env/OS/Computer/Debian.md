@@ -349,7 +349,7 @@ nemo@debian:~$ sudo poweroff
 
 |                            Local                             |
 | :----------------------------------------------------------: |
-| [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxy) |
+| [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy) |
 | [Xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/proxychains-ng) |
 | [Git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |

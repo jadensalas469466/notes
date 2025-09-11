@@ -36,5 +36,5 @@
 
 References
 
-- [scripts](https://github.com/jadensalas469466/scripts)
+- [proxy_install.sh](https://github.com/jadensalas469466/scripts/blob/main/proxy_install.sh)
 
