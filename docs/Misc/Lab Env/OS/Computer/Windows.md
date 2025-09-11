@@ -200,10 +200,11 @@ Desktop needs to configure SMB
 
 ## 5. Deploy
 
-|                  VM                  |
-| :----------------------------------: |
-|   [7-Zip](https://www.7-zip.org/)    |
-| [Geek](https://geekuninstaller.com/) |
+|                              VM                              |
+| :----------------------------------------------------------: |
+|               [7-Zip](https://www.7-zip.org/)                |
+|             [Geek](https://geekuninstaller.com/)             |
+| [JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
 
 Shut down, Take Snapshot: `deploy` 
 
