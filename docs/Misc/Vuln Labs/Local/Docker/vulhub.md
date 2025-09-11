@@ -2,10 +2,11 @@
 
 ## 1. Install
 
-克隆仓库到 ==./.local==
+克隆仓库到
 
 ```
-git clone --depth 1 https://github.com/vulhub/vulhub.git
+┌──(sec@debian)-[~]
+└─$ git clone --depth 1 https://github.com/vulhub/vulhub.git ~/.local/vulhub
 ```
 
 ## 2. Usage
@@ -13,13 +14,15 @@ git clone --depth 1 https://github.com/vulhub/vulhub.git
 查看漏洞环境
 
 ```
-ls ~/vulhub
+┌──(sec@debian)-[~]
+└─$ ls  ~/.local/vulhub
 ```
 
 启动漏洞环境
 
 ```
-cd ~/vulhub/path \
+┌──(sec@debian)-[~]
+└─$ cd ~/.local/vulhub/nday \
 && docker compose build \
 && docker compose up -d
 ```
@@ -27,14 +30,14 @@ cd ~/vulhub/path \
 查看文档
 
 ```
-┌──(sec@debian)-[~/vulhub/path]
-└─# less README.zh-cn.md
+┌──(nemo@infosec)-[~/.local/vulhub/nday]
+└─$ less README.zh-cn.md
 ```
 
 删除环境
 
 ```
-┌──(sec@debian)-[~/vulhub/path]
+┌──(sec@debian)-[~/.local/vulhub/nday]
 └─# docker compose down -v
 ```
 
