@@ -370,7 +370,7 @@ nemo@debian:~$ sudo poweroff
 | [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
-| [VulApps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
+| [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
 
 Take Snapshot: `deploy` 
