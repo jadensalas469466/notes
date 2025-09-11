@@ -49,7 +49,4 @@ example.onion
 
 References
 
-- [Tor](https://www.torproject.org/)
-- [Tor support](https://support.torproject.org/)
-- [Onion Services](https://support.torproject.org/onionservices/)
-
+- [tor](https://gitlab.com/torproject/tor)
