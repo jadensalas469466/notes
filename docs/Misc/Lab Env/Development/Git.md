@@ -1,4 +1,4 @@
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.11
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 
 ```
 工作区 add-> 暂存区 commit-> 本地仓库 <-pull||push-> 远程仓库
@@ -262,5 +262,5 @@ git config --global core.autocrlf false
 
 References
 
-- [git](https://git-scm.com/)
+- [Git](https://git-scm.com/)
 
