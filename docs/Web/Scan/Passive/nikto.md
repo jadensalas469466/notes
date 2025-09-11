@@ -5,7 +5,7 @@ Nikto is a pluggable web server and CGI scanner written in Perl, using rfp’s L
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y nikto
 ```
 
@@ -14,21 +14,21 @@ Nikto is a pluggable web server and CGI scanner written in Perl, using rfp’s L
 对单个目标进行扫描
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ nikto -h <host> -Format htm -o nikto_<host>.htm
 ```
 
 对多个目标进行扫描
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ nikto -h host.txt -Format htm -o nikto_host.htm
 ```
 
 指定 HTTPS 端口扫描
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ nikto -h host.txt -p 443 -ssl -Format htm -o nikto_host.htm
 ```
 

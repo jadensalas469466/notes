@@ -5,7 +5,7 @@ ffuf is a fast web fuzzer written in Go that allows typical directory discovery,
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ go install github.com/ffuf/ffuf/v2@latest
 ```
 
@@ -14,7 +14,7 @@ ffuf is a fast web fuzzer written in Go that allows typical directory discovery,
 GET 扫描
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ ffuf -recursion-depth 3 \
 -w /path/dict.txt:FUZZ \
 -H "X-Originating-Ip: 127.0.0.1" \
