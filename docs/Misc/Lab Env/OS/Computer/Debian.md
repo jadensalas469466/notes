@@ -353,10 +353,10 @@ nemo@debian:~$ sudo poweroff
 | [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
 | [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
-| [Python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
-| [Go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
-| [Docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
-| [MariaDB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
+| [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
+| [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
+| [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
+| [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 |                         netdiscover                          |
 |                           masscan                            |
 |                             nmap                             |
@@ -367,8 +367,8 @@ nemo@debian:~$ sudo poweroff
 |                            nikto                             |
 |                            nuclei                            |
 |                             ffuf                             |
-| [Metasploit](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit) |
-| [DVWA](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
+| [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit) |
+| [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [Vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [VulApps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
