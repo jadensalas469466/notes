@@ -1,4 +1,4 @@
-Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.
+Xray, Penetrates Everything. Also the best v2ray-core. Where the magic happens. An open platform for various uses.1
 
 ## 1. Install
 
