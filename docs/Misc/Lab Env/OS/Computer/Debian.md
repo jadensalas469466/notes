@@ -371,7 +371,7 @@ nemo@debian:~$ sudo poweroff
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
-| [Vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
+| [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
 
 Take Snapshot: `deploy` 
 
