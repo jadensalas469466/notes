@@ -196,7 +196,7 @@ Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/lab-e
 
 Shut down, Take Snapshot: `init` 
 
-Desktop needs to configure SMB
+==Desktop needs to configure SMB and System Protection==
 
 ## 5. Deploy
 
@@ -230,7 +230,6 @@ Shut down, Take Snapshot: `deploy`
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
 |                 [Git](https://git-scm.com/)                  |
-|           [GlassWire](https://www.glasswire.com/)            |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |           [imagesGlass](https://imagesglass.org/)            |
 | [JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
@@ -240,10 +239,10 @@ Shut down, Take Snapshot: `deploy`
 |            [LockHunter](https://lockhunter.com/)             |
 |             [MuMuPlayer](https://mumu.163.com/)              |
 |         [Notepad++](https://notepad-plus-plus.org/)          |
+|       [Oracle VirtualBox](https://www.virtualbox.org/)       |
 |           [Pinta](https://www.pinta-project.com/)            |
 |               [PixPin](https://pixpinapp.com/)               |
 |           [Proxifier](https://www.proxifier.com/)            |
-|              [Python](https://www.python.org/)               |
 |         [qBittorrent](https://www.qbittorrent.org/)          |
 |        [scrcpy](https://github.com/Genymobile/scrcpy)        |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
@@ -255,7 +254,6 @@ Shut down, Take Snapshot: `deploy`
 |        [VLC media player](https://www.videolan.org/)         |
 |                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
-| [VMware Workstation Pro](https://softwareupdate.vmware.com/cds/vmw-desktop/ws/) |
 |   [WindowsTerminal](https://github.com/microsoft/terminal)   |
 |               [WeChat](https://weixin.qq.com/)               |
 

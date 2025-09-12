@@ -26,9 +26,9 @@ Port Forwarding
 
 Insert Guest Additions CD images
 
-![Insert Guest Additions CD images](./../../../images/VirtualBox/Insert%20Guest%20Additions%20CD%20images.png)
+![Insert Guest Additions CD image](./../../../images/VirtualBox/Insert%20Guest%20Additions%20CD%20image.png)
 
 ---
 
-- [VirtualBox](https://www.virtualbox.org/)
+- [Oracle VirtualBox](https://www.virtualbox.org/)
 
