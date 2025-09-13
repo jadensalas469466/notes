@@ -659,6 +659,14 @@ Custom Shortcuts
 Shortcut: Ctrl + Alt +T
 ```
 
+### 6.10. 创建链接
+
+创建软链接以全局运行
+
+```
+ln -s ~/app ~/.local/bin
+```
+
 ---
 
 References

@@ -84,7 +84,7 @@ Click `Create / Reset Database`
 
 ## 3. Usage
 
-登录 `admin:password` 
+Login `admin:password` 
 
 > http://127.0.0.1:60080/dvwa/login.php
 

@@ -110,5 +110,5 @@ C:\Users\sec\share\VMware
 
 References
 
-- [VMware](https://www.vmware.com/)
-- [VMware Documentation](https://docs.vmware.com/cn/)
+- [VMware Workstation Pro](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)
+

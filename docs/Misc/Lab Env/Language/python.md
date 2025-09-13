@@ -56,18 +56,6 @@ PS C:\Users\nemo> python -m venv .\venv
 PS C:\Users\nemo> .\venv\Scripts\Activate.ps1
 ```
 
-> PowerShell 首次运行这行命令需先配置执行策略
->
-> ```
-> PS C:\Users\nemo> Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-> 
-> Execution Policy Change
-> The execution policy helps protect you from scripts that you do not trust. Changing the execution policy might expose
-> you to the security risks described in the about_Execution_Policies help topic at
-> https:/go.microsoft.com/fwlink/?LinkID=135170. Do you want to change the execution policy?
-> [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "N"): A
-> ```
-
 退出虚拟环境
 
 ```
