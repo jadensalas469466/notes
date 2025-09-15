@@ -28,6 +28,10 @@ ubuntu_0804_temp
 
 ![Import](./../../../../../images/metasploitable2/Import.png)
 
+Host-only
+
+![Host-only](./../../../../../images/metasploitable2/Host-only.png)
+
 Start
 
 ![Start](./../../../../../images/metasploitable2/Start.png)

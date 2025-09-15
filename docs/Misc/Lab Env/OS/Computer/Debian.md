@@ -637,12 +637,6 @@ root@debian:~# systemctl restart systemd-networkd.service \
 root@debian:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
 ```
 
-Press Return to close this window. . .
-
-```
-Enter
-```
-
 Restart
 
 ```

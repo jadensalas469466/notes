@@ -204,7 +204,7 @@ Shut down, Take Snapshot: `init`
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
 |             [Geek](https://geekuninstaller.com/)             |
-| [JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
+| [Liberica Full JDK 11](https://bell-sw.com/pages/downloads/#jdk-11-lts) |
 
 Shut down, Take Snapshot: `deploy` 
 
@@ -232,7 +232,6 @@ Shut down, Take Snapshot: `deploy`
 |                 [Git](https://git-scm.com/)                  |
 |       [Google Chrome](https://www.google.com/chrome/)        |
 |           [imagesGlass](https://imagesglass.org/)            |
-| [JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
 |             [KeePassXC](https://keepassxc.org/)              |
 |         [Koodo Reader](https://www.koodoreader.com/)         |
 |             [LocalSend](https://localsend.org/)              |
@@ -247,6 +246,7 @@ Shut down, Take Snapshot: `deploy`
 |        [scrcpy](https://github.com/Genymobile/scrcpy)        |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
+| [Temurin JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
 |     [TurboTop](https://www.savardsoftware.com/turbotop/)     |
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |

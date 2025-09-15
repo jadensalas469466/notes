@@ -18,17 +18,13 @@ ubuntu_1404_temp
 
 ![Import](./../../../../../images/metasploitable3/ubuntu_1404/Import.png)
 
+Host-only
+
+![Host-only](./../../../../../images/metasploitable3/ubuntu_1404/Host-only.png)
+
 Start
 
 ![Start](./../../../../../images/metasploitable3/ubuntu_1404/Start.png)
-
-Change Network Settings
-
-![Change Network Settings](./../../../../../images/metasploitable3/ubuntu_1404/Change%20Network%20Settings.png)
-
-Attached to NAT
-
-![Attached to NAT](./../../../../../images/metasploitable3/ubuntu_1404/Attached%20to%20NAT.png)
 
 Login
 
@@ -60,11 +56,15 @@ Remove
 
 Import
 
-![Import](./../../../../../images/metasploitable3/windows_2008_r2/Import.png)
-
 ```
 windows_2008_r2_temp
 ```
+
+![Import](./../../../../../images/metasploitable3/windows_2008_r2/Import.png)
+
+Host-only
+
+![Host-only](./../../../../../images/metasploitable3/windows_2008_r2/Host-only.png)
 
 Start
 
@@ -128,3 +128,4 @@ References
 
 - [metasploitable3](https://github.com/rapid7/metasploitable3)
 - [SMUMN Computer Science Department](http://cs.smumn.edu/)
+
