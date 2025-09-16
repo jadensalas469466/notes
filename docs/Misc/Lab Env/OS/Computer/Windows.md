@@ -198,13 +198,20 @@ Shut down, Take Snapshot: `init`
 
 ==PM needs to configure SMB , System Protection and ExecutionPolicy==
 
+==VM needs to Create a folder and Add exclusions==
+
+```
+C:\Users\nemo\Apps
+```
+
 ## 5. Deploy
 
 |                              VM                              |
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
+|       [Behinder](https://github.com/rebeyond/Behinder)       |
 |             [Geek](https://geekuninstaller.com/)             |
-| [Liberica Full JDK 11](https://bell-sw.com/pages/downloads/#jdk-11-lts) |
+| [ShiroAttack2_Pro](https://github.com/Chave0v0/ShiroAttack2_Pro) |
 
 Shut down, Take Snapshot: `deploy` 
 
@@ -220,6 +227,7 @@ Shut down, Take Snapshot: `deploy`
 |                              PM                              |
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
+| [Adoptium JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
 |            [Anytxt Searcher](https://anytxt.net/)            |
 |              [aria2](https://aria2.github.io/)               |
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
@@ -246,7 +254,6 @@ Shut down, Take Snapshot: `deploy`
 |        [scrcpy](https://github.com/Genymobile/scrcpy)        |
 |         [Stretchly](https://hovancik.net/stretchly/)         |
 |             [Syncthing](https://syncthing.net/)              |
-| [Temurin JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any) |
 |     [TurboTop](https://www.savardsoftware.com/turbotop/)     |
 |                 [Typora](https://typora.io/)                 |
 |          [v2rayN](https://github.com/2dust/v2rayN)           |

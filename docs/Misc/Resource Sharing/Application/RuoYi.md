@@ -49,9 +49,15 @@ iconhash="e49fd30ea870c7a820464ca56a113e6e" || iconhash="4eeb8a8eb30b70af511dcc2
 安装依赖
 
 ```
-JDK >= 1.8
-MySQL >= 5.7
+ RuoYi = 4.8.1
+  JDK >= 1.8
 Maven >= 3.0
+MySQL >= 5.7
+```
+
+```
+RuoYi = 4.2.0
+ JDK >= 17
 ```
 
 克隆仓库
@@ -79,7 +85,7 @@ USE ry;
 
 ```
 MariaDB [ry]> SOURCE /home/nemo/RuoYi/sql/quartz.sql
-SOURCE /home/nemo/RuoYi/sql/ry_20250416.sql
+SOURCE /home/nemo/RuoYi/sql/ry_20191008.sql
 EXIT;
 ```
 
@@ -145,10 +151,24 @@ username：admin ruoyi druid            
 password：123456 admin druid admin123 admin888
 ```
 
-Shiro 反序列化 [CVE-2016-4437](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2016-4437)
+[CVE-2019-12422](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2019-12422) (RuoYi < 4.2.0, ==已修复: AES-CBC -> AES-GCM==)
+
+[CVE-2016-4437](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2016-4437)   (RuoYi ≤ 4.6.2, ==已修复: 默认配置随机密钥==)
 
 ```
-RuoYi < 4.6.2
+RuoYi ≤ 4.3.0
+```
+
+```
+fCq+/xW488hMTCD+cmJ3aQ==
+```
+
+```
+4.3.0 < RuoYi ≤ 4.6.2
+```
+
+```
+zSyK5Kp6PZAAjlT+eeNMlg==
 ```
 
 ---
@@ -157,6 +177,6 @@ References
 
 - [RuoYi](https://github.com/yangzongzhuan/RuoYi)
 - [历史漏洞](https://doc.ruoyi.vip/ruoyi/document/kslj.html#%E5%8E%86%E5%8F%B2%E6%BC%8F%E6%B4%9E)
-- [ruoyi-Vue-tools](https://github.com/kk12-30/ruoyi-Vue-tools)
+- [若依(RuoYi)框架漏洞战争手册](https://mp.weixin.qq.com/s/JXH3rfDzlIgz0euyPYSLlg)
 - [若依Vue前后端分离渗透测试的一些技巧](https://mp.weixin.qq.com/s/IZQacNfVOdoGd-ylzfyQlA)
 

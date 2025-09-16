@@ -53,11 +53,11 @@ Port Forwarding Rules
 
 | Name    | Host Port | Guest Port |
 | ------- | --------- | ---------- |
-| example | port      | port       |
+| example | 37665     | 37665      |
 
 Visit
 
-> http://127.0.0.1:port
+> http://127.0.0.1:37665
 
 手动停止
 

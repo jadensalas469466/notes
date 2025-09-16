@@ -26,12 +26,6 @@
 └─$ sudo apt update
 ```
 
-### 1.2. Windows
-
-[Temurin JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any)
-
-[Liberica Full JDK 11](https://bell-sw.com/pages/downloads/#jdk-11-lts)
-
 ## 2. Install
 
 ### 2.1. Debian
@@ -40,7 +34,7 @@
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo apt install -y temurin-8-jdk temurin-11-jdk
+└─$ sudo apt install -y temurin-8-jdk maven
 ```
 
 ## 3. Usage
@@ -82,18 +76,34 @@ Press <enter> to keep the current choice[*], or type selection number: 2
 
 ### 3.2. Windows
 
-指定版本运行 JAR
+指定 JDK 版本运行 JAR
 
 ```
-C:\Program Files\BellSoft\LibericaJDK-11-Full\bin\javaw.exe
+app.vbs
 ```
 
-![切换版本运行](./../../../../images/Java/%E5%88%87%E6%8D%A2%E7%89%88%E6%9C%AC%E8%BF%90%E8%A1%8C.png)
+```
+Dim WshShell, javaPath, jarPath, command
+
+' 指定 JDK 路径
+javaPath = "C:\Program Files\Java\jdk-num\bin\javaw.exe"
+
+' 指定 JAR 路径
+jarPath = "C:\path\app.jar"
+
+' 构建启动命令
+command = Chr(34) & javaPath & Chr(34) & " -jar " & Chr(34) & jarPath & Chr(34)
+
+' 执行命令 (隐藏窗口)
+Set WshShell = CreateObject("WScript.Shell")
+WshShell.Run command, 1
+
+```
 
 ---
 
 References
 
-- [Temurin](https://adoptium.net/temurin/releases)
-- [Liberica](https://bell-sw.com/pages/downloads/)
+- [Adoptium Java](https://adoptium.net/temurin/releases)
+- [Oracle Java](https://www.oracle.com/java/technologies/java-se-glance.html)
 

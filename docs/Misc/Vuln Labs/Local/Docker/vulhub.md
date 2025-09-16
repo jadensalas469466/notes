@@ -18,26 +18,38 @@
 └─$ ls  ~/.local/vulhub
 ```
 
-启动漏洞环境
+修改端口映射
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ cd ~/.local/vulhub/nday \
-&& docker compose build \
-&& docker compose up -d
+└─$ cd ~/.local/vulhub/nday && nano ./docker-compose.yml
 ```
 
-查看文档
+```
+services:
+ web:
+   image: vulhub/nday
+   ports:
+    - "60081:8080"
+```
+
+启动漏洞环境
 
 ```
 ┌──(nemo@debian)-[~/.local/vulhub/nday]
-└─$ less README.zh-cn.md
+└─$ docker compose build && docker compose up -d
 ```
+
+Port Forwarding Rules
+
+| Name    | Host Port | Guest Port |
+| ------- | --------- | ---------- |
+| example | 60081     | 60081      |
 
 删除环境
 
 ```
-┌──(sec@debian)-[~/.local/vulhub/nday]
+┌──(nemo@debian)-[~/.local/vulhub/nday]
 └─# docker compose down -v
 ```
 
