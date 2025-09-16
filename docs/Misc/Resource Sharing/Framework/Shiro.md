@@ -32,7 +32,7 @@ Login Page 3
 
 靶场
 
-- [CVE-2016-4437](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2016-4437) (Shiro < 1.2.5, ==建议: 应用自行配置随机密钥==)
+- [CVE-2016-4437](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2016-4437) (Shiro < 1.2.5, ==未修复: 建议自行配置随机密钥==)
 
   ```
   vulfocus/shiro-cve_2016_4437:latest
