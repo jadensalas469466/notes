@@ -85,7 +85,7 @@ USE ry;
 
 ```
 MariaDB [ry]> SOURCE /home/nemo/RuoYi/sql/quartz.sql
-SOURCE /home/nemo/RuoYi/sql/ry_20191008.sql
+SOURCE /home/nemo/RuoYi/sql/ry_20210210.sql
 EXIT;
 ```
 
@@ -153,7 +153,7 @@ password：123456 admin druid admin123 admin888
 
 [CVE-2019-12422](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2019-12422) (RuoYi < 4.2.0, ==已修复: AES-CBC -> AES-GCM==)
 
-[CVE-2016-4437](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2016-4437)   (RuoYi ≤ 4.6.2, ==已修复: 默认使用随机密钥==)
+[CVE-2016-4437](https://hackerone.com/hacktivity/cve_discovery?id=CVE-2016-4437)   (RuoYi < 4.6.2, ==已修复: 默认使用随机密钥==)
 
 ```
 RuoYi ≤ 4.3.0
@@ -164,7 +164,7 @@ fCq+/xW488hMTCD+cmJ3aQ==
 ```
 
 ```
-4.3.0 < RuoYi ≤ 4.6.2
+4.3.0 < RuoYi < 4.6.2
 ```
 
 ```

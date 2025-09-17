@@ -36,6 +36,22 @@ cd "$(dirname "$(readlink -f "$0")")"
 python3 ./xsstrike.py "$@"
 ```
 
+```
+┌──(sec@debian)-[~/.local/xsstrike]
+└─$ cat << 'EOF' > ./xsstrike.sh
+#!/bin/bash
+
+# 错误检测
+set -e
+
+# 获取链接的实际路径并切换到该目录
+cd "$(dirname "$(readlink -f "$0")")"
+
+# 运行 xsstrike
+python3 ./xsstrike.py "$@"
+EOF
+```
+
 创建链接
 
 ```
@@ -63,4 +79,4 @@ python3 ./xsstrike.py "$@"
 
 References
 
-- [xsstrike](https://github.com/s0md3v/XSStrike)
+- [XSStrike](https://github.com/s0md3v/XSStrike)
