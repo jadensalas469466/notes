@@ -4,7 +4,7 @@
 
 ### 1.1. Notice
 
-在公告中查看目标的收录范围, 和测试限制
+在公告中查看目标的收录范围和测试限制
 
 ```
 中国移动所有产品和服务
@@ -27,41 +27,85 @@ warmchina121.com
 
 > 即使主域名无法访问, 也需要保存, 后期可用于收集子域名
 
+### 1.3. WHOIS
+
+查询 Registrant Organization
+
+```
+┌──(nemo@debian)-[~]
+└─$ whois 10086.cn | grep "Registrant Organization"
+```
+
 ## 2. Recon
 
 ### 2.1. Subdomain
 
-> 导出 IP, URL 和 Port
-
-HUNTER
+subfinder
 
 ```
-domain.suffix="10086.cn"&&header.status_code="200"&&ip.country="CN"
-```
-
-FOFA
-
-```
-domain="10086.cn" && status_code="200" && country="CN"
-```
-
-QUAKE
-
-```
-domain:"10086.cn" AND status_code:200 AND country:"CN"
-```
-
-ZoomEye
-
-```
-domain="10086.cn" && http.header.status_code="200" && country="CN"
+┌──(nemo@debian)-[~]
+└─$ subfinder -d 10086.cn -nW -o subfinder_10086.cn.txt
 ```
 
 API
 
 ```
-fofa查询 domain="10086.cn" && status_code="200" && country="CN" && size=10000
+fofa查询 domain="10086.cn" && status_code="200" && size=10000
 ```
+
+HUNTER
+
+```
+domain.suffix="10086.cn"&&header.status_code="200"
+```
+
+FOFA
+
+```
+domain="10086.cn" && status_code="200"
+```
+
+QUAKE
+
+```
+domain:"*.10086.cn" AND status_code:"200"
+```
+
+ZoomEye
+
+```
+domain="*.10086.cn" && http.header.status_code="200"
+```
+
+### 2.2. DNS
+
+查询 A 记录并保存 DNS 响应
+
+```
+┌──(nemo@debian)-[~]
+└─$ echo test.10086.cn | dnsx -a -ro -o ./dnsx_test.10086.cn.txt
+```
+
+### 2.3. CDN
+
+保存列表中使用了 CDN 的 IP
+
+```
+┌──(nemo@debian)-[~]
+└─$ cdncheck -i ./dnsx_test.10086.cn.txt -cdn -o ./cdncheck_test.10086.cn.txt
+```
+
+> 若无法排除 CDN, 则手动排查
+
+## 2.4. Port
+
+
+
+masscan + nmap + naabu
+
+httpx 找到可访问 URL
+
+
 
 ## 3. Information Disclosure
 

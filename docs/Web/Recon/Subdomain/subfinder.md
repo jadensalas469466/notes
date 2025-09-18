@@ -5,37 +5,65 @@ Fast passive subdomain enumeration tool.
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ go install -v github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest
 ```
 
 ## 2. Usage
 
-经典扫描
+更新
 
 ```
-┌──(sec@debian)-[~]
-└─$ subfinder -d example.com -o subfinder_example.com.txt
+┌──(nemo@debian)-[~]
+└─$ subfinder -up
 ```
 
-扫描存活的 Host 并显示 IP
+指定域名扫描
 
 ```
-┌──(sec@debian)-[~]
-└─$ subfinder -d example.com -active -ip -o subfinder_example.com_active_ip.txt
+┌──(nemo@debian)-[~]
+└─$ subfinder -d example.com
+```
+
+指定文件扫描
+
+```
+┌──(nemo@debian)-[~]
+└─$ subfinder -dL ./example.txt
+```
+
+保存到文件
+
+```
+┌──(nemo@debian)-[~]
+└─$ subfinder -d example.com -o ./subfinder_example.com.txt
+```
+
+仅显示活跃的 HOST
+
+```
+┌──(nemo@debian)-[~]
+└─$ subfinder -d example.com -nW
+```
+
+仅保存活跃的 HOST
+
+```
+┌──(nemo@debian)-[~]
+└─$ subfinder -d example.com -nW -o ./subfinder_example.com.txt
 ```
 
 查看 API 配置
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ subfinder -ls
 ```
 
 配置 API
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ nano ~/.config/subfinder/provider-config.yaml
 ```
 

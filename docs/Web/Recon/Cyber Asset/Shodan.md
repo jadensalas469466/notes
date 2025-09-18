@@ -33,10 +33,10 @@
 ## 3. Usage
 
 ```
-shodan search hostname:10086.cn country:CN # hostname="10086.cn"&&country="CN"
-shodan search hostname:10086.cn,country:CN # hostname="10086.cn"||country="CN"
-shodan search hostname:10086.cn http.status:200 -country:CN # hostname="10086.cn"&&http.status="200"&&country!="CN"
-shodan search hostname:10086.cn,(http.status:200 -country:CN) # hostname="10086.cn"||(http.status="200"&&country!="CN")
+shodan search hostname:10086.cn http.status:200
+shodan search hostname:10086.cn,http.status:200
+shodan search hostname:10086.cn http.status:200 -country:CN
+shodan search hostname:10086.cn,(http.status:200 -country:CN)
 ```
 
 ---
