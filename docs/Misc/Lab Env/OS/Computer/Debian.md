@@ -360,6 +360,8 @@ nemo@debian:~$ sudo poweroff
 | [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog) |
 | [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf) |
 | [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei) |
+| [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra) |
+| [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa) |
 | [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
 | [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
