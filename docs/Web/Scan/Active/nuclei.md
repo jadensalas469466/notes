@@ -27,25 +27,18 @@ Nuclei is a fast, customizable vulnerability scanner powered by the global secur
 
 ## 3. Usage
 
-更新程序和模板
-
-```
-┌──(nemo@debian)-[~]
-└─$ nuclei -up && nuclei -ut
-```
-
 经典扫描
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ nuclei -l host.txt -o nuclei_host.txt
+└─$ nuclei -u https://www.example.com/ -o ~/nuclei_example.com.txt
 ```
 
-指定 PoC 模板验证目标漏洞
+指定 PoC 模板目录验证目标漏洞
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ nuclei -l host.txt -t ~/poc -o nuclei_host.txt
+└─$ nuclei -u https://www.example.com/ -t ~/poc -o ~/nuclei_example.com.txt
 ```
 
 ---

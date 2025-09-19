@@ -9,13 +9,22 @@ A fast port scanner written in go with a focus on reliability and simplicity. De
 └─$ go install -v github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 ```
 
-## 2. Usage
+## 2. Init
 
-扫描 Top 100 端口开放的目标
+创建软链接以全局运行
 
 ```
 ┌──(sec@debian)-[~]
-└─$ sudo naabu -l host.txt -tp 100 -Pn -o naabu_ip-port.txt
+└─$ sudo ln -s ~/.local/bin/naabu /usr/local/bin/naabu
+```
+
+## 3. Usage
+
+扫描常见的 Web 端口
+
+```
+┌──(sec@debian)-[~]
+└─$ sudo naabu -host example.com -Pn -o ~/naabu_example.com.txt
 ```
 
 ---

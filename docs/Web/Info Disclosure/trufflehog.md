@@ -11,13 +11,11 @@ Find, verify, and analyze leaked credentials.
 
 ## 2. Usage
 
-### 2.1. 扫描仓库
-
-Scan a repo for only verified secrets
+扫描凭证
 
 ```
 ┌──(sec@debian)-[~]
-└─$ trufflehog git https://github.com/trufflesecurity/test_keys --results=verified,unknown
+└─$ trufflehog git https://github.com/trufflesecurity/test_keys
 ```
 
 ---

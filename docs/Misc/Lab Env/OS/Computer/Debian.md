@@ -357,17 +357,20 @@ nemo@debian:~$ sudo poweroff
 | [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
 | [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
 | [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
-| [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover) |
+|                          subfinder                           |
+|                             dnsx                             |
+|                           cdncheck                           |
+|                            naabu                             |
 | [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan) |
 | [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap) |
+|                            httpx                             |
 | [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb) |
 | [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f) |
-| [katana](https://keithpeck177271.gitbook.io/notes/web/recon/spider/katana) |
-| [dirsearch](https://keithpeck177271.gitbook.io/notes/web/recon/directory/dirsearch) |
-| [nikto](https://keithpeck177271.gitbook.io/notes/web/scan/passive/nikto) |
-| [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei) |
+|                          trufflehog                          |
 | [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf) |
+| [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei) |
 | [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
+| [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
@@ -658,7 +661,7 @@ Shortcut: Ctrl + Alt +T
 创建软链接以全局运行
 
 ```
-ln -s ~/app ~/.local/bin
+ln -s ~/.local/bin/app /usr/local/bin/app
 ```
 
 ---

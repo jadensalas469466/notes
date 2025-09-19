@@ -34,7 +34,7 @@ Build simple, secure, scalable systems with Go.
 └─$ go env
 ```
 
-创建项目 `/path/main.go` 
+创建项目 `~/path/main.go` 
 
 ```go
 package main

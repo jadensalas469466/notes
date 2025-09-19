@@ -22,14 +22,14 @@ A utility to detect various technology for a given IP address.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ cdncheck -i ./dnsx_example.com.txt -cdn
+└─$ cdncheck -i ~/ip.txt -cdn
 ```
 
 保存列表中使用了 CDN 的 IP
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ cdncheck -i ./dnsx_example.com.txt -cdn -o ./cdncheck_example.com.txt
+└─$ cdncheck -i ~/ip.txt -cdn -o ~/cdncheck_example.com.txt
 ```
 
 ---

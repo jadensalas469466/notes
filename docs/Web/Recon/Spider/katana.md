@@ -15,28 +15,28 @@ A next-generation crawling and spidering framework.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ katana -u http://example.com -iqp -e cdn,private-ips -ef css -o katana_example.com.txt
+└─$ katana -u http://example.com -iqp -e cdn,private-ips -ef css -o ~/katana_example.com.txt
 ```
 
 对多个目标进行爬虫
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ katana -list url.txt -iqp -e cdn,private-ips -ef css -o katana_url.txt
+└─$ katana -u ~/url.txt -iqp -e cdn,private-ips -ef css -o ~/katana_url.txt
 ```
 
 爬取单个目标的 JS
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ katana -u http://example.com -jc -iqp -e cdn,private-ips -em js -o katana_example.com-js.txt
+└─$ katana -u http://example.com -jc -iqp -e cdn,private-ips -em js -o ~/katana_example.com-js.txt
 ```
 
 爬取多个目标的 JS
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ katana -list url.txt -jc -iqp -e cdn,private-ips -em js -o katana_url-js.txt
+└─$ katana -u ~/url.txt -jc -iqp -e cdn,private-ips -em js -o ~/katana_url-js.txt
 ```
 
 ---

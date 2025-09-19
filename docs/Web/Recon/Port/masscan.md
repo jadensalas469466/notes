@@ -15,14 +15,14 @@ This is an Internet-scale port scanner. It can scan the entire Internet in under
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo masscan -p- <ip> -oL masscan_port.txt
+└─$ sudo masscan -p- 1.1.1.1 -oL ~/masscan_1.1.1.1.txt
 ```
 
 对多个目标进行全端口扫描
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo masscan -p- -iL ip.txt -oL masscan_port.txt
+└─$ sudo masscan -p- -iL ~/ip.txt -oL ~/masscan_ip.txt
 ```
 
 ---

@@ -29,7 +29,7 @@ dnsx is a fast and multi-purpose DNS toolkit allow to run multiple DNS queries o
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ echo example.com | dnsx -a -ro -o ./dnsx_example.com.txt
+└─$ echo example.com | dnsx -a -ro -o ~/dnsx_example.com.txt
 ```
 
 查询 PTR 记录

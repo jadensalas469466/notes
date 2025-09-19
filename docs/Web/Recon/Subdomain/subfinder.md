@@ -29,14 +29,14 @@ Fast passive subdomain enumeration tool.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ subfinder -dL ./example.txt
+└─$ subfinder -dL ~/domain.txt
 ```
 
 保存到文件
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ subfinder -d example.com -o ./subfinder_example.com.txt
+└─$ subfinder -d example.com -o ~/subfinder_example.com.txt
 ```
 
 仅显示活跃的 HOST
@@ -50,7 +50,7 @@ Fast passive subdomain enumeration tool.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ subfinder -d example.com -nW -o ./subfinder_example.com.txt
+└─$ subfinder -d example.com -nW -o ~/subfinder_example.com.txt
 ```
 
 查看 API 配置

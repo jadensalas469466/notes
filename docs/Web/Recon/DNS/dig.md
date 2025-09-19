@@ -13,7 +13,7 @@ dig  is a flexible tool for interrogating DNS name servers.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ dig A example.com +short | tee -a dig_example.com.txt
+└─$ dig A example.com +short | tee -a ~/dig_example.com.txt
 ```
 
 查询 PTR 记录

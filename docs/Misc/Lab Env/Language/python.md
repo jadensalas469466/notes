@@ -37,34 +37,34 @@ PS C:\Users\nemo> pip config set global.index-url "https://mirrors.tuna.tsinghua
 创建虚拟环境
 
 ```
-┌──(nemo@debian)-[~]
+┌──(nemo@debian)-[~/path]
 └─$ python3 -m venv ./venv
 ```
 
 ```
-PS C:\Users\nemo> python -m venv .\venv
+PS C:\Users\nemo\path> python -m venv .\venv
 ```
 
 激活虚拟环境
 
 ```
-┌──(nemo@debian)-[~]
+┌──(nemo@debian)-[~/path]
 └─$ source ./venv/bin/activate
 ```
 
 ```
-PS C:\Users\nemo> .\venv\Scripts\Activate.ps1
+PS C:\Users\nemo\path\> .\venv\Scripts\Activate.ps1
 ```
 
 退出虚拟环境
 
 ```
-┌──(venv)─(nemo@debian)-[~]
+┌──(venv)─(nemo@debian)-[~/path]
 └─$ deactivate
 ```
 
 ```
-(venv) PS C:\Users\nemo> deactivate
+(venv) PS C:\Users\nemo\path> deactivate
 ```
 
 ---

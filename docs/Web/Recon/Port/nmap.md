@@ -11,41 +11,27 @@ Nmap is a utility for network exploration or security auditing.
 
 ## 2. Usage
 
-> 系统监测需要扫描一个开放端口和一个关闭端口, 指定一个不常用的端口用于系统检测如: `65535` 
+> 系统检测至少需要扫描一个开放端口和一个关闭端口, 建议指定一个不常用的端口, 如: `65535` 
 
 扫描单个目标的指定端口
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo nmap -p <prot1,port2...> -T4 -Pn -sV -O <host> -oN nmap_port.txt
+└─$ sudo nmap -p 21,22,3306 -T4 -Pn -sV 1.1.1.1 -oN ~/nmap_1.1.1.1.txt
 ```
 
 扫描多个目标的指定端口
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo nmap -p <prot1,port2...> -T4 -Pn -sV -O -iL host.txt -oN nmap_port.txt
+└─$ sudo nmap -p 21,22,3306 -T4 -Pn -sV -iL ~/ip.txt -oN ~/nmap_host.txt
 ```
 
 Bypass
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo nmap -p <prot1,port2...> -T4 -Pn -sV -O -f -D RND:10 <host> -oN nmap_port.txt
-```
-
-查看相关脚本
-
-```
-┌──(nemo@debian)-[~]
-└─$ ls /usr/share/nmap/scripts/
-```
-
-漏洞扫描
-
-```
-┌──(nemo@debian)-[~]
-└─$ sudo nmap -p <port> --script "<vuln>*" -d <host> -oN nmap_port.txt
+└─$ sudo nmap -p 21,22,3306 -T4 -Pn -sV -f -D RND:10 1.1.1.1 -oN ~/nmap_1.1.1.1.txt
 ```
 
 ---

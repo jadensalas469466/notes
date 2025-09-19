@@ -15,14 +15,14 @@ The Web Application Firewall Fingerprinting Tool.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ wafw00f -a -v https://example.com -o wafw00f_example.com.txt
+└─$ wafw00f -a https://example.com -o ~/wafw00f_example.com.txt
 ```
 
 识别多个目标使用的 WAF
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ wafw00f -a -v -i url.txt -o wafw00f_url.txt
+└─$ wafw00f -a -i ~/url.txt -o ~/wafw00f_url.txt
 ```
 
 ---

@@ -36,7 +36,7 @@ Proxychains is a UNIX program, that hooks network-related libc functions in dyna
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ proxychains4 <cmd>
+└─$ proxychains4 <command>
 ```
 
 ---

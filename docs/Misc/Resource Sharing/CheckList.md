@@ -1,13 +1,13 @@
 ## 1. Target
 
-某些网站会收集在 [站点导航](https://www.10086.cn/web_notice/navigation/) 中, 直接访问即可
+某些网站会收集在站点导航中, 直接访问即可
 
 ### 1.1. Notice
 
 在公告中查看目标的收录范围和测试限制
 
 ```
-中国移动所有产品和服务
+HackerOne 所有产品和服务
 ```
 
 ### 1.2. ICP
@@ -15,14 +15,11 @@
 通过主办单位名称, 备案号, 域名交叉查询
 
 ```
-中国移动通信有限公司
-京ICP备05002571号
+HackerOne 公司
+美ICP备00000000号
 
-10086.cn
-cmccb2b.com
-monternet.com
-chinamobile.com
-warmchina121.com
+hackerone.com
+hacker101.com
 ```
 
 > 即使主域名无法访问, 也需要保存, 后期可用于收集子域名
@@ -33,7 +30,7 @@ warmchina121.com
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ whois 10086.cn | grep "Registrant Organization"
+└─$ whois hackerone.com | grep "Registrant Organization"
 ```
 
 ## 2. Recon
@@ -44,37 +41,37 @@ subfinder
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ subfinder -d 10086.cn -nW -o subfinder_10086.cn.txt
+└─$ subfinder -d hackerone.com -nW -o subfinder_hackerone.com.txt
 ```
 
 API
 
 ```
-fofa查询 domain="10086.cn" && status_code="200" && size=10000
+fofa查询 domain="hackerone.com" && status_code="200" && size=10000
 ```
 
 HUNTER
 
 ```
-domain.suffix="10086.cn"&&header.status_code="200"
+domain.suffix="hackerone.com"&&header.status_code="200"
 ```
 
 FOFA
 
 ```
-domain="10086.cn" && status_code="200"
+domain="hackerone.com" && status_code="200"
 ```
 
 QUAKE
 
 ```
-domain:"*.10086.cn" AND status_code:"200"
+domain:"*.hackerone.com" AND status_code:"200"
 ```
 
 ZoomEye
 
 ```
-domain="*.10086.cn" && http.header.status_code="200"
+domain="*.hackerone.com" && http.header.status_code="200"
 ```
 
 ### 2.2. DNS
@@ -83,7 +80,7 @@ domain="*.10086.cn" && http.header.status_code="200"
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ echo test.10086.cn | dnsx -a -ro -o ./dnsx_test.10086.cn.txt
+└─$ echo docs.hackerone.com | dnsx -a -ro -o ~/dnsx_docs.hackerone.com.txt
 ```
 
 ### 2.3. CDN
@@ -92,38 +89,85 @@ domain="*.10086.cn" && http.header.status_code="200"
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ cdncheck -i ./dnsx_test.10086.cn.txt -cdn -o ./cdncheck_test.10086.cn.txt
+└─$ cdncheck -i ~/dnsx_docs.hackerone.com.txt -cdn -o ~/cdncheck_docs.hackerone.com.txt
 ```
 
-> 若无法排除 CDN, 则手动排查
+> 若无法排除 CDN, 则手动排查, 获取源 IP
 
-## 2.4. Port
+### 2.4. Port
 
+扫描常见的 Web 端口
 
+```
+┌──(sec@debian)-[~]
+└─$ sudo naabu -host docs.hackerone.com -Pn -o ~/naabu_docs.hackerone.com.txt
+```
 
-masscan + nmap + naabu
+对源 IP 进行全端口扫描
 
-httpx 找到可访问 URL
+```
+┌──(nemo@debian)-[~]
+└─$ sudo masscan -p- 172.64.151.42 -oL ~/masscan_172.64.151.42.txt
+```
 
+识别开放端口
 
+```
+┌──(nemo@debian)-[~]
+└─$ sudo nmap -p 21,22,3306 -T4 -Pn -sV 172.64.151.42 ~/nmap_172.64.151.42.txt
+```
 
-## 3. Information Disclosure
+### 2.5. HTTP Status
+
+探测存活的站点
+
+```
+┌──(nemo@debian)-[~]
+└─$ httpx -l ~/naabu_docs.hackerone.com.txt -o ~/httpx_docs.hackerone.com.txt
+```
+
+## 3. Fingerprint
+
+技术栈识别
+
+```
+┌──(nemo@debian)-[~]
+└─$ whatweb -a 3 -i ~/httpx_docs.hackerone.com.txt --color=never | tee ~/whatweb_docs.hackerone.com.txt
+```
+
+WAF 识别
+
+```
+┌──(nemo@debian)-[~]
+└─$ wafw00f -a -i ~/httpx_docs.hackerone.com.txt -o ~/whatweb_docs.hackerone.com.txt
+```
+
+### 4. Info Disclosure
 
 在 Search Public Code 或 GitHub 中审计相关仓库
 
 ```
-"10086.cn"
+"hackerone.com" OR "hacker101.com"
 ```
 
-## 4. Automated Testing
+扫描凭证
 
+```
+┌──(nemo@debian)-[~]
+└─$ trufflehog git https://github.com/trufflesecurity/test_keys
+```
+
+## 6. Automated Testing
+
+对每个站点进行爬虫, 目录扫描和被动扫描
+
+```
 BurpSuite > Target > Scope > Crawl > Discover content > Passively scan
+```
 
-## 5. Manual Testing
+## 7. Manual Testing
 
-访问 `subdomain.txt` 中的每个站点;
-
-使用 BurpSuite 手工测试业务板块, 并结合 View page source 以及 FindSomething 查找隐藏信息;
+使用 BurpSuite 手工测试业务板块, 并结合 DevTools 以及 FindSomething 查找隐藏信息;
 
 记录已经测试的业务并使用 Mermaid 绘制流程图.
 
