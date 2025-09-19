@@ -1,13 +1,11 @@
-This tool is a proof of concept code, to give researchers and security
-consultants the possibility to show how easy it would be to gain unauthorized
-access from remote to a system.
+Hydra is a parallelized login cracker which supports numerous protocols to attack. It is very fast and flexible, and new modules are easy to add.
 
 ## 1. Install
 
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y hydra
 ```
 
@@ -16,21 +14,21 @@ access from remote to a system.
 basic auth
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ hydra <host> -s <port> http-get /[protected_page] -L username.txt -P password.txt -e ns -vV
 ```
 
 ssh
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ hydra <host> ssh -l root -P password.txt -t 4 -e ns -vV
 ```
 
 ftp
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ hydra <host> ftp -L username.txt -P password.txt -e ns -vV
 ```
 

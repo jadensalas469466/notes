@@ -1,11 +1,11 @@
-Medusa is a speedy, parallel, and modular, login brute-forcer. The goal is to support as many services which allow remote authentication as possible.
+Medusa is intended to be a speedy, massively parallel, modular, login brute-forcer.
 
 ## 1. Install
 
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo apt install -y medusa
 ```
 
