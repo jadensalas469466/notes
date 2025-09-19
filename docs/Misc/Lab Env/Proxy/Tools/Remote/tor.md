@@ -11,7 +11,7 @@ Tor protects your privacy on the internet by hiding the connection between your 
 
 ## 2. Init
 
-配置文件
+修改配置文件
 
 ```
 ┌──(sec@debian)-[~]

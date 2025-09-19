@@ -217,7 +217,7 @@ Start the VM and SSH to `nemo`
 PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
 ```
 
-Use `su` switch to `root` 
+Switch to `root` 
 
 ```
 nemo@debian:~$ su - root
