@@ -117,7 +117,7 @@ domain="*.hackerone.com" && http.header.status_code="200"
 └─$ sudo nmap -p 21,22,3306 -T4 -Pn -sV 172.64.151.42 ~/nmap_172.64.151.42.txt
 ```
 
-### 2.5. HTTP Status
+### 2.5. HTTP
 
 探测存活的站点
 

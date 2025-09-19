@@ -11,23 +11,23 @@ Tor protects your privacy on the internet by hiding the connection between your 
 
 ## 2. Init
 
-```
-┌──(sec@debian)-[~]
-└─$ sudo nano -l /etc/tor/torrc
-```
+配置文件
 
 ```
+┌──(sec@debian)-[~]
+└─$ sudo tee -a /etc/tor/torrc > /dev/null << 'EOF'
 MaxCircuitDirtiness 60
 NewCircuitPeriod 60
 HiddenServiceDir /var/lib/tor/hidden_service/
 HiddenServicePort 80 127.0.0.1:80
+EOF
 ```
 
-重启并配置开机自启
+配置开机自启并重启
 
 ```
 ┌──(sec@debian)-[~]
-└─$ sudo systemctl restart tor.service && sudo systemctl enable tor.service
+└─$ sudo systemctl enable tor.service && sudo systemctl restart tor.service
 ```
 
 > 默认端口 127.0.0.1:9050

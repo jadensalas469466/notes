@@ -59,9 +59,9 @@ Visit
 
 > http://127.0.0.1:37665
 
-手动停止
+停止靶场
 
-![手动停止](./../../../../../images/Vulfocus/%E6%89%8B%E5%8A%A8%E5%81%9C%E6%AD%A2.png)
+![停止靶场](./../../../../../images/Vulfocus/%E5%81%9C%E6%AD%A2%E9%9D%B6%E5%9C%BA.png)
 
 ---
 

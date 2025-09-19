@@ -113,7 +113,7 @@ Adversary Emulation Framework.
 
 ```
 ┌──(sec@debian)-[~]
-└─$ sliver-client import ~/.sliver-client/configs/sec_evil.com.cfg
+└─$ sliver-client import ~/.sliver-client/configs/nemo_evil.com.cfg
 ```
 
 运行 Client

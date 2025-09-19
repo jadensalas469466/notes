@@ -13,22 +13,25 @@ Move the image file to the directory
 C:\Users\nemo\VirtualBox VMs\iso
 ```
 
-Create Virtual Machine
+New Virtual Machine
 
 ```
-> Name and Operating System
-Name: debian
-Folder: C:\Users\nemo\VirtualBox VMs
+> Virtual machine name and operating system
+VM Name: debian
+VM Folder: C:\Users\nemo\VirtualBox VMs
 ISO lmage: C:\Users\nemo\VirtualBox VMs\iso\debian-amd64-DVD.iso
-Version: Debian (64-bit)
-☑ Skip Unattended Installation
+OS: Linux
+OS Distribution: Debian
+OS Version: Debian (64-bit)
+☐ Proceed with Unattended Installation
 
-> Hardware
+> Specify virtual hardware
 Base Memory: 4096 MB
-Processors: 1 CPU
+Number of CPUs: 1 CPU
 
-> Hard Disk
-Hard Disk File Size: 64.00GB
+> Specify virtual hard disk
+Hard Disk File Location and Size: C:\Users\nemo\VirtualBox VMs\debian\debian.vdi
+Disk Size: 64.00GB
 ```
 
 Take Snapshot: `config` 
@@ -47,7 +50,7 @@ Select a language
 
 ```
 Language:
-English
+English - English
 ```
 
 Select your location
@@ -123,7 +126,7 @@ Guided - use entire disk
 
 ```
 Select disk to partition:
-Default
+VBOX HARDDISK
 ```
 
 ```
@@ -132,7 +135,6 @@ All files in one partition
 ```
 
 ```
-Select a partitions to modify its settings
 Finish partitioning and write changes to disk
 ```
 
@@ -177,7 +179,7 @@ Install the GRUB boot loader to your primary drive?
 
 ```
 Device for boot loader installation:
-Default
+VBOX_HARDDISK
 ```
 
 Finish the installation
@@ -252,13 +254,8 @@ Keep SSH session alive
 
 ```
 root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
-&& sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 60/' /etc/ssh/sshd_config
-```
-
-Restart SSH service
-
-```
-root@debian:~# systemctl restart ssh.service
+&& sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 60/' /etc/ssh/sshd_config \
+&& systemctl reload ssh.service
 ```
 
 Configuring Zsh
@@ -272,9 +269,9 @@ Configuring Network service
 
 ```
 root@debian:~# systemctl disable --now NetworkManager || true \
-&& systemctl enable --now networking.service \
-&& systemctl enable --now systemd-networkd.service \
-&& systemctl enable --now systemd-resolved.service
+&& systemctl disable networking.service \
+&& systemctl enable systemd-networkd.service \
+&& systemctl enable systemd-resolved.service
 ```
 
 Configuring Network
@@ -286,16 +283,10 @@ Name=en*
 
 [Network]
 DHCP=yes
+IPv6AcceptRA=no
 DNS=8.8.8.8
 DNS=8.8.4.4
 EOF
-```
-
-Restart Network service
-
-```
-root@debian:~# systemctl restart systemd-networkd.service \
-&& systemctl restart systemd-resolved.service
 ```
 
 Restart
