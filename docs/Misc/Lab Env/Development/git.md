@@ -19,25 +19,25 @@ Git is a free and open source distributed version control system designed to han
 
 添加到环境变量
 
-![添加到环境变量](./../../../../images/Git/%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
+![添加到环境变量](./../../../../images/git/%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 使用系统 OpenSSH
 
-![使用系统 OpenSSH](./../../../../images/Git/%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%20OpenSSH.png)
+![使用系统 OpenSSH](./../../../../images/git/%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%20OpenSSH.png)
 
 默认使用命令行启动
 
-![默认使用命令行启动](./../../../../images/Git/%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8.png)
+![默认使用命令行启动](./../../../../images/git/%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8.png)
 
 ## 2. Init
 
 在 Github 开启私人电子邮箱
 
-![在 Github 开启私人电子邮箱](./../../../../images/Git/%E5%9C%A8%20Github%20%E5%BC%80%E5%90%AF%E7%A7%81%E4%BA%BA%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1.png)
+![在 Github 开启私人电子邮箱](./../../../../images/git/%E5%9C%A8%20Github%20%E5%BC%80%E5%90%AF%E7%A7%81%E4%BA%BA%E7%94%B5%E5%AD%90%E9%82%AE%E7%AE%B1.png)
 
 选择凭证管理器
 
-![选择凭证管理器](./../../../../images/Git/%E9%80%89%E6%8B%A9%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8.png)
+![选择凭证管理器](./../../../../images/git/%E9%80%89%E6%8B%A9%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8.png)
 
 ### 2.1. Debian
 
@@ -244,7 +244,7 @@ git config --global --unset http.proxy                  # 移除代理
 
 使用 OpenSSH 部署公钥到 Git 服务器
 
-![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/Git/%E4%BD%BF%E7%94%A8%20OpenSSH%20%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
+![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/git/%E4%BD%BF%E7%94%A8%20OpenSSH%20%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
 
 配置 Git 使用 Windows SSH 客户端
 
