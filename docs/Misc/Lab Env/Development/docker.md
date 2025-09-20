@@ -23,7 +23,7 @@ Docker helps developers build, share, run, and verify applications anywhere — 
 ```
 ┌──(nemo@debian)-[~]
 └─$ sudo mkdir -p /etc/systemd/system/docker.service.d \
-&& cat << 'EOF' | sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf > /dev/null
+&& sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf > /dev/null << 'EOF'
 [Service]
 Environment="HTTP_PROXY=http://127.0.0.1:10808"
 Environment="HTTPS_PROXY=http://127.0.0.1:10808"
