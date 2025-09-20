@@ -22,7 +22,7 @@ Build simple, secure, scalable systems with Go.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ go env -w GOPROXY="https://proxy.golang.org,direct"
+└─$ go env -w GOPROXY="https://goproxy.cn,https://goproxy.io,https://proxy.golang.org,direct"
 ```
 
 ## 3. Usage
