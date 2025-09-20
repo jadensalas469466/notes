@@ -46,7 +46,9 @@ PHP Configuration
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo nano -l /etc/php/8.2/apache2/php.ini && sudo systemctl restart apache2.service
+└─$ sudo cp /etc/php/8.2/apache2/php.ini /etc/php/8.2/apache2/php.ini.bak \
+&& sudo nano -l /etc/php/8.2/apache2/php.ini \
+&& sudo systemctl restart apache2.service
 ```
 
 ```
