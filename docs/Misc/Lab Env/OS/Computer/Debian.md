@@ -253,7 +253,8 @@ zsh zsh-syntax-highlighting zsh-autosuggestions\
 Keep SSH session alive
 
 ```
-root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
+root@debian:~# cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak \
+&& sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
 && sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 60/' /etc/ssh/sshd_config \
 && systemctl reload ssh.service
 ```

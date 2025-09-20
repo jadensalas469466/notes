@@ -58,18 +58,12 @@ PHP Configuration
 870 allow_url_include = On
 ```
 
-释放 Configuration File
+DVWA Configuration
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo cp /var/www/html/dvwa/config/config.inc.php.dist /var/www/html/dvwa/config/config.inc.php
-```
-
-Configure
-
-```
-┌──(nemo@debian)-[~]
-└─$ sudo nano -l /var/www/html/dvwa/config/config.inc.php
+└─$ sudo cp /var/www/html/dvwa/config/config.inc.php.dist /var/www/html/dvwa/config/config.inc.php \
+&& sudo nano -l /var/www/html/dvwa/config/config.inc.php
 ```
 
 ```
