@@ -96,7 +96,7 @@ domain="*.hackerone.com" && http.header.status_code="200"
 
 ### 2.4. Port
 
-扫描常见的 Web 端口
+扫描常见端口
 
 ```
 ┌──(sec@debian)-[~]
@@ -114,7 +114,7 @@ domain="*.hackerone.com" && http.header.status_code="200"
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo nmap -p 21,22,3306 -T4 -Pn -sV 172.64.151.42 ~/nmap_172.64.151.42.txt
+└─$ sudo nmap -p 21,22,3306 -T4 -Pn -sV -O 172.64.151.42 -oN ~/nmap_172.64.151.42.txt
 ```
 
 ### 2.5. HTTP
@@ -126,7 +126,7 @@ domain="*.hackerone.com" && http.header.status_code="200"
 └─$ httpx -l ~/naabu_docs.hackerone.com.txt -o ~/httpx_docs.hackerone.com.txt
 ```
 
-## 3. Fingerprint
+### 2.6. Fingerprint
 
 技术栈识别
 
@@ -139,10 +139,10 @@ WAF 识别
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ wafw00f -a -i ~/httpx_docs.hackerone.com.txt -o ~/whatweb_docs.hackerone.com.txt
+└─$ wafw00f -a -i ~/httpx_docs.hackerone.com.txt -o ~/wafw00f_docs.hackerone.com.txt
 ```
 
-### 4. Info Disclosure
+## 3. Info Disclosure
 
 在 Search Public Code 或 GitHub 中审计相关仓库
 
@@ -157,7 +157,7 @@ WAF 识别
 └─$ trufflehog git https://github.com/trufflesecurity/test_keys
 ```
 
-## 6. Automated Testing
+## 4. Automated Testing
 
 对每个站点进行爬虫, 目录扫描和被动扫描
 
@@ -165,7 +165,7 @@ WAF 识别
 BurpSuite > Target > Scope > Crawl > Discover content > Passively scan
 ```
 
-## 7. Manual Testing
+## 5. Manual Testing
 
 使用 BurpSuite 手工测试业务板块, 并结合 DevTools 以及 FindSomething 查找隐藏信息;
 
