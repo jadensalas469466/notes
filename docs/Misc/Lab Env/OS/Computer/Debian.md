@@ -376,7 +376,7 @@ Take Snapshot: `deploy`
 └─$ sudo poweroff
 ```
 
-> 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) 
+> 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 
 |                            Server                            |
 | :----------------------------------------------------------: |
@@ -387,6 +387,7 @@ Take Snapshot: `deploy`
 | [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
 | [配置 Syncthing 文件同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
 | [tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
+| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
 
 |                             Evil                             |
 | :----------------------------------------------------------: |
