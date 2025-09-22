@@ -5,7 +5,7 @@ Daemon to ban hosts that cause multiple authentication errors
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─# sudo apt install -y fail2ban
 ```
 
@@ -14,7 +14,7 @@ Daemon to ban hosts that cause multiple authentication errors
 修改配置文件
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─# sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local \
 && sudo nano -l /etc/fail2ban/jail.local
 ```
@@ -25,17 +25,17 @@ Daemon to ban hosts that cause multiple authentication errors
 281 port     = ssh
 282 logpath = %(sshd_log)s
 283 backend = %(sshd_backend)s
-filter = sshd
-action = iptables[name=SSH,port=ssh,protocol=tcp] 
-bantime  = 86400
-maxretry = 5
-findtime = 300
+284 filter = sshd
+285 action = iptables[name=SSH,port=ssh,protocol=tcp] 
+286 bantime  = 600
+287 maxretry = 5
+288 findtime = 300
 ```
 
 运行 `fail2ban` 服务
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─# sudo systemctl enable --now fail2ban.service
 ```
 
@@ -44,15 +44,15 @@ findtime = 300
 查看封禁的 IP
 
 ```
-┌──(sec@debian)-[~]
-└─# fail2ban-client status sshd | grep -A 5 "IP list"
+┌──(nemo@debian)-[~]
+└─# sudo fail2ban-client status sshd | grep -A 5 "IP list"
 ```
 
 移除封禁的 IP
 
 ```
-┌──(sec@debian)-[~]
-└─# fail2ban-client set sshd unbanip [ban_ip]
+┌──(nemo@debian)-[~]
+└─# sudo fail2ban-client set sshd unbanip [ban_ip]
 ```
 
 ---
