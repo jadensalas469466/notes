@@ -18,6 +18,21 @@ ln -s ~/.local/frp/frps ~/.local/bin/frps \
 
 ## 2. Init
 
+```
+cp ~/.local/frp/frpc.toml ~/.local/frp/frpc.toml.bak \
+&& cat << 'EOF' > ~/.local/frp/frpc.toml
+serverAddr = "1.1.1.1"
+serverPort = 7000
+
+[[proxies]]
+name = "tcp"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 6000
+remotePort = 6000
+EOF
+```
+
 ---
 
 References
