@@ -368,8 +368,10 @@ nemo@debian:~$ sudo poweroff
 | [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
-|                             frp                              |
-|                          interactsh                          |
+|                                                              |
+| [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp) |
+| [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver) |
+| [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh) |
 
 Take Snapshot: `deploy` 
 
@@ -390,9 +392,9 @@ Take Snapshot: `deploy`
 | [配置 Syncthing 文件同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
 | [tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
-|                             frp                              |
-|                            sliver                            |
-|                             msf                              |
+| [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp) |
+| [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver) |
+| [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
 
 ## 6. Usage
 

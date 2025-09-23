@@ -20,26 +20,18 @@ An OOB interaction gathering server and client library
 
 ## 2. Usage
 
-Verbose Mode
+经典运行
 
 ```
 ┌──(sec@debian)-[~]
-└─$ interactsh-client -v -o interactsh.log
+└─$ interactsh-client
 ```
 
-后台运行 Verbose Mode
-
-```
-┌──(sec@debian)-[~]
-└─$ nohup interactsh-client -v > ~/nohup.log 2>&1 &
-echo $! > ~/pid.log
-```
-
-仅显示 HTTP 交互
+后台运行
 
 ```
 ┌──(sec@debian)-[~]
-└─$ nohup interactsh-client -http-only -v > ~/nohup.log 2>&1 &
+└─$ nohup interactsh-client > ~/nohup.log 2>&1 &
 echo $! > ~/pid.log
 ```
 
