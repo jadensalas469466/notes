@@ -59,7 +59,7 @@ python3 ./oneforall.py "$@"
 创建链接
 
 ```
-root@debian:~/tools/apps/oneforall# chmod +x ./oneforall.sh && ln -s /root/tools/apps/oneforall/oneforall.sh /usr/local/bin/oneforall && cd
+root@debian:~/tools/apps/oneforall# chmod +x ./oneforall.sh && ln -sf /root/tools/apps/oneforall/oneforall.sh /usr/local/bin/oneforall && cd
 ```
 
 查看帮助

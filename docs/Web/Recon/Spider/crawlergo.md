@@ -30,7 +30,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 创建链接
 
 ```shell
-root@debian:~# chmod +x /root/tools/crawlergo/crawlergo.sh && ln -s /root/tools/crawlergo/crawlergo.sh /usr/local/bin/crawlergo
+root@debian:~# chmod +x /root/tools/crawlergo/crawlergo.sh && ln -sf /root/tools/crawlergo/crawlergo.sh /usr/local/bin/crawlergo
 ```
 
 ## 2 使用

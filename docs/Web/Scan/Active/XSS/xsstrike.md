@@ -56,7 +56,7 @@ EOF
 
 ```
 ┌──(sec@debian)-[~/.local/xsstrike]
-└─$ chmod +x ./xsstrike.sh && ln -s ~/.local/xsstrike/xsstrike.sh ~/.local/bin/xsstrike
+└─$ chmod +x ./xsstrike.sh && ln -sf ~/.local/xsstrike/xsstrike.sh ~/.local/bin/xsstrike
 ```
 
 ## 2. Usage

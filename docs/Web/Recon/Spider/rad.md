@@ -41,7 +41,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 ```shell
 ┌──(root@debian)-[~]
-└─# chmod +x /root/tools/rad/rad.sh && ln -s /root/tools/rad/rad.sh /usr/local/bin/rad
+└─# chmod +x /root/tools/rad/rad.sh && ln -sf /root/tools/rad/rad.sh /usr/local/bin/rad
 ```
 
 > windows 中添加至环境变量（windws 中使用需要关闭 Microsoft Defender）

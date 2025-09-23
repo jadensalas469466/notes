@@ -41,7 +41,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 ```
 ┌──(root@debian)-[~/tools/apps/hostCollision]
 └─# chmod +x ./hostCollision.sh \
-&& ln -s /root/tools/apps/hostCollision/hostCollision.sh /usr/local/bin/hostCollision \
+&& ln -sf /root/tools/apps/hostCollision/hostCollision.sh /usr/local/bin/hostCollision \
 && cd
 ```
 

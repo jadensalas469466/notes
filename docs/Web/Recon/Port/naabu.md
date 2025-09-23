@@ -15,7 +15,7 @@ A fast port scanner written in go with a focus on reliability and simplicity. De
 
 ```
 ┌──(sec@debian)-[~]
-└─$ sudo ln -s ~/.local/bin/naabu /usr/local/bin/naabu
+└─$ sudo ln -sf ~/.local/bin/naabu /usr/local/bin/naabu
 ```
 
 ## 3. Usage

@@ -78,7 +78,7 @@ pyenv exec python3.7 ./BBScan.py "$@"
 
 ```
 ┌──(root@debian)-[~/tools/apps/bbscan]
-└─# chmod +x ./bbscan.sh && ln -s /root/tools/apps/bbscan/bbscan.sh /usr/local/bin/bbscan && cd
+└─# chmod +x ./bbscan.sh && ln -sf /root/tools/apps/bbscan/bbscan.sh /usr/local/bin/bbscan && cd
 ```
 
 查看帮助

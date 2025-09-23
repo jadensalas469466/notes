@@ -369,6 +369,7 @@ nemo@debian:~$ sudo poweroff
 | [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
 |                             frp                              |
+|                          interactsh                          |
 
 Take Snapshot: `deploy` 
 
@@ -391,6 +392,7 @@ Take Snapshot: `deploy`
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
 |                             frp                              |
 |                            sliver                            |
+|                             msf                              |
 
 ## 6. Usage
 
@@ -657,7 +659,7 @@ Shortcut: Ctrl + Alt +T
 创建软链接以全局运行
 
 ```
-ln -s ~/.local/bin/app /usr/local/bin/app
+ln -sf ~/.local/bin/app /usr/local/bin/app
 ```
 
 ---

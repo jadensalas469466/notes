@@ -34,7 +34,7 @@ python3 ./dirmap.py "$@"
 
 ```shell
 ┌──(root㉿kali)-[~]
-└─# chmod +x /root/tools/dirmap/dirmap.sh && ln -s /root/tools/dirmap/dirmap.sh /usr/local/bin/dirmap
+└─# chmod +x /root/tools/dirmap/dirmap.sh && ln -sf /root/tools/dirmap/dirmap.sh /usr/local/bin/dirmap
 ```
 
 ## 2 使用
