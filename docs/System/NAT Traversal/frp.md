@@ -9,7 +9,7 @@ A fast reverse proxy to help you expose a local server behind a NAT or firewall 
 └─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/frp_install.sh | bash
 ```
 
-## 2. Usage
+## 2. Init
 
 ### 2.1. Server
 
@@ -48,7 +48,9 @@ localPort = 6000
 remotePort = 6000
 ```
 
-运行
+## 3. Usage
+
+运行 Client
 
 ```
 ┌──(nemo@debian)-[~]
