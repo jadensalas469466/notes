@@ -368,6 +368,7 @@ nemo@debian:~$ sudo poweroff
 | [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
+|                             frp                              |
 
 Take Snapshot: `deploy` 
 
@@ -388,11 +389,8 @@ Take Snapshot: `deploy`
 | [配置 Syncthing 文件同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
 | [tor](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/tor) |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
-
-|                             Evil                             |
-| :----------------------------------------------------------: |
-| [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
-| [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
+|                             frp                              |
+|                            sliver                            |
 
 ## 6. Usage
 
@@ -488,7 +486,8 @@ uname -r
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ nohup <command> > ~/nohup.log 2>&1 & echo $! > ~/pid.log
+└─$ nohup <command> > ~/<command>-nohup.log 2>&1 &
+echo $! > ~/<command>-pid.log
 ```
 
 实时查看日志

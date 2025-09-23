@@ -117,7 +117,8 @@ EXIT;
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ nohup java -jar ~/RuoYi/ruoyi-admin/target/ruoyi-admin.jar > ~/nohup.log 2>&1 & echo $! > ~/pid.log
+└─$ nohup java -jar ~/RuoYi/ruoyi-admin/target/ruoyi-admin.jar > ~/ruoyi-nohup.log 2>&1 &
+echo $! > ~/ruoyi-pid.log
 ```
 
 Port Forwarding Rules

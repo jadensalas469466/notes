@@ -31,14 +31,16 @@ Verbose Mode
 
 ```
 ┌──(sec@debian)-[~]
-└─$ nohup interactsh-client -v > ~/nohup.log 2>&1 & echo $! > ~/pid.log
+└─$ nohup interactsh-client -v > ~/nohup.log 2>&1 &
+echo $! > ~/pid.log
 ```
 
 仅显示 HTTP 交互
 
 ```
 ┌──(sec@debian)-[~]
-└─$ nohup interactsh-client -http-only -v > ~/nohup.log 2>&1 & echo $! > ~/pid.log
+└─$ nohup interactsh-client -http-only -v > ~/nohup.log 2>&1 &
+echo $! > ~/pid.log
 ```
 
 ---

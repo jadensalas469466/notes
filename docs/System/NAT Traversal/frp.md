@@ -2,26 +2,42 @@ A fast reverse proxy to help you expose a local server behind a NAT or firewall 
 
 ## 1. Install
 
+安装
+
 ```
-curl -LO https://github.com/fatedier/frp/releases/download/v0.64.0/frp_0.64.0_linux_amd64.tar.gz
+┌──(nemo@debian)-[~]
+└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/frp_install.sh | bash
+```
+
+## 2. Usage
+
+### 2.1. Server
+
+开机自启
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo systemctl enable --now frps.service
+```
+
+开放端口用于建立通信和转发流量
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo ufw allow 7000 && sudo ufw allow 6000
+```
+
+### 2.2. Client
+
+修改配置文件
+
+```
+┌──(nemo@debian)-[~]
+└─$ nano ~/.frp/frpc.toml
 ```
 
 ```
-tar -xzvf ./frp_*_linux_amd64.tar.gz \
-&& mv ./frp_*_linux_amd64 ~/.local/frp
-```
-
-```
-ln -s ~/.local/frp/frps ~/.local/bin/frps \
-&& ln -s ~/.local/frp/frpc ~/.local/bin/frpc
-```
-
-## 2. Init
-
-```
-cp ~/.local/frp/frpc.toml ~/.local/frp/frpc.toml.bak \
-&& cat << 'EOF' > ~/.local/frp/frpc.toml
-serverAddr = "1.1.1.1"
+serverAddr = "evil.com"
 serverPort = 7000
 
 [[proxies]]
@@ -30,11 +46,21 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 6000
 remotePort = 6000
-EOF
 ```
+
+运行
+
+```
+┌──(nemo@debian)-[~]
+└─$ nohup frpc -c ~/.frp/frpc.toml > ~/frpc-nohup.log 2>&1 &
+echo $! > ~/frpc-pid.log
+```
+
+> 此时发往 `evil.com:6000` 的流量会转发到 `127.0.0.1:6000` 
 
 ---
 
 References
 
 - [frp](https://github.com/fatedier/frp)
+
