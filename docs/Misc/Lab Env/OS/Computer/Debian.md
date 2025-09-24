@@ -359,19 +359,18 @@ nemo@debian:~$ sudo poweroff
 | [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f) |
 | [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog) |
 | [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf) |
+| [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh) |
 | [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei) |
 | [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra) |
 | [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa) |
 | [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
+| [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp) |
+| [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver) |
 | [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover) |
 | [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa) |
 | [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub) |
 | [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps) |
 | [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus) |
-|                                                              |
-| [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp) |
-| [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver) |
-| [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh) |
 
 Take Snapshot: `deploy` 
 
