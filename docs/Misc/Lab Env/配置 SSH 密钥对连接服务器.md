@@ -1,14 +1,9 @@
-1. 在客户端生成一对密钥 (公钥和私钥)
-2. 将公钥复制到服务器的 `~/.ssh/authorized_keys` 文件中
-3. 启用密钥对登录并禁止密码登录
-4. 当客户端尝试连接服务器时, 服务器使用公钥验证客户端私钥的签名, 确保只有持有正确私钥的用户可以访问
-
 ## 1. 生成密钥对
 
-生成一对密钥
+生成 SSH 密钥对, 并为私钥设置密码
 
 ```
-PS C:\Users\sec> ssh-keygen -t ed25519 -f C:\Users\sec\.ssh\ssh_test
+PS C:\Users\nemo> ssh-keygen -t ed25519 -f C:\Users\nemo\.ssh\ssh_test
 ```
 
 ```
@@ -20,7 +15,7 @@ Enter same passphrase again:123456
 查看 SSH 密钥对
 
 ```
-PS C:\Users\sec> ls C:\Users\sec\.ssh\
+PS C:\Users\nemo> ls C:\Users\nemo\.ssh\
 ```
 
 ```
@@ -30,24 +25,24 @@ Mode                LastWriteTime         Length Name
 -a----        2024/10/24     21:44             94 ssh_test.pub
 ```
 
-## 2. 保存私钥到 SSH Agent
+## 2. 保存私钥到 KeePassXC
 
 运行 SSH Agent 服务
 
 ```
-PS C:\Users\sec> Start-Service ssh-agent
+PS C:\Users\nemo> Start-Service ssh-agent
 ```
 
 配置 SSH Agent 服务开机自启
 
 ```
-PS C:\Users\sec> Get-Service ssh-agent | Set-Service -StartupType Automatic
+PS C:\Users\nemo> Get-Service ssh-agent | Set-Service -StartupType Automatic
 ```
 
 查看 SSH Agent 服务状态
 
 ```
-PS C:\Users\sec> Get-Service ssh-agent
+PS C:\Users\nemo> Get-Service ssh-agent
 ```
 
 ```
@@ -56,99 +51,69 @@ Status   Name               DisplayName
 Running  ssh-agent          Openssh Authentication Agent
 ```
 
-保存 SSH 私钥到 SSH Agent
+列出 SSH Agent 中保存的私钥
 
 ```
-PS C:\Users\sec> ssh-add $env:USERPROFILE\.ssh\ssh_test
+PS C:\Users\nemo> ssh-add -l
 ```
 
-```
-Enter passphrase for C:\Users\sec\.ssh\ssh_test:123456
-Identity added: C:\Users\sec\.ssh\ssh_test (sec@desktop)
-```
+在 KeePassXC 中启用 SSH Agent 集成
 
-> 列出 SSH Agent 中保存的私钥
->
-> ```
-> PS C:\Users\sec> ssh-add -l
-> ```
->
-> 从 SSH Agent 中移除指定私钥
->
-> ```
-> PS C:\Users\sec> ssh-add -d $env:USERPROFILE\.ssh\ssh_test
-> ```
->
-> 从 SSH Agent 中移除所有私钥
->
-> ```
-> PS C:\Users\sec> ssh-add -D
-> ```
+![在 KeePassXC 中启用 SSH Agent 集成](./../../../images/%E9%85%8D%E7%BD%AE%20SSH%20%E5%AF%86%E9%92%A5%E5%AF%B9%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%9C%A8%20KeePassXC%20%E4%B8%AD%E5%90%AF%E7%94%A8%20SSH%20Agent%20%E9%9B%86%E6%88%90.png)
+
+新建条目, 设置条目密码为私钥密码
+
+![新建条目, 设置条目密码为私钥密码](./../../../images/%E9%85%8D%E7%BD%AE%20SSH%20%E5%AF%86%E9%92%A5%E5%AF%B9%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/%E6%96%B0%E5%BB%BA%E6%9D%A1%E7%9B%AE,%20%E8%AE%BE%E7%BD%AE%E6%9D%A1%E7%9B%AE%E5%AF%86%E7%A0%81%E4%B8%BA%E7%A7%81%E9%92%A5%E5%AF%86%E7%A0%81.png)
+
+添加私钥到附件
+
+![添加私钥到附件](./../../../images/%E9%85%8D%E7%BD%AE%20SSH%20%E5%AF%86%E9%92%A5%E5%AF%B9%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/%E6%B7%BB%E5%8A%A0%E7%A7%81%E9%92%A5%E5%88%B0%E9%99%84%E4%BB%B6.png)
+
+从附件添加私钥到 SSH Agent
+
+![从附件添加私钥到 SSH Agent](./../../../images/%E9%85%8D%E7%BD%AE%20SSH%20%E5%AF%86%E9%92%A5%E5%AF%B9%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/%E4%BB%8E%E9%99%84%E4%BB%B6%E6%B7%BB%E5%8A%A0%E7%A7%81%E9%92%A5%E5%88%B0%20SSH%20Agent.png)
 
 ## 3. 部署公钥到服务器
 
-复制公钥内容到剪切板
+将公钥写入文件
 
 ```
-PS C:\Users\sec> Get-Content $env:USERPROFILE\.ssh\ssh_test.pub | Set-Clipboard
+┌──(nemo@debian)-[~]
+└─$ mkdir -p -m 700 ~/.ssh \
+&& touch ~/.ssh/authorized_keys \
+&& chmod 600 ~/.ssh/authorized_keys \
+&& nano ~/.ssh/authorized_keys
 ```
 
-将复制的内容写入 `~/.ssh/authorized_keys` 文件
-
 ```
-┌──(sec@debian)-[~]
-└─$ mkdir -p -m 700 ~/.ssh && touch ~/.ssh/authorized_keys \
-&& chmod 600 ~/.ssh/authorized_keys && nano ~/.ssh/authorized_keys
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAhONuGnP2jmIemHuiaiNeMnSzn+RHzG9mNitLZcqUEc test@DESKTOP-0EN5L6
 ```
 
-> 若为 Windows 服务器则可以使用如下方法：
->
-> 1. 读取公钥内容到 $authorizedKey 变量
->
->    ```
->    PS C:\Users\sec> $authorizedKey = Get-Content -Path $env:USERPROFILE\.ssh\ssh_test.pub
->    ```
->
-> 2. 设置 $remotePowerShell 变量将 $authorizedKey 变量写入到服务器上的 authorized_keys 文件
->
->    ```
->    PS C:\Users\sec> $remotePowershell = "powershell New-Item -Force -ItemType Directory -Path $env:USERPROFILE\.ssh; Add-Content -Force -Path $env:USERPROFILE\.ssh\authorized_keys -Value '$authorizedKey'"
->    ```
->
-> 3. 连接 Windows 服务器并运行 $remotePowerShell 变量
->
->    ```
->    PS C:\Users\sec> ssh sec@windows.local $remotePowershell
->    ```
+![将公钥写入文件](./../../../images/%E9%85%8D%E7%BD%AE%20SSH%20%E5%AF%86%E9%92%A5%E5%AF%B9%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E5%99%A8/%E5%B0%86%E5%85%AC%E9%92%A5%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6.png)
 
-## 4. 配置使用密钥对登录
+## 4. 允许普通用户以密钥对登录
 
-开启密钥对登录并禁用密码登录
+修改配置文件
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─# sudo nano -l /etc/ssh/sshd_config
 ```
 
 ```
-38 PubkeyAuthentication yes
-57 PasswordAuthentication no
+33 PermitRootLogin no        # 禁止 root 用户登录
+38 PubkeyAuthentication yes  # 允许普通用户以密钥对登录
+57 PasswordAuthentication no # 禁止普通用户以密码登录
 ```
 
 重启 SSH 服务
 
 ```
-┌──(sec@debian)-[~]
+┌──(nemo@debian)-[~]
 └─# sudo systemctl restart sshd.service
 ```
 
-> Windows 重启 SSH 服务: 
->
-> ```
-> PS C:\Users\sec> Restart-Service sshd
-> ```
-
-完成后可将密钥对备份到一个安全位置，然后将其从本地系统中删除，若要配置 SFTP 记得保留私钥
+完成后可将密钥对删除
 
 ---
 

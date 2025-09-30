@@ -153,7 +153,9 @@ Shut down, Take Snapshot: `install`
 
 Install drivers and update the system
 
-[Power & sleep](https://keithpeck177271.gitbook.io/notes/misc/issues/issues-of-windows#id-2.-tui-jian-dian-yuan-she-zhi)
+[Power Options](# 6.26. Power Options)
+
+[ExecutionPolicy](# 6.20. ExecutionPolicy)
 
 Run PowerShell as administrator
 
@@ -182,21 +184,27 @@ Preferred DNS server: 8.8.8.8
 Alternate DNS server: 8.8.4.4
 ```
 
-Run `gpedit.msc` , Do not display the lock screen
-
-```
-Computer Configuration > Administrative Templates > Control Panel > Personalization > Do not display the lock screen > Enabled
-```
-
 Update and configure Windows and Edge
 
-Use [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language) to change system settings
+[Power Options](# 6.26. Power Options)
+
+[ExecutionPolicy](# 6.20. ExecutionPolicy)
+
+[Local Computer Policy](# 6.25. Local Computer Policy)
+
+[Network and Sharing Center](# 6.24. Network and Sharing Center)
+
+[Folder Option](# 6.23. Folder Option)
+
+[Search icon](# 6.22. Search icon)
+
+[Input method editor](# 6.27. Input method editor)
+
+[Windows Firewall](# 6.28. Windows Firewall)
+
+[System Properties](# 6.21. System Properties)
 
 Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-edit/microsoft-office/office-deployment-tool) to install Word, Excel, PowerPoint
-
-Shut down, Take Snapshot: `init` 
-
-==PM needs to configure SMB , System Protection and ExecutionPolicy==
 
 ==VM needs to Create a folder and Add exclusions==
 
@@ -204,14 +212,26 @@ Shut down, Take Snapshot: `init`
 C:\Users\nemo\Apps
 ```
 
+==PM needs to configure SMB==
+
+Shut down, Take Snapshot: `init` 
+
 ## 5. Deploy
+
+|             Risk-Env             |
+| :------------------------------: |
+| [WeChat](https://weixin.qq.com/) |
+
+Shut down, Take Snapshot: `wechat` 
 
 |                              VM                              |
 | :----------------------------------------------------------: |
 |               [7-Zip](https://www.7-zip.org/)                |
 |       [Behinder](https://github.com/rebeyond/Behinder)       |
 |             [Geek](https://geekuninstaller.com/)             |
+|           [Proxifier](https://www.proxifier.com/)            |
 | [ShiroAttack2_Pro](https://github.com/Chave0v0/ShiroAttack2_Pro) |
+|               [WeChat](https://weixin.qq.com/)               |
 
 Shut down, Take Snapshot: `deploy` 
 
@@ -233,7 +253,6 @@ Shut down, Take Snapshot: `deploy`
 | [Burp Suite Professional](https://portswigger.net/burp/pro)  |
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
 |         [DeepL](https://www.deepl.com/en/translator)         |
-| [Dism++](https://github.com/Chuyu-Team/Dism-Multi-language)  |
 |           [Everything](https://www.voidtools.com/)           |
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
@@ -244,7 +263,6 @@ Shut down, Take Snapshot: `deploy`
 |         [Koodo Reader](https://www.koodoreader.com/)         |
 |             [LocalSend](https://localsend.org/)              |
 |            [LockHunter](https://lockhunter.com/)             |
-|             [MuMuPlayer](https://mumu.163.com/)              |
 |         [Notepad++](https://notepad-plus-plus.org/)          |
 |       [Oracle VirtualBox](https://www.virtualbox.org/)       |
 |           [Pinta](https://www.pinta-project.com/)            |
@@ -262,7 +280,6 @@ Shut down, Take Snapshot: `deploy`
 |                 [Vim](https://www.vim.org/)                  |
 |     [Visual Studio Code](https://code.visualstudio.com/)     |
 |   [WindowsTerminal](https://github.com/microsoft/terminal)   |
-|               [WeChat](https://weixin.qq.com/)               |
 
 ## 6. Usage
 
@@ -431,7 +448,7 @@ The command completed successfully.
 
 ### 6.7. 文件权限
 
-![文件权限](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
+![文件权限](./../../../../../images/Windows/Usage/%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90.png)
 
 ### 6.8. 查看进程
 
@@ -449,7 +466,7 @@ C:\Users\Administrator> wmic os get osarchitecture
 
 添加环境变量
 
-![添加环境变量](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
+![添加环境变量](./../../../../../images/Windows/Usage/%E6%B7%BB%E5%8A%A0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 > 添加多个变量时使用 `;` 间隔
 >
@@ -466,7 +483,7 @@ PS C:\Users\nemo> dir C:\Windows\Temp
 
 ### 6.12. 添加快捷访问
 
-![添加快捷访问](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
+![添加快捷访问](./../../../../../images/Windows/Usage/%E6%B7%BB%E5%8A%A0%E5%BF%AB%E6%8D%B7%E8%AE%BF%E9%97%AE.png)
 
 ### 6.13. 查看网络
 
@@ -520,7 +537,7 @@ PS C:\Users\nemo> wslconfig /l
 
 关闭虚拟机平台
 
-![关闭虚拟机平台](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
+![关闭虚拟机平台](./../../../../../images/Windows/Usage/%E5%85%B3%E9%97%AD%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%B9%B3%E5%8F%B0.png)
 
 ### 6.17. 删除
 
@@ -540,15 +557,15 @@ Remove-Item "C:\path\to\directory" -Recurse
 
 双击证书文件安装
 
-![双击证书文件安装](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E5%8F%8C%E5%87%BB%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85.png)
+![双击证书文件安装](./../../../../../images/Windows/Usage/%E5%8F%8C%E5%87%BB%E8%AF%81%E4%B9%A6%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85.png)
 
 选择安装到当前用户
 
-![选择安装到当前用户](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%88%B0%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7.png)
+![选择安装到当前用户](./../../../../../images/Windows/Usage/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E5%88%B0%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7.png)
 
 选择存储到受信任的根证书颁发机构
 
-![选择存储到受信任的根证书颁发机构](./../../../../../images/Windows/%E4%BD%BF%E7%94%A8/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
+![选择存储到受信任的根证书颁发机构](./../../../../../images/Windows/Usage/%E9%80%89%E6%8B%A9%E5%AD%98%E5%82%A8%E5%88%B0%E5%8F%97%E4%BF%A1%E4%BB%BB%E7%9A%84%E6%A0%B9%E8%AF%81%E4%B9%A6%E9%A2%81%E5%8F%91%E6%9C%BA%E6%9E%84.png)
 
 ### 6.19. SSH 连接记录
 
@@ -572,11 +589,194 @@ PS C:\Users\nemo> Get-ExecutionPolicy -List
 PS C:\Users\nemo> Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 ```
 
-永久允许脚本运行
+永久允许脚本运行 (推荐)
 
 ```
 PS C:\Users\nemo> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
+
+### 6.21. System Properties
+
+启用系统保护
+
+```
+Settings\About\Advanced system settings\System Protection
+```
+
+![启用系统保护](./../../../../../images/Windows/Usage/%E5%90%AF%E7%94%A8%E7%B3%BB%E7%BB%9F%E4%BF%9D%E6%8A%A4.png)
+
+关闭远程协助
+
+```
+Settings\About\Advanced system settings\Remote
+```
+
+![关闭远程协助](./../../../../../images/Windows/Usage/%E5%85%B3%E9%97%AD%E8%BF%9C%E7%A8%8B%E5%8D%8F%E5%8A%A9.png)
+
+### 6.22. Search icon
+
+调整为显示搜索图标
+
+![调整为显示搜索图标](./../../../../../images/Windows/Usage/%E8%B0%83%E6%95%B4%E4%B8%BA%E6%98%BE%E7%A4%BA%E6%90%9C%E7%B4%A2%E5%9B%BE%E6%A0%87.png)
+
+### 6.23. Folder Option
+
+显示文件扩展名并配置资源管理器
+
+![显示文件扩展名并配置资源管理器](./../../../../../images/Windows/Usage/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8.png)
+
+### 6.24. Network and Sharing Center
+
+关闭网络发现并启用文件和打印机共享
+
+```
+Control Panel\Network and Internet\Network and Sharing Center\Advanced sharing settings
+```
+
+![关闭网络发现并启用文件和打印机共享](./../../../../../images/Windows/Usage/%E5%85%B3%E9%97%AD%E7%BD%91%E7%BB%9C%E5%8F%91%E7%8E%B0%E5%B9%B6%E5%90%AF%E7%94%A8%E6%96%87%E4%BB%B6%E5%92%8C%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB.png)
+
+### 6.25. Local Computer Policy
+
+Run `gpedit.msc` 
+
+不显示锁屏
+
+```
+Local Computer Policy\Computer Configuration\Administrative Templates\Control Panel\Personalization\Do not display the lock screen > Enabled
+```
+
+![不显示锁屏](./../../../../../images/Windows/Usage/%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%94%81%E5%B1%8F.png)
+
+在下载和安装任何更新之前通知
+
+```
+Local Computer Policy\Computer Configuration\Administrative Templates\Windows Components\Windows Update\Configure Automatic Updates
+```
+
+![在下载和安装任何更新之前通知](./../../../../../images/Windows/Usage/%E5%9C%A8%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E6%9B%B4%E6%96%B0%E4%B9%8B%E5%89%8D%E9%80%9A%E7%9F%A5.png)
+
+### 6.26. Power Options
+
+打开电源设置
+
+```
+Control Panel\Hardware and Sound\Power Options
+```
+
+**台式机推荐设置**
+
+选择高性能, 更改计划设置
+
+```
+        关闭显示器: 从不
+使计算机进入睡眠状态: 从不
+```
+
+选择电源按钮的功能
+
+```
+电源按钮和睡眠按钮设置
+    按电源按钮时: 关机
+    按睡眠按钮时: 睡眠
+关机设置
+    √ 睡眠
+    √ 锁定
+```
+
+**笔记本推荐设置**
+
+选择平衡, 更改计划设置
+
+```
+                  用电池      接通电源
+        关闭显示器: 5 分钟      从不
+使计算机进入睡眠状态: 15 分钟     从不
+```
+
+选择电源按钮的功能
+
+```
+电源按钮, 睡眠按钮和盖子设置
+                用电池           接通电源
+    按电源按钮时: 关机             关机
+    按睡眠按钮时: 睡眠             睡眠
+    关闭盖子时:  不采取任何操作     不采取任何操作
+关机设置
+    √ 睡眠
+    √ 锁定
+```
+
+### 6.27. Input method editor
+
+打开输入法设置
+
+![打开输入法设置](./../../../../../images/Windows/Usage/%E6%89%93%E5%BC%80%E8%BE%93%E5%85%A5%E6%B3%95%E8%AE%BE%E7%BD%AE.png)
+
+常规设置
+
+![常规设置](./../../../../../images/Windows/Usage/%E5%B8%B8%E8%A7%84%E8%AE%BE%E7%BD%AE.png)
+
+按键设置
+
+![按键设置](./../../../../../images/Windows/Usage/%E6%8C%89%E9%94%AE%E8%AE%BE%E7%BD%AE.png)
+
+外观设置
+
+![外观设置](./../../../../../images/Windows/Usage/%E5%A4%96%E8%A7%82%E8%AE%BE%E7%BD%AE.png)
+
+词库和学习设置
+
+![词库和学习设置](./../../../../../images/Windows/Usage/%E8%AF%8D%E5%BA%93%E5%92%8C%E5%AD%A6%E4%B9%A0%E8%AE%BE%E7%BD%AE.png)
+
+高级设置
+
+![高级设置](./../../../../../images/Windows/Usage/%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE.png)
+
+### 6.28. Windows Firewall
+
+运行 `wf.msc` 
+
+入站规则默认阻止
+
+出战规则默认允许
+
+配置规则阻止不必要的软件联网
+
+1. 7-Zip
+
+   ```
+   %ProgramFiles%\7-Zip\7zFM.exe
+   ```
+
+2. Anytxt Searcher
+
+   ```
+   %ProgramFiles%\Anytxt Searcher\ATGUI.exe
+   ```
+
+3. ContextMenuManager
+
+   ```
+   %USERPROFILE%\AppData\Local\Programs\ContextMenuManager.NET.4.0.exe
+   ```
+
+4. Koodo Reader
+
+   ```
+   %USERPROFILE%\AppData\Local\Programs\Koodo Reader\Koodo Reader.exe
+   ```
+
+5. PixPin
+
+   ```
+   %USERPROFILE%\AppData\Local\Programs\PixPin\PixPin.exe
+   ```
+
+6. Typora
+
+   ```
+   %USERPROFILE%\AppData\Local\Programs\Typora\Typora.exe
+   ```
 
 ---
 

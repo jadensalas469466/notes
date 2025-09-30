@@ -42,8 +42,6 @@
    
    AutomaticGates: https://www.nexusmods.com/stardewvalley/mods/3109
    
-   HarvestWithScythe: https://www.nexusmods.com/stardewvalley/mods/2731
-   
    PassableCrops: https://www.nexusmods.com/stardewvalley/mods/15223
    
    ChestsAnywhere: https://www.nexusmods.com/stardewvalley/mods/518
@@ -59,3 +57,5 @@
    Robin Sells Machines: https://www.nexusmods.com/stardewvalley/mods/26961
    
    
+   Mod conflicts:
+   HarvestWithScythe: https://www.nexusmods.com/stardewvalley/mods/2731

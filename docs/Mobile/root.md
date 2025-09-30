@@ -75,7 +75,7 @@ vangogh:/ #
 
 开启 Zygisk 后重启手机
 
-安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases) 模块后重启手机,
+安装 [Shamiko](https://github.com/LSPosed/LSPosed.github.io/releases) 模块后重启手机
 
 配置排除列表并禁用遵守排除列表
 

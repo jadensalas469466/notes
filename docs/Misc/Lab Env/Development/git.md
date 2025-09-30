@@ -252,12 +252,6 @@ git config --global --unset http.proxy                  # 移除代理
 git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 ```
 
-禁止自动转换换行符
-
-```
-git config --global core.autocrlf false
-```
-
 ---
 
 References

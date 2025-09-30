@@ -12,8 +12,8 @@
 
 使用以下命令将 git 的 ssh 服务修改为 PowerShell 的 ssh 服务即可
 
-```powershell
-PS C:\Users\sec> git config --global core.sshCommand "C:/Windows/System32/Openssh/ssh.exe"
+```
+PS C:\Users\nemo> git config --global core.sshCommand "C:/Windows/System32/Openssh/ssh.exe"
 ```
 
 ## 2. git 操作时显示主机密钥验证失败

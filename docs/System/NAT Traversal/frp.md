@@ -39,6 +39,10 @@ A fast reverse proxy to help you expose a local server behind a NAT or firewall 
 ```
 serverAddr = "evil.com"
 serverPort = 7000
+transport.tcpMux = true
+transport.tls.enable = true
+auth.tokenSource.type = "file"
+auth.tokenSource.file.path = "/home/nemo/.frp/frp_token"
 
 [[proxies]]
 name = "tcp"
@@ -46,6 +50,13 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 6000
 remotePort = 6000
+```
+
+修改为与 Server 相同的 Token
+
+```
+┌──(nemo@debian)-[~]
+└─$ nano ~/.frp/frp_token
 ```
 
 ## 3. Usage

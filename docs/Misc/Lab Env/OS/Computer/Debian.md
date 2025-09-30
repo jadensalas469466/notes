@@ -244,8 +244,9 @@ Install common tools
 
 ```
 root@debian:~# apt install -y systemd-resolved passwd sudo curl vim unzip tree gnupg apache2 \
-build-essential libpcap-dev mingw-w64 binutils-mingw-w64 g++-mingw-w64 \
-zsh zsh-syntax-highlighting zsh-autosuggestions\
+zsh zsh-syntax-highlighting zsh-autosuggestions \
+build-essential binutils-mingw-w64 mingw-w64 g++-mingw-w64 dkms \
+libpcap-dev linux-headers-$(uname -r) \
 && usermod -aG sudo nemo \
 && systemctl enable --now apache2.service
 ```
@@ -397,80 +398,88 @@ Take Snapshot: `deploy`
 
 ## 6. Usage
 
-### 6.1. 配置无线网卡驱动
-
-查看内核版本
-
-```
-┌──(root@debian)-[~]
-└─# uname -r
-6.5.0-kali3-amd64
-```
-
-安装对应的版本
-
-> http://http.kali.org/kali/pool/main/l/linux/
-
-```
-┌──(root@debian)-[~]
-└─# wget http://http.kali.org/kali/pool/main/l/linux/linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
-&& dpkg -i linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb \
-&& rm -rf linux-compiler-gcc-13-x86_6.5.13-1kali2_amd64.deb
-```
+### 6.1. 安装桌面环境
 
 安装依赖
 
 ```
-┌──(root@debian)-[~]
-└─# apt install -y build-essential dkms
+root@debian:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
 ```
+
+Restart
+
+```
+root@debian:~# reboot
+```
+
+Wait for the VM to start up, then insert Guest Additions CD image
+
+挂载增强工具
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo mount /dev/cdrom /mnt
+```
+
+安装增强工具
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo bash /mnt/VBoxLinuxAdditions.run
+```
+
+Custom Shortcuts
+
+```
+    Name: terminal
+ Command: gnome-terminal
+Shortcut: Ctrl + Alt +T
+```
+
+### 6.2. 配置无线网卡驱动
 
 下载驱动
 
 ```
-┌──(root@debian)-[~]
-└─# git clone https://github.com/aircrack-ng/rtl8812au.git /root/tools/drivers/rtl8812au
+┌──(nemo@debian)-[~]
+└─$ git clone https://github.com/aircrack-ng/rtl8812au.git
 ```
 
 安装驱动
 
 ```
-┌──(root@debian)-[~]
-└─# cd /root/tools/drivers/rtl8812au \
-&& make dkms_install \
-&& cd
+┌──(nemo@debian)-[~]
+└─$ cd ./rtl8812au && sudo make dkms_install
 ```
 
-> 卸载
->
-> ```
-> root@debian:~# cd /root/tools/drivers/rtl8812au \
-> && make dkms_remove \
-> && cd
-> ```
-
-### 6.2. 系统信息
-
-查看内核版本
+卸载驱动
 
 ```
-uname -r
+┌──(nemo@debian)-[~]
+└─$ cd ./rtl8812au && sudo make dkms_remove
 ```
 
 ### 6.3. 挂载共享文件
 
-创建目录
+安装增强工具后设置共享文件夹 `Share Folder` 并创建挂载目录
 
 ```
-┌──(root@debian)-[~]
-└─# mkdir -p /mnt/vmware
+┌──(nemo@debian)-[~]
+└─$ mkdir -p ~/share
 ```
 
-配置别名
+挂载共享文件夹
 
 ```
-┌──(root@debian)-[~]
-└─# echo "alias share='vmhgfs-fuse .host:/ /mnt/vmware'" >> ~/.zshrc && source ~/.zshrc
+┌──(nemo@debian)-[~]
+└─$ sudo mount -t vboxsf <Share Folder> ~/share
+```
+
+取消挂载
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo umount ~/share
 ```
 
 ### 6.4. 历史命令
@@ -478,9 +487,8 @@ uname -r
 擦除历史命令
 
 ```
-┌──(root@debian)-[~]
-└─# shred -z ~/.bash_history \
-&& shred -z ~/.zsh_history
+┌──(nemo@debian)-[~]
+└─# shred -z ~/.bash_history ~/.zsh_history
 ```
 
 ### 6.5. 后台运行
@@ -497,73 +505,55 @@ echo $! > ~/<command>-pid.log
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ tail -f ~/nohup.log
+└─$ tail -f ~/<command>-nohup.log
 ```
 
 查看 PID
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ cat  ~/pid.log
+└─$ cat ~/<command>-pid.log
 ```
 
 终止进程
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ kill -9 <PID>
+└─$ kill -15 <PID> # 请求终止
+
+┌──(nemo@debian)-[~]
+└─$ kill -9 <PID>  # 强制终止
 ```
 
-### 6.6. 配置全局代理
-
-配置代理
-
-```
-export http_proxy=http://ip:port && \
-export https_proxy=$http_proxy
-```
-
-取消代理
-
-```
-unset http_proxy && \
-unset https_proxy
-```
-
-### 6.7. 创建用户
-
-创建一个普通用户
-
-```
-adduser nemo
-```
-
-### 6.8. SSH 相关配置
+### 6.6. SSH 配置
 
 SSH 配置文件
 
 ```
-nano -l /etc/ssh/sshd_config
+root@debian:~# sudo nano -l /etc/ssh/sshd_config
 ```
 
-使用 root 登录 (默认禁止)
+root 用户登录 (默认允许以密钥对登录)
 
 ```
-33 #PermitRootLogin prohibit-password # 禁止以 root 身份登录
-33 PermitRootLogin prohibit-password  # 允许 root 以密钥登录
-33 PermitRootLogin yes                # 允许 root 以密码登录
+33 #PermitRootLogin prohibit-password # 允许 root 用户以密钥对登录
+33 PermitRootLogin prohibit-password  # 允许 root 用户以密钥对登录
+33 PermitRootLogin yes                # 允许 root 用户以密钥对或密码登录
+33 PermitRootLogin no                 # 禁止 root 用户登录
 ```
 
-密钥对登录 (默认禁止)
+普通用户密钥对登录 (默认允许以密钥对登录)
 
 ```
-38 #PubkeyAuthentication yes
+38 #PubkeyAuthentication yes # 允许普通用户以密钥对登录
+38 PubkeyAuthentication yes  # 允许普通用户以密钥对登录
 ```
 
-密码登录 (默认允许)
+普通用户密码登录 (默认允许以密码登录)
 
 ```
-57 #PasswordAuthentication yes
+57 #PasswordAuthentication yes # 允许普通用户以密码登录
+57 PasswordAuthentication no   # 禁止普通用户以密码登录
 ```
 
 重启 SSH 服务
@@ -572,7 +562,7 @@ nano -l /etc/ssh/sshd_config
 root@debian:~# systemctl restart ssh.service
 ```
 
-### 6.8. 配置网络
+### 6.7. 配置网络
 
 查看网络接口
 
@@ -590,9 +580,9 @@ root@debian:~# apt install -y systemd-resolved
 
 ```
 root@debian:~# systemctl disable --now NetworkManager || true \
-&& systemctl enable --now networking.service \
-&& systemctl enable --now systemd-networkd.service \
-&& systemctl enable --now systemd-resolved.service
+&& systemctl disable networking.service \
+&& systemctl enable systemd-networkd.service \
+&& systemctl enable systemd-resolved.service
 ```
 
 动态网络
@@ -604,6 +594,7 @@ Name=en*
 
 [Network]
 DHCP=yes
+IPv6AcceptRA=no
 DNS=8.8.8.8
 DNS=8.8.4.4
 EOF
@@ -619,24 +610,10 @@ Name=en*
 [Network]
 Address=192.168.1.206/24
 Gateway=192.168.1.1
+IPv6AcceptRA=no
 DNS=8.8.8.8
 DNS=8.8.4.4
 EOF
-```
-
-重启网络配置
-
-```
-root@debian:~# systemctl restart systemd-networkd.service \
-&& systemctl restart systemd-resolved.service
-```
-
-### 6.9. 安装桌面环境
-
-安装依赖
-
-```
-root@debian:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
 ```
 
 Restart
@@ -645,22 +622,13 @@ Restart
 root@debian:~# reboot
 ```
 
-Wait for the VM to start up, then insert Guest Additions CD image
-
-Custom Shortcuts
-
-```
-    Name: terminal
- Command: gnome-terminal
-Shortcut: Ctrl + Alt +T
-```
-
-### 6.10. 创建链接
+### 6.9. 创建链接
 
 创建软链接以全局运行
 
 ```
-ln -sf ~/.local/bin/app /usr/local/bin/app
+┌──(nemo@debian)-[~]
+└─$ ln -sf ~/.local/bin/app /usr/local/bin/app
 ```
 
 ---
