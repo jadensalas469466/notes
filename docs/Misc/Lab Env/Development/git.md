@@ -68,6 +68,16 @@ PS C:\Users\nemo> git config --global user.name "nemo"
 PS C:\Users\nemo> git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
+配置 Git 使用指定的 SSH 客户端
+
+```
+PS C:\Users\nemo> git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
+```
+
+部署公钥到 Git 服务器
+
+![部署公钥到 Git 服务器](./../../../../images/git/%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
+
 ## 3. Usage
 
 ### 3.1. 基础
@@ -238,18 +248,6 @@ git config --global --unset url."https://ghp.ci/https://github.com/.insteadOf" #
 git config --global http.proxy                          # 查看代理
 git config --global http.proxy "http://127.0.0.1:10808" # 配置代理
 git config --global --unset http.proxy                  # 移除代理
-```
-
-### 3.4.1. 部署 SSH 到 GitHub
-
-使用 OpenSSH 部署公钥到 Git 服务器
-
-![使用 OpenSSH 部署公钥到 Git 服务器](./../../../../images/git/%E4%BD%BF%E7%94%A8%20OpenSSH%20%E9%83%A8%E7%BD%B2%E5%85%AC%E9%92%A5%E5%88%B0%20Git%20%E6%9C%8D%E5%8A%A1%E5%99%A8.png)
-
-配置 Git 使用 Windows SSH 客户端
-
-```
-git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
 ```
 
 ---
