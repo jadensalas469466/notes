@@ -153,7 +153,7 @@ Shut down, Take Snapshot: `install`
 
 Install drivers and update the system
 
-[Power Options](# 6.26. Power Options)
+[Power Options](# 6.25. Power Options)
 
 [ExecutionPolicy](# 6.20. ExecutionPolicy)
 
@@ -186,33 +186,31 @@ Alternate DNS server: 8.8.4.4
 
 Update and configure Windows and Edge
 
-[Power Options](# 6.26. Power Options)
+[Power Options](# 6.25. Power Options)
 
 [ExecutionPolicy](# 6.20. ExecutionPolicy)
 
-[Local Computer Policy](# 6.25. Local Computer Policy)
-
-[Network and Sharing Center](# 6.24. Network and Sharing Center)
+[Local Computer Policy](# 6.24. Local Computer Policy)
 
 [Folder Option](# 6.23. Folder Option)
 
 [Search icon](# 6.22. Search icon)
 
-[Input method editor](# 6.27. Input method editor)
+[Input method editor](# 6.26. Input method editor)
 
-[Windows Firewall](# 6.28. Windows Firewall)
+[Windows Firewall](# 6.27. Windows Firewall)
 
 [System Properties](# 6.21. System Properties)
 
 Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-edit/microsoft-office/office-deployment-tool) to install Word, Excel, PowerPoint
 
-==VM needs to Create a folder and Add exclusions==
+==VM needs to Create a folder and Add exclusions== 
 
 ```
 C:\Users\nemo\Apps
 ```
 
-==PM needs to configure SMB==
+==PM needs to configure [SMB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-sharing/pei-zhi-smb-wen-jian-gong-xiang)== 
 
 Shut down, Take Snapshot: `init` 
 
@@ -254,10 +252,11 @@ Shut down, Take Snapshot: `deploy`
 | [ContextMenuManager](https://github.com/BluePointLilac/ContextMenuManager) |
 |         [DeepL](https://www.deepl.com/en/translator)         |
 |           [Everything](https://www.voidtools.com/)           |
+| [Firefox ESR](https://www.firefox.com/en-US/browsers/enterprise/) |
 |          [FreeFileSync](https://freefilesync.org/)           |
 |             [Geek](https://geekuninstaller.com/)             |
 |                 [Git](https://git-scm.com/)                  |
-|       [Google Chrome](https://www.google.com/chrome/)        |
+|               [GnuPG](https://www.gnupg.org/)                |
 |           [imagesGlass](https://imagesglass.org/)            |
 |             [KeePassXC](https://keepassxc.org/)              |
 |         [Koodo Reader](https://www.koodoreader.com/)         |
@@ -625,17 +624,7 @@ Settings\About\Advanced system settings\Remote
 
 ![显示文件扩展名并配置资源管理器](./../../../../../images/Windows/Usage/%E6%98%BE%E7%A4%BA%E6%96%87%E4%BB%B6%E6%89%A9%E5%B1%95%E5%90%8D%E5%B9%B6%E9%85%8D%E7%BD%AE%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8.png)
 
-### 6.24. Network and Sharing Center
-
-关闭网络发现并启用文件和打印机共享
-
-```
-Control Panel\Network and Internet\Network and Sharing Center\Advanced sharing settings
-```
-
-![关闭网络发现并启用文件和打印机共享](./../../../../../images/Windows/Usage/%E5%85%B3%E9%97%AD%E7%BD%91%E7%BB%9C%E5%8F%91%E7%8E%B0%E5%B9%B6%E5%90%AF%E7%94%A8%E6%96%87%E4%BB%B6%E5%92%8C%E6%89%93%E5%8D%B0%E6%9C%BA%E5%85%B1%E4%BA%AB.png)
-
-### 6.25. Local Computer Policy
+### 6.24. Local Computer Policy
 
 Run `gpedit.msc` 
 
@@ -655,7 +644,7 @@ Local Computer Policy\Computer Configuration\Administrative Templates\Windows Co
 
 ![在下载和安装任何更新之前通知](./../../../../../images/Windows/Usage/%E5%9C%A8%E4%B8%8B%E8%BD%BD%E5%92%8C%E5%AE%89%E8%A3%85%E4%BB%BB%E4%BD%95%E6%9B%B4%E6%96%B0%E4%B9%8B%E5%89%8D%E9%80%9A%E7%9F%A5.png)
 
-### 6.26. Power Options
+### 6.25. Power Options
 
 打开电源设置
 
@@ -706,7 +695,7 @@ Control Panel\Hardware and Sound\Power Options
     √ 锁定
 ```
 
-### 6.27. Input method editor
+### 6.26. Input method editor
 
 打开输入法设置
 
@@ -732,7 +721,7 @@ Control Panel\Hardware and Sound\Power Options
 
 ![高级设置](./../../../../../images/Windows/Usage/%E9%AB%98%E7%BA%A7%E8%AE%BE%E7%BD%AE.png)
 
-### 6.28. Windows Firewall
+### 6.27. Windows Firewall
 
 运行 `wf.msc` 
 

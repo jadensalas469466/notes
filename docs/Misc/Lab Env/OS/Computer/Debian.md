@@ -4,6 +4,7 @@ Debian is a complete Free Operating System!
 
 - [VirtualBox](https://www.virtualbox.org/)
 - [Debian](https://www.debian.org/)
+- [Archive](https://cdimage.debian.org/images/archive/)
 
 ## 2. Config
 
@@ -40,7 +41,7 @@ Take Snapshot: `config`
 
 Start the VM to install
 
-Debian GNU/Linux installer menu
+Debian GNU/Linux Installer menu
 
 ```
 Install
@@ -126,7 +127,7 @@ Guided - use entire disk
 
 ```
 Select disk to partition:
-VBOX HARDDISK
+/dev/
 ```
 
 ```
@@ -179,7 +180,7 @@ Install the GRUB boot loader to your primary drive?
 
 ```
 Device for boot loader installation:
-VBOX_HARDDISK
+/dev/
 ```
 
 Finish the installation
@@ -248,10 +249,10 @@ zsh zsh-syntax-highlighting zsh-autosuggestions \
 build-essential binutils-mingw-w64 mingw-w64 g++-mingw-w64 dkms \
 libpcap-dev linux-headers-$(uname -r) \
 && usermod -aG sudo nemo \
-&& systemctl enable --now apache2.service
+&& systemctl disable --now apache2.service
 ```
 
-Keep SSH session alive
+Keep SSH session alive, 配置 SSH 密钥对连接
 
 ```
 root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
@@ -269,7 +270,7 @@ root@debian:~# chsh -s $(which zsh) \
 Configuring Network service
 
 ```
-root@debian:~# systemctl disable --now NetworkManager || true \
+root@debian:~# systemctl disable NetworkManager.service || true \
 && systemctl disable networking.service \
 && systemctl enable systemd-networkd.service \
 && systemctl enable systemd-resolved.service
@@ -403,7 +404,7 @@ Take Snapshot: `deploy`
 安装依赖
 
 ```
-root@debian:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-system-monitor gnome-text-editor
+root@debian:~# apt install -y gnome-shell gdm3 gnome-terminal nautilus gnome-text-editor
 ```
 
 Restart
@@ -553,6 +554,7 @@ root 用户登录 (默认允许以密钥对登录)
 
 ```
 57 #PasswordAuthentication yes # 允许普通用户以密码登录
+57 PasswordAuthentication yes  # 允许普通用户以密码登录
 57 PasswordAuthentication no   # 禁止普通用户以密码登录
 ```
 
@@ -563,6 +565,8 @@ root@debian:~# systemctl restart ssh.service
 ```
 
 ### 6.7. 配置网络
+
+**CLI**
 
 查看网络接口
 
@@ -579,7 +583,7 @@ root@debian:~# apt install -y systemd-resolved
 配置服务
 
 ```
-root@debian:~# systemctl disable --now NetworkManager || true \
+root@debian:~# systemctl disable NetworkManager.service || true \
 && systemctl disable networking.service \
 && systemctl enable systemd-networkd.service \
 && systemctl enable systemd-resolved.service

@@ -1,3 +1,5 @@
+VeraCrypt is a free open source disk encryption software for Windows, Mac OSX and Linux.
+
 ## 1. Install
 
 选择安装模式
