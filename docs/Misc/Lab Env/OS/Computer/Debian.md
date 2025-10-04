@@ -252,7 +252,7 @@ libpcap-dev linux-headers-$(uname -r) \
 && systemctl disable --now apache2.service
 ```
 
-Keep SSH session alive, 配置 SSH 密钥对连接
+Keep SSH session alive
 
 ```
 root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
@@ -340,7 +340,7 @@ nemo@debian:~$ sudo poweroff
 
 ## 5. Deploy
 
-|                            Local                             |
+|                              VM                              |
 | :----------------------------------------------------------: |
 | [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy) |
 | [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |

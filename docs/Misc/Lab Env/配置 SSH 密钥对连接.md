@@ -113,7 +113,7 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAhONuGnP2jmIemHuiaiNeMnSzn+RHzG9mNitLZcqUEc
 └─# sudo systemctl restart sshd.service
 ```
 
-完成后可将密钥对删除
+完成后可删除密钥对
 
 ---
 

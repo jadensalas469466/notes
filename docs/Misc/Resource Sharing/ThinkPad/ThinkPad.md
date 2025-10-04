@@ -50,7 +50,7 @@ Do not configure the network at this time
 
 ```
 Hostname:
-debian
+xxxx-xxxx
 ```
 
 Set up users and passwords
@@ -219,25 +219,19 @@ root@debian:~# apt update && apt full-upgrade \
 && apt clean && apt autoremove --purge
 ```
 
-检查缺失的驱动
-
-```
-root@debian:~# dmesg | grep -i firmware
-```
-
-Install common tools
+Install basic tools
 
 ```
 root@debian:~# apt install -y systemd-resolved passwd sudo fwupd curl vim unzip tree gnupg apache2 \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
 build-essential binutils-mingw-w64 mingw-w64 g++-mingw-w64 dkms \
 libpcap-dev linux-headers-$(uname -r) \
-gnome-shell gdm3 gnome-terminal nautilus gnome-text-editor \
+gnome-shell gdm3 gnome-terminal nautilus \
 && usermod -aG sudo nemo \
 && systemctl disable --now apache2.service
 ```
 
-Keep SSH session alive, 配置 SSH 密钥对连接
+Keep SSH session alive
 
 ```
 root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
@@ -267,15 +261,7 @@ Restart
 root@debian:~# reboot
 ```
 
-Custom Shortcuts
-
-```
-    Name: terminal
- Command: gnome-terminal
-Shortcut: Ctrl + Alt +T
-```
-
-Wait for the VM to start up, then Reconnect SSH
+Reconnect SSH
 
 ```
 PS C:\Users\nemo> ssh nemo@192.168.1.19
@@ -286,6 +272,8 @@ Network testing
 ```
 nemo@debian:~$ ping mit.edu -c 3
 ```
+
+ [配置 SSH 密钥对连接](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie)
 
 Configuring Zsh
 
@@ -310,47 +298,109 @@ nemo@debian:~$ mkdir -p ~/.local/bin \
 > └─# sudo chmod 644 /var/www/html/exploit/*
 > ```
 
-==加载内核驱动支持 ThinkPad 特有的功能==
+加载 ThinkPad 内核驱动
 
 ```
-sudo modprobe thinkpad_acpi
+nemo@debian:~$ sudo modprobe thinkpad_acpi
 ```
 
-开机自动加载：在 `/etc/modules` 里加一行
+检查驱动更新
 
 ```
-thinkpad_acpi
+nemo@debian:~$ sudo dmesg | grep -i firmware
 ```
 
-查看特殊键按下时产生的事件
+检查固件更新
 
 ```
-acpi_listen
+nemo@debian:~$ sudo fwupdmgr get-updates && sudo fwupdmgr refresh
 ```
 
-检测内核是否识别 ThinkPad 驱动
+Install common tools
 
 ```
-lsmod | grep thinkpad_acpi
+nemo@debian:~$ sudo apt install -y gnome-text-editor firefox-esr eog vlc \
+ibus ibus-pinyin ibus-libpinyin \
+&& ibus restart
 ```
 
-查看支持的功能
+Wi-Fi: 连接 WiFi, 自定义 IPv4 DNS 并禁用 IPv6
 
 ```
-cat /sys/devices/platform/thinkpad_acpi/hotkey_tablet_mode
+DNS: 8.8.8.8, 8.8.4.4
 ```
 
-查看电源相关功能
+Network: 断开 Ethernet, 自定义 IPv4 DNS 并禁用 IPv6
 
 ```
-ls /proc/acpi/ibm/
+DNS: 8.8.8.8, 8.8.4.4
 ```
 
-待装软件
+Bluetooth: 关闭蓝牙
+
+Privacy: 关闭文件历史记录, 开启自动删除垃圾内容和临时文件
+
+Sound: 禁止声音输入
+
+Power: 配置在插电的情况下两小时后休眠, 将电源按钮行为修改为关机, 显示电池百分比
+
+Mouse & Touchpad: 调节鼠标和触控板的速度
+
+Keyboard: 添加输入法 Chinese (Intelligent Pinyin), 为终端自定义快捷键
 
 ```
- firefox-esr eog gnome-system-monitor
+    Name: terminal
+ Command: gnome-terminal
+Shortcut: Ctrl + Alt +T
 ```
+
+Removable Media: ☑ Never prompt or start programs on media insertion
+
+Accessibility: 修改光标大小为 Medium
+
+Default Applications: 设置默认应用
+
+Date & Time: 修改时区
+
+
+
+### 1.3. Deploy
+
+|                            Laptop                            |
+| :----------------------------------------------------------: |
+| [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy) |
+|                                                              |
+|                                                              |
+
+|                             test                             |
+| :----------------------------------------------------------: |
+|                                                              |
+| [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
+| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
+| [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
+| [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
+| [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
+| [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
+| [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
+| [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder) |
+| [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx) |
+| [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck) |
+| [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu) |
+| [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan) |
+| [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap) |
+| [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx) |
+| [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb) |
+| [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f) |
+| [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog) |
+| [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf) |
+| [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh) |
+| [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei) |
+| [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra) |
+| [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa) |
+| [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
+| [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp) |
+| [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver) |
+| [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover) |
 
 ---
 
