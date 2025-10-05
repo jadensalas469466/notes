@@ -1,0 +1,41 @@
+{
+    "created_time": "2025-10-05T01:52:48Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:48Z",
+            "id": "576",
+            "modified_time": "2025-10-05T01:52:48Z",
+            "name": "sdelete.md",
+            "signature": "9326918859692822384",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:48Z",
+            "id": "577",
+            "modified_time": "2025-10-05T01:52:48Z",
+            "name": "shred.md",
+            "signature": "1807159001094410096",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:48Z",
+            "id": "578",
+            "modified_time": "2025-10-05T01:52:48Z",
+            "name": "系统日志清理.md",
+            "signature": "11376446308104654704",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "575",
+    "modified_time": "2025-10-05T01:52:48Z",
+    "signature": "5101821370109644656",
+    "version": 3
+}

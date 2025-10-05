@@ -1,0 +1,43 @@
+{
+    "created_time": "2025-10-05T01:52:49Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:49Z",
+            "id": "726",
+            "modified_time": "2025-10-05T01:52:49Z",
+            "name": "nuclei.md",
+            "signature": "4062576504387784561",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:45Z",
+            "id": "968",
+            "modified_time": "2025-10-05T05:06:45Z",
+            "name": "nuclei.md",
+            "signature": "16971924070631341285",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "SQLi"
+        },
+        {
+            "name": "XSS"
+        },
+        {
+            "name": "SQLi"
+        },
+        {
+            "name": "XSS"
+        }
+    ],
+    "id": "724",
+    "modified_time": "2025-10-05T01:52:49Z",
+    "signature": "10175702760723435377",
+    "version": 3
+}

@@ -1,0 +1,21 @@
+{
+    "created_time": "2025-10-05T01:52:50Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:48Z",
+            "id": "1101",
+            "modified_time": "2025-10-05T05:06:48Z",
+            "name": "使用 Burp Clickbandit 自动生成 PoC 检测目标.png",
+            "signature": "4273226499724803304",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "752",
+    "modified_time": "2025-10-05T01:52:50Z",
+    "signature": "103192234633056114",
+    "version": 3
+}

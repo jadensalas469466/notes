@@ -1,0 +1,41 @@
+{
+    "created_time": "2025-10-05T01:52:50Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1360",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "利用 ssrf 漏洞获取一个外网的页面.png",
+            "signature": "387776505673022700",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1362",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "复制 Collaborator 域名.png",
+            "signature": "14801507539243629804",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1364",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "通过 ssrf 访问以上域名.png",
+            "signature": "14850646595084614892",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "1363",
+    "modified_time": "2025-10-05T01:52:50Z",
+    "signature": "12440139317381287794",
+    "version": 3
+}

@@ -1,0 +1,41 @@
+{
+    "created_time": "2025-10-05T01:52:50Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1309",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "使用 SPF Query Tool 解析 SPF 记录是否配置正确, 若配置错误则可尝试绕过 SPF 保护.png",
+            "signature": "11602316318918966507",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1310",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "配置正确.png",
+            "signature": "957819331295706347",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1311",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "配置错误.png",
+            "signature": "9286160208464313579",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "798",
+    "modified_time": "2025-10-05T01:52:50Z",
+    "signature": "7105424214989066098",
+    "version": 3
+}

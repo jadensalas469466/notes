@@ -1,0 +1,61 @@
+{
+    "created_time": "2025-10-05T01:52:50Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:49Z",
+            "id": "1161",
+            "modified_time": "2025-10-05T05:06:49Z",
+            "name": "为避免再次误触还应该关闭输入法设置的 `全半角切换` 快捷键.png",
+            "signature": "15345784246172253417",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:49Z",
+            "id": "1163",
+            "modified_time": "2025-10-05T05:06:49Z",
+            "name": "再次打开程序显示正常.png",
+            "signature": "16269074302096243945",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:49Z",
+            "id": "1165",
+            "modified_time": "2025-10-05T05:06:49Z",
+            "name": "原因是开启了全角输入, 切换为半角输入即可恢复正常.png",
+            "signature": "12484849205378153705",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:49Z",
+            "id": "1167",
+            "modified_time": "2025-10-05T05:06:49Z",
+            "name": "在控制面板中将 `系统区域` 设置为 `中文(简体, 中国)` 即可.png",
+            "signature": "2827981089931394281",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:49Z",
+            "id": "1169",
+            "modified_time": "2025-10-05T05:06:49Z",
+            "name": "打开一个中文程序会显示乱码.png",
+            "signature": "7619172702399626473",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "1168",
+    "modified_time": "2025-10-05T01:52:50Z",
+    "signature": "15378568238348750706",
+    "version": 3
+}

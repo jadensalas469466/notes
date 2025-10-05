@@ -1,0 +1,61 @@
+{
+    "created_time": "2025-10-05T01:52:50Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:53Z",
+            "id": "1499",
+            "modified_time": "2025-10-05T05:06:53Z",
+            "name": "修改系统配置.png",
+            "signature": "8790206646734421229",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:53Z",
+            "id": "1501",
+            "modified_time": "2025-10-05T05:06:53Z",
+            "name": "停止靶场.png",
+            "signature": "13551307172866030829",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:53Z",
+            "id": "1503",
+            "modified_time": "2025-10-05T05:06:53Z",
+            "name": "同步镜像, 下载靶场.png",
+            "signature": "7360964693107801325",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:53Z",
+            "id": "1505",
+            "modified_time": "2025-10-05T05:06:53Z",
+            "name": "启动靶场.png",
+            "signature": "5311211647243779309",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:53Z",
+            "id": "1507",
+            "modified_time": "2025-10-05T05:06:53Z",
+            "name": "镜像信息.png",
+            "signature": "4450714262295411949",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "1506",
+    "modified_time": "2025-10-05T01:52:50Z",
+    "signature": "18125354803740659570",
+    "version": 3
+}

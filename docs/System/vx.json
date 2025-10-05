@@ -1,0 +1,52 @@
+{
+    "created_time": "2025-10-05T01:52:48Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:48Z",
+            "id": "596",
+            "modified_time": "2025-10-05T01:52:48Z",
+            "name": "File Download.md",
+            "signature": "7504879254671314800",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:48Z",
+            "id": "617",
+            "modified_time": "2025-10-05T01:52:48Z",
+            "name": "ShellCode.md",
+            "signature": "269806931011555184",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "Anti-Forensics"
+        },
+        {
+            "name": "Backdoor"
+        },
+        {
+            "name": "C2"
+        },
+        {
+            "name": "LAN Discovery"
+        },
+        {
+            "name": "NAT Traversal"
+        },
+        {
+            "name": "Scan"
+        },
+        {
+            "name": "Virus"
+        }
+    ],
+    "id": "572",
+    "modified_time": "2025-10-05T01:52:48Z",
+    "signature": "16360358257105162096",
+    "version": 3
+}

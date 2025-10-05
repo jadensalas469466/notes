@@ -1,20 +1,6 @@
 Proxifier allows network applications that do not support working through proxy servers to operate through a SOCKS or HTTPS proxy and chains.
 
-## 1. Install
-
-输入注册密码
-
-```
-QBZ9F-D3VWW-BQ7YC-XUKWY-RB95P
-D6ZMK-HY6A3-LYR3S-8U8KA-YEE6E
-AVZCR-B2SKY-FEYW3-8AR76-2R5ZG
-C8ZXW-D2TW8-QL7WV-U3PH7-38L4H
-F9ZN9-MYUAM-LSS3K-SBN7B-UT9PF
-```
-
-![输入注册密码](./../../../../../../images/Proxifier/%E8%BE%93%E5%85%A5%E6%B3%A8%E5%86%8C%E5%AF%86%E7%A0%81.png)
-
-## 2. Init
+## 1. Init
 
 添加 Burp Suite 代理
 
@@ -24,7 +10,7 @@ F9ZN9-MYUAM-LSS3K-SBN7B-UT9PF
 
 ![创建  java.exe 和 xray.exe 直连规则](./../../../../../../images/Proxifier/%E5%88%9B%E5%BB%BA%20%20java.exe%20%E5%92%8C%20xray.exe%20%E7%9B%B4%E8%BF%9E%E8%A7%84%E5%88%99.png)
 
-## 3. Usage
+## 2. Usage
 
 ![配置代理](./../../../../../../images/Proxifier/%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86.png)
 

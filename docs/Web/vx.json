@@ -1,0 +1,44 @@
+{
+    "created_time": "2025-10-05T01:52:49Z",
+    "files": [
+    ],
+    "folders": [
+        {
+            "name": "Bypass"
+        },
+        {
+            "name": "DoS"
+        },
+        {
+            "name": "Exploit"
+        },
+        {
+            "name": "Fuzz"
+        },
+        {
+            "name": "Info Disclosure"
+        },
+        {
+            "name": "MITM"
+        },
+        {
+            "name": "OOB"
+        },
+        {
+            "name": "Payload"
+        },
+        {
+            "name": "Recon"
+        },
+        {
+            "name": "Scan"
+        },
+        {
+            "name": "WebShell"
+        }
+    ],
+    "id": "627",
+    "modified_time": "2025-10-05T01:52:49Z",
+    "signature": "6231420751327645553",
+    "version": 3
+}

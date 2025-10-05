@@ -1,44 +1,6 @@
-一款用于 Web 应用漏洞测试的工具.
+ The most complete and widely used pentesting toolkit available.
 
-## 1. Step
-
-- [JRE 8](https://adoptium.net/temurin/releases?version=8&os=any&arch=any)
-- [Burp Suite Professional](https://portswigger.net/burp/releases#professional)
-
-## 2. Config
-
-将注册机和启动脚本复制到安装目录
-
-```
-C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpLoaderKeygen.jar
-C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpSuitePro.vbs
-```
-
-## 3. Install
-
-运行注册机启动 Burp Suite
-
-![运行注册机启动 Burp Suite](./../../../images/Burp%20Suite/%E8%BF%90%E8%A1%8C%E6%B3%A8%E5%86%8C%E6%9C%BA%E5%90%AF%E5%8A%A8%20Burp%20Suite.png)
-
-复制 License 的内容到 Enter license key
-
-![复制 License 的内容到 Enter license key](./../../../images/Burp%20Suite/%E5%A4%8D%E5%88%B6%20License%20%E7%9A%84%E5%86%85%E5%AE%B9%E5%88%B0%20Enter%20license%20key.png)
-
-选择 Manual activation
-
-![选择 Manual activation](./../../../images/Burp%20Suite/%E9%80%89%E6%8B%A9%20Manual%20activation.png)
-
-复制粘贴注册码
-
-![复制粘贴注册码](./../../../images/Burp%20Suite/%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E6%B3%A8%E5%86%8C%E7%A0%81.png)
-
-修改 Burp Suite Professional 快捷方式的目标为启动脚本
-
-```
-C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpSuitePro.vbs
-```
-
-## 4. Init
+## 1. Init
 
 选择临时项目
 
@@ -69,7 +31,7 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\BurpSuitePro.vbs
 在安装目录创建文件夹 `Extensions` 
 
 ```
-C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
+C:\Users\nemo\AppData\Local\Programs\BurpSuitePro\Extensions
 ```
 
 > 所有的扩展都要下载到这个目录中
@@ -80,15 +42,15 @@ C:\Users\sec\AppData\Local\Programs\BurpSuitePro\Extensions
 
 ![启动 Burp Suite , 配置 JAR 环境](./../../../images/Burp%20Suite/%E5%90%AF%E5%8A%A8%20Burp%20Suite%20,%20%E9%85%8D%E7%BD%AE%20JAR%20%E7%8E%AF%E5%A2%83.png)
 
-## 6. Usage
+## 2. Usage
 
 在不涉及多账号测试时一律使用 Burp Suite 内置的浏览器
 
-### 6.1. Proxy
+### 2.1. Proxy
 
 Burp Suite 的抓包代理仅支持 HTTP 协议
 
-### 6.1.1. Intruder
+### 2.1.1. Intruder
 
 Burp Suite Intruder 中有四种 Attack type
 
@@ -105,45 +67,45 @@ Cluster bomb  # 多个字典, 穷举测试
 print("登录失败".encode("utf-8"))
 ```
 
-### 6.1.2. Intercept response
+### 2.1.2. Intercept response
 
 在 Burp Suite 的 Intercepr 中拦截返回包
 
 ![在 Burp Suite 的 Intercepr 中拦截返回包](./../../../images/Burp%20Suite/%E5%9C%A8%20Burp%20Suite%20%E7%9A%84%20Intercepr%20%E4%B8%AD%E6%8B%A6%E6%88%AA%E8%BF%94%E5%9B%9E%E5%8C%85.png)
 
-### 6.1.3. Payloads
+### 2.1.3. Payloads
 
-### 6.1.3.1. Payload settings [Numbers]
+### 2.1.3.1. Payload settings [Numbers]
 
 设置数字位数范围
 
 ![设置数字位数范围](./../../../images/Burp%20Suite/%E8%AE%BE%E7%BD%AE%E6%95%B0%E5%AD%97%E4%BD%8D%E6%95%B0%E8%8C%83%E5%9B%B4.png)
 
-### 6.1.4. Payload processing
+### 2.1.4. Payload processing
 
 使用 Payload processing 对 Payload 进行各种自动化处理
 
 ![使用 Payload processing 对 Payload 进行各种自动化处理](./../../../images/Burp%20Suite/%E4%BD%BF%E7%94%A8%20Payload%20processing%20%E5%AF%B9%20Payload%20%E8%BF%9B%E8%A1%8C%E5%90%84%E7%A7%8D%E8%87%AA%E5%8A%A8%E5%8C%96%E5%A4%84%E7%90%86.png)
 
-### 6.1.5. 爆破时处理 payload
+### 2.1.5. 爆破时处理 payload
 
 ![爆破时处理 Payload](./../../../images/Burp%20Suite/%E7%88%86%E7%A0%B4%E6%97%B6%E5%A4%84%E7%90%86%20Payload.png)
 
-### 6.2. Comparer
+### 2.2. Comparer
 
 将多个数据包发送到 Comparer 进行比对
 
 ![将多个数据包发送到 Comparer 进行比对](./../../../images/Burp%20Suite/%E5%B0%86%E5%A4%9A%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%8C%85%E5%8F%91%E9%80%81%E5%88%B0%20Comparer%20%E8%BF%9B%E8%A1%8C%E6%AF%94%E5%AF%B9.png)
 
-### 6.3. Target
+### 2.3. Target
 
-### 6.3.1. Scope
+### 2.3.1. Scope
 
 在 Target 中设置 Scope, 仅捕获 `example.com` 及其子域名的数据包
 
 ![在 Target 中设置 Scope, 仅捕获 `example.com` 及其子域名的数据包](./../../../images/Burp%20Suite/%E5%9C%A8%20Target%20%E4%B8%AD%E8%AE%BE%E7%BD%AE%20Scope,%20%E4%BB%85%E6%8D%95%E8%8E%B7%20%60example.com%60%20%E5%8F%8A%E5%85%B6%E5%AD%90%E5%9F%9F%E5%90%8D%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
-### 6.4. Extensions
+### 2.4. Extensions
 
 将下载好的扩展包解压到 `.\BurpSuitePro\Extensions\` 目录中
 
@@ -155,7 +117,7 @@ print("登录失败".encode("utf-8"))
 
 ![勾选扩展以加载](./../../../images/Burp%20Suite/%E5%8B%BE%E9%80%89%E6%89%A9%E5%B1%95%E4%BB%A5%E5%8A%A0%E8%BD%BD.png)
 
-### 6.5. 在本地侦听其它计算机
+### 2.5. 在本地侦听其它计算机
 
 将代理指定为本机 IP
 
@@ -169,7 +131,7 @@ print("登录失败".encode("utf-8"))
 
 访问 http://burpsuite/ ,安装证书后，可通过 BurpSuite 代理正常访问
 
-### 6.6. 捕获蚁剑连接木马的数据包
+### 2.6. 捕获蚁剑连接木马的数据包
 
 使用 BurpSuite 对蚁剑连接一句话木马抓包，分析虚拟终端原理
 
@@ -201,7 +163,7 @@ print("登录失败".encode("utf-8"))
 
 ![选中可查看捕获的数据包](./../../../images/Burp%20Suite/%E9%80%89%E4%B8%AD%E5%8F%AF%E6%9F%A5%E7%9C%8B%E6%8D%95%E8%8E%B7%E7%9A%84%E6%95%B0%E6%8D%AE%E5%8C%85.png)
 
-### 6.6.1. 修改请求数据包
+### 2.6.1. 修改请求数据包
 
 打开拦截
 
@@ -230,7 +192,7 @@ print("登录失败".encode("utf-8"))
 
 > 可以在原有代码的基础上加入木马，做免杀。
 
-### 6.7. 自动化测试 XSS 漏洞
+### 2.7. 自动化测试 XSS 漏洞
 
 burp 开启拦截，提交任意参数，发送请求数据包到 intruder 中
 
@@ -276,7 +238,7 @@ payload 类型选择为指定文件
 
 > 在 P grep 一栏中，参数为 1 的，说明成功执行
 
-### 6.8. 漏洞扫描
+### 2.8. 漏洞扫描
 
 关闭拦截
 
@@ -300,7 +262,7 @@ payload 类型选择为指定文件
 
 > 以上页面是谷歌验证码
 
-### 6.9. 保存项目
+### 2.9. 保存项目
 
 新建一个项目并打开
 
@@ -322,5 +284,5 @@ Intruder 的运行结果可以选择保存到项目文件
 
 References
 
-- [Burp Suite](https://portswigger.net/burp)
+- [Burp Suite](https://portswigger.net/burp/pro)
 - [Burp Suite documentation](https://portswigger.net/burp/documentation)

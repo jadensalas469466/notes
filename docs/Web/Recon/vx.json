@@ -1,0 +1,50 @@
+{
+    "created_time": "2025-10-05T01:52:49Z",
+    "files": [
+    ],
+    "folders": [
+        {
+            "name": "CDN"
+        },
+        {
+            "name": "CIDR"
+        },
+        {
+            "name": "Cyber Asset"
+        },
+        {
+            "name": "Directory"
+        },
+        {
+            "name": "DNS"
+        },
+        {
+            "name": "Fingerprint"
+        },
+        {
+            "name": "Host Collision"
+        },
+        {
+            "name": "HTTP"
+        },
+        {
+            "name": "Port"
+        },
+        {
+            "name": "Search Engine"
+        },
+        {
+            "name": "Spider"
+        },
+        {
+            "name": "Subdomain"
+        },
+        {
+            "name": "WHOIS"
+        }
+    ],
+    "id": "962",
+    "modified_time": "2025-10-05T01:52:49Z",
+    "signature": "11255712453836787569",
+    "version": 3
+}

@@ -2,20 +2,12 @@ Python is a programming language that lets you work quicklyand integrate systems
 
 ## 1. Install
 
-### 1.1. Debian
-
 安装
 
 ```
 ┌──(nemo@debian)-[~]
 └─$ sudo apt install -y python3 python3-pip python3-venv python3-dev
 ```
-
-### 1.2. Windows
-
-以管理员身份安装并添加到环境变量
-
-![以管理员身份安装并添加到环境变量](./../../../../images/python/%E4%BB%A5%E7%AE%A1%E7%90%86%E5%91%98%E8%BA%AB%E4%BB%BD%E5%AE%89%E8%A3%85%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%88%B0%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png)
 
 ## 2. Init
 
@@ -24,10 +16,6 @@ Python is a programming language that lets you work quicklyand integrate systems
 ```
 ┌──(nemo@debian)-[~]
 └─$ python3 -m pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
-```
-
-```
-PS C:\Users\nemo> pip config set global.index-url "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
 ```
 
 ## 3. Usage

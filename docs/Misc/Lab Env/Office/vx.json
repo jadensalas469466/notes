@@ -1,0 +1,59 @@
+{
+    "created_time": "2025-10-05T01:52:44Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:44Z",
+            "id": "127",
+            "modified_time": "2025-10-05T01:52:44Z",
+            "name": "7-Zip.md",
+            "signature": "11280664083522768748",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:45Z",
+            "id": "172",
+            "modified_time": "2025-10-05T01:52:45Z",
+            "name": "tar.md",
+            "signature": "7303989022758653805",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T01:52:45Z",
+            "id": "175",
+            "modified_time": "2025-10-05T01:52:45Z",
+            "name": "Windows Terminal.md",
+            "signature": "15731970413890228077",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "Download"
+        },
+        {
+            "name": "File Editing"
+        },
+        {
+            "name": "File Search"
+        },
+        {
+            "name": "File Sharing"
+        },
+        {
+            "name": "Multimedia"
+        },
+        {
+            "name": "Password Manager"
+        }
+    ],
+    "id": "124",
+    "modified_time": "2025-10-05T01:52:44Z",
+    "signature": "11609425731039383404",
+    "version": 3
+}

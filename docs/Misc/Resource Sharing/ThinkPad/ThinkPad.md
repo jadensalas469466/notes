@@ -222,13 +222,12 @@ root@debian:~# apt update && apt full-upgrade \
 Install basic tools
 
 ```
-root@debian:~# apt install -y systemd-resolved passwd sudo fwupd curl vim unzip tree gnupg apache2 \
+root@debian:~# apt install -y systemd-resolved passwd sudo fwupd curl vim unzip tree gnupg \
 zsh zsh-syntax-highlighting zsh-autosuggestions \
 build-essential binutils-mingw-w64 mingw-w64 g++-mingw-w64 dkms \
 libpcap-dev linux-headers-$(uname -r) \
 gnome-shell gdm3 gnome-terminal nautilus \
-&& usermod -aG sudo nemo \
-&& systemctl disable --now apache2.service
+&& usermod -aG sudo nemo
 ```
 
 Keep SSH session alive
@@ -285,18 +284,8 @@ nemo@debian:~$ chsh -s $(which zsh) \
 Create directory
 
 ```
-nemo@debian:~$ mkdir -p ~/.local/bin \
-&& sudo mkdir -p /var/www/html/exploit \
-&& sudo chown -R www-data:www-data /var/www/html/exploit \
-&& sudo chmod 2755 /var/www/html/exploit
+nemo@debian:~$ mkdir -p ~/.local/bin
 ```
-
-> Grant download permissions every time a file is added to this directory
->
-> ```
-> ┌──(nemo@debian)-[~]
-> └─# sudo chmod 644 /var/www/html/exploit/*
-> ```
 
 加载 ThinkPad 内核驱动
 
@@ -362,25 +351,22 @@ Default Applications: 设置默认应用
 
 Date & Time: 修改时区
 
-
-
 ### 1.3. Deploy
 
-|                            Laptop                            |
-| :----------------------------------------------------------: |
-| [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy) |
-|                                                              |
-|                                                              |
+|                                             Laptop                                             |
+| :-------------------------------------------------------------------------------------------: |
+|         [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)         |
+|         [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)          |
+| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
+|           [aria2](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/download/aria2)           |
+|               [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)               |
+|             [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)              |
+|                 [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                  |
+|            [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)            |
+|                                       [AppImageLauncher]                                        |
 
 |                             test                             |
 | :----------------------------------------------------------: |
-|                                                              |
-| [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray) |
-| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
-| [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git) |
-| [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python) |
-| [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go) |
-| [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker) |
 | [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
 | [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder) |
 | [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx) |

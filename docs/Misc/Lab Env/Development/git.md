@@ -39,8 +39,6 @@ Git is a free and open source distributed version control system designed to han
 
 ![选择凭证管理器](./../../../../images/git/%E9%80%89%E6%8B%A9%E5%87%AD%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8.png)
 
-### 2.1. Debian
-
 配置代理
 
 ```
@@ -48,27 +46,26 @@ Git is a free and open source distributed version control system designed to han
 └─$ git config --global http.proxy "http://127.0.0.1:10808"
 ```
 
-### 2.2. Windows
-
-配置代理
-
-```
-PS C:\Users\nemo> git config --global http.proxy "http://127.0.0.1:10808"
-```
-
 配置用户名
 
 ```
-PS C:\Users\nemo> git config --global user.name "nemo"
+┌──(nemo@debian)-[~]
+└─$ git config --global user.name "nemo"
 ```
 
 配置邮箱
 
 ```
-PS C:\Users\nemo> git config --global user.email "<private-name>@users.noreply.github.com"
+┌──(nemo@debian)-[~]
+└─$ git config --global user.email "<private-name>@users.noreply.github.com"
 ```
 
 配置 Git 使用指定的 SSH 客户端
+
+```
+┌──(nemo@debian)-[~]
+└─$ git config --global core.sshCommand "/usr/bin/ssh"
+```
 
 ```
 PS C:\Users\nemo> git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"

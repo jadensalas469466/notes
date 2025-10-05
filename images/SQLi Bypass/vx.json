@@ -1,0 +1,481 @@
+{
+    "created_time": "2025-10-05T01:52:50Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1312",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "以管理员身份运行安全狗.png",
+            "signature": "17058977658947370219",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1313",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "停止 phpStudy.png",
+            "signature": "5319894318769634539",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1314",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "再次发送.png",
+            "signature": "869590085876710635",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1315",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "分别设置 1 和 2 的 Payload 类型设置为简单列表，并在列表中添加所有 mysql 支持的特殊字符.png",
+            "signature": "9016936905138371819",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1316",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "勾选 Chunked coding converter 以加载.png",
+            "signature": "8395923048324267243",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1317",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "发送请求数据包.png",
+            "signature": "6956537996852198635",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1318",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "取消 URL 编码.png",
+            "signature": "9504930625453423851",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1319",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "只开启代理即可.png",
+            "signature": "17171318275240492267",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1320",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "可以看到拦截页面.png",
+            "signature": "7406794360683101419",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1321",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "启动 phpStudy.png",
+            "signature": "1928730653157883115",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1322",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "启动安全狗.png",
+            "signature": "2760025348574936299",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1323",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "在 and 后再加两个 !.png",
+            "signature": "16646394759667121387",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1324",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "在 and 后加 !.png",
+            "signature": "17350142086172769515",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1325",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "在 BurpSuite 添加一个可被 Kali 访问的代理.png",
+            "signature": "10812288188972924139",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1326",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "在 HackBar 提交.png",
+            "signature": "12805751483649883371",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1327",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "在 sqlmap 指定请求文件和代理爆破.png",
+            "signature": "10928336289755430123",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1328",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "在任务管理器-服务中查找 apache 或 httpd 服务.png",
+            "signature": "8214810037003091179",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1329",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "在扩展中选中扩展文件.png",
+            "signature": "10209351132248145131",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1330",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "垃圾数据与前一行空一行.png",
+            "signature": "17751470663603977451",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1331",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "垃圾数据的结尾必须为 &，而且不能有换行.png",
+            "signature": "10057603929021218027",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1332",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "安装 phpStudy.png",
+            "signature": "13036440434885393643",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1333",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "安装 vc 运行库.png",
+            "signature": "270367471488335083",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1334",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "安装完成后点击启动 phpStudy 以启动 mysql.png",
+            "signature": "5321177186846244075",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:51Z",
+            "id": "1335",
+            "modified_time": "2025-10-05T05:06:51Z",
+            "name": "将 phpStudy 切换为系统服务模式.png",
+            "signature": "12203058325232942315",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1336",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "将虚拟机切换至仅主机模式.png",
+            "signature": "8959515275449990380",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1337",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "将请求发送到 Intruder 标注注释中的 1 和 2 为 payload.png",
+            "signature": "16992181026184887532",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1338",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "开始攻击，查看结果，按长度排序.png",
+            "signature": "6867777412439080172",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1339",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "成功安装.png",
+            "signature": "6066599014816677100",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1340",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "提交成功的特殊符号手动测试.png",
+            "signature": "11028797451709578476",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1341",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "攻击类型选择集束炸弹.png",
+            "signature": "12464872285987273964",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1342",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "查看扩展配置.png",
+            "signature": "11923488699094007020",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1343",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "检测 POST.png",
+            "signature": "12188261849365609708",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1344",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "注入成功.png",
+            "signature": "13893739370573331692",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1345",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "测试关卡.png",
+            "signature": "6715342155451333868",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1346",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "添加条件判断注释.png",
+            "signature": "17123890029427555564",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1347",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "清空检索 - 匹配.png",
+            "signature": "6162723943429045484",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1348",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "点击下一个.png",
+            "signature": "9581006900131134700",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1349",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "点击关闭.png",
+            "signature": "11299826144538393836",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1350",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "点击安装数据库.png",
+            "signature": "5014555773617962220",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1351",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "点击编码请求体.png",
+            "signature": "7431390465861221612",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1352",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "点击网站防护.png",
+            "signature": "8653902226053528812",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1353",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "点击阻止并记录.png",
+            "signature": "7599870634040098028",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1354",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "由于安装缓慢，可以停止 phpStudy ，安装狗之后会自动启动服务并完成安装.png",
+            "signature": "1939116219087060204",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1355",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "确认相关信息.png",
+            "signature": "16513287710209866988",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1356",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "管理员权限运行安全狗安装包.png",
+            "signature": "8163283980072910060",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1357",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "重启 phpStudy，在重放器中再次发送 POST 请求数据包.png",
+            "signature": "18399846679024106732",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T05:06:52Z",
+            "id": "1358",
+            "modified_time": "2025-10-05T05:06:52Z",
+            "name": "防止 SQL 联合查询.png",
+            "signature": "10771759241185328364",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "799",
+    "modified_time": "2025-10-05T01:52:50Z",
+    "signature": "5696897064724713330",
+    "version": 3
+}
