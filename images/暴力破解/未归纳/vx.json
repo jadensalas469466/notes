@@ -400,6 +400,406 @@
             "signature": "11005909519449586927",
             "tags": [
             ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4304",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "从响应包中提取 token 的参数.png",
+            "signature": "12991315124766779538",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4305",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "发现开启了 basic 认证.png",
+            "signature": "14165968171753941138",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4306",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "可以添加平台认证，避免每次登录都需要登录 basic.png",
+            "signature": "18123294331835132050",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4307",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "在 Intruder 中定位 payload 位置在 base64 编码.png",
+            "signature": "6554013713410697362",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4308",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "在 Payload 处理中添加前缀.png",
+            "signature": "4556906993681574034",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4309",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "在响应包搜索失败特征.png",
+            "signature": "9216604557430368402",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4310",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "对这段编码进行解码.png",
+            "signature": "14345727924779493522",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4311",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "将密码设置为 payload 位置.png",
+            "signature": "17151753861688600722",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4312",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "将攻击类型改为交叉.png",
+            "signature": "5340470046795901074",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4313",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "将特征添加到检索-匹配.png",
+            "signature": "11558717199659182226",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4314",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "将这个 token 的值粘贴到 payload 即可.png",
+            "signature": "8247445865692801170",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4315",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "尝试取消登录查看返回状态码也是 401.png",
+            "signature": "14855383785098324114",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4316",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "尝试输入错误的密码查看返回状态码是 401.png",
+            "signature": "17967691175689332882",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4317",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "开启 RDP 服务.png",
+            "signature": "11880126893957195922",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4318",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "开始攻击.png",
+            "signature": "13466569151743142034",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:06Z",
+            "id": "4319",
+            "modified_time": "2025-10-05T08:13:06Z",
+            "name": "开始攻击，可以看到失败页面和成功页面的长度不同.png",
+            "signature": "12653821310521190546",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4320",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "开始爆破.png",
+            "signature": "564673985118349459",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4321",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "得到  Set-Cookie.png",
+            "signature": "12839213281795254419",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4322",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "得到登录失败的反馈信息.png",
+            "signature": "4410327555234736275",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4323",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "打开 Windows 7 的 SMB 服务.png",
+            "signature": "2819363774922893459",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4324",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "打开拦截，再次登录，在重放器发送，查看响应包.png",
+            "signature": "14221919342079125651",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4325",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "打开拦截，提交用户名和任意密码.png",
+            "signature": "10088284525389031571",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4326",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "按照常规操作对目标进行攻击.png",
+            "signature": "1809060511965390995",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4327",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "根据提示打开  grep 获取响应.png",
+            "signature": "2001591500569454739",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4328",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "检索 token 复制.png",
+            "signature": "3863937247655110803",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4329",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "添加 HOST.png",
+            "signature": "4533705657657993363",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4330",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "添加对 payload 进行 base64 编码.png",
+            "signature": "8026386536077600915",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4331",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "清空 payload 匹配，总是跟随重定向.png",
+            "signature": "12124488757615405203",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4332",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "爆破成功.png",
+            "signature": "8667152354780522643",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4333",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "第一个 payload 为密码爆破，使用字典.png",
+            "signature": "16524166939680057491",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4334",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "第二个 payload 为 token 获取，使用递归提取.png",
+            "signature": "3752826830254647443",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4335",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "粘贴到扩展.png",
+            "signature": "17228572122031466643",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4336",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "设置密码和 token 为 payload 位置.png",
+            "signature": "15736622640860899475",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4337",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "运行 sysdm.cpl.png",
+            "signature": "12937525680201148563",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4338",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "选中递归后查看提示.png",
+            "signature": "7889519710904133779",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4339",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "选择攻击类型.png",
+            "signature": "13871088048061687955",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4340",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "配置参数.png",
+            "signature": "11156902200001833107",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4341",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "配置字典.png",
+            "signature": "5542794737655883923",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4342",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "配置密码字典.png",
+            "signature": "13413140780783118483",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:07Z",
+            "id": "4343",
+            "modified_time": "2025-10-05T08:13:07Z",
+            "name": "配置目标.png",
+            "signature": "1355438826509707411",
+            "tags": [
+            ]
         }
     ],
     "folders": [

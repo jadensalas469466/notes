@@ -11,6 +11,15 @@
         },
         {
             "name": "Firewall"
+        },
+        {
+            "name": "Ban"
+        },
+        {
+            "name": "Check"
+        },
+        {
+            "name": "Firewall"
         }
     ],
     "id": "515",

@@ -10,14 +10,27 @@
             "signature": "4425993744799616881",
             "tags": [
             ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-05T08:13:04Z",
+            "id": "4119",
+            "modified_time": "2025-10-05T08:13:04Z",
+            "name": "trufflehog.md",
+            "signature": "14012918803162343568",
+            "tags": [
+            ]
         }
     ],
     "folders": [
         {
             "name": "SourceMap"
+        },
+        {
+            "name": "SourceMap"
         }
     ],
-    "id": "645",
+    "id": "4122",
     "modified_time": "2025-10-05T01:52:49Z",
     "signature": "10481299811366719345",
     "version": 3

@@ -1,4 +1,4 @@
-Debian 的程序管理工具.
+[Advanced Package Tool (or APT)](https://en.wikipedia.org/wiki/APT_(Package_Manager)), the main command-line [package manager](https://wiki.debian.org/PackageManagement) for Debian and its derivatives.
 
 ## 1. use
 
@@ -38,14 +38,16 @@ sudo apt purge <some_app>   # 卸载软件 (不保留配置文件)
 安装包清理
 
 ```
-sudo apt clean              # 删除所有的安装包
-sudo apt autoclean          # 删除已过期的安装包
-sudo apt autoremove         # 自动删除未使用的依赖 (保留配置文件)
-sudo apt autoremove --purge # 自动删除未使用的依赖 (不保留配置文件)
+sudo apt clean                # 删除所有的安装包
+sudo apt autoclean            # 删除已过期的安装包
+sudo apt autoremove           # 自动删除未使用的依赖 (保留配置文件)
+sudo apt autoremove --purge   # 自动删除未使用的依赖 (不保留配置文件)
+sudo apt autoremove --dry-run # 模拟试删除未使用的依赖
 ```
 
 ---
 
 References
 
-- [apt](https://wiki.debian.org/zh_CN/Apt)
+- [Apt](https://wiki.debian.org/Apt)
+

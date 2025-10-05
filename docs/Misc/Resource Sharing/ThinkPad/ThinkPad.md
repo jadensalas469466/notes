@@ -364,6 +364,7 @@ Date & Time: 修改时区
 |                 [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                  |
 |            [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)            |
 |                                       [AppImageLauncher]                                        |
+|                                            [vnote]                                             |
 
 |                             test                             |
 | :----------------------------------------------------------: |

@@ -1,6 +1,6 @@
-一个 Linux 平台的压缩软件。
+GNU Tar provides the ability to create tar archives, as well as various other kinds of manipulation.
 
-## 1 使用
+## 1. Usage
 
 ### 1.1 解压
 
@@ -34,7 +34,7 @@ tar –xZvf [file_name].tar.Z
 tar -xzvf [file_name].tar.gz -C [path]
 ```
 
-### 1.2 压缩
+### 1.2. 压缩
 
 将当前目录中所有 `.jpg` 文件打包成 `[file_name].tar` 
 
