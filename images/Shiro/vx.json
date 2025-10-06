@@ -1,41 +1,11 @@
 {
-    "created_time": "2025-10-05T01:52:50Z",
+    "created_time": "2025-10-05T08:26:52Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1303",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "Login Page 1.png",
-            "signature": "15941557233022794987",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1304",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "Login Page 2.png",
-            "signature": "11102927655230635243",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1305",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "Login Page 3.png",
-            "signature": "7697546342199065835",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "795",
-    "modified_time": "2025-10-05T01:52:50Z",
-    "signature": "6022938602078588786",
+    "id": "4974",
+    "modified_time": "2025-10-05T08:26:52Z",
+    "signature": "7162692037603634124",
     "version": 3
 }

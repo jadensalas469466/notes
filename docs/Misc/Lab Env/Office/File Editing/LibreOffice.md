@@ -6,7 +6,7 @@ LibreOffice is a private, free and open source office suite – the successor pr
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo apt install -y libreoffice-writer libreoffice-calc libreoffice-impress fonts-noto-cjk
+└─$ sudo apt install -y libreoffice fonts-noto-cjk
 ```
 
 ---

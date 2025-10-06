@@ -6,10 +6,26 @@ Ufw stands for Uncomplicated Firewall, and is program for managing a netfilter f
 
 ```
 ┌──(nemo@debian)-[~]
-└─# sudo apt install -y ufw 
+└─# sudo apt install -y ufw
 ```
 
-## 2. Usage
+## 2. Init
+
+开放 SSH 端口
+
+```
+┌──(nemo@debian)-[~]
+└─# sudo ufw allow 22
+```
+
+启用防火墙
+
+```
+┌──(nemo@debian)-[~]
+└─# sudo ufw enable
+```
+
+## 3. Usage
 
 ```
 # 管理防火墙

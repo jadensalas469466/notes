@@ -1,4 +1,4 @@
-A pleasant note-taking platform in native C++.111
+A pleasant note-taking platform in native C++.
 
 ## 1. Install
 

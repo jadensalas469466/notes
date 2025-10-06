@@ -1,54 +1,14 @@
 {
-    "created_time": "2025-10-05T01:52:50Z",
+    "created_time": "2025-10-05T08:26:53Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1662",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "Attack type 选择 Cluster bomb.png",
-            "signature": "8703162588950822127",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1663",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "可添加字符串过滤.png",
-            "signature": "11093713356947848431",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1664",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "在 Payloads 中加载字典到两处标记位置.png",
-            "signature": "989582547184909551",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1665",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "拦截登录框数据包发送到 Intruder, 对目标参数的值进行标记.png",
-            "signature": "10459285376670498031",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
         {
             "name": "未归纳"
         }
     ],
-    "id": "826",
-    "modified_time": "2025-10-05T01:52:50Z",
-    "signature": "7950599475907645298",
+    "id": "5006",
+    "modified_time": "2025-10-05T08:26:53Z",
+    "signature": "7367002811535600589",
     "version": 3
 }

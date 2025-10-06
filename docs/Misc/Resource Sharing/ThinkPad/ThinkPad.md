@@ -284,7 +284,7 @@ nemo@debian:~$ chsh -s $(which zsh) \
 Create directory
 
 ```
-nemo@debian:~$ mkdir -p ~/.local/bin
+nemo@debian:~$ mkdir -p ~/.local/bin ~/github
 ```
 
 加载 ThinkPad 内核驱动
@@ -308,7 +308,7 @@ nemo@debian:~$ sudo fwupdmgr get-updates && sudo fwupdmgr refresh
 Install common tools
 
 ```
-nemo@debian:~$ sudo apt install -y gnome-text-editor firefox-esr eog vlc \
+nemo@debian:~$ sudo apt install -y trash-cli gnome-text-editor firefox-esr eog vlc \
 ibus ibus-pinyin ibus-libpinyin \
 && ibus restart
 ```
@@ -353,18 +353,24 @@ Date & Time: 修改时区
 
 ### 1.3. Deploy
 
-|                                             Laptop                                             |
-| :-------------------------------------------------------------------------------------------: |
-|         [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)         |
-|         [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)          |
+|                                                  Laptop                                                  |
+| :------------------------------------------------------------------------------------------------------: |
+|                                                  [ufw]                                                   |
+|                                            [配置 SMB 文件共享]                                            |
+|                                                 [rsync]                                                  |
+|          [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)          |
+|          [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)           |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
 |           [aria2](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/download/aria2)           |
 |               [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)               |
 |             [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)              |
 |                 [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                  |
 |            [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)            |
-|                                       [AppImageLauncher]                                        |
-|                                            [vnote]                                             |
+|                                            [AppImageLauncher]                                            |
+|                                                 [VNote]                                                  |
+|                                              [LibreOffice]                                               |
+|                                           [Visual Studio Code]                                           |
+|                                               [KeePassXC]                                                |
 
 |                             test                             |
 | :----------------------------------------------------------: |

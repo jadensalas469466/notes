@@ -1,46 +1,6 @@
 {
-    "created_time": "2025-10-05T01:52:50Z",
+    "created_time": "2025-10-05T08:26:53Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:56Z",
-            "id": "1759",
-            "modified_time": "2025-10-05T05:06:56Z",
-            "name": "文件版本控制设置.png",
-            "signature": "4827654104159485168",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:56Z",
-            "id": "1760",
-            "modified_time": "2025-10-05T05:06:56Z",
-            "name": "高级设置.png",
-            "signature": "6569919373172145392",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:07Z",
-            "id": "4346",
-            "modified_time": "2025-10-05T08:13:07Z",
-            "name": "文件版本控制设置.png",
-            "signature": "1117400301467478163",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:07Z",
-            "id": "4347",
-            "modified_time": "2025-10-05T08:13:07Z",
-            "name": "高级设置.png",
-            "signature": "16203485315353159827",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
         {
@@ -48,16 +8,10 @@
         },
         {
             "name": "Windows"
-        },
-        {
-            "name": "debian"
-        },
-        {
-            "name": "Windows"
         }
     ],
-    "id": "834",
-    "modified_time": "2025-10-05T01:52:50Z",
-    "signature": "7530780475856637810",
+    "id": "5017",
+    "modified_time": "2025-10-05T08:26:53Z",
+    "signature": "11872839180564442061",
     "version": 3
 }

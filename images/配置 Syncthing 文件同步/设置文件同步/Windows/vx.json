@@ -1,41 +1,11 @@
 {
-    "created_time": "2025-10-05T08:13:07Z",
+    "created_time": "2025-10-05T08:26:53Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:07Z",
-            "id": "4377",
-            "modified_time": "2025-10-05T08:13:07Z",
-            "name": "共享设置.png",
-            "signature": "407059701946263699",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:07Z",
-            "id": "4379",
-            "modified_time": "2025-10-05T08:13:07Z",
-            "name": "常规设置.png",
-            "signature": "5445276603257071763",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:07Z",
-            "id": "4381",
-            "modified_time": "2025-10-05T08:13:07Z",
-            "name": "高级设置.png",
-            "signature": "15459582415451859091",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "4380",
-    "modified_time": "2025-10-05T08:13:07Z",
-    "signature": "16323445087665268883",
+    "id": "5018",
+    "modified_time": "2025-10-05T08:26:53Z",
+    "signature": "15263036976750799821",
     "version": 3
 }

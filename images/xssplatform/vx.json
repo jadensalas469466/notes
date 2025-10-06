@@ -1,41 +1,11 @@
 {
-    "created_time": "2025-10-05T01:52:50Z",
+    "created_time": "2025-10-05T08:26:53Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1657",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "在 XSS 平台查看接受的内容.png",
-            "signature": "14671535330581150959",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1658",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "查看代码.png",
-            "signature": "11437250546661194991",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1659",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "选择代码.png",
-            "signature": "5350802995080723695",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "823",
-    "modified_time": "2025-10-05T01:52:50Z",
-    "signature": "558995767770074994",
+    "id": "5003",
+    "modified_time": "2025-10-05T08:26:53Z",
+    "signature": "7974843045875166157",
     "version": 3
 }

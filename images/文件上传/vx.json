@@ -1,21 +1,11 @@
 {
-    "created_time": "2025-10-05T01:52:50Z",
+    "created_time": "2025-10-05T08:26:53Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:55Z",
-            "id": "1661",
-            "modified_time": "2025-10-05T05:06:55Z",
-            "name": "将 Cookie 写入蚁剑请求信息.png",
-            "signature": "18178805491350764783",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "825",
-    "modified_time": "2025-10-05T01:52:50Z",
-    "signature": "5231651561383513970",
+    "id": "5005",
+    "modified_time": "2025-10-05T08:26:53Z",
+    "signature": "857658984556014541",
     "version": 3
 }

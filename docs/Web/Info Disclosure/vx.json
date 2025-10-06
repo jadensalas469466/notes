@@ -1,23 +1,13 @@
 {
-    "created_time": "2025-10-05T01:52:49Z",
+    "created_time": "2025-10-05T08:26:50Z",
     "files": [
         {
             "attachment_folder": "",
-            "created_time": "2025-10-05T01:52:49Z",
-            "id": "646",
-            "modified_time": "2025-10-05T01:52:49Z",
+            "created_time": "2025-10-05T08:26:50Z",
+            "id": "4828",
+            "modified_time": "2025-10-05T08:26:50Z",
             "name": "trufflehog.md",
-            "signature": "4425993744799616881",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:04Z",
-            "id": "4119",
-            "modified_time": "2025-10-05T08:13:04Z",
-            "name": "trufflehog.md",
-            "signature": "14012918803162343568",
+            "signature": "4974998557886131146",
             "tags": [
             ]
         }
@@ -25,13 +15,10 @@
     "folders": [
         {
             "name": "SourceMap"
-        },
-        {
-            "name": "SourceMap"
         }
     ],
-    "id": "4122",
-    "modified_time": "2025-10-05T01:52:49Z",
-    "signature": "10481299811366719345",
+    "id": "4825",
+    "modified_time": "2025-10-05T08:26:50Z",
+    "signature": "9009934205775391690",
     "version": 3
 }

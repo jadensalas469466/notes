@@ -1,91 +1,11 @@
 {
-    "created_time": "2025-10-05T01:52:50Z",
+    "created_time": "2025-10-05T08:26:52Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1272",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "利用链.png",
-            "signature": "47814893413465323",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1273",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "双击左侧函数，切换至函数所在位置.png",
-            "signature": "14985076773641911531",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1274",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "在 Seay 源代码审计系统打开站点根目录.png",
-            "signature": "1664974177479818475",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1275",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "在任意路径创建一个文件（不需要是站点目录）.png",
-            "signature": "8021328894258969835",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1276",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "在全局搜索搜索 removeFiles().png",
-            "signature": "4188726677488139499",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1277",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "复制变量 $files 所在的类.png",
-            "signature": "17594013885472570603",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1278",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "浏览器访问，执行 payload.png",
-            "signature": "4778223080736685291",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T05:06:51Z",
-            "id": "1279",
-            "modified_time": "2025-10-05T05:06:51Z",
-            "name": "添加完后刷新一下页面，会出现页面错误.png",
-            "signature": "6043777804873628907",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "788",
-    "modified_time": "2025-10-05T01:52:50Z",
-    "signature": "5805804348585922418",
+    "id": "4967",
+    "modified_time": "2025-10-05T08:26:52Z",
+    "signature": "9890807250583432140",
     "version": 3
 }

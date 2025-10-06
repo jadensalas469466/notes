@@ -1,51 +1,11 @@
 {
-    "created_time": "2025-10-05T08:13:00Z",
+    "created_time": "2025-10-05T08:26:46Z",
     "files": [
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:00Z",
-            "id": "3959",
-            "modified_time": "2025-10-05T08:13:00Z",
-            "name": "e14_e15_gen4_hmm_en.pdf",
-            "signature": "10887292306669578380",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:00Z",
-            "id": "3961",
-            "modified_time": "2025-10-05T08:13:00Z",
-            "name": "e14_e15_gen4_linux_ug.pdf",
-            "signature": "11591436423728867468",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:00Z",
-            "id": "3963",
-            "modified_time": "2025-10-05T08:13:00Z",
-            "name": "e14_e15_gen4_ug_en.pdf",
-            "signature": "11194878206343784588",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-05T08:13:00Z",
-            "id": "3965",
-            "modified_time": "2025-10-05T08:13:00Z",
-            "name": "e14_e15_gen4_ug_zh-cn.pdf",
-            "signature": "1715101397921441932",
-            "tags": [
-            ]
-        }
     ],
     "folders": [
     ],
-    "id": "3964",
-    "modified_time": "2025-10-05T08:13:00Z",
-    "signature": "11259748580633749644",
+    "id": "4648",
+    "modified_time": "2025-10-05T08:26:46Z",
+    "signature": "11606054568259103686",
     "version": 3
 }
