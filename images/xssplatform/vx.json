@@ -1,6 +1,36 @@
 {
     "created_time": "2025-10-05T08:26:53Z",
     "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:16Z",
+            "id": "5764",
+            "modified_time": "2025-10-06T10:51:16Z",
+            "name": "在 XSS 平台查看接受的内容.png",
+            "signature": "16088300576011689764",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:16Z",
+            "id": "5765",
+            "modified_time": "2025-10-06T10:51:16Z",
+            "name": "查看代码.png",
+            "signature": "16624459726031396644",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:16Z",
+            "id": "5766",
+            "modified_time": "2025-10-06T10:51:16Z",
+            "name": "选择代码.png",
+            "signature": "4747044989717159716",
+            "tags": [
+            ]
+        }
     ],
     "folders": [
     ],
