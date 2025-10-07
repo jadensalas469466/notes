@@ -86,6 +86,8 @@ PS C:\Users\nemo> ssh-add -l
 
 ## 3. 保存私钥到 KeePassXC
 
+<mark>推荐修改为解锁 keepassxc 自动添加， 锁定后自动移除</mark>
+
 新建条目, 设置条目密码为私钥密码
 
 ![](./../../../images/%E9%85%8D%E7%BD%AE%20SSH%20%E5%AF%86%E9%92%A5%E5%AF%B9%E8%BF%9E%E6%8E%A5/%E6%96%B0%E5%BB%BA%E6%9D%A1%E7%9B%AE,%20%E8%AE%BE%E7%BD%AE%E6%9D%A1%E7%9B%AE%E5%AF%86%E7%A0%81%E4%B8%BA%E7%A7%81%E9%92%A5%E5%AF%86%E7%A0%81.png)
