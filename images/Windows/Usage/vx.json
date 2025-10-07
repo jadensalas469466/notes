@@ -190,6 +190,196 @@
             "signature": "13023326787334283043",
             "tags": [
             ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6055",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "不显示锁屏.png",
+            "signature": "15544587098209452595",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6056",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "关闭虚拟机平台.png",
+            "signature": "9279852022493151795",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6057",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "关闭远程协助.png",
+            "signature": "12343893012993344051",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6058",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "双击证书文件安装.png",
+            "signature": "8237850895868822067",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6059",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "启用系统保护.png",
+            "signature": "5423665642083779123",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6060",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "在下载和安装任何更新之前通知.png",
+            "signature": "18422954380465865267",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6061",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "外观设置.png",
+            "signature": "14751853370795164211",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6062",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "常规设置.png",
+            "signature": "8754298469577196083",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6063",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "打开输入法设置.png",
+            "signature": "5649584035704668723",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6064",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "按键设置.png",
+            "signature": "1565744288160350771",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6065",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "文件权限.png",
+            "signature": "14593492970199384627",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6066",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "显示文件扩展名并配置资源管理器.png",
+            "signature": "3912394687891440179",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6067",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "添加快捷访问.png",
+            "signature": "692809751664591411",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6068",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "添加环境变量.png",
+            "signature": "17681031503437693491",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6069",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "词库和学习设置.png",
+            "signature": "18330421921413661235",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6070",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "调整为显示搜索图标.png",
+            "signature": "6105175251428377139",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6071",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "选择存储到受信任的根证书颁发机构.png",
+            "signature": "17450701538453684787",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6072",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "选择安装到当前用户.png",
+            "signature": "2748700752471196211",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-07T12:06:11Z",
+            "id": "6073",
+            "modified_time": "2025-10-07T12:06:11Z",
+            "name": "高级设置.png",
+            "signature": "16686793419621990963",
+            "tags": [
+            ]
         }
     ],
     "folders": [
