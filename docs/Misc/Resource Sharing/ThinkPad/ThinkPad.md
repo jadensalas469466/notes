@@ -353,25 +353,27 @@ Date & Time: 修改时区
 
 ### 1.3. Deploy
 
-|                                                                                                     Laptop                                                                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                     [ufw](https://keithpeck177271.gitbook.io/notes/docs/misc/security-response/firewall/ufw)                                     |
+|                                                               Laptop                                                               |
+| :--------------------------------------------------------------------------------------------------------------------------------: |
+|                      [ufw](https://keithpeck177271.gitbook.io/notes/docs/misc/security-response/firewall/ufw)                      |
 | [配置 SMB 文件共享](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/pei-zhi-smb-wen-jian-gong-xiang) |
-|                                  [rsync](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/rsync)                                   |
-|                                       [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)                                       |
-|                                       [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)                                        |
-|                       [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)                        |
-|                                        [aria2](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/download/aria2)                                         |
-|                                               [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)                                               |
-|                                          [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)                                           |
-|                                                 [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                                                  |
-|                                        [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)                                        |
-|      [AppImageLauncher](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/package-manager/appimagelauncher)       |
-|                                  [VNote](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/vnote)                                  |
-|                           [LibreOffice](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/libreoffice)                           |
-|                [Visual Studio Code](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/development/visual-studio-code)                 |
-|                  [KeePassXC](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/password-manager/keepassxc)                  |
-|                                                                                                 [goldendict]                                                                                                  |
+|                   [rsync](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/rsync)                    |
+|                       [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)                       |
+|                       [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)                        |
+|              [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)              |
+|                        [aria2](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/download/aria2)                        |
+|                            [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)                            |
+|                          [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)                           |
+|                              [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                               |
+|                         [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)                         |
+|       [AppImageLauncher](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/package-manager/appimagelauncher)       |
+|                   [VNote](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/vnote)                    |
+|             [LibreOffice](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/libreoffice)              |
+|          [Visual Studio Code](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/development/visual-studio-code)           |
+|             [KeePassXC](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/password-manager/keepassxc)              |
+|                                                            [GoldenDict]                                                            |
+|                                                            [Syncthing]                                                             |
+|                                                           [qBittorrent]                                                            |
 
 |                             test                             |
 | :----------------------------------------------------------: |
