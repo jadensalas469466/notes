@@ -375,6 +375,7 @@ Date & Time: 修改时区
 |                                                            [Syncthing]                                                             |
 |                                                           [qBittorrent]                                                            |
 |                                                            [LocalSend]                                                             |
+|                                                           [Koodo Reader]                                                           |
 
 |                             test                             |
 | :----------------------------------------------------------: |

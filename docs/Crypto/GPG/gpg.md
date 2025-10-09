@@ -4,10 +4,9 @@ GnuPG is a complete and free implementation of the OpenPGP standard as defined b
 
 ### 1.1. 签名校验
 
-下载程序及其校验文件和签名文件 [Debian 12.12](https://cdimage.debian.org/cdimage/archive/12.12.0/amd64/iso-dvd/) 
+下载程序及其签名文件 [Debian 12.12](https://cdimage.debian.org/cdimage/archive/12.12.0/amd64/iso-dvd/) 
 
 ```
-SHA256SUMS
 SHA256SUMS.sign
 debian-12.12.0-amd64-DVD-1.iso
 ```

@@ -11,9 +11,9 @@ A feature-rich dictionary lookup program, supporting multiple dictionary formats
 └─$ sudo apt install -y goldendict
 ```
 
-导入字典, 并移除多余的源
+导入字典
 
-> Edit/Dictionaries/Sources/Files/Add
+> /Edit/Dictionaries/Sources/Files/Add
 
 ```
 ┌──(nemo@debian)-[~]
@@ -23,7 +23,9 @@ A feature-rich dictionary lookup program, supporting multiple dictionary formats
 && trash ./ecdict-mdx-28.zip
 ```
 
+移除多余的源
 
+> /Edit/Dictionaries/Sources
 
 ---
 

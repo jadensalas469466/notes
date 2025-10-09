@@ -6,8 +6,14 @@ Koodo Reader is a powerful ebook reader designed to provide a simple and easy-to
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/LocalSend.sh | bash
+└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/koodo-reader_install.sh | bash
 ```
+
+## 2. Init
+
+开启选中文字时不显示弹窗
+
+> /Settings/Reading/No popup when selecting texts
 
 ---
 
