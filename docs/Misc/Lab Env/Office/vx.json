@@ -39,6 +39,9 @@
         },
         {
             "name": "Translator"
+        },
+        {
+            "name": "Reader"
         }
     ],
     "id": "4473",

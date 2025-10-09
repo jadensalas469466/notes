@@ -6,9 +6,15 @@ Share files to nearby devices.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/LocalSend.sh | bash
+└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/localsend_install.sh | bash
 ```
 
+开放端口
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo ufw allow 53317
+```
 
 ---
 

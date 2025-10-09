@@ -374,6 +374,7 @@ Date & Time: 修改时区
 |                                                            [GoldenDict]                                                            |
 |                                                            [Syncthing]                                                             |
 |                                                           [qBittorrent]                                                            |
+|                                                            [LocalSend]                                                             |
 
 |                             test                             |
 | :----------------------------------------------------------: |
