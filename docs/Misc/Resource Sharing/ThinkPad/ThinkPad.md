@@ -308,7 +308,7 @@ nemo@debian:~$ sudo fwupdmgr get-updates && sudo fwupdmgr refresh
 Install common tools
 
 ```
-nemo@debian:~$ sudo apt install -y trash-cli gnome-text-editor firefox-esr eog vlc drawing \
+nemo@debian:~$ sudo apt install -y trash-cli gdebi-core gnome-text-editor firefox-esr eog vlc drawing \
 ibus ibus-pinyin ibus-libpinyin \
 && ibus restart
 ```
