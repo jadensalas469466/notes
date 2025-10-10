@@ -361,44 +361,44 @@ Date & Time: 修改时区
 |                       [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)                       |
 |                       [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)                        |
 |              [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)              |
-|                        [aria2](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/download/aria2)                        |
 |                            [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)                            |
 |                          [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)                           |
 |                              [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                               |
 |                         [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)                         |
 |       [AppImageLauncher](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/package-manager/appimagelauncher)       |
+|             [KeePassXC](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/password-manager/keepassxc)              |
+|          [Visual Studio Code](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/development/visual-studio-code)           |
+|                       [VeraCrypt](https://keithpeck177271.gitbook.io/notes/docs/crypto/encrypt/veracrypt?q=)                       |
+|   [Syncthing](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/pei-zhi-syncthing-wen-jian-tong-bu)   |
+|               [LocalSend](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/localsend)                |
 |                   [VNote](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/vnote)                    |
 |             [LibreOffice](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/libreoffice)              |
-|          [Visual Studio Code](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/development/visual-studio-code)           |
-|             [KeePassXC](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/password-manager/keepassxc)              |
-|                                                            [GoldenDict]                                                            |
-|                                                            [Syncthing]                                                             |
-|                                                           [qBittorrent]                                                            |
-|                                                            [LocalSend]                                                             |
-|                                                           [Koodo Reader]                                                           |
+|                 [aria2](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/download-manager/aria2)                  |
+|           [qBittorrent](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/download-manager/qbittorrent)            |
+|               [GoldenDict](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/translator/goldendict)                |
+|               [Koodo Reader](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/reader/koodo-reader)                |
 
-|                             test                             |
-| :----------------------------------------------------------: |
-| [mariadb](https://keithpeck177271.gitbook.io/notes/misc/lab-env/mariadb) |
-| [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder) |
-| [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx) |
-| [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck) |
-| [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu) |
-| [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan) |
-| [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap) |
-| [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx) |
-| [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb) |
-| [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f) |
-| [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog) |
-| [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf) |
-| [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh) |
-| [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei) |
-| [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra) |
-| [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa) |
+|                                                 test                                                  |
+| :---------------------------------------------------------------------------------------------------: |
+|          [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder)          |
+|                  [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx)                  |
+|              [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck)              |
+|                [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu)                 |
+|              [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan)               |
+|                 [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap)                  |
+|             [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx)             |
+|       [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb)       |
+|         [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f)         |
+|         [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog)         |
+|                    [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf)                     |
+|               [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh)               |
+|               [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei)               |
+|              [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra)               |
+|             [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa)              |
 | [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
-| [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp) |
-| [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver) |
-| [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover) |
+|               [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                |
+|                  [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                  |
+|       [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover)        |
 
 ---
 

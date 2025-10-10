@@ -6,16 +6,8 @@ VeraCrypt is a free open source disk encryption software for Windows, Mac OSX an
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/koodo-reader_install.sh | bash
+└─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/veracrypt_install.sh | bash
 ```
-
-选择安装模式
-
-![](./../../../images/VeraCrypt/%E9%80%89%E6%8B%A9%E5%AE%89%E8%A3%85%E6%A8%A1%E5%BC%8F.png)
-
-控制安装选项
-
-![](./../../../images/VeraCrypt/%E6%8E%A7%E5%88%B6%E5%AE%89%E8%A3%85%E9%80%89%E9%A1%B9.png)
 
 ## 2. Init
 

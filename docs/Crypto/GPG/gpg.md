@@ -7,6 +7,7 @@ GnuPG is a complete and free implementation of the OpenPGP standard as defined b
 下载程序及其签名文件 [Debian 12.12](https://cdimage.debian.org/cdimage/archive/12.12.0/amd64/iso-dvd/) 
 
 ```
+SHA256SUMS
 SHA256SUMS.sign
 debian-12.12.0-amd64-DVD-1.iso
 ```
@@ -15,7 +16,7 @@ debian-12.12.0-amd64-DVD-1.iso
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ gpg --verify ./SHA256SUMS.sign ./SHA256SUMS.txt
+└─$ gpg --verify ./SHA256SUMS.sign ./SHA256SUMS
 ```
 
 ```
@@ -33,7 +34,7 @@ DF9B9C49EAA9298432589D76DA87E80D6294BE9B
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ gpg --verify ./SHA256SUMS.sign ./SHA256SUMS.txt
+└─$ gpg --verify ./SHA256SUMS.sign ./SHA256SUMS
 ```
 
 ```
@@ -82,4 +83,5 @@ PS C:\Users\nemo> certutil -hashfile .\debian-12.12.0-amd64-DVD-1.iso SHA256
 References
 
 - [GnuPG](https://www.gnupg.org/)
-
+- [OpenPGP Keyserver](https://keys.openpgp.org/)
+- [Ubuntu Keyserver](https://keyserver.ubuntu.com/)

@@ -1,35 +1,6 @@
 MariaDB Server: the innovative open source database.
 
-## 1. Install
-
-安装
-
-```
-┌──(nemo@debian)-[~]
-└─$ sudo apt install -y mariadb-server mariadb-client \
-&& sudo systemctl enable --now mysql.service
-```
-
-## 2. Init
-
-配置密码
-
-```
-┌──(nemo@debian)-[~]
-└─$ sudo mysql -u root -p
-```
-
-```
-Enter password:
-```
-
-```
-MariaDB [(none)]> ALTER USER root@localhost IDENTIFIED BY '123456';
-FLUSH PRIVILEGES;
-EXIT;
-```
-
-## 3. Usage
+## 1. Usage
 
 运行服务
 
@@ -79,7 +50,7 @@ MariaDB [(none)]> use nemo;
 MariaDB [root]> show tables;
 ```
 
-### 3.1. SUBSTRING
+### 1.1. SUBSTRING
 
 `SUBSTRING` 函数用于提取字符串的子串。在 MySQL 中，`SUBSTRING` 函数的语法如下：
 
@@ -109,7 +80,7 @@ MariaDB [security]> SELECT SUBSTRING(password, 1, 1) FROM users WHERE username =
 1 row in set (0.00 sec)
 ```
 
-### 3.2. LIMIT
+### 1.2. LIMIT
 
 `LIMIT 1,2` 表示从第二行开始取二行相当于
 
@@ -136,7 +107,7 @@ MariaDB [security]> select * from users limit 3;
 | 2    | Angelina | I- kill- you |
 | 3    | Dummy    | p@ssword     |
 
-### 3.3. order by
+### 1.3. order by
 
 根据 `id` 列升序列出 `users` 数据表
 
