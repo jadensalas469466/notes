@@ -11,28 +11,23 @@ Debian is a complete Free Operating System!
 Move the image file to the directory
 
 ```
+/home/nemo/virtualbox-vms/iso
+```
+
+```
 C:\Users\nemo\VirtualBox VMs\iso
 ```
 
 New Virtual Machine
 
 ```
-> Virtual machine name and operating system
 VM Name: debian
-VM Folder: C:\Users\nemo\VirtualBox VMs
-ISO lmage: C:\Users\nemo\VirtualBox VMs\iso\debian-amd64-DVD.iso
-OS: Linux
-OS Distribution: Debian
-OS Version: Debian (64-bit)
-☐ Proceed with Unattended Installation
-
-> Specify virtual hardware
+VM Folder: /home/nemo/virtualbox-vms
+ISO lmage: /home/nemo/virtualbox-vms/iso/debian-amd64-DVD.iso
+[] Proceed with Unattended Installation
 Base Memory: 4096 MB
 Number of CPUs: 1 CPU
-
-> Specify virtual hard disk
-Hard Disk File Location and Size: C:\Users\nemo\VirtualBox VMs\debian\debian.vdi
-Disk Size: 64.00GB
+Disk Size: 32.00GB
 ```
 
 Take Snapshot: `config` 
@@ -127,7 +122,7 @@ Guided - use entire disk
 
 ```
 Select disk to partition:
-/dev/
+VBOX HARDDISK
 ```
 
 ```
@@ -180,7 +175,7 @@ Install the GRUB boot loader to your primary drive?
 
 ```
 Device for boot loader installation:
-/dev/
+VBOX_HARDDISK
 ```
 
 Finish the installation
@@ -215,7 +210,8 @@ Port Forwarding Rules
 Start the VM and SSH to `nemo` 
 
 ```
-PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
+┌──(nemo@debian)-[~]
+└─$ ssh -p 60022 nemo@127.0.0.1
 ```
 
 Switch to `root` 
@@ -244,10 +240,7 @@ root@debian:~# apt update && apt full-upgrade \
 Install common tools
 
 ```
-root@debian:~# apt install -y systemd-resolved passwd sudo curl vim unzip tree gnupg \
-zsh zsh-syntax-highlighting zsh-autosuggestions \
-build-essential binutils-mingw-w64 mingw-w64 g++-mingw-w64 dkms \
-libpcap-dev linux-headers-$(uname -r) \
+root@debian:~# apt install -y systemd-resolved passwd sudo curl vim unzip tree \
 && usermod -aG sudo nemo
 ```
 
@@ -257,13 +250,6 @@ Keep SSH session alive
 root@debian:~# sed -i 's/#ClientAliveInterval 0/ClientAliveInterval 60/' /etc/ssh/sshd_config \
 && sed -i 's/#ClientAliveCountMax 3/ClientAliveCountMax 60/' /etc/ssh/sshd_config \
 && systemctl reload ssh.service
-```
-
-Configuring Zsh
-
-```
-root@debian:~# chsh -s $(which zsh) \
-&& curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
 Configuring Network service
@@ -299,20 +285,14 @@ root@debian:~# reboot
 Wait for the VM to start up, then Reconnect SSH
 
 ```
-PS C:\Users\nemo> ssh -p 60022 nemo@127.0.0.1
+┌──(nemo@debian)-[~]
+└─$ ssh -p 60022 nemo@127.0.0.1
 ```
 
 Network testing
 
 ```
 nemo@debian:~$ ping mit.edu -c 3
-```
-
-Configuring Zsh
-
-```
-nemo@debian:~$ chsh -s $(which zsh) \
-&& curl -LO https://github.com/jadensalas469466/config/raw/main/Zsh/.zshrc
 ```
 
 Create bin directory
@@ -329,46 +309,13 @@ nemo@debian:~$ sudo poweroff
 
 ## 5. Deploy
 
-|                                                  New VM                                                  |
-| :------------------------------------------------------------------------------------------------------: |
-|          [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)          |
-| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
-|               [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)               |
-|            [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)            |
-|              [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa)              |
-|          [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub)           |
-|         [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps)          |
-|        [vulfocus](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulfocus)         |
-
 |                                                    VM                                                    |
 | :------------------------------------------------------------------------------------------------------: |
 |          [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)          |
 |          [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)           |
 | [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
-|           [aria2](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/download/aria2)           |
 |               [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)               |
-|             [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)              |
-|                 [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                  |
 |            [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)            |
-|           [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder)            |
-|                   [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx)                    |
-|               [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck)                |
-|                  [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu)                  |
-|                [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan)                |
-|                   [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap)                   |
-|              [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx)               |
-|        [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb)         |
-|          [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f)           |
-|          [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog)           |
-|                      [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf)                      |
-|                [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh)                 |
-|                [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei)                 |
-|                [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra)                |
-|               [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa)               |
-|  [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework)   |
-|                 [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                 |
-|                   [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                    |
-|         [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover)         |
 |              [dvwa](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/web/dvwa)              |
 |          [vulhub](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulhub)           |
 |         [vulapps](https://keithpeck177271.gitbook.io/notes/misc/vuln-labs/local/docker/vulapps)          |
@@ -380,21 +327,6 @@ Take Snapshot: `deploy`
 ┌──(nemo@debian)-[~]
 └─$ sudo poweroff
 ```
-
-> 每台机器需要单独配置 [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
-
-|                            Server                            |
-| :----------------------------------------------------------: |
-| [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi) |
-| [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw) |
-| [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban) |
-| [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/v2ray-agent) |
-| [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi) |
-| [配置 Syncthing 文件同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
-| [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng) |
-| [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp) |
-| [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver) |
-| [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
 
 ## 6. Usage
 

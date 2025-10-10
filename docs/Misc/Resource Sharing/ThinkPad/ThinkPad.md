@@ -272,7 +272,7 @@ Network testing
 nemo@debian:~$ ping mit.edu -c 3
 ```
 
- [配置 SSH 密钥对连接](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie)
+ [配置 SSH 密钥对连接](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie)
 
 Configuring Zsh
 
@@ -377,30 +377,42 @@ Date & Time: 修改时区
 |           [qBittorrent](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/download-manager/qbittorrent)            |
 |               [GoldenDict](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/translator/goldendict)                |
 |               [Koodo Reader](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/reader/koodo-reader)                |
-|                                                            [Stretchly]                                                             |
+|                      [Stretchly](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/stretchly)                      |
 |                          [Burp Suite](https://keithpeck177271.gitbook.io/notes/docs/web/mitm/burp-suite)                           |
+|                 [Oracle VirtualBox](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/oracle-virtualbox)                  |
+|                                                                test                                                                |
+|                        [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder)                         |
+|                                [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx)                                 |
+|                            [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck)                             |
+|                               [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu)                               |
+|                             [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan)                             |
+|                                [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap)                                |
+|                           [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx)                            |
+|                     [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb)                      |
+|                       [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f)                        |
+|                       [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog)                        |
+|                                   [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf)                                   |
+|                             [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh)                              |
+|                             [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei)                              |
+|                             [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra)                             |
+|                            [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa)                            |
+|               [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework)                |
+|                              [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                              |
+|                                [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                                 |
+|                      [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover)                      |
 
-|                                                 test                                                  |
-| :---------------------------------------------------------------------------------------------------: |
-|          [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder)          |
-|                  [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx)                  |
-|              [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck)              |
-|                [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu)                 |
-|              [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan)               |
-|                 [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap)                  |
-|             [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx)             |
-|       [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb)       |
-|         [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f)         |
-|         [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog)         |
-|                    [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf)                     |
-|               [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh)               |
-|               [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei)               |
-|              [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra)               |
-|             [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa)              |
-| [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework) |
-|               [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                |
-|                  [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                  |
-|       [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover)        |
+|                                                                Server                                                                |
+| :----------------------------------------------------------------------------------------------------------------------------------: |
+|      [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi)       |
+|                         [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw)                          |
+|                       [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban)                       |
+|                 [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/v2ray-agent)                  |
+|                     [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi)                     |
+| [配置 Syncthing 文件同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
+|               [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)               |
+|                               [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                               |
+|                                 [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                                  |
+|                [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework)                 |
 
 ---
 

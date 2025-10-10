@@ -13,7 +13,9 @@ Koodo Reader is a powerful ebook reader designed to provide a simple and easy-to
 
 开启选中文字时不显示弹窗
 
-> /Settings/Reading/No popup when selecting texts
+```
+/Settings/Reading: No popup when selecting texts
+```
 
 ---
 

@@ -13,7 +13,9 @@ A feature-rich dictionary lookup program, supporting multiple dictionary formats
 
 导入字典
 
-> /Edit/Dictionaries/Sources/Files/Add
+```
+/Edit/Dictionaries/Sources/Files: Add
+```
 
 ```
 ┌──(nemo@debian)-[~]
@@ -25,7 +27,9 @@ A feature-rich dictionary lookup program, supporting multiple dictionary formats
 
 移除多余的源
 
-> /Edit/Dictionaries/Sources
+```
+/Edit/Dictionaries/Sources
+```
 
 ---
 

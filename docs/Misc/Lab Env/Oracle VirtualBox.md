@@ -37,11 +37,21 @@ VirtualBox is a general-purpose full virtualization software for x86_64 hardware
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ mkdir -p "/home/nemo/VirtualBox VMs/iso"
+└─$ mkdir -p /home/nemo/virtualbox-vms/iso
 ```
 
 ```
 C:\Users\nemo\VirtualBox VMs\iso
+```
+
+设置默认目录
+
+```
+/File/Preferences.../Basic/General/Default Machine Folder: /home/nemo/virtualbox-vms
+```
+
+```
+/File/Preferences.../Basic/General/Default Machine Folder: C:\Users\nemo\VirtualBox VMs
 ```
 
 Manual Proxy Configuration
