@@ -52,6 +52,9 @@
         },
         {
             "name": "Reader"
+        },
+        {
+            "name": "Browser"
         }
     ],
     "id": "4473",

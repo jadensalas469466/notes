@@ -4,7 +4,7 @@
 
 ### 1.1. Debian
 
-导入 GPG 密钥
+导入公钥
 
 ```
 ┌──(nemo@debian)-[~]
@@ -30,11 +30,11 @@
 
 ### 2.1. Debian
 
-安装 JDK
+安装 JRE 8
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo apt install -y temurin-8-jdk maven
+└─$ sudo apt install -y temurin-8-jre
 ```
 
 ## 3. Usage

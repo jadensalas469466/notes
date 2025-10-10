@@ -83,5 +83,6 @@ PS C:\Users\nemo> certutil -hashfile .\debian-12.12.0-amd64-DVD-1.iso SHA256
 References
 
 - [GnuPG](https://www.gnupg.org/)
-- [OpenPGP Keyserver](https://keys.openpgp.org/)
-- [Ubuntu Keyserver](https://keyserver.ubuntu.com/)
+- [MIT Key Server](https://pgp.mit.edu/)
+- [OpenPGP Key Server](https://keys.openpgp.org/)
+- [Ubuntu Key Server](https://keyserver.ubuntu.com/)
