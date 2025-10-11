@@ -59,6 +59,13 @@ remotePort = 6000
 └─$ nano ~/.frp/frp_token
 ```
 
+开放端口用于转发流量
+
+```
+┌──(nemo@debian)-[~]
+└─$ sudo ufw allow 6000
+```
+
 ## 3. Usage
 
 运行 Client
