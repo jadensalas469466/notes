@@ -11,6 +11,15 @@
         },
         {
             "name": "Web"
+        },
+        {
+            "name": "Docker"
+        },
+        {
+            "name": "VM"
+        },
+        {
+            "name": "Web"
         }
     ],
     "id": "4724",

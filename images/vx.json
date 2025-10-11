@@ -16,7 +16,7 @@
             "name": "Basic Auth"
         },
         {
-            "name": "Burp Suite"
+            "name": "Burp_Suite"
         },
         {
             "name": "CDN"
@@ -92,9 +92,6 @@
         },
         {
             "name": "OpenVPN"
-        },
-        {
-            "name": "Oracle VirtualBox"
         },
         {
             "name": "OSS Browser"
@@ -173,9 +170,6 @@
         },
         {
             "name": "vulfocus"
-        },
-        {
-            "name": "WebShell 的免杀"
         },
         {
             "name": "Windows"

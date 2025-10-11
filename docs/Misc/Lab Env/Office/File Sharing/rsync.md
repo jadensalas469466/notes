@@ -22,7 +22,7 @@ rsync is an open source utility that provides fast incremental file transfer.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ rsync -av --delete ~/smb/backup/ ~/Documents/
+└─$ rsync -av --delete ~/smb/backup/* ~/Documents/*
 ```
 
 取消挂载
@@ -38,28 +38,28 @@ rsync is an open source utility that provides fast incremental file transfer.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ rsync -av --delete ~/a ~/b
+└─$ sudo rsync -av --delete ~/a ~/b
 ```
 
 增量同步, 将 a 目录的内容同步到 b 目录
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ rsync -av --delete ~/a/ ~/b/
+└─$ sudo rsync -av --delete ~/a/* ~/b/
 ```
 
 模拟增量同步, 将 a 目录本身同步到 b 目录
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ rsync -av --delete --dry-run ~/a ~/b
+└─$ sudo rsync -av --delete --dry-run ~/a ~/b
 ```
 
 模拟增量同步, 将 a 目录的内容同步到 b 目录
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ rsync -av --delete --dry-run ~/a/ ~/b/
+└─$ sudo rsync -av --delete --dry-run ~/a/* ~/b/
 ```
 
 ---

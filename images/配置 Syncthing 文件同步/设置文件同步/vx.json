@@ -20,26 +20,6 @@
             "signature": "12561393919254044453",
             "tags": [
             ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-11T02:54:11Z",
-            "id": "7541",
-            "modified_time": "2025-10-11T02:54:11Z",
-            "name": "文件版本控制设置.png",
-            "signature": "9074068817808312019",
-            "tags": [
-            ]
-        },
-        {
-            "attachment_folder": "",
-            "created_time": "2025-10-11T02:54:11Z",
-            "id": "7543",
-            "modified_time": "2025-10-11T02:54:11Z",
-            "name": "高级设置.png",
-            "signature": "5661365229782157011",
-            "tags": [
-            ]
         }
     ],
     "folders": [
@@ -48,15 +28,9 @@
         },
         {
             "name": "Windows"
-        },
-        {
-            "name": "debian"
-        },
-        {
-            "name": "Windows"
         }
     ],
-    "id": "7557",
+    "id": "8041",
     "modified_time": "2025-10-05T08:26:53Z",
     "signature": "11872839180564442061",
     "version": 3

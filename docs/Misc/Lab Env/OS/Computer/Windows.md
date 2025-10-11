@@ -10,30 +10,26 @@ Windows is a product line of proprietary graphical operating systems developed a
 Move the images file to the directory
 
 ```
-C:\Users\nemo\VirtualBox VMs\iso
+/home/nemo/virtualbox-vms/iso
 ```
 
-Create Virtual Machine
+New Virtual Machine
 
 ```
-> Name and Operating System
-Name: windows
-Folder: C:\Users\nemo\VirtualBox VMs
-ISO lmage: C:\Users\nemo\VirtualBox VMs\iso\en-us_windows_10_enterprise_ltsc_2021_x64_dvd.iso
-Version: Windows 10 (64-bit)
-☑ Skip Unattended Installation
-
-> Hardware
+VM Name: windows
+VM Folder: /home/nemo/virtualbox-vms
+ISO lmage: /home/nemo/virtualbox-vms/iso/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd.iso
+[ ] Proceed with Unattended Installation
 Base Memory: 8192 MB
-Processors: 1 CPU
-
-> Hard Disk
-Hard Disk File Size: 64.00GB
+Number of CPUs: 2 CPU
+Disk Size: 64.00GB
 ```
 
 Take Snapshot: `config` 
 
 ## 3. Install
+
+Start the VM to install
 
 Windows Setup
 
@@ -43,9 +39,13 @@ Time and currency format: English (United States)
 Keyboard or input method: US
 ```
 
+```
 Install now
+```
 
+```
 I don't have a product key
+```
 
 Select the operating system you want to install
 

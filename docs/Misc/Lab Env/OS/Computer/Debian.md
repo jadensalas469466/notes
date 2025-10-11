@@ -8,23 +8,23 @@ Debian is a complete Free Operating System!
 
 ## 2. Config
 
-Move the image file to the directory
+Move the images file to the directory
 
 ```
-/home/nemo/virtualbox-vms/iso
+/home/nemo/VirtualBox_VMs/ISOs
 ```
 
-```
-C:\Users\nemo\VirtualBox VMs\iso
-```
+创建一个新的虚拟机
 
-New Virtual Machine
+```
+/Home/New
+```
 
 ```
 VM Name: debian
-VM Folder: /home/nemo/virtualbox-vms
-ISO lmage: /home/nemo/virtualbox-vms/iso/debian-amd64-DVD.iso
-[] Proceed with Unattended Installation
+VM Folder: /home/nemo/VirtualBox_VMs
+ISO lmage: /home/nemo/VirtualBox_VMs/ISOs/debian-amd64-DVD.iso
+[ ] Proceed with Unattended Installation
 Base Memory: 4096 MB
 Number of CPUs: 1 CPU
 Disk Size: 32.00GB
@@ -34,7 +34,11 @@ Take Snapshot: `config`
 
 ## 3. Install
 
-Start the VM to install
+运行虚拟机
+
+```
+/Machines/VM/Start
+```
 
 Debian GNU/Linux Installer menu
 
@@ -200,14 +204,24 @@ root@debian:~# poweroff
 
 ## 4. Init
 
-Port Forwarding Rules
+端口转发
+
+```
+/Machines/VM/Settings/Expert/Network/Adapter 1/Port Forwarding
+```
 
 | Name | Host Port | Guest Port |
 | ---- | --------- | ---------- |
 | SSH  | 60022     | 22         |
 | Web  | 60080     | 80         |
 
-Start the VM and SSH to `nemo` 
+运行虚拟机
+
+```
+/Machines/VM/Start
+```
+
+SSH to `nemo` 
 
 ```
 ┌──(nemo@debian)-[~]
