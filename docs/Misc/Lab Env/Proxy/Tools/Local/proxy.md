@@ -9,12 +9,7 @@
 └─$ curl -fsSL https://github.com/jadensalas469466/script/raw/main/proxy_install.sh | bash
 ```
 
-加载环境变量
-
-```
-┌──(nemo@debian)-[~]
-└─$ source ~/.zshrc
-```
+> 需加载环境变量
 
 ## 2. Usage
 

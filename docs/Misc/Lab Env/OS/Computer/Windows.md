@@ -10,15 +10,19 @@ Windows is a product line of proprietary graphical operating systems developed a
 Move the images file to the directory
 
 ```
-/home/nemo/virtualbox-vms/iso
+/home/nemo/VirtualBox_VMs/ISOs
 ```
 
-New Virtual Machine
+创建一个新的虚拟机
+
+```
+/Home/New
+```
 
 ```
 VM Name: windows
-VM Folder: /home/nemo/virtualbox-vms
-ISO lmage: /home/nemo/virtualbox-vms/iso/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd.iso
+VM Folder: /home/nemo/VirtualBox_VMs
+ISO lmage: /home/nemo/VirtualBox_VMs/ISOs/en-us_windows_10_iot_enterprise_ltsc_2021_x64_dvd.iso
 [ ] Proceed with Unattended Installation
 Base Memory: 8192 MB
 Number of CPUs: 2 CPU
@@ -29,19 +33,26 @@ Take Snapshot: `config`
 
 ## 3. Install
 
-Start the VM to install
+运行虚拟机
 
-Windows Setup
+```
+/Machines/VM/Start
+```
+
+Enter your language and other preferences and click "Next" to continue.
 
 ```
 Language to install: English (United States)
 Time and currency format: English (United States)
 Keyboard or input method: US
 ```
+Repair your computer
 
 ```
 Install now
 ```
+
+Activate Windows
 
 ```
 I don't have a product key
@@ -56,7 +67,7 @@ Windows 10 Enterprise LTSC
 Applicable notices and license terms
 
 ```
-☑ I accept the license terms
+[V] I accept the license terms
 ```
 
 Which type of installation do you want?
@@ -188,29 +199,15 @@ Update and configure Windows and Edge
 
 [Power Options](# 6.25. Power Options)
 
-[ExecutionPolicy](# 6.20. ExecutionPolicy)
-
-[Local Computer Policy](# 6.24. Local Computer Policy)
-
-[Folder Option](# 6.23. Folder Option)
-
-[Search icon](# 6.22. Search icon)
-
-[Input method editor](# 6.26. Input method editor)
-
-[Windows Firewall](# 6.27. Windows Firewall)
-
-[System Properties](# 6.21. System Properties)
-
 Use [Office Deployment Tool](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-edit/microsoft-office/office-deployment-tool) to install Word, Excel, PowerPoint
 
-==VM needs to Create a folder and Add exclusions== 
+<mark>VM needs to Create a folder and Add exclusions</mark>
 
 ```
 C:\Users\nemo\Apps
 ```
 
-==PM needs to configure [SMB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-sharing/pei-zhi-smb-wen-jian-gong-xiang)== 
+<mark>PM needs to configure [SMB](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/file-sharing/pei-zhi-smb-wen-jian-gong-xiang)</mark>
 
 Shut down, Take Snapshot: `init` 
 

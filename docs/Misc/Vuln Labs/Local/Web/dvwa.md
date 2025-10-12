@@ -35,6 +35,16 @@ Install API module
 
 ## 2. Init
 
+端口转发
+
+```
+/Machines/VM/Settings/Expert/Network/Adapter 1/Port Forwarding
+```
+
+| Name | Host Port | Guest Port |
+| -------- | ------------- | --------------- |
+| Web    | 60080      | 80              |
+
 配置数据库密码
 
 ```

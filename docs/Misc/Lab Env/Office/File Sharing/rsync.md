@@ -22,7 +22,7 @@ rsync is an open source utility that provides fast incremental file transfer.
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ rsync -av --delete ~/smb/backup/* ~/Documents/*
+└─$ rsync -av --delete ~/smb/backup/* ~/Documents/
 ```
 
 取消挂载
