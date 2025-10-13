@@ -4,22 +4,22 @@
     ],
     "folders": [
         {
-            "name": "Bug Bounty Platform"
+            "name": "Bug_Bounty_Platform"
         },
         {
-            "name": "Lab Env"
+            "name": "Lab_Env"
         },
         {
-            "name": "Remote Control"
+            "name": "Remote_Control"
         },
         {
-            "name": "Resource Sharing"
+            "name": "Resource_Sharing"
         },
         {
-            "name": "Security Response"
+            "name": "Security_Response"
         },
         {
-            "name": "Vuln Labs"
+            "name": "Vuln_Labs"
         }
     ],
     "id": "4417",

@@ -10,7 +10,7 @@
             "name": "CIDR"
         },
         {
-            "name": "Cyber Asset"
+            "name": "Cyber_Asset"
         },
         {
             "name": "Directory"
@@ -22,7 +22,7 @@
             "name": "Fingerprint"
         },
         {
-            "name": "Host Collision"
+            "name": "Host_Collision"
         },
         {
             "name": "HTTP"
@@ -31,7 +31,7 @@
             "name": "Port"
         },
         {
-            "name": "Search Engine"
+            "name": "Search_Engine"
         },
         {
             "name": "Spider"

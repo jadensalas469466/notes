@@ -1,0 +1,41 @@
+{
+    "created_time": "2025-10-05T08:26:52Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:12Z",
+            "id": "5401",
+            "modified_time": "2025-10-06T10:51:12Z",
+            "name": "Export configuration to XML.png",
+            "signature": "1822376624275037984",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:12Z",
+            "id": "5402",
+            "modified_time": "2025-10-06T10:51:12Z",
+            "name": "Export.png",
+            "signature": "13360892331828682528",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:12Z",
+            "id": "5403",
+            "modified_time": "2025-10-06T10:51:12Z",
+            "name": "Keep Current Settings.png",
+            "signature": "4204800167391764256",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "8155",
+    "modified_time": "2025-10-05T08:26:52Z",
+    "signature": "413449453641542604",
+    "version": 3
+}

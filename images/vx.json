@@ -7,13 +7,13 @@
             "name": "7-Zip"
         },
         {
-            "name": "Anytxt Searcher"
+            "name": "Anytxt_Searcher"
         },
         {
             "name": "AppImageLauncher"
         },
         {
-            "name": "Basic Auth"
+            "name": "Basic_Auth"
         },
         {
             "name": "Burp_Suite"
@@ -40,28 +40,28 @@
             "name": "GitBook"
         },
         {
-            "name": "Issues of Burp Suite"
+            "name": "Issues_of_Burp_Suite"
         },
         {
-            "name": "Issues of Chrome"
+            "name": "Issues_of_Chrome"
         },
         {
-            "name": "Issues of git"
+            "name": "Issues_of_git"
         },
         {
-            "name": "Issues of ssh-agent"
+            "name": "Issues_of_ssh-agent"
         },
         {
-            "name": "Issues of Visual Studio Code"
+            "name": "Issues_of_Visual_Studio_Code"
         },
         {
-            "name": "Issues of Windows"
+            "name": "Issues_of_Windows"
         },
         {
-            "name": "Issues of Windows Terminal"
+            "name": "Issues_of_Windows_Terminal"
         },
         {
-            "name": "Issues of 极限竞速-地平线 5"
+            "name": "Issues_of_极限竞速-地平线 5"
         },
         {
             "name": "KeePassXC"
@@ -76,10 +76,10 @@
             "name": "metasploitable3"
         },
         {
-            "name": "Microsoft Excel"
+            "name": "Microsoft_Excel"
         },
         {
-            "name": "Microsoft Visio"
+            "name": "Microsoft_Visio"
         },
         {
             "name": "MuMuPlayer"
@@ -88,16 +88,16 @@
             "name": "Notepad++"
         },
         {
-            "name": "Office Deployment Tool"
+            "name": "Office_Deployment_Tool"
         },
         {
             "name": "OpenVPN"
         },
         {
-            "name": "OSS Browser"
+            "name": "OSS_Browser"
         },
         {
-            "name": "PHP 序列化"
+            "name": "PHP_序列化"
         },
         {
             "name": "Proxifier"
@@ -106,7 +106,7 @@
             "name": "qBittorrent"
         },
         {
-            "name": "Reverse IP"
+            "name": "Reverse_IP"
         },
         {
             "name": "Rufus"
@@ -124,19 +124,19 @@
             "name": "ShiroAttack2"
         },
         {
-            "name": "SourceMap 泄露"
+            "name": "SourceMap_泄露"
         },
         {
-            "name": "SPF 邮件伪造漏洞"
+            "name": "SPF_邮件伪造漏洞"
         },
         {
-            "name": "SQLi Bypass"
+            "name": "SQLi_Bypass"
         },
         {
             "name": "SSRF"
         },
         {
-            "name": "Stardew Valley Mod"
+            "name": "Stardew_Valley_Mod"
         },
         {
             "name": "Tenable_Nessus"
@@ -160,10 +160,10 @@
             "name": "vim"
         },
         {
-            "name": "Visual Studio Code"
+            "name": "Visual_Studio_Code"
         },
         {
-            "name": "VMware Workstation Pro"
+            "name": "VMware_Workstation_Pro"
         },
         {
             "name": "vnote"
@@ -175,7 +175,7 @@
             "name": "Windows"
         },
         {
-            "name": "Windows Terminal"
+            "name": "Windows_Terminal"
         },
         {
             "name": "WinPE"
@@ -187,7 +187,7 @@
             "name": "Word"
         },
         {
-            "name": "XSS Challenges"
+            "name": "XSS_Challenges"
         },
         {
             "name": "xssplatform"
@@ -211,13 +211,13 @@
             "name": "输入时会删除后面的字符"
         },
         {
-            "name": "配置 SMB 文件共享"
+            "name": "配置_SMB_文件共享"
         },
         {
-            "name": "配置 SSH 密钥对连接"
+            "name": "配置_SSH_密钥对连接"
         },
         {
-            "name": "配置 Syncthing 文件同步"
+            "name": "配置_Syncthing_文件同步"
         }
     ],
     "id": "4926",

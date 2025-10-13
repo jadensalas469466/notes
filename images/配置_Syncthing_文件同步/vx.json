@@ -1,0 +1,154 @@
+{
+    "created_time": "2025-10-05T08:26:53Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5893",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "使用默认配置.png",
+            "signature": "9605992125051412261",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5894",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "启动 Syncthing.png",
+            "signature": "7119022029908713253",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5895",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "图形用户界面设置.png",
+            "signature": "2477636969759481637",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5896",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在 debian 控制台接受请求.png",
+            "signature": "12786424577494589221",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5897",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在 debian 控制台选择显示 ID.png",
+            "signature": "10922205129451216677",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5898",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在 Windows 控制台添加远程设备.png",
+            "signature": "7891862387930930981",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5899",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "复制设备标识.png",
+            "signature": "10415442608211074853",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5900",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "对控制台进行初始化设置.png",
+            "signature": "13530747890269658917",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5901",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "常规设置.png",
+            "signature": "1870741752779087653",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5902",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "报错无法找到脚本引擎 JScript.png",
+            "signature": "6671434176503455525",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5903",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "禁止开机自启和安装后启动.png",
+            "signature": "6918296153509568293",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5904",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "移除默认的文件夹.png",
+            "signature": "8131525535892479781",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5905",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "粘贴设备 ID，并设置设备名.png",
+            "signature": "10821298536438800165",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5906",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "连接设置.png",
+            "signature": "894644515605028645",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+        {
+            "name": "设置文件同步"
+        }
+    ],
+    "id": "8169",
+    "modified_time": "2025-10-05T08:26:53Z",
+    "signature": "4793062132614835149",
+    "version": 3
+}

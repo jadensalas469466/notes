@@ -1,0 +1,291 @@
+{
+    "created_time": "2025-10-05T08:26:53Z",
+    "files": [
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5859",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "为新用户配置共享权限.png",
+            "signature": "2834302349783310117",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5860",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "共享此文件夹并配置权限.png",
+            "signature": "5400666783703342885",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5861",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "关闭网络发现, 启用文件和打印机共享.png",
+            "signature": "12518071473197522725",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5862",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "创建一个专门用于文件共享的用户.png",
+            "signature": "1711642278505979685",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5863",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "删除 Everyone 用户.png",
+            "signature": "18151200606963080997",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5864",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "右键需要共享的文件查看属性.png",
+            "signature": "15601242003220963109",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5865",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在 “控制面板” 中进入 “凭据管理器”.png",
+            "signature": "5239399355968102181",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5866",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在 “控制面板” 禁用 “SMB 1.0%2FCIFS 文件共享支持”.png",
+            "signature": "10838250411578859301",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5867",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在 “本地用户和组” 的用户项目中右键添加新用户.png",
+            "signature": "9521836278155550501",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5868",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在 “网络和共享中心” 中打开高级共享设置.png",
+            "signature": "5460459690605649701",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5869",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在安全选项中配置如下策略.png",
+            "signature": "6020309579582381861",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5870",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "在此电脑右键映射网络驱动器.png",
+            "signature": "9993982638595219237",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5871",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "对所有网络进行共享配置.png",
+            "signature": "6014551561741770533",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5872",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "找到共享的文件夹, 停止共享即可.png",
+            "signature": "2497528436481040165",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5873",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "拒绝新用户本地登录和通过远程桌面服务登录.png",
+            "signature": "7588056622117920549",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5874",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "按 `Win + R` 在 “运行” 窗口中输入 `secpol.msc` 打开 “本地安全策略”.png",
+            "signature": "3741789709196828453",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5875",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "按 `Win + R` 在“运行”窗口中输入 `gpedit.msc` 打开“本地组策略编辑器”.png",
+            "signature": "12633339006623653669",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5876",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "按 `Win + X` 键在弹出的菜单里选择 “计算机管理”.png",
+            "signature": "12770561459384196901",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5877",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "授予新用户 “从网络访问此计算机” 的权限.png",
+            "signature": "288503628025798437",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5878",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "映射网络路径.png",
+            "signature": "11989336341652676389",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5879",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "添加 Windows 凭据.png",
+            "signature": "15449602264370749221",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5880",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "添加新用户.png",
+            "signature": "4992965703165517605",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5881",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "禁用不安全的来宾登录.png",
+            "signature": "5300773330526379813",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5882",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "记住网络路径.png",
+            "signature": "5239092377475587877",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5883",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "选择添加组或用户.png",
+            "signature": "12098251777361813285",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5884",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "选择高级共享.png",
+            "signature": "15278265698126896933",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5885",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "键入网站地址（或网络位置）和凭据.png",
+            "signature": "4603698386038923045",
+            "tags": [
+            ]
+        },
+        {
+            "attachment_folder": "",
+            "created_time": "2025-10-06T10:51:17Z",
+            "id": "5886",
+            "modified_time": "2025-10-06T10:51:17Z",
+            "name": "隐藏“快速用户切换”的入口点.png",
+            "signature": "15877620898155700005",
+            "tags": [
+            ]
+        }
+    ],
+    "folders": [
+    ],
+    "id": "8167",
+    "modified_time": "2025-10-05T08:26:53Z",
+    "signature": "8399404974016179149",
+    "version": 3
+}
