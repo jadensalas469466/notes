@@ -11,18 +11,9 @@
         },
         {
             "name": "Rescue"
-        },
-        {
-            "name": "Activation"
-        },
-        {
-            "name": "Bootable"
-        },
-        {
-            "name": "Rescue"
         }
     ],
-    "id": "8239",
+    "id": "8483",
     "modified_time": "2025-10-05T08:26:43Z",
     "signature": "9798426760359062467",
     "version": 3

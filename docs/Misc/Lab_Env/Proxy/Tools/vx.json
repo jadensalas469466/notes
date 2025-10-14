@@ -8,6 +8,12 @@
         },
         {
             "name": "Remote"
+        },
+        {
+            "name": "Local"
+        },
+        {
+            "name": "Remote"
         }
     ],
     "id": "8320",
