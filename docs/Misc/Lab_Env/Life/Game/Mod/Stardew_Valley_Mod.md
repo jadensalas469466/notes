@@ -56,6 +56,7 @@
    
    Robin Sells Machines: https://www.nexusmods.com/stardewvalley/mods/26961
    
+   Perfect Trinkets: https://www.nexusmods.com/stardewvalley/mods/22358
    
    Mod conflicts:
    HarvestWithScythe: https://www.nexusmods.com/stardewvalley/mods/2731
