@@ -353,65 +353,66 @@ Date & Time: 修改时区
 
 ### 1.3. Deploy
 
-|                                                                                                     Laptop                                                                                                      |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                     [ufw](https://keithpeck177271.gitbook.io/notes/docs/misc/security-response/firewall/ufw)                                     |
-| [配置 SMB 文件共享](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/pei-zhi-smb-wen-jian-gong-xiang) |
-|                                  [rsync](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/rsync)                                   |
-|                                       [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)                                       |
-|                                       [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)                                        |
-|                       [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)                        |
-|                                               [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)                                               |
-|                                          [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)                                           |
-|                                                 [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                                                  |
-|                                        [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)                                        |
-|      [AppImageLauncher](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/package-manager/appimagelauncher)       |
-|                  [KeePassXC](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/password-manager/keepassxc)                  |
-|                [Visual Studio Code](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/development/visual-studio-code)                 |
-|                                     [VeraCrypt](https://keithpeck177271.gitbook.io/notes/docs/crypto/encrypt/veracrypt?q=)                                      |
-|       [Syncthing](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/pei-zhi-syncthing-wen-jian-tong-bu)        |
-|                           [LocalSend](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/localsend)                           |
-|                                  [VNote](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/vnote)                                  |
-|                           [LibreOffice](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/libreoffice)                           |
-|                            [aria2](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/download-manager/aria2)                             |
-|                    [qBittorrent](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/download-manager/qbittorrent)                    |
-|                           [GoldenDict](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/translator/goldendict)                           |
-|                        [Koodo Reader](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/reader/koodo-reader)                         |
-|                                      [Stretchly](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/stretchly)                                       |
-|                                           [Burp Suite](https://keithpeck177271.gitbook.io/notes/docs/web/mitm/burp-suite)                                           |
-|                              [Oracle VirtualBox](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/oracle-virtualbox)                              |
-|                                       [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder)                                       |
-|                                                    [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx)                                                    |
-|                                            [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck)                                             |
-|                                                 [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu)                                                  |
-|                                             [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan)                                             |
-|                                                  [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap)                                                   |
-|                                              [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx)                                               |
-|                                  [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb)                                  |
-|                                      [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f)                                      |
-|                                         [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog)                                         |
-|                                                           [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf)                                                            |
-|                                                 [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh)                                                 |
-|                                                 [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei)                                                  |
-|                                                [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra)                                                 |
-|                                            [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa)                                             |
-|                         [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework)                          |
-|                                                   [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                                                   |
-|                                                       [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                                                       |
-|                                    [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover)                                    |
+|                                                                                                       Laptop                                                                                                       |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                       [ufw](https://keithpeck177271.gitbook.io/notes/docs/misc/security-response/firewall/ufw)                                       |
+| [配置_SMB_文件共享](https://keithpeck177271.gitbook.io/notes/docs/misc/lab_env/office/file_sharing/pei-zhi-smb-wen-jian-gong-xiang) |
+|                                    [rsync](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/rsync)                                    |
+|                                         [proxy](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxy)                                         |
+|                                         [xray](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/xray)                                         |
+|                         [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)                          |
+|                                                [git](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/git)                                                 |
+|                                            [python](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/python)                                             |
+|                                                   [go](https://keithpeck177271.gitbook.io/notes/misc/lab-env/language/go)                                                    |
+|                                         [docker](https://keithpeck177271.gitbook.io/notes/misc/lab-env/development/docker)                                          |
+|        [AppImageLauncher](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/package-manager/appimagelauncher)         |
+|                    [KeePassXC](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/password-manager/keepassxc)                    |
+|                [Visual_Studio_Code](https://keithpeck177271.gitbook.io/notes/docs/misc/lab_env/development/visual_studio_code)                |
+|                                       [VeraCrypt](https://keithpeck177271.gitbook.io/notes/docs/crypto/encrypt/veracrypt?q=)                                       |
+|         [Syncthing](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/pei-zhi-syncthing-wen-jian-tong-bu)          |
+|                            [LocalSend](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-sharing/localsend)                             |
+|                                    [VNote](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/vnote)                                    |
+|                             [LibreOffice](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/file-editing/libreoffice)                             |
+|                              [aria2](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/download-manager/aria2)                              |
+|                      [qBittorrent](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/download-manager/qbittorrent)                      |
+|                             [GoldenDict](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/translator/goldendict)                             |
+|                         [Koodo_Reader](https://keithpeck177271.gitbook.io/notes/docs/misc/lab_env/office/reader/koodo_reader)                         |
+|                                        [Stretchly](https://keithpeck177271.gitbook.io/notes/docs/misc/lab-env/office/stretchly)                                         |
+|                                            [Burp_Suite](https://keithpeck177271.gitbook.io/notes/docs/web/mitm/burp_suite)                                            |
+|                              [Oracle_VirtualBox](https://keithpeck177271.gitbook.io/notes/docs/misc/lab_env/oracle_virtualbox)                               |
+|                                              [whois](https://keithpeck177271.gitbook.io/notes/docs/web/recon/whois/whois)                                               |
+|                                         [subfinder](https://keithpeck177271.gitbook.io/notes/web/recon/subdomain/subfinder)                                         |
+|                                                      [dnsx](https://keithpeck177271.gitbook.io/notes/web/recon/dns/dnsx)                                                      |
+|                                              [cdncheck](https://keithpeck177271.gitbook.io/notes/web/recon/cdn/cdncheck)                                               |
+|                                                   [naabu](https://keithpeck177271.gitbook.io/notes/web/recon/port/naabu)                                                    |
+|                                               [masscan](https://keithpeck177271.gitbook.io/notes/web/recon/port/masscan)                                               |
+|                                                    [nmap](https://keithpeck177271.gitbook.io/notes/web/recon/port/nmap)                                                     |
+|                                                [httpx](https://keithpeck177271.gitbook.io/notes/web/recon/http-status/httpx)                                                 |
+|                                    [whatweb](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/service/whatweb)                                    |
+|                                        [wafw00f](https://keithpeck177271.gitbook.io/notes/web/recon/fingerprint/waf/wafw00f)                                        |
+|                                           [trufflehog](https://keithpeck177271.gitbook.io/notes/web/info-disclosure/trufflehog)                                           |
+|                                                             [ffuf](https://keithpeck177271.gitbook.io/notes/web/fuzz/ffuf)                                                              |
+|                                                   [interactsh](https://keithpeck177271.gitbook.io/notes/web/oob/interactsh)                                                   |
+|                                                   [nuclei](https://keithpeck177271.gitbook.io/notes/web/scan/active/nuclei)                                                   |
+|                                                  [hydra](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/hydra)                                                  |
+|                                              [medusa](https://keithpeck177271.gitbook.io/notes/crypto/brute-force/medusa)                                               |
+|                           [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework)                           |
+|                                                     [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                                                     |
+|                                                         [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                                                         |
+|                                      [netdiscover](https://keithpeck177271.gitbook.io/notes/system/lan-discovery/netdiscover)                                      |
 
-|                                                                Server                                                                |
-| :----------------------------------------------------------------------------------------------------------------------------------: |
-|      [配置 SSH 密钥对连接服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/pei-zhi-ssh-mi-yao-dui-lian-jie-fu-wu-qi)       |
-|                         [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw)                          |
-|                       [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban)                       |
-|                 [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/v2ray-agent)                  |
-|                     [自建 DNS 服务器](https://keithpeck177271.gitbook.io/notes/misc/lab-env/zi-jian-dns-fu-wu-qi)                     |
-| [配置 Syncthing 文件同步](https://keithpeck177271.gitbook.io/notes/misc/lab-env/office/data-sharing/pei-zhi-syncthing-shu-ju-tong-bu) |
-|               [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)               |
-|                               [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                               |
-|                                 [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                                  |
-|                [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework)                 |
+|                                                                                                            Server                                                                                                             |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                      [配置_SSH_密钥对连接](https://keithpeck177271.gitbook.io/notes/docs/misc/lab_env/pei-zhi-ssh-mi-yao-dui-lian-jie)                      |
+|                                                [ufw](https://keithpeck177271.gitbook.io/notes/misc/security-response/firewall/ufw)                                                 |
+|                                            [fail2ban](https://keithpeck177271.gitbook.io/notes/misc/security-response/ban/fail2ban)                                            |
+|                                  [v2ray-agent](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/remote/v2ray-agent)                                  |
+|                                  [自建_DNS_服务器](https://keithpeck177271.gitbook.io/notes/docs/misc/lab_env/zi-jian-dns-fu-wu-qi)                                  |
+| [配置_Syncthing_文件同步](https://keithpeck177271.gitbook.io/notes/docs/misc/lab_env/office/file_sharing/pei-zhi-syncthing-wen-jian-tong-bu) |
+|                              [proxychains-ng](https://keithpeck177271.gitbook.io/notes/misc/lab-env/proxy/tools/local/proxychains-ng)                               |
+|                                                          [frp](https://keithpeck177271.gitbook.io/notes/system/nat-traversal/frp)                                                           |
+|                                                              [sliver](https://keithpeck177271.gitbook.io/notes/system/c2/sliver)                                                              |
+|                                [metasploit-framework](https://keithpeck177271.gitbook.io/notes/general/exploit/metasploit-framework)                                 |
 
 ---
 
