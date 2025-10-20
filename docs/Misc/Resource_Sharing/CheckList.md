@@ -144,7 +144,7 @@ WAF 识别
 
 ## 3. Info Disclosure
 
-在 Search Public Code 或 GitHub 中审计相关仓库
+在 GitHub, GitLab 以及 Search Public Code 中审计相关仓库
 
 ```
 "hackerone.com" OR "hacker101.com"
