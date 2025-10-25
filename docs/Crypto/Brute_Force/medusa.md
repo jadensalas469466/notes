@@ -9,6 +9,23 @@ Medusa is intended to be a speedy, massively parallel, modular, login brute-forc
 └─$ sudo apt install -y medusa
 ```
 
+## 2. Usage
+
+列出已知模块
+
+```
+┌──(nemo@debian)-[~]
+└─$ medusa -d
+```
+
+爆破 SSH
+
+```
+medusa -M ssh -h example.com -u username -p password -e ns
+
+medusa -M ssh -H host.txt -U username.txt -P password.txt -e ns 
+```
+
 ---
 
 References

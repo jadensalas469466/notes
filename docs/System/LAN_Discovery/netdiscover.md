@@ -29,7 +29,7 @@ Netdiscover is an active/passive address reconnaissance tool, mainly developed f
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo netdiscover -i enp0s3
+└─$ sudo netdiscover -i vboxnet0
 ```
 
 指定网段

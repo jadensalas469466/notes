@@ -15,21 +15,21 @@ basic auth
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ hydra <host> -s <port> http-get /[protected_page] -L username.txt -P password.txt -e ns -vV
+└─$ hydra <host> -s <port> http-get /[protected_page] -L username.txt -P wordlist.txt -e ns -vV
 ```
 
 ssh
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ hydra <host> ssh -l root -P password.txt -t 4 -e ns -vV
+└─$ hydra <host> ssh -l root -P wordlist.txt -t 4 -e ns -vV
 ```
 
 ftp
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ hydra <host> ftp -L username.txt -P password.txt -e ns -vV
+└─$ hydra <host> ftp -L username.txt -P wordlist.txt -e ns -vV
 ```
 
 ---

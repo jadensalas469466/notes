@@ -134,14 +134,14 @@ Microsoft 网络客户端：对通信进行数字签名(始终)：已禁用
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo mount -t cifs //192.168.0.57/D /home/nemo/smb -o username=share
+└─$ sudo mount -t cifs //192.168.0.57/D /home/nemo/Documents/smb -o username=share
 ```
 
 取消挂载
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo umount /home/nemo/smb
+└─$ sudo umount /home/nemo/Documents/smb
 ```
 
 ### 2.4.2. Windows
