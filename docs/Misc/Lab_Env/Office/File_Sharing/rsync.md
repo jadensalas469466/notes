@@ -9,30 +9,21 @@ rsync is an open source utility that provides fast incremental file transfer.
 └─$ sudo apt install -y rsync
 ```
 
-## 2. Init
+## 2. Usage
 
 将共享文件夹挂载到本地
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo mount -t cifs //192.168.0.57/D /home/nemo/smb -o username=share
-```
-
-同步到文档目录
-
-```
-┌──(nemo@debian)-[~]
-└─$ rsync -av --delete ~/smb/backup/* ~/Documents/
+└─$ sudo mount -t cifs //192.168.0.57/D /home/nemo/Documents/smb -o username=share
 ```
 
 取消挂载
 
 ```
 ┌──(nemo@debian)-[~]
-└─$ sudo umount /home/nemo/smb
+└─$ sudo umount /home/nemo/Documents/smb
 ```
-
-## 3. Usage
 
 增量同步, 将 a 目录本身同步到 b 目录
 
